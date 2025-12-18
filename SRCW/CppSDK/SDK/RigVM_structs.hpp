@@ -380,6 +380,100 @@ struct FRigVMFunction_MathBase : public FRigVMStruct
 static_assert(alignof(FRigVMFunction_MathBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathBase");
 static_assert(sizeof(FRigVMFunction_MathBase) == 0x000008, "Wrong size on FRigVMFunction_MathBase");
 
+// ScriptStruct RigVM.RigVMFunction_MathTransformBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathTransformBase : public FRigVMFunction_MathBase
+{
+};
+static_assert(alignof(FRigVMFunction_MathTransformBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathTransformBase");
+static_assert(sizeof(FRigVMFunction_MathTransformBase) == 0x000008, "Wrong size on FRigVMFunction_MathTransformBase");
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformToVectors
+// 0x00B8 (0x00C0 - 0x0008)
+struct FRigVMFunction_MathTransformToVectors final : public FRigVMFunction_MathTransformBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Forward;                                           // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Right;                                             // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Up;                                                // 0x00A0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathTransformToVectors) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformToVectors");
+static_assert(sizeof(FRigVMFunction_MathTransformToVectors) == 0x0000C0, "Wrong size on FRigVMFunction_MathTransformToVectors");
+static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Value) == 0x000010, "Member 'FRigVMFunction_MathTransformToVectors::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Forward) == 0x000070, "Member 'FRigVMFunction_MathTransformToVectors::Forward' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Right) == 0x000088, "Member 'FRigVMFunction_MathTransformToVectors::Right' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Up) == 0x0000A0, "Member 'FRigVMFunction_MathTransformToVectors::Up' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDecorator
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMDecorator final : public FRigVMStruct
+{
+public:
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMDecorator) == 0x000008, "Wrong alignment on FRigVMDecorator");
+static_assert(sizeof(FRigVMDecorator) == 0x000018, "Wrong size on FRigVMDecorator");
+
+// ScriptStruct RigVM.RigVMMemoryStatistics
+// 0x000C (0x000C - 0x0000)
+struct FRigVMMemoryStatistics final
+{
+public:
+	int32                                         RegisterCount;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalBytes;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMMemoryStatistics) == 0x000004, "Wrong alignment on FRigVMMemoryStatistics");
+static_assert(sizeof(FRigVMMemoryStatistics) == 0x00000C, "Wrong size on FRigVMMemoryStatistics");
+static_assert(offsetof(FRigVMMemoryStatistics, RegisterCount) == 0x000000, "Member 'FRigVMMemoryStatistics::RegisterCount' has a wrong offset!");
+static_assert(offsetof(FRigVMMemoryStatistics, DataBytes) == 0x000004, "Member 'FRigVMMemoryStatistics::DataBytes' has a wrong offset!");
+static_assert(offsetof(FRigVMMemoryStatistics, TotalBytes) == 0x000008, "Member 'FRigVMMemoryStatistics::TotalBytes' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDispatchFactory
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x08) FRigVMDispatchFactory
+{
+public:
+	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMDispatchFactory) == 0x000008, "Wrong alignment on FRigVMDispatchFactory");
+static_assert(sizeof(FRigVMDispatchFactory) == 0x000070, "Wrong size on FRigVMDispatchFactory");
+
+// ScriptStruct RigVM.RigVMDispatch_CoreBase
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CoreBase : public FRigVMDispatchFactory
+{
+};
+static_assert(alignof(FRigVMDispatch_CoreBase) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreBase");
+static_assert(sizeof(FRigVMDispatch_CoreBase) == 0x000070, "Wrong size on FRigVMDispatch_CoreBase");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayBase
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayBase : public FRigVMDispatch_CoreBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayBase) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayBase");
+static_assert(sizeof(FRigVMDispatch_ArrayBase) == 0x000070, "Wrong size on FRigVMDispatch_ArrayBase");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayBaseMutable
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayBaseMutable : public FRigVMDispatch_ArrayBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayBaseMutable) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayBaseMutable");
+static_assert(sizeof(FRigVMDispatch_ArrayBaseMutable) == 0x000070, "Wrong size on FRigVMDispatch_ArrayBaseMutable");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayIterator
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayIterator final : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayIterator) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayIterator");
+static_assert(sizeof(FRigVMDispatch_ArrayIterator) == 0x000070, "Wrong size on FRigVMDispatch_ArrayIterator");
+
 // ScriptStruct RigVM.RigVMFunction_MathFloatBase
 // 0x0000 (0x0008 - 0x0008)
 struct FRigVMFunction_MathFloatBase : public FRigVMFunction_MathBase
@@ -388,21 +482,17 @@ struct FRigVMFunction_MathFloatBase : public FRigVMFunction_MathBase
 static_assert(alignof(FRigVMFunction_MathFloatBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatBase");
 static_assert(sizeof(FRigVMFunction_MathFloatBase) == 0x000008, "Wrong size on FRigVMFunction_MathFloatBase");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatFloor
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatFloor final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstant
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         int_0;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatFloor) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatFloor");
-static_assert(sizeof(FRigVMFunction_MathFloatFloor) == 0x000018, "Wrong size on FRigVMFunction_MathFloatFloor");
-static_assert(offsetof(FRigVMFunction_MathFloatFloor, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatFloor::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatFloor, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatFloor::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatFloor, int_0) == 0x000010, "Member 'FRigVMFunction_MathFloatFloor::int_0' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatConstant) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstant");
+static_assert(sizeof(FRigVMFunction_MathFloatConstant) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstant");
+static_assert(offsetof(FRigVMFunction_MathFloatConstant, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatConstant::Value' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMDrawInstruction
 // 0x00D0 (0x00D0 - 0x0000)
@@ -440,37 +530,37 @@ static_assert(alignof(FRigVMDrawContainer) == 0x000008, "Wrong alignment on FRig
 static_assert(sizeof(FRigVMDrawContainer) == 0x000018, "Wrong size on FRigVMDrawContainer");
 static_assert(offsetof(FRigVMDrawContainer, Instructions) == 0x000008, "Member 'FRigVMDrawContainer::Instructions' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMBaseOp
-// 0x0001 (0x0001 - 0x0000)
-struct FRigVMBaseOp
+// ScriptStruct RigVM.RigVMFunction_SimBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_SimBase : public FRigVMStruct
 {
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMBaseOp) == 0x000001, "Wrong alignment on FRigVMBaseOp");
-static_assert(sizeof(FRigVMBaseOp) == 0x000001, "Wrong size on FRigVMBaseOp");
+static_assert(alignof(FRigVMFunction_SimBase) == 0x000008, "Wrong alignment on FRigVMFunction_SimBase");
+static_assert(sizeof(FRigVMFunction_SimBase) == 0x000008, "Wrong size on FRigVMFunction_SimBase");
 
-// ScriptStruct RigVM.RigVMSenaryOp
-// 0x0025 (0x0026 - 0x0001)
-struct alignas(0x02) FRigVMSenaryOp final : public FRigVMBaseOp
+// ScriptStruct RigVM.RigVMFunction_NameBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_NameBase : public FRigVMStruct
 {
-public:
-	uint8                                         Pad_1[0x25];                                       // 0x0001(0x0025)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMSenaryOp) == 0x000002, "Wrong alignment on FRigVMSenaryOp");
-static_assert(sizeof(FRigVMSenaryOp) == 0x000026, "Wrong size on FRigVMSenaryOp");
+static_assert(alignof(FRigVMFunction_NameBase) == 0x000008, "Wrong alignment on FRigVMFunction_NameBase");
+static_assert(sizeof(FRigVMFunction_NameBase) == 0x000008, "Wrong size on FRigVMFunction_NameBase");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatMake
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatMake final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_EndsWith
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_EndsWith final : public FRigVMFunction_NameBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Ending;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatMake) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMake");
-static_assert(sizeof(FRigVMFunction_MathFloatMake) == 0x000010, "Wrong size on FRigVMFunction_MathFloatMake");
-static_assert(offsetof(FRigVMFunction_MathFloatMake, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatMake::Value' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_EndsWith) == 0x000008, "Wrong alignment on FRigVMFunction_EndsWith");
+static_assert(sizeof(FRigVMFunction_EndsWith) == 0x000020, "Wrong size on FRigVMFunction_EndsWith");
+static_assert(offsetof(FRigVMFunction_EndsWith, Name) == 0x000008, "Member 'FRigVMFunction_EndsWith::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_EndsWith, Ending) == 0x000010, "Member 'FRigVMFunction_EndsWith::Ending' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_EndsWith, Result) == 0x000018, "Member 'FRigVMFunction_EndsWith::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMExtendedExecuteContext
 // 0x0228 (0x0228 - 0x0000)
@@ -482,189 +572,115 @@ public:
 static_assert(alignof(FRigVMExtendedExecuteContext) == 0x000008, "Wrong alignment on FRigVMExtendedExecuteContext");
 static_assert(sizeof(FRigVMExtendedExecuteContext) == 0x000228, "Wrong size on FRigVMExtendedExecuteContext");
 
-// ScriptStruct RigVM.RigVMFunction_NoiseVector
-// 0x0080 (0x0088 - 0x0008)
-struct FRigVMFunction_NoiseVector final : public FRigVMFunction_MathBase
-{
-public:
-	struct FVector                                Position;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Time;                                              // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_NoiseVector) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseVector");
-static_assert(sizeof(FRigVMFunction_NoiseVector) == 0x000088, "Wrong size on FRigVMFunction_NoiseVector");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Position) == 0x000008, "Member 'FRigVMFunction_NoiseVector::Position' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Speed) == 0x000020, "Member 'FRigVMFunction_NoiseVector::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Frequency) == 0x000038, "Member 'FRigVMFunction_NoiseVector::Frequency' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Minimum) == 0x000050, "Member 'FRigVMFunction_NoiseVector::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Maximum) == 0x000054, "Member 'FRigVMFunction_NoiseVector::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Result) == 0x000058, "Member 'FRigVMFunction_NoiseVector::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector, Time) == 0x000070, "Member 'FRigVMFunction_NoiseVector::Time' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMDispatchFactory
-// 0x0070 (0x0070 - 0x0000)
-struct alignas(0x08) FRigVMDispatchFactory
-{
-public:
-	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMDispatchFactory) == 0x000008, "Wrong alignment on FRigVMDispatchFactory");
-static_assert(sizeof(FRigVMDispatchFactory) == 0x000070, "Wrong size on FRigVMDispatchFactory");
-
-// ScriptStruct RigVM.RigVMDispatch_CastIntToEnum
+// ScriptStruct RigVM.RigVMDispatch_ArraySetAtIndex
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CastIntToEnum final : public FRigVMDispatchFactory
+struct FRigVMDispatch_ArraySetAtIndex : public FRigVMDispatch_ArrayBaseMutable
 {
 };
-static_assert(alignof(FRigVMDispatch_CastIntToEnum) == 0x000008, "Wrong alignment on FRigVMDispatch_CastIntToEnum");
-static_assert(sizeof(FRigVMDispatch_CastIntToEnum) == 0x000070, "Wrong size on FRigVMDispatch_CastIntToEnum");
+static_assert(alignof(FRigVMDispatch_ArraySetAtIndex) == 0x000008, "Wrong alignment on FRigVMDispatch_ArraySetAtIndex");
+static_assert(sizeof(FRigVMDispatch_ArraySetAtIndex) == 0x000070, "Wrong size on FRigVMDispatch_ArraySetAtIndex");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMDispatch_ArrayInsert
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayInsert final : public FRigVMDispatch_ArraySetAtIndex
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayInsert) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayInsert");
+static_assert(sizeof(FRigVMDispatch_ArrayInsert) == 0x000070, "Wrong size on FRigVMDispatch_ArrayInsert");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathDoubleBase : public FRigVMFunction_MathBase
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBase");
+static_assert(sizeof(FRigVMFunction_MathDoubleBase) == 0x000008, "Wrong size on FRigVMFunction_MathDoubleBase");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleRemap
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathDoubleRemap final : public FRigVMFunction_MathDoubleBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SourceMinimum;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SourceMaximum;                                     // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        TargetMinimum;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        TargetMaximum;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Result;                                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathDoubleRemap) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleRemap");
+static_assert(sizeof(FRigVMFunction_MathDoubleRemap) == 0x000040, "Wrong size on FRigVMFunction_MathDoubleRemap");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleRemap::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, SourceMinimum) == 0x000010, "Member 'FRigVMFunction_MathDoubleRemap::SourceMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, SourceMaximum) == 0x000018, "Member 'FRigVMFunction_MathDoubleRemap::SourceMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, TargetMinimum) == 0x000020, "Member 'FRigVMFunction_MathDoubleRemap::TargetMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, TargetMaximum) == 0x000028, "Member 'FRigVMFunction_MathDoubleRemap::TargetMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, bClamp) == 0x000030, "Member 'FRigVMFunction_MathDoubleRemap::bClamp' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleRemap, Result) == 0x000038, "Member 'FRigVMFunction_MathDoubleRemap::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMBaseOp
+// 0x0001 (0x0001 - 0x0000)
+struct FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMBaseOp) == 0x000001, "Wrong alignment on FRigVMBaseOp");
+static_assert(sizeof(FRigVMBaseOp) == 0x000001, "Wrong size on FRigVMBaseOp");
+
+// ScriptStruct RigVM.RigVMUnaryOp
+// 0x0007 (0x0008 - 0x0001)
+struct alignas(0x02) FRigVMUnaryOp : public FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMUnaryOp) == 0x000002, "Wrong alignment on FRigVMUnaryOp");
+static_assert(sizeof(FRigVMUnaryOp) == 0x000008, "Wrong size on FRigVMUnaryOp");
+
+// ScriptStruct RigVM.RigVMExecuteOp
+// 0x0009 (0x000A - 0x0001)
+struct alignas(0x02) FRigVMExecuteOp final : public FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_1[0x9];                                        // 0x0001(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMExecuteOp) == 0x000002, "Wrong alignment on FRigVMExecuteOp");
+static_assert(sizeof(FRigVMExecuteOp) == 0x00000A, "Wrong size on FRigVMExecuteOp");
+
+// ScriptStruct RigVM.RigVMFunction_MathIntBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathIntBase : public FRigVMFunction_MathBase
+{
+};
+static_assert(alignof(FRigVMFunction_MathIntBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBase");
+static_assert(sizeof(FRigVMFunction_MathIntBase) == 0x000008, "Wrong size on FRigVMFunction_MathIntBase");
+
+// ScriptStruct RigVM.RigVMFunction_MathIntBinaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
+{
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatBinaryOp");
-static_assert(sizeof(FRigVMFunction_MathFloatBinaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatBinaryOp");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathFloatBinaryOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatBinaryOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatBinaryOp::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBinaryOp");
+static_assert(sizeof(FRigVMFunction_MathIntBinaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathIntBinaryOp");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathIntBinaryOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, B) == 0x00000C, "Member 'FRigVMFunction_MathIntBinaryOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathIntBinaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatMod
+// ScriptStruct RigVM.RigVMFunction_MathIntPow
 // 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatMod final : public FRigVMFunction_MathFloatBinaryOp
+struct FRigVMFunction_MathIntPow final : public FRigVMFunction_MathIntBinaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMod");
-static_assert(sizeof(FRigVMFunction_MathFloatMod) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMod");
-
-// ScriptStruct RigVM.RigVMFunction_AnimBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_AnimBase : public FRigVMStruct
-{
-};
-static_assert(alignof(FRigVMFunction_AnimBase) == 0x000008, "Wrong alignment on FRigVMFunction_AnimBase");
-static_assert(sizeof(FRigVMFunction_AnimBase) == 0x000008, "Wrong size on FRigVMFunction_AnimBase");
-
-// ScriptStruct RigVM.RigVMFunction_AnimEasingType
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_AnimEasingType final : public FRigVMFunction_AnimBase
-{
-public:
-	ERigVMAnimEasingType                          Type;                                              // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_AnimEasingType) == 0x000008, "Wrong alignment on FRigVMFunction_AnimEasingType");
-static_assert(sizeof(FRigVMFunction_AnimEasingType) == 0x000010, "Wrong size on FRigVMFunction_AnimEasingType");
-static_assert(offsetof(FRigVMFunction_AnimEasingType, Type) == 0x000008, "Member 'FRigVMFunction_AnimEasingType::Type' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathTransformBase : public FRigVMFunction_MathBase
-{
-};
-static_assert(alignof(FRigVMFunction_MathTransformBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathTransformBase");
-static_assert(sizeof(FRigVMFunction_MathTransformBase) == 0x000008, "Wrong size on FRigVMFunction_MathTransformBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformMakeRelative
-// 0x0128 (0x0130 - 0x0008)
-struct FRigVMFunction_MathTransformMakeRelative final : public FRigVMFunction_MathTransformBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Global;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Local;                                             // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathTransformMakeRelative) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformMakeRelative");
-static_assert(sizeof(FRigVMFunction_MathTransformMakeRelative) == 0x000130, "Wrong size on FRigVMFunction_MathTransformMakeRelative");
-static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Global) == 0x000010, "Member 'FRigVMFunction_MathTransformMakeRelative::Global' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Parent) == 0x000070, "Member 'FRigVMFunction_MathTransformMakeRelative::Parent' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Local) == 0x0000D0, "Member 'FRigVMFunction_MathTransformMakeRelative::Local' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMDispatch_CastEnumToInt
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CastEnumToInt final : public FRigVMDispatchFactory
-{
-};
-static_assert(alignof(FRigVMDispatch_CastEnumToInt) == 0x000008, "Wrong alignment on FRigVMDispatch_CastEnumToInt");
-static_assert(sizeof(FRigVMDispatch_CastEnumToInt) == 0x000070, "Wrong size on FRigVMDispatch_CastEnumToInt");
-
-// ScriptStruct RigVM.RigVMMemoryStatistics
-// 0x000C (0x000C - 0x0000)
-struct FRigVMMemoryStatistics final
-{
-public:
-	int32                                         RegisterCount;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalBytes;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMMemoryStatistics) == 0x000004, "Wrong alignment on FRigVMMemoryStatistics");
-static_assert(sizeof(FRigVMMemoryStatistics) == 0x00000C, "Wrong size on FRigVMMemoryStatistics");
-static_assert(offsetof(FRigVMMemoryStatistics, RegisterCount) == 0x000000, "Member 'FRigVMMemoryStatistics::RegisterCount' has a wrong offset!");
-static_assert(offsetof(FRigVMMemoryStatistics, DataBytes) == 0x000004, "Member 'FRigVMMemoryStatistics::DataBytes' has a wrong offset!");
-static_assert(offsetof(FRigVMMemoryStatistics, TotalBytes) == 0x000008, "Member 'FRigVMMemoryStatistics::TotalBytes' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMByteCodeStatistics
-// 0x0008 (0x0008 - 0x0000)
-struct FRigVMByteCodeStatistics final
-{
-public:
-	int32                                         InstructionCount;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMByteCodeStatistics) == 0x000004, "Wrong alignment on FRigVMByteCodeStatistics");
-static_assert(sizeof(FRigVMByteCodeStatistics) == 0x000008, "Wrong size on FRigVMByteCodeStatistics");
-static_assert(offsetof(FRigVMByteCodeStatistics, InstructionCount) == 0x000000, "Member 'FRigVMByteCodeStatistics::InstructionCount' has a wrong offset!");
-static_assert(offsetof(FRigVMByteCodeStatistics, DataBytes) == 0x000004, "Member 'FRigVMByteCodeStatistics::DataBytes' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMStatistics
-// 0x0038 (0x0038 - 0x0000)
-struct FRigVMStatistics final
-{
-public:
-	int32                                         BytesForCDO;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BytesPerInstance;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigVMMemoryStatistics                 LiteralMemory;                                     // 0x0008(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigVMMemoryStatistics                 WorkMemory;                                        // 0x0014(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigVMMemoryStatistics                 DebugMemory;                                       // 0x0020(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         BytesForCaching;                                   // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigVMByteCodeStatistics               ByteCode;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMStatistics) == 0x000004, "Wrong alignment on FRigVMStatistics");
-static_assert(sizeof(FRigVMStatistics) == 0x000038, "Wrong size on FRigVMStatistics");
-static_assert(offsetof(FRigVMStatistics, BytesForCDO) == 0x000000, "Member 'FRigVMStatistics::BytesForCDO' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, BytesPerInstance) == 0x000004, "Member 'FRigVMStatistics::BytesPerInstance' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, LiteralMemory) == 0x000008, "Member 'FRigVMStatistics::LiteralMemory' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, WorkMemory) == 0x000014, "Member 'FRigVMStatistics::WorkMemory' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, DebugMemory) == 0x000020, "Member 'FRigVMStatistics::DebugMemory' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, BytesForCaching) == 0x00002C, "Member 'FRigVMStatistics::BytesForCaching' has a wrong offset!");
-static_assert(offsetof(FRigVMStatistics, ByteCode) == 0x000030, "Member 'FRigVMStatistics::ByteCode' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMDispatch_CoreBase
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CoreBase : public FRigVMDispatchFactory
-{
-};
-static_assert(alignof(FRigVMDispatch_CoreBase) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreBase");
-static_assert(sizeof(FRigVMDispatch_CoreBase) == 0x000070, "Wrong size on FRigVMDispatch_CoreBase");
-
-// ScriptStruct RigVM.RigVMDispatch_CoreEquals
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CoreEquals : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_CoreEquals) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreEquals");
-static_assert(sizeof(FRigVMDispatch_CoreEquals) == 0x000070, "Wrong size on FRigVMDispatch_CoreEquals");
+static_assert(alignof(FRigVMFunction_MathIntPow) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntPow");
+static_assert(sizeof(FRigVMFunction_MathIntPow) == 0x000018, "Wrong size on FRigVMFunction_MathIntPow");
 
 // ScriptStruct RigVM.RigVMRuntimeSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -678,6 +694,62 @@ static_assert(alignof(FRigVMRuntimeSettings) == 0x000008, "Wrong alignment on FR
 static_assert(sizeof(FRigVMRuntimeSettings) == 0x000018, "Wrong size on FRigVMRuntimeSettings");
 static_assert(offsetof(FRigVMRuntimeSettings, MaximumArraySize) == 0x000000, "Member 'FRigVMRuntimeSettings::MaximumArraySize' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_NoiseFloat
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_NoiseFloat final : public FRigVMFunction_MathBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Frequency;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_NoiseFloat) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseFloat");
+static_assert(sizeof(FRigVMFunction_NoiseFloat) == 0x000028, "Wrong size on FRigVMFunction_NoiseFloat");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Value) == 0x000008, "Member 'FRigVMFunction_NoiseFloat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Speed) == 0x00000C, "Member 'FRigVMFunction_NoiseFloat::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Frequency) == 0x000010, "Member 'FRigVMFunction_NoiseFloat::Frequency' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Minimum) == 0x000014, "Member 'FRigVMFunction_NoiseFloat::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Maximum) == 0x000018, "Member 'FRigVMFunction_NoiseFloat::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Result) == 0x00001C, "Member 'FRigVMFunction_NoiseFloat::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseFloat, Time) == 0x000020, "Member 'FRigVMFunction_NoiseFloat::Time' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformBinaryOp
+// 0x0128 (0x0130 - 0x0008)
+struct FRigVMFunction_MathTransformBinaryOp final : public FRigVMFunction_MathTransformBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             A;                                                 // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             B;                                                 // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Result;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathTransformBinaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformBinaryOp");
+static_assert(sizeof(FRigVMFunction_MathTransformBinaryOp) == 0x000130, "Wrong size on FRigVMFunction_MathTransformBinaryOp");
+static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, A) == 0x000010, "Member 'FRigVMFunction_MathTransformBinaryOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, B) == 0x000070, "Member 'FRigVMFunction_MathTransformBinaryOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, Result) == 0x0000D0, "Member 'FRigVMFunction_MathTransformBinaryOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDispatch_CastEnumToInt
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CastEnumToInt final : public FRigVMDispatchFactory
+{
+};
+static_assert(alignof(FRigVMDispatch_CastEnumToInt) == 0x000008, "Wrong alignment on FRigVMDispatch_CastEnumToInt");
+static_assert(sizeof(FRigVMDispatch_CastEnumToInt) == 0x000070, "Wrong size on FRigVMDispatch_CastEnumToInt");
+
+// ScriptStruct RigVM.RigVMDispatch_CastIntToEnum
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_CastIntToEnum final : public FRigVMDispatchFactory
+{
+};
+static_assert(alignof(FRigVMDispatch_CastIntToEnum) == 0x000008, "Wrong alignment on FRigVMDispatch_CastIntToEnum");
+static_assert(sizeof(FRigVMDispatch_CastIntToEnum) == 0x000070, "Wrong size on FRigVMDispatch_CastIntToEnum");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorBase
 // 0x0000 (0x0008 - 0x0008)
 struct FRigVMFunction_MathVectorBase : public FRigVMFunction_MathBase
@@ -686,81 +758,22 @@ struct FRigVMFunction_MathVectorBase : public FRigVMFunction_MathBase
 static_assert(alignof(FRigVMFunction_MathVectorBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorBase");
 static_assert(sizeof(FRigVMFunction_MathVectorBase) == 0x000008, "Wrong size on FRigVMFunction_MathVectorBase");
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorOrthogonal
+// ScriptStruct RigVM.RigVMFunction_MathVectorClampLength
 // 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorOrthogonal final : public FRigVMFunction_MathVectorBase
+struct FRigVMFunction_MathVectorClampLength final : public FRigVMFunction_MathVectorBase
 {
 public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinimumLength;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaximumLength;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathVectorOrthogonal) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorOrthogonal");
-static_assert(sizeof(FRigVMFunction_MathVectorOrthogonal) == 0x000040, "Wrong size on FRigVMFunction_MathVectorOrthogonal");
-static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, A) == 0x000008, "Member 'FRigVMFunction_MathVectorOrthogonal::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, B) == 0x000020, "Member 'FRigVMFunction_MathVectorOrthogonal::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorOrthogonal::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMDecorator
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMDecorator final : public FRigVMStruct
-{
-public:
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMDecorator) == 0x000008, "Wrong alignment on FRigVMDecorator");
-static_assert(sizeof(FRigVMDecorator) == 0x000018, "Wrong size on FRigVMDecorator");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayBase
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayBase : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayBase) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayBase");
-static_assert(sizeof(FRigVMDispatch_ArrayBase) == 0x000070, "Wrong size on FRigVMDispatch_ArrayBase");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayBaseMutable
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayBaseMutable : public FRigVMDispatch_ArrayBase
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayBaseMutable) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayBaseMutable");
-static_assert(sizeof(FRigVMDispatch_ArrayBaseMutable) == 0x000070, "Wrong size on FRigVMDispatch_ArrayBaseMutable");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayReset
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayReset : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayReset) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayReset");
-static_assert(sizeof(FRigVMDispatch_ArrayReset) == 0x000070, "Wrong size on FRigVMDispatch_ArrayReset");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayReverse
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayReverse final : public FRigVMDispatch_ArrayReset
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayReverse) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayReverse");
-static_assert(sizeof(FRigVMDispatch_ArrayReverse) == 0x000070, "Wrong size on FRigVMDispatch_ArrayReverse");
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformMake
-// 0x00B8 (0x00C0 - 0x0008)
-struct FRigVMFunction_MathTransformMake final : public FRigVMFunction_MathTransformBase
-{
-public:
-	struct FVector                                Translation;                                       // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Rotation;                                          // 0x0020(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Result;                                            // 0x0060(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathTransformMake) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformMake");
-static_assert(sizeof(FRigVMFunction_MathTransformMake) == 0x0000C0, "Wrong size on FRigVMFunction_MathTransformMake");
-static_assert(offsetof(FRigVMFunction_MathTransformMake, Translation) == 0x000008, "Member 'FRigVMFunction_MathTransformMake::Translation' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformMake, Rotation) == 0x000020, "Member 'FRigVMFunction_MathTransformMake::Rotation' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformMake, Scale) == 0x000040, "Member 'FRigVMFunction_MathTransformMake::Scale' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformMake, Result) == 0x000060, "Member 'FRigVMFunction_MathTransformMake::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathVectorClampLength) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorClampLength");
+static_assert(sizeof(FRigVMFunction_MathVectorClampLength) == 0x000040, "Wrong size on FRigVMFunction_MathVectorClampLength");
+static_assert(offsetof(FRigVMFunction_MathVectorClampLength, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorClampLength::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorClampLength, MinimumLength) == 0x000020, "Member 'FRigVMFunction_MathVectorClampLength::MinimumLength' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorClampLength, MaximumLength) == 0x000024, "Member 'FRigVMFunction_MathVectorClampLength::MaximumLength' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorClampLength, Result) == 0x000028, "Member 'FRigVMFunction_MathVectorClampLength::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMDispatch_CastObject
 // 0x0000 (0x0070 - 0x0070)
@@ -780,32 +793,6 @@ public:
 static_assert(alignof(FRigVMExternalVariableDef) == 0x000008, "Wrong alignment on FRigVMExternalVariableDef");
 static_assert(sizeof(FRigVMExternalVariableDef) == 0x000028, "Wrong size on FRigVMExternalVariableDef");
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorAngle
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorAngle final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathVectorAngle) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorAngle");
-static_assert(sizeof(FRigVMFunction_MathVectorAngle) == 0x000040, "Wrong size on FRigVMFunction_MathVectorAngle");
-static_assert(offsetof(FRigVMFunction_MathVectorAngle, A) == 0x000008, "Member 'FRigVMFunction_MathVectorAngle::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorAngle, B) == 0x000020, "Member 'FRigVMFunction_MathVectorAngle::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorAngle, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorAngle::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMExternalVariable
-// 0x0008 (0x0030 - 0x0028)
-struct FRigVMExternalVariable final : public FRigVMExternalVariableDef
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMExternalVariable) == 0x000008, "Wrong alignment on FRigVMExternalVariable");
-static_assert(sizeof(FRigVMExternalVariable) == 0x000030, "Wrong size on FRigVMExternalVariable");
-
 // ScriptStruct RigVM.RigVMFourPointBezier
 // 0x0060 (0x0060 - 0x0000)
 struct FRigVMFourPointBezier final
@@ -823,35 +810,54 @@ static_assert(offsetof(FRigVMFourPointBezier, B) == 0x000018, "Member 'FRigVMFou
 static_assert(offsetof(FRigVMFourPointBezier, C) == 0x000030, "Member 'FRigVMFourPointBezier::C' has a wrong offset!");
 static_assert(offsetof(FRigVMFourPointBezier, D) == 0x000048, "Member 'FRigVMFourPointBezier::D' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
-// 0x0060 (0x0068 - 0x0008)
-struct FRigVMFunction_MathVectorMakeBezierFourPoint final : public FRigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorBezierFourPoint
+// 0x0098 (0x00A0 - 0x0008)
+struct FRigVMFunction_MathVectorBezierFourPoint final : public FRigVMFunction_MathVectorBase
 {
 public:
 	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         T;                                                 // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Tangent;                                           // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathVectorMakeBezierFourPoint) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMakeBezierFourPoint");
-static_assert(sizeof(FRigVMFunction_MathVectorMakeBezierFourPoint) == 0x000068, "Wrong size on FRigVMFunction_MathVectorMakeBezierFourPoint");
-static_assert(offsetof(FRigVMFunction_MathVectorMakeBezierFourPoint, Bezier) == 0x000008, "Member 'FRigVMFunction_MathVectorMakeBezierFourPoint::Bezier' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathVectorBezierFourPoint) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorBezierFourPoint");
+static_assert(sizeof(FRigVMFunction_MathVectorBezierFourPoint) == 0x0000A0, "Wrong size on FRigVMFunction_MathVectorBezierFourPoint");
+static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Bezier) == 0x000008, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Bezier' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, T) == 0x000068, "Member 'FRigVMFunction_MathVectorBezierFourPoint::T' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Result) == 0x000070, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Tangent) == 0x000088, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Tangent' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathTransformToVectors
-// 0x00B8 (0x00C0 - 0x0008)
-struct FRigVMFunction_MathTransformToVectors final : public FRigVMFunction_MathTransformBase
+// ScriptStruct RigVM.RigVMFunction_MathTransformFromEulerTransformV2
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_MathTransformFromEulerTransformV2 final : public FRigVMFunction_MathTransformBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Forward;                                           // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Right;                                             // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Up;                                                // 0x00A0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FEulerTransform                        Value;                                             // 0x0008(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             Result;                                            // 0x0050(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathTransformToVectors) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformToVectors");
-static_assert(sizeof(FRigVMFunction_MathTransformToVectors) == 0x0000C0, "Wrong size on FRigVMFunction_MathTransformToVectors");
-static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Value) == 0x000010, "Member 'FRigVMFunction_MathTransformToVectors::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Forward) == 0x000070, "Member 'FRigVMFunction_MathTransformToVectors::Forward' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Right) == 0x000088, "Member 'FRigVMFunction_MathTransformToVectors::Right' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformToVectors, Up) == 0x0000A0, "Member 'FRigVMFunction_MathTransformToVectors::Up' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathTransformFromEulerTransformV2) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformFromEulerTransformV2");
+static_assert(sizeof(FRigVMFunction_MathTransformFromEulerTransformV2) == 0x0000B0, "Wrong size on FRigVMFunction_MathTransformFromEulerTransformV2");
+static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransformV2, Value) == 0x000008, "Member 'FRigVMFunction_MathTransformFromEulerTransformV2::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransformV2, Result) == 0x000050, "Member 'FRigVMFunction_MathTransformFromEulerTransformV2::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMExternalVariable
+// 0x0008 (0x0030 - 0x0028)
+struct FRigVMExternalVariable final : public FRigVMExternalVariableDef
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMExternalVariable) == 0x000008, "Wrong alignment on FRigVMExternalVariable");
+static_assert(sizeof(FRigVMExternalVariable) == 0x000030, "Wrong size on FRigVMExternalVariable");
+
+// ScriptStruct RigVM.RigVMFunction_AnimBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_AnimBase : public FRigVMStruct
+{
+};
+static_assert(alignof(FRigVMFunction_AnimBase) == 0x000008, "Wrong alignment on FRigVMFunction_AnimBase");
+static_assert(sizeof(FRigVMFunction_AnimBase) == 0x000008, "Wrong size on FRigVMFunction_AnimBase");
 
 // ScriptStruct RigVM.RigVMFunction_DebugBase
 // 0x0000 (0x0008 - 0x0008)
@@ -860,6 +866,27 @@ struct FRigVMFunction_DebugBase : public FRigVMStruct
 };
 static_assert(alignof(FRigVMFunction_DebugBase) == 0x000008, "Wrong alignment on FRigVMFunction_DebugBase");
 static_assert(sizeof(FRigVMFunction_DebugBase) == 0x000008, "Wrong size on FRigVMFunction_DebugBase");
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatUnaryOp
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathFloatUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatUnaryOp");
+static_assert(sizeof(FRigVMFunction_MathFloatUnaryOp) == 0x000010, "Wrong size on FRigVMFunction_MathFloatUnaryOp");
+static_assert(offsetof(FRigVMFunction_MathFloatUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatUnaryOp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatUnaryOp, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatUnaryOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatAbs
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatAbs final : public FRigVMFunction_MathFloatUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathFloatAbs) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAbs");
+static_assert(sizeof(FRigVMFunction_MathFloatAbs) == 0x000010, "Wrong size on FRigVMFunction_MathFloatAbs");
 
 // ScriptStruct RigVM.RigVMExecuteContext
 // 0x00F0 (0x00F0 - 0x0000)
@@ -883,21 +910,28 @@ static_assert(alignof(FRigVMStructMutable) == 0x000010, "Wrong alignment on FRig
 static_assert(sizeof(FRigVMStructMutable) == 0x000100, "Wrong size on FRigVMStructMutable");
 static_assert(offsetof(FRigVMStructMutable, ExecuteContext) == 0x000010, "Member 'FRigVMStructMutable::ExecuteContext' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatCeil
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatCeil final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryAggregateOp
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleBinaryAggregateOp : public FRigVMFunction_MathDoubleBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         int_0;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatCeil) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatCeil");
-static_assert(sizeof(FRigVMFunction_MathFloatCeil) == 0x000018, "Wrong size on FRigVMFunction_MathFloatCeil");
-static_assert(offsetof(FRigVMFunction_MathFloatCeil, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatCeil::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatCeil, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatCeil::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatCeil, int_0) == 0x000010, "Member 'FRigVMFunction_MathFloatCeil::int_0' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathDoubleBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBinaryAggregateOp");
+static_assert(sizeof(FRigVMFunction_MathDoubleBinaryAggregateOp) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleBinaryAggregateOp");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMax
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMax final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMax");
+static_assert(sizeof(FRigVMFunction_MathDoubleMax) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMax");
 
 // ScriptStruct RigVM.RigVMFunction_DebugBaseMutable
 // 0x0000 (0x0100 - 0x0100)
@@ -907,34 +941,18 @@ struct FRigVMFunction_DebugBaseMutable : public FRigVMStructMutable
 static_assert(alignof(FRigVMFunction_DebugBaseMutable) == 0x000010, "Wrong alignment on FRigVMFunction_DebugBaseMutable");
 static_assert(sizeof(FRigVMFunction_DebugBaseMutable) == 0x000100, "Wrong size on FRigVMFunction_DebugBaseMutable");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathDoubleBase : public FRigVMFunction_MathBase
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBase");
-static_assert(sizeof(FRigVMFunction_MathDoubleBase) == 0x000008, "Wrong size on FRigVMFunction_MathDoubleBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleUnaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatToInt
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatToInt final : public FRigVMFunction_MathFloatBase
 {
 public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathDoubleUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleUnaryOp");
-static_assert(sizeof(FRigVMFunction_MathDoubleUnaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleUnaryOp");
-static_assert(offsetof(FRigVMFunction_MathDoubleUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleUnaryOp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleUnaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathDoubleUnaryOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleSqrt
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleSqrt final : public FRigVMFunction_MathDoubleUnaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleSqrt) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleSqrt");
-static_assert(sizeof(FRigVMFunction_MathDoubleSqrt) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleSqrt");
+static_assert(alignof(FRigVMFunction_MathFloatToInt) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatToInt");
+static_assert(sizeof(FRigVMFunction_MathFloatToInt) == 0x000010, "Wrong size on FRigVMFunction_MathFloatToInt");
+static_assert(offsetof(FRigVMFunction_MathFloatToInt, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatToInt::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatToInt, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatToInt::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathMutableBase
 // 0x0000 (0x0100 - 0x0100)
@@ -960,22 +978,13 @@ static_assert(offsetof(FRigVMFunction_Sequence, ExecuteContext) == 0x000010, "Me
 static_assert(offsetof(FRigVMFunction_Sequence, A) == 0x000100, "Member 'FRigVMFunction_Sequence::A' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_Sequence, B) == 0x0001F0, "Member 'FRigVMFunction_Sequence::B' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatClamp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatClamp final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatSqrt
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatSqrt final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatClamp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatClamp");
-static_assert(sizeof(FRigVMFunction_MathFloatClamp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatClamp");
-static_assert(offsetof(FRigVMFunction_MathFloatClamp, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatClamp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatClamp, Minimum) == 0x00000C, "Member 'FRigVMFunction_MathFloatClamp::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatClamp, Maximum) == 0x000010, "Member 'FRigVMFunction_MathFloatClamp::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatClamp, Result) == 0x000014, "Member 'FRigVMFunction_MathFloatClamp::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatSqrt) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatSqrt");
+static_assert(sizeof(FRigVMFunction_MathFloatSqrt) == 0x000010, "Wrong size on FRigVMFunction_MathFloatSqrt");
 
 // ScriptStruct RigVM.RigVMUnknownType
 // 0x0004 (0x0004 - 0x0000)
@@ -988,34 +997,28 @@ static_assert(alignof(FRigVMUnknownType) == 0x000004, "Wrong alignment on FRigVM
 static_assert(sizeof(FRigVMUnknownType) == 0x000004, "Wrong size on FRigVMUnknownType");
 static_assert(offsetof(FRigVMUnknownType, Hash) == 0x000000, "Member 'FRigVMUnknownType::Hash' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_SimBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_SimBase : public FRigVMStruct
-{
-};
-static_assert(alignof(FRigVMFunction_SimBase) == 0x000008, "Wrong alignment on FRigVMFunction_SimBase");
-static_assert(sizeof(FRigVMFunction_SimBase) == 0x000008, "Wrong size on FRigVMFunction_SimBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatUnaryOp
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryOp
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatUnaryOp");
-static_assert(sizeof(FRigVMFunction_MathFloatUnaryOp) == 0x000010, "Wrong size on FRigVMFunction_MathFloatUnaryOp");
-static_assert(offsetof(FRigVMFunction_MathFloatUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatUnaryOp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatUnaryOp, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatUnaryOp::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathDoubleBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBinaryOp");
+static_assert(sizeof(FRigVMFunction_MathDoubleBinaryOp) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleBinaryOp");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleBinaryOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleBinaryOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleBinaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatAbs
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatAbs final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMod
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMod final : public FRigVMFunction_MathDoubleBinaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatAbs) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAbs");
-static_assert(sizeof(FRigVMFunction_MathFloatAbs) == 0x000010, "Wrong size on FRigVMFunction_MathFloatAbs");
+static_assert(alignof(FRigVMFunction_MathDoubleMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMod");
+static_assert(sizeof(FRigVMFunction_MathDoubleMod) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMod");
 
 // ScriptStruct RigVM.RigVMFunction_SimBaseMutable
 // 0x0000 (0x0100 - 0x0100)
@@ -1280,77 +1283,6 @@ static_assert(sizeof(FRigVMGraphFunctionStore) == 0x000020, "Wrong size on FRigV
 static_assert(offsetof(FRigVMGraphFunctionStore, PublicFunctions) == 0x000000, "Member 'FRigVMGraphFunctionStore::PublicFunctions' has a wrong offset!");
 static_assert(offsetof(FRigVMGraphFunctionStore, PrivateFunctions) == 0x000010, "Member 'FRigVMGraphFunctionStore::PrivateFunctions' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryAggregateOp
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleBinaryAggregateOp : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathDoubleBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBinaryAggregateOp");
-static_assert(sizeof(FRigVMFunction_MathDoubleBinaryAggregateOp) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleBinaryAggregateOp");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryAggregateOp, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleBinaryAggregateOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMax
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMax final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMax");
-static_assert(sizeof(FRigVMFunction_MathDoubleMax) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMax");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleClamp
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathDoubleClamp final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Minimum;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Maximum;                                           // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathDoubleClamp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleClamp");
-static_assert(sizeof(FRigVMFunction_MathDoubleClamp) == 0x000028, "Wrong size on FRigVMFunction_MathDoubleClamp");
-static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleClamp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Minimum) == 0x000010, "Member 'FRigVMFunction_MathDoubleClamp::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Maximum) == 0x000018, "Member 'FRigVMFunction_MathDoubleClamp::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Result) == 0x000020, "Member 'FRigVMFunction_MathDoubleClamp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAbs
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleAbs final : public FRigVMFunction_MathDoubleUnaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleAbs) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAbs");
-static_assert(sizeof(FRigVMFunction_MathDoubleAbs) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAbs");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleBinaryOp
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathDoubleBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleBinaryOp");
-static_assert(sizeof(FRigVMFunction_MathDoubleBinaryOp) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleBinaryOp");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleBinaryOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleBinaryOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleBinaryOp, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleBinaryOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMod
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMod final : public FRigVMFunction_MathDoubleBinaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMod");
-static_assert(sizeof(FRigVMFunction_MathDoubleMod) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMod");
-
 // ScriptStruct RigVM.RigVMFunction_MathDoubleToInt
 // 0x0010 (0x0018 - 0x0008)
 struct FRigVMFunction_MathDoubleToInt final : public FRigVMFunction_MathDoubleBase
@@ -1365,55 +1297,34 @@ static_assert(sizeof(FRigVMFunction_MathDoubleToInt) == 0x000018, "Wrong size on
 static_assert(offsetof(FRigVMFunction_MathDoubleToInt, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleToInt::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathDoubleToInt, Result) == 0x000010, "Member 'FRigVMFunction_MathDoubleToInt::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleLessEqual
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleLessEqual final : public FRigVMFunction_MathDoubleBase
-{
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathDoubleLessEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleLessEqual");
-static_assert(sizeof(FRigVMFunction_MathDoubleLessEqual) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleLessEqual");
-static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleLessEqual::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleLessEqual::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleLessEqual::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleRemap
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathDoubleRemap final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleUnaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
 {
 public:
 	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SourceMinimum;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SourceMaximum;                                     // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        TargetMinimum;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        TargetMaximum;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClamp;                                            // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Result;                                            // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathDoubleRemap) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleRemap");
-static_assert(sizeof(FRigVMFunction_MathDoubleRemap) == 0x000040, "Wrong size on FRigVMFunction_MathDoubleRemap");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleRemap::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, SourceMinimum) == 0x000010, "Member 'FRigVMFunction_MathDoubleRemap::SourceMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, SourceMaximum) == 0x000018, "Member 'FRigVMFunction_MathDoubleRemap::SourceMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, TargetMinimum) == 0x000020, "Member 'FRigVMFunction_MathDoubleRemap::TargetMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, TargetMaximum) == 0x000028, "Member 'FRigVMFunction_MathDoubleRemap::TargetMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, bClamp) == 0x000030, "Member 'FRigVMFunction_MathDoubleRemap::bClamp' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleRemap, Result) == 0x000038, "Member 'FRigVMFunction_MathDoubleRemap::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathDoubleUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleUnaryOp");
+static_assert(sizeof(FRigVMFunction_MathDoubleUnaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleUnaryOp");
+static_assert(offsetof(FRigVMFunction_MathDoubleUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleUnaryOp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleUnaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathDoubleUnaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMMemoryStorageStruct
-// 0x0040 (0x0050 - 0x0010)
-struct FRigVMMemoryStorageStruct final : public FInstancedPropertyBag
+// ScriptStruct RigVM.RigVMFunction_MathDoubleSqrt
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleSqrt final : public FRigVMFunction_MathDoubleUnaryOp
 {
-public:
-	uint8                                         Pad_10[0x40];                                      // 0x0010(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMMemoryStorageStruct) == 0x000008, "Wrong alignment on FRigVMMemoryStorageStruct");
-static_assert(sizeof(FRigVMMemoryStorageStruct) == 0x000050, "Wrong size on FRigVMMemoryStorageStruct");
+static_assert(alignof(FRigVMFunction_MathDoubleSqrt) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleSqrt");
+static_assert(sizeof(FRigVMFunction_MathDoubleSqrt) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleSqrt");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleMul
+// 0x0000 (0x0020 - 0x0020)
+struct FRigVMFunction_MathDoubleMul final : public FRigVMFunction_MathDoubleBinaryAggregateOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMul");
+static_assert(sizeof(FRigVMFunction_MathDoubleMul) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMul");
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleCeil
 // 0x0018 (0x0020 - 0x0008)
@@ -1446,6 +1357,101 @@ static_assert(sizeof(FRigVMFunction_MathDoubleLess) == 0x000020, "Wrong size on 
 static_assert(offsetof(FRigVMFunction_MathDoubleLess, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleLess::A' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathDoubleLess, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleLess::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathDoubleLess, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleLess::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleClamp
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathDoubleClamp final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Minimum;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Maximum;                                           // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathDoubleClamp) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleClamp");
+static_assert(sizeof(FRigVMFunction_MathDoubleClamp) == 0x000028, "Wrong size on FRigVMFunction_MathDoubleClamp");
+static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleClamp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Minimum) == 0x000010, "Member 'FRigVMFunction_MathDoubleClamp::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Maximum) == 0x000018, "Member 'FRigVMFunction_MathDoubleClamp::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleClamp, Result) == 0x000020, "Member 'FRigVMFunction_MathDoubleClamp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAbs
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleAbs final : public FRigVMFunction_MathDoubleUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleAbs) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAbs");
+static_assert(sizeof(FRigVMFunction_MathDoubleAbs) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAbs");
+
+// ScriptStruct RigVM.RigVMMemoryStorageStruct
+// 0x0040 (0x0050 - 0x0010)
+struct FRigVMMemoryStorageStruct final : public FInstancedPropertyBag
+{
+public:
+	uint8                                         Pad_10[0x40];                                      // 0x0010(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMMemoryStorageStruct) == 0x000008, "Wrong alignment on FRigVMMemoryStorageStruct");
+static_assert(sizeof(FRigVMMemoryStorageStruct) == 0x000050, "Wrong size on FRigVMMemoryStorageStruct");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleNotEquals
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleNotEquals final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathDoubleNotEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleNotEquals");
+static_assert(sizeof(FRigVMFunction_MathDoubleNotEquals) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleNotEquals");
+static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleNotEquals::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleNotEquals::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleNotEquals::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMByteCodeStatistics
+// 0x0008 (0x0008 - 0x0000)
+struct FRigVMByteCodeStatistics final
+{
+public:
+	int32                                         InstructionCount;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataBytes;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMByteCodeStatistics) == 0x000004, "Wrong alignment on FRigVMByteCodeStatistics");
+static_assert(sizeof(FRigVMByteCodeStatistics) == 0x000008, "Wrong size on FRigVMByteCodeStatistics");
+static_assert(offsetof(FRigVMByteCodeStatistics, InstructionCount) == 0x000000, "Member 'FRigVMByteCodeStatistics::InstructionCount' has a wrong offset!");
+static_assert(offsetof(FRigVMByteCodeStatistics, DataBytes) == 0x000004, "Member 'FRigVMByteCodeStatistics::DataBytes' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMStatistics
+// 0x0038 (0x0038 - 0x0000)
+struct FRigVMStatistics final
+{
+public:
+	int32                                         BytesForCDO;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BytesPerInstance;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigVMMemoryStatistics                 LiteralMemory;                                     // 0x0008(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigVMMemoryStatistics                 WorkMemory;                                        // 0x0014(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigVMMemoryStatistics                 DebugMemory;                                       // 0x0020(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         BytesForCaching;                                   // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigVMByteCodeStatistics               ByteCode;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMStatistics) == 0x000004, "Wrong alignment on FRigVMStatistics");
+static_assert(sizeof(FRigVMStatistics) == 0x000038, "Wrong size on FRigVMStatistics");
+static_assert(offsetof(FRigVMStatistics, BytesForCDO) == 0x000000, "Member 'FRigVMStatistics::BytesForCDO' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, BytesPerInstance) == 0x000004, "Member 'FRigVMStatistics::BytesPerInstance' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, LiteralMemory) == 0x000008, "Member 'FRigVMStatistics::LiteralMemory' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, WorkMemory) == 0x000014, "Member 'FRigVMStatistics::WorkMemory' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, DebugMemory) == 0x000020, "Member 'FRigVMStatistics::DebugMemory' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, BytesForCaching) == 0x00002C, "Member 'FRigVMStatistics::BytesForCaching' has a wrong offset!");
+static_assert(offsetof(FRigVMStatistics, ByteCode) == 0x000030, "Member 'FRigVMStatistics::ByteCode' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleCos
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleCos final : public FRigVMFunction_MathDoubleUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleCos) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleCos");
+static_assert(sizeof(FRigVMFunction_MathDoubleCos) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleCos");
 
 // ScriptStruct RigVM.RigVMGraphFunctionHeaderArray
 // 0x0010 (0x0010 - 0x0000)
@@ -1480,51 +1486,21 @@ static_assert(offsetof(FRigVMParameter, CPPType) == 0x000010, "Member 'FRigVMPar
 static_assert(offsetof(FRigVMParameter, ScriptStruct) == 0x000020, "Member 'FRigVMParameter::ScriptStruct' has a wrong offset!");
 static_assert(offsetof(FRigVMParameter, ScriptStructPath) == 0x000028, "Member 'FRigVMParameter::ScriptStructPath' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAsin
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleAsin final : public FRigVMFunction_MathDoubleUnaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleAsin) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAsin");
-static_assert(sizeof(FRigVMFunction_MathDoubleAsin) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAsin");
-
-// ScriptStruct RigVM.RigVMExecuteOp
-// 0x0009 (0x000A - 0x0001)
-struct alignas(0x02) FRigVMExecuteOp final : public FRigVMBaseOp
-{
-public:
-	uint8                                         Pad_1[0x9];                                        // 0x0001(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMExecuteOp) == 0x000002, "Wrong alignment on FRigVMExecuteOp");
-static_assert(sizeof(FRigVMExecuteOp) == 0x00000A, "Wrong size on FRigVMExecuteOp");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleIsNearlyEqual
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathDoubleIsNearlyEqual final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleLessEqual
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleLessEqual final : public FRigVMFunction_MathDoubleBase
 {
 public:
 	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Tolerance;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathDoubleIsNearlyEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleIsNearlyEqual");
-static_assert(sizeof(FRigVMFunction_MathDoubleIsNearlyEqual) == 0x000028, "Wrong size on FRigVMFunction_MathDoubleIsNearlyEqual");
-static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, Tolerance) == 0x000018, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::Tolerance' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, Result) == 0x000020, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMUnaryOp
-// 0x0007 (0x0008 - 0x0001)
-struct alignas(0x02) FRigVMUnaryOp : public FRigVMBaseOp
-{
-public:
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMUnaryOp) == 0x000002, "Wrong alignment on FRigVMUnaryOp");
-static_assert(sizeof(FRigVMUnaryOp) == 0x000008, "Wrong size on FRigVMUnaryOp");
+static_assert(alignof(FRigVMFunction_MathDoubleLessEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleLessEqual");
+static_assert(sizeof(FRigVMFunction_MathDoubleLessEqual) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleLessEqual");
+static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleLessEqual::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleLessEqual::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLessEqual, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleLessEqual::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMBinaryOp
 // 0x000D (0x000E - 0x0001)
@@ -1536,21 +1512,21 @@ public:
 static_assert(alignof(FRigVMBinaryOp) == 0x000002, "Wrong alignment on FRigVMBinaryOp");
 static_assert(sizeof(FRigVMBinaryOp) == 0x00000E, "Wrong size on FRigVMBinaryOp");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleNotEquals
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleNotEquals final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMDispatch_ArrayAppend
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayAppend : public FRigVMDispatch_ArrayBaseMutable
 {
-public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathDoubleNotEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleNotEquals");
-static_assert(sizeof(FRigVMFunction_MathDoubleNotEquals) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleNotEquals");
-static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleNotEquals::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleNotEquals::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleNotEquals, Result) == 0x000018, "Member 'FRigVMFunction_MathDoubleNotEquals::Result' has a wrong offset!");
+static_assert(alignof(FRigVMDispatch_ArrayAppend) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayAppend");
+static_assert(sizeof(FRigVMDispatch_ArrayAppend) == 0x000070, "Wrong size on FRigVMDispatch_ArrayAppend");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayUnion
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayUnion final : public FRigVMDispatch_ArrayAppend
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayUnion) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayUnion");
+static_assert(sizeof(FRigVMDispatch_ArrayUnion) == 0x000070, "Wrong size on FRigVMDispatch_ArrayUnion");
 
 // ScriptStruct RigVM.RigVMTernaryOp
 // 0x0013 (0x0014 - 0x0001)
@@ -1572,21 +1548,18 @@ public:
 static_assert(alignof(FRigVMQuaternaryOp) == 0x000002, "Wrong alignment on FRigVMQuaternaryOp");
 static_assert(sizeof(FRigVMQuaternaryOp) == 0x00001A, "Wrong size on FRigVMQuaternaryOp");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayDifference
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayDifference : public FRigVMDispatch_ArrayBase
+// ScriptStruct RigVM.RigVMFunction_MathDoubleArraySum
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathDoubleArraySum final : public FRigVMFunction_MathDoubleBase
 {
+public:
+	TArray<double>                                Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	double                                        Sum;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMDispatch_ArrayDifference) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayDifference");
-static_assert(sizeof(FRigVMDispatch_ArrayDifference) == 0x000070, "Wrong size on FRigVMDispatch_ArrayDifference");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayIntersection
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayIntersection final : public FRigVMDispatch_ArrayDifference
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayIntersection) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayIntersection");
-static_assert(sizeof(FRigVMDispatch_ArrayIntersection) == 0x000070, "Wrong size on FRigVMDispatch_ArrayIntersection");
+static_assert(alignof(FRigVMFunction_MathDoubleArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleArraySum");
+static_assert(sizeof(FRigVMFunction_MathDoubleArraySum) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleArraySum");
+static_assert(offsetof(FRigVMFunction_MathDoubleArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathDoubleArraySum::Array' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathDoubleArraySum::Sum' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMQuinaryOp
 // 0x001F (0x0020 - 0x0001)
@@ -1597,6 +1570,16 @@ public:
 };
 static_assert(alignof(FRigVMQuinaryOp) == 0x000002, "Wrong alignment on FRigVMQuinaryOp");
 static_assert(sizeof(FRigVMQuinaryOp) == 0x000020, "Wrong size on FRigVMQuinaryOp");
+
+// ScriptStruct RigVM.RigVMSenaryOp
+// 0x0025 (0x0026 - 0x0001)
+struct alignas(0x02) FRigVMSenaryOp final : public FRigVMBaseOp
+{
+public:
+	uint8                                         Pad_1[0x25];                                       // 0x0001(0x0025)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMSenaryOp) == 0x000002, "Wrong alignment on FRigVMSenaryOp");
+static_assert(sizeof(FRigVMSenaryOp) == 0x000026, "Wrong size on FRigVMSenaryOp");
 
 // ScriptStruct RigVM.RigVMCopyOp
 // 0x0011 (0x0012 - 0x0001)
@@ -1638,6 +1621,30 @@ public:
 static_assert(alignof(FRigVMJumpIfOp) == 0x000004, "Wrong alignment on FRigVMJumpIfOp");
 static_assert(sizeof(FRigVMJumpIfOp) == 0x000010, "Wrong size on FRigVMJumpIfOp");
 
+// ScriptStruct RigVM.RigVMFunction_MathDoubleLawOfCosine
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathDoubleLawOfCosine final : public FRigVMFunction_MathDoubleBase
+{
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        C;                                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        AlphaAngle;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        BetaAngle;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GammaAngle;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bValid;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathDoubleLawOfCosine) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleLawOfCosine");
+static_assert(sizeof(FRigVMFunction_MathDoubleLawOfCosine) == 0x000040, "Wrong size on FRigVMFunction_MathDoubleLawOfCosine");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleLawOfCosine::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleLawOfCosine::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, C) == 0x000018, "Member 'FRigVMFunction_MathDoubleLawOfCosine::C' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, AlphaAngle) == 0x000020, "Member 'FRigVMFunction_MathDoubleLawOfCosine::AlphaAngle' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, BetaAngle) == 0x000028, "Member 'FRigVMFunction_MathDoubleLawOfCosine::BetaAngle' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, GammaAngle) == 0x000030, "Member 'FRigVMFunction_MathDoubleLawOfCosine::GammaAngle' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, bValid) == 0x000038, "Member 'FRigVMFunction_MathDoubleLawOfCosine::bValid' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMChangeTypeOp
 // 0x0000 (0x0008 - 0x0008)
 struct FRigVMChangeTypeOp final : public FRigVMUnaryOp
@@ -1656,18 +1663,13 @@ public:
 static_assert(alignof(FRigVMInvokeEntryOp) == 0x000004, "Wrong alignment on FRigVMInvokeEntryOp");
 static_assert(sizeof(FRigVMInvokeEntryOp) == 0x00000C, "Wrong size on FRigVMInvokeEntryOp");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleArraySum
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathDoubleArraySum final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstPi
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatConstPi final : public FRigVMFunction_MathFloatConstant
 {
-public:
-	TArray<double>                                Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	double                                        Sum;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathDoubleArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleArraySum");
-static_assert(sizeof(FRigVMFunction_MathDoubleArraySum) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleArraySum");
-static_assert(offsetof(FRigVMFunction_MathDoubleArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathDoubleArraySum::Array' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathDoubleArraySum::Sum' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatConstPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstPi");
+static_assert(sizeof(FRigVMFunction_MathFloatConstPi) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstPi");
 
 // ScriptStruct RigVM.RigVMJumpToBranchOp
 // 0x0004 (0x000C - 0x0008)
@@ -1689,25 +1691,13 @@ public:
 static_assert(alignof(FRigVMRunInstructionsOp) == 0x000004, "Wrong alignment on FRigVMRunInstructionsOp");
 static_assert(sizeof(FRigVMRunInstructionsOp) == 0x000010, "Wrong size on FRigVMRunInstructionsOp");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstant
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathFloatConstant) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstant");
-static_assert(sizeof(FRigVMFunction_MathFloatConstant) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstant");
-static_assert(offsetof(FRigVMFunction_MathFloatConstant, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatConstant::Value' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstTwoPi
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatConstTwoPi final : public FRigVMFunction_MathFloatConstant
+// ScriptStruct RigVM.RigVMDispatch_Constant
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_Constant final : public FRigVMDispatch_CoreBase
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatConstTwoPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstTwoPi");
-static_assert(sizeof(FRigVMFunction_MathFloatConstTwoPi) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstTwoPi");
+static_assert(alignof(FRigVMDispatch_Constant) == 0x000008, "Wrong alignment on FRigVMDispatch_Constant");
+static_assert(sizeof(FRigVMDispatch_Constant) == 0x000070, "Wrong size on FRigVMDispatch_Constant");
 
 // ScriptStruct RigVM.RigVMInstruction
 // 0x0010 (0x0010 - 0x0000)
@@ -1736,13 +1726,29 @@ static_assert(alignof(FRigVMInstructionArray) == 0x000008, "Wrong alignment on F
 static_assert(sizeof(FRigVMInstructionArray) == 0x000010, "Wrong size on FRigVMInstructionArray");
 static_assert(offsetof(FRigVMInstructionArray, Instructions) == 0x000000, "Member 'FRigVMInstructionArray::Instructions' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_CoreNotEquals
+// ScriptStruct RigVM.RigVMDispatch_ArrayDifference
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_CoreNotEquals final : public FRigVMDispatch_CoreEquals
+struct FRigVMDispatch_ArrayDifference : public FRigVMDispatch_ArrayBase
 {
 };
-static_assert(alignof(FRigVMDispatch_CoreNotEquals) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreNotEquals");
-static_assert(sizeof(FRigVMDispatch_CoreNotEquals) == 0x000070, "Wrong size on FRigVMDispatch_CoreNotEquals");
+static_assert(alignof(FRigVMDispatch_ArrayDifference) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayDifference");
+static_assert(sizeof(FRigVMDispatch_ArrayDifference) == 0x000070, "Wrong size on FRigVMDispatch_ArrayDifference");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayIntersection
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayIntersection final : public FRigVMDispatch_ArrayDifference
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayIntersection) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayIntersection");
+static_assert(sizeof(FRigVMDispatch_ArrayIntersection) == 0x000070, "Wrong size on FRigVMDispatch_ArrayIntersection");
+
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAtan
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleAtan final : public FRigVMFunction_MathDoubleUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathDoubleAtan) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAtan");
+static_assert(sizeof(FRigVMFunction_MathDoubleAtan) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAtan");
 
 // ScriptStruct RigVM.RigVMBreakpoint
 // 0x0024 (0x0024 - 0x0000)
@@ -1764,37 +1770,21 @@ public:
 static_assert(alignof(FRigVMDebugInfo) == 0x000008, "Wrong alignment on FRigVMDebugInfo");
 static_assert(sizeof(FRigVMDebugInfo) == 0x000140, "Wrong size on FRigVMDebugInfo");
 
-// ScriptStruct RigVM.RigVMDispatch_Constant
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_Constant final : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_Constant) == 0x000008, "Wrong alignment on FRigVMDispatch_Constant");
-static_assert(sizeof(FRigVMDispatch_Constant) == 0x000070, "Wrong size on FRigVMDispatch_Constant");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleLawOfCosine
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathDoubleLawOfCosine final : public FRigVMFunction_MathDoubleBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryAggregateOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloatBase
 {
 public:
-	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        C;                                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        AlphaAngle;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        BetaAngle;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        GammaAngle;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bValid;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathDoubleLawOfCosine) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleLawOfCosine");
-static_assert(sizeof(FRigVMFunction_MathDoubleLawOfCosine) == 0x000040, "Wrong size on FRigVMFunction_MathDoubleLawOfCosine");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleLawOfCosine::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleLawOfCosine::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, C) == 0x000018, "Member 'FRigVMFunction_MathDoubleLawOfCosine::C' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, AlphaAngle) == 0x000020, "Member 'FRigVMFunction_MathDoubleLawOfCosine::AlphaAngle' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, BetaAngle) == 0x000028, "Member 'FRigVMFunction_MathDoubleLawOfCosine::BetaAngle' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, GammaAngle) == 0x000030, "Member 'FRigVMFunction_MathDoubleLawOfCosine::GammaAngle' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDoubleLawOfCosine, bValid) == 0x000038, "Member 'FRigVMFunction_MathDoubleLawOfCosine::bValid' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatBinaryAggregateOp");
+static_assert(sizeof(FRigVMFunction_MathFloatBinaryAggregateOp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatBinaryAggregateOp");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMDrawInterface
 // 0x0000 (0x0018 - 0x0018)
@@ -1814,13 +1804,29 @@ public:
 static_assert(alignof(FRigVMSlice) == 0x000004, "Wrong alignment on FRigVMSlice");
 static_assert(sizeof(FRigVMSlice) == 0x000014, "Wrong size on FRigVMSlice");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatConstPi
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatConstPi final : public FRigVMFunction_MathFloatConstant
+// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathFloatBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatBinaryOp");
+static_assert(sizeof(FRigVMFunction_MathFloatBinaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatBinaryOp");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathFloatBinaryOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatBinaryOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatBinaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatBinaryOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatMod
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatMod final : public FRigVMFunction_MathFloatBinaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatConstPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstPi");
-static_assert(sizeof(FRigVMFunction_MathFloatConstPi) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstPi");
+static_assert(alignof(FRigVMFunction_MathFloatMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMod");
+static_assert(sizeof(FRigVMFunction_MathFloatMod) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMod");
 
 // ScriptStruct RigVM.RigVMInstructionSetExecuteState
 // 0x0050 (0x0050 - 0x0000)
@@ -1868,29 +1874,13 @@ static_assert(offsetof(FRigVMRegister, ScriptStructIndex) == 0x00001C, "Member '
 static_assert(offsetof(FRigVMRegister, bIsArray) == 0x000020, "Member 'FRigVMRegister::bIsArray' has a wrong offset!");
 static_assert(offsetof(FRigVMRegister, bIsDynamic) == 0x000021, "Member 'FRigVMRegister::bIsDynamic' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatBinaryAggregateOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloatBase
-{
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathFloatBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatBinaryAggregateOp");
-static_assert(sizeof(FRigVMFunction_MathFloatBinaryAggregateOp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatBinaryAggregateOp");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatBinaryAggregateOp, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatBinaryAggregateOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathFloatMax
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatMax final : public FRigVMFunction_MathFloatBinaryAggregateOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatConstTwoPi
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatConstTwoPi final : public FRigVMFunction_MathFloatConstant
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMax");
-static_assert(sizeof(FRigVMFunction_MathFloatMax) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMax");
+static_assert(alignof(FRigVMFunction_MathFloatConstTwoPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatConstTwoPi");
+static_assert(sizeof(FRigVMFunction_MathFloatConstTwoPi) == 0x000010, "Wrong size on FRigVMFunction_MathFloatConstTwoPi");
 
 // ScriptStruct RigVM.RigVMRegisterOffset
 // 0x0048 (0x0048 - 0x0000)
@@ -1947,14 +1937,6 @@ static_assert(offsetof(FRigVMMemoryContainer, ScriptStructs) == 0x000038, "Membe
 static_assert(offsetof(FRigVMMemoryContainer, NameMap) == 0x000048, "Member 'FRigVMMemoryContainer::NameMap' has a wrong offset!");
 static_assert(offsetof(FRigVMMemoryContainer, bEncounteredErrorDuringLoad) == 0x000098, "Member 'FRigVMMemoryContainer::bEncounteredErrorDuringLoad' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatAdd
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatAdd final : public FRigVMFunction_MathFloatBinaryAggregateOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathFloatAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAdd");
-static_assert(sizeof(FRigVMFunction_MathFloatAdd) == 0x000018, "Wrong size on FRigVMFunction_MathFloatAdd");
-
 // ScriptStruct RigVM.RigVMInstructionVisitInfo
 // 0x0028 (0x0028 - 0x0000)
 struct alignas(0x08) FRigVMInstructionVisitInfo final
@@ -1974,6 +1956,14 @@ public:
 };
 static_assert(alignof(FRigVMProfilingInfo) == 0x000008, "Wrong alignment on FRigVMProfilingInfo");
 static_assert(sizeof(FRigVMProfilingInfo) == 0x000028, "Wrong size on FRigVMProfilingInfo");
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatMul
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatMul final : public FRigVMFunction_MathFloatBinaryAggregateOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathFloatMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMul");
+static_assert(sizeof(FRigVMFunction_MathFloatMul) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMul");
 
 // ScriptStruct RigVM.RigVMTemplateArgumentType
 // 0x0010 (0x0010 - 0x0000)
@@ -2009,6 +1999,34 @@ static_assert(offsetof(FRigVMUserWorkflow, Type) == 0x000028, "Member 'FRigVMUse
 static_assert(offsetof(FRigVMUserWorkflow, PerformDynamicDelegate) == 0x000040, "Member 'FRigVMUserWorkflow::PerformDynamicDelegate' has a wrong offset!");
 static_assert(offsetof(FRigVMUserWorkflow, OptionsClass) == 0x000050, "Member 'FRigVMUserWorkflow::OptionsClass' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathFloatCeil
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatCeil final : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         int_0;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathFloatCeil) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatCeil");
+static_assert(sizeof(FRigVMFunction_MathFloatCeil) == 0x000018, "Wrong size on FRigVMFunction_MathFloatCeil");
+static_assert(offsetof(FRigVMFunction_MathFloatCeil, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatCeil::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatCeil, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatCeil::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatCeil, int_0) == 0x000010, "Member 'FRigVMFunction_MathFloatCeil::int_0' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_AnimEasingType
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_AnimEasingType final : public FRigVMFunction_AnimBase
+{
+public:
+	ERigVMAnimEasingType                          Type;                                              // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_AnimEasingType) == 0x000008, "Wrong alignment on FRigVMFunction_AnimEasingType");
+static_assert(sizeof(FRigVMFunction_AnimEasingType) == 0x000010, "Wrong size on FRigVMFunction_AnimEasingType");
+static_assert(offsetof(FRigVMFunction_AnimEasingType, Type) == 0x000008, "Member 'FRigVMFunction_AnimEasingType::Type' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_AnimEasing
 // 0x0020 (0x0028 - 0x0008)
 struct FRigVMFunction_AnimEasing final : public FRigVMFunction_AnimBase
@@ -2034,18 +2052,13 @@ static_assert(offsetof(FRigVMFunction_AnimEasing, TargetMinimum) == 0x000018, "M
 static_assert(offsetof(FRigVMFunction_AnimEasing, TargetMaximum) == 0x00001C, "Member 'FRigVMFunction_AnimEasing::TargetMaximum' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AnimEasing, Result) == 0x000020, "Member 'FRigVMFunction_AnimEasing::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatToInt
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathFloatToInt final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatMax
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatMax final : public FRigVMFunction_MathFloatBinaryAggregateOp
 {
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatToInt) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatToInt");
-static_assert(sizeof(FRigVMFunction_MathFloatToInt) == 0x000010, "Wrong size on FRigVMFunction_MathFloatToInt");
-static_assert(offsetof(FRigVMFunction_MathFloatToInt, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatToInt::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatToInt, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatToInt::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMax");
+static_assert(sizeof(FRigVMFunction_MathFloatMax) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMax");
 
 // ScriptStruct RigVM.RigVMFunction_AnimEvalRichCurve
 // 0x00A8 (0x00B0 - 0x0008)
@@ -2083,13 +2096,13 @@ static_assert(alignof(FRigVMFunction_AnimRichCurve) == 0x000008, "Wrong alignmen
 static_assert(sizeof(FRigVMFunction_AnimRichCurve) == 0x000090, "Wrong size on FRigVMFunction_AnimRichCurve");
 static_assert(offsetof(FRigVMFunction_AnimRichCurve, Curve) == 0x000008, "Member 'FRigVMFunction_AnimRichCurve::Curve' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatSqrt
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatSqrt final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatAdd
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatAdd final : public FRigVMFunction_MathFloatBinaryAggregateOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatSqrt) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatSqrt");
-static_assert(sizeof(FRigVMFunction_MathFloatSqrt) == 0x000010, "Wrong size on FRigVMFunction_MathFloatSqrt");
+static_assert(alignof(FRigVMFunction_MathFloatAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAdd");
+static_assert(sizeof(FRigVMFunction_MathFloatAdd) == 0x000018, "Wrong size on FRigVMFunction_MathFloatAdd");
 
 // ScriptStruct RigVM.RigVMFunction_GetDeltaTime
 // 0x0008 (0x0010 - 0x0008)
@@ -2128,13 +2141,27 @@ static_assert(offsetof(FRigVMFunction_GetWorldTime, Minutes) == 0x00001C, "Membe
 static_assert(offsetof(FRigVMFunction_GetWorldTime, Seconds) == 0x000020, "Member 'FRigVMFunction_GetWorldTime::Seconds' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_GetWorldTime, OverallSeconds) == 0x000024, "Member 'FRigVMFunction_GetWorldTime::OverallSeconds' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatMul
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatMul final : public FRigVMFunction_MathFloatBinaryAggregateOp
+// ScriptStruct RigVM.RigVMFunction_MathMatrixBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathMatrixBase : public FRigVMFunction_MathBase
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMul");
-static_assert(sizeof(FRigVMFunction_MathFloatMul) == 0x000018, "Wrong size on FRigVMFunction_MathFloatMul");
+static_assert(alignof(FRigVMFunction_MathMatrixBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathMatrixBase");
+static_assert(sizeof(FRigVMFunction_MathMatrixBase) == 0x000008, "Wrong size on FRigVMFunction_MathMatrixBase");
+
+// ScriptStruct RigVM.RigVMFunction_MathMatrixToTransform
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathMatrixToTransform final : public FRigVMFunction_MathMatrixBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             Result;                                            // 0x0090(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathMatrixToTransform) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixToTransform");
+static_assert(sizeof(FRigVMFunction_MathMatrixToTransform) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixToTransform");
+static_assert(offsetof(FRigVMFunction_MathMatrixToTransform, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixToTransform::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixToTransform, Result) == 0x000090, "Member 'FRigVMFunction_MathMatrixToTransform::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_FramesToSeconds
 // 0x0008 (0x0010 - 0x0008)
@@ -2162,27 +2189,21 @@ static_assert(sizeof(FRigVMFunction_SecondsToFrames) == 0x000010, "Wrong size on
 static_assert(offsetof(FRigVMFunction_SecondsToFrames, Seconds) == 0x000008, "Member 'FRigVMFunction_SecondsToFrames::Seconds' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_SecondsToFrames, Frames) == 0x00000C, "Member 'FRigVMFunction_SecondsToFrames::Frames' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathMatrixBase : public FRigVMFunction_MathBase
-{
-};
-static_assert(alignof(FRigVMFunction_MathMatrixBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathMatrixBase");
-static_assert(sizeof(FRigVMFunction_MathMatrixBase) == 0x000008, "Wrong size on FRigVMFunction_MathMatrixBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathMatrixFromTransformV2
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathMatrixFromTransformV2 final : public FRigVMFunction_MathMatrixBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatNotEquals
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatNotEquals final : public FRigVMFunction_MathFloatBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathMatrixFromTransformV2) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixFromTransformV2");
-static_assert(sizeof(FRigVMFunction_MathMatrixFromTransformV2) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixFromTransformV2");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromTransformV2, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixFromTransformV2::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromTransformV2, Result) == 0x000070, "Member 'FRigVMFunction_MathMatrixFromTransformV2::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatNotEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatNotEquals");
+static_assert(sizeof(FRigVMFunction_MathFloatNotEquals) == 0x000018, "Wrong size on FRigVMFunction_MathFloatNotEquals");
+static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, A) == 0x000008, "Member 'FRigVMFunction_MathFloatNotEquals::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatNotEquals::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatNotEquals::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DebugLineNoSpace
 // 0x00C0 (0x01C0 - 0x0100)
@@ -2228,21 +2249,25 @@ static_assert(offsetof(FRigVMFunction_DebugLineStripNoSpace, Thickness) == 0x000
 static_assert(offsetof(FRigVMFunction_DebugLineStripNoSpace, WorldOffset) == 0x000130, "Member 'FRigVMFunction_DebugLineStripNoSpace::WorldOffset' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_DebugLineStripNoSpace, bEnabled) == 0x000190, "Member 'FRigVMFunction_DebugLineStripNoSpace::bEnabled' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatLess
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatLess final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathMatrixFromVectors
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathMatrixFromVectors final : public FRigVMFunction_MathMatrixBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Origin;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                X;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Y;                                                 // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Z;                                                 // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatLess) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatLess");
-static_assert(sizeof(FRigVMFunction_MathFloatLess) == 0x000018, "Wrong size on FRigVMFunction_MathFloatLess");
-static_assert(offsetof(FRigVMFunction_MathFloatLess, A) == 0x000008, "Member 'FRigVMFunction_MathFloatLess::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatLess, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatLess::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatLess, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatLess::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathMatrixFromVectors) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixFromVectors");
+static_assert(sizeof(FRigVMFunction_MathMatrixFromVectors) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixFromVectors");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Origin) == 0x000008, "Member 'FRigVMFunction_MathMatrixFromVectors::Origin' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, X) == 0x000020, "Member 'FRigVMFunction_MathMatrixFromVectors::X' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Y) == 0x000038, "Member 'FRigVMFunction_MathMatrixFromVectors::Y' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Z) == 0x000050, "Member 'FRigVMFunction_MathMatrixFromVectors::Z' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Result) == 0x000070, "Member 'FRigVMFunction_MathMatrixFromVectors::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DebugPoint
 // 0x00B8 (0x00C0 - 0x0008)
@@ -2300,27 +2325,21 @@ static_assert(offsetof(FRigVMFunction_DebugPointMutable, Space) == 0x000134, "Me
 static_assert(offsetof(FRigVMFunction_DebugPointMutable, WorldOffset) == 0x000140, "Member 'FRigVMFunction_DebugPointMutable::WorldOffset' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_DebugPointMutable, bEnabled) == 0x0001A0, "Member 'FRigVMFunction_DebugPointMutable::bEnabled' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixUnaryOp
-// 0x0108 (0x0110 - 0x0008)
-struct FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
+// ScriptStruct RigVM.RigVMFunction_MathMatrixBinaryOp
+// 0x0188 (0x0190 - 0x0008)
+struct FRigVMFunction_MathMatrixBinaryOp final : public FRigVMFunction_MathMatrixBase
 {
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatrix                                Result;                                            // 0x0090(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatrix                                A;                                                 // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatrix                                B;                                                 // 0x0090(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatrix                                Result;                                            // 0x0110(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathMatrixUnaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixUnaryOp");
-static_assert(sizeof(FRigVMFunction_MathMatrixUnaryOp) == 0x000110, "Wrong size on FRigVMFunction_MathMatrixUnaryOp");
-static_assert(offsetof(FRigVMFunction_MathMatrixUnaryOp, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixUnaryOp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixUnaryOp, Result) == 0x000090, "Member 'FRigVMFunction_MathMatrixUnaryOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathMatrixInverse
-// 0x0000 (0x0110 - 0x0110)
-struct FRigVMFunction_MathMatrixInverse final : public FRigVMFunction_MathMatrixUnaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathMatrixInverse) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixInverse");
-static_assert(sizeof(FRigVMFunction_MathMatrixInverse) == 0x000110, "Wrong size on FRigVMFunction_MathMatrixInverse");
+static_assert(alignof(FRigVMFunction_MathMatrixBinaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixBinaryOp");
+static_assert(sizeof(FRigVMFunction_MathMatrixBinaryOp) == 0x000190, "Wrong size on FRigVMFunction_MathMatrixBinaryOp");
+static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, A) == 0x000010, "Member 'FRigVMFunction_MathMatrixBinaryOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, B) == 0x000090, "Member 'FRigVMFunction_MathMatrixBinaryOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, Result) == 0x000110, "Member 'FRigVMFunction_MathMatrixBinaryOp::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DebugRectangle
 // 0x00F0 (0x01F0 - 0x0100)
@@ -2369,19 +2388,30 @@ static_assert(offsetof(FRigVMFunction_DebugRectangleNoSpace, Thickness) == 0x000
 static_assert(offsetof(FRigVMFunction_DebugRectangleNoSpace, WorldOffset) == 0x000180, "Member 'FRigVMFunction_DebugRectangleNoSpace::WorldOffset' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_DebugRectangleNoSpace, bEnabled) == 0x0001E0, "Member 'FRigVMFunction_DebugRectangleNoSpace::bEnabled' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixToTransform
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathMatrixToTransform final : public FRigVMFunction_MathMatrixBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatRemap
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathFloatRemap final : public FRigVMFunction_MathFloatBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             Result;                                            // 0x0090(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SourceMinimum;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SourceMaximum;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetMinimum;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetMaximum;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Result;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathMatrixToTransform) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixToTransform");
-static_assert(sizeof(FRigVMFunction_MathMatrixToTransform) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixToTransform");
-static_assert(offsetof(FRigVMFunction_MathMatrixToTransform, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixToTransform::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixToTransform, Result) == 0x000090, "Member 'FRigVMFunction_MathMatrixToTransform::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatRemap) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatRemap");
+static_assert(sizeof(FRigVMFunction_MathFloatRemap) == 0x000028, "Wrong size on FRigVMFunction_MathFloatRemap");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatRemap::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, SourceMinimum) == 0x00000C, "Member 'FRigVMFunction_MathFloatRemap::SourceMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, SourceMaximum) == 0x000010, "Member 'FRigVMFunction_MathFloatRemap::SourceMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, TargetMinimum) == 0x000014, "Member 'FRigVMFunction_MathFloatRemap::TargetMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, TargetMaximum) == 0x000018, "Member 'FRigVMFunction_MathFloatRemap::TargetMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, bClamp) == 0x00001C, "Member 'FRigVMFunction_MathFloatRemap::bClamp' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatRemap, Result) == 0x000020, "Member 'FRigVMFunction_MathFloatRemap::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DebugArc
 // 0x0100 (0x0200 - 0x0100)
@@ -2443,21 +2473,13 @@ static_assert(offsetof(FRigVMFunction_DebugArcNoSpace, Detail) == 0x000180, "Mem
 static_assert(offsetof(FRigVMFunction_DebugArcNoSpace, WorldOffset) == 0x000190, "Member 'FRigVMFunction_DebugArcNoSpace::WorldOffset' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_DebugArcNoSpace, bEnabled) == 0x0001F0, "Member 'FRigVMFunction_DebugArcNoSpace::bEnabled' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatNotEquals
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatNotEquals final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatDeg
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatDeg final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatNotEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatNotEquals");
-static_assert(sizeof(FRigVMFunction_MathFloatNotEquals) == 0x000018, "Wrong size on FRigVMFunction_MathFloatNotEquals");
-static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, A) == 0x000008, "Member 'FRigVMFunction_MathFloatNotEquals::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatNotEquals::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatNotEquals, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatNotEquals::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatDeg) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatDeg");
+static_assert(sizeof(FRigVMFunction_MathFloatDeg) == 0x000010, "Wrong size on FRigVMFunction_MathFloatDeg");
 
 // ScriptStruct RigVM.RigVMFunction_DebugTransformMutableNoSpace
 // 0x00F0 (0x01F0 - 0x0100)
@@ -2496,13 +2518,21 @@ static_assert(alignof(FRigVMFunction_DebugTransformArrayMutable_WorkData) == 0x0
 static_assert(sizeof(FRigVMFunction_DebugTransformArrayMutable_WorkData) == 0x000010, "Wrong size on FRigVMFunction_DebugTransformArrayMutable_WorkData");
 static_assert(offsetof(FRigVMFunction_DebugTransformArrayMutable_WorkData, DrawTransforms) == 0x000000, "Member 'FRigVMFunction_DebugTransformArrayMutable_WorkData::DrawTransforms' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatSin
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatSin final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatLess
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatLess final : public FRigVMFunction_MathFloatBase
 {
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatSin) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatSin");
-static_assert(sizeof(FRigVMFunction_MathFloatSin) == 0x000010, "Wrong size on FRigVMFunction_MathFloatSin");
+static_assert(alignof(FRigVMFunction_MathFloatLess) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatLess");
+static_assert(sizeof(FRigVMFunction_MathFloatLess) == 0x000018, "Wrong size on FRigVMFunction_MathFloatLess");
+static_assert(offsetof(FRigVMFunction_MathFloatLess, A) == 0x000008, "Member 'FRigVMFunction_MathFloatLess::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatLess, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatLess::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatLess, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatLess::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DebugTransformArrayMutableNoSpace
 // 0x00B0 (0x01B0 - 0x0100)
@@ -2557,21 +2587,22 @@ static_assert(offsetof(FRigVMFunction_VisualDebugVector, Thickness) == 0x000034,
 static_assert(offsetof(FRigVMFunction_VisualDebugVector, Scale) == 0x000038, "Member 'FRigVMFunction_VisualDebugVector::Scale' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_VisualDebugVector, BoneSpace) == 0x00003C, "Member 'FRigVMFunction_VisualDebugVector::BoneSpace' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatLessEqual
+// ScriptStruct RigVM.RigVMFunction_MathFloatClamp
 // 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatLessEqual final : public FRigVMFunction_MathFloatBase
+struct FRigVMFunction_MathFloatClamp final : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathFloatLessEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatLessEqual");
-static_assert(sizeof(FRigVMFunction_MathFloatLessEqual) == 0x000018, "Wrong size on FRigVMFunction_MathFloatLessEqual");
-static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, A) == 0x000008, "Member 'FRigVMFunction_MathFloatLessEqual::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatLessEqual::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatLessEqual::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatClamp) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatClamp");
+static_assert(sizeof(FRigVMFunction_MathFloatClamp) == 0x000018, "Wrong size on FRigVMFunction_MathFloatClamp");
+static_assert(offsetof(FRigVMFunction_MathFloatClamp, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatClamp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatClamp, Minimum) == 0x00000C, "Member 'FRigVMFunction_MathFloatClamp::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatClamp, Maximum) == 0x000010, "Member 'FRigVMFunction_MathFloatClamp::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatClamp, Result) == 0x000014, "Member 'FRigVMFunction_MathFloatClamp::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_VisualDebugVectorNoSpace
 // 0x0038 (0x0040 - 0x0008)
@@ -2618,30 +2649,23 @@ static_assert(offsetof(FRigVMFunction_VisualDebugQuat, Thickness) == 0x000034, "
 static_assert(offsetof(FRigVMFunction_VisualDebugQuat, Scale) == 0x000038, "Member 'FRigVMFunction_VisualDebugQuat::Scale' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_VisualDebugQuat, BoneSpace) == 0x00003C, "Member 'FRigVMFunction_VisualDebugQuat::BoneSpace' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatRemap
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_MathFloatRemap final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatIsNearlyEqual
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatIsNearlyEqual final : public FRigVMFunction_MathFloatBase
 {
 public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SourceMinimum;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SourceMaximum;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetMinimum;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetMaximum;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClamp;                                            // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Result;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tolerance;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatRemap) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatRemap");
-static_assert(sizeof(FRigVMFunction_MathFloatRemap) == 0x000028, "Wrong size on FRigVMFunction_MathFloatRemap");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatRemap::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, SourceMinimum) == 0x00000C, "Member 'FRigVMFunction_MathFloatRemap::SourceMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, SourceMaximum) == 0x000010, "Member 'FRigVMFunction_MathFloatRemap::SourceMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, TargetMinimum) == 0x000014, "Member 'FRigVMFunction_MathFloatRemap::TargetMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, TargetMaximum) == 0x000018, "Member 'FRigVMFunction_MathFloatRemap::TargetMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, bClamp) == 0x00001C, "Member 'FRigVMFunction_MathFloatRemap::bClamp' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatRemap, Result) == 0x000020, "Member 'FRigVMFunction_MathFloatRemap::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatIsNearlyEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatIsNearlyEqual");
+static_assert(sizeof(FRigVMFunction_MathFloatIsNearlyEqual) == 0x000018, "Wrong size on FRigVMFunction_MathFloatIsNearlyEqual");
+static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, A) == 0x000008, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, Tolerance) == 0x000010, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::Tolerance' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, Result) == 0x000014, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_VisualDebugQuatNoSpace
 // 0x0038 (0x0040 - 0x0008)
@@ -2685,13 +2709,13 @@ static_assert(offsetof(FRigVMFunction_VisualDebugTransform, Thickness) == 0x0000
 static_assert(offsetof(FRigVMFunction_VisualDebugTransform, Scale) == 0x000078, "Member 'FRigVMFunction_VisualDebugTransform::Scale' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_VisualDebugTransform, BoneSpace) == 0x00007C, "Member 'FRigVMFunction_VisualDebugTransform::BoneSpace' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatDeg
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatDeg final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatAtan2
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathFloatAtan2 final : public FRigVMFunction_MathFloatBinaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatDeg) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatDeg");
-static_assert(sizeof(FRigVMFunction_MathFloatDeg) == 0x000010, "Wrong size on FRigVMFunction_MathFloatDeg");
+static_assert(alignof(FRigVMFunction_MathFloatAtan2) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAtan2");
+static_assert(sizeof(FRigVMFunction_MathFloatAtan2) == 0x000018, "Wrong size on FRigVMFunction_MathFloatAtan2");
 
 // ScriptStruct RigVM.RigVMFunction_VisualDebugTransformNoSpace
 // 0x0078 (0x0080 - 0x0008)
@@ -2733,13 +2757,13 @@ static_assert(offsetof(FRigVMFunction_ForLoopCount, Index) == 0x00010C, "Member 
 static_assert(offsetof(FRigVMFunction_ForLoopCount, Ratio) == 0x000110, "Member 'FRigVMFunction_ForLoopCount::Ratio' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_ForLoopCount, Completed) == 0x000120, "Member 'FRigVMFunction_ForLoopCount::Completed' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatExponential
+// ScriptStruct RigVM.RigVMFunction_MathFloatSin
 // 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatExponential final : public FRigVMFunction_MathFloatUnaryOp
+struct FRigVMFunction_MathFloatSin final : public FRigVMFunction_MathFloatUnaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatExponential) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatExponential");
-static_assert(sizeof(FRigVMFunction_MathFloatExponential) == 0x000010, "Wrong size on FRigVMFunction_MathFloatExponential");
+static_assert(alignof(FRigVMFunction_MathFloatSin) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatSin");
+static_assert(sizeof(FRigVMFunction_MathFloatSin) == 0x000010, "Wrong size on FRigVMFunction_MathFloatSin");
 
 // ScriptStruct RigVM.RigVMFunction_UserDefinedEvent
 // 0x0108 (0x0110 - 0x0008)
@@ -2764,13 +2788,21 @@ struct FRigVMFunction_MathBoolBase : public FRigVMFunction_MathBase
 static_assert(alignof(FRigVMFunction_MathBoolBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathBoolBase");
 static_assert(sizeof(FRigVMFunction_MathBoolBase) == 0x000008, "Wrong size on FRigVMFunction_MathBoolBase");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatTan
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatTan final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathFloatLessEqual
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatLessEqual final : public FRigVMFunction_MathFloatBase
 {
+public:
+	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatTan) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatTan");
-static_assert(sizeof(FRigVMFunction_MathFloatTan) == 0x000010, "Wrong size on FRigVMFunction_MathFloatTan");
+static_assert(alignof(FRigVMFunction_MathFloatLessEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatLessEqual");
+static_assert(sizeof(FRigVMFunction_MathFloatLessEqual) == 0x000018, "Wrong size on FRigVMFunction_MathFloatLessEqual");
+static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, A) == 0x000008, "Member 'FRigVMFunction_MathFloatLessEqual::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatLessEqual::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatLessEqual, Result) == 0x000010, "Member 'FRigVMFunction_MathFloatLessEqual::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolConstant
 // 0x0008 (0x0010 - 0x0008)
@@ -2798,23 +2830,13 @@ static_assert(sizeof(FRigVMFunction_MathBoolUnaryOp) == 0x000010, "Wrong size on
 static_assert(offsetof(FRigVMFunction_MathBoolUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathBoolUnaryOp::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathBoolUnaryOp, Result) == 0x000009, "Member 'FRigVMFunction_MathBoolUnaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatIsNearlyEqual
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathFloatIsNearlyEqual final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatAcos
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatAcos final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	float                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tolerance;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatIsNearlyEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatIsNearlyEqual");
-static_assert(sizeof(FRigVMFunction_MathFloatIsNearlyEqual) == 0x000018, "Wrong size on FRigVMFunction_MathFloatIsNearlyEqual");
-static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, A) == 0x000008, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, Tolerance) == 0x000010, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::Tolerance' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatIsNearlyEqual, Result) == 0x000014, "Member 'FRigVMFunction_MathFloatIsNearlyEqual::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatAcos) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAcos");
+static_assert(sizeof(FRigVMFunction_MathFloatAcos) == 0x000010, "Wrong size on FRigVMFunction_MathFloatAcos");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolBinaryOp
 // 0x0008 (0x0010 - 0x0008)
@@ -2848,13 +2870,21 @@ static_assert(offsetof(FRigVMFunction_MathBoolBinaryAggregateOp, A) == 0x000008,
 static_assert(offsetof(FRigVMFunction_MathBoolBinaryAggregateOp, B) == 0x000009, "Member 'FRigVMFunction_MathBoolBinaryAggregateOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathBoolBinaryAggregateOp, Result) == 0x00000A, "Member 'FRigVMFunction_MathBoolBinaryAggregateOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatAtan2
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathFloatAtan2 final : public FRigVMFunction_MathFloatBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntBinaryAggregateOp
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatAtan2) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAtan2");
-static_assert(sizeof(FRigVMFunction_MathFloatAtan2) == 0x000018, "Wrong size on FRigVMFunction_MathFloatAtan2");
+static_assert(alignof(FRigVMFunction_MathIntBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBinaryAggregateOp");
+static_assert(sizeof(FRigVMFunction_MathIntBinaryAggregateOp) == 0x000018, "Wrong size on FRigVMFunction_MathIntBinaryAggregateOp");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, B) == 0x00000C, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, Result) == 0x000010, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolMake
 // 0x0008 (0x0010 - 0x0008)
@@ -2876,37 +2906,13 @@ struct FRigVMFunction_MathBoolConstTrue final : public FRigVMFunction_MathBoolCo
 static_assert(alignof(FRigVMFunction_MathBoolConstTrue) == 0x000008, "Wrong alignment on FRigVMFunction_MathBoolConstTrue");
 static_assert(sizeof(FRigVMFunction_MathBoolConstTrue) == 0x000010, "Wrong size on FRigVMFunction_MathBoolConstTrue");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathIntBase : public FRigVMFunction_MathBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatExponential
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatExponential final : public FRigVMFunction_MathFloatUnaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathIntBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBase");
-static_assert(sizeof(FRigVMFunction_MathIntBase) == 0x000008, "Wrong size on FRigVMFunction_MathIntBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntBinaryAggregateOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathIntBinaryAggregateOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBinaryAggregateOp");
-static_assert(sizeof(FRigVMFunction_MathIntBinaryAggregateOp) == 0x000018, "Wrong size on FRigVMFunction_MathIntBinaryAggregateOp");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, A) == 0x000008, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, B) == 0x00000C, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryAggregateOp, Result) == 0x000010, "Member 'FRigVMFunction_MathIntBinaryAggregateOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntAdd
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntAdd final : public FRigVMFunction_MathIntBinaryAggregateOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathIntAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntAdd");
-static_assert(sizeof(FRigVMFunction_MathIntAdd) == 0x000018, "Wrong size on FRigVMFunction_MathIntAdd");
+static_assert(alignof(FRigVMFunction_MathFloatExponential) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatExponential");
+static_assert(sizeof(FRigVMFunction_MathFloatExponential) == 0x000010, "Wrong size on FRigVMFunction_MathFloatExponential");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolConstFalse
 // 0x0000 (0x0010 - 0x0010)
@@ -2924,19 +2930,13 @@ struct FRigVMFunction_MathBoolNot final : public FRigVMFunction_MathBoolUnaryOp
 static_assert(alignof(FRigVMFunction_MathBoolNot) == 0x000008, "Wrong alignment on FRigVMFunction_MathBoolNot");
 static_assert(sizeof(FRigVMFunction_MathBoolNot) == 0x000010, "Wrong size on FRigVMFunction_MathBoolNot");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatArrayAverage
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathFloatArrayAverage final : public FRigVMFunction_MathFloatBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatTan
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathFloatTan final : public FRigVMFunction_MathFloatUnaryOp
 {
-public:
-	TArray<float>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         Average;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathFloatArrayAverage) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatArrayAverage");
-static_assert(sizeof(FRigVMFunction_MathFloatArrayAverage) == 0x000020, "Wrong size on FRigVMFunction_MathFloatArrayAverage");
-static_assert(offsetof(FRigVMFunction_MathFloatArrayAverage, Array) == 0x000008, "Member 'FRigVMFunction_MathFloatArrayAverage::Array' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathFloatArrayAverage, Average) == 0x000018, "Member 'FRigVMFunction_MathFloatArrayAverage::Average' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathFloatTan) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatTan");
+static_assert(sizeof(FRigVMFunction_MathFloatTan) == 0x000010, "Wrong size on FRigVMFunction_MathFloatTan");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolAnd
 // 0x0000 (0x0010 - 0x0010)
@@ -2954,13 +2954,13 @@ struct FRigVMFunction_MathBoolNand final : public FRigVMFunction_MathBoolBinaryO
 static_assert(alignof(FRigVMFunction_MathBoolNand) == 0x000008, "Wrong alignment on FRigVMFunction_MathBoolNand");
 static_assert(sizeof(FRigVMFunction_MathBoolNand) == 0x000010, "Wrong size on FRigVMFunction_MathBoolNand");
 
-// ScriptStruct RigVM.RigVMFunction_MathFloatAcos
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathFloatAcos final : public FRigVMFunction_MathFloatUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleRad
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleRad final : public FRigVMFunction_MathDoubleUnaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathFloatAcos) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatAcos");
-static_assert(sizeof(FRigVMFunction_MathFloatAcos) == 0x000010, "Wrong size on FRigVMFunction_MathFloatAcos");
+static_assert(alignof(FRigVMFunction_MathDoubleRad) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleRad");
+static_assert(sizeof(FRigVMFunction_MathDoubleRad) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleRad");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolNand2
 // 0x0000 (0x0010 - 0x0010)
@@ -2978,13 +2978,13 @@ struct FRigVMFunction_MathBoolOr final : public FRigVMFunction_MathBoolBinaryAgg
 static_assert(alignof(FRigVMFunction_MathBoolOr) == 0x000008, "Wrong alignment on FRigVMFunction_MathBoolOr");
 static_assert(sizeof(FRigVMFunction_MathBoolOr) == 0x000010, "Wrong size on FRigVMFunction_MathBoolOr");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleCos
+// ScriptStruct RigVM.RigVMFunction_MathIntMax
 // 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleCos final : public FRigVMFunction_MathDoubleUnaryOp
+struct FRigVMFunction_MathIntMax final : public FRigVMFunction_MathIntBinaryAggregateOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathDoubleCos) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleCos");
-static_assert(sizeof(FRigVMFunction_MathDoubleCos) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleCos");
+static_assert(alignof(FRigVMFunction_MathIntMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMax");
+static_assert(sizeof(FRigVMFunction_MathIntMax) == 0x000018, "Wrong size on FRigVMFunction_MathIntMax");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolEquals
 // 0x0008 (0x0010 - 0x0008)
@@ -3018,26 +3018,13 @@ static_assert(offsetof(FRigVMFunction_MathBoolNotEquals, A) == 0x000008, "Member
 static_assert(offsetof(FRigVMFunction_MathBoolNotEquals, B) == 0x000009, "Member 'FRigVMFunction_MathBoolNotEquals::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathBoolNotEquals, Result) == 0x00000A, "Member 'FRigVMFunction_MathBoolNotEquals::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntUnaryOp
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathIntUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntUnaryOp");
-static_assert(sizeof(FRigVMFunction_MathIntUnaryOp) == 0x000010, "Wrong size on FRigVMFunction_MathIntUnaryOp");
-static_assert(offsetof(FRigVMFunction_MathIntUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathIntUnaryOp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntUnaryOp, Result) == 0x00000C, "Member 'FRigVMFunction_MathIntUnaryOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntNegate
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathIntNegate final : public FRigVMFunction_MathIntUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleAsin
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathDoubleAsin final : public FRigVMFunction_MathDoubleUnaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathIntNegate) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntNegate");
-static_assert(sizeof(FRigVMFunction_MathIntNegate) == 0x000010, "Wrong size on FRigVMFunction_MathIntNegate");
+static_assert(alignof(FRigVMFunction_MathDoubleAsin) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAsin");
+static_assert(sizeof(FRigVMFunction_MathDoubleAsin) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAsin");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolToggled
 // 0x0008 (0x0010 - 0x0008)
@@ -3078,13 +3065,23 @@ static_assert(offsetof(FRigVMFunction_MathBoolFlipFlop, Result) == 0x000010, "Me
 static_assert(offsetof(FRigVMFunction_MathBoolFlipFlop, LastValue) == 0x000011, "Member 'FRigVMFunction_MathBoolFlipFlop::LastValue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathBoolFlipFlop, TimeLeft) == 0x000014, "Member 'FRigVMFunction_MathBoolFlipFlop::TimeLeft' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleAtan
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleAtan final : public FRigVMFunction_MathDoubleUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathDoubleIsNearlyEqual
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_MathDoubleIsNearlyEqual final : public FRigVMFunction_MathDoubleBase
 {
+public:
+	double                                        A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Tolerance;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathDoubleAtan) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAtan");
-static_assert(sizeof(FRigVMFunction_MathDoubleAtan) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleAtan");
+static_assert(alignof(FRigVMFunction_MathDoubleIsNearlyEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleIsNearlyEqual");
+static_assert(sizeof(FRigVMFunction_MathDoubleIsNearlyEqual) == 0x000028, "Wrong size on FRigVMFunction_MathDoubleIsNearlyEqual");
+static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, A) == 0x000008, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, B) == 0x000010, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, Tolerance) == 0x000018, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::Tolerance' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDoubleIsNearlyEqual, Result) == 0x000020, "Member 'FRigVMFunction_MathDoubleIsNearlyEqual::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolOnce
 // 0x0010 (0x0018 - 0x0008)
@@ -3119,13 +3116,13 @@ static_assert(sizeof(FRigVMFunction_MathBoolToFloat) == 0x000010, "Wrong size on
 static_assert(offsetof(FRigVMFunction_MathBoolToFloat, Value) == 0x000008, "Member 'FRigVMFunction_MathBoolToFloat::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathBoolToFloat, Result) == 0x00000C, "Member 'FRigVMFunction_MathBoolToFloat::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathDoubleRad
+// ScriptStruct RigVM.RigVMFunction_MathIntMod
 // 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathDoubleRad final : public FRigVMFunction_MathDoubleUnaryOp
+struct FRigVMFunction_MathIntMod final : public FRigVMFunction_MathIntBinaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathDoubleRad) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleRad");
-static_assert(sizeof(FRigVMFunction_MathDoubleRad) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleRad");
+static_assert(alignof(FRigVMFunction_MathIntMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMod");
+static_assert(sizeof(FRigVMFunction_MathIntMod) == 0x000018, "Wrong size on FRigVMFunction_MathIntMod");
 
 // ScriptStruct RigVM.RigVMFunction_MathBoolToInteger
 // 0x0008 (0x0010 - 0x0008)
@@ -3149,13 +3146,21 @@ struct FRigVMFunction_MathColorBase : public FRigVMFunction_MathBase
 static_assert(alignof(FRigVMFunction_MathColorBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathColorBase");
 static_assert(sizeof(FRigVMFunction_MathColorBase) == 0x000008, "Wrong size on FRigVMFunction_MathColorBase");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntMax
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntMax final : public FRigVMFunction_MathIntBinaryAggregateOp
+// ScriptStruct RigVM.RigVMFunction_MathIntEquals
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntEquals final : public FRigVMFunction_MathIntBase
 {
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathIntMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMax");
-static_assert(sizeof(FRigVMFunction_MathIntMax) == 0x000018, "Wrong size on FRigVMFunction_MathIntMax");
+static_assert(alignof(FRigVMFunction_MathIntEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntEquals");
+static_assert(sizeof(FRigVMFunction_MathIntEquals) == 0x000018, "Wrong size on FRigVMFunction_MathIntEquals");
+static_assert(offsetof(FRigVMFunction_MathIntEquals, A) == 0x000008, "Member 'FRigVMFunction_MathIntEquals::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntEquals, B) == 0x00000C, "Member 'FRigVMFunction_MathIntEquals::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntEquals, Result) == 0x000010, "Member 'FRigVMFunction_MathIntEquals::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathColorBinaryOp
 // 0x0030 (0x0038 - 0x0008)
@@ -3187,21 +3192,26 @@ static_assert(offsetof(FRigVMFunction_MathColorBinaryAggregateOp, A) == 0x000008
 static_assert(offsetof(FRigVMFunction_MathColorBinaryAggregateOp, B) == 0x000018, "Member 'FRigVMFunction_MathColorBinaryAggregateOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathColorBinaryAggregateOp, Result) == 0x000028, "Member 'FRigVMFunction_MathColorBinaryAggregateOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntGreater
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntGreater final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathIntUnaryOp
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
 {
 public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathIntGreater) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntGreater");
-static_assert(sizeof(FRigVMFunction_MathIntGreater) == 0x000018, "Wrong size on FRigVMFunction_MathIntGreater");
-static_assert(offsetof(FRigVMFunction_MathIntGreater, A) == 0x000008, "Member 'FRigVMFunction_MathIntGreater::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntGreater, B) == 0x00000C, "Member 'FRigVMFunction_MathIntGreater::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntGreater, Result) == 0x000010, "Member 'FRigVMFunction_MathIntGreater::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntUnaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntUnaryOp");
+static_assert(sizeof(FRigVMFunction_MathIntUnaryOp) == 0x000010, "Wrong size on FRigVMFunction_MathIntUnaryOp");
+static_assert(offsetof(FRigVMFunction_MathIntUnaryOp, Value) == 0x000008, "Member 'FRigVMFunction_MathIntUnaryOp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntUnaryOp, Result) == 0x00000C, "Member 'FRigVMFunction_MathIntUnaryOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathIntNegate
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathIntNegate final : public FRigVMFunction_MathIntUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathIntNegate) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntNegate");
+static_assert(sizeof(FRigVMFunction_MathIntNegate) == 0x000010, "Wrong size on FRigVMFunction_MathIntNegate");
 
 // ScriptStruct RigVM.RigVMFunction_MathColorMake
 // 0x0020 (0x0028 - 0x0008)
@@ -3236,18 +3246,13 @@ static_assert(sizeof(FRigVMFunction_MathColorFromFloat) == 0x000020, "Wrong size
 static_assert(offsetof(FRigVMFunction_MathColorFromFloat, Value) == 0x000008, "Member 'FRigVMFunction_MathColorFromFloat::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathColorFromFloat, Result) == 0x00000C, "Member 'FRigVMFunction_MathColorFromFloat::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntToFloat
-// 0x0008 (0x0010 - 0x0008)
-struct FRigVMFunction_MathIntToFloat final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathIntMul
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntMul final : public FRigVMFunction_MathIntBinaryAggregateOp
 {
-public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathIntToFloat) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntToFloat");
-static_assert(sizeof(FRigVMFunction_MathIntToFloat) == 0x000010, "Wrong size on FRigVMFunction_MathIntToFloat");
-static_assert(offsetof(FRigVMFunction_MathIntToFloat, Value) == 0x000008, "Member 'FRigVMFunction_MathIntToFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntToFloat, Result) == 0x00000C, "Member 'FRigVMFunction_MathIntToFloat::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMul");
+static_assert(sizeof(FRigVMFunction_MathIntMul) == 0x000018, "Wrong size on FRigVMFunction_MathIntMul");
 
 // ScriptStruct RigVM.RigVMFunction_MathColorFromDouble
 // 0x0018 (0x0020 - 0x0008)
@@ -3270,29 +3275,13 @@ struct FRigVMFunction_MathColorAdd final : public FRigVMFunction_MathColorBinary
 static_assert(alignof(FRigVMFunction_MathColorAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathColorAdd");
 static_assert(sizeof(FRigVMFunction_MathColorAdd) == 0x000038, "Wrong size on FRigVMFunction_MathColorAdd");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntBinaryOp
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
-{
-public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathIntBinaryOp) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntBinaryOp");
-static_assert(sizeof(FRigVMFunction_MathIntBinaryOp) == 0x000018, "Wrong size on FRigVMFunction_MathIntBinaryOp");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathIntBinaryOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, B) == 0x00000C, "Member 'FRigVMFunction_MathIntBinaryOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntBinaryOp, Result) == 0x000010, "Member 'FRigVMFunction_MathIntBinaryOp::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntMod
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntMod final : public FRigVMFunction_MathIntBinaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntSign
+// 0x0000 (0x0010 - 0x0010)
+struct FRigVMFunction_MathIntSign final : public FRigVMFunction_MathIntUnaryOp
 {
 };
-static_assert(alignof(FRigVMFunction_MathIntMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMod");
-static_assert(sizeof(FRigVMFunction_MathIntMod) == 0x000018, "Wrong size on FRigVMFunction_MathIntMod");
+static_assert(alignof(FRigVMFunction_MathIntSign) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntSign");
+static_assert(sizeof(FRigVMFunction_MathIntSign) == 0x000010, "Wrong size on FRigVMFunction_MathIntSign");
 
 // ScriptStruct RigVM.RigVMFunction_MathColorSub
 // 0x0000 (0x0038 - 0x0038)
@@ -3310,21 +3299,20 @@ struct FRigVMFunction_MathColorMul final : public FRigVMFunction_MathColorBinary
 static_assert(alignof(FRigVMFunction_MathColorMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathColorMul");
 static_assert(sizeof(FRigVMFunction_MathColorMul) == 0x000038, "Wrong size on FRigVMFunction_MathColorMul");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntEquals
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntEquals final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathIntToString
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathIntToString final : public FRigVMFunction_MathIntBase
 {
 public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Number;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaddedSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathIntEquals) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntEquals");
-static_assert(sizeof(FRigVMFunction_MathIntEquals) == 0x000018, "Wrong size on FRigVMFunction_MathIntEquals");
-static_assert(offsetof(FRigVMFunction_MathIntEquals, A) == 0x000008, "Member 'FRigVMFunction_MathIntEquals::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntEquals, B) == 0x00000C, "Member 'FRigVMFunction_MathIntEquals::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntEquals, Result) == 0x000010, "Member 'FRigVMFunction_MathIntEquals::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntToString) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntToString");
+static_assert(sizeof(FRigVMFunction_MathIntToString) == 0x000020, "Wrong size on FRigVMFunction_MathIntToString");
+static_assert(offsetof(FRigVMFunction_MathIntToString, Number) == 0x000008, "Member 'FRigVMFunction_MathIntToString::Number' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntToString, PaddedSize) == 0x00000C, "Member 'FRigVMFunction_MathIntToString::PaddedSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntToString, Result) == 0x000010, "Member 'FRigVMFunction_MathIntToString::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathColorLerp
 // 0x0038 (0x0040 - 0x0008)
@@ -3344,6 +3332,22 @@ static_assert(offsetof(FRigVMFunction_MathColorLerp, B) == 0x000018, "Member 'FR
 static_assert(offsetof(FRigVMFunction_MathColorLerp, T) == 0x000028, "Member 'FRigVMFunction_MathColorLerp::T' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathColorLerp, Result) == 0x00002C, "Member 'FRigVMFunction_MathColorLerp::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathIntGreater
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntGreater final : public FRigVMFunction_MathIntBase
+{
+public:
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathIntGreater) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntGreater");
+static_assert(sizeof(FRigVMFunction_MathIntGreater) == 0x000018, "Wrong size on FRigVMFunction_MathIntGreater");
+static_assert(offsetof(FRigVMFunction_MathIntGreater, A) == 0x000008, "Member 'FRigVMFunction_MathIntGreater::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntGreater, B) == 0x00000C, "Member 'FRigVMFunction_MathIntGreater::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntGreater, Result) == 0x000010, "Member 'FRigVMFunction_MathIntGreater::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstant
 // 0x0008 (0x0010 - 0x0008)
 struct FRigVMFunction_MathDoubleConstant : public FRigVMFunction_MathDoubleBase
@@ -3355,29 +3359,32 @@ static_assert(alignof(FRigVMFunction_MathDoubleConstant) == 0x000008, "Wrong ali
 static_assert(sizeof(FRigVMFunction_MathDoubleConstant) == 0x000010, "Wrong size on FRigVMFunction_MathDoubleConstant");
 static_assert(offsetof(FRigVMFunction_MathDoubleConstant, Value) == 0x000008, "Member 'FRigVMFunction_MathDoubleConstant::Value' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntGreaterEqual
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_MathIntGreaterEqual final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathIntToFloat
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathIntToFloat final : public FRigVMFunction_MathIntBase
 {
 public:
-	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathIntGreaterEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntGreaterEqual");
-static_assert(sizeof(FRigVMFunction_MathIntGreaterEqual) == 0x000018, "Wrong size on FRigVMFunction_MathIntGreaterEqual");
-static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, A) == 0x000008, "Member 'FRigVMFunction_MathIntGreaterEqual::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathIntGreaterEqual::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, Result) == 0x000010, "Member 'FRigVMFunction_MathIntGreaterEqual::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntToFloat) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntToFloat");
+static_assert(sizeof(FRigVMFunction_MathIntToFloat) == 0x000010, "Wrong size on FRigVMFunction_MathIntToFloat");
+static_assert(offsetof(FRigVMFunction_MathIntToFloat, Value) == 0x000008, "Member 'FRigVMFunction_MathIntToFloat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntToFloat, Result) == 0x00000C, "Member 'FRigVMFunction_MathIntToFloat::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntSign
-// 0x0000 (0x0010 - 0x0010)
-struct FRigVMFunction_MathIntSign final : public FRigVMFunction_MathIntUnaryOp
+// ScriptStruct RigVM.RigVMFunction_MathIntArraySum
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathIntArraySum final : public FRigVMFunction_MathIntBase
 {
+public:
+	TArray<int32>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Sum;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathIntSign) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntSign");
-static_assert(sizeof(FRigVMFunction_MathIntSign) == 0x000010, "Wrong size on FRigVMFunction_MathIntSign");
+static_assert(alignof(FRigVMFunction_MathIntArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntArraySum");
+static_assert(sizeof(FRigVMFunction_MathIntArraySum) == 0x000020, "Wrong size on FRigVMFunction_MathIntArraySum");
+static_assert(offsetof(FRigVMFunction_MathIntArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathIntArraySum::Array' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathIntArraySum::Sum' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleMake
 // 0x0008 (0x0010 - 0x0008)
@@ -3398,20 +3405,19 @@ struct FRigVMFunction_MathDoubleConstPi final : public FRigVMFunction_MathDouble
 static_assert(alignof(FRigVMFunction_MathDoubleConstPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleConstPi");
 static_assert(sizeof(FRigVMFunction_MathDoubleConstPi) == 0x000010, "Wrong size on FRigVMFunction_MathDoubleConstPi");
 
-// ScriptStruct RigVM.RigVMFunction_MathIntToString
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathIntToString final : public FRigVMFunction_MathIntBase
+// ScriptStruct RigVM.RigVMFunction_MathMatrixFromTransformV2
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathMatrixFromTransformV2 final : public FRigVMFunction_MathMatrixBase
 {
 public:
-	int32                                         Number;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PaddedSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathIntToString) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntToString");
-static_assert(sizeof(FRigVMFunction_MathIntToString) == 0x000020, "Wrong size on FRigVMFunction_MathIntToString");
-static_assert(offsetof(FRigVMFunction_MathIntToString, Number) == 0x000008, "Member 'FRigVMFunction_MathIntToString::Number' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntToString, PaddedSize) == 0x00000C, "Member 'FRigVMFunction_MathIntToString::PaddedSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntToString, Result) == 0x000010, "Member 'FRigVMFunction_MathIntToString::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathMatrixFromTransformV2) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixFromTransformV2");
+static_assert(sizeof(FRigVMFunction_MathMatrixFromTransformV2) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixFromTransformV2");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromTransformV2, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixFromTransformV2::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixFromTransformV2, Result) == 0x000070, "Member 'FRigVMFunction_MathMatrixFromTransformV2::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstHalfPi
 // 0x0000 (0x0010 - 0x0010)
@@ -3429,26 +3435,6 @@ struct FRigVMFunction_MathDoubleConstTwoPi final : public FRigVMFunction_MathDou
 static_assert(alignof(FRigVMFunction_MathDoubleConstTwoPi) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleConstTwoPi");
 static_assert(sizeof(FRigVMFunction_MathDoubleConstTwoPi) == 0x000010, "Wrong size on FRigVMFunction_MathDoubleConstTwoPi");
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixFromVectors
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathMatrixFromVectors final : public FRigVMFunction_MathMatrixBase
-{
-public:
-	struct FVector                                Origin;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                X;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Y;                                                 // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Z;                                                 // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                Result;                                            // 0x0070(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathMatrixFromVectors) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixFromVectors");
-static_assert(sizeof(FRigVMFunction_MathMatrixFromVectors) == 0x0000F0, "Wrong size on FRigVMFunction_MathMatrixFromVectors");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Origin) == 0x000008, "Member 'FRigVMFunction_MathMatrixFromVectors::Origin' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, X) == 0x000020, "Member 'FRigVMFunction_MathMatrixFromVectors::X' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Y) == 0x000038, "Member 'FRigVMFunction_MathMatrixFromVectors::Y' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Z) == 0x000050, "Member 'FRigVMFunction_MathMatrixFromVectors::Z' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixFromVectors, Result) == 0x000070, "Member 'FRigVMFunction_MathMatrixFromVectors::Result' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathDoubleConstE
 // 0x0000 (0x0010 - 0x0010)
 struct FRigVMFunction_MathDoubleConstE final : public FRigVMFunction_MathDoubleConstant
@@ -3465,21 +3451,21 @@ struct FRigVMFunction_MathDoubleAdd final : public FRigVMFunction_MathDoubleBina
 static_assert(alignof(FRigVMFunction_MathDoubleAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleAdd");
 static_assert(sizeof(FRigVMFunction_MathDoubleAdd) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleAdd");
 
-// ScriptStruct RigVM.RigVMFunction_MathMatrixBinaryOp
-// 0x0188 (0x0190 - 0x0008)
-struct FRigVMFunction_MathMatrixBinaryOp final : public FRigVMFunction_MathMatrixBase
+// ScriptStruct RigVM.RigVMFunction_MathIntGreaterEqual
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathIntGreaterEqual final : public FRigVMFunction_MathIntBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatrix                                A;                                                 // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatrix                                B;                                                 // 0x0090(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatrix                                Result;                                            // 0x0110(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         A;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         B;                                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathMatrixBinaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixBinaryOp");
-static_assert(sizeof(FRigVMFunction_MathMatrixBinaryOp) == 0x000190, "Wrong size on FRigVMFunction_MathMatrixBinaryOp");
-static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, A) == 0x000010, "Member 'FRigVMFunction_MathMatrixBinaryOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, B) == 0x000090, "Member 'FRigVMFunction_MathMatrixBinaryOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathMatrixBinaryOp, Result) == 0x000110, "Member 'FRigVMFunction_MathMatrixBinaryOp::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathIntGreaterEqual) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntGreaterEqual");
+static_assert(sizeof(FRigVMFunction_MathIntGreaterEqual) == 0x000018, "Wrong size on FRigVMFunction_MathIntGreaterEqual");
+static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, A) == 0x000008, "Member 'FRigVMFunction_MathIntGreaterEqual::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, B) == 0x00000C, "Member 'FRigVMFunction_MathIntGreaterEqual::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathIntGreaterEqual, Result) == 0x000010, "Member 'FRigVMFunction_MathIntGreaterEqual::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleSub
 // 0x0000 (0x0020 - 0x0020)
@@ -3488,28 +3474,6 @@ struct FRigVMFunction_MathDoubleSub final : public FRigVMFunction_MathDoubleBina
 };
 static_assert(alignof(FRigVMFunction_MathDoubleSub) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleSub");
 static_assert(sizeof(FRigVMFunction_MathDoubleSub) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleSub");
-
-// ScriptStruct RigVM.RigVMFunction_MathDoubleMul
-// 0x0000 (0x0020 - 0x0020)
-struct FRigVMFunction_MathDoubleMul final : public FRigVMFunction_MathDoubleBinaryAggregateOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathDoubleMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleMul");
-static_assert(sizeof(FRigVMFunction_MathDoubleMul) == 0x000020, "Wrong size on FRigVMFunction_MathDoubleMul");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntArraySum
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_MathIntArraySum final : public FRigVMFunction_MathIntBase
-{
-public:
-	TArray<int32>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Sum;                                               // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathIntArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntArraySum");
-static_assert(sizeof(FRigVMFunction_MathIntArraySum) == 0x000020, "Wrong size on FRigVMFunction_MathIntArraySum");
-static_assert(offsetof(FRigVMFunction_MathIntArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathIntArraySum::Array' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathIntArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathIntArraySum::Sum' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathDoubleDiv
 // 0x0000 (0x0020 - 0x0020)
@@ -3712,6 +3676,14 @@ struct FRigVMFunction_MathDoubleExponential final : public FRigVMFunction_MathDo
 static_assert(alignof(FRigVMFunction_MathDoubleExponential) == 0x000008, "Wrong alignment on FRigVMFunction_MathDoubleExponential");
 static_assert(sizeof(FRigVMFunction_MathDoubleExponential) == 0x000018, "Wrong size on FRigVMFunction_MathDoubleExponential");
 
+// ScriptStruct RigVM.RigVMDispatch_ArrayFind
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayFind final : public FRigVMDispatch_ArrayBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayFind) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayFind");
+static_assert(sizeof(FRigVMDispatch_ArrayFind) == 0x000070, "Wrong size on FRigVMDispatch_ArrayFind");
+
 // ScriptStruct RigVM.RigVMFunction_MathDoubleArrayAverage
 // 0x0018 (0x0020 - 0x0008)
 struct FRigVMFunction_MathDoubleArrayAverage final : public FRigVMFunction_MathDoubleBase
@@ -3725,13 +3697,17 @@ static_assert(sizeof(FRigVMFunction_MathDoubleArrayAverage) == 0x000020, "Wrong 
 static_assert(offsetof(FRigVMFunction_MathDoubleArrayAverage, Array) == 0x000008, "Member 'FRigVMFunction_MathDoubleArrayAverage::Array' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathDoubleArrayAverage, Average) == 0x000018, "Member 'FRigVMFunction_MathDoubleArrayAverage::Average' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayClone
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayClone final : public FRigVMDispatch_ArrayBase
+// ScriptStruct RigVM.RigVMFunction_MathFloatMake
+// 0x0008 (0x0010 - 0x0008)
+struct FRigVMFunction_MathFloatMake final : public FRigVMFunction_MathFloatBase
 {
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMDispatch_ArrayClone) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayClone");
-static_assert(sizeof(FRigVMDispatch_ArrayClone) == 0x000070, "Wrong size on FRigVMDispatch_ArrayClone");
+static_assert(alignof(FRigVMFunction_MathFloatMake) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatMake");
+static_assert(sizeof(FRigVMFunction_MathFloatMake) == 0x000010, "Wrong size on FRigVMFunction_MathFloatMake");
+static_assert(offsetof(FRigVMFunction_MathFloatMake, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatMake::Value' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathFloatConstHalfPi
 // 0x0000 (0x0010 - 0x0010)
@@ -3788,6 +3764,22 @@ struct FRigVMFunction_MathFloatNegate final : public FRigVMFunction_MathFloatUna
 };
 static_assert(alignof(FRigVMFunction_MathFloatNegate) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatNegate");
 static_assert(sizeof(FRigVMFunction_MathFloatNegate) == 0x000010, "Wrong size on FRigVMFunction_MathFloatNegate");
+
+// ScriptStruct RigVM.RigVMFunction_MathFloatFloor
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_MathFloatFloor final : public FRigVMFunction_MathFloatBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         int_0;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathFloatFloor) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatFloor");
+static_assert(sizeof(FRigVMFunction_MathFloatFloor) == 0x000018, "Wrong size on FRigVMFunction_MathFloatFloor");
+static_assert(offsetof(FRigVMFunction_MathFloatFloor, Value) == 0x000008, "Member 'FRigVMFunction_MathFloatFloor::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatFloor, Result) == 0x00000C, "Member 'FRigVMFunction_MathFloatFloor::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatFloor, int_0) == 0x000010, "Member 'FRigVMFunction_MathFloatFloor::int_0' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathFloatRound
 // 0x0010 (0x0018 - 0x0008)
@@ -3982,6 +3974,20 @@ static_assert(sizeof(FRigVMFunction_MathFloatArraySum) == 0x000020, "Wrong size 
 static_assert(offsetof(FRigVMFunction_MathFloatArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathFloatArraySum::Array' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathFloatArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathFloatArraySum::Sum' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathFloatArrayAverage
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_MathFloatArrayAverage final : public FRigVMFunction_MathFloatBase
+{
+public:
+	TArray<float>                                 Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         Average;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathFloatArrayAverage) == 0x000008, "Wrong alignment on FRigVMFunction_MathFloatArrayAverage");
+static_assert(sizeof(FRigVMFunction_MathFloatArrayAverage) == 0x000020, "Wrong size on FRigVMFunction_MathFloatArrayAverage");
+static_assert(offsetof(FRigVMFunction_MathFloatArrayAverage, Array) == 0x000008, "Member 'FRigVMFunction_MathFloatArrayAverage::Array' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathFloatArrayAverage, Average) == 0x000018, "Member 'FRigVMFunction_MathFloatArrayAverage::Average' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathIntMake
 // 0x0008 (0x0010 - 0x0008)
 struct FRigVMFunction_MathIntMake final : public FRigVMFunction_MathIntBase
@@ -3994,6 +4000,14 @@ static_assert(alignof(FRigVMFunction_MathIntMake) == 0x000008, "Wrong alignment 
 static_assert(sizeof(FRigVMFunction_MathIntMake) == 0x000010, "Wrong size on FRigVMFunction_MathIntMake");
 static_assert(offsetof(FRigVMFunction_MathIntMake, Value) == 0x000008, "Member 'FRigVMFunction_MathIntMake::Value' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathIntAdd
+// 0x0000 (0x0018 - 0x0018)
+struct FRigVMFunction_MathIntAdd final : public FRigVMFunction_MathIntBinaryAggregateOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathIntAdd) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntAdd");
+static_assert(sizeof(FRigVMFunction_MathIntAdd) == 0x000018, "Wrong size on FRigVMFunction_MathIntAdd");
+
 // ScriptStruct RigVM.RigVMFunction_MathIntSub
 // 0x0000 (0x0018 - 0x0018)
 struct FRigVMFunction_MathIntSub final : public FRigVMFunction_MathIntBinaryOp
@@ -4001,14 +4015,6 @@ struct FRigVMFunction_MathIntSub final : public FRigVMFunction_MathIntBinaryOp
 };
 static_assert(alignof(FRigVMFunction_MathIntSub) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntSub");
 static_assert(sizeof(FRigVMFunction_MathIntSub) == 0x000018, "Wrong size on FRigVMFunction_MathIntSub");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntMul
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntMul final : public FRigVMFunction_MathIntBinaryAggregateOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathIntMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMul");
-static_assert(sizeof(FRigVMFunction_MathIntMul) == 0x000018, "Wrong size on FRigVMFunction_MathIntMul");
 
 // ScriptStruct RigVM.RigVMFunction_MathIntDiv
 // 0x0000 (0x0018 - 0x0018)
@@ -4025,14 +4031,6 @@ struct FRigVMFunction_MathIntMin final : public FRigVMFunction_MathIntBinaryAggr
 };
 static_assert(alignof(FRigVMFunction_MathIntMin) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntMin");
 static_assert(sizeof(FRigVMFunction_MathIntMin) == 0x000018, "Wrong size on FRigVMFunction_MathIntMin");
-
-// ScriptStruct RigVM.RigVMFunction_MathIntPow
-// 0x0000 (0x0018 - 0x0018)
-struct FRigVMFunction_MathIntPow final : public FRigVMFunction_MathIntBinaryOp
-{
-};
-static_assert(alignof(FRigVMFunction_MathIntPow) == 0x000008, "Wrong alignment on FRigVMFunction_MathIntPow");
-static_assert(sizeof(FRigVMFunction_MathIntPow) == 0x000018, "Wrong size on FRigVMFunction_MathIntPow");
 
 // ScriptStruct RigVM.RigVMFunction_MathIntAbs
 // 0x0000 (0x0010 - 0x0010)
@@ -4150,6 +4148,20 @@ static_assert(offsetof(FRigVMFunction_MathIntToName, Number) == 0x000008, "Membe
 static_assert(offsetof(FRigVMFunction_MathIntToName, PaddedSize) == 0x00000C, "Member 'FRigVMFunction_MathIntToName::PaddedSize' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathIntToName, Result) == 0x000010, "Member 'FRigVMFunction_MathIntToName::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathMatrixUnaryOp
+// 0x0108 (0x0110 - 0x0008)
+struct FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatrix                                Value;                                             // 0x0010(0x0080)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatrix                                Result;                                            // 0x0090(0x0080)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathMatrixUnaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixUnaryOp");
+static_assert(sizeof(FRigVMFunction_MathMatrixUnaryOp) == 0x000110, "Wrong size on FRigVMFunction_MathMatrixUnaryOp");
+static_assert(offsetof(FRigVMFunction_MathMatrixUnaryOp, Value) == 0x000010, "Member 'FRigVMFunction_MathMatrixUnaryOp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathMatrixUnaryOp, Result) == 0x000090, "Member 'FRigVMFunction_MathMatrixUnaryOp::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathMatrixBinaryAggregateOp
 // 0x0188 (0x0190 - 0x0008)
 struct FRigVMFunction_MathMatrixBinaryAggregateOp : public FRigVMFunction_MathMatrixBase
@@ -4208,6 +4220,35 @@ struct FRigVMFunction_MathMatrixMul final : public FRigVMFunction_MathMatrixBina
 static_assert(alignof(FRigVMFunction_MathMatrixMul) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixMul");
 static_assert(sizeof(FRigVMFunction_MathMatrixMul) == 0x000190, "Wrong size on FRigVMFunction_MathMatrixMul");
 
+// ScriptStruct RigVM.RigVMFunction_MathMatrixInverse
+// 0x0000 (0x0110 - 0x0110)
+struct FRigVMFunction_MathMatrixInverse final : public FRigVMFunction_MathMatrixUnaryOp
+{
+};
+static_assert(alignof(FRigVMFunction_MathMatrixInverse) == 0x000010, "Wrong alignment on FRigVMFunction_MathMatrixInverse");
+static_assert(sizeof(FRigVMFunction_MathMatrixInverse) == 0x000110, "Wrong size on FRigVMFunction_MathMatrixInverse");
+
+// ScriptStruct RigVM.RigVMFunction_StringBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_StringBase : public FRigVMStruct
+{
+};
+static_assert(alignof(FRigVMFunction_StringBase) == 0x000008, "Wrong alignment on FRigVMFunction_StringBase");
+static_assert(sizeof(FRigVMFunction_StringBase) == 0x000008, "Wrong size on FRigVMFunction_StringBase");
+
+// ScriptStruct RigVM.RigVMFunction_StringReverse
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringReverse final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Reverse;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringReverse) == 0x000008, "Wrong alignment on FRigVMFunction_StringReverse");
+static_assert(sizeof(FRigVMFunction_StringReverse) == 0x000028, "Wrong size on FRigVMFunction_StringReverse");
+static_assert(offsetof(FRigVMFunction_StringReverse, Value) == 0x000008, "Member 'FRigVMFunction_StringReverse::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringReverse, Reverse) == 0x000018, "Member 'FRigVMFunction_StringReverse::Reverse' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionBase
 // 0x0000 (0x0008 - 0x0008)
 struct FRigVMFunction_MathQuaternionBase : public FRigVMFunction_MathBase
@@ -4230,30 +4271,6 @@ static_assert(sizeof(FRigVMFunction_MathQuaternionUnaryOp) == 0x000050, "Wrong s
 static_assert(offsetof(FRigVMFunction_MathQuaternionUnaryOp, Value) == 0x000010, "Member 'FRigVMFunction_MathQuaternionUnaryOp::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionUnaryOp, Result) == 0x000030, "Member 'FRigVMFunction_MathQuaternionUnaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_StringBase : public FRigVMStruct
-{
-};
-static_assert(alignof(FRigVMFunction_StringBase) == 0x000008, "Wrong alignment on FRigVMFunction_StringBase");
-static_assert(sizeof(FRigVMFunction_StringBase) == 0x000008, "Wrong size on FRigVMFunction_StringBase");
-
-// ScriptStruct RigVM.RigVMFunction_StringRight
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringRight final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringRight) == 0x000008, "Wrong alignment on FRigVMFunction_StringRight");
-static_assert(sizeof(FRigVMFunction_StringRight) == 0x000030, "Wrong size on FRigVMFunction_StringRight");
-static_assert(offsetof(FRigVMFunction_StringRight, Value) == 0x000008, "Member 'FRigVMFunction_StringRight::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringRight, Count) == 0x000018, "Member 'FRigVMFunction_StringRight::Count' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringRight, Result) == 0x000020, "Member 'FRigVMFunction_StringRight::Result' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryOp
 // 0x0068 (0x0070 - 0x0008)
 struct FRigVMFunction_MathQuaternionBinaryOp final : public FRigVMFunction_MathQuaternionBase
@@ -4270,6 +4287,19 @@ static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryOp, A) == 0x000010, "M
 static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryOp, B) == 0x000030, "Member 'FRigVMFunction_MathQuaternionBinaryOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryOp, Result) == 0x000050, "Member 'FRigVMFunction_MathQuaternionBinaryOp::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_StringTrimWhitespace
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_StringTrimWhitespace final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringTrimWhitespace) == 0x000008, "Wrong alignment on FRigVMFunction_StringTrimWhitespace");
+static_assert(sizeof(FRigVMFunction_StringTrimWhitespace) == 0x000028, "Wrong size on FRigVMFunction_StringTrimWhitespace");
+static_assert(offsetof(FRigVMFunction_StringTrimWhitespace, Value) == 0x000008, "Member 'FRigVMFunction_StringTrimWhitespace::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringTrimWhitespace, Result) == 0x000018, "Member 'FRigVMFunction_StringTrimWhitespace::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionBinaryAggregateOp
 // 0x0068 (0x0070 - 0x0008)
 struct FRigVMFunction_MathQuaternionBinaryAggregateOp : public FRigVMFunction_MathQuaternionBase
@@ -4285,6 +4315,20 @@ static_assert(sizeof(FRigVMFunction_MathQuaternionBinaryAggregateOp) == 0x000070
 static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryAggregateOp, A) == 0x000010, "Member 'FRigVMFunction_MathQuaternionBinaryAggregateOp::A' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryAggregateOp, B) == 0x000030, "Member 'FRigVMFunction_MathQuaternionBinaryAggregateOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionBinaryAggregateOp, Result) == 0x000050, "Member 'FRigVMFunction_MathQuaternionBinaryAggregateOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_StringLength
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_StringLength final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Length;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_StringLength) == 0x000008, "Wrong alignment on FRigVMFunction_StringLength");
+static_assert(sizeof(FRigVMFunction_StringLength) == 0x000020, "Wrong size on FRigVMFunction_StringLength");
+static_assert(offsetof(FRigVMFunction_StringLength, Value) == 0x000008, "Member 'FRigVMFunction_StringLength::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringLength, Length) == 0x000018, "Member 'FRigVMFunction_StringLength::Length' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionMake
 // 0x0038 (0x0040 - 0x0008)
@@ -4306,18 +4350,22 @@ static_assert(offsetof(FRigVMFunction_MathQuaternionMake, Z) == 0x000010, "Membe
 static_assert(offsetof(FRigVMFunction_MathQuaternionMake, W) == 0x000014, "Member 'FRigVMFunction_MathQuaternionMake::W' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionMake, Result) == 0x000020, "Member 'FRigVMFunction_MathQuaternionMake::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringToLowercase
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringToLowercase final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_StringMiddle
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringMiddle final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Start;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringToLowercase) == 0x000008, "Wrong alignment on FRigVMFunction_StringToLowercase");
-static_assert(sizeof(FRigVMFunction_StringToLowercase) == 0x000028, "Wrong size on FRigVMFunction_StringToLowercase");
-static_assert(offsetof(FRigVMFunction_StringToLowercase, Value) == 0x000008, "Member 'FRigVMFunction_StringToLowercase::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringToLowercase, Result) == 0x000018, "Member 'FRigVMFunction_StringToLowercase::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringMiddle) == 0x000008, "Wrong alignment on FRigVMFunction_StringMiddle");
+static_assert(sizeof(FRigVMFunction_StringMiddle) == 0x000030, "Wrong size on FRigVMFunction_StringMiddle");
+static_assert(offsetof(FRigVMFunction_StringMiddle, Value) == 0x000008, "Member 'FRigVMFunction_StringMiddle::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringMiddle, Start) == 0x000018, "Member 'FRigVMFunction_StringMiddle::Start' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringMiddle, Count) == 0x00001C, "Member 'FRigVMFunction_StringMiddle::Count' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringMiddle, Result) == 0x000020, "Member 'FRigVMFunction_StringMiddle::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionFromAxisAndAngle
 // 0x0048 (0x0050 - 0x0008)
@@ -4335,19 +4383,6 @@ static_assert(offsetof(FRigVMFunction_MathQuaternionFromAxisAndAngle, Axis) == 0
 static_assert(offsetof(FRigVMFunction_MathQuaternionFromAxisAndAngle, Angle) == 0x000020, "Member 'FRigVMFunction_MathQuaternionFromAxisAndAngle::Angle' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionFromAxisAndAngle, Result) == 0x000030, "Member 'FRigVMFunction_MathQuaternionFromAxisAndAngle::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringToUppercase
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringToUppercase final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringToUppercase) == 0x000008, "Wrong alignment on FRigVMFunction_StringToUppercase");
-static_assert(sizeof(FRigVMFunction_StringToUppercase) == 0x000028, "Wrong size on FRigVMFunction_StringToUppercase");
-static_assert(offsetof(FRigVMFunction_StringToUppercase, Value) == 0x000008, "Member 'FRigVMFunction_StringToUppercase::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringToUppercase, Result) == 0x000018, "Member 'FRigVMFunction_StringToUppercase::Result' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionFromEuler
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_MathQuaternionFromEuler final : public FRigVMFunction_MathQuaternionBase
@@ -4363,21 +4398,6 @@ static_assert(sizeof(FRigVMFunction_MathQuaternionFromEuler) == 0x000050, "Wrong
 static_assert(offsetof(FRigVMFunction_MathQuaternionFromEuler, Euler) == 0x000008, "Member 'FRigVMFunction_MathQuaternionFromEuler::Euler' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionFromEuler, RotationOrder) == 0x000020, "Member 'FRigVMFunction_MathQuaternionFromEuler::RotationOrder' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionFromEuler, Result) == 0x000030, "Member 'FRigVMFunction_MathQuaternionFromEuler::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_StringSplit
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringSplit final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringSplit) == 0x000008, "Wrong alignment on FRigVMFunction_StringSplit");
-static_assert(sizeof(FRigVMFunction_StringSplit) == 0x000038, "Wrong size on FRigVMFunction_StringSplit");
-static_assert(offsetof(FRigVMFunction_StringSplit, Value) == 0x000008, "Member 'FRigVMFunction_StringSplit::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringSplit, Separator) == 0x000018, "Member 'FRigVMFunction_StringSplit::Separator' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringSplit, Result) == 0x000028, "Member 'FRigVMFunction_StringSplit::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionFromRotator
 // 0x0038 (0x0040 - 0x0008)
@@ -4649,6 +4669,27 @@ static_assert(offsetof(FRigVMFunction_MathQuaternionRotateVector, Transform) == 
 static_assert(offsetof(FRigVMFunction_MathQuaternionRotateVector, Vector) == 0x000030, "Member 'FRigVMFunction_MathQuaternionRotateVector::Vector' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionRotateVector, Result) == 0x000048, "Member 'FRigVMFunction_MathQuaternionRotateVector::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_KalmanVector
+// 0x0050 (0x0058 - 0x0008)
+struct FRigVMFunction_KalmanVector final : public FRigVMFunction_SimBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Buffer;                                            // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_KalmanVector) == 0x000008, "Wrong alignment on FRigVMFunction_KalmanVector");
+static_assert(sizeof(FRigVMFunction_KalmanVector) == 0x000058, "Wrong size on FRigVMFunction_KalmanVector");
+static_assert(offsetof(FRigVMFunction_KalmanVector, Value) == 0x000008, "Member 'FRigVMFunction_KalmanVector::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanVector, BufferSize) == 0x000020, "Member 'FRigVMFunction_KalmanVector::BufferSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanVector, Result) == 0x000028, "Member 'FRigVMFunction_KalmanVector::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanVector, Buffer) == 0x000040, "Member 'FRigVMFunction_KalmanVector::Buffer' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanVector, LastInsertIndex) == 0x000050, "Member 'FRigVMFunction_KalmanVector::LastInsertIndex' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionGetAxis
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_MathQuaternionGetAxis final : public FRigVMFunction_MathQuaternionBase
@@ -4665,6 +4706,27 @@ static_assert(sizeof(FRigVMFunction_MathQuaternionGetAxis) == 0x000050, "Wrong s
 static_assert(offsetof(FRigVMFunction_MathQuaternionGetAxis, Quaternion) == 0x000010, "Member 'FRigVMFunction_MathQuaternionGetAxis::Quaternion' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionGetAxis, Axis) == 0x000030, "Member 'FRigVMFunction_MathQuaternionGetAxis::Axis' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionGetAxis, Result) == 0x000038, "Member 'FRigVMFunction_MathQuaternionGetAxis::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_KalmanFloat
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_KalmanFloat final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 Buffer;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_KalmanFloat) == 0x000008, "Wrong alignment on FRigVMFunction_KalmanFloat");
+static_assert(sizeof(FRigVMFunction_KalmanFloat) == 0x000030, "Wrong size on FRigVMFunction_KalmanFloat");
+static_assert(offsetof(FRigVMFunction_KalmanFloat, Value) == 0x000008, "Member 'FRigVMFunction_KalmanFloat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanFloat, BufferSize) == 0x00000C, "Member 'FRigVMFunction_KalmanFloat::BufferSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanFloat, Result) == 0x000010, "Member 'FRigVMFunction_KalmanFloat::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanFloat, Buffer) == 0x000018, "Member 'FRigVMFunction_KalmanFloat::Buffer' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanFloat, LastInsertIndex) == 0x000028, "Member 'FRigVMFunction_KalmanFloat::LastInsertIndex' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionSwingTwist
 // 0x0088 (0x0090 - 0x0008)
@@ -4685,24 +4747,6 @@ static_assert(offsetof(FRigVMFunction_MathQuaternionSwingTwist, TwistAxis) == 0x
 static_assert(offsetof(FRigVMFunction_MathQuaternionSwingTwist, Swing) == 0x000050, "Member 'FRigVMFunction_MathQuaternionSwingTwist::Swing' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionSwingTwist, Twist) == 0x000070, "Member 'FRigVMFunction_MathQuaternionSwingTwist::Twist' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_Timeline
-// 0x0010 (0x0018 - 0x0008)
-struct FRigVMFunction_Timeline final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedValue;                                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_Timeline) == 0x000008, "Wrong alignment on FRigVMFunction_Timeline");
-static_assert(sizeof(FRigVMFunction_Timeline) == 0x000018, "Wrong size on FRigVMFunction_Timeline");
-static_assert(offsetof(FRigVMFunction_Timeline, Speed) == 0x000008, "Member 'FRigVMFunction_Timeline::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_Timeline, Time) == 0x00000C, "Member 'FRigVMFunction_Timeline::Time' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_Timeline, AccumulatedValue) == 0x000010, "Member 'FRigVMFunction_Timeline::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_Timeline, bIsInitialized) == 0x000014, "Member 'FRigVMFunction_Timeline::bIsInitialized' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionRotationOrder
 // 0x0008 (0x0010 - 0x0008)
 struct FRigVMFunction_MathQuaternionRotationOrder final : public FRigVMFunction_MathBase
@@ -4715,27 +4759,33 @@ static_assert(alignof(FRigVMFunction_MathQuaternionRotationOrder) == 0x000008, "
 static_assert(sizeof(FRigVMFunction_MathQuaternionRotationOrder) == 0x000010, "Wrong size on FRigVMFunction_MathQuaternionRotationOrder");
 static_assert(offsetof(FRigVMFunction_MathQuaternionRotationOrder, RotationOrder) == 0x000008, "Member 'FRigVMFunction_MathQuaternionRotationOrder::RotationOrder' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_KalmanTransform
-// 0x00F8 (0x0100 - 0x0008)
-struct FRigVMFunction_KalmanTransform final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_TimeOffsetVector
+// 0x0068 (0x0070 - 0x0008)
+struct FRigVMFunction_TimeOffsetVector final : public FRigVMFunction_SimBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Result;                                            // 0x0080(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Buffer;                                            // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SecondsAgo;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeRange;                                         // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Buffer;                                            // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 DeltaTimes;                                        // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UpperBound;                                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_KalmanTransform) == 0x000010, "Wrong alignment on FRigVMFunction_KalmanTransform");
-static_assert(sizeof(FRigVMFunction_KalmanTransform) == 0x000100, "Wrong size on FRigVMFunction_KalmanTransform");
-static_assert(offsetof(FRigVMFunction_KalmanTransform, Value) == 0x000010, "Member 'FRigVMFunction_KalmanTransform::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanTransform, BufferSize) == 0x000070, "Member 'FRigVMFunction_KalmanTransform::BufferSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanTransform, Result) == 0x000080, "Member 'FRigVMFunction_KalmanTransform::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanTransform, Buffer) == 0x0000E0, "Member 'FRigVMFunction_KalmanTransform::Buffer' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanTransform, LastInsertIndex) == 0x0000F0, "Member 'FRigVMFunction_KalmanTransform::LastInsertIndex' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_TimeOffsetVector) == 0x000008, "Wrong alignment on FRigVMFunction_TimeOffsetVector");
+static_assert(sizeof(FRigVMFunction_TimeOffsetVector) == 0x000070, "Wrong size on FRigVMFunction_TimeOffsetVector");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Value) == 0x000008, "Member 'FRigVMFunction_TimeOffsetVector::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, SecondsAgo) == 0x000020, "Member 'FRigVMFunction_TimeOffsetVector::SecondsAgo' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, BufferSize) == 0x000024, "Member 'FRigVMFunction_TimeOffsetVector::BufferSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, TimeRange) == 0x000028, "Member 'FRigVMFunction_TimeOffsetVector::TimeRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Result) == 0x000030, "Member 'FRigVMFunction_TimeOffsetVector::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Buffer) == 0x000048, "Member 'FRigVMFunction_TimeOffsetVector::Buffer' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, DeltaTimes) == 0x000058, "Member 'FRigVMFunction_TimeOffsetVector::DeltaTimes' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, LastInsertIndex) == 0x000068, "Member 'FRigVMFunction_TimeOffsetVector::LastInsertIndex' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetVector, UpperBound) == 0x00006C, "Member 'FRigVMFunction_TimeOffsetVector::UpperBound' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionMakeRelative
 // 0x0068 (0x0070 - 0x0008)
@@ -4768,58 +4818,6 @@ static_assert(sizeof(FRigVMFunction_MathQuaternionMakeAbsolute) == 0x000070, "Wr
 static_assert(offsetof(FRigVMFunction_MathQuaternionMakeAbsolute, Local) == 0x000010, "Member 'FRigVMFunction_MathQuaternionMakeAbsolute::Local' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionMakeAbsolute, Parent) == 0x000030, "Member 'FRigVMFunction_MathQuaternionMakeAbsolute::Parent' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathQuaternionMakeAbsolute, Global) == 0x000050, "Member 'FRigVMFunction_MathQuaternionMakeAbsolute::Global' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMSimPoint
-// 0x0040 (0x0040 - 0x0000)
-struct FRigVMSimPoint final
-{
-public:
-	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Size;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LinearDamping;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InheritMotion;                                     // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LinearVelocity;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMSimPoint) == 0x000008, "Wrong alignment on FRigVMSimPoint");
-static_assert(sizeof(FRigVMSimPoint) == 0x000040, "Wrong size on FRigVMSimPoint");
-static_assert(offsetof(FRigVMSimPoint, Mass) == 0x000000, "Member 'FRigVMSimPoint::Mass' has a wrong offset!");
-static_assert(offsetof(FRigVMSimPoint, Size) == 0x000004, "Member 'FRigVMSimPoint::Size' has a wrong offset!");
-static_assert(offsetof(FRigVMSimPoint, LinearDamping) == 0x000008, "Member 'FRigVMSimPoint::LinearDamping' has a wrong offset!");
-static_assert(offsetof(FRigVMSimPoint, InheritMotion) == 0x00000C, "Member 'FRigVMSimPoint::InheritMotion' has a wrong offset!");
-static_assert(offsetof(FRigVMSimPoint, Position) == 0x000010, "Member 'FRigVMSimPoint::Position' has a wrong offset!");
-static_assert(offsetof(FRigVMSimPoint, LinearVelocity) == 0x000028, "Member 'FRigVMSimPoint::LinearVelocity' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_VerletIntegrateVector
-// 0x00D0 (0x00D8 - 0x0008)
-struct FRigVMFunction_VerletIntegrateVector final : public FRigVMFunction_SimBase
-{
-public:
-	struct FVector                                Target;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Strength;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Damp;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Force;                                             // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Position;                                          // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity;                                          // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Acceleration;                                      // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigVMSimPoint                         Point;                                             // 0x0090(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInitialized;                                      // 0x00D0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_VerletIntegrateVector) == 0x000008, "Wrong alignment on FRigVMFunction_VerletIntegrateVector");
-static_assert(sizeof(FRigVMFunction_VerletIntegrateVector) == 0x0000D8, "Wrong size on FRigVMFunction_VerletIntegrateVector");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Target) == 0x000008, "Member 'FRigVMFunction_VerletIntegrateVector::Target' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Strength) == 0x000020, "Member 'FRigVMFunction_VerletIntegrateVector::Strength' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Damp) == 0x000024, "Member 'FRigVMFunction_VerletIntegrateVector::Damp' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Blend) == 0x000028, "Member 'FRigVMFunction_VerletIntegrateVector::Blend' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Force) == 0x000030, "Member 'FRigVMFunction_VerletIntegrateVector::Force' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Position) == 0x000048, "Member 'FRigVMFunction_VerletIntegrateVector::Position' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Velocity) == 0x000060, "Member 'FRigVMFunction_VerletIntegrateVector::Velocity' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Acceleration) == 0x000078, "Member 'FRigVMFunction_VerletIntegrateVector::Acceleration' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Point) == 0x000090, "Member 'FRigVMFunction_VerletIntegrateVector::Point' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, bInitialized) == 0x0000D0, "Member 'FRigVMFunction_VerletIntegrateVector::bInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathQuaternionMirrorTransform
 // 0x00B8 (0x00C0 - 0x0008)
@@ -4893,6 +4891,36 @@ static_assert(offsetof(FRigVMFunction_MathRayIntersectPlane, Result) == 0x000068
 static_assert(offsetof(FRigVMFunction_MathRayIntersectPlane, Distance) == 0x000080, "Member 'FRigVMFunction_MathRayIntersectPlane::Distance' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRayIntersectPlane, Ratio) == 0x000084, "Member 'FRigVMFunction_MathRayIntersectPlane::Ratio' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_AccumulateBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_AccumulateBase : public FRigVMFunction_SimBase
+{
+};
+static_assert(alignof(FRigVMFunction_AccumulateBase) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateBase");
+static_assert(sizeof(FRigVMFunction_AccumulateBase) == 0x000008, "Wrong size on FRigVMFunction_AccumulateBase");
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorRange
+// 0x0080 (0x0088 - 0x0008)
+struct FRigVMFunction_AccumulateVectorRange final : public FRigVMFunction_AccumulateBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Minimum;                                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Maximum;                                           // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedMinimum;                                // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedMaximum;                                // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_AccumulateVectorRange) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorRange");
+static_assert(sizeof(FRigVMFunction_AccumulateVectorRange) == 0x000088, "Wrong size on FRigVMFunction_AccumulateVectorRange");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Value) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorRange::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Minimum) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorRange::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Maximum) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorRange::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, AccumulatedMinimum) == 0x000050, "Member 'FRigVMFunction_AccumulateVectorRange::AccumulatedMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, AccumulatedMaximum) == 0x000068, "Member 'FRigVMFunction_AccumulateVectorRange::AccumulatedMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, bIsInitialized) == 0x000080, "Member 'FRigVMFunction_AccumulateVectorRange::bIsInitialized' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathRayGetAt
 // 0x0050 (0x0058 - 0x0008)
 struct FRigVMFunction_MathRayGetAt final : public FRigVMFunction_MathRayBase
@@ -4924,6 +4952,103 @@ static_assert(sizeof(FRigVMFunction_MathRayTransform) == 0x0000D0, "Wrong size o
 static_assert(offsetof(FRigVMFunction_MathRayTransform, Ray) == 0x000008, "Member 'FRigVMFunction_MathRayTransform::Ray' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRayTransform, Transform) == 0x000040, "Member 'FRigVMFunction_MathRayTransform::Transform' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRayTransform, Result) == 0x0000A0, "Member 'FRigVMFunction_MathRayTransform::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatWorkData
+// 0x0090 (0x0090 - 0x0000)
+struct alignas(0x10) FRigVMFunction_MathRBFInterpolateQuatWorkData final
+{
+public:
+	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatWorkData) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateQuatWorkData");
+static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatWorkData) == 0x000090, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatWorkData");
+
+// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorWorkData
+// 0x0090 (0x0090 - 0x0000)
+struct alignas(0x10) FRigVMFunction_MathRBFInterpolateVectorWorkData final
+{
+public:
+	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathRBFInterpolateVectorWorkData) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateVectorWorkData");
+static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorWorkData) == 0x000090, "Wrong size on FRigVMFunction_MathRBFInterpolateVectorWorkData");
+
+// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_MathRBFInterpolateBase : public FRigVMFunction_MathBase
+{
+};
+static_assert(alignof(FRigVMFunction_MathRBFInterpolateBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathRBFInterpolateBase");
+static_assert(sizeof(FRigVMFunction_MathRBFInterpolateBase) == 0x000008, "Wrong size on FRigVMFunction_MathRBFInterpolateBase");
+
+// ScriptStruct RigVM.RigVMFunction_AlphaInterpQuat
+// 0x00B8 (0x00C0 - 0x0008)
+struct FRigVMFunction_AlphaInterpQuat final : public FRigVMFunction_SimBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bias;                                              // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMapRange;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRange                            InRange;                                           // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInputRange                            OutRange;                                          // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bClampResult;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ClampMin;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClampMax;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterpResult;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InterpSpeedIncreasing;                             // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpSpeedDecreasing;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0070(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0090(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_AlphaInterpQuat) == 0x000010, "Wrong alignment on FRigVMFunction_AlphaInterpQuat");
+static_assert(sizeof(FRigVMFunction_AlphaInterpQuat) == 0x0000C0, "Wrong size on FRigVMFunction_AlphaInterpQuat");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Value) == 0x000010, "Member 'FRigVMFunction_AlphaInterpQuat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Scale) == 0x000030, "Member 'FRigVMFunction_AlphaInterpQuat::Scale' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Bias) == 0x000034, "Member 'FRigVMFunction_AlphaInterpQuat::Bias' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bMapRange) == 0x000038, "Member 'FRigVMFunction_AlphaInterpQuat::bMapRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InRange) == 0x00003C, "Member 'FRigVMFunction_AlphaInterpQuat::InRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, OutRange) == 0x000044, "Member 'FRigVMFunction_AlphaInterpQuat::OutRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bClampResult) == 0x00004C, "Member 'FRigVMFunction_AlphaInterpQuat::bClampResult' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ClampMin) == 0x000050, "Member 'FRigVMFunction_AlphaInterpQuat::ClampMin' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ClampMax) == 0x000054, "Member 'FRigVMFunction_AlphaInterpQuat::ClampMax' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bInterpResult) == 0x000058, "Member 'FRigVMFunction_AlphaInterpQuat::bInterpResult' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InterpSpeedIncreasing) == 0x00005C, "Member 'FRigVMFunction_AlphaInterpQuat::InterpSpeedIncreasing' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InterpSpeedDecreasing) == 0x000060, "Member 'FRigVMFunction_AlphaInterpQuat::InterpSpeedDecreasing' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Result) == 0x000070, "Member 'FRigVMFunction_AlphaInterpQuat::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ScaleBiasClamp) == 0x000090, "Member 'FRigVMFunction_AlphaInterpQuat::ScaleBiasClamp' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatBase
+// 0x00E8 (0x00F0 - 0x0008)
+struct FRigVMFunction_MathRBFInterpolateQuatBase : public FRigVMFunction_MathRBFInterpolateBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Input;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERBFQuatDistanceType                          DistanceFunction;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERBFKernelType                                SmoothingFunction;                                 // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SmoothingAngle;                                    // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNormalizeOutput;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TwistAxis;                                         // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMFunction_MathRBFInterpolateQuatWorkData WorkData;                                   // 0x0060(0x0090)(Transient, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatBase) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateQuatBase");
+static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatBase) == 0x0000F0, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatBase");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, Input) == 0x000010, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::Input' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, DistanceFunction) == 0x000030, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::DistanceFunction' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, SmoothingFunction) == 0x000031, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::SmoothingFunction' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, SmoothingAngle) == 0x000034, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::SmoothingAngle' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, bNormalizeOutput) == 0x000038, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::bNormalizeOutput' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, TwistAxis) == 0x000040, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::TwistAxis' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, WorkData) == 0x000060, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::WorkData' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_AlphaInterpVector
 // 0x0098 (0x00A0 - 0x0008)
@@ -4966,61 +5091,6 @@ static_assert(offsetof(FRigVMFunction_AlphaInterpVector, InterpSpeedDecreasing) 
 static_assert(offsetof(FRigVMFunction_AlphaInterpVector, Result) == 0x000058, "Member 'FRigVMFunction_AlphaInterpVector::Result' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AlphaInterpVector, ScaleBiasClamp) == 0x000070, "Member 'FRigVMFunction_AlphaInterpVector::ScaleBiasClamp' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatWorkData
-// 0x0090 (0x0090 - 0x0000)
-struct alignas(0x10) FRigVMFunction_MathRBFInterpolateQuatWorkData final
-{
-public:
-	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatWorkData) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateQuatWorkData");
-static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatWorkData) == 0x000090, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatWorkData");
-
-// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorWorkData
-// 0x0090 (0x0090 - 0x0000)
-struct alignas(0x10) FRigVMFunction_MathRBFInterpolateVectorWorkData final
-{
-public:
-	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathRBFInterpolateVectorWorkData) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateVectorWorkData");
-static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorWorkData) == 0x000090, "Wrong size on FRigVMFunction_MathRBFInterpolateVectorWorkData");
-
-// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_MathRBFInterpolateBase : public FRigVMFunction_MathBase
-{
-};
-static_assert(alignof(FRigVMFunction_MathRBFInterpolateBase) == 0x000008, "Wrong alignment on FRigVMFunction_MathRBFInterpolateBase");
-static_assert(sizeof(FRigVMFunction_MathRBFInterpolateBase) == 0x000008, "Wrong size on FRigVMFunction_MathRBFInterpolateBase");
-
-// ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatBase
-// 0x00E8 (0x00F0 - 0x0008)
-struct FRigVMFunction_MathRBFInterpolateQuatBase : public FRigVMFunction_MathRBFInterpolateBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Input;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERBFQuatDistanceType                          DistanceFunction;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERBFKernelType                                SmoothingFunction;                                 // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SmoothingAngle;                                    // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNormalizeOutput;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TwistAxis;                                         // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMFunction_MathRBFInterpolateQuatWorkData WorkData;                                   // 0x0060(0x0090)(Transient, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatBase) == 0x000010, "Wrong alignment on FRigVMFunction_MathRBFInterpolateQuatBase");
-static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatBase) == 0x0000F0, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatBase");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, Input) == 0x000010, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::Input' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, DistanceFunction) == 0x000030, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::DistanceFunction' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, SmoothingFunction) == 0x000031, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::SmoothingFunction' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, SmoothingAngle) == 0x000034, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::SmoothingAngle' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, bNormalizeOutput) == 0x000038, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::bNormalizeOutput' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, TwistAxis) == 0x000040, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::TwistAxis' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatBase, WorkData) == 0x000060, "Member 'FRigVMFunction_MathRBFInterpolateQuatBase::WorkData' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorBase
 // 0x00B8 (0x00C0 - 0x0008)
 struct FRigVMFunction_MathRBFInterpolateVectorBase : public FRigVMFunction_MathRBFInterpolateBase
@@ -5044,25 +5114,31 @@ static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorBase, SmoothingRad
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorBase, bNormalizeOutput) == 0x000028, "Member 'FRigVMFunction_MathRBFInterpolateVectorBase::bNormalizeOutput' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorBase, WorkData) == 0x000030, "Member 'FRigVMFunction_MathRBFInterpolateVectorBase::WorkData' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousVector
-// 0x0068 (0x0070 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousVector final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateQuatMul
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_AccumulateQuatMul final : public FRigVMFunction_AccumulateBase
 {
 public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Delta;                                             // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PreviousValue;                                     // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Cache;                                             // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Multiplier;                                        // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlipOrder;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0xE];                                       // 0x0052(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_DeltaFromPreviousVector) == 0x000008, "Wrong alignment on FRigVMFunction_DeltaFromPreviousVector");
-static_assert(sizeof(FRigVMFunction_DeltaFromPreviousVector) == 0x000070, "Wrong size on FRigVMFunction_DeltaFromPreviousVector");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Value) == 0x000008, "Member 'FRigVMFunction_DeltaFromPreviousVector::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Delta) == 0x000020, "Member 'FRigVMFunction_DeltaFromPreviousVector::Delta' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, PreviousValue) == 0x000038, "Member 'FRigVMFunction_DeltaFromPreviousVector::PreviousValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Cache) == 0x000050, "Member 'FRigVMFunction_DeltaFromPreviousVector::Cache' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, bIsInitialized) == 0x000068, "Member 'FRigVMFunction_DeltaFromPreviousVector::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_AccumulateQuatMul) == 0x000010, "Wrong alignment on FRigVMFunction_AccumulateQuatMul");
+static_assert(sizeof(FRigVMFunction_AccumulateQuatMul) == 0x0000B0, "Wrong size on FRigVMFunction_AccumulateQuatMul");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, Multiplier) == 0x000010, "Member 'FRigVMFunction_AccumulateQuatMul::Multiplier' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, InitialValue) == 0x000030, "Member 'FRigVMFunction_AccumulateQuatMul::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bFlipOrder) == 0x000050, "Member 'FRigVMFunction_AccumulateQuatMul::bFlipOrder' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bIntegrateDeltaTime) == 0x000051, "Member 'FRigVMFunction_AccumulateQuatMul::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, Result) == 0x000060, "Member 'FRigVMFunction_AccumulateQuatMul::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, AccumulatedValue) == 0x000080, "Member 'FRigVMFunction_AccumulateQuatMul::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bIsInitialized) == 0x0000A0, "Member 'FRigVMFunction_AccumulateQuatMul::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.MathRBFInterpolateQuatFloat_Target
 // 0x0030 (0x0030 - 0x0000)
@@ -5078,26 +5154,6 @@ static_assert(sizeof(FMathRBFInterpolateQuatFloat_Target) == 0x000030, "Wrong si
 static_assert(offsetof(FMathRBFInterpolateQuatFloat_Target, Target) == 0x000000, "Member 'FMathRBFInterpolateQuatFloat_Target::Target' has a wrong offset!");
 static_assert(offsetof(FMathRBFInterpolateQuatFloat_Target, Value) == 0x000020, "Member 'FMathRBFInterpolateQuatFloat_Target::Value' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousFloat
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousFloat final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Delta;                                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PreviousValue;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Cache;                                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_DeltaFromPreviousFloat) == 0x000008, "Wrong alignment on FRigVMFunction_DeltaFromPreviousFloat");
-static_assert(sizeof(FRigVMFunction_DeltaFromPreviousFloat) == 0x000020, "Wrong size on FRigVMFunction_DeltaFromPreviousFloat");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Value) == 0x000008, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Delta) == 0x00000C, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Delta' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, PreviousValue) == 0x000010, "Member 'FRigVMFunction_DeltaFromPreviousFloat::PreviousValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Cache) == 0x000014, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Cache' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, bIsInitialized) == 0x000018, "Member 'FRigVMFunction_DeltaFromPreviousFloat::bIsInitialized' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatFloat
 // 0x0020 (0x0110 - 0x00F0)
 struct FRigVMFunction_MathRBFInterpolateQuatFloat final : public FRigVMFunction_MathRBFInterpolateQuatBase
@@ -5112,38 +5168,27 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatFloat) == 0x000110, "W
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatFloat, Targets) == 0x0000F0, "Member 'FRigVMFunction_MathRBFInterpolateQuatFloat::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatFloat, Output) == 0x000100, "Member 'FRigVMFunction_MathRBFInterpolateQuatFloat::Output' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_AccumulateBase : public FRigVMFunction_SimBase
-{
-};
-static_assert(alignof(FRigVMFunction_AccumulateBase) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateBase");
-static_assert(sizeof(FRigVMFunction_AccumulateBase) == 0x000008, "Wrong size on FRigVMFunction_AccumulateBase");
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateFloatLerp
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_AccumulateFloatLerp final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateFloatRange
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_AccumulateFloatRange final : public FRigVMFunction_AccumulateBase
 {
 public:
-	float                                         TargetValue;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedValue;                                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedMinimum;                                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedMaximum;                                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_AccumulateFloatLerp) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatLerp");
-static_assert(sizeof(FRigVMFunction_AccumulateFloatLerp) == 0x000028, "Wrong size on FRigVMFunction_AccumulateFloatLerp");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, TargetValue) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatLerp::TargetValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, InitialValue) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatLerp::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, Blend) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatLerp::Blend' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, bIntegrateDeltaTime) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatLerp::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, Result) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatLerp::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, AccumulatedValue) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatLerp::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, bIsInitialized) == 0x000020, "Member 'FRigVMFunction_AccumulateFloatLerp::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_AccumulateFloatRange) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatRange");
+static_assert(sizeof(FRigVMFunction_AccumulateFloatRange) == 0x000020, "Wrong size on FRigVMFunction_AccumulateFloatRange");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Value) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatRange::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Minimum) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatRange::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Maximum) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatRange::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, AccumulatedMinimum) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatRange::AccumulatedMinimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, AccumulatedMaximum) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatRange::AccumulatedMaximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, bIsInitialized) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatRange::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.MathRBFInterpolateQuatVector_Target
 // 0x0040 (0x0040 - 0x0000)
@@ -5172,47 +5217,6 @@ static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatVector) == 0x000010, 
 static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatVector) == 0x000120, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatVector");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatVector, Targets) == 0x0000F0, "Member 'FRigVMFunction_MathRBFInterpolateQuatVector::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatVector, Output) == 0x000100, "Member 'FRigVMFunction_MathRBFInterpolateQuatVector::Output' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_AlphaInterp
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AlphaInterp final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bias;                                              // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMapRange;                                         // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRange                            InRange;                                           // 0x0018(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInputRange                            OutRange;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bClampResult;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ClampMin;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClampMax;                                          // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterpResult;                                     // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InterpSpeedIncreasing;                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpSpeedDecreasing;                             // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0044(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_AlphaInterp) == 0x000008, "Wrong alignment on FRigVMFunction_AlphaInterp");
-static_assert(sizeof(FRigVMFunction_AlphaInterp) == 0x000078, "Wrong size on FRigVMFunction_AlphaInterp");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, Value) == 0x000008, "Member 'FRigVMFunction_AlphaInterp::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, Scale) == 0x00000C, "Member 'FRigVMFunction_AlphaInterp::Scale' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, Bias) == 0x000010, "Member 'FRigVMFunction_AlphaInterp::Bias' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, bMapRange) == 0x000014, "Member 'FRigVMFunction_AlphaInterp::bMapRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, InRange) == 0x000018, "Member 'FRigVMFunction_AlphaInterp::InRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, OutRange) == 0x000020, "Member 'FRigVMFunction_AlphaInterp::OutRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, bClampResult) == 0x000028, "Member 'FRigVMFunction_AlphaInterp::bClampResult' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, ClampMin) == 0x00002C, "Member 'FRigVMFunction_AlphaInterp::ClampMin' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, ClampMax) == 0x000030, "Member 'FRigVMFunction_AlphaInterp::ClampMax' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, bInterpResult) == 0x000034, "Member 'FRigVMFunction_AlphaInterp::bInterpResult' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, InterpSpeedIncreasing) == 0x000038, "Member 'FRigVMFunction_AlphaInterp::InterpSpeedIncreasing' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, InterpSpeedDecreasing) == 0x00003C, "Member 'FRigVMFunction_AlphaInterp::InterpSpeedDecreasing' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, Result) == 0x000040, "Member 'FRigVMFunction_AlphaInterp::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterp, ScaleBiasClamp) == 0x000044, "Member 'FRigVMFunction_AlphaInterp::ScaleBiasClamp' has a wrong offset!");
 
 // ScriptStruct RigVM.MathRBFInterpolateQuatColor_Target
 // 0x0030 (0x0030 - 0x0000)
@@ -5266,6 +5270,21 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatQuat) == 0x000120, "Wr
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatQuat, Targets) == 0x0000F0, "Member 'FRigVMFunction_MathRBFInterpolateQuatQuat::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatQuat, Output) == 0x000100, "Member 'FRigVMFunction_MathRBFInterpolateQuatQuat::Output' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_StringPadInteger
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_StringPadInteger final : public FRigVMFunction_StringBase
+{
+public:
+	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Digits;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringPadInteger) == 0x000008, "Wrong alignment on FRigVMFunction_StringPadInteger");
+static_assert(sizeof(FRigVMFunction_StringPadInteger) == 0x000020, "Wrong size on FRigVMFunction_StringPadInteger");
+static_assert(offsetof(FRigVMFunction_StringPadInteger, Value) == 0x000008, "Member 'FRigVMFunction_StringPadInteger::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringPadInteger, Digits) == 0x00000C, "Member 'FRigVMFunction_StringPadInteger::Digits' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringPadInteger, Result) == 0x000010, "Member 'FRigVMFunction_StringPadInteger::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.MathRBFInterpolateQuatXform_Target
 // 0x0080 (0x0080 - 0x0000)
 struct FMathRBFInterpolateQuatXform_Target final
@@ -5279,6 +5298,21 @@ static_assert(sizeof(FMathRBFInterpolateQuatXform_Target) == 0x000080, "Wrong si
 static_assert(offsetof(FMathRBFInterpolateQuatXform_Target, Target) == 0x000000, "Member 'FMathRBFInterpolateQuatXform_Target::Target' has a wrong offset!");
 static_assert(offsetof(FMathRBFInterpolateQuatXform_Target, Value) == 0x000020, "Member 'FMathRBFInterpolateQuatXform_Target::Value' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_StringJoin
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringJoin final : public FRigVMFunction_StringBase
+{
+public:
+	TArray<class FString>                         Values;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringJoin) == 0x000008, "Wrong alignment on FRigVMFunction_StringJoin");
+static_assert(sizeof(FRigVMFunction_StringJoin) == 0x000038, "Wrong size on FRigVMFunction_StringJoin");
+static_assert(offsetof(FRigVMFunction_StringJoin, Values) == 0x000008, "Member 'FRigVMFunction_StringJoin::Values' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringJoin, Separator) == 0x000018, "Member 'FRigVMFunction_StringJoin::Separator' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringJoin, Result) == 0x000028, "Member 'FRigVMFunction_StringJoin::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateQuatXform
 // 0x0070 (0x0160 - 0x00F0)
 struct FRigVMFunction_MathRBFInterpolateQuatXform final : public FRigVMFunction_MathRBFInterpolateQuatBase
@@ -5291,14 +5325,6 @@ static_assert(alignof(FRigVMFunction_MathRBFInterpolateQuatXform) == 0x000010, "
 static_assert(sizeof(FRigVMFunction_MathRBFInterpolateQuatXform) == 0x000160, "Wrong size on FRigVMFunction_MathRBFInterpolateQuatXform");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatXform, Targets) == 0x0000F0, "Member 'FRigVMFunction_MathRBFInterpolateQuatXform::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateQuatXform, Output) == 0x000100, "Member 'FRigVMFunction_MathRBFInterpolateQuatXform::Output' has a wrong offset!");
-
-// ScriptStruct RigVM.RigDispatch_FromString
-// 0x0000 (0x0070 - 0x0070)
-struct FRigDispatch_FromString final : public FRigVMDispatchFactory
-{
-};
-static_assert(alignof(FRigDispatch_FromString) == 0x000008, "Wrong alignment on FRigDispatch_FromString");
-static_assert(sizeof(FRigDispatch_FromString) == 0x000070, "Wrong size on FRigDispatch_FromString");
 
 // ScriptStruct RigVM.MathRBFInterpolateVectorFloat_Target
 // 0x0020 (0x0020 - 0x0000)
@@ -5314,13 +5340,28 @@ static_assert(sizeof(FMathRBFInterpolateVectorFloat_Target) == 0x000020, "Wrong 
 static_assert(offsetof(FMathRBFInterpolateVectorFloat_Target, Target) == 0x000000, "Member 'FMathRBFInterpolateVectorFloat_Target::Target' has a wrong offset!");
 static_assert(offsetof(FMathRBFInterpolateVectorFloat_Target, Value) == 0x000018, "Member 'FMathRBFInterpolateVectorFloat_Target::Value' has a wrong offset!");
 
-// ScriptStruct RigVM.RigDispatch_ToString
-// 0x0000 (0x0070 - 0x0070)
-struct FRigDispatch_ToString final : public FRigVMDispatchFactory
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorAdd
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AccumulateVectorAdd final : public FRigVMFunction_AccumulateBase
 {
+public:
+	struct FVector                                Increment;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigDispatch_ToString) == 0x000008, "Wrong alignment on FRigDispatch_ToString");
-static_assert(sizeof(FRigDispatch_ToString) == 0x000070, "Wrong size on FRigDispatch_ToString");
+static_assert(alignof(FRigVMFunction_AccumulateVectorAdd) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorAdd");
+static_assert(sizeof(FRigVMFunction_AccumulateVectorAdd) == 0x000078, "Wrong size on FRigVMFunction_AccumulateVectorAdd");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, Increment) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorAdd::Increment' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, InitialValue) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorAdd::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, bIntegrateDeltaTime) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorAdd::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, Result) == 0x000040, "Member 'FRigVMFunction_AccumulateVectorAdd::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, AccumulatedValue) == 0x000058, "Member 'FRigVMFunction_AccumulateVectorAdd::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, bIsInitialized) == 0x000070, "Member 'FRigVMFunction_AccumulateVectorAdd::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorFloat
 // 0x0020 (0x00E0 - 0x00C0)
@@ -5336,6 +5377,32 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorFloat) == 0x0000E0, 
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorFloat, Targets) == 0x0000C0, "Member 'FRigVMFunction_MathRBFInterpolateVectorFloat::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorFloat, Output) == 0x0000D0, "Member 'FRigVMFunction_MathRBFInterpolateVectorFloat::Output' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_AccumulateQuatLerp
+// 0x00A8 (0x00B0 - 0x0008)
+struct FRigVMFunction_AccumulateQuatLerp final : public FRigVMFunction_AccumulateBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  TargetValue;                                       // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_AccumulateQuatLerp) == 0x000010, "Wrong alignment on FRigVMFunction_AccumulateQuatLerp");
+static_assert(sizeof(FRigVMFunction_AccumulateQuatLerp) == 0x0000B0, "Wrong size on FRigVMFunction_AccumulateQuatLerp");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, TargetValue) == 0x000010, "Member 'FRigVMFunction_AccumulateQuatLerp::TargetValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, InitialValue) == 0x000030, "Member 'FRigVMFunction_AccumulateQuatLerp::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, Blend) == 0x000050, "Member 'FRigVMFunction_AccumulateQuatLerp::Blend' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, bIntegrateDeltaTime) == 0x000054, "Member 'FRigVMFunction_AccumulateQuatLerp::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, Result) == 0x000060, "Member 'FRigVMFunction_AccumulateQuatLerp::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, AccumulatedValue) == 0x000080, "Member 'FRigVMFunction_AccumulateQuatLerp::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, bIsInitialized) == 0x0000A0, "Member 'FRigVMFunction_AccumulateQuatLerp::bIsInitialized' has a wrong offset!");
+
 // ScriptStruct RigVM.MathRBFInterpolateVectorVector_Target
 // 0x0030 (0x0030 - 0x0000)
 struct FMathRBFInterpolateVectorVector_Target final
@@ -5348,29 +5415,6 @@ static_assert(alignof(FMathRBFInterpolateVectorVector_Target) == 0x000008, "Wron
 static_assert(sizeof(FMathRBFInterpolateVectorVector_Target) == 0x000030, "Wrong size on FMathRBFInterpolateVectorVector_Target");
 static_assert(offsetof(FMathRBFInterpolateVectorVector_Target, Target) == 0x000000, "Member 'FMathRBFInterpolateVectorVector_Target::Target' has a wrong offset!");
 static_assert(offsetof(FMathRBFInterpolateVectorVector_Target, Value) == 0x000018, "Member 'FMathRBFInterpolateVectorVector_Target::Value' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorMul
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AccumulateVectorMul final : public FRigVMFunction_AccumulateBase
-{
-public:
-	struct FVector                                Multiplier;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_AccumulateVectorMul) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorMul");
-static_assert(sizeof(FRigVMFunction_AccumulateVectorMul) == 0x000078, "Wrong size on FRigVMFunction_AccumulateVectorMul");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, Multiplier) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorMul::Multiplier' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, InitialValue) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorMul::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, bIntegrateDeltaTime) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorMul::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, Result) == 0x000040, "Member 'FRigVMFunction_AccumulateVectorMul::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, AccumulatedValue) == 0x000058, "Member 'FRigVMFunction_AccumulateVectorMul::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, bIsInitialized) == 0x000070, "Member 'FRigVMFunction_AccumulateVectorMul::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathRBFInterpolateVectorVector
 // 0x0030 (0x00F0 - 0x00C0)
@@ -5386,27 +5430,13 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorVector) == 0x0000F0,
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorVector, Targets) == 0x0000C0, "Member 'FRigVMFunction_MathRBFInterpolateVectorVector::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorVector, Output) == 0x0000D0, "Member 'FRigVMFunction_MathRBFInterpolateVectorVector::Output' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateFloatRange
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_AccumulateFloatRange final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigDispatch_FromString
+// 0x0000 (0x0070 - 0x0070)
+struct FRigDispatch_FromString final : public FRigVMDispatchFactory
 {
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedMinimum;                                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedMaximum;                                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_AccumulateFloatRange) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatRange");
-static_assert(sizeof(FRigVMFunction_AccumulateFloatRange) == 0x000020, "Wrong size on FRigVMFunction_AccumulateFloatRange");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Value) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatRange::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Minimum) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatRange::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, Maximum) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatRange::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, AccumulatedMinimum) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatRange::AccumulatedMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, AccumulatedMaximum) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatRange::AccumulatedMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatRange, bIsInitialized) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatRange::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigDispatch_FromString) == 0x000008, "Wrong alignment on FRigDispatch_FromString");
+static_assert(sizeof(FRigDispatch_FromString) == 0x000070, "Wrong size on FRigDispatch_FromString");
 
 // ScriptStruct RigVM.MathRBFInterpolateVectorColor_Target
 // 0x0028 (0x0028 - 0x0000)
@@ -5433,29 +5463,6 @@ static_assert(alignof(FRigVMFunction_MathRBFInterpolateVectorColor) == 0x000010,
 static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorColor) == 0x0000E0, "Wrong size on FRigVMFunction_MathRBFInterpolateVectorColor");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorColor, Targets) == 0x0000C0, "Member 'FRigVMFunction_MathRBFInterpolateVectorColor::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorColor, Output) == 0x0000D0, "Member 'FRigVMFunction_MathRBFInterpolateVectorColor::Output' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateFloatAdd
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_AccumulateFloatAdd final : public FRigVMFunction_AccumulateBase
-{
-public:
-	float                                         Increment;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedValue;                                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_AccumulateFloatAdd) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatAdd");
-static_assert(sizeof(FRigVMFunction_AccumulateFloatAdd) == 0x000020, "Wrong size on FRigVMFunction_AccumulateFloatAdd");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, Increment) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatAdd::Increment' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, InitialValue) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatAdd::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, bIntegrateDeltaTime) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatAdd::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, Result) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatAdd::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, AccumulatedValue) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatAdd::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, bIsInitialized) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatAdd::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.MathRBFInterpolateVectorQuat_Target
 // 0x0040 (0x0040 - 0x0000)
@@ -5484,6 +5491,21 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorQuat) == 0x0000F0, "
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorQuat, Targets) == 0x0000C0, "Member 'FRigVMFunction_MathRBFInterpolateVectorQuat::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorQuat, Output) == 0x0000D0, "Member 'FRigVMFunction_MathRBFInterpolateVectorQuat::Output' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_StringSplit
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringSplit final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringSplit) == 0x000008, "Wrong alignment on FRigVMFunction_StringSplit");
+static_assert(sizeof(FRigVMFunction_StringSplit) == 0x000038, "Wrong size on FRigVMFunction_StringSplit");
+static_assert(offsetof(FRigVMFunction_StringSplit, Value) == 0x000008, "Member 'FRigVMFunction_StringSplit::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringSplit, Separator) == 0x000018, "Member 'FRigVMFunction_StringSplit::Separator' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringSplit, Result) == 0x000028, "Member 'FRigVMFunction_StringSplit::Result' has a wrong offset!");
+
 // ScriptStruct RigVM.MathRBFInterpolateVectorXform_Target
 // 0x0080 (0x0080 - 0x0000)
 struct FMathRBFInterpolateVectorXform_Target final
@@ -5511,21 +5533,6 @@ static_assert(sizeof(FRigVMFunction_MathRBFInterpolateVectorXform) == 0x000130, 
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorXform, Targets) == 0x0000C0, "Member 'FRigVMFunction_MathRBFInterpolateVectorXform::Targets' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathRBFInterpolateVectorXform, Output) == 0x0000D0, "Member 'FRigVMFunction_MathRBFInterpolateVectorXform::Output' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringPadInteger
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_StringPadInteger final : public FRigVMFunction_StringBase
-{
-public:
-	int32                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Digits;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringPadInteger) == 0x000008, "Wrong alignment on FRigVMFunction_StringPadInteger");
-static_assert(sizeof(FRigVMFunction_StringPadInteger) == 0x000020, "Wrong size on FRigVMFunction_StringPadInteger");
-static_assert(offsetof(FRigVMFunction_StringPadInteger, Value) == 0x000008, "Member 'FRigVMFunction_StringPadInteger::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringPadInteger, Digits) == 0x00000C, "Member 'FRigVMFunction_StringPadInteger::Digits' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringPadInteger, Result) == 0x000010, "Member 'FRigVMFunction_StringPadInteger::Result' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathTransformMutableBase
 // 0x0000 (0x0100 - 0x0100)
 struct FRigVMFunction_MathTransformMutableBase : public FRigVMFunction_MathMutableBase
@@ -5548,44 +5555,25 @@ static_assert(sizeof(FRigVMFunction_MathTransformUnaryOp) == 0x0000D0, "Wrong si
 static_assert(offsetof(FRigVMFunction_MathTransformUnaryOp, Value) == 0x000010, "Member 'FRigVMFunction_MathTransformUnaryOp::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformUnaryOp, Result) == 0x000070, "Member 'FRigVMFunction_MathTransformUnaryOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorAdd
-// 0x0070 (0x0078 - 0x0008)
-struct FRigVMFunction_AccumulateVectorAdd final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_StringTruncate
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_StringTruncate final : public FRigVMFunction_StringBase
 {
 public:
-	struct FVector                                Increment;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FromEnd;                                           // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Remainder;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Chopped;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_AccumulateVectorAdd) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorAdd");
-static_assert(sizeof(FRigVMFunction_AccumulateVectorAdd) == 0x000078, "Wrong size on FRigVMFunction_AccumulateVectorAdd");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, Increment) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorAdd::Increment' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, InitialValue) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorAdd::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, bIntegrateDeltaTime) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorAdd::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, Result) == 0x000040, "Member 'FRigVMFunction_AccumulateVectorAdd::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, AccumulatedValue) == 0x000058, "Member 'FRigVMFunction_AccumulateVectorAdd::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorAdd, bIsInitialized) == 0x000070, "Member 'FRigVMFunction_AccumulateVectorAdd::bIsInitialized' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformBinaryOp
-// 0x0128 (0x0130 - 0x0008)
-struct FRigVMFunction_MathTransformBinaryOp final : public FRigVMFunction_MathTransformBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             A;                                                 // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             B;                                                 // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Result;                                            // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathTransformBinaryOp) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformBinaryOp");
-static_assert(sizeof(FRigVMFunction_MathTransformBinaryOp) == 0x000130, "Wrong size on FRigVMFunction_MathTransformBinaryOp");
-static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, A) == 0x000010, "Member 'FRigVMFunction_MathTransformBinaryOp::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, B) == 0x000070, "Member 'FRigVMFunction_MathTransformBinaryOp::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformBinaryOp, Result) == 0x0000D0, "Member 'FRigVMFunction_MathTransformBinaryOp::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringTruncate) == 0x000008, "Wrong alignment on FRigVMFunction_StringTruncate");
+static_assert(sizeof(FRigVMFunction_StringTruncate) == 0x000040, "Wrong size on FRigVMFunction_StringTruncate");
+static_assert(offsetof(FRigVMFunction_StringTruncate, Name) == 0x000008, "Member 'FRigVMFunction_StringTruncate::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringTruncate, Count) == 0x000018, "Member 'FRigVMFunction_StringTruncate::Count' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringTruncate, FromEnd) == 0x00001C, "Member 'FRigVMFunction_StringTruncate::FromEnd' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringTruncate, Remainder) == 0x000020, "Member 'FRigVMFunction_StringTruncate::Remainder' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringTruncate, Chopped) == 0x000030, "Member 'FRigVMFunction_StringTruncate::Chopped' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformBinaryAggregateOp
 // 0x0128 (0x0130 - 0x0008)
@@ -5603,21 +5591,38 @@ static_assert(offsetof(FRigVMFunction_MathTransformBinaryAggregateOp, A) == 0x00
 static_assert(offsetof(FRigVMFunction_MathTransformBinaryAggregateOp, B) == 0x000070, "Member 'FRigVMFunction_MathTransformBinaryAggregateOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformBinaryAggregateOp, Result) == 0x0000D0, "Member 'FRigVMFunction_MathTransformBinaryAggregateOp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringEndsWith
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringEndsWith final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_StringConcat
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_StringConcat final : public FRigVMFunction_StringBase
 {
 public:
-	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Ending;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 A;                                                 // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 B;                                                 // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringEndsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StringEndsWith");
-static_assert(sizeof(FRigVMFunction_StringEndsWith) == 0x000030, "Wrong size on FRigVMFunction_StringEndsWith");
-static_assert(offsetof(FRigVMFunction_StringEndsWith, Name) == 0x000008, "Member 'FRigVMFunction_StringEndsWith::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringEndsWith, Ending) == 0x000018, "Member 'FRigVMFunction_StringEndsWith::Ending' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringEndsWith, Result) == 0x000028, "Member 'FRigVMFunction_StringEndsWith::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringConcat) == 0x000008, "Wrong alignment on FRigVMFunction_StringConcat");
+static_assert(sizeof(FRigVMFunction_StringConcat) == 0x000038, "Wrong size on FRigVMFunction_StringConcat");
+static_assert(offsetof(FRigVMFunction_StringConcat, A) == 0x000008, "Member 'FRigVMFunction_StringConcat::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringConcat, B) == 0x000018, "Member 'FRigVMFunction_StringConcat::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringConcat, Result) == 0x000028, "Member 'FRigVMFunction_StringConcat::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathTransformMake
+// 0x00B8 (0x00C0 - 0x0008)
+struct FRigVMFunction_MathTransformMake final : public FRigVMFunction_MathTransformBase
+{
+public:
+	struct FVector                                Translation;                                       // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Rotation;                                          // 0x0020(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Result;                                            // 0x0060(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathTransformMake) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformMake");
+static_assert(sizeof(FRigVMFunction_MathTransformMake) == 0x0000C0, "Wrong size on FRigVMFunction_MathTransformMake");
+static_assert(offsetof(FRigVMFunction_MathTransformMake, Translation) == 0x000008, "Member 'FRigVMFunction_MathTransformMake::Translation' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformMake, Rotation) == 0x000020, "Member 'FRigVMFunction_MathTransformMake::Rotation' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformMake, Scale) == 0x000040, "Member 'FRigVMFunction_MathTransformMake::Scale' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformMake, Result) == 0x000060, "Member 'FRigVMFunction_MathTransformMake::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformFromEulerTransform
 // 0x00A8 (0x00B0 - 0x0008)
@@ -5632,35 +5637,20 @@ static_assert(sizeof(FRigVMFunction_MathTransformFromEulerTransform) == 0x0000B0
 static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransform, EulerTransform) == 0x000008, "Member 'FRigVMFunction_MathTransformFromEulerTransform::EulerTransform' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransform, Result) == 0x000050, "Member 'FRigVMFunction_MathTransformFromEulerTransform::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringReplace
-// 0x0040 (0x0048 - 0x0008)
-struct FRigVMFunction_StringReplace final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_MathVectorMakeAbsolute
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorMakeAbsolute final : public FRigVMFunction_MathVectorBase
 {
 public:
-	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Old;                                               // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 New;                                               // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Local;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Parent;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Global;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringReplace) == 0x000008, "Wrong alignment on FRigVMFunction_StringReplace");
-static_assert(sizeof(FRigVMFunction_StringReplace) == 0x000048, "Wrong size on FRigVMFunction_StringReplace");
-static_assert(offsetof(FRigVMFunction_StringReplace, Name) == 0x000008, "Member 'FRigVMFunction_StringReplace::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringReplace, Old) == 0x000018, "Member 'FRigVMFunction_StringReplace::Old' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringReplace, New) == 0x000028, "Member 'FRigVMFunction_StringReplace::New' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringReplace, Result) == 0x000038, "Member 'FRigVMFunction_StringReplace::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathTransformFromEulerTransformV2
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_MathTransformFromEulerTransformV2 final : public FRigVMFunction_MathTransformBase
-{
-public:
-	struct FEulerTransform                        Value;                                             // 0x0008(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             Result;                                            // 0x0050(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathTransformFromEulerTransformV2) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformFromEulerTransformV2");
-static_assert(sizeof(FRigVMFunction_MathTransformFromEulerTransformV2) == 0x0000B0, "Wrong size on FRigVMFunction_MathTransformFromEulerTransformV2");
-static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransformV2, Value) == 0x000008, "Member 'FRigVMFunction_MathTransformFromEulerTransformV2::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathTransformFromEulerTransformV2, Result) == 0x000050, "Member 'FRigVMFunction_MathTransformFromEulerTransformV2::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathVectorMakeAbsolute) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMakeAbsolute");
+static_assert(sizeof(FRigVMFunction_MathVectorMakeAbsolute) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMakeAbsolute");
+static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Local) == 0x000008, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Local' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Parent) == 0x000020, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Parent' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Global) == 0x000038, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Global' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformToEulerTransform
 // 0x00B8 (0x00C0 - 0x0008)
@@ -5677,18 +5667,21 @@ static_assert(sizeof(FRigVMFunction_MathTransformToEulerTransform) == 0x0000C0, 
 static_assert(offsetof(FRigVMFunction_MathTransformToEulerTransform, Value) == 0x000010, "Member 'FRigVMFunction_MathTransformToEulerTransform::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformToEulerTransform, Result) == 0x000070, "Member 'FRigVMFunction_MathTransformToEulerTransform::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorArraySum
+// ScriptStruct RigVM.RigVMFunction_StringEndsWith
 // 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_MathVectorArraySum final : public FRigVMFunction_MathVectorBase
+struct FRigVMFunction_StringEndsWith final : public FRigVMFunction_StringBase
 {
 public:
-	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                Sum;                                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Ending;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_MathVectorArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorArraySum");
-static_assert(sizeof(FRigVMFunction_MathVectorArraySum) == 0x000030, "Wrong size on FRigVMFunction_MathVectorArraySum");
-static_assert(offsetof(FRigVMFunction_MathVectorArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathVectorArraySum::Array' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathVectorArraySum::Sum' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringEndsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StringEndsWith");
+static_assert(sizeof(FRigVMFunction_StringEndsWith) == 0x000030, "Wrong size on FRigVMFunction_StringEndsWith");
+static_assert(offsetof(FRigVMFunction_StringEndsWith, Name) == 0x000008, "Member 'FRigVMFunction_StringEndsWith::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringEndsWith, Ending) == 0x000018, "Member 'FRigVMFunction_StringEndsWith::Ending' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringEndsWith, Result) == 0x000028, "Member 'FRigVMFunction_StringEndsWith::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformMul
 // 0x0000 (0x0130 - 0x0130)
@@ -5698,21 +5691,21 @@ struct FRigVMFunction_MathTransformMul final : public FRigVMFunction_MathTransfo
 static_assert(alignof(FRigVMFunction_MathTransformMul) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformMul");
 static_assert(sizeof(FRigVMFunction_MathTransformMul) == 0x000130, "Wrong size on FRigVMFunction_MathTransformMul");
 
-// ScriptStruct RigVM.RigVMFunction_StringContains
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringContains final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_MathTransformMakeRelative
+// 0x0128 (0x0130 - 0x0008)
+struct FRigVMFunction_MathTransformMakeRelative final : public FRigVMFunction_MathTransformBase
 {
 public:
-	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Search;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Global;                                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Parent;                                            // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Local;                                             // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringContains) == 0x000008, "Wrong alignment on FRigVMFunction_StringContains");
-static_assert(sizeof(FRigVMFunction_StringContains) == 0x000030, "Wrong size on FRigVMFunction_StringContains");
-static_assert(offsetof(FRigVMFunction_StringContains, Name) == 0x000008, "Member 'FRigVMFunction_StringContains::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringContains, Search) == 0x000018, "Member 'FRigVMFunction_StringContains::Search' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringContains, Result) == 0x000028, "Member 'FRigVMFunction_StringContains::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_MathTransformMakeRelative) == 0x000010, "Wrong alignment on FRigVMFunction_MathTransformMakeRelative");
+static_assert(sizeof(FRigVMFunction_MathTransformMakeRelative) == 0x000130, "Wrong size on FRigVMFunction_MathTransformMakeRelative");
+static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Global) == 0x000010, "Member 'FRigVMFunction_MathTransformMakeRelative::Global' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Parent) == 0x000070, "Member 'FRigVMFunction_MathTransformMakeRelative::Parent' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathTransformMakeRelative, Local) == 0x0000D0, "Member 'FRigVMFunction_MathTransformMakeRelative::Local' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformMakeAbsolute
 // 0x0128 (0x0130 - 0x0008)
@@ -5775,26 +5768,6 @@ static_assert(offsetof(FRigVMFunction_MathTransformLerp, B) == 0x000070, "Member
 static_assert(offsetof(FRigVMFunction_MathTransformLerp, T) == 0x0000D0, "Member 'FRigVMFunction_MathTransformLerp::T' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformLerp, Result) == 0x0000E0, "Member 'FRigVMFunction_MathTransformLerp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringTruncate
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_StringTruncate final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FromEnd;                                           // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Remainder;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Chopped;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringTruncate) == 0x000008, "Wrong alignment on FRigVMFunction_StringTruncate");
-static_assert(sizeof(FRigVMFunction_StringTruncate) == 0x000040, "Wrong size on FRigVMFunction_StringTruncate");
-static_assert(offsetof(FRigVMFunction_StringTruncate, Name) == 0x000008, "Member 'FRigVMFunction_StringTruncate::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringTruncate, Count) == 0x000018, "Member 'FRigVMFunction_StringTruncate::Count' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringTruncate, FromEnd) == 0x00001C, "Member 'FRigVMFunction_StringTruncate::FromEnd' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringTruncate, Remainder) == 0x000020, "Member 'FRigVMFunction_StringTruncate::Remainder' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringTruncate, Chopped) == 0x000030, "Member 'FRigVMFunction_StringTruncate::Chopped' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathTransformSelectBool
 // 0x0128 (0x0130 - 0x0008)
 struct FRigVMFunction_MathTransformSelectBool final : public FRigVMFunction_MathTransformBase
@@ -5812,6 +5785,22 @@ static_assert(offsetof(FRigVMFunction_MathTransformSelectBool, Condition) == 0x0
 static_assert(offsetof(FRigVMFunction_MathTransformSelectBool, IfTrue) == 0x000010, "Member 'FRigVMFunction_MathTransformSelectBool::IfTrue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformSelectBool, IfFalse) == 0x000070, "Member 'FRigVMFunction_MathTransformSelectBool::IfFalse' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformSelectBool, Result) == 0x0000D0, "Member 'FRigVMFunction_MathTransformSelectBool::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_StringStartsWith
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringStartsWith final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Start;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_StringStartsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StringStartsWith");
+static_assert(sizeof(FRigVMFunction_StringStartsWith) == 0x000030, "Wrong size on FRigVMFunction_StringStartsWith");
+static_assert(offsetof(FRigVMFunction_StringStartsWith, Name) == 0x000008, "Member 'FRigVMFunction_StringStartsWith::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringStartsWith, Start) == 0x000018, "Member 'FRigVMFunction_StringStartsWith::Start' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringStartsWith, Result) == 0x000028, "Member 'FRigVMFunction_StringStartsWith::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformRotateVector
 // 0x0098 (0x00A0 - 0x0008)
@@ -5845,19 +5834,25 @@ static_assert(offsetof(FRigVMFunction_MathTransformTransformVector, Transform) =
 static_assert(offsetof(FRigVMFunction_MathTransformTransformVector, Location) == 0x000070, "Member 'FRigVMFunction_MathTransformTransformVector::Location' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformTransformVector, Result) == 0x000088, "Member 'FRigVMFunction_MathTransformTransformVector::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringLength
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_StringLength final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_NameTruncate
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_NameTruncate final : public FRigVMFunction_NameBase
 {
 public:
-	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Length;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FromEnd;                                           // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Remainder;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Chopped;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringLength) == 0x000008, "Wrong alignment on FRigVMFunction_StringLength");
-static_assert(sizeof(FRigVMFunction_StringLength) == 0x000020, "Wrong size on FRigVMFunction_StringLength");
-static_assert(offsetof(FRigVMFunction_StringLength, Value) == 0x000008, "Member 'FRigVMFunction_StringLength::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringLength, Length) == 0x000018, "Member 'FRigVMFunction_StringLength::Length' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_NameTruncate) == 0x000008, "Wrong alignment on FRigVMFunction_NameTruncate");
+static_assert(sizeof(FRigVMFunction_NameTruncate) == 0x000028, "Wrong size on FRigVMFunction_NameTruncate");
+static_assert(offsetof(FRigVMFunction_NameTruncate, Name) == 0x000008, "Member 'FRigVMFunction_NameTruncate::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameTruncate, Count) == 0x000010, "Member 'FRigVMFunction_NameTruncate::Count' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameTruncate, FromEnd) == 0x000014, "Member 'FRigVMFunction_NameTruncate::FromEnd' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameTruncate, Remainder) == 0x000018, "Member 'FRigVMFunction_NameTruncate::Remainder' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameTruncate, Chopped) == 0x000020, "Member 'FRigVMFunction_NameTruncate::Chopped' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformFromSRT
 // 0x0108 (0x0110 - 0x0008)
@@ -5883,6 +5878,14 @@ static_assert(offsetof(FRigVMFunction_MathTransformFromSRT, Scale) == 0x000040, 
 static_assert(offsetof(FRigVMFunction_MathTransformFromSRT, Transform) == 0x000060, "Member 'FRigVMFunction_MathTransformFromSRT::Transform' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformFromSRT, EulerTransform) == 0x0000C0, "Member 'FRigVMFunction_MathTransformFromSRT::EulerTransform' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMDispatch_MakeStruct
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_MakeStruct : public FRigVMDispatch_CoreBase
+{
+};
+static_assert(alignof(FRigVMDispatch_MakeStruct) == 0x000008, "Wrong alignment on FRigVMDispatch_MakeStruct");
+static_assert(sizeof(FRigVMDispatch_MakeStruct) == 0x000070, "Wrong size on FRigVMDispatch_MakeStruct");
+
 // ScriptStruct RigVM.RigVMFunction_MathTransformArrayToSRT
 // 0x0040 (0x0048 - 0x0008)
 struct FRigVMFunction_MathTransformArrayToSRT final : public FRigVMFunction_MathTransformBase
@@ -5899,30 +5902,6 @@ static_assert(offsetof(FRigVMFunction_MathTransformArrayToSRT, Transforms) == 0x
 static_assert(offsetof(FRigVMFunction_MathTransformArrayToSRT, Translations) == 0x000018, "Member 'FRigVMFunction_MathTransformArrayToSRT::Translations' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformArrayToSRT, Rotations) == 0x000028, "Member 'FRigVMFunction_MathTransformArrayToSRT::Rotations' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformArrayToSRT, Scales) == 0x000038, "Member 'FRigVMFunction_MathTransformArrayToSRT::Scales' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_NameBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_NameBase : public FRigVMStruct
-{
-};
-static_assert(alignof(FRigVMFunction_NameBase) == 0x000008, "Wrong alignment on FRigVMFunction_NameBase");
-static_assert(sizeof(FRigVMFunction_NameBase) == 0x000008, "Wrong size on FRigVMFunction_NameBase");
-
-// ScriptStruct RigVM.RigVMFunction_EndsWith
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_EndsWith final : public FRigVMFunction_NameBase
-{
-public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Ending;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_EndsWith) == 0x000008, "Wrong alignment on FRigVMFunction_EndsWith");
-static_assert(sizeof(FRigVMFunction_EndsWith) == 0x000020, "Wrong size on FRigVMFunction_EndsWith");
-static_assert(offsetof(FRigVMFunction_EndsWith, Name) == 0x000008, "Member 'FRigVMFunction_EndsWith::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_EndsWith, Ending) == 0x000010, "Member 'FRigVMFunction_EndsWith::Ending' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_EndsWith, Result) == 0x000018, "Member 'FRigVMFunction_EndsWith::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformClampSpatially
 // 0x0158 (0x0160 - 0x0008)
@@ -5958,13 +5937,37 @@ static_assert(offsetof(FRigVMFunction_MathTransformClampSpatially, DebugColor) =
 static_assert(offsetof(FRigVMFunction_MathTransformClampSpatially, DebugThickness) == 0x0000F4, "Member 'FRigVMFunction_MathTransformClampSpatially::DebugThickness' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformClampSpatially, Result) == 0x000100, "Member 'FRigVMFunction_MathTransformClampSpatially::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_Print
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_Print final : public FRigVMDispatchFactory
+// ScriptStruct RigVM.RigVMFunction_ControlFlowBase
+// 0x0000 (0x0008 - 0x0008)
+struct FRigVMFunction_ControlFlowBase : public FRigVMStruct
 {
 };
-static_assert(alignof(FRigVMDispatch_Print) == 0x000008, "Wrong alignment on FRigVMDispatch_Print");
-static_assert(sizeof(FRigVMDispatch_Print) == 0x000070, "Wrong size on FRigVMDispatch_Print");
+static_assert(alignof(FRigVMFunction_ControlFlowBase) == 0x000008, "Wrong alignment on FRigVMFunction_ControlFlowBase");
+static_assert(sizeof(FRigVMFunction_ControlFlowBase) == 0x000008, "Wrong size on FRigVMFunction_ControlFlowBase");
+
+// ScriptStruct RigVM.RigVMFunction_ControlFlowBranch
+// 0x03E8 (0x03F0 - 0x0008)
+struct FRigVMFunction_ControlFlowBranch final : public FRigVMFunction_ControlFlowBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMExecuteContext                   ExecuteContext;                                    // 0x0010(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          Condition;                                         // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_101[0xF];                                      // 0x0101(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMExecuteContext                   TRUE_0;                                            // 0x0110(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FRigVMExecuteContext                   FALSE_0;                                           // 0x0200(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FRigVMExecuteContext                   Completed;                                         // 0x02F0(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FName                                   BlockToRun;                                        // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_ControlFlowBranch) == 0x000010, "Wrong alignment on FRigVMFunction_ControlFlowBranch");
+static_assert(sizeof(FRigVMFunction_ControlFlowBranch) == 0x0003F0, "Wrong size on FRigVMFunction_ControlFlowBranch");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, ExecuteContext) == 0x000010, "Member 'FRigVMFunction_ControlFlowBranch::ExecuteContext' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, Condition) == 0x000100, "Member 'FRigVMFunction_ControlFlowBranch::Condition' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, TRUE_0) == 0x000110, "Member 'FRigVMFunction_ControlFlowBranch::TRUE_0' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, FALSE_0) == 0x000200, "Member 'FRigVMFunction_ControlFlowBranch::FALSE_0' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, Completed) == 0x0002F0, "Member 'FRigVMFunction_ControlFlowBranch::Completed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_ControlFlowBranch, BlockToRun) == 0x0003E0, "Member 'FRigVMFunction_ControlFlowBranch::BlockToRun' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathTransformMirrorTransform
 // 0x0138 (0x0140 - 0x0008)
@@ -5987,20 +5990,21 @@ static_assert(offsetof(FRigVMFunction_MathTransformMirrorTransform, AxisToFlip) 
 static_assert(offsetof(FRigVMFunction_MathTransformMirrorTransform, CentralTransform) == 0x000080, "Member 'FRigVMFunction_MathTransformMirrorTransform::CentralTransform' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathTransformMirrorTransform, Result) == 0x0000E0, "Member 'FRigVMFunction_MathTransformMirrorTransform::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_NameConcat
+// ScriptStruct RigVM.RigVMFunction_StartsWith
 // 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_NameConcat final : public FRigVMFunction_NameBase
+struct FRigVMFunction_StartsWith final : public FRigVMFunction_NameBase
 {
 public:
-	class FName                                   A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Start;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_NameConcat) == 0x000008, "Wrong alignment on FRigVMFunction_NameConcat");
-static_assert(sizeof(FRigVMFunction_NameConcat) == 0x000020, "Wrong size on FRigVMFunction_NameConcat");
-static_assert(offsetof(FRigVMFunction_NameConcat, A) == 0x000008, "Member 'FRigVMFunction_NameConcat::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameConcat, B) == 0x000010, "Member 'FRigVMFunction_NameConcat::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameConcat, Result) == 0x000018, "Member 'FRigVMFunction_NameConcat::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StartsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StartsWith");
+static_assert(sizeof(FRigVMFunction_StartsWith) == 0x000020, "Wrong size on FRigVMFunction_StartsWith");
+static_assert(offsetof(FRigVMFunction_StartsWith, Name) == 0x000008, "Member 'FRigVMFunction_StartsWith::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StartsWith, Start) == 0x000010, "Member 'FRigVMFunction_StartsWith::Start' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StartsWith, Result) == 0x000018, "Member 'FRigVMFunction_StartsWith::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorUnaryOp
 // 0x0030 (0x0038 - 0x0008)
@@ -6029,6 +6033,14 @@ static_assert(sizeof(FRigVMFunction_MathVectorBinaryOp) == 0x000050, "Wrong size
 static_assert(offsetof(FRigVMFunction_MathVectorBinaryOp, A) == 0x000008, "Member 'FRigVMFunction_MathVectorBinaryOp::A' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorBinaryOp, B) == 0x000020, "Member 'FRigVMFunction_MathVectorBinaryOp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorBinaryOp, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorBinaryOp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDispatch_Print
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_Print final : public FRigVMDispatchFactory
+{
+};
+static_assert(alignof(FRigVMDispatch_Print) == 0x000008, "Wrong alignment on FRigVMDispatch_Print");
+static_assert(sizeof(FRigVMDispatch_Print) == 0x000070, "Wrong size on FRigVMDispatch_Print");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorBinaryAggregateOp
 // 0x0048 (0x0050 - 0x0008)
@@ -6063,14 +6075,6 @@ static_assert(offsetof(FRigVMFunction_MathVectorMake, Y) == 0x00000C, "Member 'F
 static_assert(offsetof(FRigVMFunction_MathVectorMake, Z) == 0x000010, "Member 'FRigVMFunction_MathVectorMake::Z' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorMake, Result) == 0x000018, "Member 'FRigVMFunction_MathVectorMake::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_SwitchInt32
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_SwitchInt32 final : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_SwitchInt32) == 0x000008, "Wrong alignment on FRigVMDispatch_SwitchInt32");
-static_assert(sizeof(FRigVMDispatch_SwitchInt32) == 0x000070, "Wrong size on FRigVMDispatch_SwitchInt32");
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorFromFloat
 // 0x0020 (0x0028 - 0x0008)
 struct FRigVMFunction_MathVectorFromFloat final : public FRigVMFunction_MathVectorBase
@@ -6084,6 +6088,14 @@ static_assert(alignof(FRigVMFunction_MathVectorFromFloat) == 0x000008, "Wrong al
 static_assert(sizeof(FRigVMFunction_MathVectorFromFloat) == 0x000028, "Wrong size on FRigVMFunction_MathVectorFromFloat");
 static_assert(offsetof(FRigVMFunction_MathVectorFromFloat, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorFromFloat::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorFromFloat, Result) == 0x000010, "Member 'FRigVMFunction_MathVectorFromFloat::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayClone
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayClone final : public FRigVMDispatch_ArrayBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayClone) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayClone");
+static_assert(sizeof(FRigVMDispatch_ArrayClone) == 0x000070, "Wrong size on FRigVMDispatch_ArrayClone");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorFromDouble
 // 0x0020 (0x0028 - 0x0008)
@@ -6114,6 +6126,14 @@ struct FRigVMFunction_MathVectorSub final : public FRigVMFunction_MathVectorBina
 static_assert(alignof(FRigVMFunction_MathVectorSub) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorSub");
 static_assert(sizeof(FRigVMFunction_MathVectorSub) == 0x000050, "Wrong size on FRigVMFunction_MathVectorSub");
 
+// ScriptStruct RigVM.RigVMDispatch_SwitchInt32
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_SwitchInt32 final : public FRigVMDispatch_CoreBase
+{
+};
+static_assert(alignof(FRigVMDispatch_SwitchInt32) == 0x000008, "Wrong alignment on FRigVMDispatch_SwitchInt32");
+static_assert(sizeof(FRigVMDispatch_SwitchInt32) == 0x000070, "Wrong size on FRigVMDispatch_SwitchInt32");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorMul
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathVectorMul final : public FRigVMFunction_MathVectorBinaryAggregateOp
@@ -6121,6 +6141,14 @@ struct FRigVMFunction_MathVectorMul final : public FRigVMFunction_MathVectorBina
 };
 static_assert(alignof(FRigVMFunction_MathVectorMul) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMul");
 static_assert(sizeof(FRigVMFunction_MathVectorMul) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMul");
+
+// ScriptStruct RigVM.RigVMDispatch_SelectInt32
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_SelectInt32 final : public FRigVMDispatch_CoreBase
+{
+};
+static_assert(alignof(FRigVMDispatch_SelectInt32) == 0x000008, "Wrong alignment on FRigVMDispatch_SelectInt32");
+static_assert(sizeof(FRigVMDispatch_SelectInt32) == 0x000070, "Wrong size on FRigVMDispatch_SelectInt32");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorScale
 // 0x0038 (0x0040 - 0x0008)
@@ -6138,37 +6166,23 @@ static_assert(offsetof(FRigVMFunction_MathVectorScale, Value) == 0x000008, "Memb
 static_assert(offsetof(FRigVMFunction_MathVectorScale, Factor) == 0x000020, "Member 'FRigVMFunction_MathVectorScale::Factor' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorScale, Result) == 0x000028, "Member 'FRigVMFunction_MathVectorScale::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_ControlFlowBase
-// 0x0000 (0x0008 - 0x0008)
-struct FRigVMFunction_ControlFlowBase : public FRigVMStruct
-{
-};
-static_assert(alignof(FRigVMFunction_ControlFlowBase) == 0x000008, "Wrong alignment on FRigVMFunction_ControlFlowBase");
-static_assert(sizeof(FRigVMFunction_ControlFlowBase) == 0x000008, "Wrong size on FRigVMFunction_ControlFlowBase");
-
-// ScriptStruct RigVM.RigVMFunction_ControlFlowBranch
-// 0x03E8 (0x03F0 - 0x0008)
-struct FRigVMFunction_ControlFlowBranch final : public FRigVMFunction_ControlFlowBase
+// ScriptStruct RigVM.RigVMFunction_Timeline
+// 0x0010 (0x0018 - 0x0008)
+struct FRigVMFunction_Timeline final : public FRigVMFunction_SimBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMExecuteContext                   ExecuteContext;                                    // 0x0010(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          Condition;                                         // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0xF];                                      // 0x0101(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigVMExecuteContext                   TRUE_0;                                            // 0x0110(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FRigVMExecuteContext                   FALSE_0;                                           // 0x0200(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FRigVMExecuteContext                   Completed;                                         // 0x02F0(0x00F0)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FName                                   BlockToRun;                                        // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3E8[0x8];                                      // 0x03E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedValue;                                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_ControlFlowBranch) == 0x000010, "Wrong alignment on FRigVMFunction_ControlFlowBranch");
-static_assert(sizeof(FRigVMFunction_ControlFlowBranch) == 0x0003F0, "Wrong size on FRigVMFunction_ControlFlowBranch");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, ExecuteContext) == 0x000010, "Member 'FRigVMFunction_ControlFlowBranch::ExecuteContext' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, Condition) == 0x000100, "Member 'FRigVMFunction_ControlFlowBranch::Condition' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, TRUE_0) == 0x000110, "Member 'FRigVMFunction_ControlFlowBranch::TRUE_0' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, FALSE_0) == 0x000200, "Member 'FRigVMFunction_ControlFlowBranch::FALSE_0' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, Completed) == 0x0002F0, "Member 'FRigVMFunction_ControlFlowBranch::Completed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_ControlFlowBranch, BlockToRun) == 0x0003E0, "Member 'FRigVMFunction_ControlFlowBranch::BlockToRun' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_Timeline) == 0x000008, "Wrong alignment on FRigVMFunction_Timeline");
+static_assert(sizeof(FRigVMFunction_Timeline) == 0x000018, "Wrong size on FRigVMFunction_Timeline");
+static_assert(offsetof(FRigVMFunction_Timeline, Speed) == 0x000008, "Member 'FRigVMFunction_Timeline::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_Timeline, Time) == 0x00000C, "Member 'FRigVMFunction_Timeline::Time' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_Timeline, AccumulatedValue) == 0x000010, "Member 'FRigVMFunction_Timeline::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_Timeline, bIsInitialized) == 0x000014, "Member 'FRigVMFunction_Timeline::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorDiv
 // 0x0000 (0x0050 - 0x0050)
@@ -6186,34 +6200,6 @@ struct FRigVMFunction_MathVectorMod final : public FRigVMFunction_MathVectorBina
 static_assert(alignof(FRigVMFunction_MathVectorMod) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMod");
 static_assert(sizeof(FRigVMFunction_MathVectorMod) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMod");
 
-// ScriptStruct RigVM.RigVMFunction_TimeOffsetFloat
-// 0x0040 (0x0048 - 0x0008)
-struct FRigVMFunction_TimeOffsetFloat final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SecondsAgo;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeRange;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 Buffer;                                            // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 DeltaTimes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UpperBound;                                        // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_TimeOffsetFloat) == 0x000008, "Wrong alignment on FRigVMFunction_TimeOffsetFloat");
-static_assert(sizeof(FRigVMFunction_TimeOffsetFloat) == 0x000048, "Wrong size on FRigVMFunction_TimeOffsetFloat");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Value) == 0x000008, "Member 'FRigVMFunction_TimeOffsetFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, SecondsAgo) == 0x00000C, "Member 'FRigVMFunction_TimeOffsetFloat::SecondsAgo' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, BufferSize) == 0x000010, "Member 'FRigVMFunction_TimeOffsetFloat::BufferSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, TimeRange) == 0x000014, "Member 'FRigVMFunction_TimeOffsetFloat::TimeRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Result) == 0x000018, "Member 'FRigVMFunction_TimeOffsetFloat::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Buffer) == 0x000020, "Member 'FRigVMFunction_TimeOffsetFloat::Buffer' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, DeltaTimes) == 0x000030, "Member 'FRigVMFunction_TimeOffsetFloat::DeltaTimes' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, LastInsertIndex) == 0x000040, "Member 'FRigVMFunction_TimeOffsetFloat::LastInsertIndex' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, UpperBound) == 0x000044, "Member 'FRigVMFunction_TimeOffsetFloat::UpperBound' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorMin
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathVectorMin final : public FRigVMFunction_MathVectorBinaryAggregateOp
@@ -6229,6 +6215,27 @@ struct FRigVMFunction_MathVectorMax final : public FRigVMFunction_MathVectorBina
 };
 static_assert(alignof(FRigVMFunction_MathVectorMax) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMax");
 static_assert(sizeof(FRigVMFunction_MathVectorMax) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMax");
+
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousTransform
+// 0x0198 (0x01A0 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousTransform final : public FRigVMFunction_SimBase
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Delta;                                             // 0x0070(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             PreviousValue;                                     // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Cache;                                             // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_DeltaFromPreviousTransform) == 0x000010, "Wrong alignment on FRigVMFunction_DeltaFromPreviousTransform");
+static_assert(sizeof(FRigVMFunction_DeltaFromPreviousTransform) == 0x0001A0, "Wrong size on FRigVMFunction_DeltaFromPreviousTransform");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Value) == 0x000010, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Delta) == 0x000070, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Delta' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, PreviousValue) == 0x0000D0, "Member 'FRigVMFunction_DeltaFromPreviousTransform::PreviousValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Cache) == 0x000130, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Cache' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, bIsInitialized) == 0x000190, "Member 'FRigVMFunction_DeltaFromPreviousTransform::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorNegate
 // 0x0000 (0x0038 - 0x0038)
@@ -6246,27 +6253,6 @@ struct FRigVMFunction_MathVectorAbs final : public FRigVMFunction_MathVectorUnar
 static_assert(alignof(FRigVMFunction_MathVectorAbs) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorAbs");
 static_assert(sizeof(FRigVMFunction_MathVectorAbs) == 0x000038, "Wrong size on FRigVMFunction_MathVectorAbs");
 
-// ScriptStruct RigVM.RigVMFunction_KalmanVector
-// 0x0050 (0x0058 - 0x0008)
-struct FRigVMFunction_KalmanVector final : public FRigVMFunction_SimBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        Buffer;                                            // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_KalmanVector) == 0x000008, "Wrong alignment on FRigVMFunction_KalmanVector");
-static_assert(sizeof(FRigVMFunction_KalmanVector) == 0x000058, "Wrong size on FRigVMFunction_KalmanVector");
-static_assert(offsetof(FRigVMFunction_KalmanVector, Value) == 0x000008, "Member 'FRigVMFunction_KalmanVector::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanVector, BufferSize) == 0x000020, "Member 'FRigVMFunction_KalmanVector::BufferSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanVector, Result) == 0x000028, "Member 'FRigVMFunction_KalmanVector::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanVector, Buffer) == 0x000040, "Member 'FRigVMFunction_KalmanVector::Buffer' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanVector, LastInsertIndex) == 0x000050, "Member 'FRigVMFunction_KalmanVector::LastInsertIndex' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorFloor
 // 0x0000 (0x0038 - 0x0038)
 struct FRigVMFunction_MathVectorFloor final : public FRigVMFunction_MathVectorUnaryOp
@@ -6274,6 +6260,40 @@ struct FRigVMFunction_MathVectorFloor final : public FRigVMFunction_MathVectorUn
 };
 static_assert(alignof(FRigVMFunction_MathVectorFloor) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorFloor");
 static_assert(sizeof(FRigVMFunction_MathVectorFloor) == 0x000038, "Wrong size on FRigVMFunction_MathVectorFloor");
+
+// ScriptStruct RigVM.RigVMFunction_TimeLoop
+// 0x0030 (0x0038 - 0x0008)
+struct FRigVMFunction_TimeLoop final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Normalize;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Absolute;                                          // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Relative;                                          // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlipFlop;                                          // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Even;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AccumulatedAbsolute;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedRelative;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumIterations;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_TimeLoop) == 0x000008, "Wrong alignment on FRigVMFunction_TimeLoop");
+static_assert(sizeof(FRigVMFunction_TimeLoop) == 0x000038, "Wrong size on FRigVMFunction_TimeLoop");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Speed) == 0x000008, "Member 'FRigVMFunction_TimeLoop::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Duration) == 0x00000C, "Member 'FRigVMFunction_TimeLoop::Duration' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Normalize) == 0x000010, "Member 'FRigVMFunction_TimeLoop::Normalize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Absolute) == 0x000014, "Member 'FRigVMFunction_TimeLoop::Absolute' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Relative) == 0x000018, "Member 'FRigVMFunction_TimeLoop::Relative' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, FlipFlop) == 0x00001C, "Member 'FRigVMFunction_TimeLoop::FlipFlop' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, Even) == 0x000020, "Member 'FRigVMFunction_TimeLoop::Even' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, AccumulatedAbsolute) == 0x000024, "Member 'FRigVMFunction_TimeLoop::AccumulatedAbsolute' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, AccumulatedRelative) == 0x000028, "Member 'FRigVMFunction_TimeLoop::AccumulatedRelative' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, NumIterations) == 0x00002C, "Member 'FRigVMFunction_TimeLoop::NumIterations' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeLoop, bIsInitialized) == 0x000030, "Member 'FRigVMFunction_TimeLoop::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorCeil
 // 0x0000 (0x0038 - 0x0038)
@@ -6291,33 +6311,13 @@ struct FRigVMFunction_MathVectorRound final : public FRigVMFunction_MathVectorUn
 static_assert(alignof(FRigVMFunction_MathVectorRound) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorRound");
 static_assert(sizeof(FRigVMFunction_MathVectorRound) == 0x000038, "Wrong size on FRigVMFunction_MathVectorRound");
 
-// ScriptStruct RigVM.RigVMFunction_TimeOffsetVector
-// 0x0068 (0x0070 - 0x0008)
-struct FRigVMFunction_TimeOffsetVector final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMDispatch_ArrayAdd
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayAdd final : public FRigVMDispatch_ArraySetAtIndex
 {
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SecondsAgo;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeRange;                                         // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        Buffer;                                            // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 DeltaTimes;                                        // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UpperBound;                                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_TimeOffsetVector) == 0x000008, "Wrong alignment on FRigVMFunction_TimeOffsetVector");
-static_assert(sizeof(FRigVMFunction_TimeOffsetVector) == 0x000070, "Wrong size on FRigVMFunction_TimeOffsetVector");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Value) == 0x000008, "Member 'FRigVMFunction_TimeOffsetVector::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, SecondsAgo) == 0x000020, "Member 'FRigVMFunction_TimeOffsetVector::SecondsAgo' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, BufferSize) == 0x000024, "Member 'FRigVMFunction_TimeOffsetVector::BufferSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, TimeRange) == 0x000028, "Member 'FRigVMFunction_TimeOffsetVector::TimeRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Result) == 0x000030, "Member 'FRigVMFunction_TimeOffsetVector::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, Buffer) == 0x000048, "Member 'FRigVMFunction_TimeOffsetVector::Buffer' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, DeltaTimes) == 0x000058, "Member 'FRigVMFunction_TimeOffsetVector::DeltaTimes' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, LastInsertIndex) == 0x000068, "Member 'FRigVMFunction_TimeOffsetVector::LastInsertIndex' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeOffsetVector, UpperBound) == 0x00006C, "Member 'FRigVMFunction_TimeOffsetVector::UpperBound' has a wrong offset!");
+static_assert(alignof(FRigVMDispatch_ArrayAdd) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayAdd");
+static_assert(sizeof(FRigVMDispatch_ArrayAdd) == 0x000070, "Wrong size on FRigVMDispatch_ArrayAdd");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorSign
 // 0x0000 (0x0038 - 0x0038)
@@ -6344,14 +6344,6 @@ static_assert(offsetof(FRigVMFunction_MathVectorClamp, Minimum) == 0x000020, "Me
 static_assert(offsetof(FRigVMFunction_MathVectorClamp, Maximum) == 0x000038, "Member 'FRigVMFunction_MathVectorClamp::Maximum' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorClamp, Result) == 0x000050, "Member 'FRigVMFunction_MathVectorClamp::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayRemove
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayRemove final : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayRemove) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayRemove");
-static_assert(sizeof(FRigVMDispatch_ArrayRemove) == 0x000070, "Wrong size on FRigVMDispatch_ArrayRemove");
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorLerp
 // 0x0050 (0x0058 - 0x0008)
 struct FRigVMFunction_MathVectorLerp final : public FRigVMFunction_MathVectorBase
@@ -6369,6 +6361,14 @@ static_assert(offsetof(FRigVMFunction_MathVectorLerp, A) == 0x000008, "Member 'F
 static_assert(offsetof(FRigVMFunction_MathVectorLerp, B) == 0x000020, "Member 'FRigVMFunction_MathVectorLerp::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorLerp, T) == 0x000038, "Member 'FRigVMFunction_MathVectorLerp::T' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorLerp, Result) == 0x000040, "Member 'FRigVMFunction_MathVectorLerp::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMDispatch_ArraySetNum
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArraySetNum final : public FRigVMDispatch_ArrayBaseMutable
+{
+};
+static_assert(alignof(FRigVMDispatch_ArraySetNum) == 0x000008, "Wrong alignment on FRigVMDispatch_ArraySetNum");
+static_assert(sizeof(FRigVMDispatch_ArraySetNum) == 0x000070, "Wrong size on FRigVMDispatch_ArraySetNum");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorRemap
 // 0x0098 (0x00A0 - 0x0008)
@@ -6394,6 +6394,14 @@ static_assert(offsetof(FRigVMFunction_MathVectorRemap, TargetMaximum) == 0x00006
 static_assert(offsetof(FRigVMFunction_MathVectorRemap, bClamp) == 0x000080, "Member 'FRigVMFunction_MathVectorRemap::bClamp' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorRemap, Result) == 0x000088, "Member 'FRigVMFunction_MathVectorRemap::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMDispatch_ArrayGetNum
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayGetNum final : public FRigVMDispatch_ArrayBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayGetNum) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayGetNum");
+static_assert(sizeof(FRigVMDispatch_ArrayGetNum) == 0x000070, "Wrong size on FRigVMDispatch_ArrayGetNum");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorEquals
 // 0x0038 (0x0040 - 0x0008)
 struct FRigVMFunction_MathVectorEquals final : public FRigVMFunction_MathVectorBase
@@ -6410,13 +6418,21 @@ static_assert(offsetof(FRigVMFunction_MathVectorEquals, A) == 0x000008, "Member 
 static_assert(offsetof(FRigVMFunction_MathVectorEquals, B) == 0x000020, "Member 'FRigVMFunction_MathVectorEquals::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorEquals, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorEquals::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArraySetAtIndex
+// ScriptStruct RigVM.RigVMDispatch_ArrayReset
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArraySetAtIndex : public FRigVMDispatch_ArrayBaseMutable
+struct FRigVMDispatch_ArrayReset : public FRigVMDispatch_ArrayBaseMutable
 {
 };
-static_assert(alignof(FRigVMDispatch_ArraySetAtIndex) == 0x000008, "Wrong alignment on FRigVMDispatch_ArraySetAtIndex");
-static_assert(sizeof(FRigVMDispatch_ArraySetAtIndex) == 0x000070, "Wrong size on FRigVMDispatch_ArraySetAtIndex");
+static_assert(alignof(FRigVMDispatch_ArrayReset) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayReset");
+static_assert(sizeof(FRigVMDispatch_ArrayReset) == 0x000070, "Wrong size on FRigVMDispatch_ArrayReset");
+
+// ScriptStruct RigVM.RigVMDispatch_ArrayReverse
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayReverse final : public FRigVMDispatch_ArrayReset
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayReverse) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayReverse");
+static_assert(sizeof(FRigVMDispatch_ArrayReverse) == 0x000070, "Wrong size on FRigVMDispatch_ArrayReverse");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorNotEquals
 // 0x0038 (0x0040 - 0x0008)
@@ -6434,14 +6450,6 @@ static_assert(offsetof(FRigVMFunction_MathVectorNotEquals, A) == 0x000008, "Memb
 static_assert(offsetof(FRigVMFunction_MathVectorNotEquals, B) == 0x000020, "Member 'FRigVMFunction_MathVectorNotEquals::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorNotEquals, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorNotEquals::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayGetAtIndex
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayGetAtIndex final : public FRigVMDispatch_ArrayBase
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayGetAtIndex) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayGetAtIndex");
-static_assert(sizeof(FRigVMDispatch_ArrayGetAtIndex) == 0x000070, "Wrong size on FRigVMDispatch_ArrayGetAtIndex");
-
 // ScriptStruct RigVM.RigVMFunction_MathVectorIsNearlyZero
 // 0x0020 (0x0028 - 0x0008)
 struct FRigVMFunction_MathVectorIsNearlyZero final : public FRigVMFunction_MathVectorBase
@@ -6457,14 +6465,6 @@ static_assert(sizeof(FRigVMFunction_MathVectorIsNearlyZero) == 0x000028, "Wrong 
 static_assert(offsetof(FRigVMFunction_MathVectorIsNearlyZero, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorIsNearlyZero::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorIsNearlyZero, Tolerance) == 0x000020, "Member 'FRigVMFunction_MathVectorIsNearlyZero::Tolerance' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorIsNearlyZero, Result) == 0x000024, "Member 'FRigVMFunction_MathVectorIsNearlyZero::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayAppend
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayAppend : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayAppend) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayAppend");
-static_assert(sizeof(FRigVMDispatch_ArrayAppend) == 0x000070, "Wrong size on FRigVMDispatch_ArrayAppend");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorIsNearlyEqual
 // 0x0038 (0x0040 - 0x0008)
@@ -6510,6 +6510,19 @@ struct FRigVMFunction_MathVectorDeg final : public FRigVMFunction_MathVectorUnar
 static_assert(alignof(FRigVMFunction_MathVectorDeg) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorDeg");
 static_assert(sizeof(FRigVMFunction_MathVectorDeg) == 0x000038, "Wrong size on FRigVMFunction_MathVectorDeg");
 
+// ScriptStruct RigVM.RigVMFunction_MathVectorArrayAverage
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_MathVectorArrayAverage final : public FRigVMFunction_MathVectorBase
+{
+public:
+	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                Average;                                           // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathVectorArrayAverage) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorArrayAverage");
+static_assert(sizeof(FRigVMFunction_MathVectorArrayAverage) == 0x000030, "Wrong size on FRigVMFunction_MathVectorArrayAverage");
+static_assert(offsetof(FRigVMFunction_MathVectorArrayAverage, Array) == 0x000008, "Member 'FRigVMFunction_MathVectorArrayAverage::Array' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorArrayAverage, Average) == 0x000018, "Member 'FRigVMFunction_MathVectorArrayAverage::Average' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorRad
 // 0x0000 (0x0038 - 0x0038)
 struct FRigVMFunction_MathVectorRad final : public FRigVMFunction_MathVectorUnaryOp
@@ -6531,29 +6544,6 @@ static_assert(alignof(FRigVMFunction_MathVectorLengthSquared) == 0x000008, "Wron
 static_assert(sizeof(FRigVMFunction_MathVectorLengthSquared) == 0x000028, "Wrong size on FRigVMFunction_MathVectorLengthSquared");
 static_assert(offsetof(FRigVMFunction_MathVectorLengthSquared, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorLengthSquared::Value' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorLengthSquared, Result) == 0x000020, "Member 'FRigVMFunction_MathVectorLengthSquared::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_NoiseDouble
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_NoiseDouble final : public FRigVMFunction_MathBase
-{
-public:
-	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Speed;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Frequency;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Minimum;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Maximum;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Result;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Time;                                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_NoiseDouble) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseDouble");
-static_assert(sizeof(FRigVMFunction_NoiseDouble) == 0x000040, "Wrong size on FRigVMFunction_NoiseDouble");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Value) == 0x000008, "Member 'FRigVMFunction_NoiseDouble::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Speed) == 0x000010, "Member 'FRigVMFunction_NoiseDouble::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Frequency) == 0x000018, "Member 'FRigVMFunction_NoiseDouble::Frequency' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Minimum) == 0x000020, "Member 'FRigVMFunction_NoiseDouble::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Maximum) == 0x000028, "Member 'FRigVMFunction_NoiseDouble::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Result) == 0x000030, "Member 'FRigVMFunction_NoiseDouble::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseDouble, Time) == 0x000038, "Member 'FRigVMFunction_NoiseDouble::Time' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorLength
 // 0x0020 (0x0028 - 0x0008)
@@ -6585,6 +6575,14 @@ static_assert(offsetof(FRigVMFunction_MathVectorDistance, A) == 0x000008, "Membe
 static_assert(offsetof(FRigVMFunction_MathVectorDistance, B) == 0x000020, "Member 'FRigVMFunction_MathVectorDistance::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorDistance, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorDistance::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMDispatch_ArrayMake
+// 0x0000 (0x0070 - 0x0070)
+struct FRigVMDispatch_ArrayMake final : public FRigVMDispatch_ArrayBase
+{
+};
+static_assert(alignof(FRigVMDispatch_ArrayMake) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayMake");
+static_assert(sizeof(FRigVMDispatch_ArrayMake) == 0x000070, "Wrong size on FRigVMDispatch_ArrayMake");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorCross
 // 0x0000 (0x0050 - 0x0050)
 struct FRigVMFunction_MathVectorCross final : public FRigVMFunction_MathVectorBinaryOp
@@ -6593,13 +6591,28 @@ struct FRigVMFunction_MathVectorCross final : public FRigVMFunction_MathVectorBi
 static_assert(alignof(FRigVMFunction_MathVectorCross) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorCross");
 static_assert(sizeof(FRigVMFunction_MathVectorCross) == 0x000050, "Wrong size on FRigVMFunction_MathVectorCross");
 
-// ScriptStruct RigVM.RigVMDispatch_ArraySetNum
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArraySetNum final : public FRigVMDispatch_ArrayBaseMutable
+// ScriptStruct RigVM.RigVMFunction_NoiseVector
+// 0x0080 (0x0088 - 0x0008)
+struct FRigVMFunction_NoiseVector final : public FRigVMFunction_MathBase
 {
+public:
+	struct FVector                                Position;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0058(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Time;                                              // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMDispatch_ArraySetNum) == 0x000008, "Wrong alignment on FRigVMDispatch_ArraySetNum");
-static_assert(sizeof(FRigVMDispatch_ArraySetNum) == 0x000070, "Wrong size on FRigVMDispatch_ArraySetNum");
+static_assert(alignof(FRigVMFunction_NoiseVector) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseVector");
+static_assert(sizeof(FRigVMFunction_NoiseVector) == 0x000088, "Wrong size on FRigVMFunction_NoiseVector");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Position) == 0x000008, "Member 'FRigVMFunction_NoiseVector::Position' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Speed) == 0x000020, "Member 'FRigVMFunction_NoiseVector::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Frequency) == 0x000038, "Member 'FRigVMFunction_NoiseVector::Frequency' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Minimum) == 0x000050, "Member 'FRigVMFunction_NoiseVector::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Maximum) == 0x000054, "Member 'FRigVMFunction_NoiseVector::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Result) == 0x000058, "Member 'FRigVMFunction_NoiseVector::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector, Time) == 0x000070, "Member 'FRigVMFunction_NoiseVector::Time' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorDot
 // 0x0038 (0x0040 - 0x0008)
@@ -6617,13 +6630,28 @@ static_assert(offsetof(FRigVMFunction_MathVectorDot, A) == 0x000008, "Member 'FR
 static_assert(offsetof(FRigVMFunction_MathVectorDot, B) == 0x000020, "Member 'FRigVMFunction_MathVectorDot::B' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorDot, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorDot::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayGetNum
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayGetNum final : public FRigVMDispatch_ArrayBase
+// ScriptStruct RigVM.RigVMFunction_NoiseDouble
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_NoiseDouble final : public FRigVMFunction_MathBase
 {
+public:
+	double                                        Value;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Speed;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Frequency;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Minimum;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Maximum;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Result;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Time;                                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMDispatch_ArrayGetNum) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayGetNum");
-static_assert(sizeof(FRigVMDispatch_ArrayGetNum) == 0x000070, "Wrong size on FRigVMDispatch_ArrayGetNum");
+static_assert(alignof(FRigVMFunction_NoiseDouble) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseDouble");
+static_assert(sizeof(FRigVMFunction_NoiseDouble) == 0x000040, "Wrong size on FRigVMFunction_NoiseDouble");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Value) == 0x000008, "Member 'FRigVMFunction_NoiseDouble::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Speed) == 0x000010, "Member 'FRigVMFunction_NoiseDouble::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Frequency) == 0x000018, "Member 'FRigVMFunction_NoiseDouble::Frequency' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Minimum) == 0x000020, "Member 'FRigVMFunction_NoiseDouble::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Maximum) == 0x000028, "Member 'FRigVMFunction_NoiseDouble::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Result) == 0x000030, "Member 'FRigVMFunction_NoiseDouble::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseDouble, Time) == 0x000038, "Member 'FRigVMFunction_NoiseDouble::Time' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorUnit
 // 0x0000 (0x0038 - 0x0038)
@@ -6632,183 +6660,6 @@ struct FRigVMFunction_MathVectorUnit final : public FRigVMFunction_MathVectorUna
 };
 static_assert(alignof(FRigVMFunction_MathVectorUnit) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorUnit");
 static_assert(sizeof(FRigVMFunction_MathVectorUnit) == 0x000038, "Wrong size on FRigVMFunction_MathVectorUnit");
-
-// ScriptStruct RigVM.RigVMFunction_RandomFloat
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_RandomFloat final : public FRigVMFunction_MathBase
-{
-public:
-	int32                                         Seed;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LastResult;                                        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LastSeed;                                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BaseSeed;                                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeLeft;                                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_RandomFloat) == 0x000008, "Wrong alignment on FRigVMFunction_RandomFloat");
-static_assert(sizeof(FRigVMFunction_RandomFloat) == 0x000030, "Wrong size on FRigVMFunction_RandomFloat");
-static_assert(offsetof(FRigVMFunction_RandomFloat, Seed) == 0x000008, "Member 'FRigVMFunction_RandomFloat::Seed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, Minimum) == 0x00000C, "Member 'FRigVMFunction_RandomFloat::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, Maximum) == 0x000010, "Member 'FRigVMFunction_RandomFloat::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, Duration) == 0x000014, "Member 'FRigVMFunction_RandomFloat::Duration' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, Result) == 0x000018, "Member 'FRigVMFunction_RandomFloat::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, LastResult) == 0x00001C, "Member 'FRigVMFunction_RandomFloat::LastResult' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, LastSeed) == 0x000020, "Member 'FRigVMFunction_RandomFloat::LastSeed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, BaseSeed) == 0x000024, "Member 'FRigVMFunction_RandomFloat::BaseSeed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_RandomFloat, TimeLeft) == 0x000028, "Member 'FRigVMFunction_RandomFloat::TimeLeft' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorSetLength
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorSetLength final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Length;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathVectorSetLength) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorSetLength");
-static_assert(sizeof(FRigVMFunction_MathVectorSetLength) == 0x000040, "Wrong size on FRigVMFunction_MathVectorSetLength");
-static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorSetLength::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Length) == 0x000020, "Member 'FRigVMFunction_MathVectorSetLength::Length' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Result) == 0x000028, "Member 'FRigVMFunction_MathVectorSetLength::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_NoiseVector2
-// 0x0088 (0x0090 - 0x0008)
-struct FRigVMFunction_NoiseVector2 final : public FRigVMFunction_MathBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Minimum;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Maximum;                                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Time;                                              // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_NoiseVector2) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseVector2");
-static_assert(sizeof(FRigVMFunction_NoiseVector2) == 0x000090, "Wrong size on FRigVMFunction_NoiseVector2");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Value) == 0x000008, "Member 'FRigVMFunction_NoiseVector2::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Speed) == 0x000020, "Member 'FRigVMFunction_NoiseVector2::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Frequency) == 0x000038, "Member 'FRigVMFunction_NoiseVector2::Frequency' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Minimum) == 0x000050, "Member 'FRigVMFunction_NoiseVector2::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Maximum) == 0x000058, "Member 'FRigVMFunction_NoiseVector2::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Result) == 0x000060, "Member 'FRigVMFunction_NoiseVector2::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseVector2, Time) == 0x000078, "Member 'FRigVMFunction_NoiseVector2::Time' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorClampLength
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorClampLength final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinimumLength;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaximumLength;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathVectorClampLength) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorClampLength");
-static_assert(sizeof(FRigVMFunction_MathVectorClampLength) == 0x000040, "Wrong size on FRigVMFunction_MathVectorClampLength");
-static_assert(offsetof(FRigVMFunction_MathVectorClampLength, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorClampLength::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorClampLength, MinimumLength) == 0x000020, "Member 'FRigVMFunction_MathVectorClampLength::MinimumLength' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorClampLength, MaximumLength) == 0x000024, "Member 'FRigVMFunction_MathVectorClampLength::MaximumLength' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorClampLength, Result) == 0x000028, "Member 'FRigVMFunction_MathVectorClampLength::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathDistanceToPlane
-// 0x0068 (0x0070 - 0x0008)
-struct FRigVMFunction_MathDistanceToPlane final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Point;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlanePoint;                                        // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlaneNormal;                                       // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ClosestPointOnPlane;                               // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SignedDistance;                                    // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathDistanceToPlane) == 0x000008, "Wrong alignment on FRigVMFunction_MathDistanceToPlane");
-static_assert(sizeof(FRigVMFunction_MathDistanceToPlane) == 0x000070, "Wrong size on FRigVMFunction_MathDistanceToPlane");
-static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, Point) == 0x000008, "Member 'FRigVMFunction_MathDistanceToPlane::Point' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, PlanePoint) == 0x000020, "Member 'FRigVMFunction_MathDistanceToPlane::PlanePoint' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, PlaneNormal) == 0x000038, "Member 'FRigVMFunction_MathDistanceToPlane::PlaneNormal' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, ClosestPointOnPlane) == 0x000050, "Member 'FRigVMFunction_MathDistanceToPlane::ClosestPointOnPlane' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, SignedDistance) == 0x000068, "Member 'FRigVMFunction_MathDistanceToPlane::SignedDistance' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorMirror
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorMirror final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathVectorMirror) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMirror");
-static_assert(sizeof(FRigVMFunction_MathVectorMirror) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMirror");
-static_assert(offsetof(FRigVMFunction_MathVectorMirror, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorMirror::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorMirror, Normal) == 0x000020, "Member 'FRigVMFunction_MathVectorMirror::Normal' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorMirror, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorMirror::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_NoiseFloat
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_NoiseFloat final : public FRigVMFunction_MathBase
-{
-public:
-	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Speed;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Frequency;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Minimum;                                           // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_NoiseFloat) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseFloat");
-static_assert(sizeof(FRigVMFunction_NoiseFloat) == 0x000028, "Wrong size on FRigVMFunction_NoiseFloat");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Value) == 0x000008, "Member 'FRigVMFunction_NoiseFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Speed) == 0x00000C, "Member 'FRigVMFunction_NoiseFloat::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Frequency) == 0x000010, "Member 'FRigVMFunction_NoiseFloat::Frequency' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Minimum) == 0x000014, "Member 'FRigVMFunction_NoiseFloat::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Maximum) == 0x000018, "Member 'FRigVMFunction_NoiseFloat::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Result) == 0x00001C, "Member 'FRigVMFunction_NoiseFloat::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NoiseFloat, Time) == 0x000020, "Member 'FRigVMFunction_NoiseFloat::Time' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorParallel
-// 0x0038 (0x0040 - 0x0008)
-struct FRigVMFunction_MathVectorParallel final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_MathVectorParallel) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorParallel");
-static_assert(sizeof(FRigVMFunction_MathVectorParallel) == 0x000040, "Wrong size on FRigVMFunction_MathVectorParallel");
-static_assert(offsetof(FRigVMFunction_MathVectorParallel, A) == 0x000008, "Member 'FRigVMFunction_MathVectorParallel::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorParallel, B) == 0x000020, "Member 'FRigVMFunction_MathVectorParallel::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorParallel, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorParallel::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorBezierFourPoint
-// 0x0098 (0x00A0 - 0x0008)
-struct FRigVMFunction_MathVectorBezierFourPoint final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         T;                                                 // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Result;                                            // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Tangent;                                           // 0x0088(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathVectorBezierFourPoint) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorBezierFourPoint");
-static_assert(sizeof(FRigVMFunction_MathVectorBezierFourPoint) == 0x0000A0, "Wrong size on FRigVMFunction_MathVectorBezierFourPoint");
-static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Bezier) == 0x000008, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Bezier' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, T) == 0x000068, "Member 'FRigVMFunction_MathVectorBezierFourPoint::T' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Result) == 0x000070, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorBezierFourPoint, Tangent) == 0x000088, "Member 'FRigVMFunction_MathVectorBezierFourPoint::Tangent' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorClampSpatially
 // 0x00B8 (0x00C0 - 0x0008)
@@ -6842,6 +6693,109 @@ static_assert(offsetof(FRigVMFunction_MathVectorClampSpatially, DebugColor) == 0
 static_assert(offsetof(FRigVMFunction_MathVectorClampSpatially, DebugThickness) == 0x0000A4, "Member 'FRigVMFunction_MathVectorClampSpatially::DebugThickness' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorClampSpatially, Result) == 0x0000A8, "Member 'FRigVMFunction_MathVectorClampSpatially::Result' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathVectorSetLength
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorSetLength final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Length;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathVectorSetLength) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorSetLength");
+static_assert(sizeof(FRigVMFunction_MathVectorSetLength) == 0x000040, "Wrong size on FRigVMFunction_MathVectorSetLength");
+static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorSetLength::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Length) == 0x000020, "Member 'FRigVMFunction_MathVectorSetLength::Length' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorSetLength, Result) == 0x000028, "Member 'FRigVMFunction_MathVectorSetLength::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorArraySum
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_MathVectorArraySum final : public FRigVMFunction_MathVectorBase
+{
+public:
+	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                Sum;                                               // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathVectorArraySum) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorArraySum");
+static_assert(sizeof(FRigVMFunction_MathVectorArraySum) == 0x000030, "Wrong size on FRigVMFunction_MathVectorArraySum");
+static_assert(offsetof(FRigVMFunction_MathVectorArraySum, Array) == 0x000008, "Member 'FRigVMFunction_MathVectorArraySum::Array' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorArraySum, Sum) == 0x000018, "Member 'FRigVMFunction_MathVectorArraySum::Sum' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorMirror
+// 0x0048 (0x0050 - 0x0008)
+struct FRigVMFunction_MathVectorMirror final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathVectorMirror) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMirror");
+static_assert(sizeof(FRigVMFunction_MathVectorMirror) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMirror");
+static_assert(offsetof(FRigVMFunction_MathVectorMirror, Value) == 0x000008, "Member 'FRigVMFunction_MathVectorMirror::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorMirror, Normal) == 0x000020, "Member 'FRigVMFunction_MathVectorMirror::Normal' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorMirror, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorMirror::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorAngle
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorAngle final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathVectorAngle) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorAngle");
+static_assert(sizeof(FRigVMFunction_MathVectorAngle) == 0x000040, "Wrong size on FRigVMFunction_MathVectorAngle");
+static_assert(offsetof(FRigVMFunction_MathVectorAngle, A) == 0x000008, "Member 'FRigVMFunction_MathVectorAngle::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorAngle, B) == 0x000020, "Member 'FRigVMFunction_MathVectorAngle::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorAngle, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorAngle::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorParallel
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorParallel final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathVectorParallel) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorParallel");
+static_assert(sizeof(FRigVMFunction_MathVectorParallel) == 0x000040, "Wrong size on FRigVMFunction_MathVectorParallel");
+static_assert(offsetof(FRigVMFunction_MathVectorParallel, A) == 0x000008, "Member 'FRigVMFunction_MathVectorParallel::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorParallel, B) == 0x000020, "Member 'FRigVMFunction_MathVectorParallel::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorParallel, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorParallel::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorOrthogonal
+// 0x0038 (0x0040 - 0x0008)
+struct FRigVMFunction_MathVectorOrthogonal final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                A;                                                 // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathVectorOrthogonal) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorOrthogonal");
+static_assert(sizeof(FRigVMFunction_MathVectorOrthogonal) == 0x000040, "Wrong size on FRigVMFunction_MathVectorOrthogonal");
+static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, A) == 0x000008, "Member 'FRigVMFunction_MathVectorOrthogonal::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, B) == 0x000020, "Member 'FRigVMFunction_MathVectorOrthogonal::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathVectorOrthogonal, Result) == 0x000038, "Member 'FRigVMFunction_MathVectorOrthogonal::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
+// 0x0060 (0x0068 - 0x0008)
+struct FRigVMFunction_MathVectorMakeBezierFourPoint final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FRigVMFourPointBezier                  Bezier;                                            // 0x0008(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_MathVectorMakeBezierFourPoint) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMakeBezierFourPoint");
+static_assert(sizeof(FRigVMFunction_MathVectorMakeBezierFourPoint) == 0x000068, "Wrong size on FRigVMFunction_MathVectorMakeBezierFourPoint");
+static_assert(offsetof(FRigVMFunction_MathVectorMakeBezierFourPoint, Bezier) == 0x000008, "Member 'FRigVMFunction_MathVectorMakeBezierFourPoint::Bezier' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathIntersectPlane
 // 0x0080 (0x0088 - 0x0008)
 struct FRigVMFunction_MathIntersectPlane final : public FRigVMFunction_MathVectorBase
@@ -6864,6 +6818,26 @@ static_assert(offsetof(FRigVMFunction_MathIntersectPlane, PlaneNormal) == 0x0000
 static_assert(offsetof(FRigVMFunction_MathIntersectPlane, Result) == 0x000068, "Member 'FRigVMFunction_MathIntersectPlane::Result' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathIntersectPlane, Distance) == 0x000080, "Member 'FRigVMFunction_MathIntersectPlane::Distance' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_MathDistanceToPlane
+// 0x0068 (0x0070 - 0x0008)
+struct FRigVMFunction_MathDistanceToPlane final : public FRigVMFunction_MathVectorBase
+{
+public:
+	struct FVector                                Point;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlanePoint;                                        // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlaneNormal;                                       // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ClosestPointOnPlane;                               // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SignedDistance;                                    // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_MathDistanceToPlane) == 0x000008, "Wrong alignment on FRigVMFunction_MathDistanceToPlane");
+static_assert(sizeof(FRigVMFunction_MathDistanceToPlane) == 0x000070, "Wrong size on FRigVMFunction_MathDistanceToPlane");
+static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, Point) == 0x000008, "Member 'FRigVMFunction_MathDistanceToPlane::Point' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, PlanePoint) == 0x000020, "Member 'FRigVMFunction_MathDistanceToPlane::PlanePoint' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, PlaneNormal) == 0x000038, "Member 'FRigVMFunction_MathDistanceToPlane::PlaneNormal' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, ClosestPointOnPlane) == 0x000050, "Member 'FRigVMFunction_MathDistanceToPlane::ClosestPointOnPlane' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_MathDistanceToPlane, SignedDistance) == 0x000068, "Member 'FRigVMFunction_MathDistanceToPlane::SignedDistance' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_MathVectorMakeRelative
 // 0x0048 (0x0050 - 0x0008)
 struct FRigVMFunction_MathVectorMakeRelative final : public FRigVMFunction_MathVectorBase
@@ -6878,21 +6852,6 @@ static_assert(sizeof(FRigVMFunction_MathVectorMakeRelative) == 0x000050, "Wrong 
 static_assert(offsetof(FRigVMFunction_MathVectorMakeRelative, Global) == 0x000008, "Member 'FRigVMFunction_MathVectorMakeRelative::Global' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorMakeRelative, Parent) == 0x000020, "Member 'FRigVMFunction_MathVectorMakeRelative::Parent' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorMakeRelative, Local) == 0x000038, "Member 'FRigVMFunction_MathVectorMakeRelative::Local' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_MathVectorMakeAbsolute
-// 0x0048 (0x0050 - 0x0008)
-struct FRigVMFunction_MathVectorMakeAbsolute final : public FRigVMFunction_MathVectorBase
-{
-public:
-	struct FVector                                Local;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Parent;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Global;                                            // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_MathVectorMakeAbsolute) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorMakeAbsolute");
-static_assert(sizeof(FRigVMFunction_MathVectorMakeAbsolute) == 0x000050, "Wrong size on FRigVMFunction_MathVectorMakeAbsolute");
-static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Local) == 0x000008, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Local' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Parent) == 0x000020, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Parent' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorMakeAbsolute, Global) == 0x000038, "Member 'FRigVMFunction_MathVectorMakeAbsolute::Global' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_MathVectorMirrorTransform
 // 0x00A8 (0x00B0 - 0x0008)
@@ -6915,18 +6874,56 @@ static_assert(offsetof(FRigVMFunction_MathVectorMirrorTransform, AxisToFlip) == 
 static_assert(offsetof(FRigVMFunction_MathVectorMirrorTransform, CentralTransform) == 0x000030, "Member 'FRigVMFunction_MathVectorMirrorTransform::CentralTransform' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_MathVectorMirrorTransform, Result) == 0x000090, "Member 'FRigVMFunction_MathVectorMirrorTransform::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_MathVectorArrayAverage
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_MathVectorArrayAverage final : public FRigVMFunction_MathVectorBase
+// ScriptStruct RigVM.RigVMFunction_NoiseVector2
+// 0x0088 (0x0090 - 0x0008)
+struct FRigVMFunction_NoiseVector2 final : public FRigVMFunction_MathBase
 {
 public:
-	TArray<struct FVector>                        Array;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                Average;                                           // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Speed;                                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Frequency;                                         // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Minimum;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Maximum;                                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Result;                                            // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Time;                                              // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_MathVectorArrayAverage) == 0x000008, "Wrong alignment on FRigVMFunction_MathVectorArrayAverage");
-static_assert(sizeof(FRigVMFunction_MathVectorArrayAverage) == 0x000030, "Wrong size on FRigVMFunction_MathVectorArrayAverage");
-static_assert(offsetof(FRigVMFunction_MathVectorArrayAverage, Array) == 0x000008, "Member 'FRigVMFunction_MathVectorArrayAverage::Array' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_MathVectorArrayAverage, Average) == 0x000018, "Member 'FRigVMFunction_MathVectorArrayAverage::Average' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_NoiseVector2) == 0x000008, "Wrong alignment on FRigVMFunction_NoiseVector2");
+static_assert(sizeof(FRigVMFunction_NoiseVector2) == 0x000090, "Wrong size on FRigVMFunction_NoiseVector2");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Value) == 0x000008, "Member 'FRigVMFunction_NoiseVector2::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Speed) == 0x000020, "Member 'FRigVMFunction_NoiseVector2::Speed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Frequency) == 0x000038, "Member 'FRigVMFunction_NoiseVector2::Frequency' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Minimum) == 0x000050, "Member 'FRigVMFunction_NoiseVector2::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Maximum) == 0x000058, "Member 'FRigVMFunction_NoiseVector2::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Result) == 0x000060, "Member 'FRigVMFunction_NoiseVector2::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NoiseVector2, Time) == 0x000078, "Member 'FRigVMFunction_NoiseVector2::Time' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_RandomFloat
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_RandomFloat final : public FRigVMFunction_MathBase
+{
+public:
+	int32                                         Seed;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Minimum;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LastResult;                                        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LastSeed;                                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BaseSeed;                                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeLeft;                                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_RandomFloat) == 0x000008, "Wrong alignment on FRigVMFunction_RandomFloat");
+static_assert(sizeof(FRigVMFunction_RandomFloat) == 0x000030, "Wrong size on FRigVMFunction_RandomFloat");
+static_assert(offsetof(FRigVMFunction_RandomFloat, Seed) == 0x000008, "Member 'FRigVMFunction_RandomFloat::Seed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, Minimum) == 0x00000C, "Member 'FRigVMFunction_RandomFloat::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, Maximum) == 0x000010, "Member 'FRigVMFunction_RandomFloat::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, Duration) == 0x000014, "Member 'FRigVMFunction_RandomFloat::Duration' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, Result) == 0x000018, "Member 'FRigVMFunction_RandomFloat::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, LastResult) == 0x00001C, "Member 'FRigVMFunction_RandomFloat::LastResult' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, LastSeed) == 0x000020, "Member 'FRigVMFunction_RandomFloat::LastSeed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, BaseSeed) == 0x000024, "Member 'FRigVMFunction_RandomFloat::BaseSeed' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_RandomFloat, TimeLeft) == 0x000028, "Member 'FRigVMFunction_RandomFloat::TimeLeft' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_RandomVector
 // 0x0050 (0x0058 - 0x0008)
@@ -6974,53 +6971,58 @@ static_assert(offsetof(FRigVMMirrorSettings, AxisToFlip) == 0x000001, "Member 'F
 static_assert(offsetof(FRigVMMirrorSettings, SearchString) == 0x000008, "Member 'FRigVMMirrorSettings::SearchString' has a wrong offset!");
 static_assert(offsetof(FRigVMMirrorSettings, ReplaceString) == 0x000018, "Member 'FRigVMMirrorSettings::ReplaceString' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayMake
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayMake final : public FRigVMDispatch_ArrayBase
+// ScriptStruct RigVM.RigVMSimPoint
+// 0x0040 (0x0040 - 0x0000)
+struct FRigVMSimPoint final
 {
+public:
+	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Size;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinearDamping;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InheritMotion;                                     // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LinearVelocity;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMDispatch_ArrayMake) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayMake");
-static_assert(sizeof(FRigVMDispatch_ArrayMake) == 0x000070, "Wrong size on FRigVMDispatch_ArrayMake");
+static_assert(alignof(FRigVMSimPoint) == 0x000008, "Wrong alignment on FRigVMSimPoint");
+static_assert(sizeof(FRigVMSimPoint) == 0x000040, "Wrong size on FRigVMSimPoint");
+static_assert(offsetof(FRigVMSimPoint, Mass) == 0x000000, "Member 'FRigVMSimPoint::Mass' has a wrong offset!");
+static_assert(offsetof(FRigVMSimPoint, Size) == 0x000004, "Member 'FRigVMSimPoint::Size' has a wrong offset!");
+static_assert(offsetof(FRigVMSimPoint, LinearDamping) == 0x000008, "Member 'FRigVMSimPoint::LinearDamping' has a wrong offset!");
+static_assert(offsetof(FRigVMSimPoint, InheritMotion) == 0x00000C, "Member 'FRigVMSimPoint::InheritMotion' has a wrong offset!");
+static_assert(offsetof(FRigVMSimPoint, Position) == 0x000010, "Member 'FRigVMSimPoint::Position' has a wrong offset!");
+static_assert(offsetof(FRigVMSimPoint, LinearVelocity) == 0x000028, "Member 'FRigVMSimPoint::LinearVelocity' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayAdd
+// ScriptStruct RigVM.RigVMDispatch_ArrayGetAtIndex
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayAdd final : public FRigVMDispatch_ArraySetAtIndex
+struct FRigVMDispatch_ArrayGetAtIndex final : public FRigVMDispatch_ArrayBase
 {
 };
-static_assert(alignof(FRigVMDispatch_ArrayAdd) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayAdd");
-static_assert(sizeof(FRigVMDispatch_ArrayAdd) == 0x000070, "Wrong size on FRigVMDispatch_ArrayAdd");
+static_assert(alignof(FRigVMDispatch_ArrayGetAtIndex) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayGetAtIndex");
+static_assert(sizeof(FRigVMDispatch_ArrayGetAtIndex) == 0x000070, "Wrong size on FRigVMDispatch_ArrayGetAtIndex");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayInsert
+// ScriptStruct RigVM.RigVMDispatch_ArrayRemove
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayInsert final : public FRigVMDispatch_ArraySetAtIndex
+struct FRigVMDispatch_ArrayRemove final : public FRigVMDispatch_ArrayBaseMutable
 {
 };
-static_assert(alignof(FRigVMDispatch_ArrayInsert) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayInsert");
-static_assert(sizeof(FRigVMDispatch_ArrayInsert) == 0x000070, "Wrong size on FRigVMDispatch_ArrayInsert");
+static_assert(alignof(FRigVMDispatch_ArrayRemove) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayRemove");
+static_assert(sizeof(FRigVMDispatch_ArrayRemove) == 0x000070, "Wrong size on FRigVMDispatch_ArrayRemove");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayFind
+// ScriptStruct RigVM.RigVMDispatch_CoreEquals
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayFind final : public FRigVMDispatch_ArrayBase
+struct FRigVMDispatch_CoreEquals : public FRigVMDispatch_CoreBase
 {
 };
-static_assert(alignof(FRigVMDispatch_ArrayFind) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayFind");
-static_assert(sizeof(FRigVMDispatch_ArrayFind) == 0x000070, "Wrong size on FRigVMDispatch_ArrayFind");
+static_assert(alignof(FRigVMDispatch_CoreEquals) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreEquals");
+static_assert(sizeof(FRigVMDispatch_CoreEquals) == 0x000070, "Wrong size on FRigVMDispatch_CoreEquals");
 
-// ScriptStruct RigVM.RigVMDispatch_ArrayUnion
+// ScriptStruct RigVM.RigVMDispatch_CoreNotEquals
 // 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayUnion final : public FRigVMDispatch_ArrayAppend
+struct FRigVMDispatch_CoreNotEquals final : public FRigVMDispatch_CoreEquals
 {
 };
-static_assert(alignof(FRigVMDispatch_ArrayUnion) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayUnion");
-static_assert(sizeof(FRigVMDispatch_ArrayUnion) == 0x000070, "Wrong size on FRigVMDispatch_ArrayUnion");
-
-// ScriptStruct RigVM.RigVMDispatch_ArrayIterator
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_ArrayIterator final : public FRigVMDispatch_ArrayBaseMutable
-{
-};
-static_assert(alignof(FRigVMDispatch_ArrayIterator) == 0x000008, "Wrong alignment on FRigVMDispatch_ArrayIterator");
-static_assert(sizeof(FRigVMDispatch_ArrayIterator) == 0x000070, "Wrong size on FRigVMDispatch_ArrayIterator");
+static_assert(alignof(FRigVMDispatch_CoreNotEquals) == 0x000008, "Wrong alignment on FRigVMDispatch_CoreNotEquals");
+static_assert(sizeof(FRigVMDispatch_CoreNotEquals) == 0x000070, "Wrong size on FRigVMDispatch_CoreNotEquals");
 
 // ScriptStruct RigVM.RigVMDispatch_If
 // 0x0000 (0x0070 - 0x0070)
@@ -7030,14 +7032,6 @@ struct FRigVMDispatch_If final : public FRigVMDispatch_CoreBase
 static_assert(alignof(FRigVMDispatch_If) == 0x000008, "Wrong alignment on FRigVMDispatch_If");
 static_assert(sizeof(FRigVMDispatch_If) == 0x000070, "Wrong size on FRigVMDispatch_If");
 
-// ScriptStruct RigVM.RigVMDispatch_MakeStruct
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_MakeStruct : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_MakeStruct) == 0x000008, "Wrong alignment on FRigVMDispatch_MakeStruct");
-static_assert(sizeof(FRigVMDispatch_MakeStruct) == 0x000070, "Wrong size on FRigVMDispatch_MakeStruct");
-
 // ScriptStruct RigVM.RigVMDispatch_BreakStruct
 // 0x0000 (0x0070 - 0x0070)
 struct FRigVMDispatch_BreakStruct final : public FRigVMDispatch_MakeStruct
@@ -7046,33 +7040,20 @@ struct FRigVMDispatch_BreakStruct final : public FRigVMDispatch_MakeStruct
 static_assert(alignof(FRigVMDispatch_BreakStruct) == 0x000008, "Wrong alignment on FRigVMDispatch_BreakStruct");
 static_assert(sizeof(FRigVMDispatch_BreakStruct) == 0x000070, "Wrong size on FRigVMDispatch_BreakStruct");
 
-// ScriptStruct RigVM.RigVMDispatch_SelectInt32
-// 0x0000 (0x0070 - 0x0070)
-struct FRigVMDispatch_SelectInt32 final : public FRigVMDispatch_CoreBase
-{
-};
-static_assert(alignof(FRigVMDispatch_SelectInt32) == 0x000008, "Wrong alignment on FRigVMDispatch_SelectInt32");
-static_assert(sizeof(FRigVMDispatch_SelectInt32) == 0x000070, "Wrong size on FRigVMDispatch_SelectInt32");
-
-// ScriptStruct RigVM.RigVMFunction_NameTruncate
-// 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_NameTruncate final : public FRigVMFunction_NameBase
+// ScriptStruct RigVM.RigVMFunction_NameConcat
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_NameConcat final : public FRigVMFunction_NameBase
 {
 public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FromEnd;                                           // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Remainder;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Chopped;                                           // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   A;                                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   B;                                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Result;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_NameTruncate) == 0x000008, "Wrong alignment on FRigVMFunction_NameTruncate");
-static_assert(sizeof(FRigVMFunction_NameTruncate) == 0x000028, "Wrong size on FRigVMFunction_NameTruncate");
-static_assert(offsetof(FRigVMFunction_NameTruncate, Name) == 0x000008, "Member 'FRigVMFunction_NameTruncate::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameTruncate, Count) == 0x000010, "Member 'FRigVMFunction_NameTruncate::Count' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameTruncate, FromEnd) == 0x000014, "Member 'FRigVMFunction_NameTruncate::FromEnd' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameTruncate, Remainder) == 0x000018, "Member 'FRigVMFunction_NameTruncate::Remainder' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_NameTruncate, Chopped) == 0x000020, "Member 'FRigVMFunction_NameTruncate::Chopped' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_NameConcat) == 0x000008, "Wrong alignment on FRigVMFunction_NameConcat");
+static_assert(sizeof(FRigVMFunction_NameConcat) == 0x000020, "Wrong size on FRigVMFunction_NameConcat");
+static_assert(offsetof(FRigVMFunction_NameConcat, A) == 0x000008, "Member 'FRigVMFunction_NameConcat::A' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameConcat, B) == 0x000010, "Member 'FRigVMFunction_NameConcat::B' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_NameConcat, Result) == 0x000018, "Member 'FRigVMFunction_NameConcat::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_NameReplace
 // 0x0020 (0x0028 - 0x0008)
@@ -7091,22 +7072,6 @@ static_assert(offsetof(FRigVMFunction_NameReplace, Old) == 0x000010, "Member 'FR
 static_assert(offsetof(FRigVMFunction_NameReplace, New) == 0x000018, "Member 'FRigVMFunction_NameReplace::New' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_NameReplace, Result) == 0x000020, "Member 'FRigVMFunction_NameReplace::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StartsWith
-// 0x0018 (0x0020 - 0x0008)
-struct FRigVMFunction_StartsWith final : public FRigVMFunction_NameBase
-{
-public:
-	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Start;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_StartsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StartsWith");
-static_assert(sizeof(FRigVMFunction_StartsWith) == 0x000020, "Wrong size on FRigVMFunction_StartsWith");
-static_assert(offsetof(FRigVMFunction_StartsWith, Name) == 0x000008, "Member 'FRigVMFunction_StartsWith::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StartsWith, Start) == 0x000010, "Member 'FRigVMFunction_StartsWith::Start' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StartsWith, Result) == 0x000018, "Member 'FRigVMFunction_StartsWith::Result' has a wrong offset!");
-
 // ScriptStruct RigVM.RigVMFunction_Contains
 // 0x0018 (0x0020 - 0x0008)
 struct FRigVMFunction_Contains final : public FRigVMFunction_NameBase
@@ -7123,62 +7088,64 @@ static_assert(offsetof(FRigVMFunction_Contains, Name) == 0x000008, "Member 'FRig
 static_assert(offsetof(FRigVMFunction_Contains, Search) == 0x000010, "Member 'FRigVMFunction_Contains::Search' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_Contains, Result) == 0x000018, "Member 'FRigVMFunction_Contains::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringConcat
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringConcat final : public FRigVMFunction_StringBase
-{
-public:
-	class FString                                 A;                                                 // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 B;                                                 // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_StringConcat) == 0x000008, "Wrong alignment on FRigVMFunction_StringConcat");
-static_assert(sizeof(FRigVMFunction_StringConcat) == 0x000038, "Wrong size on FRigVMFunction_StringConcat");
-static_assert(offsetof(FRigVMFunction_StringConcat, A) == 0x000008, "Member 'FRigVMFunction_StringConcat::A' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringConcat, B) == 0x000018, "Member 'FRigVMFunction_StringConcat::B' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringConcat, Result) == 0x000028, "Member 'FRigVMFunction_StringConcat::Result' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_StringStartsWith
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringStartsWith final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigVMFunction_StringReplace
+// 0x0040 (0x0048 - 0x0008)
+struct FRigVMFunction_StringReplace final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Start;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Old;                                               // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 New;                                               // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRigVMFunction_StringReplace) == 0x000008, "Wrong alignment on FRigVMFunction_StringReplace");
+static_assert(sizeof(FRigVMFunction_StringReplace) == 0x000048, "Wrong size on FRigVMFunction_StringReplace");
+static_assert(offsetof(FRigVMFunction_StringReplace, Name) == 0x000008, "Member 'FRigVMFunction_StringReplace::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringReplace, Old) == 0x000018, "Member 'FRigVMFunction_StringReplace::Old' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringReplace, New) == 0x000028, "Member 'FRigVMFunction_StringReplace::New' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringReplace, Result) == 0x000038, "Member 'FRigVMFunction_StringReplace::Result' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_StringContains
+// 0x0028 (0x0030 - 0x0008)
+struct FRigVMFunction_StringContains final : public FRigVMFunction_StringBase
+{
+public:
+	class FString                                 Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Search;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_StringStartsWith) == 0x000008, "Wrong alignment on FRigVMFunction_StringStartsWith");
-static_assert(sizeof(FRigVMFunction_StringStartsWith) == 0x000030, "Wrong size on FRigVMFunction_StringStartsWith");
-static_assert(offsetof(FRigVMFunction_StringStartsWith, Name) == 0x000008, "Member 'FRigVMFunction_StringStartsWith::Name' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringStartsWith, Start) == 0x000018, "Member 'FRigVMFunction_StringStartsWith::Start' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringStartsWith, Result) == 0x000028, "Member 'FRigVMFunction_StringStartsWith::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringContains) == 0x000008, "Wrong alignment on FRigVMFunction_StringContains");
+static_assert(sizeof(FRigVMFunction_StringContains) == 0x000030, "Wrong size on FRigVMFunction_StringContains");
+static_assert(offsetof(FRigVMFunction_StringContains, Name) == 0x000008, "Member 'FRigVMFunction_StringContains::Name' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringContains, Search) == 0x000018, "Member 'FRigVMFunction_StringContains::Search' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringContains, Result) == 0x000028, "Member 'FRigVMFunction_StringContains::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringTrimWhitespace
+// ScriptStruct RigVM.RigVMFunction_StringToUppercase
 // 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringTrimWhitespace final : public FRigVMFunction_StringBase
+struct FRigVMFunction_StringToUppercase final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringTrimWhitespace) == 0x000008, "Wrong alignment on FRigVMFunction_StringTrimWhitespace");
-static_assert(sizeof(FRigVMFunction_StringTrimWhitespace) == 0x000028, "Wrong size on FRigVMFunction_StringTrimWhitespace");
-static_assert(offsetof(FRigVMFunction_StringTrimWhitespace, Value) == 0x000008, "Member 'FRigVMFunction_StringTrimWhitespace::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringTrimWhitespace, Result) == 0x000018, "Member 'FRigVMFunction_StringTrimWhitespace::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringToUppercase) == 0x000008, "Wrong alignment on FRigVMFunction_StringToUppercase");
+static_assert(sizeof(FRigVMFunction_StringToUppercase) == 0x000028, "Wrong size on FRigVMFunction_StringToUppercase");
+static_assert(offsetof(FRigVMFunction_StringToUppercase, Value) == 0x000008, "Member 'FRigVMFunction_StringToUppercase::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringToUppercase, Result) == 0x000018, "Member 'FRigVMFunction_StringToUppercase::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringReverse
+// ScriptStruct RigVM.RigVMFunction_StringToLowercase
 // 0x0020 (0x0028 - 0x0008)
-struct FRigVMFunction_StringReverse final : public FRigVMFunction_StringBase
+struct FRigVMFunction_StringToLowercase final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Reverse;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringReverse) == 0x000008, "Wrong alignment on FRigVMFunction_StringReverse");
-static_assert(sizeof(FRigVMFunction_StringReverse) == 0x000028, "Wrong size on FRigVMFunction_StringReverse");
-static_assert(offsetof(FRigVMFunction_StringReverse, Value) == 0x000008, "Member 'FRigVMFunction_StringReverse::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringReverse, Reverse) == 0x000018, "Member 'FRigVMFunction_StringReverse::Reverse' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringToLowercase) == 0x000008, "Wrong alignment on FRigVMFunction_StringToLowercase");
+static_assert(sizeof(FRigVMFunction_StringToLowercase) == 0x000028, "Wrong size on FRigVMFunction_StringToLowercase");
+static_assert(offsetof(FRigVMFunction_StringToLowercase, Value) == 0x000008, "Member 'FRigVMFunction_StringToLowercase::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringToLowercase, Result) == 0x000018, "Member 'FRigVMFunction_StringToLowercase::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_StringLeft
 // 0x0028 (0x0030 - 0x0008)
@@ -7196,22 +7163,21 @@ static_assert(offsetof(FRigVMFunction_StringLeft, Value) == 0x000008, "Member 'F
 static_assert(offsetof(FRigVMFunction_StringLeft, Count) == 0x000018, "Member 'FRigVMFunction_StringLeft::Count' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_StringLeft, Result) == 0x000020, "Member 'FRigVMFunction_StringLeft::Result' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringMiddle
+// ScriptStruct RigVM.RigVMFunction_StringRight
 // 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_StringMiddle final : public FRigVMFunction_StringBase
+struct FRigVMFunction_StringRight final : public FRigVMFunction_StringBase
 {
 public:
 	class FString                                 Value;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Start;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Count;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Result;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_StringMiddle) == 0x000008, "Wrong alignment on FRigVMFunction_StringMiddle");
-static_assert(sizeof(FRigVMFunction_StringMiddle) == 0x000030, "Wrong size on FRigVMFunction_StringMiddle");
-static_assert(offsetof(FRigVMFunction_StringMiddle, Value) == 0x000008, "Member 'FRigVMFunction_StringMiddle::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringMiddle, Start) == 0x000018, "Member 'FRigVMFunction_StringMiddle::Start' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringMiddle, Count) == 0x00001C, "Member 'FRigVMFunction_StringMiddle::Count' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringMiddle, Result) == 0x000020, "Member 'FRigVMFunction_StringMiddle::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_StringRight) == 0x000008, "Wrong alignment on FRigVMFunction_StringRight");
+static_assert(sizeof(FRigVMFunction_StringRight) == 0x000030, "Wrong size on FRigVMFunction_StringRight");
+static_assert(offsetof(FRigVMFunction_StringRight, Value) == 0x000008, "Member 'FRigVMFunction_StringRight::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringRight, Count) == 0x000018, "Member 'FRigVMFunction_StringRight::Count' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_StringRight, Result) == 0x000020, "Member 'FRigVMFunction_StringRight::Result' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_StringFind
 // 0x0028 (0x0030 - 0x0008)
@@ -7231,20 +7197,36 @@ static_assert(offsetof(FRigVMFunction_StringFind, Search) == 0x000018, "Member '
 static_assert(offsetof(FRigVMFunction_StringFind, Found) == 0x000028, "Member 'FRigVMFunction_StringFind::Found' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_StringFind, Index) == 0x00002C, "Member 'FRigVMFunction_StringFind::Index' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_StringJoin
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_StringJoin final : public FRigVMFunction_StringBase
+// ScriptStruct RigVM.RigDispatch_ToString
+// 0x0000 (0x0070 - 0x0070)
+struct FRigDispatch_ToString final : public FRigVMDispatchFactory
+{
+};
+static_assert(alignof(FRigDispatch_ToString) == 0x000008, "Wrong alignment on FRigDispatch_ToString");
+static_assert(sizeof(FRigDispatch_ToString) == 0x000070, "Wrong size on FRigDispatch_ToString");
+
+// ScriptStruct RigVM.RigVMFunction_AccumulateFloatAdd
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_AccumulateFloatAdd final : public FRigVMFunction_AccumulateBase
 {
 public:
-	TArray<class FString>                         Values;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 Separator;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Result;                                            // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Increment;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Result;                                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedValue;                                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_StringJoin) == 0x000008, "Wrong alignment on FRigVMFunction_StringJoin");
-static_assert(sizeof(FRigVMFunction_StringJoin) == 0x000038, "Wrong size on FRigVMFunction_StringJoin");
-static_assert(offsetof(FRigVMFunction_StringJoin, Values) == 0x000008, "Member 'FRigVMFunction_StringJoin::Values' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringJoin, Separator) == 0x000018, "Member 'FRigVMFunction_StringJoin::Separator' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_StringJoin, Result) == 0x000028, "Member 'FRigVMFunction_StringJoin::Result' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_AccumulateFloatAdd) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatAdd");
+static_assert(sizeof(FRigVMFunction_AccumulateFloatAdd) == 0x000020, "Wrong size on FRigVMFunction_AccumulateFloatAdd");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, Increment) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatAdd::Increment' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, InitialValue) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatAdd::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, bIntegrateDeltaTime) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatAdd::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, Result) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatAdd::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, AccumulatedValue) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatAdd::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatAdd, bIsInitialized) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatAdd::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_AccumulateFloatMul
 // 0x0018 (0x0020 - 0x0008)
@@ -7269,31 +7251,28 @@ static_assert(offsetof(FRigVMFunction_AccumulateFloatMul, Result) == 0x000014, "
 static_assert(offsetof(FRigVMFunction_AccumulateFloatMul, AccumulatedValue) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatMul::AccumulatedValue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AccumulateFloatMul, bIsInitialized) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatMul::bIsInitialized' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateQuatMul
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_AccumulateQuatMul final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_AccumulateVectorMul
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AccumulateVectorMul final : public FRigVMFunction_AccumulateBase
 {
 public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Multiplier;                                        // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlipOrder;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0xE];                                       // 0x0052(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Multiplier;                                        // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InitialValue;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Result;                                            // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AccumulatedValue;                                  // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_AccumulateQuatMul) == 0x000010, "Wrong alignment on FRigVMFunction_AccumulateQuatMul");
-static_assert(sizeof(FRigVMFunction_AccumulateQuatMul) == 0x0000B0, "Wrong size on FRigVMFunction_AccumulateQuatMul");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, Multiplier) == 0x000010, "Member 'FRigVMFunction_AccumulateQuatMul::Multiplier' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, InitialValue) == 0x000030, "Member 'FRigVMFunction_AccumulateQuatMul::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bFlipOrder) == 0x000050, "Member 'FRigVMFunction_AccumulateQuatMul::bFlipOrder' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bIntegrateDeltaTime) == 0x000051, "Member 'FRigVMFunction_AccumulateQuatMul::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, Result) == 0x000060, "Member 'FRigVMFunction_AccumulateQuatMul::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, AccumulatedValue) == 0x000080, "Member 'FRigVMFunction_AccumulateQuatMul::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatMul, bIsInitialized) == 0x0000A0, "Member 'FRigVMFunction_AccumulateQuatMul::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_AccumulateVectorMul) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorMul");
+static_assert(sizeof(FRigVMFunction_AccumulateVectorMul) == 0x000078, "Wrong size on FRigVMFunction_AccumulateVectorMul");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, Multiplier) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorMul::Multiplier' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, InitialValue) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorMul::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, bIntegrateDeltaTime) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorMul::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, Result) == 0x000040, "Member 'FRigVMFunction_AccumulateVectorMul::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, AccumulatedValue) == 0x000058, "Member 'FRigVMFunction_AccumulateVectorMul::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateVectorMul, bIsInitialized) == 0x000070, "Member 'FRigVMFunction_AccumulateVectorMul::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_AccumulateTransformMul
 // 0x01A8 (0x01B0 - 0x0008)
@@ -7321,6 +7300,31 @@ static_assert(offsetof(FRigVMFunction_AccumulateTransformMul, Result) == 0x0000E
 static_assert(offsetof(FRigVMFunction_AccumulateTransformMul, AccumulatedValue) == 0x000140, "Member 'FRigVMFunction_AccumulateTransformMul::AccumulatedValue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AccumulateTransformMul, bIsInitialized) == 0x0001A0, "Member 'FRigVMFunction_AccumulateTransformMul::bIsInitialized' has a wrong offset!");
 
+// ScriptStruct RigVM.RigVMFunction_AccumulateFloatLerp
+// 0x0020 (0x0028 - 0x0008)
+struct FRigVMFunction_AccumulateFloatLerp final : public FRigVMFunction_AccumulateBase
+{
+public:
+	float                                         TargetValue;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InitialValue;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIntegrateDeltaTime;                               // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedValue;                                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_AccumulateFloatLerp) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateFloatLerp");
+static_assert(sizeof(FRigVMFunction_AccumulateFloatLerp) == 0x000028, "Wrong size on FRigVMFunction_AccumulateFloatLerp");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, TargetValue) == 0x000008, "Member 'FRigVMFunction_AccumulateFloatLerp::TargetValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, InitialValue) == 0x00000C, "Member 'FRigVMFunction_AccumulateFloatLerp::InitialValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, Blend) == 0x000010, "Member 'FRigVMFunction_AccumulateFloatLerp::Blend' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, bIntegrateDeltaTime) == 0x000014, "Member 'FRigVMFunction_AccumulateFloatLerp::bIntegrateDeltaTime' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, Result) == 0x000018, "Member 'FRigVMFunction_AccumulateFloatLerp::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, AccumulatedValue) == 0x00001C, "Member 'FRigVMFunction_AccumulateFloatLerp::AccumulatedValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AccumulateFloatLerp, bIsInitialized) == 0x000020, "Member 'FRigVMFunction_AccumulateFloatLerp::bIsInitialized' has a wrong offset!");
+
 // ScriptStruct RigVM.RigVMFunction_AccumulateVectorLerp
 // 0x0070 (0x0078 - 0x0008)
 struct FRigVMFunction_AccumulateVectorLerp final : public FRigVMFunction_AccumulateBase
@@ -7345,32 +7349,6 @@ static_assert(offsetof(FRigVMFunction_AccumulateVectorLerp, bIntegrateDeltaTime)
 static_assert(offsetof(FRigVMFunction_AccumulateVectorLerp, Result) == 0x000040, "Member 'FRigVMFunction_AccumulateVectorLerp::Result' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AccumulateVectorLerp, AccumulatedValue) == 0x000058, "Member 'FRigVMFunction_AccumulateVectorLerp::AccumulatedValue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AccumulateVectorLerp, bIsInitialized) == 0x000070, "Member 'FRigVMFunction_AccumulateVectorLerp::bIsInitialized' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_AccumulateQuatLerp
-// 0x00A8 (0x00B0 - 0x0008)
-struct FRigVMFunction_AccumulateQuatLerp final : public FRigVMFunction_AccumulateBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  TargetValue;                                       // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  InitialValue;                                      // 0x0030(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Blend;                                             // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIntegrateDeltaTime;                               // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  AccumulatedValue;                                  // 0x0080(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_AccumulateQuatLerp) == 0x000010, "Wrong alignment on FRigVMFunction_AccumulateQuatLerp");
-static_assert(sizeof(FRigVMFunction_AccumulateQuatLerp) == 0x0000B0, "Wrong size on FRigVMFunction_AccumulateQuatLerp");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, TargetValue) == 0x000010, "Member 'FRigVMFunction_AccumulateQuatLerp::TargetValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, InitialValue) == 0x000030, "Member 'FRigVMFunction_AccumulateQuatLerp::InitialValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, Blend) == 0x000050, "Member 'FRigVMFunction_AccumulateQuatLerp::Blend' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, bIntegrateDeltaTime) == 0x000054, "Member 'FRigVMFunction_AccumulateQuatLerp::bIntegrateDeltaTime' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, Result) == 0x000060, "Member 'FRigVMFunction_AccumulateQuatLerp::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, AccumulatedValue) == 0x000080, "Member 'FRigVMFunction_AccumulateQuatLerp::AccumulatedValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateQuatLerp, bIsInitialized) == 0x0000A0, "Member 'FRigVMFunction_AccumulateQuatLerp::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_AccumulateTransformLerp
 // 0x01A8 (0x01B0 - 0x0008)
@@ -7398,69 +7376,86 @@ static_assert(offsetof(FRigVMFunction_AccumulateTransformLerp, Result) == 0x0000
 static_assert(offsetof(FRigVMFunction_AccumulateTransformLerp, AccumulatedValue) == 0x000140, "Member 'FRigVMFunction_AccumulateTransformLerp::AccumulatedValue' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_AccumulateTransformLerp, bIsInitialized) == 0x0001A0, "Member 'FRigVMFunction_AccumulateTransformLerp::bIsInitialized' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_AccumulateVectorRange
-// 0x0080 (0x0088 - 0x0008)
-struct FRigVMFunction_AccumulateVectorRange final : public FRigVMFunction_AccumulateBase
+// ScriptStruct RigVM.RigVMFunction_AlphaInterp
+// 0x0070 (0x0078 - 0x0008)
+struct FRigVMFunction_AlphaInterp final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bias;                                              // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMapRange;                                         // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRange                            InRange;                                           // 0x0018(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FInputRange                            OutRange;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bClampResult;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ClampMin;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClampMax;                                          // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterpResult;                                     // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InterpSpeedIncreasing;                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpSpeedDecreasing;                             // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0044(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_AlphaInterp) == 0x000008, "Wrong alignment on FRigVMFunction_AlphaInterp");
+static_assert(sizeof(FRigVMFunction_AlphaInterp) == 0x000078, "Wrong size on FRigVMFunction_AlphaInterp");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, Value) == 0x000008, "Member 'FRigVMFunction_AlphaInterp::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, Scale) == 0x00000C, "Member 'FRigVMFunction_AlphaInterp::Scale' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, Bias) == 0x000010, "Member 'FRigVMFunction_AlphaInterp::Bias' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, bMapRange) == 0x000014, "Member 'FRigVMFunction_AlphaInterp::bMapRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, InRange) == 0x000018, "Member 'FRigVMFunction_AlphaInterp::InRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, OutRange) == 0x000020, "Member 'FRigVMFunction_AlphaInterp::OutRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, bClampResult) == 0x000028, "Member 'FRigVMFunction_AlphaInterp::bClampResult' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, ClampMin) == 0x00002C, "Member 'FRigVMFunction_AlphaInterp::ClampMin' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, ClampMax) == 0x000030, "Member 'FRigVMFunction_AlphaInterp::ClampMax' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, bInterpResult) == 0x000034, "Member 'FRigVMFunction_AlphaInterp::bInterpResult' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, InterpSpeedIncreasing) == 0x000038, "Member 'FRigVMFunction_AlphaInterp::InterpSpeedIncreasing' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, InterpSpeedDecreasing) == 0x00003C, "Member 'FRigVMFunction_AlphaInterp::InterpSpeedDecreasing' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, Result) == 0x000040, "Member 'FRigVMFunction_AlphaInterp::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_AlphaInterp, ScaleBiasClamp) == 0x000044, "Member 'FRigVMFunction_AlphaInterp::ScaleBiasClamp' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousFloat
+// 0x0018 (0x0020 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousFloat final : public FRigVMFunction_SimBase
+{
+public:
+	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Delta;                                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PreviousValue;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Cache;                                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_DeltaFromPreviousFloat) == 0x000008, "Wrong alignment on FRigVMFunction_DeltaFromPreviousFloat");
+static_assert(sizeof(FRigVMFunction_DeltaFromPreviousFloat) == 0x000020, "Wrong size on FRigVMFunction_DeltaFromPreviousFloat");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Value) == 0x000008, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Delta) == 0x00000C, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Delta' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, PreviousValue) == 0x000010, "Member 'FRigVMFunction_DeltaFromPreviousFloat::PreviousValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, Cache) == 0x000014, "Member 'FRigVMFunction_DeltaFromPreviousFloat::Cache' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousFloat, bIsInitialized) == 0x000018, "Member 'FRigVMFunction_DeltaFromPreviousFloat::bIsInitialized' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousVector
+// 0x0068 (0x0070 - 0x0008)
+struct FRigVMFunction_DeltaFromPreviousVector final : public FRigVMFunction_SimBase
 {
 public:
 	struct FVector                                Value;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Minimum;                                           // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Maximum;                                           // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedMinimum;                                // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AccumulatedMaximum;                                // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Delta;                                             // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PreviousValue;                                     // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Cache;                                             // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInitialized;                                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_AccumulateVectorRange) == 0x000008, "Wrong alignment on FRigVMFunction_AccumulateVectorRange");
-static_assert(sizeof(FRigVMFunction_AccumulateVectorRange) == 0x000088, "Wrong size on FRigVMFunction_AccumulateVectorRange");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Value) == 0x000008, "Member 'FRigVMFunction_AccumulateVectorRange::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Minimum) == 0x000020, "Member 'FRigVMFunction_AccumulateVectorRange::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, Maximum) == 0x000038, "Member 'FRigVMFunction_AccumulateVectorRange::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, AccumulatedMinimum) == 0x000050, "Member 'FRigVMFunction_AccumulateVectorRange::AccumulatedMinimum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, AccumulatedMaximum) == 0x000068, "Member 'FRigVMFunction_AccumulateVectorRange::AccumulatedMaximum' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AccumulateVectorRange, bIsInitialized) == 0x000080, "Member 'FRigVMFunction_AccumulateVectorRange::bIsInitialized' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_AlphaInterpQuat
-// 0x00B8 (0x00C0 - 0x0008)
-struct FRigVMFunction_AlphaInterpQuat final : public FRigVMFunction_SimBase
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Value;                                             // 0x0010(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bias;                                              // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMapRange;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRange                            InRange;                                           // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FInputRange                            OutRange;                                          // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bClampResult;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ClampMin;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClampMax;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterpResult;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InterpSpeedIncreasing;                             // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpSpeedDecreasing;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Result;                                            // 0x0070(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInputScaleBiasClamp                   ScaleBiasClamp;                                    // 0x0090(0x0030)(NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRigVMFunction_AlphaInterpQuat) == 0x000010, "Wrong alignment on FRigVMFunction_AlphaInterpQuat");
-static_assert(sizeof(FRigVMFunction_AlphaInterpQuat) == 0x0000C0, "Wrong size on FRigVMFunction_AlphaInterpQuat");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Value) == 0x000010, "Member 'FRigVMFunction_AlphaInterpQuat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Scale) == 0x000030, "Member 'FRigVMFunction_AlphaInterpQuat::Scale' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Bias) == 0x000034, "Member 'FRigVMFunction_AlphaInterpQuat::Bias' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bMapRange) == 0x000038, "Member 'FRigVMFunction_AlphaInterpQuat::bMapRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InRange) == 0x00003C, "Member 'FRigVMFunction_AlphaInterpQuat::InRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, OutRange) == 0x000044, "Member 'FRigVMFunction_AlphaInterpQuat::OutRange' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bClampResult) == 0x00004C, "Member 'FRigVMFunction_AlphaInterpQuat::bClampResult' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ClampMin) == 0x000050, "Member 'FRigVMFunction_AlphaInterpQuat::ClampMin' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ClampMax) == 0x000054, "Member 'FRigVMFunction_AlphaInterpQuat::ClampMax' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, bInterpResult) == 0x000058, "Member 'FRigVMFunction_AlphaInterpQuat::bInterpResult' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InterpSpeedIncreasing) == 0x00005C, "Member 'FRigVMFunction_AlphaInterpQuat::InterpSpeedIncreasing' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, InterpSpeedDecreasing) == 0x000060, "Member 'FRigVMFunction_AlphaInterpQuat::InterpSpeedDecreasing' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, Result) == 0x000070, "Member 'FRigVMFunction_AlphaInterpQuat::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_AlphaInterpQuat, ScaleBiasClamp) == 0x000090, "Member 'FRigVMFunction_AlphaInterpQuat::ScaleBiasClamp' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_DeltaFromPreviousVector) == 0x000008, "Wrong alignment on FRigVMFunction_DeltaFromPreviousVector");
+static_assert(sizeof(FRigVMFunction_DeltaFromPreviousVector) == 0x000070, "Wrong size on FRigVMFunction_DeltaFromPreviousVector");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Value) == 0x000008, "Member 'FRigVMFunction_DeltaFromPreviousVector::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Delta) == 0x000020, "Member 'FRigVMFunction_DeltaFromPreviousVector::Delta' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, PreviousValue) == 0x000038, "Member 'FRigVMFunction_DeltaFromPreviousVector::PreviousValue' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, Cache) == 0x000050, "Member 'FRigVMFunction_DeltaFromPreviousVector::Cache' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_DeltaFromPreviousVector, bIsInitialized) == 0x000068, "Member 'FRigVMFunction_DeltaFromPreviousVector::bIsInitialized' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousQuat
 // 0x0098 (0x00A0 - 0x0008)
@@ -7483,81 +7478,55 @@ static_assert(offsetof(FRigVMFunction_DeltaFromPreviousQuat, PreviousValue) == 0
 static_assert(offsetof(FRigVMFunction_DeltaFromPreviousQuat, Cache) == 0x000070, "Member 'FRigVMFunction_DeltaFromPreviousQuat::Cache' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_DeltaFromPreviousQuat, bIsInitialized) == 0x000090, "Member 'FRigVMFunction_DeltaFromPreviousQuat::bIsInitialized' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_DeltaFromPreviousTransform
-// 0x0198 (0x01A0 - 0x0008)
-struct FRigVMFunction_DeltaFromPreviousTransform final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_KalmanTransform
+// 0x00F8 (0x0100 - 0x0008)
+struct FRigVMFunction_KalmanTransform final : public FRigVMFunction_SimBase
 {
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Value;                                             // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Delta;                                             // 0x0070(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             PreviousValue;                                     // 0x00D0(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Cache;                                             // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191[0xF];                                      // 0x0191(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         BufferSize;                                        // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Result;                                            // 0x0080(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Buffer;                                            // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRigVMFunction_DeltaFromPreviousTransform) == 0x000010, "Wrong alignment on FRigVMFunction_DeltaFromPreviousTransform");
-static_assert(sizeof(FRigVMFunction_DeltaFromPreviousTransform) == 0x0001A0, "Wrong size on FRigVMFunction_DeltaFromPreviousTransform");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Value) == 0x000010, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Delta) == 0x000070, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Delta' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, PreviousValue) == 0x0000D0, "Member 'FRigVMFunction_DeltaFromPreviousTransform::PreviousValue' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, Cache) == 0x000130, "Member 'FRigVMFunction_DeltaFromPreviousTransform::Cache' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_DeltaFromPreviousTransform, bIsInitialized) == 0x000190, "Member 'FRigVMFunction_DeltaFromPreviousTransform::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_KalmanTransform) == 0x000010, "Wrong alignment on FRigVMFunction_KalmanTransform");
+static_assert(sizeof(FRigVMFunction_KalmanTransform) == 0x000100, "Wrong size on FRigVMFunction_KalmanTransform");
+static_assert(offsetof(FRigVMFunction_KalmanTransform, Value) == 0x000010, "Member 'FRigVMFunction_KalmanTransform::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanTransform, BufferSize) == 0x000070, "Member 'FRigVMFunction_KalmanTransform::BufferSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanTransform, Result) == 0x000080, "Member 'FRigVMFunction_KalmanTransform::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanTransform, Buffer) == 0x0000E0, "Member 'FRigVMFunction_KalmanTransform::Buffer' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_KalmanTransform, LastInsertIndex) == 0x0000F0, "Member 'FRigVMFunction_KalmanTransform::LastInsertIndex' has a wrong offset!");
 
-// ScriptStruct RigVM.RigVMFunction_KalmanFloat
-// 0x0028 (0x0030 - 0x0008)
-struct FRigVMFunction_KalmanFloat final : public FRigVMFunction_SimBase
+// ScriptStruct RigVM.RigVMFunction_TimeOffsetFloat
+// 0x0040 (0x0048 - 0x0008)
+struct FRigVMFunction_TimeOffsetFloat final : public FRigVMFunction_SimBase
 {
 public:
 	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BufferSize;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Result;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 Buffer;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         LastInsertIndex;                                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SecondsAgo;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BufferSize;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeRange;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 Buffer;                                            // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 DeltaTimes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         LastInsertIndex;                                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UpperBound;                                        // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRigVMFunction_KalmanFloat) == 0x000008, "Wrong alignment on FRigVMFunction_KalmanFloat");
-static_assert(sizeof(FRigVMFunction_KalmanFloat) == 0x000030, "Wrong size on FRigVMFunction_KalmanFloat");
-static_assert(offsetof(FRigVMFunction_KalmanFloat, Value) == 0x000008, "Member 'FRigVMFunction_KalmanFloat::Value' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanFloat, BufferSize) == 0x00000C, "Member 'FRigVMFunction_KalmanFloat::BufferSize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanFloat, Result) == 0x000010, "Member 'FRigVMFunction_KalmanFloat::Result' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanFloat, Buffer) == 0x000018, "Member 'FRigVMFunction_KalmanFloat::Buffer' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_KalmanFloat, LastInsertIndex) == 0x000028, "Member 'FRigVMFunction_KalmanFloat::LastInsertIndex' has a wrong offset!");
-
-// ScriptStruct RigVM.RigVMFunction_TimeLoop
-// 0x0030 (0x0038 - 0x0008)
-struct FRigVMFunction_TimeLoop final : public FRigVMFunction_SimBase
-{
-public:
-	float                                         Speed;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Normalize;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Absolute;                                          // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Relative;                                          // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlipFlop;                                          // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Even;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AccumulatedAbsolute;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedRelative;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumIterations;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInitialized;                                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigVMFunction_TimeLoop) == 0x000008, "Wrong alignment on FRigVMFunction_TimeLoop");
-static_assert(sizeof(FRigVMFunction_TimeLoop) == 0x000038, "Wrong size on FRigVMFunction_TimeLoop");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Speed) == 0x000008, "Member 'FRigVMFunction_TimeLoop::Speed' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Duration) == 0x00000C, "Member 'FRigVMFunction_TimeLoop::Duration' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Normalize) == 0x000010, "Member 'FRigVMFunction_TimeLoop::Normalize' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Absolute) == 0x000014, "Member 'FRigVMFunction_TimeLoop::Absolute' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Relative) == 0x000018, "Member 'FRigVMFunction_TimeLoop::Relative' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, FlipFlop) == 0x00001C, "Member 'FRigVMFunction_TimeLoop::FlipFlop' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, Even) == 0x000020, "Member 'FRigVMFunction_TimeLoop::Even' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, AccumulatedAbsolute) == 0x000024, "Member 'FRigVMFunction_TimeLoop::AccumulatedAbsolute' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, AccumulatedRelative) == 0x000028, "Member 'FRigVMFunction_TimeLoop::AccumulatedRelative' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, NumIterations) == 0x00002C, "Member 'FRigVMFunction_TimeLoop::NumIterations' has a wrong offset!");
-static_assert(offsetof(FRigVMFunction_TimeLoop, bIsInitialized) == 0x000030, "Member 'FRigVMFunction_TimeLoop::bIsInitialized' has a wrong offset!");
+static_assert(alignof(FRigVMFunction_TimeOffsetFloat) == 0x000008, "Wrong alignment on FRigVMFunction_TimeOffsetFloat");
+static_assert(sizeof(FRigVMFunction_TimeOffsetFloat) == 0x000048, "Wrong size on FRigVMFunction_TimeOffsetFloat");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Value) == 0x000008, "Member 'FRigVMFunction_TimeOffsetFloat::Value' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, SecondsAgo) == 0x00000C, "Member 'FRigVMFunction_TimeOffsetFloat::SecondsAgo' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, BufferSize) == 0x000010, "Member 'FRigVMFunction_TimeOffsetFloat::BufferSize' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, TimeRange) == 0x000014, "Member 'FRigVMFunction_TimeOffsetFloat::TimeRange' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Result) == 0x000018, "Member 'FRigVMFunction_TimeOffsetFloat::Result' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, Buffer) == 0x000020, "Member 'FRigVMFunction_TimeOffsetFloat::Buffer' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, DeltaTimes) == 0x000030, "Member 'FRigVMFunction_TimeOffsetFloat::DeltaTimes' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, LastInsertIndex) == 0x000040, "Member 'FRigVMFunction_TimeOffsetFloat::LastInsertIndex' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_TimeOffsetFloat, UpperBound) == 0x000044, "Member 'FRigVMFunction_TimeOffsetFloat::UpperBound' has a wrong offset!");
 
 // ScriptStruct RigVM.RigVMFunction_TimeOffsetTransform
 // 0x0108 (0x0110 - 0x0008)
@@ -7588,6 +7557,37 @@ static_assert(offsetof(FRigVMFunction_TimeOffsetTransform, Buffer) == 0x0000E0, 
 static_assert(offsetof(FRigVMFunction_TimeOffsetTransform, DeltaTimes) == 0x0000F0, "Member 'FRigVMFunction_TimeOffsetTransform::DeltaTimes' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_TimeOffsetTransform, LastInsertIndex) == 0x000100, "Member 'FRigVMFunction_TimeOffsetTransform::LastInsertIndex' has a wrong offset!");
 static_assert(offsetof(FRigVMFunction_TimeOffsetTransform, UpperBound) == 0x000104, "Member 'FRigVMFunction_TimeOffsetTransform::UpperBound' has a wrong offset!");
+
+// ScriptStruct RigVM.RigVMFunction_VerletIntegrateVector
+// 0x00D0 (0x00D8 - 0x0008)
+struct FRigVMFunction_VerletIntegrateVector final : public FRigVMFunction_SimBase
+{
+public:
+	struct FVector                                Target;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Strength;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Damp;                                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Blend;                                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Force;                                             // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0048(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity;                                          // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Acceleration;                                      // 0x0078(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigVMSimPoint                         Point;                                             // 0x0090(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInitialized;                                      // 0x00D0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigVMFunction_VerletIntegrateVector) == 0x000008, "Wrong alignment on FRigVMFunction_VerletIntegrateVector");
+static_assert(sizeof(FRigVMFunction_VerletIntegrateVector) == 0x0000D8, "Wrong size on FRigVMFunction_VerletIntegrateVector");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Target) == 0x000008, "Member 'FRigVMFunction_VerletIntegrateVector::Target' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Strength) == 0x000020, "Member 'FRigVMFunction_VerletIntegrateVector::Strength' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Damp) == 0x000024, "Member 'FRigVMFunction_VerletIntegrateVector::Damp' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Blend) == 0x000028, "Member 'FRigVMFunction_VerletIntegrateVector::Blend' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Force) == 0x000030, "Member 'FRigVMFunction_VerletIntegrateVector::Force' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Position) == 0x000048, "Member 'FRigVMFunction_VerletIntegrateVector::Position' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Velocity) == 0x000060, "Member 'FRigVMFunction_VerletIntegrateVector::Velocity' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Acceleration) == 0x000078, "Member 'FRigVMFunction_VerletIntegrateVector::Acceleration' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, Point) == 0x000090, "Member 'FRigVMFunction_VerletIntegrateVector::Point' has a wrong offset!");
+static_assert(offsetof(FRigVMFunction_VerletIntegrateVector, bInitialized) == 0x0000D0, "Member 'FRigVMFunction_VerletIntegrateVector::bInitialized' has a wrong offset!");
 
 }
 

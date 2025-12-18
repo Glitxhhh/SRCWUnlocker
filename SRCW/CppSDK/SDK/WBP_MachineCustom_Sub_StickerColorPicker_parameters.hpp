@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ST_ColorDetailWindowData_structs.hpp"
+#include "EColorDetailWindowMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
-#include "EColorDetailWindowMode_structs.hpp"
 
 
 namespace SDK::Params

@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EMachineSelectMode_structs.hpp"
-#include "UNION_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimToTexture_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "AnimToTexture_structs.hpp"
 
 
 namespace SDK::Params

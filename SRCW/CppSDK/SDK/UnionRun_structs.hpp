@@ -2523,44 +2523,6 @@ static_assert(offsetof(FRankGroupLotteryRateDataTable, LotteryRateDatas_1stLap) 
 static_assert(offsetof(FRankGroupLotteryRateDataTable, LotteryRateDatas_2ndLap) == 0x000490, "Member 'FRankGroupLotteryRateDataTable::LotteryRateDatas_2ndLap' has a wrong offset!");
 static_assert(offsetof(FRankGroupLotteryRateDataTable, LotteryRateDatas_3rdLap) == 0x000918, "Member 'FRankGroupLotteryRateDataTable::LotteryRateDatas_3rdLap' has a wrong offset!");
 
-// ScriptStruct UnionRun.RankGroupLotteryRateDataTableList
-// 0x4428 (0x4430 - 0x0008)
-struct FRankGroupLotteryRateDataTableList final : public FTableRowBase
-{
-public:
-	ELotteryRateType                              LotteryRateType;                                   // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup1;         // 0x0010(0x0DA0)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup2;         // 0x0DB0(0x0DA0)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup3;         // 0x1B50(0x0DA0)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup4;         // 0x28F0(0x0DA0)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup5;         // 0x3690(0x0DA0)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRankGroupLotteryRateDataTableList) == 0x000008, "Wrong alignment on FRankGroupLotteryRateDataTableList");
-static_assert(sizeof(FRankGroupLotteryRateDataTableList) == 0x004430, "Wrong size on FRankGroupLotteryRateDataTableList");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, LotteryRateType) == 0x000008, "Member 'FRankGroupLotteryRateDataTableList::LotteryRateType' has a wrong offset!");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup1) == 0x000010, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup1' has a wrong offset!");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup2) == 0x000DB0, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup2' has a wrong offset!");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup3) == 0x001B50, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup3' has a wrong offset!");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup4) == 0x0028F0, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup4' has a wrong offset!");
-static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup5) == 0x003690, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup5' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComRankGroupLotteryRateDataList
-// 0x8868 (0x8870 - 0x0008)
-struct FComRankGroupLotteryRateDataList final : public FTableRowBase
-{
-public:
-	EComLotteryRateDataTableType                  ComLotteryRateData;                                // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRankGroupLotteryRateDataTableList     Normal;                                            // 0x0010(0x4430)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTableList     Special;                                           // 0x4440(0x4430)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComRankGroupLotteryRateDataList) == 0x000008, "Wrong alignment on FComRankGroupLotteryRateDataList");
-static_assert(sizeof(FComRankGroupLotteryRateDataList) == 0x008870, "Wrong size on FComRankGroupLotteryRateDataList");
-static_assert(offsetof(FComRankGroupLotteryRateDataList, ComLotteryRateData) == 0x000008, "Member 'FComRankGroupLotteryRateDataList::ComLotteryRateData' has a wrong offset!");
-static_assert(offsetof(FComRankGroupLotteryRateDataList, Normal) == 0x000010, "Member 'FComRankGroupLotteryRateDataList::Normal' has a wrong offset!");
-static_assert(offsetof(FComRankGroupLotteryRateDataList, Special) == 0x004440, "Member 'FComRankGroupLotteryRateDataList::Special' has a wrong offset!");
-
 // ScriptStruct UnionRun.HitTriggerInfo
 // 0x0060 (0x0060 - 0x0000)
 struct alignas(0x08) FHitTriggerInfo final
@@ -2576,32 +2538,26 @@ static_assert(sizeof(FHitTriggerInfo) == 0x000060, "Wrong size on FHitTriggerInf
 static_assert(offsetof(FHitTriggerInfo, CollisionHitType) == 0x000000, "Member 'FHitTriggerInfo::CollisionHitType' has a wrong offset!");
 static_assert(offsetof(FHitTriggerInfo, MyComponent) == 0x000004, "Member 'FHitTriggerInfo::MyComponent' has a wrong offset!");
 
-// ScriptStruct UnionRun.EnemySquidPhase1Attack
-// 0x0048 (0x0048 - 0x0000)
-struct FEnemySquidPhase1Attack final
+// ScriptStruct UnionRun.DroppedRingSkyJumpParameter
+// 0x0018 (0x0018 - 0x0000)
+struct FDroppedRingSkyJumpParameter final
 {
 public:
-	float                                         LifeTime;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BulletNum;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BulletSpeed_KPH;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MoveToPathTime;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AttackFirstDelayTime;                              // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AttackIntervalTime;                                // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RapidIntervalTime;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        LanesOffset;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         GravitationalAcceleration;                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OffsetWidth;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         JumpingSpeed;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RandomnessJumpingSpeed;                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FlightDistance;                                    // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RandomnessFlightDistance;                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEnemySquidPhase1Attack) == 0x000008, "Wrong alignment on FEnemySquidPhase1Attack");
-static_assert(sizeof(FEnemySquidPhase1Attack) == 0x000048, "Wrong size on FEnemySquidPhase1Attack");
-static_assert(offsetof(FEnemySquidPhase1Attack, LifeTime) == 0x000000, "Member 'FEnemySquidPhase1Attack::LifeTime' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, BulletNum) == 0x000004, "Member 'FEnemySquidPhase1Attack::BulletNum' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, BulletSpeed_KPH) == 0x000008, "Member 'FEnemySquidPhase1Attack::BulletSpeed_KPH' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, MoveToPathTime) == 0x00000C, "Member 'FEnemySquidPhase1Attack::MoveToPathTime' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, AttackFirstDelayTime) == 0x000010, "Member 'FEnemySquidPhase1Attack::AttackFirstDelayTime' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, AttackIntervalTime) == 0x000014, "Member 'FEnemySquidPhase1Attack::AttackIntervalTime' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, RapidIntervalTime) == 0x000018, "Member 'FEnemySquidPhase1Attack::RapidIntervalTime' has a wrong offset!");
-static_assert(offsetof(FEnemySquidPhase1Attack, LanesOffset) == 0x000020, "Member 'FEnemySquidPhase1Attack::LanesOffset' has a wrong offset!");
+static_assert(alignof(FDroppedRingSkyJumpParameter) == 0x000004, "Wrong alignment on FDroppedRingSkyJumpParameter");
+static_assert(sizeof(FDroppedRingSkyJumpParameter) == 0x000018, "Wrong size on FDroppedRingSkyJumpParameter");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, GravitationalAcceleration) == 0x000000, "Member 'FDroppedRingSkyJumpParameter::GravitationalAcceleration' has a wrong offset!");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, OffsetWidth) == 0x000004, "Member 'FDroppedRingSkyJumpParameter::OffsetWidth' has a wrong offset!");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, JumpingSpeed) == 0x000008, "Member 'FDroppedRingSkyJumpParameter::JumpingSpeed' has a wrong offset!");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, RandomnessJumpingSpeed) == 0x00000C, "Member 'FDroppedRingSkyJumpParameter::RandomnessJumpingSpeed' has a wrong offset!");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, FlightDistance) == 0x000010, "Member 'FDroppedRingSkyJumpParameter::FlightDistance' has a wrong offset!");
+static_assert(offsetof(FDroppedRingSkyJumpParameter, RandomnessFlightDistance) == 0x000014, "Member 'FDroppedRingSkyJumpParameter::RandomnessFlightDistance' has a wrong offset!");
 
 // ScriptStruct UnionRun.ColliderHitResult
 // 0x0018 (0x0018 - 0x0000)
@@ -2618,29 +2574,55 @@ static_assert(sizeof(FColliderHitResult) == 0x000018, "Wrong size on FColliderHi
 static_assert(offsetof(FColliderHitResult, RacerIndex) == 0x000000, "Member 'FColliderHitResult::RacerIndex' has a wrong offset!");
 static_assert(offsetof(FColliderHitResult, RacerStatusObject) == 0x000008, "Member 'FColliderHitResult::RacerStatusObject' has a wrong offset!");
 
-// ScriptStruct UnionRun.WarpRingMoveInfo
-// 0x00F0 (0x00F0 - 0x0000)
-struct alignas(0x10) FWarpRingMoveInfo final
+// ScriptStruct UnionRun.AbsorbedObjectInfo
+// 0x0150 (0x0150 - 0x0000)
+struct FAbsorbedObjectInfo final
 {
 public:
-	uint8                                         Pad_0[0xF0];                                       // 0x0000(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class AActor*                                 AbsorbedObject;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InitialTransform;                                  // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             MeshOffsetTransform;                               // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AbsorbTargetScale;                                 // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, class UMaterialInterface*>        ReplaceMeshMaterials;                              // 0x00F0(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+	ETakeRingType                                 RingType;                                          // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RingNum;                                           // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemBoxType                                  ItemBoxType;                                       // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemId                                       itemType;                                          // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFroceStartFromCenter;                             // 0x014A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyVisibleHolder;                                // 0x014B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FWarpRingMoveInfo) == 0x000010, "Wrong alignment on FWarpRingMoveInfo");
-static_assert(sizeof(FWarpRingMoveInfo) == 0x0000F0, "Wrong size on FWarpRingMoveInfo");
+static_assert(alignof(FAbsorbedObjectInfo) == 0x000010, "Wrong alignment on FAbsorbedObjectInfo");
+static_assert(sizeof(FAbsorbedObjectInfo) == 0x000150, "Wrong size on FAbsorbedObjectInfo");
+static_assert(offsetof(FAbsorbedObjectInfo, AbsorbedObject) == 0x000000, "Member 'FAbsorbedObjectInfo::AbsorbedObject' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, InitialTransform) == 0x000010, "Member 'FAbsorbedObjectInfo::InitialTransform' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, MeshOffsetTransform) == 0x000070, "Member 'FAbsorbedObjectInfo::MeshOffsetTransform' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, AbsorbTargetScale) == 0x0000D0, "Member 'FAbsorbedObjectInfo::AbsorbTargetScale' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, Mesh) == 0x0000E8, "Member 'FAbsorbedObjectInfo::Mesh' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, ReplaceMeshMaterials) == 0x0000F0, "Member 'FAbsorbedObjectInfo::ReplaceMeshMaterials' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, RingType) == 0x000140, "Member 'FAbsorbedObjectInfo::RingType' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, RingNum) == 0x000144, "Member 'FAbsorbedObjectInfo::RingNum' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, ItemBoxType) == 0x000148, "Member 'FAbsorbedObjectInfo::ItemBoxType' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, itemType) == 0x000149, "Member 'FAbsorbedObjectInfo::itemType' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, bFroceStartFromCenter) == 0x00014A, "Member 'FAbsorbedObjectInfo::bFroceStartFromCenter' has a wrong offset!");
+static_assert(offsetof(FAbsorbedObjectInfo, bOnlyVisibleHolder) == 0x00014B, "Member 'FAbsorbedObjectInfo::bOnlyVisibleHolder' has a wrong offset!");
 
-// ScriptStruct UnionRun.StruckoutItemBoxParam
+// ScriptStruct UnionRun.DonutHoopItemBoxParam
 // 0x0008 (0x0008 - 0x0000)
-struct FStruckoutItemBoxParam final
+struct FDonutHoopItemBoxParam final
 {
 public:
-	EItemBoxType                                  BoxType;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemBoxType                                  ItemBoxType;                                       // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RelocationWaitTime;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStruckoutItemBoxParam) == 0x000004, "Wrong alignment on FStruckoutItemBoxParam");
-static_assert(sizeof(FStruckoutItemBoxParam) == 0x000008, "Wrong size on FStruckoutItemBoxParam");
-static_assert(offsetof(FStruckoutItemBoxParam, BoxType) == 0x000000, "Member 'FStruckoutItemBoxParam::BoxType' has a wrong offset!");
-static_assert(offsetof(FStruckoutItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FStruckoutItemBoxParam::RelocationWaitTime' has a wrong offset!");
+static_assert(alignof(FDonutHoopItemBoxParam) == 0x000004, "Wrong alignment on FDonutHoopItemBoxParam");
+static_assert(sizeof(FDonutHoopItemBoxParam) == 0x000008, "Wrong size on FDonutHoopItemBoxParam");
+static_assert(offsetof(FDonutHoopItemBoxParam, ItemBoxType) == 0x000000, "Member 'FDonutHoopItemBoxParam::ItemBoxType' has a wrong offset!");
+static_assert(offsetof(FDonutHoopItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FDonutHoopItemBoxParam::RelocationWaitTime' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionRaceCustomParam
 // 0x0014 (0x0014 - 0x0000)
@@ -2661,68 +2643,63 @@ static_assert(offsetof(FUnionRaceCustomParam, Dash) == 0x000008, "Member 'FUnion
 static_assert(offsetof(FUnionRaceCustomParam, Handling) == 0x00000C, "Member 'FUnionRaceCustomParam::Handling' has a wrong offset!");
 static_assert(offsetof(FUnionRaceCustomParam, Power) == 0x000010, "Member 'FUnionRaceCustomParam::Power' has a wrong offset!");
 
-// ScriptStruct UnionRun.ColliderParam
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FColliderParam
-{
-};
-#pragma pack(pop)
-static_assert(alignof(FColliderParam) == 0x000001, "Wrong alignment on FColliderParam");
-static_assert(sizeof(FColliderParam) == 0x000001, "Wrong size on FColliderParam");
-
-// ScriptStruct UnionRun.BoundingItemBoxColliderParam
-// 0x0030 (0x0030 - 0x0000)
-struct FBoundingItemBoxColliderParam final : public FColliderParam
+// ScriptStruct UnionRun.AnchorPhysicsParameter
+// 0x001C (0x001C - 0x0000)
+struct FAnchorPhysicsParameter final
 {
 public:
-	struct FVector                                Offset;                                            // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Extents;                                           // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         anchorLength;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Mass;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         movableLimitTop;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         movableLimitRangeYaw;                              // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         airRegistSpeedThresholdPitch;                      // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         airRegistSpeedThresholdYaw;                        // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         reboundPitch;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBoundingItemBoxColliderParam) == 0x000008, "Wrong alignment on FBoundingItemBoxColliderParam");
-static_assert(sizeof(FBoundingItemBoxColliderParam) == 0x000030, "Wrong size on FBoundingItemBoxColliderParam");
-static_assert(offsetof(FBoundingItemBoxColliderParam, Offset) == 0x000000, "Member 'FBoundingItemBoxColliderParam::Offset' has a wrong offset!");
-static_assert(offsetof(FBoundingItemBoxColliderParam, Extents) == 0x000018, "Member 'FBoundingItemBoxColliderParam::Extents' has a wrong offset!");
+static_assert(alignof(FAnchorPhysicsParameter) == 0x000004, "Wrong alignment on FAnchorPhysicsParameter");
+static_assert(sizeof(FAnchorPhysicsParameter) == 0x00001C, "Wrong size on FAnchorPhysicsParameter");
+static_assert(offsetof(FAnchorPhysicsParameter, anchorLength) == 0x000000, "Member 'FAnchorPhysicsParameter::anchorLength' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, Mass) == 0x000004, "Member 'FAnchorPhysicsParameter::Mass' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, movableLimitTop) == 0x000008, "Member 'FAnchorPhysicsParameter::movableLimitTop' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, movableLimitRangeYaw) == 0x00000C, "Member 'FAnchorPhysicsParameter::movableLimitRangeYaw' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, airRegistSpeedThresholdPitch) == 0x000010, "Member 'FAnchorPhysicsParameter::airRegistSpeedThresholdPitch' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, airRegistSpeedThresholdYaw) == 0x000014, "Member 'FAnchorPhysicsParameter::airRegistSpeedThresholdYaw' has a wrong offset!");
+static_assert(offsetof(FAnchorPhysicsParameter, reboundPitch) == 0x000018, "Member 'FAnchorPhysicsParameter::reboundPitch' has a wrong offset!");
 
-// ScriptStruct UnionRun.ComBranchRingCondition
-// 0x0008 (0x0008 - 0x0000)
-struct FComBranchRingCondition final
+// ScriptStruct UnionRun.ComPaceParams
+// 0x0034 (0x0034 - 0x0000)
+struct FComPaceParams final
 {
 public:
-	int32                                         Count;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Ratio;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         base;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseSlow;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseStart;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDash3;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDash2;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDash1;                                        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDash0;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDashMiss;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinePosMin;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinePosMax;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShortcutRatio;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ItemSkillLv;                                       // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloseToStart;                                      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComBranchRingCondition) == 0x000004, "Wrong alignment on FComBranchRingCondition");
-static_assert(sizeof(FComBranchRingCondition) == 0x000008, "Wrong size on FComBranchRingCondition");
-static_assert(offsetof(FComBranchRingCondition, Count) == 0x000000, "Member 'FComBranchRingCondition::Count' has a wrong offset!");
-static_assert(offsetof(FComBranchRingCondition, Ratio) == 0x000004, "Member 'FComBranchRingCondition::Ratio' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComBranchRingParams
-// 0x0044 (0x0044 - 0x0000)
-struct FComBranchRingParams final
-{
-public:
-	int32                                         NumCondition;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions1;                                       // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions2;                                       // 0x000C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions3;                                       // 0x0014(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions4;                                       // 0x001C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions5;                                       // 0x0024(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions6;                                       // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions7;                                       // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComBranchRingCondition                Conditions8;                                       // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComBranchRingParams) == 0x000004, "Wrong alignment on FComBranchRingParams");
-static_assert(sizeof(FComBranchRingParams) == 0x000044, "Wrong size on FComBranchRingParams");
-static_assert(offsetof(FComBranchRingParams, NumCondition) == 0x000000, "Member 'FComBranchRingParams::NumCondition' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions1) == 0x000004, "Member 'FComBranchRingParams::Conditions1' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions2) == 0x00000C, "Member 'FComBranchRingParams::Conditions2' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions3) == 0x000014, "Member 'FComBranchRingParams::Conditions3' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions4) == 0x00001C, "Member 'FComBranchRingParams::Conditions4' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions5) == 0x000024, "Member 'FComBranchRingParams::Conditions5' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions6) == 0x00002C, "Member 'FComBranchRingParams::Conditions6' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions7) == 0x000034, "Member 'FComBranchRingParams::Conditions7' has a wrong offset!");
-static_assert(offsetof(FComBranchRingParams, Conditions8) == 0x00003C, "Member 'FComBranchRingParams::Conditions8' has a wrong offset!");
+static_assert(alignof(FComPaceParams) == 0x000004, "Wrong alignment on FComPaceParams");
+static_assert(sizeof(FComPaceParams) == 0x000034, "Wrong size on FComPaceParams");
+static_assert(offsetof(FComPaceParams, base) == 0x000000, "Member 'FComPaceParams::base' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, BaseSlow) == 0x000004, "Member 'FComPaceParams::BaseSlow' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, BaseStart) == 0x000008, "Member 'FComPaceParams::BaseStart' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, StartDash3) == 0x00000C, "Member 'FComPaceParams::StartDash3' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, StartDash2) == 0x000010, "Member 'FComPaceParams::StartDash2' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, StartDash1) == 0x000014, "Member 'FComPaceParams::StartDash1' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, StartDash0) == 0x000018, "Member 'FComPaceParams::StartDash0' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, StartDashMiss) == 0x00001C, "Member 'FComPaceParams::StartDashMiss' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, LinePosMin) == 0x000020, "Member 'FComPaceParams::LinePosMin' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, LinePosMax) == 0x000024, "Member 'FComPaceParams::LinePosMax' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, ShortcutRatio) == 0x000028, "Member 'FComPaceParams::ShortcutRatio' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, ItemSkillLv) == 0x00002C, "Member 'FComPaceParams::ItemSkillLv' has a wrong offset!");
+static_assert(offsetof(FComPaceParams, CloseToStart) == 0x000030, "Member 'FComPaceParams::CloseToStart' has a wrong offset!");
 
 // ScriptStruct UnionRun.ItemSpeedParam
 // 0x0010 (0x0010 - 0x0000)
@@ -2773,58 +2750,106 @@ static_assert(offsetof(FUnionRaceStartDashParam, STARTDASH_NG1_RANGE) == 0x00002
 static_assert(offsetof(FUnionRaceStartDashParam, STARTDASH_NG2_PIVOT) == 0x000028, "Member 'FUnionRaceStartDashParam::STARTDASH_NG2_PIVOT' has a wrong offset!");
 static_assert(offsetof(FUnionRaceStartDashParam, STARTDASH_NG2_RANGE) == 0x00002C, "Member 'FUnionRaceStartDashParam::STARTDASH_NG2_RANGE' has a wrong offset!");
 
-// ScriptStruct UnionRun.ItemBoxMeshTable
-// 0x0030 (0x0038 - 0x0008)
-struct FItemBoxMeshTable final : public FTableRowBase
+// ScriptStruct UnionRun.ColliderParam
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct alignas(0x01) FColliderParam
 {
-public:
-	EItemBoxType                                  ItemBoxType;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UStaticMesh>             ItemBoxMesh;                                       // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FItemBoxMeshTable) == 0x000008, "Wrong alignment on FItemBoxMeshTable");
-static_assert(sizeof(FItemBoxMeshTable) == 0x000038, "Wrong size on FItemBoxMeshTable");
-static_assert(offsetof(FItemBoxMeshTable, ItemBoxType) == 0x000008, "Member 'FItemBoxMeshTable::ItemBoxType' has a wrong offset!");
-static_assert(offsetof(FItemBoxMeshTable, ItemBoxMesh) == 0x000010, "Member 'FItemBoxMeshTable::ItemBoxMesh' has a wrong offset!");
+#pragma pack(pop)
+static_assert(alignof(FColliderParam) == 0x000001, "Wrong alignment on FColliderParam");
+static_assert(sizeof(FColliderParam) == 0x000001, "Wrong size on FColliderParam");
 
-// ScriptStruct UnionRun.TremorParameter
-// 0x0020 (0x0028 - 0x0008)
-struct FTremorParameter final : public FTableRowBase
+// ScriptStruct UnionRun.BoundingItemBoxColliderParam
+// 0x0030 (0x0030 - 0x0000)
+struct FBoundingItemBoxColliderParam final : public FColliderParam
 {
 public:
-	ECameraTremorType                             CameraTremorType;                                  // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         targetUD;                                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         targetUDSpeed;                                     // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         targetUDTime;                                      // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         targetLR;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         targetLRSpeed;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         targetLRTime;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Offset;                                            // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Extents;                                           // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTremorParameter) == 0x000008, "Wrong alignment on FTremorParameter");
-static_assert(sizeof(FTremorParameter) == 0x000028, "Wrong size on FTremorParameter");
-static_assert(offsetof(FTremorParameter, CameraTremorType) == 0x000008, "Member 'FTremorParameter::CameraTremorType' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetUD) == 0x00000C, "Member 'FTremorParameter::targetUD' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetUDSpeed) == 0x000010, "Member 'FTremorParameter::targetUDSpeed' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetUDTime) == 0x000014, "Member 'FTremorParameter::targetUDTime' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetLR) == 0x000018, "Member 'FTremorParameter::targetLR' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetLRSpeed) == 0x00001C, "Member 'FTremorParameter::targetLRSpeed' has a wrong offset!");
-static_assert(offsetof(FTremorParameter, targetLRTime) == 0x000020, "Member 'FTremorParameter::targetLRTime' has a wrong offset!");
+static_assert(alignof(FBoundingItemBoxColliderParam) == 0x000008, "Wrong alignment on FBoundingItemBoxColliderParam");
+static_assert(sizeof(FBoundingItemBoxColliderParam) == 0x000030, "Wrong size on FBoundingItemBoxColliderParam");
+static_assert(offsetof(FBoundingItemBoxColliderParam, Offset) == 0x000000, "Member 'FBoundingItemBoxColliderParam::Offset' has a wrong offset!");
+static_assert(offsetof(FBoundingItemBoxColliderParam, Extents) == 0x000018, "Member 'FBoundingItemBoxColliderParam::Extents' has a wrong offset!");
 
-// ScriptStruct UnionRun.MachineSoundData
-// 0x0030 (0x0038 - 0x0008)
-struct FMachineSoundData final : public FTableRowBase
+// ScriptStruct UnionRun.AreaDataCourseColContentsPart
+// 0x0028 (0x0028 - 0x0000)
+struct FAreaDataCourseColContentsPart final
 {
 public:
-	EVehicleSound                                 SoundType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class USoundAtomCue>           Cue;                                               // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TriIndices;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector3f                              AabbMin;                                           // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector3f                              AabbMax;                                           // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMachineSoundData) == 0x000008, "Wrong alignment on FMachineSoundData");
-static_assert(sizeof(FMachineSoundData) == 0x000038, "Wrong size on FMachineSoundData");
-static_assert(offsetof(FMachineSoundData, SoundType) == 0x000008, "Member 'FMachineSoundData::SoundType' has a wrong offset!");
-static_assert(offsetof(FMachineSoundData, Cue) == 0x000010, "Member 'FMachineSoundData::Cue' has a wrong offset!");
+static_assert(alignof(FAreaDataCourseColContentsPart) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsPart");
+static_assert(sizeof(FAreaDataCourseColContentsPart) == 0x000028, "Wrong size on FAreaDataCourseColContentsPart");
+static_assert(offsetof(FAreaDataCourseColContentsPart, TriIndices) == 0x000000, "Member 'FAreaDataCourseColContentsPart::TriIndices' has a wrong offset!");
+static_assert(offsetof(FAreaDataCourseColContentsPart, AabbMin) == 0x000010, "Member 'FAreaDataCourseColContentsPart::AabbMin' has a wrong offset!");
+static_assert(offsetof(FAreaDataCourseColContentsPart, AabbMax) == 0x00001C, "Member 'FAreaDataCourseColContentsPart::AabbMax' has a wrong offset!");
+
+// ScriptStruct UnionRun.AreaDataCourseColContentsGrid
+// 0x0068 (0x0068 - 0x0000)
+struct FAreaDataCourseColContentsGrid final
+{
+public:
+	TMap<int32, struct FAreaDataCourseColContentsPart> Container;                                    // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	struct FVector3f                              AabbMin;                                           // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector3f                              AabbMax;                                           // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAreaDataCourseColContentsGrid) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsGrid");
+static_assert(sizeof(FAreaDataCourseColContentsGrid) == 0x000068, "Wrong size on FAreaDataCourseColContentsGrid");
+static_assert(offsetof(FAreaDataCourseColContentsGrid, Container) == 0x000000, "Member 'FAreaDataCourseColContentsGrid::Container' has a wrong offset!");
+static_assert(offsetof(FAreaDataCourseColContentsGrid, AabbMin) == 0x000050, "Member 'FAreaDataCourseColContentsGrid::AabbMin' has a wrong offset!");
+static_assert(offsetof(FAreaDataCourseColContentsGrid, AabbMax) == 0x00005C, "Member 'FAreaDataCourseColContentsGrid::AabbMax' has a wrong offset!");
+
+// ScriptStruct UnionRun.AreaDataCourseColContentsCourseCollision
+// 0x0050 (0x0050 - 0x0000)
+struct FAreaDataCourseColContentsCourseCollision final
+{
+public:
+	TMap<int32, struct FAreaDataCourseColContentsGrid> Container;                                    // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAreaDataCourseColContentsCourseCollision) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsCourseCollision");
+static_assert(sizeof(FAreaDataCourseColContentsCourseCollision) == 0x000050, "Wrong size on FAreaDataCourseColContentsCourseCollision");
+static_assert(offsetof(FAreaDataCourseColContentsCourseCollision, Container) == 0x000000, "Member 'FAreaDataCourseColContentsCourseCollision::Container' has a wrong offset!");
+
+// ScriptStruct UnionRun.AreaDataCourseColContents
+// 0x0050 (0x0050 - 0x0000)
+struct FAreaDataCourseColContents final
+{
+public:
+	TMap<int32, struct FAreaDataCourseColContentsCourseCollision> Container;                         // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAreaDataCourseColContents) == 0x000008, "Wrong alignment on FAreaDataCourseColContents");
+static_assert(sizeof(FAreaDataCourseColContents) == 0x000050, "Wrong size on FAreaDataCourseColContents");
+static_assert(offsetof(FAreaDataCourseColContents, Container) == 0x000000, "Member 'FAreaDataCourseColContents::Container' has a wrong offset!");
+
+// ScriptStruct UnionRun.VehicleModelDefine
+// 0x0068 (0x0068 - 0x0000)
+struct FVehicleModelDefine final
+{
+public:
+	EVehicleType                                  VehicleType;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECarStatusType                                CarStatusType;                                     // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECarCustomType                                CarCustomType;                                     // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ECarBodyPartType, int32>                 CarBodyPartMap;                                    // 0x0008(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         TireRotSpeedMax_30fps1Screen;                      // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TireRotSpeedMax_30fpsOther;                        // 0x005C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TireRotSpeedMax_60fps1Screen;                      // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TireRotSpeedMax_60fpsOther;                        // 0x0064(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVehicleModelDefine) == 0x000008, "Wrong alignment on FVehicleModelDefine");
+static_assert(sizeof(FVehicleModelDefine) == 0x000068, "Wrong size on FVehicleModelDefine");
+static_assert(offsetof(FVehicleModelDefine, VehicleType) == 0x000000, "Member 'FVehicleModelDefine::VehicleType' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, CarStatusType) == 0x000001, "Member 'FVehicleModelDefine::CarStatusType' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, CarCustomType) == 0x000002, "Member 'FVehicleModelDefine::CarCustomType' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, CarBodyPartMap) == 0x000008, "Member 'FVehicleModelDefine::CarBodyPartMap' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_30fps1Screen) == 0x000058, "Member 'FVehicleModelDefine::TireRotSpeedMax_30fps1Screen' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_30fpsOther) == 0x00005C, "Member 'FVehicleModelDefine::TireRotSpeedMax_30fpsOther' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_60fps1Screen) == 0x000060, "Member 'FVehicleModelDefine::TireRotSpeedMax_60fps1Screen' has a wrong offset!");
+static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_60fpsOther) == 0x000064, "Member 'FVehicleModelDefine::TireRotSpeedMax_60fpsOther' has a wrong offset!");
 
 // ScriptStruct UnionRun.AttackedInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -2872,36 +2897,74 @@ static_assert(offsetof(FAttackedInfo, IsNormalDamage) == 0x000065, "Member 'FAtt
 static_assert(offsetof(FAttackedInfo, IsSpin) == 0x000066, "Member 'FAttackedInfo::IsSpin' has a wrong offset!");
 static_assert(offsetof(FAttackedInfo, IsSquashed) == 0x000067, "Member 'FAttackedInfo::IsSquashed' has a wrong offset!");
 
-// ScriptStruct UnionRun.HitInfo
+// ScriptStruct UnionRun.GadgetVariousMemberInfo
 // 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FHitInfo final
+struct FGadgetVariousMemberInfo final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   ParamMapKey;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHitInfo) == 0x000004, "Wrong alignment on FHitInfo");
-static_assert(sizeof(FHitInfo) == 0x000008, "Wrong size on FHitInfo");
+static_assert(alignof(FGadgetVariousMemberInfo) == 0x000004, "Wrong alignment on FGadgetVariousMemberInfo");
+static_assert(sizeof(FGadgetVariousMemberInfo) == 0x000008, "Wrong size on FGadgetVariousMemberInfo");
+static_assert(offsetof(FGadgetVariousMemberInfo, ParamMapKey) == 0x000000, "Member 'FGadgetVariousMemberInfo::ParamMapKey' has a wrong offset!");
 
-// ScriptStruct UnionRun.CameraPostEffectDataTable
-// 0x0008 (0x0010 - 0x0008)
-struct FCameraPostEffectDataTable final : public FTableRowBase
+// ScriptStruct UnionRun.GadgetVariousDefine
+// 0x0058 (0x0060 - 0x0008)
+struct FGadgetVariousDefine final : public FTableRowBase
 {
 public:
-	class UMaterialInterface*                     PostEffectMaterialInterface;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGadgetId                                     gadgetId;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EGadgetId, struct FGadgetVariousMemberInfo> GadgetMemberIDs;                                // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCameraPostEffectDataTable) == 0x000008, "Wrong alignment on FCameraPostEffectDataTable");
-static_assert(sizeof(FCameraPostEffectDataTable) == 0x000010, "Wrong size on FCameraPostEffectDataTable");
-static_assert(offsetof(FCameraPostEffectDataTable, PostEffectMaterialInterface) == 0x000008, "Member 'FCameraPostEffectDataTable::PostEffectMaterialInterface' has a wrong offset!");
+static_assert(alignof(FGadgetVariousDefine) == 0x000008, "Wrong alignment on FGadgetVariousDefine");
+static_assert(sizeof(FGadgetVariousDefine) == 0x000060, "Wrong size on FGadgetVariousDefine");
+static_assert(offsetof(FGadgetVariousDefine, gadgetId) == 0x000008, "Member 'FGadgetVariousDefine::gadgetId' has a wrong offset!");
+static_assert(offsetof(FGadgetVariousDefine, GadgetMemberIDs) == 0x000010, "Member 'FGadgetVariousDefine::GadgetMemberIDs' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlayerRaceResultData
+// ScriptStruct UnionRun.AttackReply
 // 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FPlayerRaceResultData final
+struct FAttackReply final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Tag;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AttackRacerIndex;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TakeDamageRacerIndex;                              // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerDamageType                              DamageType;                                        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ElapsedTime;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RemainTime;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerDamageType                              OverwrittenByThisDamageType;                       // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPlayerRaceResultData) == 0x000008, "Wrong alignment on FPlayerRaceResultData");
-static_assert(sizeof(FPlayerRaceResultData) == 0x000028, "Wrong size on FPlayerRaceResultData");
+static_assert(alignof(FAttackReply) == 0x000008, "Wrong alignment on FAttackReply");
+static_assert(sizeof(FAttackReply) == 0x000028, "Wrong size on FAttackReply");
+static_assert(offsetof(FAttackReply, Tag) == 0x000000, "Member 'FAttackReply::Tag' has a wrong offset!");
+static_assert(offsetof(FAttackReply, AttackRacerIndex) == 0x000010, "Member 'FAttackReply::AttackRacerIndex' has a wrong offset!");
+static_assert(offsetof(FAttackReply, TakeDamageRacerIndex) == 0x000014, "Member 'FAttackReply::TakeDamageRacerIndex' has a wrong offset!");
+static_assert(offsetof(FAttackReply, DamageType) == 0x000018, "Member 'FAttackReply::DamageType' has a wrong offset!");
+static_assert(offsetof(FAttackReply, ElapsedTime) == 0x00001C, "Member 'FAttackReply::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(FAttackReply, RemainTime) == 0x000020, "Member 'FAttackReply::RemainTime' has a wrong offset!");
+static_assert(offsetof(FAttackReply, OverwrittenByThisDamageType) == 0x000024, "Member 'FAttackReply::OverwrittenByThisDamageType' has a wrong offset!");
+
+// ScriptStruct UnionRun.FestaRacerResultInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FFestaRacerResultInfo final
+{
+public:
+	bool                                          bIsMvp;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BonusPoint;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBonusPoint1st;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TeamNo;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FFestaRacerResultInfo) == 0x000004, "Wrong alignment on FFestaRacerResultInfo");
+static_assert(sizeof(FFestaRacerResultInfo) == 0x000010, "Wrong size on FFestaRacerResultInfo");
+static_assert(offsetof(FFestaRacerResultInfo, bIsMvp) == 0x000000, "Member 'FFestaRacerResultInfo::bIsMvp' has a wrong offset!");
+static_assert(offsetof(FFestaRacerResultInfo, BonusPoint) == 0x000004, "Member 'FFestaRacerResultInfo::BonusPoint' has a wrong offset!");
+static_assert(offsetof(FFestaRacerResultInfo, bIsBonusPoint1st) == 0x000008, "Member 'FFestaRacerResultInfo::bIsBonusPoint1st' has a wrong offset!");
+static_assert(offsetof(FFestaRacerResultInfo, TeamNo) == 0x00000C, "Member 'FFestaRacerResultInfo::TeamNo' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionTyreMarkInfo
 // 0x0060 (0x0060 - 0x0000)
@@ -2928,37 +2991,69 @@ static_assert(offsetof(FUnionTyreMarkInfo, SideVec) == 0x000028, "Member 'FUnion
 static_assert(offsetof(FUnionTyreMarkInfo, Norm) == 0x000040, "Member 'FUnionTyreMarkInfo::Norm' has a wrong offset!");
 static_assert(offsetof(FUnionTyreMarkInfo, TyreTypeUsed) == 0x000058, "Member 'FUnionTyreMarkInfo::TyreTypeUsed' has a wrong offset!");
 
-// ScriptStruct UnionRun.DonutHoopItemBoxParam
+// ScriptStruct UnionRun.BubbleItemBoxParam
 // 0x0008 (0x0008 - 0x0000)
-struct FDonutHoopItemBoxParam final
+struct FBubbleItemBoxParam final
 {
 public:
-	EItemBoxType                                  ItemBoxType;                                       // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemBoxType                                  BoxType;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RelocationWaitTime;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDonutHoopItemBoxParam) == 0x000004, "Wrong alignment on FDonutHoopItemBoxParam");
-static_assert(sizeof(FDonutHoopItemBoxParam) == 0x000008, "Wrong size on FDonutHoopItemBoxParam");
-static_assert(offsetof(FDonutHoopItemBoxParam, ItemBoxType) == 0x000000, "Member 'FDonutHoopItemBoxParam::ItemBoxType' has a wrong offset!");
-static_assert(offsetof(FDonutHoopItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FDonutHoopItemBoxParam::RelocationWaitTime' has a wrong offset!");
+static_assert(alignof(FBubbleItemBoxParam) == 0x000004, "Wrong alignment on FBubbleItemBoxParam");
+static_assert(sizeof(FBubbleItemBoxParam) == 0x000008, "Wrong size on FBubbleItemBoxParam");
+static_assert(offsetof(FBubbleItemBoxParam, BoxType) == 0x000000, "Member 'FBubbleItemBoxParam::BoxType' has a wrong offset!");
+static_assert(offsetof(FBubbleItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FBubbleItemBoxParam::RelocationWaitTime' has a wrong offset!");
 
-// ScriptStruct UnionRun.MachineMaterialAnimationData
-// 0x0020 (0x0028 - 0x0008)
-struct FMachineMaterialAnimationData final : public FTableRowBase
+// ScriptStruct UnionRun.BubblePackageRingParam
+// 0x0001 (0x0001 - 0x0000)
+struct FBubblePackageRingParam final
 {
 public:
-	EVehicleMaterialAnimationType                 AnimationType;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveTable*                            CurveTable;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             TargetMaterialTable;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TargetTag;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPackageRingType                              RingType;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMachineMaterialAnimationData) == 0x000008, "Wrong alignment on FMachineMaterialAnimationData");
-static_assert(sizeof(FMachineMaterialAnimationData) == 0x000028, "Wrong size on FMachineMaterialAnimationData");
-static_assert(offsetof(FMachineMaterialAnimationData, AnimationType) == 0x000008, "Member 'FMachineMaterialAnimationData::AnimationType' has a wrong offset!");
-static_assert(offsetof(FMachineMaterialAnimationData, CurveTable) == 0x000010, "Member 'FMachineMaterialAnimationData::CurveTable' has a wrong offset!");
-static_assert(offsetof(FMachineMaterialAnimationData, TargetMaterialTable) == 0x000018, "Member 'FMachineMaterialAnimationData::TargetMaterialTable' has a wrong offset!");
-static_assert(offsetof(FMachineMaterialAnimationData, TargetTag) == 0x000020, "Member 'FMachineMaterialAnimationData::TargetTag' has a wrong offset!");
+static_assert(alignof(FBubblePackageRingParam) == 0x000001, "Wrong alignment on FBubblePackageRingParam");
+static_assert(sizeof(FBubblePackageRingParam) == 0x000001, "Wrong size on FBubblePackageRingParam");
+static_assert(offsetof(FBubblePackageRingParam, RingType) == 0x000000, "Member 'FBubblePackageRingParam::RingType' has a wrong offset!");
+
+// ScriptStruct UnionRun.SBubbleBonusParam
+// 0x0070 (0x0070 - 0x0000)
+struct FSBubbleBonusParam final
+{
+public:
+	EBubbleBonusType                              BonusCategoryType;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBubbleItemBoxParam                    ItemBoxParam;                                      // 0x0004(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBubblePackageRingParam                PackageRingParam;                                  // 0x000C(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocationOffset;                                    // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationOffset;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                BonusItemMaxScale;                                 // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BubbleExtendScaleValue;                            // 0x0058(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSBubbleBonusParam) == 0x000008, "Wrong alignment on FSBubbleBonusParam");
+static_assert(sizeof(FSBubbleBonusParam) == 0x000070, "Wrong size on FSBubbleBonusParam");
+static_assert(offsetof(FSBubbleBonusParam, BonusCategoryType) == 0x000000, "Member 'FSBubbleBonusParam::BonusCategoryType' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, ItemBoxParam) == 0x000004, "Member 'FSBubbleBonusParam::ItemBoxParam' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, PackageRingParam) == 0x00000C, "Member 'FSBubbleBonusParam::PackageRingParam' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, LocationOffset) == 0x000010, "Member 'FSBubbleBonusParam::LocationOffset' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, RotationOffset) == 0x000028, "Member 'FSBubbleBonusParam::RotationOffset' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, BonusItemMaxScale) == 0x000040, "Member 'FSBubbleBonusParam::BonusItemMaxScale' has a wrong offset!");
+static_assert(offsetof(FSBubbleBonusParam, BubbleExtendScaleValue) == 0x000058, "Member 'FSBubbleBonusParam::BubbleExtendScaleValue' has a wrong offset!");
+
+// ScriptStruct UnionRun.MachineSurfaceSoundData
+// 0x0058 (0x0060 - 0x0008)
+struct FMachineSurfaceSoundData final : public FTableRowBase
+{
+public:
+	EVehicleSound                                 SoundType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EUnionSurfaceType, TSoftObjectPtr<class USoundAtomCue>> CueMap;                             // 0x0010(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMachineSurfaceSoundData) == 0x000008, "Wrong alignment on FMachineSurfaceSoundData");
+static_assert(sizeof(FMachineSurfaceSoundData) == 0x000060, "Wrong size on FMachineSurfaceSoundData");
+static_assert(offsetof(FMachineSurfaceSoundData, SoundType) == 0x000008, "Member 'FMachineSurfaceSoundData::SoundType' has a wrong offset!");
+static_assert(offsetof(FMachineSurfaceSoundData, CueMap) == 0x000010, "Member 'FMachineSurfaceSoundData::CueMap' has a wrong offset!");
 
 // ScriptStruct UnionRun.ItemAimInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -2970,39 +3065,19 @@ public:
 static_assert(alignof(FItemAimInfo) == 0x000008, "Wrong alignment on FItemAimInfo");
 static_assert(sizeof(FItemAimInfo) == 0x000078, "Wrong size on FItemAimInfo");
 
-// ScriptStruct UnionRun.StruckoutPackageRingParam
-// 0x0001 (0x0001 - 0x0000)
-struct FStruckoutPackageRingParam final
+// ScriptStruct UnionRun.StruckoutItemBoxParam
+// 0x0008 (0x0008 - 0x0000)
+struct FStruckoutItemBoxParam final
 {
 public:
-	EPackageRingType                              RingType;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EItemBoxType                                  BoxType;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RelocationWaitTime;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStruckoutPackageRingParam) == 0x000001, "Wrong alignment on FStruckoutPackageRingParam");
-static_assert(sizeof(FStruckoutPackageRingParam) == 0x000001, "Wrong size on FStruckoutPackageRingParam");
-static_assert(offsetof(FStruckoutPackageRingParam, RingType) == 0x000000, "Member 'FStruckoutPackageRingParam::RingType' has a wrong offset!");
-
-// ScriptStruct UnionRun.StruckoutRouteParam
-// 0x0040 (0x0040 - 0x0000)
-struct FStruckoutRouteParam final
-{
-public:
-	EStruckoutCenterType                          RouteType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStruckoutPanelBonus                          BonusType;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruckoutItemBoxParam                 ItemBoxParam;                                      // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStruckoutPackageRingParam             PackageRingParam;                                  // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LocationOffset;                                    // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationOffset;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStruckoutRouteParam) == 0x000008, "Wrong alignment on FStruckoutRouteParam");
-static_assert(sizeof(FStruckoutRouteParam) == 0x000040, "Wrong size on FStruckoutRouteParam");
-static_assert(offsetof(FStruckoutRouteParam, RouteType) == 0x000000, "Member 'FStruckoutRouteParam::RouteType' has a wrong offset!");
-static_assert(offsetof(FStruckoutRouteParam, BonusType) == 0x000001, "Member 'FStruckoutRouteParam::BonusType' has a wrong offset!");
-static_assert(offsetof(FStruckoutRouteParam, ItemBoxParam) == 0x000004, "Member 'FStruckoutRouteParam::ItemBoxParam' has a wrong offset!");
-static_assert(offsetof(FStruckoutRouteParam, PackageRingParam) == 0x00000C, "Member 'FStruckoutRouteParam::PackageRingParam' has a wrong offset!");
-static_assert(offsetof(FStruckoutRouteParam, LocationOffset) == 0x000010, "Member 'FStruckoutRouteParam::LocationOffset' has a wrong offset!");
-static_assert(offsetof(FStruckoutRouteParam, RotationOffset) == 0x000028, "Member 'FStruckoutRouteParam::RotationOffset' has a wrong offset!");
+static_assert(alignof(FStruckoutItemBoxParam) == 0x000004, "Wrong alignment on FStruckoutItemBoxParam");
+static_assert(sizeof(FStruckoutItemBoxParam) == 0x000008, "Wrong size on FStruckoutItemBoxParam");
+static_assert(offsetof(FStruckoutItemBoxParam, BoxType) == 0x000000, "Member 'FStruckoutItemBoxParam::BoxType' has a wrong offset!");
+static_assert(offsetof(FStruckoutItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FStruckoutItemBoxParam::RelocationWaitTime' has a wrong offset!");
 
 // ScriptStruct UnionRun.ColliderHitWeaponResult
 // 0x0030 (0x0030 - 0x0000)
@@ -3087,23 +3162,29 @@ static_assert(offsetof(FUnionSurfaceFlag, bCylindrical) == 0x00001C, "Member 'FU
 static_assert(offsetof(FUnionSurfaceFlag, bItemOnly) == 0x00001D, "Member 'FUnionSurfaceFlag::bItemOnly' has a wrong offset!");
 static_assert(offsetof(FUnionSurfaceFlag, bNone) == 0x00001E, "Member 'FUnionSurfaceFlag::bNone' has a wrong offset!");
 
-// ScriptStruct UnionRun.TravelRingAnotherCourseParamTable
-// 0x0018 (0x0020 - 0x0008)
-struct FTravelRingAnotherCourseParamTable final : public FTableRowBase
+// ScriptStruct UnionRun.ReappearanceDifferentItemData
+// 0x0008 (0x0010 - 0x0008)
+struct FReappearanceDifferentItemData final : public FTableRowBase
 {
 public:
-	EStageId                                      StageId;                                           // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAirPosition;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         HeightOffset;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Comment;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReappearanceTime;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTravelRingAnotherCourseParamTable) == 0x000008, "Wrong alignment on FTravelRingAnotherCourseParamTable");
-static_assert(sizeof(FTravelRingAnotherCourseParamTable) == 0x000020, "Wrong size on FTravelRingAnotherCourseParamTable");
-static_assert(offsetof(FTravelRingAnotherCourseParamTable, StageId) == 0x000008, "Member 'FTravelRingAnotherCourseParamTable::StageId' has a wrong offset!");
-static_assert(offsetof(FTravelRingAnotherCourseParamTable, bAirPosition) == 0x000009, "Member 'FTravelRingAnotherCourseParamTable::bAirPosition' has a wrong offset!");
-static_assert(offsetof(FTravelRingAnotherCourseParamTable, HeightOffset) == 0x00000C, "Member 'FTravelRingAnotherCourseParamTable::HeightOffset' has a wrong offset!");
-static_assert(offsetof(FTravelRingAnotherCourseParamTable, Comment) == 0x000010, "Member 'FTravelRingAnotherCourseParamTable::Comment' has a wrong offset!");
+static_assert(alignof(FReappearanceDifferentItemData) == 0x000008, "Wrong alignment on FReappearanceDifferentItemData");
+static_assert(sizeof(FReappearanceDifferentItemData) == 0x000010, "Wrong size on FReappearanceDifferentItemData");
+static_assert(offsetof(FReappearanceDifferentItemData, ItemId) == 0x000008, "Member 'FReappearanceDifferentItemData::ItemId' has a wrong offset!");
+static_assert(offsetof(FReappearanceDifferentItemData, ReappearanceTime) == 0x00000C, "Member 'FReappearanceDifferentItemData::ReappearanceTime' has a wrong offset!");
+
+// ScriptStruct UnionRun.CyanLaserMoveInfo
+// 0x0170 (0x0170 - 0x0000)
+struct alignas(0x10) FCyanLaserMoveInfo final
+{
+public:
+	uint8                                         Pad_0[0x170];                                      // 0x0000(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCyanLaserMoveInfo) == 0x000010, "Wrong alignment on FCyanLaserMoveInfo");
+static_assert(sizeof(FCyanLaserMoveInfo) == 0x000170, "Wrong size on FCyanLaserMoveInfo");
 
 // ScriptStruct UnionRun.Collider
 // 0x0030 (0x0030 - 0x0000)
@@ -3126,35 +3207,26 @@ static_assert(offsetof(FCollider, _Radius) == 0x000020, "Member 'FCollider::_Rad
 static_assert(offsetof(FCollider, _HalfHeight) == 0x000024, "Member 'FCollider::_HalfHeight' has a wrong offset!");
 static_assert(offsetof(FCollider, _Axes) == 0x000028, "Member 'FCollider::_Axes' has a wrong offset!");
 
-// ScriptStruct UnionRun.GroupHitInfo
-// 0x0058 (0x0058 - 0x0000)
-struct FGroupHitInfo final
+// ScriptStruct UnionRun.HitInfo
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FHitInfo final
 {
 public:
-	int32                                         GroupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GroupBonusHitCount;                                // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            RacersHitCountList;                                // 0x0008(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGroupHitInfo) == 0x000008, "Wrong alignment on FGroupHitInfo");
-static_assert(sizeof(FGroupHitInfo) == 0x000058, "Wrong size on FGroupHitInfo");
-static_assert(offsetof(FGroupHitInfo, GroupIndex) == 0x000000, "Member 'FGroupHitInfo::GroupIndex' has a wrong offset!");
-static_assert(offsetof(FGroupHitInfo, GroupBonusHitCount) == 0x000004, "Member 'FGroupHitInfo::GroupBonusHitCount' has a wrong offset!");
-static_assert(offsetof(FGroupHitInfo, RacersHitCountList) == 0x000008, "Member 'FGroupHitInfo::RacersHitCountList' has a wrong offset!");
+static_assert(alignof(FHitInfo) == 0x000004, "Wrong alignment on FHitInfo");
+static_assert(sizeof(FHitInfo) == 0x000008, "Wrong size on FHitInfo");
 
-// ScriptStruct UnionRun.AreaDataCourseColContentsPart
-// 0x0028 (0x0028 - 0x0000)
-struct FAreaDataCourseColContentsPart final
+// ScriptStruct UnionRun.AreaDataCourseColSettingsCount
+// 0x0010 (0x0010 - 0x0000)
+struct FAreaDataCourseColSettingsCount final
 {
 public:
-	TArray<int32>                                 TriIndices;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector3f                              AabbMin;                                           // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector3f                              AabbMax;                                           // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TrianglesCounts;                                   // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAreaDataCourseColContentsPart) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsPart");
-static_assert(sizeof(FAreaDataCourseColContentsPart) == 0x000028, "Wrong size on FAreaDataCourseColContentsPart");
-static_assert(offsetof(FAreaDataCourseColContentsPart, TriIndices) == 0x000000, "Member 'FAreaDataCourseColContentsPart::TriIndices' has a wrong offset!");
-static_assert(offsetof(FAreaDataCourseColContentsPart, AabbMin) == 0x000010, "Member 'FAreaDataCourseColContentsPart::AabbMin' has a wrong offset!");
-static_assert(offsetof(FAreaDataCourseColContentsPart, AabbMax) == 0x00001C, "Member 'FAreaDataCourseColContentsPart::AabbMax' has a wrong offset!");
+static_assert(alignof(FAreaDataCourseColSettingsCount) == 0x000008, "Wrong alignment on FAreaDataCourseColSettingsCount");
+static_assert(sizeof(FAreaDataCourseColSettingsCount) == 0x000010, "Wrong size on FAreaDataCourseColSettingsCount");
+static_assert(offsetof(FAreaDataCourseColSettingsCount, TrianglesCounts) == 0x000000, "Member 'FAreaDataCourseColSettingsCount::TrianglesCounts' has a wrong offset!");
 
 // ScriptStruct UnionRun.CollisionHitInfo
 // 0x0060 (0x0060 - 0x0000)
@@ -3173,26 +3245,43 @@ static_assert(offsetof(FCollisionHitInfo, CollisionHitType) == 0x000000, "Member
 static_assert(offsetof(FCollisionHitInfo, MyComponent) == 0x000008, "Member 'FCollisionHitInfo::MyComponent' has a wrong offset!");
 static_assert(offsetof(FCollisionHitInfo, OtherComponent) == 0x000010, "Member 'FCollisionHitInfo::OtherComponent' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlayerPointDistanceData
-// 0x0018 (0x0020 - 0x0008)
-struct FPlayerPointDistanceData final : public FTableRowBase
+// ScriptStruct UnionRun.RankGroupLotteryRateDataTableList
+// 0x4428 (0x4430 - 0x0008)
+struct FRankGroupLotteryRateDataTableList final : public FTableRowBase
 {
 public:
-	EPointDistanceGroup                           PointDistanceGroup;                                // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GrandPrix;                                         // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Group;                                             // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duel;                                              // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Other;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ELotteryRateType                              LotteryRateType;                                   // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup1;         // 0x0010(0x0DA0)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup2;         // 0x0DB0(0x0DA0)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup3;         // 0x1B50(0x0DA0)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup4;         // 0x28F0(0x0DA0)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTable         RankGroupLotteryRateDataTable__RankGroup5;         // 0x3690(0x0DA0)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlayerPointDistanceData) == 0x000008, "Wrong alignment on FPlayerPointDistanceData");
-static_assert(sizeof(FPlayerPointDistanceData) == 0x000020, "Wrong size on FPlayerPointDistanceData");
-static_assert(offsetof(FPlayerPointDistanceData, PointDistanceGroup) == 0x000008, "Member 'FPlayerPointDistanceData::PointDistanceGroup' has a wrong offset!");
-static_assert(offsetof(FPlayerPointDistanceData, GrandPrix) == 0x00000C, "Member 'FPlayerPointDistanceData::GrandPrix' has a wrong offset!");
-static_assert(offsetof(FPlayerPointDistanceData, Group) == 0x000010, "Member 'FPlayerPointDistanceData::Group' has a wrong offset!");
-static_assert(offsetof(FPlayerPointDistanceData, Duel) == 0x000014, "Member 'FPlayerPointDistanceData::Duel' has a wrong offset!");
-static_assert(offsetof(FPlayerPointDistanceData, Other) == 0x000018, "Member 'FPlayerPointDistanceData::Other' has a wrong offset!");
+static_assert(alignof(FRankGroupLotteryRateDataTableList) == 0x000008, "Wrong alignment on FRankGroupLotteryRateDataTableList");
+static_assert(sizeof(FRankGroupLotteryRateDataTableList) == 0x004430, "Wrong size on FRankGroupLotteryRateDataTableList");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, LotteryRateType) == 0x000008, "Member 'FRankGroupLotteryRateDataTableList::LotteryRateType' has a wrong offset!");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup1) == 0x000010, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup1' has a wrong offset!");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup2) == 0x000DB0, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup2' has a wrong offset!");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup3) == 0x001B50, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup3' has a wrong offset!");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup4) == 0x0028F0, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup4' has a wrong offset!");
+static_assert(offsetof(FRankGroupLotteryRateDataTableList, RankGroupLotteryRateDataTable__RankGroup5) == 0x003690, "Member 'FRankGroupLotteryRateDataTableList::RankGroupLotteryRateDataTable__RankGroup5' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComRankGroupLotteryRateDataList
+// 0x8868 (0x8870 - 0x0008)
+struct FComRankGroupLotteryRateDataList final : public FTableRowBase
+{
+public:
+	EComLotteryRateDataTableType                  ComLotteryRateData;                                // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRankGroupLotteryRateDataTableList     Normal;                                            // 0x0010(0x4430)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTableList     Special;                                           // 0x4440(0x4430)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComRankGroupLotteryRateDataList) == 0x000008, "Wrong alignment on FComRankGroupLotteryRateDataList");
+static_assert(sizeof(FComRankGroupLotteryRateDataList) == 0x008870, "Wrong size on FComRankGroupLotteryRateDataList");
+static_assert(offsetof(FComRankGroupLotteryRateDataList, ComLotteryRateData) == 0x000008, "Member 'FComRankGroupLotteryRateDataList::ComLotteryRateData' has a wrong offset!");
+static_assert(offsetof(FComRankGroupLotteryRateDataList, Normal) == 0x000010, "Member 'FComRankGroupLotteryRateDataList::Normal' has a wrong offset!");
+static_assert(offsetof(FComRankGroupLotteryRateDataList, Special) == 0x004440, "Member 'FComRankGroupLotteryRateDataList::Special' has a wrong offset!");
 
 // ScriptStruct UnionRun.StaticBodyCapsuleParam
 // 0x0008 (0x0008 - 0x0000)
@@ -3218,6 +3307,58 @@ static_assert(alignof(FDonutHoopPackageRingParam) == 0x000001, "Wrong alignment 
 static_assert(sizeof(FDonutHoopPackageRingParam) == 0x000001, "Wrong size on FDonutHoopPackageRingParam");
 static_assert(offsetof(FDonutHoopPackageRingParam, RingType) == 0x000000, "Member 'FDonutHoopPackageRingParam::RingType' has a wrong offset!");
 
+// ScriptStruct UnionRun.TravelRingAnotherCourseParamTable
+// 0x0018 (0x0020 - 0x0008)
+struct FTravelRingAnotherCourseParamTable final : public FTableRowBase
+{
+public:
+	EStageId                                      StageId;                                           // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAirPosition;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HeightOffset;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Comment;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTravelRingAnotherCourseParamTable) == 0x000008, "Wrong alignment on FTravelRingAnotherCourseParamTable");
+static_assert(sizeof(FTravelRingAnotherCourseParamTable) == 0x000020, "Wrong size on FTravelRingAnotherCourseParamTable");
+static_assert(offsetof(FTravelRingAnotherCourseParamTable, StageId) == 0x000008, "Member 'FTravelRingAnotherCourseParamTable::StageId' has a wrong offset!");
+static_assert(offsetof(FTravelRingAnotherCourseParamTable, bAirPosition) == 0x000009, "Member 'FTravelRingAnotherCourseParamTable::bAirPosition' has a wrong offset!");
+static_assert(offsetof(FTravelRingAnotherCourseParamTable, HeightOffset) == 0x00000C, "Member 'FTravelRingAnotherCourseParamTable::HeightOffset' has a wrong offset!");
+static_assert(offsetof(FTravelRingAnotherCourseParamTable, Comment) == 0x000010, "Member 'FTravelRingAnotherCourseParamTable::Comment' has a wrong offset!");
+
+// ScriptStruct UnionRun.StaticBodyCylinderParam
+// 0x0008 (0x0008 - 0x0000)
+struct FStaticBodyCylinderParam final
+{
+public:
+	float                                         Radius;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStaticBodyCylinderParam) == 0x000004, "Wrong alignment on FStaticBodyCylinderParam");
+static_assert(sizeof(FStaticBodyCylinderParam) == 0x000008, "Wrong size on FStaticBodyCylinderParam");
+static_assert(offsetof(FStaticBodyCylinderParam, Radius) == 0x000000, "Member 'FStaticBodyCylinderParam::Radius' has a wrong offset!");
+static_assert(offsetof(FStaticBodyCylinderParam, Height) == 0x000004, "Member 'FStaticBodyCylinderParam::Height' has a wrong offset!");
+
+// ScriptStruct UnionRun.TargetedByItemDataSet
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FTargetedByItemDataSet final
+{
+public:
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTargetedByItemDataSet) == 0x000008, "Wrong alignment on FTargetedByItemDataSet");
+static_assert(sizeof(FTargetedByItemDataSet) == 0x000040, "Wrong size on FTargetedByItemDataSet");
+
+// ScriptStruct UnionRun.StaticBodyBoxParam
+// 0x0018 (0x0018 - 0x0000)
+struct FStaticBodyBoxParam final
+{
+public:
+	struct FVector                                HalfExtents;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStaticBodyBoxParam) == 0x000008, "Wrong alignment on FStaticBodyBoxParam");
+static_assert(sizeof(FStaticBodyBoxParam) == 0x000018, "Wrong size on FStaticBodyBoxParam");
+static_assert(offsetof(FStaticBodyBoxParam, HalfExtents) == 0x000000, "Member 'FStaticBodyBoxParam::HalfExtents' has a wrong offset!");
+
 // ScriptStruct UnionRun.DonutHoopParam
 // 0x0058 (0x0058 - 0x0000)
 struct FDonutHoopParam final
@@ -3242,87 +3383,20 @@ static_assert(offsetof(FDonutHoopParam, ItemBoxParam) == 0x00000C, "Member 'FDon
 static_assert(offsetof(FDonutHoopParam, LocationOffset) == 0x000018, "Member 'FDonutHoopParam::LocationOffset' has a wrong offset!");
 static_assert(offsetof(FDonutHoopParam, RotationOffset) == 0x000030, "Member 'FDonutHoopParam::RotationOffset' has a wrong offset!");
 
-// ScriptStruct UnionRun.RelativeMoveParameter
-// 0x000C (0x000C - 0x0000)
-struct FRelativeMoveParameter
-{
-public:
-	float                                         ModelMinScale;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ModelScaleTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RelativeMoveTime;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRelativeMoveParameter) == 0x000004, "Wrong alignment on FRelativeMoveParameter");
-static_assert(sizeof(FRelativeMoveParameter) == 0x00000C, "Wrong size on FRelativeMoveParameter");
-static_assert(offsetof(FRelativeMoveParameter, ModelMinScale) == 0x000000, "Member 'FRelativeMoveParameter::ModelMinScale' has a wrong offset!");
-static_assert(offsetof(FRelativeMoveParameter, ModelScaleTime) == 0x000004, "Member 'FRelativeMoveParameter::ModelScaleTime' has a wrong offset!");
-static_assert(offsetof(FRelativeMoveParameter, RelativeMoveTime) == 0x000008, "Member 'FRelativeMoveParameter::RelativeMoveTime' has a wrong offset!");
-
-// ScriptStruct UnionRun.StaticBodyCylinderParam
-// 0x0008 (0x0008 - 0x0000)
-struct FStaticBodyCylinderParam final
-{
-public:
-	float                                         Radius;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStaticBodyCylinderParam) == 0x000004, "Wrong alignment on FStaticBodyCylinderParam");
-static_assert(sizeof(FStaticBodyCylinderParam) == 0x000008, "Wrong size on FStaticBodyCylinderParam");
-static_assert(offsetof(FStaticBodyCylinderParam, Radius) == 0x000000, "Member 'FStaticBodyCylinderParam::Radius' has a wrong offset!");
-static_assert(offsetof(FStaticBodyCylinderParam, Height) == 0x000004, "Member 'FStaticBodyCylinderParam::Height' has a wrong offset!");
-
-// ScriptStruct UnionRun.StaticBodyBoxParam
+// ScriptStruct UnionRun.UnionRunPathBinaryParameter
 // 0x0018 (0x0018 - 0x0000)
-struct FStaticBodyBoxParam final
+struct FUnionRunPathBinaryParameter final
 {
 public:
-	struct FVector                                HalfExtents;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChunkDataCount;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Data;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStaticBodyBoxParam) == 0x000008, "Wrong alignment on FStaticBodyBoxParam");
-static_assert(sizeof(FStaticBodyBoxParam) == 0x000018, "Wrong size on FStaticBodyBoxParam");
-static_assert(offsetof(FStaticBodyBoxParam, HalfExtents) == 0x000000, "Member 'FStaticBodyBoxParam::HalfExtents' has a wrong offset!");
-
-// ScriptStruct UnionRun.SplineParam
-// 0x0014 (0x0014 - 0x0000)
-struct FSplineParam final
-{
-public:
-	bool                                          bHidden;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPointCut;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCarRoute;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBoatRoute;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlaneRoute;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShortCut;                                         // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSlide;                                            // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNeverItem;                                        // 0x0007(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNoItemRelease;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRunOff;                                           // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGuidedJump;                                       // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bYellowDrill;                                      // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRespotInvalid;                                    // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvalidSection;                                   // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvalidAssist;                                    // 0x000E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERandomObjType                                RandomType;                                        // 0x000F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RandomId;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSplineParam) == 0x000004, "Wrong alignment on FSplineParam");
-static_assert(sizeof(FSplineParam) == 0x000014, "Wrong size on FSplineParam");
-static_assert(offsetof(FSplineParam, bHidden) == 0x000000, "Member 'FSplineParam::bHidden' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bPointCut) == 0x000001, "Member 'FSplineParam::bPointCut' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bCarRoute) == 0x000002, "Member 'FSplineParam::bCarRoute' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bBoatRoute) == 0x000003, "Member 'FSplineParam::bBoatRoute' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bPlaneRoute) == 0x000004, "Member 'FSplineParam::bPlaneRoute' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bShortCut) == 0x000005, "Member 'FSplineParam::bShortCut' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bSlide) == 0x000006, "Member 'FSplineParam::bSlide' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bNeverItem) == 0x000007, "Member 'FSplineParam::bNeverItem' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bNoItemRelease) == 0x000008, "Member 'FSplineParam::bNoItemRelease' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bRunOff) == 0x000009, "Member 'FSplineParam::bRunOff' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bGuidedJump) == 0x00000A, "Member 'FSplineParam::bGuidedJump' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bYellowDrill) == 0x00000B, "Member 'FSplineParam::bYellowDrill' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bRespotInvalid) == 0x00000C, "Member 'FSplineParam::bRespotInvalid' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bInvalidSection) == 0x00000D, "Member 'FSplineParam::bInvalidSection' has a wrong offset!");
-static_assert(offsetof(FSplineParam, bInvalidAssist) == 0x00000E, "Member 'FSplineParam::bInvalidAssist' has a wrong offset!");
-static_assert(offsetof(FSplineParam, RandomType) == 0x00000F, "Member 'FSplineParam::RandomType' has a wrong offset!");
-static_assert(offsetof(FSplineParam, RandomId) == 0x000010, "Member 'FSplineParam::RandomId' has a wrong offset!");
+static_assert(alignof(FUnionRunPathBinaryParameter) == 0x000008, "Wrong alignment on FUnionRunPathBinaryParameter");
+static_assert(sizeof(FUnionRunPathBinaryParameter) == 0x000018, "Wrong size on FUnionRunPathBinaryParameter");
+static_assert(offsetof(FUnionRunPathBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionRunPathBinaryParameter::DataVersion' has a wrong offset!");
+static_assert(offsetof(FUnionRunPathBinaryParameter, ChunkDataCount) == 0x000004, "Member 'FUnionRunPathBinaryParameter::ChunkDataCount' has a wrong offset!");
+static_assert(offsetof(FUnionRunPathBinaryParameter, Data) == 0x000008, "Member 'FUnionRunPathBinaryParameter::Data' has a wrong offset!");
 
 // ScriptStruct UnionRun.StaticBodySphereParam
 // 0x0004 (0x0004 - 0x0000)
@@ -3335,30 +3409,42 @@ static_assert(alignof(FStaticBodySphereParam) == 0x000004, "Wrong alignment on F
 static_assert(sizeof(FStaticBodySphereParam) == 0x000004, "Wrong size on FStaticBodySphereParam");
 static_assert(offsetof(FStaticBodySphereParam, Radius) == 0x000000, "Member 'FStaticBodySphereParam::Radius' has a wrong offset!");
 
-// ScriptStruct UnionRun.TargetedByItemDataSet
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FTargetedByItemDataSet final
+// ScriptStruct UnionRun.MyAimData
+// 0x0030 (0x0030 - 0x0000)
+struct alignas(0x08) FMyAimData final
 {
 public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTargetedByItemDataSet) == 0x000008, "Wrong alignment on FTargetedByItemDataSet");
-static_assert(sizeof(FTargetedByItemDataSet) == 0x000040, "Wrong size on FTargetedByItemDataSet");
+static_assert(alignof(FMyAimData) == 0x000008, "Wrong alignment on FMyAimData");
+static_assert(sizeof(FMyAimData) == 0x000030, "Wrong size on FMyAimData");
 
-// ScriptStruct UnionRun.Enemy_Extnd06_Enemy06001_Size
-// 0x0020 (0x0020 - 0x0000)
-struct FEnemy_Extnd06_Enemy06001_Size final
+// ScriptStruct UnionRun.EnemySquidPhase1Attack
+// 0x0048 (0x0048 - 0x0000)
+struct FEnemySquidPhase1Attack final
 {
 public:
-	float                                         Height;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Offset;                                            // 0x0008(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LifeTime;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BulletNum;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BulletSpeed_KPH;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoveToPathTime;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttackFirstDelayTime;                              // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttackIntervalTime;                                // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RapidIntervalTime;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        LanesOffset;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnemy_Extnd06_Enemy06001_Size) == 0x000008, "Wrong alignment on FEnemy_Extnd06_Enemy06001_Size");
-static_assert(sizeof(FEnemy_Extnd06_Enemy06001_Size) == 0x000020, "Wrong size on FEnemy_Extnd06_Enemy06001_Size");
-static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Height) == 0x000000, "Member 'FEnemy_Extnd06_Enemy06001_Size::Height' has a wrong offset!");
-static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Radius) == 0x000004, "Member 'FEnemy_Extnd06_Enemy06001_Size::Radius' has a wrong offset!");
-static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Offset) == 0x000008, "Member 'FEnemy_Extnd06_Enemy06001_Size::Offset' has a wrong offset!");
+static_assert(alignof(FEnemySquidPhase1Attack) == 0x000008, "Wrong alignment on FEnemySquidPhase1Attack");
+static_assert(sizeof(FEnemySquidPhase1Attack) == 0x000048, "Wrong size on FEnemySquidPhase1Attack");
+static_assert(offsetof(FEnemySquidPhase1Attack, LifeTime) == 0x000000, "Member 'FEnemySquidPhase1Attack::LifeTime' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, BulletNum) == 0x000004, "Member 'FEnemySquidPhase1Attack::BulletNum' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, BulletSpeed_KPH) == 0x000008, "Member 'FEnemySquidPhase1Attack::BulletSpeed_KPH' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, MoveToPathTime) == 0x00000C, "Member 'FEnemySquidPhase1Attack::MoveToPathTime' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, AttackFirstDelayTime) == 0x000010, "Member 'FEnemySquidPhase1Attack::AttackFirstDelayTime' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, AttackIntervalTime) == 0x000014, "Member 'FEnemySquidPhase1Attack::AttackIntervalTime' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, RapidIntervalTime) == 0x000018, "Member 'FEnemySquidPhase1Attack::RapidIntervalTime' has a wrong offset!");
+static_assert(offsetof(FEnemySquidPhase1Attack, LanesOffset) == 0x000020, "Member 'FEnemySquidPhase1Attack::LanesOffset' has a wrong offset!");
 
 // ScriptStruct UnionRun.CollisionHitResultInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -3399,44 +3485,20 @@ static_assert(offsetof(FLotteryBubbleBonusItemRateData, NormalBox) == 0x000018, 
 static_assert(offsetof(FLotteryBubbleBonusItemRateData, DoubleBox) == 0x00001C, "Member 'FLotteryBubbleBonusItemRateData::DoubleBox' has a wrong offset!");
 static_assert(offsetof(FLotteryBubbleBonusItemRateData, SpecialBox) == 0x000020, "Member 'FLotteryBubbleBonusItemRateData::SpecialBox' has a wrong offset!");
 
-// ScriptStruct UnionRun.OnlineRacerParam
-// 0x0078 (0x0078 - 0x0000)
-struct FOnlineRacerParam final
+// ScriptStruct UnionRun.WeakHomingParam
+// 0x000C (0x000C - 0x0000)
+struct FWeakHomingParam final
 {
 public:
-	uint8                                         Version;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   RacerName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	EDriverId                                     DriverId;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    MachineId;                                         // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    FrontMachineId;                                    // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    RearMachineId;                                     // 0x002B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    TireMachineId;                                     // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ComControlType;                                    // 0x002D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         ComLevel;                                          // 0x002E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         GroupId;                                           // 0x002F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         GadgetPlateId;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EGadgetId>                             GadgetArray;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 GadgetSlotArray;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x20];                                      // 0x0058(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SearchAreaWidth;                                   // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SearchAreaLength;                                  // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CorrctionMaxAngularSpeed;                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineRacerParam) == 0x000008, "Wrong alignment on FOnlineRacerParam");
-static_assert(sizeof(FOnlineRacerParam) == 0x000078, "Wrong size on FOnlineRacerParam");
-static_assert(offsetof(FOnlineRacerParam, Version) == 0x000000, "Member 'FOnlineRacerParam::Version' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, RacerName) == 0x000008, "Member 'FOnlineRacerParam::RacerName' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, DriverId) == 0x000028, "Member 'FOnlineRacerParam::DriverId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, MachineId) == 0x000029, "Member 'FOnlineRacerParam::MachineId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, FrontMachineId) == 0x00002A, "Member 'FOnlineRacerParam::FrontMachineId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, RearMachineId) == 0x00002B, "Member 'FOnlineRacerParam::RearMachineId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, TireMachineId) == 0x00002C, "Member 'FOnlineRacerParam::TireMachineId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, ComControlType) == 0x00002D, "Member 'FOnlineRacerParam::ComControlType' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, ComLevel) == 0x00002E, "Member 'FOnlineRacerParam::ComLevel' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, GroupId) == 0x00002F, "Member 'FOnlineRacerParam::GroupId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, GadgetPlateId) == 0x000030, "Member 'FOnlineRacerParam::GadgetPlateId' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, GadgetArray) == 0x000038, "Member 'FOnlineRacerParam::GadgetArray' has a wrong offset!");
-static_assert(offsetof(FOnlineRacerParam, GadgetSlotArray) == 0x000048, "Member 'FOnlineRacerParam::GadgetSlotArray' has a wrong offset!");
+static_assert(alignof(FWeakHomingParam) == 0x000004, "Wrong alignment on FWeakHomingParam");
+static_assert(sizeof(FWeakHomingParam) == 0x00000C, "Wrong size on FWeakHomingParam");
+static_assert(offsetof(FWeakHomingParam, SearchAreaWidth) == 0x000000, "Member 'FWeakHomingParam::SearchAreaWidth' has a wrong offset!");
+static_assert(offsetof(FWeakHomingParam, SearchAreaLength) == 0x000004, "Member 'FWeakHomingParam::SearchAreaLength' has a wrong offset!");
+static_assert(offsetof(FWeakHomingParam, CorrctionMaxAngularSpeed) == 0x000008, "Member 'FWeakHomingParam::CorrctionMaxAngularSpeed' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionVehicleRaceInput
 // 0x0048 (0x0048 - 0x0000)
@@ -3504,30 +3566,6 @@ static_assert(offsetof(FUnionVehicleRaceInput, OnPausePressed) == 0x000040, "Mem
 static_assert(offsetof(FUnionVehicleRaceInput, OnPauseReleased) == 0x000041, "Member 'FUnionVehicleRaceInput::OnPauseReleased' has a wrong offset!");
 static_assert(offsetof(FUnionVehicleRaceInput, OnPausing) == 0x000042, "Member 'FUnionVehicleRaceInput::OnPausing' has a wrong offset!");
 
-// ScriptStruct UnionRun.RaceReactionVoiceEtc
-// 0x0038 (0x0038 - 0x0000)
-struct FRaceReactionVoiceEtc final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId;                                        // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRaceReactionVoiceEtc) == 0x000008, "Wrong alignment on FRaceReactionVoiceEtc");
-static_assert(sizeof(FRaceReactionVoiceEtc) == 0x000038, "Wrong size on FRaceReactionVoiceEtc");
-static_assert(offsetof(FRaceReactionVoiceEtc, Text) == 0x000000, "Member 'FRaceReactionVoiceEtc::Text' has a wrong offset!");
-static_assert(offsetof(FRaceReactionVoiceEtc, CueVoiceId) == 0x000010, "Member 'FRaceReactionVoiceEtc::CueVoiceId' has a wrong offset!");
-
-// ScriptStruct UnionRun.AreaDataCourseColSettingsCount
-// 0x0010 (0x0010 - 0x0000)
-struct FAreaDataCourseColSettingsCount final
-{
-public:
-	TArray<int32>                                 TrianglesCounts;                                   // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAreaDataCourseColSettingsCount) == 0x000008, "Wrong alignment on FAreaDataCourseColSettingsCount");
-static_assert(sizeof(FAreaDataCourseColSettingsCount) == 0x000010, "Wrong size on FAreaDataCourseColSettingsCount");
-static_assert(offsetof(FAreaDataCourseColSettingsCount, TrianglesCounts) == 0x000000, "Member 'FAreaDataCourseColSettingsCount::TrianglesCounts' has a wrong offset!");
-
 // ScriptStruct UnionRun.AreaDataCourseColSettings
 // 0x0050 (0x0050 - 0x0000)
 struct FAreaDataCourseColSettings final
@@ -3563,21 +3601,6 @@ static_assert(offsetof(FAreaDataCourseColSettings, IsFinalLap) == 0x000038, "Mem
 static_assert(offsetof(FAreaDataCourseColSettings, IsStrictDivide) == 0x000039, "Member 'FAreaDataCourseColSettings::IsStrictDivide' has a wrong offset!");
 static_assert(offsetof(FAreaDataCourseColSettings, PolygonMarginLength) == 0x00003C, "Member 'FAreaDataCourseColSettings::PolygonMarginLength' has a wrong offset!");
 static_assert(offsetof(FAreaDataCourseColSettings, CourseCollisionsCounts) == 0x000040, "Member 'FAreaDataCourseColSettings::CourseCollisionsCounts' has a wrong offset!");
-
-// ScriptStruct UnionRun.AreaDataCourseColContentsGrid
-// 0x0068 (0x0068 - 0x0000)
-struct FAreaDataCourseColContentsGrid final
-{
-public:
-	TMap<int32, struct FAreaDataCourseColContentsPart> Container;                                    // 0x0000(0x0050)(NativeAccessSpecifierPublic)
-	struct FVector3f                              AabbMin;                                           // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector3f                              AabbMax;                                           // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAreaDataCourseColContentsGrid) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsGrid");
-static_assert(sizeof(FAreaDataCourseColContentsGrid) == 0x000068, "Wrong size on FAreaDataCourseColContentsGrid");
-static_assert(offsetof(FAreaDataCourseColContentsGrid, Container) == 0x000000, "Member 'FAreaDataCourseColContentsGrid::Container' has a wrong offset!");
-static_assert(offsetof(FAreaDataCourseColContentsGrid, AabbMin) == 0x000050, "Member 'FAreaDataCourseColContentsGrid::AabbMin' has a wrong offset!");
-static_assert(offsetof(FAreaDataCourseColContentsGrid, AabbMax) == 0x00005C, "Member 'FAreaDataCourseColContentsGrid::AabbMax' has a wrong offset!");
 
 // ScriptStruct UnionRun.RacerReactionVoice
 // 0x00A0 (0x00A0 - 0x0000)
@@ -3630,98 +3653,83 @@ static_assert(offsetof(FRacerReactionVoicePack, RacerIndex) == 0x000000, "Member
 static_assert(offsetof(FRacerReactionVoicePack, SerifScreenIndexList) == 0x000008, "Member 'FRacerReactionVoicePack::SerifScreenIndexList' has a wrong offset!");
 static_assert(offsetof(FRacerReactionVoicePack, RacerReactionVoice) == 0x000018, "Member 'FRacerReactionVoicePack::RacerReactionVoice' has a wrong offset!");
 
-// ScriptStruct UnionRun.RacerReactionVoiceList
-// 0x0010 (0x0010 - 0x0000)
-struct FRacerReactionVoiceList final
+// ScriptStruct UnionRun.PlaneDamageReactionParams
+// 0x0014 (0x0014 - 0x0000)
+struct FPlaneDamageReactionParams final
 {
 public:
-	TArray<struct FRacerReactionVoicePack>        VoiceList;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FItemSpeedParam                        ClassSpeed;                                        // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         IntervalSeconds;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRacerReactionVoiceList) == 0x000008, "Wrong alignment on FRacerReactionVoiceList");
-static_assert(sizeof(FRacerReactionVoiceList) == 0x000010, "Wrong size on FRacerReactionVoiceList");
-static_assert(offsetof(FRacerReactionVoiceList, VoiceList) == 0x000000, "Member 'FRacerReactionVoiceList::VoiceList' has a wrong offset!");
+static_assert(alignof(FPlaneDamageReactionParams) == 0x000004, "Wrong alignment on FPlaneDamageReactionParams");
+static_assert(sizeof(FPlaneDamageReactionParams) == 0x000014, "Wrong size on FPlaneDamageReactionParams");
+static_assert(offsetof(FPlaneDamageReactionParams, ClassSpeed) == 0x000000, "Member 'FPlaneDamageReactionParams::ClassSpeed' has a wrong offset!");
+static_assert(offsetof(FPlaneDamageReactionParams, IntervalSeconds) == 0x000010, "Member 'FPlaneDamageReactionParams::IntervalSeconds' has a wrong offset!");
 
-// ScriptStruct UnionRun.RacerReactionChrData
-// 0x0018 (0x0018 - 0x0000)
-struct FRacerReactionChrData final
+// ScriptStruct UnionRun.TremorParameter
+// 0x0020 (0x0028 - 0x0008)
+struct FTremorParameter final : public FTableRowBase
 {
 public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRacerReactionVoiceList                list;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	ECameraTremorType                             CameraTremorType;                                  // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         targetUD;                                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         targetUDSpeed;                                     // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         targetUDTime;                                      // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         targetLR;                                          // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         targetLRSpeed;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         targetLRTime;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRacerReactionChrData) == 0x000008, "Wrong alignment on FRacerReactionChrData");
-static_assert(sizeof(FRacerReactionChrData) == 0x000018, "Wrong size on FRacerReactionChrData");
-static_assert(offsetof(FRacerReactionChrData, DriverId) == 0x000000, "Member 'FRacerReactionChrData::DriverId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionChrData, list) == 0x000008, "Member 'FRacerReactionChrData::list' has a wrong offset!");
+static_assert(alignof(FTremorParameter) == 0x000008, "Wrong alignment on FTremorParameter");
+static_assert(sizeof(FTremorParameter) == 0x000028, "Wrong size on FTremorParameter");
+static_assert(offsetof(FTremorParameter, CameraTremorType) == 0x000008, "Member 'FTremorParameter::CameraTremorType' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetUD) == 0x00000C, "Member 'FTremorParameter::targetUD' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetUDSpeed) == 0x000010, "Member 'FTremorParameter::targetUDSpeed' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetUDTime) == 0x000014, "Member 'FTremorParameter::targetUDTime' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetLR) == 0x000018, "Member 'FTremorParameter::targetLR' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetLRSpeed) == 0x00001C, "Member 'FTremorParameter::targetLRSpeed' has a wrong offset!");
+static_assert(offsetof(FTremorParameter, targetLRTime) == 0x000020, "Member 'FTremorParameter::targetLRTime' has a wrong offset!");
 
-// ScriptStruct UnionRun.AreaDataCourseColContentsCourseCollision
-// 0x0050 (0x0050 - 0x0000)
-struct FAreaDataCourseColContentsCourseCollision final
+// ScriptStruct UnionRun.TeamBoostEnergyAddData
+// 0x0008 (0x0010 - 0x0008)
+struct FTeamBoostEnergyAddData final : public FTableRowBase
 {
 public:
-	TMap<int32, struct FAreaDataCourseColContentsGrid> Container;                                    // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	EEnergyAddBehaviorType                        BehaviorType;                                      // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AddEnergyValue;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAreaDataCourseColContentsCourseCollision) == 0x000008, "Wrong alignment on FAreaDataCourseColContentsCourseCollision");
-static_assert(sizeof(FAreaDataCourseColContentsCourseCollision) == 0x000050, "Wrong size on FAreaDataCourseColContentsCourseCollision");
-static_assert(offsetof(FAreaDataCourseColContentsCourseCollision, Container) == 0x000000, "Member 'FAreaDataCourseColContentsCourseCollision::Container' has a wrong offset!");
+static_assert(alignof(FTeamBoostEnergyAddData) == 0x000008, "Wrong alignment on FTeamBoostEnergyAddData");
+static_assert(sizeof(FTeamBoostEnergyAddData) == 0x000010, "Wrong size on FTeamBoostEnergyAddData");
+static_assert(offsetof(FTeamBoostEnergyAddData, BehaviorType) == 0x000008, "Member 'FTeamBoostEnergyAddData::BehaviorType' has a wrong offset!");
+static_assert(offsetof(FTeamBoostEnergyAddData, AddEnergyValue) == 0x00000C, "Member 'FTeamBoostEnergyAddData::AddEnergyValue' has a wrong offset!");
 
-// ScriptStruct UnionRun.AreaDataCourseColContents
-// 0x0050 (0x0050 - 0x0000)
-struct FAreaDataCourseColContents final
+// ScriptStruct UnionRun.CameraPostEffectDataTable
+// 0x0008 (0x0010 - 0x0008)
+struct FCameraPostEffectDataTable final : public FTableRowBase
 {
 public:
-	TMap<int32, struct FAreaDataCourseColContentsCourseCollision> Container;                         // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     PostEffectMaterialInterface;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAreaDataCourseColContents) == 0x000008, "Wrong alignment on FAreaDataCourseColContents");
-static_assert(sizeof(FAreaDataCourseColContents) == 0x000050, "Wrong size on FAreaDataCourseColContents");
-static_assert(offsetof(FAreaDataCourseColContents, Container) == 0x000000, "Member 'FAreaDataCourseColContents::Container' has a wrong offset!");
+static_assert(alignof(FCameraPostEffectDataTable) == 0x000008, "Wrong alignment on FCameraPostEffectDataTable");
+static_assert(sizeof(FCameraPostEffectDataTable) == 0x000010, "Wrong size on FCameraPostEffectDataTable");
+static_assert(offsetof(FCameraPostEffectDataTable, PostEffectMaterialInterface) == 0x000008, "Member 'FCameraPostEffectDataTable::PostEffectMaterialInterface' has a wrong offset!");
 
-// ScriptStruct UnionRun.MinimapIconInfoDataTableRow
-// 0x0028 (0x0030 - 0x0008)
-struct FMinimapIconInfoDataTableRow final : public FTableRowBase
+// ScriptStruct UnionRun.GroupHitInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FGroupHitInfo final
 {
 public:
-	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GroupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GroupBonusHitCount;                                // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            RacersHitCountList;                                // 0x0008(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMinimapIconInfoDataTableRow) == 0x000008, "Wrong alignment on FMinimapIconInfoDataTableRow");
-static_assert(sizeof(FMinimapIconInfoDataTableRow) == 0x000030, "Wrong size on FMinimapIconInfoDataTableRow");
-static_assert(offsetof(FMinimapIconInfoDataTableRow, IconTexture) == 0x000008, "Member 'FMinimapIconInfoDataTableRow::IconTexture' has a wrong offset!");
-
-// ScriptStruct UnionRun.AttackReply
-// 0x0028 (0x0028 - 0x0000)
-struct FAttackReply final
-{
-public:
-	class FString                                 Tag;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AttackRacerIndex;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TakeDamageRacerIndex;                              // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerDamageType                              DamageType;                                        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ElapsedTime;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RemainTime;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerDamageType                              OverwrittenByThisDamageType;                       // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAttackReply) == 0x000008, "Wrong alignment on FAttackReply");
-static_assert(sizeof(FAttackReply) == 0x000028, "Wrong size on FAttackReply");
-static_assert(offsetof(FAttackReply, Tag) == 0x000000, "Member 'FAttackReply::Tag' has a wrong offset!");
-static_assert(offsetof(FAttackReply, AttackRacerIndex) == 0x000010, "Member 'FAttackReply::AttackRacerIndex' has a wrong offset!");
-static_assert(offsetof(FAttackReply, TakeDamageRacerIndex) == 0x000014, "Member 'FAttackReply::TakeDamageRacerIndex' has a wrong offset!");
-static_assert(offsetof(FAttackReply, DamageType) == 0x000018, "Member 'FAttackReply::DamageType' has a wrong offset!");
-static_assert(offsetof(FAttackReply, ElapsedTime) == 0x00001C, "Member 'FAttackReply::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(FAttackReply, RemainTime) == 0x000020, "Member 'FAttackReply::RemainTime' has a wrong offset!");
-static_assert(offsetof(FAttackReply, OverwrittenByThisDamageType) == 0x000024, "Member 'FAttackReply::OverwrittenByThisDamageType' has a wrong offset!");
-
-// ScriptStruct UnionRun.MyAimData
-// 0x0030 (0x0030 - 0x0000)
-struct alignas(0x08) FMyAimData final
-{
-public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMyAimData) == 0x000008, "Wrong alignment on FMyAimData");
-static_assert(sizeof(FMyAimData) == 0x000030, "Wrong size on FMyAimData");
+static_assert(alignof(FGroupHitInfo) == 0x000008, "Wrong alignment on FGroupHitInfo");
+static_assert(sizeof(FGroupHitInfo) == 0x000058, "Wrong size on FGroupHitInfo");
+static_assert(offsetof(FGroupHitInfo, GroupIndex) == 0x000000, "Member 'FGroupHitInfo::GroupIndex' has a wrong offset!");
+static_assert(offsetof(FGroupHitInfo, GroupBonusHitCount) == 0x000004, "Member 'FGroupHitInfo::GroupBonusHitCount' has a wrong offset!");
+static_assert(offsetof(FGroupHitInfo, RacersHitCountList) == 0x000008, "Member 'FGroupHitInfo::RacersHitCountList' has a wrong offset!");
 
 // ScriptStruct UnionRun.TravelRingMainCourseParamTable
 // 0x0018 (0x0020 - 0x0008)
@@ -3738,25 +3746,6 @@ static_assert(sizeof(FTravelRingMainCourseParamTable) == 0x000020, "Wrong size o
 static_assert(offsetof(FTravelRingMainCourseParamTable, StageId) == 0x000008, "Member 'FTravelRingMainCourseParamTable::StageId' has a wrong offset!");
 static_assert(offsetof(FTravelRingMainCourseParamTable, HeightOffset) == 0x00000C, "Member 'FTravelRingMainCourseParamTable::HeightOffset' has a wrong offset!");
 static_assert(offsetof(FTravelRingMainCourseParamTable, Comment) == 0x000010, "Member 'FTravelRingMainCourseParamTable::Comment' has a wrong offset!");
-
-// ScriptStruct UnionRun.GroupBattlePersonalResult
-// 0x0014 (0x0014 - 0x0000)
-struct FGroupBattlePersonalResult final
-{
-public:
-	int32                                         GroupIndex;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RacerIndex;                                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Traction;                                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGroupBattlePersonalResult) == 0x000004, "Wrong alignment on FGroupBattlePersonalResult");
-static_assert(sizeof(FGroupBattlePersonalResult) == 0x000014, "Wrong size on FGroupBattlePersonalResult");
-static_assert(offsetof(FGroupBattlePersonalResult, GroupIndex) == 0x000000, "Member 'FGroupBattlePersonalResult::GroupIndex' has a wrong offset!");
-static_assert(offsetof(FGroupBattlePersonalResult, RacerIndex) == 0x000004, "Member 'FGroupBattlePersonalResult::RacerIndex' has a wrong offset!");
-static_assert(offsetof(FGroupBattlePersonalResult, Value) == 0x000008, "Member 'FGroupBattlePersonalResult::Value' has a wrong offset!");
-static_assert(offsetof(FGroupBattlePersonalResult, Rank) == 0x00000C, "Member 'FGroupBattlePersonalResult::Rank' has a wrong offset!");
-static_assert(offsetof(FGroupBattlePersonalResult, Traction) == 0x000010, "Member 'FGroupBattlePersonalResult::Traction' has a wrong offset!");
 
 // ScriptStruct UnionRun.CourseSequenceSpawnActorInfo
 // 0x0080 (0x0080 - 0x0000)
@@ -3775,30 +3764,59 @@ static_assert(offsetof(FCourseSequenceSpawnActorInfo, spawnClass_) == 0x000000, 
 static_assert(offsetof(FCourseSequenceSpawnActorInfo, offsetTransform_) == 0x000010, "Member 'FCourseSequenceSpawnActorInfo::offsetTransform_' has a wrong offset!");
 static_assert(offsetof(FCourseSequenceSpawnActorInfo, sequenceTriggerLabel_) == 0x000070, "Member 'FCourseSequenceSpawnActorInfo::sequenceTriggerLabel_' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetVariousMemberInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FGadgetVariousMemberInfo final
+// ScriptStruct UnionRun.RelativeMoveParameter
+// 0x000C (0x000C - 0x0000)
+struct FRelativeMoveParameter
 {
 public:
-	class FName                                   ParamMapKey;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ModelMinScale;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ModelScaleTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RelativeMoveTime;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGadgetVariousMemberInfo) == 0x000004, "Wrong alignment on FGadgetVariousMemberInfo");
-static_assert(sizeof(FGadgetVariousMemberInfo) == 0x000008, "Wrong size on FGadgetVariousMemberInfo");
-static_assert(offsetof(FGadgetVariousMemberInfo, ParamMapKey) == 0x000000, "Member 'FGadgetVariousMemberInfo::ParamMapKey' has a wrong offset!");
+static_assert(alignof(FRelativeMoveParameter) == 0x000004, "Wrong alignment on FRelativeMoveParameter");
+static_assert(sizeof(FRelativeMoveParameter) == 0x00000C, "Wrong size on FRelativeMoveParameter");
+static_assert(offsetof(FRelativeMoveParameter, ModelMinScale) == 0x000000, "Member 'FRelativeMoveParameter::ModelMinScale' has a wrong offset!");
+static_assert(offsetof(FRelativeMoveParameter, ModelScaleTime) == 0x000004, "Member 'FRelativeMoveParameter::ModelScaleTime' has a wrong offset!");
+static_assert(offsetof(FRelativeMoveParameter, RelativeMoveTime) == 0x000008, "Member 'FRelativeMoveParameter::RelativeMoveTime' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetVariousDefine
-// 0x0058 (0x0060 - 0x0008)
-struct FGadgetVariousDefine final : public FTableRowBase
+// ScriptStruct UnionRun.EntryRacer
+// 0x0080 (0x0080 - 0x0000)
+struct alignas(0x08) FEntryRacer final
 {
 public:
-	EGadgetId                                     gadgetId;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EGadgetId, struct FGadgetVariousMemberInfo> GadgetMemberIDs;                                // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGadgetVariousDefine) == 0x000008, "Wrong alignment on FGadgetVariousDefine");
-static_assert(sizeof(FGadgetVariousDefine) == 0x000060, "Wrong size on FGadgetVariousDefine");
-static_assert(offsetof(FGadgetVariousDefine, gadgetId) == 0x000008, "Member 'FGadgetVariousDefine::gadgetId' has a wrong offset!");
-static_assert(offsetof(FGadgetVariousDefine, GadgetMemberIDs) == 0x000010, "Member 'FGadgetVariousDefine::GadgetMemberIDs' has a wrong offset!");
+static_assert(alignof(FEntryRacer) == 0x000008, "Wrong alignment on FEntryRacer");
+static_assert(sizeof(FEntryRacer) == 0x000080, "Wrong size on FEntryRacer");
+
+// ScriptStruct UnionRun.EntryGroup
+// 0x0038 (0x0038 - 0x0000)
+struct FEntryGroup final
+{
+public:
+	int32                                         GroupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TeamBoostUnlockGauge;                              // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentBoostCycle;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartRaceTime;                                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostPhaseTransitionTimer;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTeamBoost;                                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FEntryRacer>                    EntryRacers;                                       // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         UserData;                                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FEntryGroup) == 0x000008, "Wrong alignment on FEntryGroup");
+static_assert(sizeof(FEntryGroup) == 0x000038, "Wrong size on FEntryGroup");
+static_assert(offsetof(FEntryGroup, GroupIndex) == 0x000000, "Member 'FEntryGroup::GroupIndex' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, TeamBoostUnlockGauge) == 0x000004, "Member 'FEntryGroup::TeamBoostUnlockGauge' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, CurrentBoostCycle) == 0x000008, "Member 'FEntryGroup::CurrentBoostCycle' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, Rank) == 0x00000C, "Member 'FEntryGroup::Rank' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, StartRaceTime) == 0x000010, "Member 'FEntryGroup::StartRaceTime' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, BoostPhaseTransitionTimer) == 0x000014, "Member 'FEntryGroup::BoostPhaseTransitionTimer' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, bIsTeamBoost) == 0x000018, "Member 'FEntryGroup::bIsTeamBoost' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, EntryRacers) == 0x000020, "Member 'FEntryGroup::EntryRacers' has a wrong offset!");
+static_assert(offsetof(FEntryGroup, UserData) == 0x000030, "Member 'FEntryGroup::UserData' has a wrong offset!");
 
 // ScriptStruct UnionRun.ItemboxRelativeMoveParameter
 // 0x001C (0x0028 - 0x000C)
@@ -3839,41 +3857,6 @@ static_assert(offsetof(FDroppedRingLandJumpParameter, RandomnessFrontJumpingSpee
 static_assert(offsetof(FDroppedRingLandJumpParameter, RandomnessUperJumpingSpeed) == 0x000018, "Member 'FDroppedRingLandJumpParameter::RandomnessUperJumpingSpeed' has a wrong offset!");
 static_assert(offsetof(FDroppedRingLandJumpParameter, RelativeMoveTime) == 0x00001C, "Member 'FDroppedRingLandJumpParameter::RelativeMoveTime' has a wrong offset!");
 static_assert(offsetof(FDroppedRingLandJumpParameter, RelativeMove) == 0x000020, "Member 'FDroppedRingLandJumpParameter::RelativeMove' has a wrong offset!");
-
-// ScriptStruct UnionRun.TeamBoostEnergyAddData
-// 0x0008 (0x0010 - 0x0008)
-struct FTeamBoostEnergyAddData final : public FTableRowBase
-{
-public:
-	EEnergyAddBehaviorType                        BehaviorType;                                      // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AddEnergyValue;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTeamBoostEnergyAddData) == 0x000008, "Wrong alignment on FTeamBoostEnergyAddData");
-static_assert(sizeof(FTeamBoostEnergyAddData) == 0x000010, "Wrong size on FTeamBoostEnergyAddData");
-static_assert(offsetof(FTeamBoostEnergyAddData, BehaviorType) == 0x000008, "Member 'FTeamBoostEnergyAddData::BehaviorType' has a wrong offset!");
-static_assert(offsetof(FTeamBoostEnergyAddData, AddEnergyValue) == 0x00000C, "Member 'FTeamBoostEnergyAddData::AddEnergyValue' has a wrong offset!");
-
-// ScriptStruct UnionRun.DroppedRingSkyJumpParameter
-// 0x0018 (0x0018 - 0x0000)
-struct FDroppedRingSkyJumpParameter final
-{
-public:
-	float                                         GravitationalAcceleration;                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OffsetWidth;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         JumpingSpeed;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RandomnessJumpingSpeed;                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FlightDistance;                                    // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RandomnessFlightDistance;                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDroppedRingSkyJumpParameter) == 0x000004, "Wrong alignment on FDroppedRingSkyJumpParameter");
-static_assert(sizeof(FDroppedRingSkyJumpParameter) == 0x000018, "Wrong size on FDroppedRingSkyJumpParameter");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, GravitationalAcceleration) == 0x000000, "Member 'FDroppedRingSkyJumpParameter::GravitationalAcceleration' has a wrong offset!");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, OffsetWidth) == 0x000004, "Member 'FDroppedRingSkyJumpParameter::OffsetWidth' has a wrong offset!");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, JumpingSpeed) == 0x000008, "Member 'FDroppedRingSkyJumpParameter::JumpingSpeed' has a wrong offset!");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, RandomnessJumpingSpeed) == 0x00000C, "Member 'FDroppedRingSkyJumpParameter::RandomnessJumpingSpeed' has a wrong offset!");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, FlightDistance) == 0x000010, "Member 'FDroppedRingSkyJumpParameter::FlightDistance' has a wrong offset!");
-static_assert(offsetof(FDroppedRingSkyJumpParameter, RandomnessFlightDistance) == 0x000014, "Member 'FDroppedRingSkyJumpParameter::RandomnessFlightDistance' has a wrong offset!");
 
 // ScriptStruct UnionRun.DroppedRingPlacementInfo
 // 0x001C (0x001C - 0x0000)
@@ -3919,6 +3902,40 @@ static_assert(offsetof(FEnemySquidPhase2Attack, MoveToPathTime) == 0x000008, "Me
 static_assert(offsetof(FEnemySquidPhase2Attack, AttackFirstDelayTime) == 0x00000C, "Member 'FEnemySquidPhase2Attack::AttackFirstDelayTime' has a wrong offset!");
 static_assert(offsetof(FEnemySquidPhase2Attack, AttackIntervalTime) == 0x000010, "Member 'FEnemySquidPhase2Attack::AttackIntervalTime' has a wrong offset!");
 
+// ScriptStruct UnionRun.GroupBattlePersonalResult
+// 0x0014 (0x0014 - 0x0000)
+struct FGroupBattlePersonalResult final
+{
+public:
+	int32                                         GroupIndex;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerIndex;                                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Traction;                                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGroupBattlePersonalResult) == 0x000004, "Wrong alignment on FGroupBattlePersonalResult");
+static_assert(sizeof(FGroupBattlePersonalResult) == 0x000014, "Wrong size on FGroupBattlePersonalResult");
+static_assert(offsetof(FGroupBattlePersonalResult, GroupIndex) == 0x000000, "Member 'FGroupBattlePersonalResult::GroupIndex' has a wrong offset!");
+static_assert(offsetof(FGroupBattlePersonalResult, RacerIndex) == 0x000004, "Member 'FGroupBattlePersonalResult::RacerIndex' has a wrong offset!");
+static_assert(offsetof(FGroupBattlePersonalResult, Value) == 0x000008, "Member 'FGroupBattlePersonalResult::Value' has a wrong offset!");
+static_assert(offsetof(FGroupBattlePersonalResult, Rank) == 0x00000C, "Member 'FGroupBattlePersonalResult::Rank' has a wrong offset!");
+static_assert(offsetof(FGroupBattlePersonalResult, Traction) == 0x000010, "Member 'FGroupBattlePersonalResult::Traction' has a wrong offset!");
+
+// ScriptStruct UnionRun.Enemy_Extnd06_Enemy06001_Size
+// 0x0020 (0x0020 - 0x0000)
+struct FEnemy_Extnd06_Enemy06001_Size final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Offset;                                            // 0x0008(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FEnemy_Extnd06_Enemy06001_Size) == 0x000008, "Wrong alignment on FEnemy_Extnd06_Enemy06001_Size");
+static_assert(sizeof(FEnemy_Extnd06_Enemy06001_Size) == 0x000020, "Wrong size on FEnemy_Extnd06_Enemy06001_Size");
+static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Height) == 0x000000, "Member 'FEnemy_Extnd06_Enemy06001_Size::Height' has a wrong offset!");
+static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Radius) == 0x000004, "Member 'FEnemy_Extnd06_Enemy06001_Size::Radius' has a wrong offset!");
+static_assert(offsetof(FEnemy_Extnd06_Enemy06001_Size, Offset) == 0x000008, "Member 'FEnemy_Extnd06_Enemy06001_Size::Offset' has a wrong offset!");
+
 // ScriptStruct UnionRun.Enemy_Extnd06_Object_06001_Size
 // 0x0020 (0x0020 - 0x0000)
 struct FEnemy_Extnd06_Object_06001_Size final
@@ -3933,45 +3950,6 @@ static_assert(sizeof(FEnemy_Extnd06_Object_06001_Size) == 0x000020, "Wrong size 
 static_assert(offsetof(FEnemy_Extnd06_Object_06001_Size, Height) == 0x000000, "Member 'FEnemy_Extnd06_Object_06001_Size::Height' has a wrong offset!");
 static_assert(offsetof(FEnemy_Extnd06_Object_06001_Size, Radius) == 0x000004, "Member 'FEnemy_Extnd06_Object_06001_Size::Radius' has a wrong offset!");
 static_assert(offsetof(FEnemy_Extnd06_Object_06001_Size, Offset) == 0x000008, "Member 'FEnemy_Extnd06_Object_06001_Size::Offset' has a wrong offset!");
-
-// ScriptStruct UnionRun.EntryRacer
-// 0x0080 (0x0080 - 0x0000)
-struct alignas(0x08) FEntryRacer final
-{
-public:
-	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FEntryRacer) == 0x000008, "Wrong alignment on FEntryRacer");
-static_assert(sizeof(FEntryRacer) == 0x000080, "Wrong size on FEntryRacer");
-
-// ScriptStruct UnionRun.EntryGroup
-// 0x0038 (0x0038 - 0x0000)
-struct FEntryGroup final
-{
-public:
-	int32                                         GroupIndex;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TeamBoostUnlockGauge;                              // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrentBoostCycle;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartRaceTime;                                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostPhaseTransitionTimer;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsTeamBoost;                                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FEntryRacer>                    EntryRacers;                                       // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         UserData;                                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FEntryGroup) == 0x000008, "Wrong alignment on FEntryGroup");
-static_assert(sizeof(FEntryGroup) == 0x000038, "Wrong size on FEntryGroup");
-static_assert(offsetof(FEntryGroup, GroupIndex) == 0x000000, "Member 'FEntryGroup::GroupIndex' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, TeamBoostUnlockGauge) == 0x000004, "Member 'FEntryGroup::TeamBoostUnlockGauge' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, CurrentBoostCycle) == 0x000008, "Member 'FEntryGroup::CurrentBoostCycle' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, Rank) == 0x00000C, "Member 'FEntryGroup::Rank' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, StartRaceTime) == 0x000010, "Member 'FEntryGroup::StartRaceTime' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, BoostPhaseTransitionTimer) == 0x000014, "Member 'FEntryGroup::BoostPhaseTransitionTimer' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, bIsTeamBoost) == 0x000018, "Member 'FEntryGroup::bIsTeamBoost' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, EntryRacers) == 0x000020, "Member 'FEntryGroup::EntryRacers' has a wrong offset!");
-static_assert(offsetof(FEntryGroup, UserData) == 0x000030, "Member 'FEntryGroup::UserData' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetNotifyAttackInfo
 // 0x0008 (0x0070 - 0x0068)
@@ -3989,74 +3967,83 @@ static_assert(offsetof(FGadgetNotifyAttackInfo, bTakeDamagePlayer) == 0x000068, 
 static_assert(offsetof(FGadgetNotifyAttackInfo, bAttackSucceed) == 0x000069, "Member 'FGadgetNotifyAttackInfo::bAttackSucceed' has a wrong offset!");
 static_assert(offsetof(FGadgetNotifyAttackInfo, bMultiHit) == 0x00006A, "Member 'FGadgetNotifyAttackInfo::bMultiHit' has a wrong offset!");
 
-// ScriptStruct UnionRun.BubbleItemBoxParam
-// 0x0008 (0x0008 - 0x0000)
-struct FBubbleItemBoxParam final
+// ScriptStruct UnionRun.GadgetLotteryRateData
+// 0x8868 (0x8870 - 0x0008)
+struct FGadgetLotteryRateData final : public FTableRowBase
 {
 public:
-	EItemBoxType                                  BoxType;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RelocationWaitTime;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGadgetId                                     gadgetId;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRankGroupLotteryRateDataTableList     RankGroupLotteryRateDataTable;                     // 0x0010(0x4430)(Edit, NativeAccessSpecifierPublic)
+	struct FRankGroupLotteryRateDataTableList     SpecialBox_RankGroupLotteryRateDataTable;          // 0x4440(0x4430)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBubbleItemBoxParam) == 0x000004, "Wrong alignment on FBubbleItemBoxParam");
-static_assert(sizeof(FBubbleItemBoxParam) == 0x000008, "Wrong size on FBubbleItemBoxParam");
-static_assert(offsetof(FBubbleItemBoxParam, BoxType) == 0x000000, "Member 'FBubbleItemBoxParam::BoxType' has a wrong offset!");
-static_assert(offsetof(FBubbleItemBoxParam, RelocationWaitTime) == 0x000004, "Member 'FBubbleItemBoxParam::RelocationWaitTime' has a wrong offset!");
+static_assert(alignof(FGadgetLotteryRateData) == 0x000008, "Wrong alignment on FGadgetLotteryRateData");
+static_assert(sizeof(FGadgetLotteryRateData) == 0x008870, "Wrong size on FGadgetLotteryRateData");
+static_assert(offsetof(FGadgetLotteryRateData, gadgetId) == 0x000008, "Member 'FGadgetLotteryRateData::gadgetId' has a wrong offset!");
+static_assert(offsetof(FGadgetLotteryRateData, RankGroupLotteryRateDataTable) == 0x000010, "Member 'FGadgetLotteryRateData::RankGroupLotteryRateDataTable' has a wrong offset!");
+static_assert(offsetof(FGadgetLotteryRateData, SpecialBox_RankGroupLotteryRateDataTable) == 0x004440, "Member 'FGadgetLotteryRateData::SpecialBox_RankGroupLotteryRateDataTable' has a wrong offset!");
 
-// ScriptStruct UnionRun.BubblePackageRingParam
+// ScriptStruct UnionRun.StruckoutPackageRingParam
 // 0x0001 (0x0001 - 0x0000)
-struct FBubblePackageRingParam final
+struct FStruckoutPackageRingParam final
 {
 public:
 	EPackageRingType                              RingType;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBubblePackageRingParam) == 0x000001, "Wrong alignment on FBubblePackageRingParam");
-static_assert(sizeof(FBubblePackageRingParam) == 0x000001, "Wrong size on FBubblePackageRingParam");
-static_assert(offsetof(FBubblePackageRingParam, RingType) == 0x000000, "Member 'FBubblePackageRingParam::RingType' has a wrong offset!");
+static_assert(alignof(FStruckoutPackageRingParam) == 0x000001, "Wrong alignment on FStruckoutPackageRingParam");
+static_assert(sizeof(FStruckoutPackageRingParam) == 0x000001, "Wrong size on FStruckoutPackageRingParam");
+static_assert(offsetof(FStruckoutPackageRingParam, RingType) == 0x000000, "Member 'FStruckoutPackageRingParam::RingType' has a wrong offset!");
 
-// ScriptStruct UnionRun.SBubbleBonusParam
-// 0x0070 (0x0070 - 0x0000)
-struct FSBubbleBonusParam final
+// ScriptStruct UnionRun.StruckoutRouteParam
+// 0x0040 (0x0040 - 0x0000)
+struct FStruckoutRouteParam final
 {
 public:
-	EBubbleBonusType                              BonusCategoryType;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBubbleItemBoxParam                    ItemBoxParam;                                      // 0x0004(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBubblePackageRingParam                PackageRingParam;                                  // 0x000C(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EStruckoutCenterType                          RouteType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStruckoutPanelBonus                          BonusType;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruckoutItemBoxParam                 ItemBoxParam;                                      // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStruckoutPackageRingParam             PackageRingParam;                                  // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LocationOffset;                                    // 0x0010(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RotationOffset;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                BonusItemMaxScale;                                 // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BubbleExtendScaleValue;                            // 0x0058(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSBubbleBonusParam) == 0x000008, "Wrong alignment on FSBubbleBonusParam");
-static_assert(sizeof(FSBubbleBonusParam) == 0x000070, "Wrong size on FSBubbleBonusParam");
-static_assert(offsetof(FSBubbleBonusParam, BonusCategoryType) == 0x000000, "Member 'FSBubbleBonusParam::BonusCategoryType' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, ItemBoxParam) == 0x000004, "Member 'FSBubbleBonusParam::ItemBoxParam' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, PackageRingParam) == 0x00000C, "Member 'FSBubbleBonusParam::PackageRingParam' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, LocationOffset) == 0x000010, "Member 'FSBubbleBonusParam::LocationOffset' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, RotationOffset) == 0x000028, "Member 'FSBubbleBonusParam::RotationOffset' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, BonusItemMaxScale) == 0x000040, "Member 'FSBubbleBonusParam::BonusItemMaxScale' has a wrong offset!");
-static_assert(offsetof(FSBubbleBonusParam, BubbleExtendScaleValue) == 0x000058, "Member 'FSBubbleBonusParam::BubbleExtendScaleValue' has a wrong offset!");
+static_assert(alignof(FStruckoutRouteParam) == 0x000008, "Wrong alignment on FStruckoutRouteParam");
+static_assert(sizeof(FStruckoutRouteParam) == 0x000040, "Wrong size on FStruckoutRouteParam");
+static_assert(offsetof(FStruckoutRouteParam, RouteType) == 0x000000, "Member 'FStruckoutRouteParam::RouteType' has a wrong offset!");
+static_assert(offsetof(FStruckoutRouteParam, BonusType) == 0x000001, "Member 'FStruckoutRouteParam::BonusType' has a wrong offset!");
+static_assert(offsetof(FStruckoutRouteParam, ItemBoxParam) == 0x000004, "Member 'FStruckoutRouteParam::ItemBoxParam' has a wrong offset!");
+static_assert(offsetof(FStruckoutRouteParam, PackageRingParam) == 0x00000C, "Member 'FStruckoutRouteParam::PackageRingParam' has a wrong offset!");
+static_assert(offsetof(FStruckoutRouteParam, LocationOffset) == 0x000010, "Member 'FStruckoutRouteParam::LocationOffset' has a wrong offset!");
+static_assert(offsetof(FStruckoutRouteParam, RotationOffset) == 0x000028, "Member 'FStruckoutRouteParam::RotationOffset' has a wrong offset!");
 
-// ScriptStruct UnionRun.GroupRaceRuleLotteryRateRankGroupData
-// 0x0168 (0x0170 - 0x0008)
-struct FGroupRaceRuleLotteryRateRankGroupData final : public FTableRowBase
+// ScriptStruct UnionRun.PackageRingVariationRateData
+// 0x000C (0x000C - 0x0000)
+struct FPackageRingVariationRateData final
 {
 public:
-	struct FLotteryRateData                       LotteryRateData_RankGroup1;                        // 0x0008(0x0048)(Edit, NativeAccessSpecifierPublic)
-	struct FLotteryRateData                       LotteryRateData_RankGroup2;                        // 0x0050(0x0048)(Edit, NativeAccessSpecifierPublic)
-	struct FLotteryRateData                       LotteryRateData_RankGroup3;                        // 0x0098(0x0048)(Edit, NativeAccessSpecifierPublic)
-	struct FLotteryRateData                       LotteryRateData_RankGroup4;                        // 0x00E0(0x0048)(Edit, NativeAccessSpecifierPublic)
-	struct FLotteryRateData                       LotteryRateData_RankGroup5;                        // 0x0128(0x0048)(Edit, NativeAccessSpecifierPublic)
+	int32                                         Ring10_Rate;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Ring20_Rate;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Ring100_Rate;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGroupRaceRuleLotteryRateRankGroupData) == 0x000008, "Wrong alignment on FGroupRaceRuleLotteryRateRankGroupData");
-static_assert(sizeof(FGroupRaceRuleLotteryRateRankGroupData) == 0x000170, "Wrong size on FGroupRaceRuleLotteryRateRankGroupData");
-static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup1) == 0x000008, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup1' has a wrong offset!");
-static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup2) == 0x000050, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup2' has a wrong offset!");
-static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup3) == 0x000098, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup3' has a wrong offset!");
-static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup4) == 0x0000E0, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup4' has a wrong offset!");
-static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup5) == 0x000128, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup5' has a wrong offset!");
+static_assert(alignof(FPackageRingVariationRateData) == 0x000004, "Wrong alignment on FPackageRingVariationRateData");
+static_assert(sizeof(FPackageRingVariationRateData) == 0x00000C, "Wrong size on FPackageRingVariationRateData");
+static_assert(offsetof(FPackageRingVariationRateData, Ring10_Rate) == 0x000000, "Member 'FPackageRingVariationRateData::Ring10_Rate' has a wrong offset!");
+static_assert(offsetof(FPackageRingVariationRateData, Ring20_Rate) == 0x000004, "Member 'FPackageRingVariationRateData::Ring20_Rate' has a wrong offset!");
+static_assert(offsetof(FPackageRingVariationRateData, Ring100_Rate) == 0x000008, "Member 'FPackageRingVariationRateData::Ring100_Rate' has a wrong offset!");
+
+// ScriptStruct UnionRun.PackageRingItemBoxVariationRateData
+// 0x0018 (0x0018 - 0x0000)
+struct FPackageRingItemBoxVariationRateData final
+{
+public:
+	struct FPackageRingVariationRateData          NormalBox;                                         // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPackageRingVariationRateData          SpecialBox;                                        // 0x000C(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPackageRingItemBoxVariationRateData) == 0x000004, "Wrong alignment on FPackageRingItemBoxVariationRateData");
+static_assert(sizeof(FPackageRingItemBoxVariationRateData) == 0x000018, "Wrong size on FPackageRingItemBoxVariationRateData");
+static_assert(offsetof(FPackageRingItemBoxVariationRateData, NormalBox) == 0x000000, "Member 'FPackageRingItemBoxVariationRateData::NormalBox' has a wrong offset!");
+static_assert(offsetof(FPackageRingItemBoxVariationRateData, SpecialBox) == 0x00000C, "Member 'FPackageRingItemBoxVariationRateData::SpecialBox' has a wrong offset!");
 
 // ScriptStruct UnionRun.EditorRouteTextFormat
 // 0x0028 (0x0028 - 0x0000)
@@ -4094,32 +4081,6 @@ static_assert(sizeof(FSweetsShipCannonBallData) == 0x000010, "Wrong size on FSwe
 static_assert(offsetof(FSweetsShipCannonBallData, BallMesh) == 0x000000, "Member 'FSweetsShipCannonBallData::BallMesh' has a wrong offset!");
 static_assert(offsetof(FSweetsShipCannonBallData, BreakEffect) == 0x000008, "Member 'FSweetsShipCannonBallData::BreakEffect' has a wrong offset!");
 
-// ScriptStruct UnionRun.PackageRingVariationRateData
-// 0x000C (0x000C - 0x0000)
-struct FPackageRingVariationRateData final
-{
-public:
-	int32                                         Ring10_Rate;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Ring20_Rate;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Ring100_Rate;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPackageRingVariationRateData) == 0x000004, "Wrong alignment on FPackageRingVariationRateData");
-static_assert(sizeof(FPackageRingVariationRateData) == 0x00000C, "Wrong size on FPackageRingVariationRateData");
-static_assert(offsetof(FPackageRingVariationRateData, Ring10_Rate) == 0x000000, "Member 'FPackageRingVariationRateData::Ring10_Rate' has a wrong offset!");
-static_assert(offsetof(FPackageRingVariationRateData, Ring20_Rate) == 0x000004, "Member 'FPackageRingVariationRateData::Ring20_Rate' has a wrong offset!");
-static_assert(offsetof(FPackageRingVariationRateData, Ring100_Rate) == 0x000008, "Member 'FPackageRingVariationRateData::Ring100_Rate' has a wrong offset!");
-
-// ScriptStruct UnionRun.RacerRankPackageRingVariationRateData
-// 0x0010 (0x0010 - 0x0000)
-struct FRacerRankPackageRingVariationRateData final
-{
-public:
-	TArray<struct FPackageRingVariationRateData>  ListByRacerRank;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRacerRankPackageRingVariationRateData) == 0x000008, "Wrong alignment on FRacerRankPackageRingVariationRateData");
-static_assert(sizeof(FRacerRankPackageRingVariationRateData) == 0x000010, "Wrong size on FRacerRankPackageRingVariationRateData");
-static_assert(offsetof(FRacerRankPackageRingVariationRateData, ListByRacerRank) == 0x000000, "Member 'FRacerRankPackageRingVariationRateData::ListByRacerRank' has a wrong offset!");
-
 // ScriptStruct UnionRun.Gimmick_Extnd06_Barricade_Size
 // 0x0020 (0x0020 - 0x0000)
 struct FGimmick_Extnd06_Barricade_Size final
@@ -4135,29 +4096,6 @@ static_assert(offsetof(FGimmick_Extnd06_Barricade_Size, Height) == 0x000000, "Me
 static_assert(offsetof(FGimmick_Extnd06_Barricade_Size, Width) == 0x000004, "Member 'FGimmick_Extnd06_Barricade_Size::Width' has a wrong offset!");
 static_assert(offsetof(FGimmick_Extnd06_Barricade_Size, Offset) == 0x000008, "Member 'FGimmick_Extnd06_Barricade_Size::Offset' has a wrong offset!");
 
-// ScriptStruct UnionRun.AnchorPhysicsParameter
-// 0x001C (0x001C - 0x0000)
-struct FAnchorPhysicsParameter final
-{
-public:
-	float                                         anchorLength;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Mass;                                              // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         movableLimitTop;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         movableLimitRangeYaw;                              // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         airRegistSpeedThresholdPitch;                      // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         airRegistSpeedThresholdYaw;                        // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         reboundPitch;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAnchorPhysicsParameter) == 0x000004, "Wrong alignment on FAnchorPhysicsParameter");
-static_assert(sizeof(FAnchorPhysicsParameter) == 0x00001C, "Wrong size on FAnchorPhysicsParameter");
-static_assert(offsetof(FAnchorPhysicsParameter, anchorLength) == 0x000000, "Member 'FAnchorPhysicsParameter::anchorLength' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, Mass) == 0x000004, "Member 'FAnchorPhysicsParameter::Mass' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, movableLimitTop) == 0x000008, "Member 'FAnchorPhysicsParameter::movableLimitTop' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, movableLimitRangeYaw) == 0x00000C, "Member 'FAnchorPhysicsParameter::movableLimitRangeYaw' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, airRegistSpeedThresholdPitch) == 0x000010, "Member 'FAnchorPhysicsParameter::airRegistSpeedThresholdPitch' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, airRegistSpeedThresholdYaw) == 0x000014, "Member 'FAnchorPhysicsParameter::airRegistSpeedThresholdYaw' has a wrong offset!");
-static_assert(offsetof(FAnchorPhysicsParameter, reboundPitch) == 0x000018, "Member 'FAnchorPhysicsParameter::reboundPitch' has a wrong offset!");
-
 // ScriptStruct UnionRun.ItemBoxColliderParam
 // 0x0030 (0x0030 - 0x0000)
 struct FItemBoxColliderParam final : public FColliderParam
@@ -4170,6 +4108,21 @@ static_assert(alignof(FItemBoxColliderParam) == 0x000008, "Wrong alignment on FI
 static_assert(sizeof(FItemBoxColliderParam) == 0x000030, "Wrong size on FItemBoxColliderParam");
 static_assert(offsetof(FItemBoxColliderParam, Offset) == 0x000000, "Member 'FItemBoxColliderParam::Offset' has a wrong offset!");
 static_assert(offsetof(FItemBoxColliderParam, Extents) == 0x000018, "Member 'FItemBoxColliderParam::Extents' has a wrong offset!");
+
+// ScriptStruct UnionRun.LotteryItemBoxRateData
+// 0x000C (0x000C - 0x0000)
+struct FLotteryItemBoxRateData final
+{
+public:
+	int32                                         NormalBox;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DoubleBox;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpecialBox;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FLotteryItemBoxRateData) == 0x000004, "Wrong alignment on FLotteryItemBoxRateData");
+static_assert(sizeof(FLotteryItemBoxRateData) == 0x00000C, "Wrong size on FLotteryItemBoxRateData");
+static_assert(offsetof(FLotteryItemBoxRateData, NormalBox) == 0x000000, "Member 'FLotteryItemBoxRateData::NormalBox' has a wrong offset!");
+static_assert(offsetof(FLotteryItemBoxRateData, DoubleBox) == 0x000004, "Member 'FLotteryItemBoxRateData::DoubleBox' has a wrong offset!");
+static_assert(offsetof(FLotteryItemBoxRateData, SpecialBox) == 0x000008, "Member 'FLotteryItemBoxRateData::SpecialBox' has a wrong offset!");
 
 // ScriptStruct UnionRun.ItemBoxCurringParameter
 // 0x0008 (0x0010 - 0x0008)
@@ -4185,18 +4138,39 @@ static_assert(sizeof(FItemBoxCurringParameter) == 0x000010, "Wrong size on FItem
 static_assert(offsetof(FItemBoxCurringParameter, StageId) == 0x000008, "Member 'FItemBoxCurringParameter::StageId' has a wrong offset!");
 static_assert(offsetof(FItemBoxCurringParameter, CurringDistance) == 0x00000C, "Member 'FItemBoxCurringParameter::CurringDistance' has a wrong offset!");
 
-// ScriptStruct UnionRun.PackageRingItemBoxVariationRateData
-// 0x0018 (0x0018 - 0x0000)
-struct FPackageRingItemBoxVariationRateData final
+// ScriptStruct UnionRun.ItemBoxMeshTable
+// 0x0030 (0x0038 - 0x0008)
+struct FItemBoxMeshTable final : public FTableRowBase
 {
 public:
-	struct FPackageRingVariationRateData          NormalBox;                                         // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPackageRingVariationRateData          SpecialBox;                                        // 0x000C(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EItemBoxType                                  ItemBoxType;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UStaticMesh>             ItemBoxMesh;                                       // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPackageRingItemBoxVariationRateData) == 0x000004, "Wrong alignment on FPackageRingItemBoxVariationRateData");
-static_assert(sizeof(FPackageRingItemBoxVariationRateData) == 0x000018, "Wrong size on FPackageRingItemBoxVariationRateData");
-static_assert(offsetof(FPackageRingItemBoxVariationRateData, NormalBox) == 0x000000, "Member 'FPackageRingItemBoxVariationRateData::NormalBox' has a wrong offset!");
-static_assert(offsetof(FPackageRingItemBoxVariationRateData, SpecialBox) == 0x00000C, "Member 'FPackageRingItemBoxVariationRateData::SpecialBox' has a wrong offset!");
+static_assert(alignof(FItemBoxMeshTable) == 0x000008, "Wrong alignment on FItemBoxMeshTable");
+static_assert(sizeof(FItemBoxMeshTable) == 0x000038, "Wrong size on FItemBoxMeshTable");
+static_assert(offsetof(FItemBoxMeshTable, ItemBoxType) == 0x000008, "Member 'FItemBoxMeshTable::ItemBoxType' has a wrong offset!");
+static_assert(offsetof(FItemBoxMeshTable, ItemBoxMesh) == 0x000010, "Member 'FItemBoxMeshTable::ItemBoxMesh' has a wrong offset!");
+
+// ScriptStruct UnionRun.AvoidTargetRingData
+// 0x0010 (0x0018 - 0x0008)
+struct FAvoidTargetRingData final : public FTableRowBase
+{
+public:
+	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsAvoidEnable;                                     // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AllowAvoidAttackCarSpeed;                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AvoidAttackMoveDistance;                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AvoidAttackMoveTime;                               // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAvoidTargetRingData) == 0x000008, "Wrong alignment on FAvoidTargetRingData");
+static_assert(sizeof(FAvoidTargetRingData) == 0x000018, "Wrong size on FAvoidTargetRingData");
+static_assert(offsetof(FAvoidTargetRingData, ItemId) == 0x000008, "Member 'FAvoidTargetRingData::ItemId' has a wrong offset!");
+static_assert(offsetof(FAvoidTargetRingData, IsAvoidEnable) == 0x000009, "Member 'FAvoidTargetRingData::IsAvoidEnable' has a wrong offset!");
+static_assert(offsetof(FAvoidTargetRingData, AllowAvoidAttackCarSpeed) == 0x00000C, "Member 'FAvoidTargetRingData::AllowAvoidAttackCarSpeed' has a wrong offset!");
+static_assert(offsetof(FAvoidTargetRingData, AvoidAttackMoveDistance) == 0x000010, "Member 'FAvoidTargetRingData::AvoidAttackMoveDistance' has a wrong offset!");
+static_assert(offsetof(FAvoidTargetRingData, AvoidAttackMoveTime) == 0x000014, "Member 'FAvoidTargetRingData::AvoidAttackMoveTime' has a wrong offset!");
 
 // ScriptStruct UnionRun.CyanLaserParam
 // 0x0018 (0x0018 - 0x0000)
@@ -4223,19 +4197,16 @@ static_assert(sizeof(FExtnd09SoundCueAsset) == 0x000010, "Wrong size on FExtnd09
 static_assert(offsetof(FExtnd09SoundCueAsset, AttackSound) == 0x000000, "Member 'FExtnd09SoundCueAsset::AttackSound' has a wrong offset!");
 static_assert(offsetof(FExtnd09SoundCueAsset, ChargeAttackSound) == 0x000008, "Member 'FExtnd09SoundCueAsset::ChargeAttackSound' has a wrong offset!");
 
-// ScriptStruct UnionRun.CreateItemInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FCreateItemInfo final
+// ScriptStruct UnionRun.RacerRankPackageRingVariationRateData
+// 0x0010 (0x0010 - 0x0000)
+struct FRacerRankPackageRingVariationRateData final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 uclass;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UItemObjectLayer*                       objLayer;                                          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPackageRingVariationRateData>  ListByRacerRank;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCreateItemInfo) == 0x000008, "Wrong alignment on FCreateItemInfo");
-static_assert(sizeof(FCreateItemInfo) == 0x000018, "Wrong size on FCreateItemInfo");
-static_assert(offsetof(FCreateItemInfo, uclass) == 0x000008, "Member 'FCreateItemInfo::uclass' has a wrong offset!");
-static_assert(offsetof(FCreateItemInfo, objLayer) == 0x000010, "Member 'FCreateItemInfo::objLayer' has a wrong offset!");
+static_assert(alignof(FRacerRankPackageRingVariationRateData) == 0x000008, "Wrong alignment on FRacerRankPackageRingVariationRateData");
+static_assert(sizeof(FRacerRankPackageRingVariationRateData) == 0x000010, "Wrong size on FRacerRankPackageRingVariationRateData");
+static_assert(offsetof(FRacerRankPackageRingVariationRateData, ListByRacerRank) == 0x000000, "Member 'FRacerRankPackageRingVariationRateData::ListByRacerRank' has a wrong offset!");
 
 // ScriptStruct UnionRun.AbsorberInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -4254,95 +4225,15 @@ static_assert(offsetof(FAbsorberInfo, AbsorberPriority) == 0x000004, "Member 'FA
 static_assert(offsetof(FAbsorberInfo, AbsorberObject) == 0x000008, "Member 'FAbsorberInfo::AbsorberObject' has a wrong offset!");
 static_assert(offsetof(FAbsorberInfo, HitComponent) == 0x000010, "Member 'FAbsorberInfo::HitComponent' has a wrong offset!");
 
-// ScriptStruct UnionRun.AbsorbedObjectInfo
-// 0x0150 (0x0150 - 0x0000)
-struct FAbsorbedObjectInfo final
+// ScriptStruct UnionRun.WarpRingMoveInfo
+// 0x00F0 (0x00F0 - 0x0000)
+struct alignas(0x10) FWarpRingMoveInfo final
 {
 public:
-	class AActor*                                 AbsorbedObject;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InitialTransform;                                  // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             MeshOffsetTransform;                               // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AbsorbTargetScale;                                 // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            Mesh;                                              // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, class UMaterialInterface*>        ReplaceMeshMaterials;                              // 0x00F0(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
-	ETakeRingType                                 RingType;                                          // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RingNum;                                           // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemBoxType                                  ItemBoxType;                                       // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EItemId                                       itemType;                                          // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFroceStartFromCenter;                             // 0x014A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyVisibleHolder;                                // 0x014B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xF0];                                       // 0x0000(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAbsorbedObjectInfo) == 0x000010, "Wrong alignment on FAbsorbedObjectInfo");
-static_assert(sizeof(FAbsorbedObjectInfo) == 0x000150, "Wrong size on FAbsorbedObjectInfo");
-static_assert(offsetof(FAbsorbedObjectInfo, AbsorbedObject) == 0x000000, "Member 'FAbsorbedObjectInfo::AbsorbedObject' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, InitialTransform) == 0x000010, "Member 'FAbsorbedObjectInfo::InitialTransform' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, MeshOffsetTransform) == 0x000070, "Member 'FAbsorbedObjectInfo::MeshOffsetTransform' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, AbsorbTargetScale) == 0x0000D0, "Member 'FAbsorbedObjectInfo::AbsorbTargetScale' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, Mesh) == 0x0000E8, "Member 'FAbsorbedObjectInfo::Mesh' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, ReplaceMeshMaterials) == 0x0000F0, "Member 'FAbsorbedObjectInfo::ReplaceMeshMaterials' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, RingType) == 0x000140, "Member 'FAbsorbedObjectInfo::RingType' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, RingNum) == 0x000144, "Member 'FAbsorbedObjectInfo::RingNum' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, ItemBoxType) == 0x000148, "Member 'FAbsorbedObjectInfo::ItemBoxType' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, itemType) == 0x000149, "Member 'FAbsorbedObjectInfo::itemType' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, bFroceStartFromCenter) == 0x00014A, "Member 'FAbsorbedObjectInfo::bFroceStartFromCenter' has a wrong offset!");
-static_assert(offsetof(FAbsorbedObjectInfo, bOnlyVisibleHolder) == 0x00014B, "Member 'FAbsorbedObjectInfo::bOnlyVisibleHolder' has a wrong offset!");
-
-// ScriptStruct UnionRun.ItemIrregularInfiniteData
-// 0x0018 (0x0020 - 0x0008)
-struct FItemIrregularInfiniteData final : public FTableRowBase
-{
-public:
-	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 ItemGetIntervalByRank;                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FItemIrregularInfiniteData) == 0x000008, "Wrong alignment on FItemIrregularInfiniteData");
-static_assert(sizeof(FItemIrregularInfiniteData) == 0x000020, "Wrong size on FItemIrregularInfiniteData");
-static_assert(offsetof(FItemIrregularInfiniteData, ItemId) == 0x000008, "Member 'FItemIrregularInfiniteData::ItemId' has a wrong offset!");
-static_assert(offsetof(FItemIrregularInfiniteData, ItemGetIntervalByRank) == 0x000010, "Member 'FItemIrregularInfiniteData::ItemGetIntervalByRank' has a wrong offset!");
-
-// ScriptStruct UnionRun.CyanLaserMoveInfo
-// 0x0170 (0x0170 - 0x0000)
-struct alignas(0x10) FCyanLaserMoveInfo final
-{
-public:
-	uint8                                         Pad_0[0x170];                                      // 0x0000(0x0170)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FCyanLaserMoveInfo) == 0x000010, "Wrong alignment on FCyanLaserMoveInfo");
-static_assert(sizeof(FCyanLaserMoveInfo) == 0x000170, "Wrong size on FCyanLaserMoveInfo");
-
-// ScriptStruct UnionRun.LotteryItemBoxRateData
-// 0x000C (0x000C - 0x0000)
-struct FLotteryItemBoxRateData final
-{
-public:
-	int32                                         NormalBox;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DoubleBox;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpecialBox;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FLotteryItemBoxRateData) == 0x000004, "Wrong alignment on FLotteryItemBoxRateData");
-static_assert(sizeof(FLotteryItemBoxRateData) == 0x00000C, "Wrong size on FLotteryItemBoxRateData");
-static_assert(offsetof(FLotteryItemBoxRateData, NormalBox) == 0x000000, "Member 'FLotteryItemBoxRateData::NormalBox' has a wrong offset!");
-static_assert(offsetof(FLotteryItemBoxRateData, DoubleBox) == 0x000004, "Member 'FLotteryItemBoxRateData::DoubleBox' has a wrong offset!");
-static_assert(offsetof(FLotteryItemBoxRateData, SpecialBox) == 0x000008, "Member 'FLotteryItemBoxRateData::SpecialBox' has a wrong offset!");
-
-// ScriptStruct UnionRun.WeakHomingParam
-// 0x000C (0x000C - 0x0000)
-struct FWeakHomingParam final
-{
-public:
-	float                                         SearchAreaWidth;                                   // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SearchAreaLength;                                  // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CorrctionMaxAngularSpeed;                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWeakHomingParam) == 0x000004, "Wrong alignment on FWeakHomingParam");
-static_assert(sizeof(FWeakHomingParam) == 0x00000C, "Wrong size on FWeakHomingParam");
-static_assert(offsetof(FWeakHomingParam, SearchAreaWidth) == 0x000000, "Member 'FWeakHomingParam::SearchAreaWidth' has a wrong offset!");
-static_assert(offsetof(FWeakHomingParam, SearchAreaLength) == 0x000004, "Member 'FWeakHomingParam::SearchAreaLength' has a wrong offset!");
-static_assert(offsetof(FWeakHomingParam, CorrctionMaxAngularSpeed) == 0x000008, "Member 'FWeakHomingParam::CorrctionMaxAngularSpeed' has a wrong offset!");
+static_assert(alignof(FWarpRingMoveInfo) == 0x000010, "Wrong alignment on FWarpRingMoveInfo");
+static_assert(sizeof(FWarpRingMoveInfo) == 0x0000F0, "Wrong size on FWarpRingMoveInfo");
 
 // ScriptStruct UnionRun.ThrowingFrontParameter
 // 0x0010 (0x0010 - 0x0000)
@@ -4361,25 +4252,24 @@ static_assert(offsetof(FThrowingFrontParameter, JumpingSpeed_MPS) == 0x000004, "
 static_assert(offsetof(FThrowingFrontParameter, UperJumpingSpeed_MPS) == 0x000008, "Member 'FThrowingFrontParameter::UperJumpingSpeed_MPS' has a wrong offset!");
 static_assert(offsetof(FThrowingFrontParameter, GravitationalAcceleration_MPSS) == 0x00000C, "Member 'FThrowingFrontParameter::GravitationalAcceleration_MPSS' has a wrong offset!");
 
-// ScriptStruct UnionRun.AvoidTargetRingData
-// 0x0010 (0x0018 - 0x0008)
-struct FAvoidTargetRingData final : public FTableRowBase
+// ScriptStruct UnionRun.PlaneChargeTurnSpeedParams
+// 0x0014 (0x0014 - 0x0000)
+struct FPlaneChargeTurnSpeedParams final
 {
 public:
-	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsAvoidEnable;                                     // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AllowAvoidAttackCarSpeed;                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AvoidAttackMoveDistance;                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AvoidAttackMoveTime;                               // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularAccel;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwitchAngularAccel;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularSpeedMin;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularSpeedCenter;                                // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularSpeedMax;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAvoidTargetRingData) == 0x000008, "Wrong alignment on FAvoidTargetRingData");
-static_assert(sizeof(FAvoidTargetRingData) == 0x000018, "Wrong size on FAvoidTargetRingData");
-static_assert(offsetof(FAvoidTargetRingData, ItemId) == 0x000008, "Member 'FAvoidTargetRingData::ItemId' has a wrong offset!");
-static_assert(offsetof(FAvoidTargetRingData, IsAvoidEnable) == 0x000009, "Member 'FAvoidTargetRingData::IsAvoidEnable' has a wrong offset!");
-static_assert(offsetof(FAvoidTargetRingData, AllowAvoidAttackCarSpeed) == 0x00000C, "Member 'FAvoidTargetRingData::AllowAvoidAttackCarSpeed' has a wrong offset!");
-static_assert(offsetof(FAvoidTargetRingData, AvoidAttackMoveDistance) == 0x000010, "Member 'FAvoidTargetRingData::AvoidAttackMoveDistance' has a wrong offset!");
-static_assert(offsetof(FAvoidTargetRingData, AvoidAttackMoveTime) == 0x000014, "Member 'FAvoidTargetRingData::AvoidAttackMoveTime' has a wrong offset!");
+static_assert(alignof(FPlaneChargeTurnSpeedParams) == 0x000004, "Wrong alignment on FPlaneChargeTurnSpeedParams");
+static_assert(sizeof(FPlaneChargeTurnSpeedParams) == 0x000014, "Wrong size on FPlaneChargeTurnSpeedParams");
+static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularAccel) == 0x000000, "Member 'FPlaneChargeTurnSpeedParams::AngularAccel' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnSpeedParams, SwitchAngularAccel) == 0x000004, "Member 'FPlaneChargeTurnSpeedParams::SwitchAngularAccel' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedMin) == 0x000008, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedMin' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedCenter) == 0x00000C, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedCenter' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedMax) == 0x000010, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedMax' has a wrong offset!");
 
 // ScriptStruct UnionRun.ThrowingBackParameter
 // 0x000C (0x000C - 0x0000)
@@ -4407,18 +4297,19 @@ static_assert(alignof(FRelativeMoveFrontParameter) == 0x000004, "Wrong alignment
 static_assert(sizeof(FRelativeMoveFrontParameter) == 0x000010, "Wrong size on FRelativeMoveFrontParameter");
 static_assert(offsetof(FRelativeMoveFrontParameter, RelativeMoveOffset) == 0x00000C, "Member 'FRelativeMoveFrontParameter::RelativeMoveOffset' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlaneChangeDirectionParams
-// 0x0008 (0x0008 - 0x0000)
-struct FPlaneChangeDirectionParams final
+// ScriptStruct UnionRun.CreateItemInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FCreateItemInfo final
 {
 public:
-	float                                         AngularSpeed;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Seconds;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 uclass;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UItemObjectLayer*                       objLayer;                                          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlaneChangeDirectionParams) == 0x000004, "Wrong alignment on FPlaneChangeDirectionParams");
-static_assert(sizeof(FPlaneChangeDirectionParams) == 0x000008, "Wrong size on FPlaneChangeDirectionParams");
-static_assert(offsetof(FPlaneChangeDirectionParams, AngularSpeed) == 0x000000, "Member 'FPlaneChangeDirectionParams::AngularSpeed' has a wrong offset!");
-static_assert(offsetof(FPlaneChangeDirectionParams, Seconds) == 0x000004, "Member 'FPlaneChangeDirectionParams::Seconds' has a wrong offset!");
+static_assert(alignof(FCreateItemInfo) == 0x000008, "Wrong alignment on FCreateItemInfo");
+static_assert(sizeof(FCreateItemInfo) == 0x000018, "Wrong size on FCreateItemInfo");
+static_assert(offsetof(FCreateItemInfo, uclass) == 0x000008, "Member 'FCreateItemInfo::uclass' has a wrong offset!");
+static_assert(offsetof(FCreateItemInfo, objLayer) == 0x000010, "Member 'FCreateItemInfo::objLayer' has a wrong offset!");
 
 // ScriptStruct UnionRun.RelativeMoveBackParameter
 // 0x000C (0x0018 - 0x000C)
@@ -4452,19 +4343,19 @@ static_assert(offsetof(FItemWarpRingRankBaseParam, HighTargetRank) == 0x000004, 
 static_assert(offsetof(FItemWarpRingRankBaseParam, MinLifeTime) == 0x000008, "Member 'FItemWarpRingRankBaseParam::MinLifeTime' has a wrong offset!");
 static_assert(offsetof(FItemWarpRingRankBaseParam, MaxLifetime) == 0x00000C, "Member 'FItemWarpRingRankBaseParam::MaxLifetime' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionNavigationBinaryParameter
-// 0x0018 (0x0018 - 0x0000)
-struct FUnionNavigationBinaryParameter final
+// ScriptStruct UnionRun.ItemIrregularInfiniteData
+// 0x0018 (0x0020 - 0x0008)
+struct FItemIrregularInfiniteData final : public FTableRowBase
 {
 public:
-	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<uint8>                                 Data;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ItemGetIntervalByRank;                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionNavigationBinaryParameter) == 0x000008, "Wrong alignment on FUnionNavigationBinaryParameter");
-static_assert(sizeof(FUnionNavigationBinaryParameter) == 0x000018, "Wrong size on FUnionNavigationBinaryParameter");
-static_assert(offsetof(FUnionNavigationBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionNavigationBinaryParameter::DataVersion' has a wrong offset!");
-static_assert(offsetof(FUnionNavigationBinaryParameter, Data) == 0x000008, "Member 'FUnionNavigationBinaryParameter::Data' has a wrong offset!");
+static_assert(alignof(FItemIrregularInfiniteData) == 0x000008, "Wrong alignment on FItemIrregularInfiniteData");
+static_assert(sizeof(FItemIrregularInfiniteData) == 0x000020, "Wrong size on FItemIrregularInfiniteData");
+static_assert(offsetof(FItemIrregularInfiniteData, ItemId) == 0x000008, "Member 'FItemIrregularInfiniteData::ItemId' has a wrong offset!");
+static_assert(offsetof(FItemIrregularInfiniteData, ItemGetIntervalByRank) == 0x000010, "Member 'FItemIrregularInfiniteData::ItemGetIntervalByRank' has a wrong offset!");
 
 // ScriptStruct UnionRun.LineGuideData
 // 0x0050 (0x0058 - 0x0008)
@@ -4500,6 +4391,66 @@ static_assert(offsetof(FLineGuidePathData, AccelValue) == 0x000040, "Member 'FLi
 static_assert(offsetof(FLineGuidePathData, BreakValue) == 0x000041, "Member 'FLineGuidePathData::BreakValue' has a wrong offset!");
 static_assert(offsetof(FLineGuidePathData, DriftValue) == 0x000042, "Member 'FLineGuidePathData::DriftValue' has a wrong offset!");
 
+// ScriptStruct UnionRun.PlaneChargeTurnAppearanceParams
+// 0x0018 (0x0018 - 0x0000)
+struct FPlaneChargeTurnAppearanceParams final
+{
+public:
+	float                                         MinDegree;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDegree;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularSpeed;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwitchAngularSpeed;                                // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnAngularSpeed;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularAccelSec;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlaneChargeTurnAppearanceParams) == 0x000004, "Wrong alignment on FPlaneChargeTurnAppearanceParams");
+static_assert(sizeof(FPlaneChargeTurnAppearanceParams) == 0x000018, "Wrong size on FPlaneChargeTurnAppearanceParams");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, MinDegree) == 0x000000, "Member 'FPlaneChargeTurnAppearanceParams::MinDegree' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, MaxDegree) == 0x000004, "Member 'FPlaneChargeTurnAppearanceParams::MaxDegree' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, AngularSpeed) == 0x000008, "Member 'FPlaneChargeTurnAppearanceParams::AngularSpeed' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, SwitchAngularSpeed) == 0x00000C, "Member 'FPlaneChargeTurnAppearanceParams::SwitchAngularSpeed' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, ReturnAngularSpeed) == 0x000010, "Member 'FPlaneChargeTurnAppearanceParams::ReturnAngularSpeed' has a wrong offset!");
+static_assert(offsetof(FPlaneChargeTurnAppearanceParams, AngularAccelSec) == 0x000014, "Member 'FPlaneChargeTurnAppearanceParams::AngularAccelSec' has a wrong offset!");
+
+// ScriptStruct UnionRun.OnlineRacerParam
+// 0x0078 (0x0078 - 0x0000)
+struct FOnlineRacerParam final
+{
+public:
+	uint8                                         Version;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   RacerName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EDriverId                                     DriverId;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    MachineId;                                         // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    FrontMachineId;                                    // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    RearMachineId;                                     // 0x002B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    TireMachineId;                                     // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ComControlType;                                    // 0x002D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ComLevel;                                          // 0x002E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         GroupId;                                           // 0x002F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         GadgetPlateId;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EGadgetId>                             GadgetArray;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 GadgetSlotArray;                                   // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x20];                                      // 0x0058(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FOnlineRacerParam) == 0x000008, "Wrong alignment on FOnlineRacerParam");
+static_assert(sizeof(FOnlineRacerParam) == 0x000078, "Wrong size on FOnlineRacerParam");
+static_assert(offsetof(FOnlineRacerParam, Version) == 0x000000, "Member 'FOnlineRacerParam::Version' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, RacerName) == 0x000008, "Member 'FOnlineRacerParam::RacerName' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, DriverId) == 0x000028, "Member 'FOnlineRacerParam::DriverId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, MachineId) == 0x000029, "Member 'FOnlineRacerParam::MachineId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, FrontMachineId) == 0x00002A, "Member 'FOnlineRacerParam::FrontMachineId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, RearMachineId) == 0x00002B, "Member 'FOnlineRacerParam::RearMachineId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, TireMachineId) == 0x00002C, "Member 'FOnlineRacerParam::TireMachineId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, ComControlType) == 0x00002D, "Member 'FOnlineRacerParam::ComControlType' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, ComLevel) == 0x00002E, "Member 'FOnlineRacerParam::ComLevel' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, GroupId) == 0x00002F, "Member 'FOnlineRacerParam::GroupId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, GadgetPlateId) == 0x000030, "Member 'FOnlineRacerParam::GadgetPlateId' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, GadgetArray) == 0x000038, "Member 'FOnlineRacerParam::GadgetArray' has a wrong offset!");
+static_assert(offsetof(FOnlineRacerParam, GadgetSlotArray) == 0x000048, "Member 'FOnlineRacerParam::GadgetSlotArray' has a wrong offset!");
+
 // ScriptStruct UnionRun.OnlineCourseParam
 // 0x0048 (0x0048 - 0x0000)
 struct FOnlineCourseParam final
@@ -4517,24 +4468,18 @@ static_assert(offsetof(FOnlineCourseParam, Version) == 0x000000, "Member 'FOnlin
 static_assert(offsetof(FOnlineCourseParam, StageIds) == 0x000008, "Member 'FOnlineCourseParam::StageIds' has a wrong offset!");
 static_assert(offsetof(FOnlineCourseParam, RandomSeeds) == 0x000018, "Member 'FOnlineCourseParam::RandomSeeds' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlaneChargeTurnSpeedParams
-// 0x0014 (0x0014 - 0x0000)
-struct FPlaneChargeTurnSpeedParams final
+// ScriptStruct UnionRun.RaceReactionVoiceEtc
+// 0x0038 (0x0038 - 0x0000)
+struct FRaceReactionVoiceEtc final
 {
 public:
-	float                                         AngularAccel;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwitchAngularAccel;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularSpeedMin;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularSpeedCenter;                                // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularSpeedMax;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId;                                        // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlaneChargeTurnSpeedParams) == 0x000004, "Wrong alignment on FPlaneChargeTurnSpeedParams");
-static_assert(sizeof(FPlaneChargeTurnSpeedParams) == 0x000014, "Wrong size on FPlaneChargeTurnSpeedParams");
-static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularAccel) == 0x000000, "Member 'FPlaneChargeTurnSpeedParams::AngularAccel' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnSpeedParams, SwitchAngularAccel) == 0x000004, "Member 'FPlaneChargeTurnSpeedParams::SwitchAngularAccel' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedMin) == 0x000008, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedMin' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedCenter) == 0x00000C, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedCenter' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnSpeedParams, AngularSpeedMax) == 0x000010, "Member 'FPlaneChargeTurnSpeedParams::AngularSpeedMax' has a wrong offset!");
+static_assert(alignof(FRaceReactionVoiceEtc) == 0x000008, "Wrong alignment on FRaceReactionVoiceEtc");
+static_assert(sizeof(FRaceReactionVoiceEtc) == 0x000038, "Wrong size on FRaceReactionVoiceEtc");
+static_assert(offsetof(FRaceReactionVoiceEtc, Text) == 0x000000, "Member 'FRaceReactionVoiceEtc::Text' has a wrong offset!");
+static_assert(offsetof(FRaceReactionVoiceEtc, CueVoiceId) == 0x000010, "Member 'FRaceReactionVoiceEtc::CueVoiceId' has a wrong offset!");
 
 // ScriptStruct UnionRun.OnlineConnectionInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -4576,6 +4521,19 @@ static_assert(offsetof(FOnlineGroupInfo, GroupRaceRule) == 0x000001, "Member 'FO
 static_assert(offsetof(FOnlineGroupInfo, RaceSettingGroupMode) == 0x000002, "Member 'FOnlineGroupInfo::RaceSettingGroupMode' has a wrong offset!");
 static_assert(offsetof(FOnlineGroupInfo, RaceSettingGrouping) == 0x000003, "Member 'FOnlineGroupInfo::RaceSettingGrouping' has a wrong offset!");
 static_assert(offsetof(FOnlineGroupInfo, GroupColor) == 0x000008, "Member 'FOnlineGroupInfo::GroupColor' has a wrong offset!");
+
+// ScriptStruct UnionRun.PlaneChangeDirectionParams
+// 0x0008 (0x0008 - 0x0000)
+struct FPlaneChangeDirectionParams final
+{
+public:
+	float                                         AngularSpeed;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Seconds;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlaneChangeDirectionParams) == 0x000004, "Wrong alignment on FPlaneChangeDirectionParams");
+static_assert(sizeof(FPlaneChangeDirectionParams) == 0x000008, "Wrong size on FPlaneChangeDirectionParams");
+static_assert(offsetof(FPlaneChangeDirectionParams, AngularSpeed) == 0x000000, "Member 'FPlaneChangeDirectionParams::AngularSpeed' has a wrong offset!");
+static_assert(offsetof(FPlaneChangeDirectionParams, Seconds) == 0x000004, "Member 'FPlaneChangeDirectionParams::Seconds' has a wrong offset!");
 
 // ScriptStruct UnionRun.OnlineReplayRaceBase
 // 0x0038 (0x0038 - 0x0000)
@@ -4626,18 +4584,19 @@ static_assert(offsetof(FOnlineRaceReplay, CourseData) == 0x000198, "Member 'FOnl
 static_assert(offsetof(FOnlineRaceReplay, RacerArray) == 0x0001E0, "Member 'FOnlineRaceReplay::RacerArray' has a wrong offset!");
 static_assert(offsetof(FOnlineRaceReplay, ConnectionInfo) == 0x0001F0, "Member 'FOnlineRaceReplay::ConnectionInfo' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlaneDamageReactionParams
-// 0x0014 (0x0014 - 0x0000)
-struct FPlaneDamageReactionParams final
+// ScriptStruct UnionRun.UnionNavigationBinaryParameter
+// 0x0018 (0x0018 - 0x0000)
+struct FUnionNavigationBinaryParameter final
 {
 public:
-	struct FItemSpeedParam                        ClassSpeed;                                        // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         IntervalSeconds;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<uint8>                                 Data;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlaneDamageReactionParams) == 0x000004, "Wrong alignment on FPlaneDamageReactionParams");
-static_assert(sizeof(FPlaneDamageReactionParams) == 0x000014, "Wrong size on FPlaneDamageReactionParams");
-static_assert(offsetof(FPlaneDamageReactionParams, ClassSpeed) == 0x000000, "Member 'FPlaneDamageReactionParams::ClassSpeed' has a wrong offset!");
-static_assert(offsetof(FPlaneDamageReactionParams, IntervalSeconds) == 0x000010, "Member 'FPlaneDamageReactionParams::IntervalSeconds' has a wrong offset!");
+static_assert(alignof(FUnionNavigationBinaryParameter) == 0x000008, "Wrong alignment on FUnionNavigationBinaryParameter");
+static_assert(sizeof(FUnionNavigationBinaryParameter) == 0x000018, "Wrong size on FUnionNavigationBinaryParameter");
+static_assert(offsetof(FUnionNavigationBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionNavigationBinaryParameter::DataVersion' has a wrong offset!");
+static_assert(offsetof(FUnionNavigationBinaryParameter, Data) == 0x000008, "Member 'FUnionNavigationBinaryParameter::Data' has a wrong offset!");
 
 // ScriptStruct UnionRun.RaceActionTutorialTrigger
 // 0x0028 (0x0028 - 0x0000)
@@ -4678,26 +4637,33 @@ static_assert(offsetof(FRaceActionTutorialStageData, StageId) == 0x000000, "Memb
 static_assert(offsetof(FRaceActionTutorialStageData, bShowInGrandPrix) == 0x000001, "Member 'FRaceActionTutorialStageData::bShowInGrandPrix' has a wrong offset!");
 static_assert(offsetof(FRaceActionTutorialStageData, RaceActionTutorialParamsList) == 0x000008, "Member 'FRaceActionTutorialStageData::RaceActionTutorialParamsList' has a wrong offset!");
 
-// ScriptStruct UnionRun.PlaneChargeTurnAppearanceParams
-// 0x0018 (0x0018 - 0x0000)
-struct FPlaneChargeTurnAppearanceParams final
+// ScriptStruct UnionRun.ComGadgetEquipTableSetting
+// 0x0008 (0x0010 - 0x0008)
+struct FComGadgetEquipTableSetting final : public FTableRowBase
 {
 public:
-	float                                         MinDegree;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDegree;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularSpeed;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwitchAngularSpeed;                                // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnAngularSpeed;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularAccelSec;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EComGadgetEquipTableType                      TableType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GadgetEquipGr;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlaneChargeTurnAppearanceParams) == 0x000004, "Wrong alignment on FPlaneChargeTurnAppearanceParams");
-static_assert(sizeof(FPlaneChargeTurnAppearanceParams) == 0x000018, "Wrong size on FPlaneChargeTurnAppearanceParams");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, MinDegree) == 0x000000, "Member 'FPlaneChargeTurnAppearanceParams::MinDegree' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, MaxDegree) == 0x000004, "Member 'FPlaneChargeTurnAppearanceParams::MaxDegree' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, AngularSpeed) == 0x000008, "Member 'FPlaneChargeTurnAppearanceParams::AngularSpeed' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, SwitchAngularSpeed) == 0x00000C, "Member 'FPlaneChargeTurnAppearanceParams::SwitchAngularSpeed' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, ReturnAngularSpeed) == 0x000010, "Member 'FPlaneChargeTurnAppearanceParams::ReturnAngularSpeed' has a wrong offset!");
-static_assert(offsetof(FPlaneChargeTurnAppearanceParams, AngularAccelSec) == 0x000014, "Member 'FPlaneChargeTurnAppearanceParams::AngularAccelSec' has a wrong offset!");
+static_assert(alignof(FComGadgetEquipTableSetting) == 0x000008, "Wrong alignment on FComGadgetEquipTableSetting");
+static_assert(sizeof(FComGadgetEquipTableSetting) == 0x000010, "Wrong size on FComGadgetEquipTableSetting");
+static_assert(offsetof(FComGadgetEquipTableSetting, TableType) == 0x000008, "Member 'FComGadgetEquipTableSetting::TableType' has a wrong offset!");
+static_assert(offsetof(FComGadgetEquipTableSetting, GadgetEquipGr) == 0x00000C, "Member 'FComGadgetEquipTableSetting::GadgetEquipGr' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComGadgetEquipFestaRaceRule
+// 0x0018 (0x0020 - 0x0008)
+struct FComGadgetEquipFestaRaceRule final : public FTableRowBase
+{
+public:
+	EGroupRaceRule                                FestaRule;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComGadgetEquipFestaRaceRule) == 0x000008, "Wrong alignment on FComGadgetEquipFestaRaceRule");
+static_assert(sizeof(FComGadgetEquipFestaRaceRule) == 0x000020, "Wrong size on FComGadgetEquipFestaRaceRule");
+static_assert(offsetof(FComGadgetEquipFestaRaceRule, FestaRule) == 0x000008, "Member 'FComGadgetEquipFestaRaceRule::FestaRule' has a wrong offset!");
+static_assert(offsetof(FComGadgetEquipFestaRaceRule, NormalRacerGadget) == 0x000010, "Member 'FComGadgetEquipFestaRaceRule::NormalRacerGadget' has a wrong offset!");
 
 // ScriptStruct UnionRun.RaceTestItemSetting
 // 0x0018 (0x0020 - 0x0008)
@@ -4730,235 +4696,30 @@ static_assert(offsetof(FRaceTestStageSetting, StageId) == 0x000000, "Member 'FRa
 static_assert(offsetof(FRaceTestStageSetting, TravelRingScreenType) == 0x000001, "Member 'FRaceTestStageSetting::TravelRingScreenType' has a wrong offset!");
 static_assert(offsetof(FRaceTestStageSetting, IrregularEventId) == 0x000002, "Member 'FRaceTestStageSetting::IrregularEventId' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRaceHUDWarning
+// ScriptStruct UnionRun.RacerReactionVoiceList
 // 0x0010 (0x0010 - 0x0000)
-struct FUnionRaceHUDWarning final
+struct FRacerReactionVoiceList final
 {
 public:
-	TArray<class URaceUISubApproachWarning*>      WarningInfoWidget;                                 // 0x0000(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<struct FRacerReactionVoicePack>        VoiceList;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionRaceHUDWarning) == 0x000008, "Wrong alignment on FUnionRaceHUDWarning");
-static_assert(sizeof(FUnionRaceHUDWarning) == 0x000010, "Wrong size on FUnionRaceHUDWarning");
-static_assert(offsetof(FUnionRaceHUDWarning, WarningInfoWidget) == 0x000000, "Member 'FUnionRaceHUDWarning::WarningInfoWidget' has a wrong offset!");
+static_assert(alignof(FRacerReactionVoiceList) == 0x000008, "Wrong alignment on FRacerReactionVoiceList");
+static_assert(sizeof(FRacerReactionVoiceList) == 0x000010, "Wrong size on FRacerReactionVoiceList");
+static_assert(offsetof(FRacerReactionVoiceList, VoiceList) == 0x000000, "Member 'FRacerReactionVoiceList::VoiceList' has a wrong offset!");
 
-// ScriptStruct UnionRun.RaceTestRacerSetting
-// 0x0020 (0x0020 - 0x0000)
-struct FRaceTestRacerSetting final
+// ScriptStruct UnionRun.RacerReactionChrData
+// 0x0018 (0x0018 - 0x0000)
+struct FRacerReactionChrData final
 {
 public:
-	EDriverId                                     Driver;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMachineId                                    machine;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EGadgetId>                             Gadgets;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
-	ERaceTestRacerRunMode                         RunMode;                                           // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GroupSetting;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRacerReactionVoiceList                list;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRaceTestRacerSetting) == 0x000008, "Wrong alignment on FRaceTestRacerSetting");
-static_assert(sizeof(FRaceTestRacerSetting) == 0x000020, "Wrong size on FRaceTestRacerSetting");
-static_assert(offsetof(FRaceTestRacerSetting, Driver) == 0x000000, "Member 'FRaceTestRacerSetting::Driver' has a wrong offset!");
-static_assert(offsetof(FRaceTestRacerSetting, machine) == 0x000001, "Member 'FRaceTestRacerSetting::machine' has a wrong offset!");
-static_assert(offsetof(FRaceTestRacerSetting, Gadgets) == 0x000008, "Member 'FRaceTestRacerSetting::Gadgets' has a wrong offset!");
-static_assert(offsetof(FRaceTestRacerSetting, RunMode) == 0x000018, "Member 'FRaceTestRacerSetting::RunMode' has a wrong offset!");
-static_assert(offsetof(FRaceTestRacerSetting, GroupSetting) == 0x00001C, "Member 'FRaceTestRacerSetting::GroupSetting' has a wrong offset!");
-
-// ScriptStruct UnionRun.RaceLoadTestThreshold
-// 0x0008 (0x0008 - 0x0000)
-struct FRaceLoadTestThreshold final
-{
-public:
-	float                                         Cpu;                                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Gpu;                                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRaceLoadTestThreshold) == 0x000004, "Wrong alignment on FRaceLoadTestThreshold");
-static_assert(sizeof(FRaceLoadTestThreshold) == 0x000008, "Wrong size on FRaceLoadTestThreshold");
-static_assert(offsetof(FRaceLoadTestThreshold, Cpu) == 0x000000, "Member 'FRaceLoadTestThreshold::Cpu' has a wrong offset!");
-static_assert(offsetof(FRaceLoadTestThreshold, Gpu) == 0x000004, "Member 'FRaceLoadTestThreshold::Gpu' has a wrong offset!");
-
-// ScriptStruct UnionRun.RacerReaction
-// 0x0048 (0x0048 - 0x0000)
-struct alignas(0x08) FRacerReaction final
-{
-public:
-	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRacerReaction) == 0x000008, "Wrong alignment on FRacerReaction");
-static_assert(sizeof(FRacerReaction) == 0x000048, "Wrong size on FRacerReaction");
-
-// ScriptStruct UnionRun.BtnGuidePlatformText
-// 0x0060 (0x0068 - 0x0008)
-struct FBtnGuidePlatformText final : public FTableRowBase
-{
-public:
-	class FText                                   TextR1;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TextL1;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TextStickL;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TextStickR;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TextR2;                                            // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   TextL2;                                            // 0x0058(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FBtnGuidePlatformText) == 0x000008, "Wrong alignment on FBtnGuidePlatformText");
-static_assert(sizeof(FBtnGuidePlatformText) == 0x000068, "Wrong size on FBtnGuidePlatformText");
-static_assert(offsetof(FBtnGuidePlatformText, TextR1) == 0x000008, "Member 'FBtnGuidePlatformText::TextR1' has a wrong offset!");
-static_assert(offsetof(FBtnGuidePlatformText, TextL1) == 0x000018, "Member 'FBtnGuidePlatformText::TextL1' has a wrong offset!");
-static_assert(offsetof(FBtnGuidePlatformText, TextStickL) == 0x000028, "Member 'FBtnGuidePlatformText::TextStickL' has a wrong offset!");
-static_assert(offsetof(FBtnGuidePlatformText, TextStickR) == 0x000038, "Member 'FBtnGuidePlatformText::TextStickR' has a wrong offset!");
-static_assert(offsetof(FBtnGuidePlatformText, TextR2) == 0x000048, "Member 'FBtnGuidePlatformText::TextR2' has a wrong offset!");
-static_assert(offsetof(FBtnGuidePlatformText, TextL2) == 0x000058, "Member 'FBtnGuidePlatformText::TextL2' has a wrong offset!");
-
-// ScriptStruct UnionRun.RaceUITimeTrialTime
-// 0x0020 (0x0020 - 0x0000)
-struct FRaceUITimeTrialTime final
-{
-public:
-	bool                                          IsMinus;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSame;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Minutes10;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Minutes01;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Seconds10;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Seconds01;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Millimeter100;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Millimeter010;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Millimeter001;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRaceUITimeTrialTime) == 0x000004, "Wrong alignment on FRaceUITimeTrialTime");
-static_assert(sizeof(FRaceUITimeTrialTime) == 0x000020, "Wrong size on FRaceUITimeTrialTime");
-static_assert(offsetof(FRaceUITimeTrialTime, IsMinus) == 0x000000, "Member 'FRaceUITimeTrialTime::IsMinus' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, IsSame) == 0x000001, "Member 'FRaceUITimeTrialTime::IsSame' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Minutes10) == 0x000004, "Member 'FRaceUITimeTrialTime::Minutes10' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Minutes01) == 0x000008, "Member 'FRaceUITimeTrialTime::Minutes01' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Seconds10) == 0x00000C, "Member 'FRaceUITimeTrialTime::Seconds10' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Seconds01) == 0x000010, "Member 'FRaceUITimeTrialTime::Seconds01' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Millimeter100) == 0x000014, "Member 'FRaceUITimeTrialTime::Millimeter100' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Millimeter010) == 0x000018, "Member 'FRaceUITimeTrialTime::Millimeter010' has a wrong offset!");
-static_assert(offsetof(FRaceUITimeTrialTime, Millimeter001) == 0x00001C, "Member 'FRaceUITimeTrialTime::Millimeter001' has a wrong offset!");
-
-// ScriptStruct UnionRun.FestaRacerContribution
-// 0x0014 (0x0014 - 0x0000)
-struct FFestaRacerContribution final
-{
-public:
-	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TractionTimes;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsTractionTimes1st;                               // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BonusPoint;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBonusPoint1st;                                  // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFestaRacerContribution) == 0x000004, "Wrong alignment on FFestaRacerContribution");
-static_assert(sizeof(FFestaRacerContribution) == 0x000014, "Wrong size on FFestaRacerContribution");
-static_assert(offsetof(FFestaRacerContribution, RacerIndex) == 0x000000, "Member 'FFestaRacerContribution::RacerIndex' has a wrong offset!");
-static_assert(offsetof(FFestaRacerContribution, TractionTimes) == 0x000004, "Member 'FFestaRacerContribution::TractionTimes' has a wrong offset!");
-static_assert(offsetof(FFestaRacerContribution, bIsTractionTimes1st) == 0x000008, "Member 'FFestaRacerContribution::bIsTractionTimes1st' has a wrong offset!");
-static_assert(offsetof(FFestaRacerContribution, BonusPoint) == 0x00000C, "Member 'FFestaRacerContribution::BonusPoint' has a wrong offset!");
-static_assert(offsetof(FFestaRacerContribution, bIsBonusPoint1st) == 0x000010, "Member 'FFestaRacerContribution::bIsBonusPoint1st' has a wrong offset!");
-
-// ScriptStruct UnionRun.RingColliderParam
-// 0x0020 (0x0020 - 0x0000)
-struct FRingColliderParam final : public FColliderParam
-{
-public:
-	struct FVector                                Extents;                                           // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PackageRingRadius;                                 // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRingColliderParam) == 0x000008, "Wrong alignment on FRingColliderParam");
-static_assert(sizeof(FRingColliderParam) == 0x000020, "Wrong size on FRingColliderParam");
-static_assert(offsetof(FRingColliderParam, Extents) == 0x000000, "Member 'FRingColliderParam::Extents' has a wrong offset!");
-static_assert(offsetof(FRingColliderParam, Radius) == 0x000018, "Member 'FRingColliderParam::Radius' has a wrong offset!");
-static_assert(offsetof(FRingColliderParam, PackageRingRadius) == 0x00001C, "Member 'FRingColliderParam::PackageRingRadius' has a wrong offset!");
-
-// ScriptStruct UnionRun.RingCircleHitInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FRingCircleHitInfo final
-{
-public:
-	int32                                         AbsorberRacerIndex;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AbsorberPriority;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 AbsorberObject;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRingCircleHitInfo) == 0x000008, "Wrong alignment on FRingCircleHitInfo");
-static_assert(sizeof(FRingCircleHitInfo) == 0x000010, "Wrong size on FRingCircleHitInfo");
-static_assert(offsetof(FRingCircleHitInfo, AbsorberRacerIndex) == 0x000000, "Member 'FRingCircleHitInfo::AbsorberRacerIndex' has a wrong offset!");
-static_assert(offsetof(FRingCircleHitInfo, AbsorberPriority) == 0x000004, "Member 'FRingCircleHitInfo::AbsorberPriority' has a wrong offset!");
-static_assert(offsetof(FRingCircleHitInfo, AbsorberObject) == 0x000008, "Member 'FRingCircleHitInfo::AbsorberObject' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComGadgetEquipTableSetting
-// 0x0008 (0x0010 - 0x0008)
-struct FComGadgetEquipTableSetting final : public FTableRowBase
-{
-public:
-	EComGadgetEquipTableType                      TableType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GadgetEquipGr;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComGadgetEquipTableSetting) == 0x000008, "Wrong alignment on FComGadgetEquipTableSetting");
-static_assert(sizeof(FComGadgetEquipTableSetting) == 0x000010, "Wrong size on FComGadgetEquipTableSetting");
-static_assert(offsetof(FComGadgetEquipTableSetting, TableType) == 0x000008, "Member 'FComGadgetEquipTableSetting::TableType' has a wrong offset!");
-static_assert(offsetof(FComGadgetEquipTableSetting, GadgetEquipGr) == 0x00000C, "Member 'FComGadgetEquipTableSetting::GadgetEquipGr' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComGadgetEquipFestaRaceRule
-// 0x0018 (0x0020 - 0x0008)
-struct FComGadgetEquipFestaRaceRule final : public FTableRowBase
-{
-public:
-	EGroupRaceRule                                FestaRule;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComGadgetEquipFestaRaceRule) == 0x000008, "Wrong alignment on FComGadgetEquipFestaRaceRule");
-static_assert(sizeof(FComGadgetEquipFestaRaceRule) == 0x000020, "Wrong size on FComGadgetEquipFestaRaceRule");
-static_assert(offsetof(FComGadgetEquipFestaRaceRule, FestaRule) == 0x000008, "Member 'FComGadgetEquipFestaRaceRule::FestaRule' has a wrong offset!");
-static_assert(offsetof(FComGadgetEquipFestaRaceRule, NormalRacerGadget) == 0x000010, "Member 'FComGadgetEquipFestaRaceRule::NormalRacerGadget' has a wrong offset!");
-
-// ScriptStruct UnionRun.UnionBtCollisionBinaryParameter
-// 0x0020 (0x0020 - 0x0000)
-struct FUnionBtCollisionBinaryParameter final
-{
-public:
-	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Hash;                                              // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChunkDataCount;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<uint8>                                 Data;                                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionBtCollisionBinaryParameter) == 0x000008, "Wrong alignment on FUnionBtCollisionBinaryParameter");
-static_assert(sizeof(FUnionBtCollisionBinaryParameter) == 0x000020, "Wrong size on FUnionBtCollisionBinaryParameter");
-static_assert(offsetof(FUnionBtCollisionBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionBtCollisionBinaryParameter::DataVersion' has a wrong offset!");
-static_assert(offsetof(FUnionBtCollisionBinaryParameter, Hash) == 0x000004, "Member 'FUnionBtCollisionBinaryParameter::Hash' has a wrong offset!");
-static_assert(offsetof(FUnionBtCollisionBinaryParameter, ChunkDataCount) == 0x000008, "Member 'FUnionBtCollisionBinaryParameter::ChunkDataCount' has a wrong offset!");
-static_assert(offsetof(FUnionBtCollisionBinaryParameter, Data) == 0x000010, "Member 'FUnionBtCollisionBinaryParameter::Data' has a wrong offset!");
-
-// ScriptStruct UnionRun.RunChaseCameraParam
-// 0x0028 (0x0028 - 0x0000)
-struct FRunChaseCameraParam final
-{
-public:
-	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuperDistance;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BackDistance;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Elevation;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BackElevation;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetForward;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetHeight;                                      // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FieldOfView;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuperFieldOfView;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BackFieldOfView;                                   // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRunChaseCameraParam) == 0x000004, "Wrong alignment on FRunChaseCameraParam");
-static_assert(sizeof(FRunChaseCameraParam) == 0x000028, "Wrong size on FRunChaseCameraParam");
-static_assert(offsetof(FRunChaseCameraParam, Distance) == 0x000000, "Member 'FRunChaseCameraParam::Distance' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, SuperDistance) == 0x000004, "Member 'FRunChaseCameraParam::SuperDistance' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, BackDistance) == 0x000008, "Member 'FRunChaseCameraParam::BackDistance' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, Elevation) == 0x00000C, "Member 'FRunChaseCameraParam::Elevation' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, BackElevation) == 0x000010, "Member 'FRunChaseCameraParam::BackElevation' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, TargetForward) == 0x000014, "Member 'FRunChaseCameraParam::TargetForward' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, TargetHeight) == 0x000018, "Member 'FRunChaseCameraParam::TargetHeight' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, FieldOfView) == 0x00001C, "Member 'FRunChaseCameraParam::FieldOfView' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, SuperFieldOfView) == 0x000020, "Member 'FRunChaseCameraParam::SuperFieldOfView' has a wrong offset!");
-static_assert(offsetof(FRunChaseCameraParam, BackFieldOfView) == 0x000024, "Member 'FRunChaseCameraParam::BackFieldOfView' has a wrong offset!");
+static_assert(alignof(FRacerReactionChrData) == 0x000008, "Wrong alignment on FRacerReactionChrData");
+static_assert(sizeof(FRacerReactionChrData) == 0x000018, "Wrong size on FRacerReactionChrData");
+static_assert(offsetof(FRacerReactionChrData, DriverId) == 0x000000, "Member 'FRacerReactionChrData::DriverId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionChrData, list) == 0x000008, "Member 'FRacerReactionChrData::list' has a wrong offset!");
 
 // ScriptStruct UnionRun.RacerReactionChrDataList
 // 0x0018 (0x0018 - 0x0000)
@@ -5019,6 +4780,242 @@ static_assert(offsetof(FRacerReactionConfig, OvertakeRange) == 0x000004, "Member
 static_assert(offsetof(FRacerReactionConfig, OvertakenRange) == 0x000008, "Member 'FRacerReactionConfig::OvertakenRange' has a wrong offset!");
 static_assert(offsetof(FRacerReactionConfig, TypeParam) == 0x000010, "Member 'FRacerReactionConfig::TypeParam' has a wrong offset!");
 
+// ScriptStruct UnionRun.RaceTestRacerSetting
+// 0x0020 (0x0020 - 0x0000)
+struct FRaceTestRacerSetting final
+{
+public:
+	EDriverId                                     Driver;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMachineId                                    machine;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EGadgetId>                             Gadgets;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
+	ERaceTestRacerRunMode                         RunMode;                                           // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GroupSetting;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRaceTestRacerSetting) == 0x000008, "Wrong alignment on FRaceTestRacerSetting");
+static_assert(sizeof(FRaceTestRacerSetting) == 0x000020, "Wrong size on FRaceTestRacerSetting");
+static_assert(offsetof(FRaceTestRacerSetting, Driver) == 0x000000, "Member 'FRaceTestRacerSetting::Driver' has a wrong offset!");
+static_assert(offsetof(FRaceTestRacerSetting, machine) == 0x000001, "Member 'FRaceTestRacerSetting::machine' has a wrong offset!");
+static_assert(offsetof(FRaceTestRacerSetting, Gadgets) == 0x000008, "Member 'FRaceTestRacerSetting::Gadgets' has a wrong offset!");
+static_assert(offsetof(FRaceTestRacerSetting, RunMode) == 0x000018, "Member 'FRaceTestRacerSetting::RunMode' has a wrong offset!");
+static_assert(offsetof(FRaceTestRacerSetting, GroupSetting) == 0x00001C, "Member 'FRaceTestRacerSetting::GroupSetting' has a wrong offset!");
+
+// ScriptStruct UnionRun.RaceLoadTestThreshold
+// 0x0008 (0x0008 - 0x0000)
+struct FRaceLoadTestThreshold final
+{
+public:
+	float                                         Cpu;                                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Gpu;                                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRaceLoadTestThreshold) == 0x000004, "Wrong alignment on FRaceLoadTestThreshold");
+static_assert(sizeof(FRaceLoadTestThreshold) == 0x000008, "Wrong size on FRaceLoadTestThreshold");
+static_assert(offsetof(FRaceLoadTestThreshold, Cpu) == 0x000000, "Member 'FRaceLoadTestThreshold::Cpu' has a wrong offset!");
+static_assert(offsetof(FRaceLoadTestThreshold, Gpu) == 0x000004, "Member 'FRaceLoadTestThreshold::Gpu' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionRaceHUDGroupRingUI
+// 0x0010 (0x0010 - 0x0000)
+struct FUnionRaceHUDGroupRingUI final
+{
+public:
+	TArray<class URaceUISubGroupRing*>            RingCountUI;                                       // 0x0000(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionRaceHUDGroupRingUI) == 0x000008, "Wrong alignment on FUnionRaceHUDGroupRingUI");
+static_assert(sizeof(FUnionRaceHUDGroupRingUI) == 0x000010, "Wrong size on FUnionRaceHUDGroupRingUI");
+static_assert(offsetof(FUnionRaceHUDGroupRingUI, RingCountUI) == 0x000000, "Member 'FUnionRaceHUDGroupRingUI::RingCountUI' has a wrong offset!");
+
+// ScriptStruct UnionRun.BtnGuidePlatformText
+// 0x0060 (0x0068 - 0x0008)
+struct FBtnGuidePlatformText final : public FTableRowBase
+{
+public:
+	class FText                                   TextR1;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TextL1;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TextStickL;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TextStickR;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TextR2;                                            // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   TextL2;                                            // 0x0058(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FBtnGuidePlatformText) == 0x000008, "Wrong alignment on FBtnGuidePlatformText");
+static_assert(sizeof(FBtnGuidePlatformText) == 0x000068, "Wrong size on FBtnGuidePlatformText");
+static_assert(offsetof(FBtnGuidePlatformText, TextR1) == 0x000008, "Member 'FBtnGuidePlatformText::TextR1' has a wrong offset!");
+static_assert(offsetof(FBtnGuidePlatformText, TextL1) == 0x000018, "Member 'FBtnGuidePlatformText::TextL1' has a wrong offset!");
+static_assert(offsetof(FBtnGuidePlatformText, TextStickL) == 0x000028, "Member 'FBtnGuidePlatformText::TextStickL' has a wrong offset!");
+static_assert(offsetof(FBtnGuidePlatformText, TextStickR) == 0x000038, "Member 'FBtnGuidePlatformText::TextStickR' has a wrong offset!");
+static_assert(offsetof(FBtnGuidePlatformText, TextR2) == 0x000048, "Member 'FBtnGuidePlatformText::TextR2' has a wrong offset!");
+static_assert(offsetof(FBtnGuidePlatformText, TextL2) == 0x000058, "Member 'FBtnGuidePlatformText::TextL2' has a wrong offset!");
+
+// ScriptStruct UnionRun.RaceUITimeTrialTime
+// 0x0020 (0x0020 - 0x0000)
+struct FRaceUITimeTrialTime final
+{
+public:
+	bool                                          IsMinus;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSame;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Minutes10;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Minutes01;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seconds10;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seconds01;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Millimeter100;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Millimeter010;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Millimeter001;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRaceUITimeTrialTime) == 0x000004, "Wrong alignment on FRaceUITimeTrialTime");
+static_assert(sizeof(FRaceUITimeTrialTime) == 0x000020, "Wrong size on FRaceUITimeTrialTime");
+static_assert(offsetof(FRaceUITimeTrialTime, IsMinus) == 0x000000, "Member 'FRaceUITimeTrialTime::IsMinus' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, IsSame) == 0x000001, "Member 'FRaceUITimeTrialTime::IsSame' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Minutes10) == 0x000004, "Member 'FRaceUITimeTrialTime::Minutes10' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Minutes01) == 0x000008, "Member 'FRaceUITimeTrialTime::Minutes01' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Seconds10) == 0x00000C, "Member 'FRaceUITimeTrialTime::Seconds10' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Seconds01) == 0x000010, "Member 'FRaceUITimeTrialTime::Seconds01' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Millimeter100) == 0x000014, "Member 'FRaceUITimeTrialTime::Millimeter100' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Millimeter010) == 0x000018, "Member 'FRaceUITimeTrialTime::Millimeter010' has a wrong offset!");
+static_assert(offsetof(FRaceUITimeTrialTime, Millimeter001) == 0x00001C, "Member 'FRaceUITimeTrialTime::Millimeter001' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComGadgetEquipComSpeedLevel
+// 0x0018 (0x0020 - 0x0008)
+struct FComGadgetEquipComSpeedLevel final : public FTableRowBase
+{
+public:
+	ERaceSettingComSpeed                          ComSpeedLevel;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComGadgetEquipComSpeedLevel) == 0x000008, "Wrong alignment on FComGadgetEquipComSpeedLevel");
+static_assert(sizeof(FComGadgetEquipComSpeedLevel) == 0x000020, "Wrong size on FComGadgetEquipComSpeedLevel");
+static_assert(offsetof(FComGadgetEquipComSpeedLevel, ComSpeedLevel) == 0x000008, "Member 'FComGadgetEquipComSpeedLevel::ComSpeedLevel' has a wrong offset!");
+static_assert(offsetof(FComGadgetEquipComSpeedLevel, NormalRacerGadget) == 0x000010, "Member 'FComGadgetEquipComSpeedLevel::NormalRacerGadget' has a wrong offset!");
+
+// ScriptStruct UnionRun.RingColliderParam
+// 0x0020 (0x0020 - 0x0000)
+struct FRingColliderParam final : public FColliderParam
+{
+public:
+	struct FVector                                Extents;                                           // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PackageRingRadius;                                 // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRingColliderParam) == 0x000008, "Wrong alignment on FRingColliderParam");
+static_assert(sizeof(FRingColliderParam) == 0x000020, "Wrong size on FRingColliderParam");
+static_assert(offsetof(FRingColliderParam, Extents) == 0x000000, "Member 'FRingColliderParam::Extents' has a wrong offset!");
+static_assert(offsetof(FRingColliderParam, Radius) == 0x000018, "Member 'FRingColliderParam::Radius' has a wrong offset!");
+static_assert(offsetof(FRingColliderParam, PackageRingRadius) == 0x00001C, "Member 'FRingColliderParam::PackageRingRadius' has a wrong offset!");
+
+// ScriptStruct UnionRun.RingCircleHitInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FRingCircleHitInfo final
+{
+public:
+	int32                                         AbsorberRacerIndex;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AbsorberPriority;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 AbsorberObject;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRingCircleHitInfo) == 0x000008, "Wrong alignment on FRingCircleHitInfo");
+static_assert(sizeof(FRingCircleHitInfo) == 0x000010, "Wrong size on FRingCircleHitInfo");
+static_assert(offsetof(FRingCircleHitInfo, AbsorberRacerIndex) == 0x000000, "Member 'FRingCircleHitInfo::AbsorberRacerIndex' has a wrong offset!");
+static_assert(offsetof(FRingCircleHitInfo, AbsorberPriority) == 0x000004, "Member 'FRingCircleHitInfo::AbsorberPriority' has a wrong offset!");
+static_assert(offsetof(FRingCircleHitInfo, AbsorberObject) == 0x000008, "Member 'FRingCircleHitInfo::AbsorberObject' has a wrong offset!");
+
+// ScriptStruct UnionRun.RacerReactionStageData
+// 0x0008 (0x0008 - 0x0000)
+struct FRacerReactionStageData final
+{
+public:
+	EStageId                                      StageId;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ElapsedRate;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRacerReactionStageData) == 0x000004, "Wrong alignment on FRacerReactionStageData");
+static_assert(sizeof(FRacerReactionStageData) == 0x000008, "Wrong size on FRacerReactionStageData");
+static_assert(offsetof(FRacerReactionStageData, StageId) == 0x000000, "Member 'FRacerReactionStageData::StageId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionStageData, ElapsedRate) == 0x000004, "Member 'FRacerReactionStageData::ElapsedRate' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionBtCollisionBinaryParameter
+// 0x0020 (0x0020 - 0x0000)
+struct FUnionBtCollisionBinaryParameter final
+{
+public:
+	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Hash;                                              // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChunkDataCount;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<uint8>                                 Data;                                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionBtCollisionBinaryParameter) == 0x000008, "Wrong alignment on FUnionBtCollisionBinaryParameter");
+static_assert(sizeof(FUnionBtCollisionBinaryParameter) == 0x000020, "Wrong size on FUnionBtCollisionBinaryParameter");
+static_assert(offsetof(FUnionBtCollisionBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionBtCollisionBinaryParameter::DataVersion' has a wrong offset!");
+static_assert(offsetof(FUnionBtCollisionBinaryParameter, Hash) == 0x000004, "Member 'FUnionBtCollisionBinaryParameter::Hash' has a wrong offset!");
+static_assert(offsetof(FUnionBtCollisionBinaryParameter, ChunkDataCount) == 0x000008, "Member 'FUnionBtCollisionBinaryParameter::ChunkDataCount' has a wrong offset!");
+static_assert(offsetof(FUnionBtCollisionBinaryParameter, Data) == 0x000010, "Member 'FUnionBtCollisionBinaryParameter::Data' has a wrong offset!");
+
+// ScriptStruct UnionRun.RunChaseCameraParam
+// 0x0028 (0x0028 - 0x0000)
+struct FRunChaseCameraParam final
+{
+public:
+	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuperDistance;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BackDistance;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Elevation;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BackElevation;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetForward;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetHeight;                                      // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FieldOfView;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuperFieldOfView;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BackFieldOfView;                                   // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRunChaseCameraParam) == 0x000004, "Wrong alignment on FRunChaseCameraParam");
+static_assert(sizeof(FRunChaseCameraParam) == 0x000028, "Wrong size on FRunChaseCameraParam");
+static_assert(offsetof(FRunChaseCameraParam, Distance) == 0x000000, "Member 'FRunChaseCameraParam::Distance' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, SuperDistance) == 0x000004, "Member 'FRunChaseCameraParam::SuperDistance' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, BackDistance) == 0x000008, "Member 'FRunChaseCameraParam::BackDistance' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, Elevation) == 0x00000C, "Member 'FRunChaseCameraParam::Elevation' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, BackElevation) == 0x000010, "Member 'FRunChaseCameraParam::BackElevation' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, TargetForward) == 0x000014, "Member 'FRunChaseCameraParam::TargetForward' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, TargetHeight) == 0x000018, "Member 'FRunChaseCameraParam::TargetHeight' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, FieldOfView) == 0x00001C, "Member 'FRunChaseCameraParam::FieldOfView' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, SuperFieldOfView) == 0x000020, "Member 'FRunChaseCameraParam::SuperFieldOfView' has a wrong offset!");
+static_assert(offsetof(FRunChaseCameraParam, BackFieldOfView) == 0x000024, "Member 'FRunChaseCameraParam::BackFieldOfView' has a wrong offset!");
+
+// ScriptStruct UnionRun.RacerReactionText
+// 0x00A0 (0x00A0 - 0x0000)
+struct FRacerReactionText final
+{
+public:
+	ERacerReactionId                              ID;                                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerReactionVoiceType                       VoiceType;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     RivalId;                                           // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     VoiceChrId;                                        // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId;                                        // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId_Guest;                                  // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId_Rival;                                  // 0x0058(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TextTableId;                                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TextId;                                            // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerReactionWindow                          WindowId;                                          // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDriverId                                     FaceId;                                            // 0x0099(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StageId;                                           // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRacerReactionText) == 0x000008, "Wrong alignment on FRacerReactionText");
+static_assert(sizeof(FRacerReactionText) == 0x0000A0, "Wrong size on FRacerReactionText");
+static_assert(offsetof(FRacerReactionText, ID) == 0x000000, "Member 'FRacerReactionText::ID' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, VoiceType) == 0x000001, "Member 'FRacerReactionText::VoiceType' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, DriverId) == 0x000002, "Member 'FRacerReactionText::DriverId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, RivalId) == 0x000003, "Member 'FRacerReactionText::RivalId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, VoiceChrId) == 0x000004, "Member 'FRacerReactionText::VoiceChrId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, CueVoiceId) == 0x000008, "Member 'FRacerReactionText::CueVoiceId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, CueVoiceId_Guest) == 0x000030, "Member 'FRacerReactionText::CueVoiceId_Guest' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, CueVoiceId_Rival) == 0x000058, "Member 'FRacerReactionText::CueVoiceId_Rival' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, TextTableId) == 0x000080, "Member 'FRacerReactionText::TextTableId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, TextId) == 0x000088, "Member 'FRacerReactionText::TextId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, WindowId) == 0x000098, "Member 'FRacerReactionText::WindowId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, FaceId) == 0x000099, "Member 'FRacerReactionText::FaceId' has a wrong offset!");
+static_assert(offsetof(FRacerReactionText, StageId) == 0x00009C, "Member 'FRacerReactionText::StageId' has a wrong offset!");
+
 // ScriptStruct UnionRun.UnionCameraRequstInfo
 // 0x0028 (0x0028 - 0x0000)
 struct alignas(0x04) FUnionCameraRequstInfo final
@@ -5059,32 +5056,15 @@ static_assert(offsetof(FCameraParamTable, OffsetFixedTarget) == 0x000020, "Membe
 static_assert(offsetof(FCameraParamTable, OffsetFixedInFrame) == 0x000024, "Member 'FCameraParamTable::OffsetFixedInFrame' has a wrong offset!");
 static_assert(offsetof(FCameraParamTable, OffsetFixedOutFrame) == 0x000028, "Member 'FCameraParamTable::OffsetFixedOutFrame' has a wrong offset!");
 
-// ScriptStruct UnionRun.ReactionDirName
-// 0x0028 (0x0028 - 0x0000)
-struct FReactionDirName final
+// ScriptStruct UnionRun.RacerReaction
+// 0x0048 (0x0048 - 0x0000)
+struct alignas(0x08) FRacerReaction final
 {
 public:
-	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DirName;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FReactionDirName) == 0x000008, "Wrong alignment on FReactionDirName");
-static_assert(sizeof(FReactionDirName) == 0x000028, "Wrong size on FReactionDirName");
-static_assert(offsetof(FReactionDirName, DriverId) == 0x000000, "Member 'FReactionDirName::DriverId' has a wrong offset!");
-static_assert(offsetof(FReactionDirName, DirName) == 0x000008, "Member 'FReactionDirName::DirName' has a wrong offset!");
-static_assert(offsetof(FReactionDirName, Filename) == 0x000018, "Member 'FReactionDirName::Filename' has a wrong offset!");
-
-// ScriptStruct UnionRun.ReactionDirName_TableRow
-// 0x0010 (0x0018 - 0x0008)
-struct FReactionDirName_TableRow final : public FTableRowBase
-{
-public:
-	TArray<struct FReactionDirName>               list;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReactionDirName_TableRow) == 0x000008, "Wrong alignment on FReactionDirName_TableRow");
-static_assert(sizeof(FReactionDirName_TableRow) == 0x000018, "Wrong size on FReactionDirName_TableRow");
-static_assert(offsetof(FReactionDirName_TableRow, list) == 0x000008, "Member 'FReactionDirName_TableRow::list' has a wrong offset!");
+static_assert(alignof(FRacerReaction) == 0x000008, "Wrong alignment on FRacerReaction");
+static_assert(sizeof(FRacerReaction) == 0x000048, "Wrong size on FRacerReaction");
 
 // ScriptStruct UnionRun.SlideParamTable
 // 0x0068 (0x0070 - 0x0008)
@@ -5136,17 +5116,6 @@ static_assert(offsetof(FBounceParamTable, BounceVec) == 0x000010, "Member 'FBoun
 static_assert(offsetof(FBounceParamTable, BoostLevel) == 0x000028, "Member 'FBounceParamTable::BoostLevel' has a wrong offset!");
 static_assert(offsetof(FBounceParamTable, BounceVecFixedType) == 0x00002C, "Member 'FBounceParamTable::BounceVecFixedType' has a wrong offset!");
 static_assert(offsetof(FBounceParamTable, bDisableAirTrick) == 0x00002D, "Member 'FBounceParamTable::bDisableAirTrick' has a wrong offset!");
-
-// ScriptStruct UnionRun.RacerReactionRecord
-// 0x0010 (0x0010 - 0x0000)
-struct FRacerReactionRecord final
-{
-public:
-	TArray<struct FRacerReactionTypeParam>        TypeParam;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRacerReactionRecord) == 0x000008, "Wrong alignment on FRacerReactionRecord");
-static_assert(sizeof(FRacerReactionRecord) == 0x000010, "Wrong size on FRacerReactionRecord");
-static_assert(offsetof(FRacerReactionRecord, TypeParam) == 0x000000, "Member 'FRacerReactionRecord::TypeParam' has a wrong offset!");
 
 // ScriptStruct UnionRun.GuidedJumpParamTable
 // 0x0010 (0x0018 - 0x0008)
@@ -5215,19 +5184,26 @@ static_assert(offsetof(FRacerDamageReactionData, ReactionImpulse_Z_HIGH) == 0x00
 static_assert(offsetof(FRacerDamageReactionData, ReactionImpulse_Z_SONIC) == 0x00004C, "Member 'FRacerDamageReactionData::ReactionImpulse_Z_SONIC' has a wrong offset!");
 static_assert(offsetof(FRacerDamageReactionData, ReactionImpulse_Z_SUPER_SONIC) == 0x000050, "Member 'FRacerDamageReactionData::ReactionImpulse_Z_SUPER_SONIC' has a wrong offset!");
 
-// ScriptStruct UnionRun.RacerReactionStageData
-// 0x0008 (0x0008 - 0x0000)
-struct FRacerReactionStageData final
+// ScriptStruct UnionRun.RacerReactionInfo
+// 0x000C (0x000C - 0x0000)
+struct FRacerReactionInfo final
 {
 public:
-	EStageId                                      StageId;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ElapsedRate;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValid;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerReactionId                              ID;                                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerReactionPriority                        Priority;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CoolTime;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERacerReactionSplitDispType                   SplitDispType;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRacerReactionStageData) == 0x000004, "Wrong alignment on FRacerReactionStageData");
-static_assert(sizeof(FRacerReactionStageData) == 0x000008, "Wrong size on FRacerReactionStageData");
-static_assert(offsetof(FRacerReactionStageData, StageId) == 0x000000, "Member 'FRacerReactionStageData::StageId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionStageData, ElapsedRate) == 0x000004, "Member 'FRacerReactionStageData::ElapsedRate' has a wrong offset!");
+static_assert(alignof(FRacerReactionInfo) == 0x000004, "Wrong alignment on FRacerReactionInfo");
+static_assert(sizeof(FRacerReactionInfo) == 0x00000C, "Wrong size on FRacerReactionInfo");
+static_assert(offsetof(FRacerReactionInfo, bIsValid) == 0x000000, "Member 'FRacerReactionInfo::bIsValid' has a wrong offset!");
+static_assert(offsetof(FRacerReactionInfo, ID) == 0x000001, "Member 'FRacerReactionInfo::ID' has a wrong offset!");
+static_assert(offsetof(FRacerReactionInfo, Priority) == 0x000002, "Member 'FRacerReactionInfo::Priority' has a wrong offset!");
+static_assert(offsetof(FRacerReactionInfo, CoolTime) == 0x000004, "Member 'FRacerReactionInfo::CoolTime' has a wrong offset!");
+static_assert(offsetof(FRacerReactionInfo, SplitDispType) == 0x000008, "Member 'FRacerReactionInfo::SplitDispType' has a wrong offset!");
 
 // ScriptStruct UnionRun.RacerDamageSquashParam
 // 0x0024 (0x0024 - 0x0000)
@@ -5277,42 +5253,46 @@ static_assert(offsetof(FRacerDamagePropertyChangeData, ChangType) == 0x000000, "
 static_assert(offsetof(FRacerDamagePropertyChangeData, SpeedlValue) == 0x000004, "Member 'FRacerDamagePropertyChangeData::SpeedlValue' has a wrong offset!");
 static_assert(offsetof(FRacerDamagePropertyChangeData, DecelRatio) == 0x000008, "Member 'FRacerDamagePropertyChangeData::DecelRatio' has a wrong offset!");
 
-// ScriptStruct UnionRun.RacerReactionText
-// 0x00A0 (0x00A0 - 0x0000)
-struct FRacerReactionText final
+// ScriptStruct UnionRun.UnionRaceTime
+// 0x0010 (0x0010 - 0x0000)
+struct FUnionRaceTime final
 {
 public:
-	ERacerReactionId                              ID;                                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerReactionVoiceType                       VoiceType;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     DriverId;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     RivalId;                                           // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     VoiceChrId;                                        // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId;                                        // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId_Guest;                                  // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class USoundAtomCue>           CueVoiceId_Rival;                                  // 0x0058(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TextTableId;                                       // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TextId;                                            // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerReactionWindow                          WindowId;                                          // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDriverId                                     FaceId;                                            // 0x0099(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StageId;                                           // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ClockCount;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinutePart;                                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SecondPart;                                        // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MillimeterSecondPart;                              // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRacerReactionText) == 0x000008, "Wrong alignment on FRacerReactionText");
-static_assert(sizeof(FRacerReactionText) == 0x0000A0, "Wrong size on FRacerReactionText");
-static_assert(offsetof(FRacerReactionText, ID) == 0x000000, "Member 'FRacerReactionText::ID' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, VoiceType) == 0x000001, "Member 'FRacerReactionText::VoiceType' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, DriverId) == 0x000002, "Member 'FRacerReactionText::DriverId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, RivalId) == 0x000003, "Member 'FRacerReactionText::RivalId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, VoiceChrId) == 0x000004, "Member 'FRacerReactionText::VoiceChrId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, CueVoiceId) == 0x000008, "Member 'FRacerReactionText::CueVoiceId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, CueVoiceId_Guest) == 0x000030, "Member 'FRacerReactionText::CueVoiceId_Guest' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, CueVoiceId_Rival) == 0x000058, "Member 'FRacerReactionText::CueVoiceId_Rival' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, TextTableId) == 0x000080, "Member 'FRacerReactionText::TextTableId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, TextId) == 0x000088, "Member 'FRacerReactionText::TextId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, WindowId) == 0x000098, "Member 'FRacerReactionText::WindowId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, FaceId) == 0x000099, "Member 'FRacerReactionText::FaceId' has a wrong offset!");
-static_assert(offsetof(FRacerReactionText, StageId) == 0x00009C, "Member 'FRacerReactionText::StageId' has a wrong offset!");
+static_assert(alignof(FUnionRaceTime) == 0x000004, "Wrong alignment on FUnionRaceTime");
+static_assert(sizeof(FUnionRaceTime) == 0x000010, "Wrong size on FUnionRaceTime");
+static_assert(offsetof(FUnionRaceTime, ClockCount) == 0x000000, "Member 'FUnionRaceTime::ClockCount' has a wrong offset!");
+static_assert(offsetof(FUnionRaceTime, MinutePart) == 0x000004, "Member 'FUnionRaceTime::MinutePart' has a wrong offset!");
+static_assert(offsetof(FUnionRaceTime, SecondPart) == 0x000008, "Member 'FUnionRaceTime::SecondPart' has a wrong offset!");
+static_assert(offsetof(FUnionRaceTime, MillimeterSecondPart) == 0x00000C, "Member 'FUnionRaceTime::MillimeterSecondPart' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionRaceStateParam
+// 0x00C0 (0x00C0 - 0x0000)
+struct FUnionRaceStateParam final
+{
+public:
+	struct FUnionRaceTime                         RaceWholeTime;                                     // 0x0000(0x0010)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	ERaceInfoStateType                            RaceStatus;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CountDownValue;                                    // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RacerCount;                                        // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpeedClass;                                        // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            RacerIndexRankMap;                                 // 0x0020(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            RacerIndexWorldMap;                                // 0x0070(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionRaceStateParam) == 0x000008, "Wrong alignment on FUnionRaceStateParam");
+static_assert(sizeof(FUnionRaceStateParam) == 0x0000C0, "Wrong size on FUnionRaceStateParam");
+static_assert(offsetof(FUnionRaceStateParam, RaceWholeTime) == 0x000000, "Member 'FUnionRaceStateParam::RaceWholeTime' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, RaceStatus) == 0x000010, "Member 'FUnionRaceStateParam::RaceStatus' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, CountDownValue) == 0x000014, "Member 'FUnionRaceStateParam::CountDownValue' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, RacerCount) == 0x000018, "Member 'FUnionRaceStateParam::RacerCount' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, SpeedClass) == 0x00001C, "Member 'FUnionRaceStateParam::SpeedClass' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, RacerIndexRankMap) == 0x000020, "Member 'FUnionRaceStateParam::RacerIndexRankMap' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStateParam, RacerIndexWorldMap) == 0x000070, "Member 'FUnionRaceStateParam::RacerIndexWorldMap' has a wrong offset!");
 
 // ScriptStruct UnionRun.RacerDamagePropertyChangeGroupData
 // 0x0034 (0x0034 - 0x0000)
@@ -5346,36 +5326,32 @@ static_assert(sizeof(FRacerDamageDirectionInterference) == 0x000008, "Wrong size
 static_assert(offsetof(FRacerDamageDirectionInterference, HorizontalInterferenceRatio) == 0x000000, "Member 'FRacerDamageDirectionInterference::HorizontalInterferenceRatio' has a wrong offset!");
 static_assert(offsetof(FRacerDamageDirectionInterference, VerticalInterferenceRatio) == 0x000004, "Member 'FRacerDamageDirectionInterference::VerticalInterferenceRatio' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRaceStageRingGateData
-// 0x0078 (0x0078 - 0x0000)
-struct FUnionRaceStageRingGateData final
+// ScriptStruct UnionRun.ReactionDirName
+// 0x0028 (0x0028 - 0x0000)
+struct FReactionDirName final
 {
 public:
-	class UMaterialInstance*                      FloorLeft;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      FloorRight;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      RingLeft;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      RingRight;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      MaterialEnter;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      MaterialEnterAir;                                  // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      MaterialExit;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInstance*>              ShortcutEnterMaterial;                             // 0x0038(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UStaticMesh*>                    ShortcutEnterMesh;                                 // 0x0048(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInstance*>              ShortcutExitMaterial;                              // 0x0058(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<class UStaticMesh*>                    ShortcutExitMesh;                                  // 0x0068(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	EDriverId                                     DriverId;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DirName;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionRaceStageRingGateData) == 0x000008, "Wrong alignment on FUnionRaceStageRingGateData");
-static_assert(sizeof(FUnionRaceStageRingGateData) == 0x000078, "Wrong size on FUnionRaceStageRingGateData");
-static_assert(offsetof(FUnionRaceStageRingGateData, FloorLeft) == 0x000000, "Member 'FUnionRaceStageRingGateData::FloorLeft' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, FloorRight) == 0x000008, "Member 'FUnionRaceStageRingGateData::FloorRight' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, RingLeft) == 0x000010, "Member 'FUnionRaceStageRingGateData::RingLeft' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, RingRight) == 0x000018, "Member 'FUnionRaceStageRingGateData::RingRight' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, MaterialEnter) == 0x000020, "Member 'FUnionRaceStageRingGateData::MaterialEnter' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, MaterialEnterAir) == 0x000028, "Member 'FUnionRaceStageRingGateData::MaterialEnterAir' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, MaterialExit) == 0x000030, "Member 'FUnionRaceStageRingGateData::MaterialExit' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutEnterMaterial) == 0x000038, "Member 'FUnionRaceStageRingGateData::ShortcutEnterMaterial' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutEnterMesh) == 0x000048, "Member 'FUnionRaceStageRingGateData::ShortcutEnterMesh' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutExitMaterial) == 0x000058, "Member 'FUnionRaceStageRingGateData::ShortcutExitMaterial' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutExitMesh) == 0x000068, "Member 'FUnionRaceStageRingGateData::ShortcutExitMesh' has a wrong offset!");
+static_assert(alignof(FReactionDirName) == 0x000008, "Wrong alignment on FReactionDirName");
+static_assert(sizeof(FReactionDirName) == 0x000028, "Wrong size on FReactionDirName");
+static_assert(offsetof(FReactionDirName, DriverId) == 0x000000, "Member 'FReactionDirName::DriverId' has a wrong offset!");
+static_assert(offsetof(FReactionDirName, DirName) == 0x000008, "Member 'FReactionDirName::DirName' has a wrong offset!");
+static_assert(offsetof(FReactionDirName, Filename) == 0x000018, "Member 'FReactionDirName::Filename' has a wrong offset!");
+
+// ScriptStruct UnionRun.ReactionDirName_TableRow
+// 0x0010 (0x0018 - 0x0008)
+struct FReactionDirName_TableRow final : public FTableRowBase
+{
+public:
+	TArray<struct FReactionDirName>               list;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FReactionDirName_TableRow) == 0x000008, "Wrong alignment on FReactionDirName_TableRow");
+static_assert(sizeof(FReactionDirName_TableRow) == 0x000018, "Wrong size on FReactionDirName_TableRow");
+static_assert(offsetof(FReactionDirName_TableRow, list) == 0x000008, "Member 'FReactionDirName_TableRow::list' has a wrong offset!");
 
 // ScriptStruct UnionRun.RacerDamageData
 // 0x0090 (0x0098 - 0x0008)
@@ -5444,18 +5420,16 @@ static_assert(sizeof(FAttackedData) == 0x000100, "Wrong size on FAttackedData");
 static_assert(offsetof(FAttackedData, AttackedInfo) == 0x000000, "Member 'FAttackedData::AttackedInfo' has a wrong offset!");
 static_assert(offsetof(FAttackedData, RacerDamageData) == 0x000068, "Member 'FAttackedData::RacerDamageData' has a wrong offset!");
 
-// ScriptStruct UnionRun.FootCutParams
-// 0x0008 (0x0008 - 0x0000)
-struct FFootCutParams final
+// ScriptStruct UnionRun.RacerReactionRecord
+// 0x0010 (0x0010 - 0x0000)
+struct FRacerReactionRecord final
 {
 public:
-	float                                         TriggerTopRate;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WarpRate;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRacerReactionTypeParam>        TypeParam;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FFootCutParams) == 0x000004, "Wrong alignment on FFootCutParams");
-static_assert(sizeof(FFootCutParams) == 0x000008, "Wrong size on FFootCutParams");
-static_assert(offsetof(FFootCutParams, TriggerTopRate) == 0x000000, "Member 'FFootCutParams::TriggerTopRate' has a wrong offset!");
-static_assert(offsetof(FFootCutParams, WarpRate) == 0x000004, "Member 'FFootCutParams::WarpRate' has a wrong offset!");
+static_assert(alignof(FRacerReactionRecord) == 0x000008, "Wrong alignment on FRacerReactionRecord");
+static_assert(sizeof(FRacerReactionRecord) == 0x000010, "Wrong size on FRacerReactionRecord");
+static_assert(offsetof(FRacerReactionRecord, TypeParam) == 0x000000, "Member 'FRacerReactionRecord::TypeParam' has a wrong offset!");
 
 // ScriptStruct UnionRun.AttackedReply
 // 0x0028 (0x0028 - 0x0000)
@@ -5507,26 +5481,16 @@ static_assert(offsetof(FFireAttackItemInfo, InItemId) == 0x000020, "Member 'FFir
 static_assert(offsetof(FFireAttackItemInfo, AttackToRacerGroupIndex) == 0x000024, "Member 'FFireAttackItemInfo::AttackToRacerGroupIndex' has a wrong offset!");
 static_assert(offsetof(FFireAttackItemInfo, BonusHitItemCount) == 0x000028, "Member 'FFireAttackItemInfo::BonusHitItemCount' has a wrong offset!");
 
-// ScriptStruct UnionRun.RacerReactionInfo
-// 0x000C (0x000C - 0x0000)
-struct FRacerReactionInfo final
+// ScriptStruct UnionRun.UnionRaceAppInfo
+// 0x0001 (0x0001 - 0x0000)
+struct FUnionRaceAppInfo final
 {
 public:
-	bool                                          bIsValid;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerReactionId                              ID;                                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerReactionPriority                        Priority;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CoolTime;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERacerReactionSplitDispType                   SplitDispType;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsPausing;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRacerReactionInfo) == 0x000004, "Wrong alignment on FRacerReactionInfo");
-static_assert(sizeof(FRacerReactionInfo) == 0x00000C, "Wrong size on FRacerReactionInfo");
-static_assert(offsetof(FRacerReactionInfo, bIsValid) == 0x000000, "Member 'FRacerReactionInfo::bIsValid' has a wrong offset!");
-static_assert(offsetof(FRacerReactionInfo, ID) == 0x000001, "Member 'FRacerReactionInfo::ID' has a wrong offset!");
-static_assert(offsetof(FRacerReactionInfo, Priority) == 0x000002, "Member 'FRacerReactionInfo::Priority' has a wrong offset!");
-static_assert(offsetof(FRacerReactionInfo, CoolTime) == 0x000004, "Member 'FRacerReactionInfo::CoolTime' has a wrong offset!");
-static_assert(offsetof(FRacerReactionInfo, SplitDispType) == 0x000008, "Member 'FRacerReactionInfo::SplitDispType' has a wrong offset!");
+static_assert(alignof(FUnionRaceAppInfo) == 0x000001, "Wrong alignment on FUnionRaceAppInfo");
+static_assert(sizeof(FUnionRaceAppInfo) == 0x000001, "Wrong size on FUnionRaceAppInfo");
+static_assert(offsetof(FUnionRaceAppInfo, bIsPausing) == 0x000000, "Member 'FUnionRaceAppInfo::bIsPausing' has a wrong offset!");
 
 // ScriptStruct UnionRun.AttackItemResultInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -5562,46 +5526,19 @@ static_assert(offsetof(FDebugPrintStringStruct, colR) == 0x00001C, "Member 'FDeb
 static_assert(offsetof(FDebugPrintStringStruct, colG) == 0x000020, "Member 'FDebugPrintStringStruct::colG' has a wrong offset!");
 static_assert(offsetof(FDebugPrintStringStruct, colB) == 0x000024, "Member 'FDebugPrintStringStruct::colB' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRaceTime
-// 0x0010 (0x0010 - 0x0000)
-struct FUnionRaceTime final
+// ScriptStruct UnionRun.PredictTestInfo
+// 0x0008 (0x0008 - 0x0000)
+struct FPredictTestInfo final
 {
 public:
-	int32                                         ClockCount;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinutePart;                                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SecondPart;                                        // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MillimeterSecondPart;                              // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnable;                                         // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TestCaseIndex;                                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionRaceTime) == 0x000004, "Wrong alignment on FUnionRaceTime");
-static_assert(sizeof(FUnionRaceTime) == 0x000010, "Wrong size on FUnionRaceTime");
-static_assert(offsetof(FUnionRaceTime, ClockCount) == 0x000000, "Member 'FUnionRaceTime::ClockCount' has a wrong offset!");
-static_assert(offsetof(FUnionRaceTime, MinutePart) == 0x000004, "Member 'FUnionRaceTime::MinutePart' has a wrong offset!");
-static_assert(offsetof(FUnionRaceTime, SecondPart) == 0x000008, "Member 'FUnionRaceTime::SecondPart' has a wrong offset!");
-static_assert(offsetof(FUnionRaceTime, MillimeterSecondPart) == 0x00000C, "Member 'FUnionRaceTime::MillimeterSecondPart' has a wrong offset!");
-
-// ScriptStruct UnionRun.UnionRaceStateParam
-// 0x00C0 (0x00C0 - 0x0000)
-struct FUnionRaceStateParam final
-{
-public:
-	struct FUnionRaceTime                         RaceWholeTime;                                     // 0x0000(0x0010)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	ERaceInfoStateType                            RaceStatus;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CountDownValue;                                    // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RacerCount;                                        // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpeedClass;                                        // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            RacerIndexRankMap;                                 // 0x0020(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<int32, int32>                            RacerIndexWorldMap;                                // 0x0070(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionRaceStateParam) == 0x000008, "Wrong alignment on FUnionRaceStateParam");
-static_assert(sizeof(FUnionRaceStateParam) == 0x0000C0, "Wrong size on FUnionRaceStateParam");
-static_assert(offsetof(FUnionRaceStateParam, RaceWholeTime) == 0x000000, "Member 'FUnionRaceStateParam::RaceWholeTime' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, RaceStatus) == 0x000010, "Member 'FUnionRaceStateParam::RaceStatus' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, CountDownValue) == 0x000014, "Member 'FUnionRaceStateParam::CountDownValue' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, RacerCount) == 0x000018, "Member 'FUnionRaceStateParam::RacerCount' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, SpeedClass) == 0x00001C, "Member 'FUnionRaceStateParam::SpeedClass' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, RacerIndexRankMap) == 0x000020, "Member 'FUnionRaceStateParam::RacerIndexRankMap' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStateParam, RacerIndexWorldMap) == 0x000070, "Member 'FUnionRaceStateParam::RacerIndexWorldMap' has a wrong offset!");
+static_assert(alignof(FPredictTestInfo) == 0x000004, "Wrong alignment on FPredictTestInfo");
+static_assert(sizeof(FPredictTestInfo) == 0x000008, "Wrong size on FPredictTestInfo");
+static_assert(offsetof(FPredictTestInfo, bIsEnable) == 0x000000, "Member 'FPredictTestInfo::bIsEnable' has a wrong offset!");
+static_assert(offsetof(FPredictTestInfo, TestCaseIndex) == 0x000004, "Member 'FPredictTestInfo::TestCaseIndex' has a wrong offset!");
 
 // ScriptStruct UnionRun.CallDroneInfo
 // 0x0004 (0x0004 - 0x0000)
@@ -5637,19 +5574,36 @@ static_assert(offsetof(FGadgetRingPerformanceInfo, GetRingTime) == 0x000004, "Me
 static_assert(offsetof(FGadgetRingPerformanceInfo, UpOffset) == 0x000008, "Member 'FGadgetRingPerformanceInfo::UpOffset' has a wrong offset!");
 static_assert(offsetof(FGadgetRingPerformanceInfo, UpOffsetTransformed) == 0x00000C, "Member 'FGadgetRingPerformanceInfo::UpOffsetTransformed' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRaceRedStarRingParam
-// 0x0018 (0x0018 - 0x0000)
-struct FUnionRaceRedStarRingParam final
+// ScriptStruct UnionRun.UnionRaceStageRingGateData
+// 0x0078 (0x0078 - 0x0000)
+struct FUnionRaceStageRingGateData final
 {
 public:
-	bool                                          bEnableRedStarRing;                                // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FUserRedStarRingAcquisitionProperty> AcquisitionPerPlayer;                         // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      FloorLeft;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      FloorRight;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      RingLeft;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      RingRight;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      MaterialEnter;                                     // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      MaterialEnterAir;                                  // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      MaterialExit;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInstance*>              ShortcutEnterMaterial;                             // 0x0038(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UStaticMesh*>                    ShortcutEnterMesh;                                 // 0x0048(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInstance*>              ShortcutExitMaterial;                              // 0x0058(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<class UStaticMesh*>                    ShortcutExitMesh;                                  // 0x0068(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionRaceRedStarRingParam) == 0x000008, "Wrong alignment on FUnionRaceRedStarRingParam");
-static_assert(sizeof(FUnionRaceRedStarRingParam) == 0x000018, "Wrong size on FUnionRaceRedStarRingParam");
-static_assert(offsetof(FUnionRaceRedStarRingParam, bEnableRedStarRing) == 0x000000, "Member 'FUnionRaceRedStarRingParam::bEnableRedStarRing' has a wrong offset!");
-static_assert(offsetof(FUnionRaceRedStarRingParam, AcquisitionPerPlayer) == 0x000008, "Member 'FUnionRaceRedStarRingParam::AcquisitionPerPlayer' has a wrong offset!");
+static_assert(alignof(FUnionRaceStageRingGateData) == 0x000008, "Wrong alignment on FUnionRaceStageRingGateData");
+static_assert(sizeof(FUnionRaceStageRingGateData) == 0x000078, "Wrong size on FUnionRaceStageRingGateData");
+static_assert(offsetof(FUnionRaceStageRingGateData, FloorLeft) == 0x000000, "Member 'FUnionRaceStageRingGateData::FloorLeft' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, FloorRight) == 0x000008, "Member 'FUnionRaceStageRingGateData::FloorRight' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, RingLeft) == 0x000010, "Member 'FUnionRaceStageRingGateData::RingLeft' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, RingRight) == 0x000018, "Member 'FUnionRaceStageRingGateData::RingRight' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, MaterialEnter) == 0x000020, "Member 'FUnionRaceStageRingGateData::MaterialEnter' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, MaterialEnterAir) == 0x000028, "Member 'FUnionRaceStageRingGateData::MaterialEnterAir' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, MaterialExit) == 0x000030, "Member 'FUnionRaceStageRingGateData::MaterialExit' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutEnterMaterial) == 0x000038, "Member 'FUnionRaceStageRingGateData::ShortcutEnterMaterial' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutEnterMesh) == 0x000048, "Member 'FUnionRaceStageRingGateData::ShortcutEnterMesh' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutExitMaterial) == 0x000058, "Member 'FUnionRaceStageRingGateData::ShortcutExitMaterial' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageRingGateData, ShortcutExitMesh) == 0x000068, "Member 'FUnionRaceStageRingGateData::ShortcutExitMesh' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetMachineTuneValueChange
 // 0x0014 (0x0014 - 0x0000)
@@ -5681,32 +5635,18 @@ static_assert(alignof(FGadgetSimpleRingBonusInfo) == 0x000004, "Wrong alignment 
 static_assert(sizeof(FGadgetSimpleRingBonusInfo) == 0x000004, "Wrong size on FGadgetSimpleRingBonusInfo");
 static_assert(offsetof(FGadgetSimpleRingBonusInfo, RingNum) == 0x000000, "Member 'FGadgetSimpleRingBonusInfo::RingNum' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRaceStageDynamicData
-// 0x0070 (0x0070 - 0x0000)
-struct FUnionRaceStageDynamicData final
+// ScriptStruct UnionRun.FootCutParams
+// 0x0008 (0x0008 - 0x0000)
+struct FFootCutParams final
 {
 public:
-	TArray<class ULevel*>                         ObjectLevels;                                      // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UUnionBtCollisionBinaryAsset*           CollisionAsset;                                    // 0x0010(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionNavigationBinaryDataAsset*        NavigationAsset;                                   // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionRunPathBinaryDataAsset*           RunPathAsset;                                      // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionComPathBinaryDataAsset*           ComPathAsset;                                      // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOverwriteDirectionalLightParameter;            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OverwriteDirectionalLightIntensity;                // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 OverwriteDirectionalLightColor;                    // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x34];                                      // 0x003C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         TriggerTopRate;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WarpRate;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUnionRaceStageDynamicData) == 0x000008, "Wrong alignment on FUnionRaceStageDynamicData");
-static_assert(sizeof(FUnionRaceStageDynamicData) == 0x000070, "Wrong size on FUnionRaceStageDynamicData");
-static_assert(offsetof(FUnionRaceStageDynamicData, ObjectLevels) == 0x000000, "Member 'FUnionRaceStageDynamicData::ObjectLevels' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, CollisionAsset) == 0x000010, "Member 'FUnionRaceStageDynamicData::CollisionAsset' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, NavigationAsset) == 0x000018, "Member 'FUnionRaceStageDynamicData::NavigationAsset' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, RunPathAsset) == 0x000020, "Member 'FUnionRaceStageDynamicData::RunPathAsset' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, ComPathAsset) == 0x000028, "Member 'FUnionRaceStageDynamicData::ComPathAsset' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, bUseOverwriteDirectionalLightParameter) == 0x000030, "Member 'FUnionRaceStageDynamicData::bUseOverwriteDirectionalLightParameter' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, OverwriteDirectionalLightIntensity) == 0x000034, "Member 'FUnionRaceStageDynamicData::OverwriteDirectionalLightIntensity' has a wrong offset!");
-static_assert(offsetof(FUnionRaceStageDynamicData, OverwriteDirectionalLightColor) == 0x000038, "Member 'FUnionRaceStageDynamicData::OverwriteDirectionalLightColor' has a wrong offset!");
+static_assert(alignof(FFootCutParams) == 0x000004, "Wrong alignment on FFootCutParams");
+static_assert(sizeof(FFootCutParams) == 0x000008, "Wrong size on FFootCutParams");
+static_assert(offsetof(FFootCutParams, TriggerTopRate) == 0x000000, "Member 'FFootCutParams::TriggerTopRate' has a wrong offset!");
+static_assert(offsetof(FFootCutParams, WarpRate) == 0x000004, "Member 'FFootCutParams::WarpRate' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetIntervalRingInfo
 // 0x000C (0x000C - 0x0000)
@@ -5739,155 +5679,6 @@ static_assert(offsetof(FGadgetBoostRingBonusInfo, RingNumLv1) == 0x000000, "Memb
 static_assert(offsetof(FGadgetBoostRingBonusInfo, RingNumLv2) == 0x000004, "Member 'FGadgetBoostRingBonusInfo::RingNumLv2' has a wrong offset!");
 static_assert(offsetof(FGadgetBoostRingBonusInfo, RingNumLv3) == 0x000008, "Member 'FGadgetBoostRingBonusInfo::RingNumLv3' has a wrong offset!");
 static_assert(offsetof(FGadgetBoostRingBonusInfo, RingNumLv4) == 0x00000C, "Member 'FGadgetBoostRingBonusInfo::RingNumLv4' has a wrong offset!");
-
-// ScriptStruct UnionRun.UnionRaceAppInfo
-// 0x0001 (0x0001 - 0x0000)
-struct FUnionRaceAppInfo final
-{
-public:
-	bool                                          bIsPausing;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionRaceAppInfo) == 0x000001, "Wrong alignment on FUnionRaceAppInfo");
-static_assert(sizeof(FUnionRaceAppInfo) == 0x000001, "Wrong size on FUnionRaceAppInfo");
-static_assert(offsetof(FUnionRaceAppInfo, bIsPausing) == 0x000000, "Member 'FUnionRaceAppInfo::bIsPausing' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetTradeStockInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetTradeStockInfo final
-{
-public:
-	float                                         CoolDownTime;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetTradeStockInfo) == 0x000004, "Wrong alignment on FGadgetTradeStockInfo");
-static_assert(sizeof(FGadgetTradeStockInfo) == 0x000004, "Wrong size on FGadgetTradeStockInfo");
-static_assert(offsetof(FGadgetTradeStockInfo, CoolDownTime) == 0x000000, "Member 'FGadgetTradeStockInfo::CoolDownTime' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetEnhanceRocketPunchInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetEnhanceRocketPunchInfo final
-{
-public:
-	float                                         SizeScale;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetEnhanceRocketPunchInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceRocketPunchInfo");
-static_assert(sizeof(FGadgetEnhanceRocketPunchInfo) == 0x000004, "Wrong size on FGadgetEnhanceRocketPunchInfo");
-static_assert(offsetof(FGadgetEnhanceRocketPunchInfo, SizeScale) == 0x000000, "Member 'FGadgetEnhanceRocketPunchInfo::SizeScale' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetLotteryRateData
-// 0x8868 (0x8870 - 0x0008)
-struct FGadgetLotteryRateData final : public FTableRowBase
-{
-public:
-	EGadgetId                                     gadgetId;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRankGroupLotteryRateDataTableList     RankGroupLotteryRateDataTable;                     // 0x0010(0x4430)(Edit, NativeAccessSpecifierPublic)
-	struct FRankGroupLotteryRateDataTableList     SpecialBox_RankGroupLotteryRateDataTable;          // 0x4440(0x4430)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetLotteryRateData) == 0x000008, "Wrong alignment on FGadgetLotteryRateData");
-static_assert(sizeof(FGadgetLotteryRateData) == 0x008870, "Wrong size on FGadgetLotteryRateData");
-static_assert(offsetof(FGadgetLotteryRateData, gadgetId) == 0x000008, "Member 'FGadgetLotteryRateData::gadgetId' has a wrong offset!");
-static_assert(offsetof(FGadgetLotteryRateData, RankGroupLotteryRateDataTable) == 0x000010, "Member 'FGadgetLotteryRateData::RankGroupLotteryRateDataTable' has a wrong offset!");
-static_assert(offsetof(FGadgetLotteryRateData, SpecialBox_RankGroupLotteryRateDataTable) == 0x004440, "Member 'FGadgetLotteryRateData::SpecialBox_RankGroupLotteryRateDataTable' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetEnhanceThornBallInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetEnhanceThornBallInfo final
-{
-public:
-	float                                         SizeScale;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetEnhanceThornBallInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceThornBallInfo");
-static_assert(sizeof(FGadgetEnhanceThornBallInfo) == 0x000004, "Wrong size on FGadgetEnhanceThornBallInfo");
-static_assert(offsetof(FGadgetEnhanceThornBallInfo, SizeScale) == 0x000000, "Member 'FGadgetEnhanceThornBallInfo::SizeScale' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetEnhanceBombInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetEnhanceBombInfo final
-{
-public:
-	float                                         ShortenRatio;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetEnhanceBombInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceBombInfo");
-static_assert(sizeof(FGadgetEnhanceBombInfo) == 0x000004, "Wrong size on FGadgetEnhanceBombInfo");
-static_assert(offsetof(FGadgetEnhanceBombInfo, ShortenRatio) == 0x000000, "Member 'FGadgetEnhanceBombInfo::ShortenRatio' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComAvoidParams
-// 0x0010 (0x0010 - 0x0000)
-struct FComAvoidParams final
-{
-public:
-	float                                         CarWidth;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AvoidMargin;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ThornBallAvoidWidth;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MagnetAvoidWidth;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComAvoidParams) == 0x000004, "Wrong alignment on FComAvoidParams");
-static_assert(sizeof(FComAvoidParams) == 0x000010, "Wrong size on FComAvoidParams");
-static_assert(offsetof(FComAvoidParams, CarWidth) == 0x000000, "Member 'FComAvoidParams::CarWidth' has a wrong offset!");
-static_assert(offsetof(FComAvoidParams, AvoidMargin) == 0x000004, "Member 'FComAvoidParams::AvoidMargin' has a wrong offset!");
-static_assert(offsetof(FComAvoidParams, ThornBallAvoidWidth) == 0x000008, "Member 'FComAvoidParams::ThornBallAvoidWidth' has a wrong offset!");
-static_assert(offsetof(FComAvoidParams, MagnetAvoidWidth) == 0x00000C, "Member 'FComAvoidParams::MagnetAvoidWidth' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetDoubleItemOccasionallyInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetDoubleItemOccasionallyInfo final
-{
-public:
-	float                                         DoubleRatio;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetDoubleItemOccasionallyInfo) == 0x000004, "Wrong alignment on FGadgetDoubleItemOccasionallyInfo");
-static_assert(sizeof(FGadgetDoubleItemOccasionallyInfo) == 0x000004, "Wrong size on FGadgetDoubleItemOccasionallyInfo");
-static_assert(offsetof(FGadgetDoubleItemOccasionallyInfo, DoubleRatio) == 0x000000, "Member 'FGadgetDoubleItemOccasionallyInfo::DoubleRatio' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetUltimateDriftInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FGadgetUltimateDriftInfo final
-{
-public:
-	bool                                          bEnableInvincible;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InvincibleTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetUltimateDriftInfo) == 0x000004, "Wrong alignment on FGadgetUltimateDriftInfo");
-static_assert(sizeof(FGadgetUltimateDriftInfo) == 0x000008, "Wrong size on FGadgetUltimateDriftInfo");
-static_assert(offsetof(FGadgetUltimateDriftInfo, bEnableInvincible) == 0x000000, "Member 'FGadgetUltimateDriftInfo::bEnableInvincible' has a wrong offset!");
-static_assert(offsetof(FGadgetUltimateDriftInfo, InvincibleTime) == 0x000004, "Member 'FGadgetUltimateDriftInfo::InvincibleTime' has a wrong offset!");
-
-// ScriptStruct UnionRun.ReappearanceDifferentItemData
-// 0x0008 (0x0010 - 0x0008)
-struct FReappearanceDifferentItemData final : public FTableRowBase
-{
-public:
-	EItemId                                       ItemId;                                            // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReappearanceTime;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReappearanceDifferentItemData) == 0x000008, "Wrong alignment on FReappearanceDifferentItemData");
-static_assert(sizeof(FReappearanceDifferentItemData) == 0x000010, "Wrong size on FReappearanceDifferentItemData");
-static_assert(offsetof(FReappearanceDifferentItemData, ItemId) == 0x000008, "Member 'FReappearanceDifferentItemData::ItemId' has a wrong offset!");
-static_assert(offsetof(FReappearanceDifferentItemData, ReappearanceTime) == 0x00000C, "Member 'FReappearanceDifferentItemData::ReappearanceTime' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetQuickAirtrickInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetQuickAirtrickInfo final
-{
-public:
-	float                                         AirTrickPlayRate;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetQuickAirtrickInfo) == 0x000004, "Wrong alignment on FGadgetQuickAirtrickInfo");
-static_assert(sizeof(FGadgetQuickAirtrickInfo) == 0x000004, "Wrong size on FGadgetQuickAirtrickInfo");
-static_assert(offsetof(FGadgetQuickAirtrickInfo, AirTrickPlayRate) == 0x000000, "Member 'FGadgetQuickAirtrickInfo::AirTrickPlayRate' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetSkateDriftInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetSkateDriftInfo final
-{
-public:
-	float                                         ChargeTimeRatio;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetSkateDriftInfo) == 0x000004, "Wrong alignment on FGadgetSkateDriftInfo");
-static_assert(sizeof(FGadgetSkateDriftInfo) == 0x000004, "Wrong size on FGadgetSkateDriftInfo");
-static_assert(offsetof(FGadgetSkateDriftInfo, ChargeTimeRatio) == 0x000000, "Member 'FGadgetSkateDriftInfo::ChargeTimeRatio' has a wrong offset!");
 
 // ScriptStruct UnionRun.ComPointDistanceData
 // 0x0030 (0x0038 - 0x0008)
@@ -5923,35 +5714,27 @@ static_assert(offsetof(FComPointDistanceData, ComRank9) == 0x00002C, "Member 'FC
 static_assert(offsetof(FComPointDistanceData, ComRank10) == 0x000030, "Member 'FComPointDistanceData::ComRank10' has a wrong offset!");
 static_assert(offsetof(FComPointDistanceData, ComRank11) == 0x000034, "Member 'FComPointDistanceData::ComRank11' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetJustDashInfo
-// 0x0014 (0x0014 - 0x0000)
-struct FGadgetJustDashInfo final
-{
-public:
-	int32                                         InputFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostMulLv1;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostMulLv2;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostMulLv3;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostMulLv4;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetJustDashInfo) == 0x000004, "Wrong alignment on FGadgetJustDashInfo");
-static_assert(sizeof(FGadgetJustDashInfo) == 0x000014, "Wrong size on FGadgetJustDashInfo");
-static_assert(offsetof(FGadgetJustDashInfo, InputFrame) == 0x000000, "Member 'FGadgetJustDashInfo::InputFrame' has a wrong offset!");
-static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv1) == 0x000004, "Member 'FGadgetJustDashInfo::BoostMulLv1' has a wrong offset!");
-static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv2) == 0x000008, "Member 'FGadgetJustDashInfo::BoostMulLv2' has a wrong offset!");
-static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv3) == 0x00000C, "Member 'FGadgetJustDashInfo::BoostMulLv3' has a wrong offset!");
-static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv4) == 0x000010, "Member 'FGadgetJustDashInfo::BoostMulLv4' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetLevelChargeInfo
+// ScriptStruct UnionRun.GadgetTradeStockInfo
 // 0x0004 (0x0004 - 0x0000)
-struct FGadgetLevelChargeInfo final
+struct FGadgetTradeStockInfo final
 {
 public:
-	float                                         ChargeRate;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CoolDownTime;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGadgetLevelChargeInfo) == 0x000004, "Wrong alignment on FGadgetLevelChargeInfo");
-static_assert(sizeof(FGadgetLevelChargeInfo) == 0x000004, "Wrong size on FGadgetLevelChargeInfo");
-static_assert(offsetof(FGadgetLevelChargeInfo, ChargeRate) == 0x000000, "Member 'FGadgetLevelChargeInfo::ChargeRate' has a wrong offset!");
+static_assert(alignof(FGadgetTradeStockInfo) == 0x000004, "Wrong alignment on FGadgetTradeStockInfo");
+static_assert(sizeof(FGadgetTradeStockInfo) == 0x000004, "Wrong size on FGadgetTradeStockInfo");
+static_assert(offsetof(FGadgetTradeStockInfo, CoolDownTime) == 0x000000, "Member 'FGadgetTradeStockInfo::CoolDownTime' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetEnhanceRocketPunchInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetEnhanceRocketPunchInfo final
+{
+public:
+	float                                         SizeScale;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetEnhanceRocketPunchInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceRocketPunchInfo");
+static_assert(sizeof(FGadgetEnhanceRocketPunchInfo) == 0x000004, "Wrong size on FGadgetEnhanceRocketPunchInfo");
+static_assert(offsetof(FGadgetEnhanceRocketPunchInfo, SizeScale) == 0x000000, "Member 'FGadgetEnhanceRocketPunchInfo::SizeScale' has a wrong offset!");
 
 // ScriptStruct UnionRun.CustomComSpeedComLevel
 // 0x0020 (0x0028 - 0x0008)
@@ -5982,103 +5765,135 @@ static_assert(offsetof(FCustomComSpeedComLevel, MirrorLv) == 0x00001C, "Member '
 static_assert(offsetof(FCustomComSpeedComLevel, ItemTable) == 0x000020, "Member 'FCustomComSpeedComLevel::ItemTable' has a wrong offset!");
 static_assert(offsetof(FCustomComSpeedComLevel, ItemDist) == 0x000021, "Member 'FCustomComSpeedComLevel::ItemDist' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetSwitchDriftQuickChargeInfo
-// 0x000C (0x000C - 0x0000)
-struct FGadgetSwitchDriftQuickChargeInfo final
-{
-public:
-	float                                         CoolDownTime;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChargeUpSeconds;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChargeMul;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetSwitchDriftQuickChargeInfo) == 0x000004, "Wrong alignment on FGadgetSwitchDriftQuickChargeInfo");
-static_assert(sizeof(FGadgetSwitchDriftQuickChargeInfo) == 0x00000C, "Wrong size on FGadgetSwitchDriftQuickChargeInfo");
-static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, CoolDownTime) == 0x000000, "Member 'FGadgetSwitchDriftQuickChargeInfo::CoolDownTime' has a wrong offset!");
-static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, ChargeUpSeconds) == 0x000004, "Member 'FGadgetSwitchDriftQuickChargeInfo::ChargeUpSeconds' has a wrong offset!");
-static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, ChargeMul) == 0x000008, "Member 'FGadgetSwitchDriftQuickChargeInfo::ChargeMul' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetHyperChargeInfo
-// 0x000C (0x000C - 0x0000)
-struct FGadgetHyperChargeInfo final
-{
-public:
-	float                                         DeccelSpeed;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeccelRate;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChargeRate;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetHyperChargeInfo) == 0x000004, "Wrong alignment on FGadgetHyperChargeInfo");
-static_assert(sizeof(FGadgetHyperChargeInfo) == 0x00000C, "Wrong size on FGadgetHyperChargeInfo");
-static_assert(offsetof(FGadgetHyperChargeInfo, DeccelSpeed) == 0x000000, "Member 'FGadgetHyperChargeInfo::DeccelSpeed' has a wrong offset!");
-static_assert(offsetof(FGadgetHyperChargeInfo, DeccelRate) == 0x000004, "Member 'FGadgetHyperChargeInfo::DeccelRate' has a wrong offset!");
-static_assert(offsetof(FGadgetHyperChargeInfo, ChargeRate) == 0x000008, "Member 'FGadgetHyperChargeInfo::ChargeRate' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetSpinDriftInfo
+// ScriptStruct UnionRun.GadgetEnhanceThornBallInfo
 // 0x0004 (0x0004 - 0x0000)
-struct FGadgetSpinDriftInfo final
+struct FGadgetEnhanceThornBallInfo final
 {
 public:
-	int32                                         Power;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SizeScale;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGadgetSpinDriftInfo) == 0x000004, "Wrong alignment on FGadgetSpinDriftInfo");
-static_assert(sizeof(FGadgetSpinDriftInfo) == 0x000004, "Wrong size on FGadgetSpinDriftInfo");
-static_assert(offsetof(FGadgetSpinDriftInfo, Power) == 0x000000, "Member 'FGadgetSpinDriftInfo::Power' has a wrong offset!");
+static_assert(alignof(FGadgetEnhanceThornBallInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceThornBallInfo");
+static_assert(sizeof(FGadgetEnhanceThornBallInfo) == 0x000004, "Wrong size on FGadgetEnhanceThornBallInfo");
+static_assert(offsetof(FGadgetEnhanceThornBallInfo, SizeScale) == 0x000000, "Member 'FGadgetEnhanceThornBallInfo::SizeScale' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetShortenDamageMotionInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FGadgetShortenDamageMotionInfo final
+// ScriptStruct UnionRun.GadgetEnhanceBombInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetEnhanceBombInfo final
 {
 public:
 	float                                         ShortenRatio;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShortenRatioNormalDamage;                          // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGadgetShortenDamageMotionInfo) == 0x000004, "Wrong alignment on FGadgetShortenDamageMotionInfo");
-static_assert(sizeof(FGadgetShortenDamageMotionInfo) == 0x000008, "Wrong size on FGadgetShortenDamageMotionInfo");
-static_assert(offsetof(FGadgetShortenDamageMotionInfo, ShortenRatio) == 0x000000, "Member 'FGadgetShortenDamageMotionInfo::ShortenRatio' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamageMotionInfo, ShortenRatioNormalDamage) == 0x000004, "Member 'FGadgetShortenDamageMotionInfo::ShortenRatioNormalDamage' has a wrong offset!");
+static_assert(alignof(FGadgetEnhanceBombInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceBombInfo");
+static_assert(sizeof(FGadgetEnhanceBombInfo) == 0x000004, "Wrong size on FGadgetEnhanceBombInfo");
+static_assert(offsetof(FGadgetEnhanceBombInfo, ShortenRatio) == 0x000000, "Member 'FGadgetEnhanceBombInfo::ShortenRatio' has a wrong offset!");
 
-// ScriptStruct UnionRun.ComSlimeCancelParams
+// ScriptStruct UnionRun.GroupRaceRuleLotteryRateRankGroupData
+// 0x0168 (0x0170 - 0x0008)
+struct FGroupRaceRuleLotteryRateRankGroupData final : public FTableRowBase
+{
+public:
+	struct FLotteryRateData                       LotteryRateData_RankGroup1;                        // 0x0008(0x0048)(Edit, NativeAccessSpecifierPublic)
+	struct FLotteryRateData                       LotteryRateData_RankGroup2;                        // 0x0050(0x0048)(Edit, NativeAccessSpecifierPublic)
+	struct FLotteryRateData                       LotteryRateData_RankGroup3;                        // 0x0098(0x0048)(Edit, NativeAccessSpecifierPublic)
+	struct FLotteryRateData                       LotteryRateData_RankGroup4;                        // 0x00E0(0x0048)(Edit, NativeAccessSpecifierPublic)
+	struct FLotteryRateData                       LotteryRateData_RankGroup5;                        // 0x0128(0x0048)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGroupRaceRuleLotteryRateRankGroupData) == 0x000008, "Wrong alignment on FGroupRaceRuleLotteryRateRankGroupData");
+static_assert(sizeof(FGroupRaceRuleLotteryRateRankGroupData) == 0x000170, "Wrong size on FGroupRaceRuleLotteryRateRankGroupData");
+static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup1) == 0x000008, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup1' has a wrong offset!");
+static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup2) == 0x000050, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup2' has a wrong offset!");
+static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup3) == 0x000098, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup3' has a wrong offset!");
+static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup4) == 0x0000E0, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup4' has a wrong offset!");
+static_assert(offsetof(FGroupRaceRuleLotteryRateRankGroupData, LotteryRateData_RankGroup5) == 0x000128, "Member 'FGroupRaceRuleLotteryRateRankGroupData::LotteryRateData_RankGroup5' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetDoubleItemOccasionallyInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetDoubleItemOccasionallyInfo final
+{
+public:
+	float                                         DoubleRatio;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetDoubleItemOccasionallyInfo) == 0x000004, "Wrong alignment on FGadgetDoubleItemOccasionallyInfo");
+static_assert(sizeof(FGadgetDoubleItemOccasionallyInfo) == 0x000004, "Wrong size on FGadgetDoubleItemOccasionallyInfo");
+static_assert(offsetof(FGadgetDoubleItemOccasionallyInfo, DoubleRatio) == 0x000000, "Member 'FGadgetDoubleItemOccasionallyInfo::DoubleRatio' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetUltimateDriftInfo
 // 0x0008 (0x0008 - 0x0000)
-struct FComSlimeCancelParams final
+struct FGadgetUltimateDriftInfo final
 {
 public:
-	float                                         LineChangeRatio;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineChangePerFrame;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableInvincible;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InvincibleTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComSlimeCancelParams) == 0x000004, "Wrong alignment on FComSlimeCancelParams");
-static_assert(sizeof(FComSlimeCancelParams) == 0x000008, "Wrong size on FComSlimeCancelParams");
-static_assert(offsetof(FComSlimeCancelParams, LineChangeRatio) == 0x000000, "Member 'FComSlimeCancelParams::LineChangeRatio' has a wrong offset!");
-static_assert(offsetof(FComSlimeCancelParams, LineChangePerFrame) == 0x000004, "Member 'FComSlimeCancelParams::LineChangePerFrame' has a wrong offset!");
+static_assert(alignof(FGadgetUltimateDriftInfo) == 0x000004, "Wrong alignment on FGadgetUltimateDriftInfo");
+static_assert(sizeof(FGadgetUltimateDriftInfo) == 0x000008, "Wrong size on FGadgetUltimateDriftInfo");
+static_assert(offsetof(FGadgetUltimateDriftInfo, bEnableInvincible) == 0x000000, "Member 'FGadgetUltimateDriftInfo::bEnableInvincible' has a wrong offset!");
+static_assert(offsetof(FGadgetUltimateDriftInfo, InvincibleTime) == 0x000004, "Member 'FGadgetUltimateDriftInfo::InvincibleTime' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetMachineTuneInfo
-// 0x00B8 (0x00B8 - 0x0000)
-struct FGadgetMachineTuneInfo final
+// ScriptStruct UnionRun.PlayerPointDistanceData
+// 0x0018 (0x0020 - 0x0008)
+struct FPlayerPointDistanceData final : public FTableRowBase
 {
 public:
-	struct FGadgetMachineTuneValueChange          MachineTuneDefault;                                // 0x0000(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ECarStatusType, struct FGadgetMachineTuneValueChange> MachineTuneByCarStatusType;           // 0x0018(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<EDriverType, struct FGadgetMachineTuneValueChange> MachineTuneByDriverType;                 // 0x0068(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	EPointDistanceGroup                           PointDistanceGroup;                                // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GrandPrix;                                         // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Group;                                             // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duel;                                              // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Other;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGadgetMachineTuneInfo) == 0x000008, "Wrong alignment on FGadgetMachineTuneInfo");
-static_assert(sizeof(FGadgetMachineTuneInfo) == 0x0000B8, "Wrong size on FGadgetMachineTuneInfo");
-static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneDefault) == 0x000000, "Member 'FGadgetMachineTuneInfo::MachineTuneDefault' has a wrong offset!");
-static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneByCarStatusType) == 0x000018, "Member 'FGadgetMachineTuneInfo::MachineTuneByCarStatusType' has a wrong offset!");
-static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneByDriverType) == 0x000068, "Member 'FGadgetMachineTuneInfo::MachineTuneByDriverType' has a wrong offset!");
+static_assert(alignof(FPlayerPointDistanceData) == 0x000008, "Wrong alignment on FPlayerPointDistanceData");
+static_assert(sizeof(FPlayerPointDistanceData) == 0x000020, "Wrong size on FPlayerPointDistanceData");
+static_assert(offsetof(FPlayerPointDistanceData, PointDistanceGroup) == 0x000008, "Member 'FPlayerPointDistanceData::PointDistanceGroup' has a wrong offset!");
+static_assert(offsetof(FPlayerPointDistanceData, GrandPrix) == 0x00000C, "Member 'FPlayerPointDistanceData::GrandPrix' has a wrong offset!");
+static_assert(offsetof(FPlayerPointDistanceData, Group) == 0x000010, "Member 'FPlayerPointDistanceData::Group' has a wrong offset!");
+static_assert(offsetof(FPlayerPointDistanceData, Duel) == 0x000014, "Member 'FPlayerPointDistanceData::Duel' has a wrong offset!");
+static_assert(offsetof(FPlayerPointDistanceData, Other) == 0x000018, "Member 'FPlayerPointDistanceData::Other' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetTouchDashInfo
-// 0x000C (0x000C - 0x0000)
-struct FGadgetTouchDashInfo final
+// ScriptStruct UnionRun.GadgetQuickAirtrickInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetQuickAirtrickInfo final
 {
 public:
-	int32                                         BoostLevel;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostSeconds;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoostMul;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirTrickPlayRate;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGadgetTouchDashInfo) == 0x000004, "Wrong alignment on FGadgetTouchDashInfo");
-static_assert(sizeof(FGadgetTouchDashInfo) == 0x00000C, "Wrong size on FGadgetTouchDashInfo");
-static_assert(offsetof(FGadgetTouchDashInfo, BoostLevel) == 0x000000, "Member 'FGadgetTouchDashInfo::BoostLevel' has a wrong offset!");
-static_assert(offsetof(FGadgetTouchDashInfo, BoostSeconds) == 0x000004, "Member 'FGadgetTouchDashInfo::BoostSeconds' has a wrong offset!");
-static_assert(offsetof(FGadgetTouchDashInfo, BoostMul) == 0x000008, "Member 'FGadgetTouchDashInfo::BoostMul' has a wrong offset!");
+static_assert(alignof(FGadgetQuickAirtrickInfo) == 0x000004, "Wrong alignment on FGadgetQuickAirtrickInfo");
+static_assert(sizeof(FGadgetQuickAirtrickInfo) == 0x000004, "Wrong size on FGadgetQuickAirtrickInfo");
+static_assert(offsetof(FGadgetQuickAirtrickInfo, AirTrickPlayRate) == 0x000000, "Member 'FGadgetQuickAirtrickInfo::AirTrickPlayRate' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetSkateDriftInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetSkateDriftInfo final
+{
+public:
+	float                                         ChargeTimeRatio;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetSkateDriftInfo) == 0x000004, "Wrong alignment on FGadgetSkateDriftInfo");
+static_assert(sizeof(FGadgetSkateDriftInfo) == 0x000004, "Wrong size on FGadgetSkateDriftInfo");
+static_assert(offsetof(FGadgetSkateDriftInfo, ChargeTimeRatio) == 0x000000, "Member 'FGadgetSkateDriftInfo::ChargeTimeRatio' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionJukeboxRaceBGMLapInfo
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FUnionJukeboxRaceBGMLapInfo final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUnionJukeboxRaceBGMLapInfo) == 0x000008, "Wrong alignment on FUnionJukeboxRaceBGMLapInfo");
+static_assert(sizeof(FUnionJukeboxRaceBGMLapInfo) == 0x000018, "Wrong size on FUnionJukeboxRaceBGMLapInfo");
+
+// ScriptStruct UnionRun.UnionJukeboxRaceBGM
+// 0x0010 (0x0010 - 0x0000)
+struct FUnionJukeboxRaceBGM final
+{
+public:
+	TArray<struct FUnionJukeboxRaceBGMLapInfo>    LapInfo;                                           // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionJukeboxRaceBGM) == 0x000008, "Wrong alignment on FUnionJukeboxRaceBGM");
+static_assert(sizeof(FUnionJukeboxRaceBGM) == 0x000010, "Wrong size on FUnionJukeboxRaceBGM");
+static_assert(offsetof(FUnionJukeboxRaceBGM, LapInfo) == 0x000000, "Member 'FUnionJukeboxRaceBGM::LapInfo' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionRaceOverwriteStartTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -6093,20 +5908,6 @@ static_assert(alignof(FUnionRaceOverwriteStartTransform) == 0x000010, "Wrong ali
 static_assert(sizeof(FUnionRaceOverwriteStartTransform) == 0x000070, "Wrong size on FUnionRaceOverwriteStartTransform");
 static_assert(offsetof(FUnionRaceOverwriteStartTransform, bOverwrite) == 0x000000, "Member 'FUnionRaceOverwriteStartTransform::bOverwrite' has a wrong offset!");
 static_assert(offsetof(FUnionRaceOverwriteStartTransform, StartTransform) == 0x000010, "Member 'FUnionRaceOverwriteStartTransform::StartTransform' has a wrong offset!");
-
-// ScriptStruct UnionRun.PredictTestInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FPredictTestInfo final
-{
-public:
-	bool                                          bIsEnable;                                         // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TestCaseIndex;                                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPredictTestInfo) == 0x000004, "Wrong alignment on FPredictTestInfo");
-static_assert(sizeof(FPredictTestInfo) == 0x000008, "Wrong size on FPredictTestInfo");
-static_assert(offsetof(FPredictTestInfo, bIsEnable) == 0x000000, "Member 'FPredictTestInfo::bIsEnable' has a wrong offset!");
-static_assert(offsetof(FPredictTestInfo, TestCaseIndex) == 0x000004, "Member 'FPredictTestInfo::TestCaseIndex' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionRaceDebugParam
 // 0x00A0 (0x00A0 - 0x0000)
@@ -6138,27 +5939,6 @@ static_assert(offsetof(FUnionRaceDebugParam, bIsDebugFinalLap) == 0x000084, "Mem
 static_assert(offsetof(FUnionRaceDebugParam, bIsRaceTestMode) == 0x000085, "Member 'FUnionRaceDebugParam::bIsRaceTestMode' has a wrong offset!");
 static_assert(offsetof(FUnionRaceDebugParam, RaceTestConfigName) == 0x000088, "Member 'FUnionRaceDebugParam::RaceTestConfigName' has a wrong offset!");
 static_assert(offsetof(FUnionRaceDebugParam, PredictTestInfo) == 0x000098, "Member 'FUnionRaceDebugParam::PredictTestInfo' has a wrong offset!");
-
-// ScriptStruct UnionRun.UnionJukeboxRaceBGMLapInfo
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FUnionJukeboxRaceBGMLapInfo final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUnionJukeboxRaceBGMLapInfo) == 0x000008, "Wrong alignment on FUnionJukeboxRaceBGMLapInfo");
-static_assert(sizeof(FUnionJukeboxRaceBGMLapInfo) == 0x000018, "Wrong size on FUnionJukeboxRaceBGMLapInfo");
-
-// ScriptStruct UnionRun.UnionJukeboxRaceBGM
-// 0x0010 (0x0010 - 0x0000)
-struct FUnionJukeboxRaceBGM final
-{
-public:
-	TArray<struct FUnionJukeboxRaceBGMLapInfo>    LapInfo;                                           // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionJukeboxRaceBGM) == 0x000008, "Wrong alignment on FUnionJukeboxRaceBGM");
-static_assert(sizeof(FUnionJukeboxRaceBGM) == 0x000010, "Wrong size on FUnionJukeboxRaceBGM");
-static_assert(offsetof(FUnionJukeboxRaceBGM, LapInfo) == 0x000000, "Member 'FUnionJukeboxRaceBGM::LapInfo' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionRaceCreateParam
 // 0x0280 (0x0280 - 0x0000)
@@ -6210,6 +5990,162 @@ static_assert(offsetof(FUnionRaceCreateParam, P2PUnstableTime) == 0x000254, "Mem
 static_assert(offsetof(FUnionRaceCreateParam, RaceDisableGadgetList) == 0x000258, "Member 'FUnionRaceCreateParam::RaceDisableGadgetList' has a wrong offset!");
 static_assert(offsetof(FUnionRaceCreateParam, AdditionalGadgetList) == 0x000268, "Member 'FUnionRaceCreateParam::AdditionalGadgetList' has a wrong offset!");
 
+// ScriptStruct UnionRun.GadgetJustDashInfo
+// 0x0014 (0x0014 - 0x0000)
+struct FGadgetJustDashInfo final
+{
+public:
+	int32                                         InputFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMulLv1;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMulLv2;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMulLv3;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMulLv4;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetJustDashInfo) == 0x000004, "Wrong alignment on FGadgetJustDashInfo");
+static_assert(sizeof(FGadgetJustDashInfo) == 0x000014, "Wrong size on FGadgetJustDashInfo");
+static_assert(offsetof(FGadgetJustDashInfo, InputFrame) == 0x000000, "Member 'FGadgetJustDashInfo::InputFrame' has a wrong offset!");
+static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv1) == 0x000004, "Member 'FGadgetJustDashInfo::BoostMulLv1' has a wrong offset!");
+static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv2) == 0x000008, "Member 'FGadgetJustDashInfo::BoostMulLv2' has a wrong offset!");
+static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv3) == 0x00000C, "Member 'FGadgetJustDashInfo::BoostMulLv3' has a wrong offset!");
+static_assert(offsetof(FGadgetJustDashInfo, BoostMulLv4) == 0x000010, "Member 'FGadgetJustDashInfo::BoostMulLv4' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetLevelChargeInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetLevelChargeInfo final
+{
+public:
+	float                                         ChargeRate;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetLevelChargeInfo) == 0x000004, "Wrong alignment on FGadgetLevelChargeInfo");
+static_assert(sizeof(FGadgetLevelChargeInfo) == 0x000004, "Wrong size on FGadgetLevelChargeInfo");
+static_assert(offsetof(FGadgetLevelChargeInfo, ChargeRate) == 0x000000, "Member 'FGadgetLevelChargeInfo::ChargeRate' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComLotteryParams
+// 0x0004 (0x0004 - 0x0000)
+struct FComLotteryParams final
+{
+public:
+	int32                                         SpecialTypeSlotRank;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComLotteryParams) == 0x000004, "Wrong alignment on FComLotteryParams");
+static_assert(sizeof(FComLotteryParams) == 0x000004, "Wrong size on FComLotteryParams");
+static_assert(offsetof(FComLotteryParams, SpecialTypeSlotRank) == 0x000000, "Member 'FComLotteryParams::SpecialTypeSlotRank' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetSwitchDriftQuickChargeInfo
+// 0x000C (0x000C - 0x0000)
+struct FGadgetSwitchDriftQuickChargeInfo final
+{
+public:
+	float                                         CoolDownTime;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChargeUpSeconds;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChargeMul;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetSwitchDriftQuickChargeInfo) == 0x000004, "Wrong alignment on FGadgetSwitchDriftQuickChargeInfo");
+static_assert(sizeof(FGadgetSwitchDriftQuickChargeInfo) == 0x00000C, "Wrong size on FGadgetSwitchDriftQuickChargeInfo");
+static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, CoolDownTime) == 0x000000, "Member 'FGadgetSwitchDriftQuickChargeInfo::CoolDownTime' has a wrong offset!");
+static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, ChargeUpSeconds) == 0x000004, "Member 'FGadgetSwitchDriftQuickChargeInfo::ChargeUpSeconds' has a wrong offset!");
+static_assert(offsetof(FGadgetSwitchDriftQuickChargeInfo, ChargeMul) == 0x000008, "Member 'FGadgetSwitchDriftQuickChargeInfo::ChargeMul' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetHyperChargeInfo
+// 0x000C (0x000C - 0x0000)
+struct FGadgetHyperChargeInfo final
+{
+public:
+	float                                         DeccelSpeed;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeccelRate;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChargeRate;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetHyperChargeInfo) == 0x000004, "Wrong alignment on FGadgetHyperChargeInfo");
+static_assert(sizeof(FGadgetHyperChargeInfo) == 0x00000C, "Wrong size on FGadgetHyperChargeInfo");
+static_assert(offsetof(FGadgetHyperChargeInfo, DeccelSpeed) == 0x000000, "Member 'FGadgetHyperChargeInfo::DeccelSpeed' has a wrong offset!");
+static_assert(offsetof(FGadgetHyperChargeInfo, DeccelRate) == 0x000004, "Member 'FGadgetHyperChargeInfo::DeccelRate' has a wrong offset!");
+static_assert(offsetof(FGadgetHyperChargeInfo, ChargeRate) == 0x000008, "Member 'FGadgetHyperChargeInfo::ChargeRate' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComAvoidParams
+// 0x0010 (0x0010 - 0x0000)
+struct FComAvoidParams final
+{
+public:
+	float                                         CarWidth;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AvoidMargin;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ThornBallAvoidWidth;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MagnetAvoidWidth;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComAvoidParams) == 0x000004, "Wrong alignment on FComAvoidParams");
+static_assert(sizeof(FComAvoidParams) == 0x000010, "Wrong size on FComAvoidParams");
+static_assert(offsetof(FComAvoidParams, CarWidth) == 0x000000, "Member 'FComAvoidParams::CarWidth' has a wrong offset!");
+static_assert(offsetof(FComAvoidParams, AvoidMargin) == 0x000004, "Member 'FComAvoidParams::AvoidMargin' has a wrong offset!");
+static_assert(offsetof(FComAvoidParams, ThornBallAvoidWidth) == 0x000008, "Member 'FComAvoidParams::ThornBallAvoidWidth' has a wrong offset!");
+static_assert(offsetof(FComAvoidParams, MagnetAvoidWidth) == 0x00000C, "Member 'FComAvoidParams::MagnetAvoidWidth' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetSpinDriftInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetSpinDriftInfo final
+{
+public:
+	int32                                         Power;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetSpinDriftInfo) == 0x000004, "Wrong alignment on FGadgetSpinDriftInfo");
+static_assert(sizeof(FGadgetSpinDriftInfo) == 0x000004, "Wrong size on FGadgetSpinDriftInfo");
+static_assert(offsetof(FGadgetSpinDriftInfo, Power) == 0x000000, "Member 'FGadgetSpinDriftInfo::Power' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetShortenDamageMotionInfo
+// 0x0008 (0x0008 - 0x0000)
+struct FGadgetShortenDamageMotionInfo final
+{
+public:
+	float                                         ShortenRatio;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShortenRatioNormalDamage;                          // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetShortenDamageMotionInfo) == 0x000004, "Wrong alignment on FGadgetShortenDamageMotionInfo");
+static_assert(sizeof(FGadgetShortenDamageMotionInfo) == 0x000008, "Wrong size on FGadgetShortenDamageMotionInfo");
+static_assert(offsetof(FGadgetShortenDamageMotionInfo, ShortenRatio) == 0x000000, "Member 'FGadgetShortenDamageMotionInfo::ShortenRatio' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamageMotionInfo, ShortenRatioNormalDamage) == 0x000004, "Member 'FGadgetShortenDamageMotionInfo::ShortenRatioNormalDamage' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetMachineTuneInfo
+// 0x00B8 (0x00B8 - 0x0000)
+struct FGadgetMachineTuneInfo final
+{
+public:
+	struct FGadgetMachineTuneValueChange          MachineTuneDefault;                                // 0x0000(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ECarStatusType, struct FGadgetMachineTuneValueChange> MachineTuneByCarStatusType;           // 0x0018(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<EDriverType, struct FGadgetMachineTuneValueChange> MachineTuneByDriverType;                 // 0x0068(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetMachineTuneInfo) == 0x000008, "Wrong alignment on FGadgetMachineTuneInfo");
+static_assert(sizeof(FGadgetMachineTuneInfo) == 0x0000B8, "Wrong size on FGadgetMachineTuneInfo");
+static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneDefault) == 0x000000, "Member 'FGadgetMachineTuneInfo::MachineTuneDefault' has a wrong offset!");
+static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneByCarStatusType) == 0x000018, "Member 'FGadgetMachineTuneInfo::MachineTuneByCarStatusType' has a wrong offset!");
+static_assert(offsetof(FGadgetMachineTuneInfo, MachineTuneByDriverType) == 0x000068, "Member 'FGadgetMachineTuneInfo::MachineTuneByDriverType' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetTouchDashInfo
+// 0x000C (0x000C - 0x0000)
+struct FGadgetTouchDashInfo final
+{
+public:
+	int32                                         BoostLevel;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostSeconds;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoostMul;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetTouchDashInfo) == 0x000004, "Wrong alignment on FGadgetTouchDashInfo");
+static_assert(sizeof(FGadgetTouchDashInfo) == 0x00000C, "Wrong size on FGadgetTouchDashInfo");
+static_assert(offsetof(FGadgetTouchDashInfo, BoostLevel) == 0x000000, "Member 'FGadgetTouchDashInfo::BoostLevel' has a wrong offset!");
+static_assert(offsetof(FGadgetTouchDashInfo, BoostSeconds) == 0x000004, "Member 'FGadgetTouchDashInfo::BoostSeconds' has a wrong offset!");
+static_assert(offsetof(FGadgetTouchDashInfo, BoostMul) == 0x000008, "Member 'FGadgetTouchDashInfo::BoostMul' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComAvoidPolishingMachineParams
+// 0x0008 (0x0008 - 0x0000)
+struct FComAvoidPolishingMachineParams final
+{
+public:
+	float                                         RightPathMovePosARatioStart;                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RightPathMovePosARatioEnd;                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComAvoidPolishingMachineParams) == 0x000004, "Wrong alignment on FComAvoidPolishingMachineParams");
+static_assert(sizeof(FComAvoidPolishingMachineParams) == 0x000008, "Wrong size on FComAvoidPolishingMachineParams");
+static_assert(offsetof(FComAvoidPolishingMachineParams, RightPathMovePosARatioStart) == 0x000000, "Member 'FComAvoidPolishingMachineParams::RightPathMovePosARatioStart' has a wrong offset!");
+static_assert(offsetof(FComAvoidPolishingMachineParams, RightPathMovePosARatioEnd) == 0x000004, "Member 'FComAvoidPolishingMachineParams::RightPathMovePosARatioEnd' has a wrong offset!");
+
 // ScriptStruct UnionRun.GadgetEnforceSlipstreamInfo
 // 0x000C (0x000C - 0x0000)
 struct FGadgetEnforceSlipstreamInfo final
@@ -6238,16 +6174,20 @@ static_assert(sizeof(FGadgetImmuneItemDamageOnceInfo) == 0x000008, "Wrong size o
 static_assert(offsetof(FGadgetImmuneItemDamageOnceInfo, ActiveTime) == 0x000000, "Member 'FGadgetImmuneItemDamageOnceInfo::ActiveTime' has a wrong offset!");
 static_assert(offsetof(FGadgetImmuneItemDamageOnceInfo, CountDownTime) == 0x000004, "Member 'FGadgetImmuneItemDamageOnceInfo::CountDownTime' has a wrong offset!");
 
-// ScriptStruct UnionRun.ComLotteryParams
-// 0x0004 (0x0004 - 0x0000)
-struct FComLotteryParams final
+// ScriptStruct UnionRun.ComUseGadget
+// 0x0018 (0x0020 - 0x0008)
+struct FComUseGadget final : public FTableRowBase
 {
 public:
-	int32                                         SpecialTypeSlotRank;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GadgetEquipGr;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GadgetSlotSize;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<EGadgetId>                             ComUseGadget;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComLotteryParams) == 0x000004, "Wrong alignment on FComLotteryParams");
-static_assert(sizeof(FComLotteryParams) == 0x000004, "Wrong size on FComLotteryParams");
-static_assert(offsetof(FComLotteryParams, SpecialTypeSlotRank) == 0x000000, "Member 'FComLotteryParams::SpecialTypeSlotRank' has a wrong offset!");
+static_assert(alignof(FComUseGadget) == 0x000008, "Wrong alignment on FComUseGadget");
+static_assert(sizeof(FComUseGadget) == 0x000020, "Wrong size on FComUseGadget");
+static_assert(offsetof(FComUseGadget, GadgetEquipGr) == 0x000008, "Member 'FComUseGadget::GadgetEquipGr' has a wrong offset!");
+static_assert(offsetof(FComUseGadget, GadgetSlotSize) == 0x00000C, "Member 'FComUseGadget::GadgetSlotSize' has a wrong offset!");
+static_assert(offsetof(FComUseGadget, ComUseGadget) == 0x000010, "Member 'FComUseGadget::ComUseGadget' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetDashUpInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -6273,21 +6213,18 @@ static_assert(alignof(FGadgetUpperLimitInfo) == 0x000004, "Wrong alignment on FG
 static_assert(sizeof(FGadgetUpperLimitInfo) == 0x000004, "Wrong size on FGadgetUpperLimitInfo");
 static_assert(offsetof(FGadgetUpperLimitInfo, RingNum) == 0x000000, "Member 'FGadgetUpperLimitInfo::RingNum' has a wrong offset!");
 
-// ScriptStruct UnionRun.ComGadgetEquipRivalLevel
-// 0x0028 (0x0030 - 0x0008)
-struct FComGadgetEquipRivalLevel final : public FTableRowBase
+// ScriptStruct UnionRun.ComBranchRingCondition
+// 0x0008 (0x0008 - 0x0000)
+struct FComBranchRingCondition final
 {
 public:
-	int32                                         RivalLevel;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComGadgetEquipTableSetting            RivalRacerGadget;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0020(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Count;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Ratio;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComGadgetEquipRivalLevel) == 0x000008, "Wrong alignment on FComGadgetEquipRivalLevel");
-static_assert(sizeof(FComGadgetEquipRivalLevel) == 0x000030, "Wrong size on FComGadgetEquipRivalLevel");
-static_assert(offsetof(FComGadgetEquipRivalLevel, RivalLevel) == 0x000008, "Member 'FComGadgetEquipRivalLevel::RivalLevel' has a wrong offset!");
-static_assert(offsetof(FComGadgetEquipRivalLevel, RivalRacerGadget) == 0x000010, "Member 'FComGadgetEquipRivalLevel::RivalRacerGadget' has a wrong offset!");
-static_assert(offsetof(FComGadgetEquipRivalLevel, NormalRacerGadget) == 0x000020, "Member 'FComGadgetEquipRivalLevel::NormalRacerGadget' has a wrong offset!");
+static_assert(alignof(FComBranchRingCondition) == 0x000004, "Wrong alignment on FComBranchRingCondition");
+static_assert(sizeof(FComBranchRingCondition) == 0x000008, "Wrong size on FComBranchRingCondition");
+static_assert(offsetof(FComBranchRingCondition, Count) == 0x000000, "Member 'FComBranchRingCondition::Count' has a wrong offset!");
+static_assert(offsetof(FComBranchRingCondition, Ratio) == 0x000004, "Member 'FComBranchRingCondition::Ratio' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetStoleInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -6313,40 +6250,210 @@ static_assert(alignof(FGadgetGuardInfo) == 0x000004, "Wrong alignment on FGadget
 static_assert(sizeof(FGadgetGuardInfo) == 0x000004, "Wrong size on FGadgetGuardInfo");
 static_assert(offsetof(FGadgetGuardInfo, ReduceDamageRatio) == 0x000000, "Member 'FGadgetGuardInfo::ReduceDamageRatio' has a wrong offset!");
 
-// ScriptStruct UnionRun.ComPaceParams
-// 0x0034 (0x0034 - 0x0000)
-struct FComPaceParams final
+// ScriptStruct UnionRun.ComSlimeCancelParams
+// 0x0008 (0x0008 - 0x0000)
+struct FComSlimeCancelParams final
 {
 public:
-	float                                         base;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseSlow;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseStart;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDash3;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDash2;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDash1;                                        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDash0;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDashMiss;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LinePosMin;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LinePosMax;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShortcutRatio;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ItemSkillLv;                                       // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloseToStart;                                      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineChangeRatio;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineChangePerFrame;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FComPaceParams) == 0x000004, "Wrong alignment on FComPaceParams");
-static_assert(sizeof(FComPaceParams) == 0x000034, "Wrong size on FComPaceParams");
-static_assert(offsetof(FComPaceParams, base) == 0x000000, "Member 'FComPaceParams::base' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, BaseSlow) == 0x000004, "Member 'FComPaceParams::BaseSlow' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, BaseStart) == 0x000008, "Member 'FComPaceParams::BaseStart' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, StartDash3) == 0x00000C, "Member 'FComPaceParams::StartDash3' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, StartDash2) == 0x000010, "Member 'FComPaceParams::StartDash2' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, StartDash1) == 0x000014, "Member 'FComPaceParams::StartDash1' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, StartDash0) == 0x000018, "Member 'FComPaceParams::StartDash0' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, StartDashMiss) == 0x00001C, "Member 'FComPaceParams::StartDashMiss' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, LinePosMin) == 0x000020, "Member 'FComPaceParams::LinePosMin' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, LinePosMax) == 0x000024, "Member 'FComPaceParams::LinePosMax' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, ShortcutRatio) == 0x000028, "Member 'FComPaceParams::ShortcutRatio' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, ItemSkillLv) == 0x00002C, "Member 'FComPaceParams::ItemSkillLv' has a wrong offset!");
-static_assert(offsetof(FComPaceParams, CloseToStart) == 0x000030, "Member 'FComPaceParams::CloseToStart' has a wrong offset!");
+static_assert(alignof(FComSlimeCancelParams) == 0x000004, "Wrong alignment on FComSlimeCancelParams");
+static_assert(sizeof(FComSlimeCancelParams) == 0x000008, "Wrong size on FComSlimeCancelParams");
+static_assert(offsetof(FComSlimeCancelParams, LineChangeRatio) == 0x000000, "Member 'FComSlimeCancelParams::LineChangeRatio' has a wrong offset!");
+static_assert(offsetof(FComSlimeCancelParams, LineChangePerFrame) == 0x000004, "Member 'FComSlimeCancelParams::LineChangePerFrame' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetBonusDashPanelComboInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FGadgetBonusDashPanelComboInfo final
+{
+public:
+	struct FGadgetBoostRingBonusInfo              AddRingNum;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MaxAddRingNum;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ComboValidTime;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetBonusDashPanelComboInfo) == 0x000004, "Wrong alignment on FGadgetBonusDashPanelComboInfo");
+static_assert(sizeof(FGadgetBonusDashPanelComboInfo) == 0x000018, "Wrong size on FGadgetBonusDashPanelComboInfo");
+static_assert(offsetof(FGadgetBonusDashPanelComboInfo, AddRingNum) == 0x000000, "Member 'FGadgetBonusDashPanelComboInfo::AddRingNum' has a wrong offset!");
+static_assert(offsetof(FGadgetBonusDashPanelComboInfo, MaxAddRingNum) == 0x000010, "Member 'FGadgetBonusDashPanelComboInfo::MaxAddRingNum' has a wrong offset!");
+static_assert(offsetof(FGadgetBonusDashPanelComboInfo, ComboValidTime) == 0x000014, "Member 'FGadgetBonusDashPanelComboInfo::ComboValidTime' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetExpandGetRingRangeInfo
+// 0x0008 (0x0008 - 0x0000)
+struct FGadgetExpandGetRingRangeInfo final
+{
+public:
+	float                                         CollisionRadiusMag;                                // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CollisionHeightMag;                                // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetExpandGetRingRangeInfo) == 0x000004, "Wrong alignment on FGadgetExpandGetRingRangeInfo");
+static_assert(sizeof(FGadgetExpandGetRingRangeInfo) == 0x000008, "Wrong size on FGadgetExpandGetRingRangeInfo");
+static_assert(offsetof(FGadgetExpandGetRingRangeInfo, CollisionRadiusMag) == 0x000000, "Member 'FGadgetExpandGetRingRangeInfo::CollisionRadiusMag' has a wrong offset!");
+static_assert(offsetof(FGadgetExpandGetRingRangeInfo, CollisionHeightMag) == 0x000004, "Member 'FGadgetExpandGetRingRangeInfo::CollisionHeightMag' has a wrong offset!");
+
+// ScriptStruct UnionRun.FakeComName
+// 0x0018 (0x0020 - 0x0008)
+struct FFakeComName final : public FTableRowBase
+{
+public:
+	class FText                                   Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	ESupportedCulture                             Language;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFakeComName) == 0x000008, "Wrong alignment on FFakeComName");
+static_assert(sizeof(FFakeComName) == 0x000020, "Wrong size on FFakeComName");
+static_assert(offsetof(FFakeComName, Name) == 0x000008, "Member 'FFakeComName::Name' has a wrong offset!");
+static_assert(offsetof(FFakeComName, Language) == 0x000018, "Member 'FFakeComName::Language' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetSuppressRunoffInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetSuppressRunoffInfo final
+{
+public:
+	float                                         AddSpeed;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetSuppressRunoffInfo) == 0x000004, "Wrong alignment on FGadgetSuppressRunoffInfo");
+static_assert(sizeof(FGadgetSuppressRunoffInfo) == 0x000004, "Wrong size on FGadgetSuppressRunoffInfo");
+static_assert(offsetof(FGadgetSuppressRunoffInfo, AddSpeed) == 0x000000, "Member 'FGadgetSuppressRunoffInfo::AddSpeed' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetEnhanceHookTurnInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FGadgetEnhanceHookTurnInfo final
+{
+public:
+	float                                         StartDegreeOffset_Horizontal;                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDegreeOffset_Vertical;                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AddAngularVelocity_Horizontal;                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AddAngularVelocity_Vertical;                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetEnhanceHookTurnInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceHookTurnInfo");
+static_assert(sizeof(FGadgetEnhanceHookTurnInfo) == 0x000010, "Wrong size on FGadgetEnhanceHookTurnInfo");
+static_assert(offsetof(FGadgetEnhanceHookTurnInfo, StartDegreeOffset_Horizontal) == 0x000000, "Member 'FGadgetEnhanceHookTurnInfo::StartDegreeOffset_Horizontal' has a wrong offset!");
+static_assert(offsetof(FGadgetEnhanceHookTurnInfo, StartDegreeOffset_Vertical) == 0x000004, "Member 'FGadgetEnhanceHookTurnInfo::StartDegreeOffset_Vertical' has a wrong offset!");
+static_assert(offsetof(FGadgetEnhanceHookTurnInfo, AddAngularVelocity_Horizontal) == 0x000008, "Member 'FGadgetEnhanceHookTurnInfo::AddAngularVelocity_Horizontal' has a wrong offset!");
+static_assert(offsetof(FGadgetEnhanceHookTurnInfo, AddAngularVelocity_Vertical) == 0x00000C, "Member 'FGadgetEnhanceHookTurnInfo::AddAngularVelocity_Vertical' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionRaceHUDWarning
+// 0x0010 (0x0010 - 0x0000)
+struct FUnionRaceHUDWarning final
+{
+public:
+	TArray<class URaceUISubApproachWarning*>      WarningInfoWidget;                                 // 0x0000(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionRaceHUDWarning) == 0x000008, "Wrong alignment on FUnionRaceHUDWarning");
+static_assert(sizeof(FUnionRaceHUDWarning) == 0x000010, "Wrong size on FUnionRaceHUDWarning");
+static_assert(offsetof(FUnionRaceHUDWarning, WarningInfoWidget) == 0x000000, "Member 'FUnionRaceHUDWarning::WarningInfoWidget' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetBoatChargeJumpUpInfo
+// 0x000C (0x000C - 0x0000)
+struct FGadgetBoatChargeJumpUpInfo final
+{
+public:
+	float                                         AirTrickRateX;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirTrickRateY;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AirTrickLimitNum;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetBoatChargeJumpUpInfo) == 0x000004, "Wrong alignment on FGadgetBoatChargeJumpUpInfo");
+static_assert(sizeof(FGadgetBoatChargeJumpUpInfo) == 0x00000C, "Wrong size on FGadgetBoatChargeJumpUpInfo");
+static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickRateX) == 0x000000, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickRateX' has a wrong offset!");
+static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickRateY) == 0x000004, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickRateY' has a wrong offset!");
+static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickLimitNum) == 0x000008, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickLimitNum' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetItemNumInfo
+// 0x0004 (0x0004 - 0x0000)
+struct FGadgetItemNumInfo final
+{
+public:
+	int32                                         itemNum;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetItemNumInfo) == 0x000004, "Wrong alignment on FGadgetItemNumInfo");
+static_assert(sizeof(FGadgetItemNumInfo) == 0x000004, "Wrong size on FGadgetItemNumInfo");
+static_assert(offsetof(FGadgetItemNumInfo, itemNum) == 0x000000, "Member 'FGadgetItemNumInfo::itemNum' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComGadgetEquipRivalLevel
+// 0x0028 (0x0030 - 0x0008)
+struct FComGadgetEquipRivalLevel final : public FTableRowBase
+{
+public:
+	int32                                         RivalLevel;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FComGadgetEquipTableSetting            RivalRacerGadget;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0020(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComGadgetEquipRivalLevel) == 0x000008, "Wrong alignment on FComGadgetEquipRivalLevel");
+static_assert(sizeof(FComGadgetEquipRivalLevel) == 0x000030, "Wrong size on FComGadgetEquipRivalLevel");
+static_assert(offsetof(FComGadgetEquipRivalLevel, RivalLevel) == 0x000008, "Member 'FComGadgetEquipRivalLevel::RivalLevel' has a wrong offset!");
+static_assert(offsetof(FComGadgetEquipRivalLevel, RivalRacerGadget) == 0x000010, "Member 'FComGadgetEquipRivalLevel::RivalRacerGadget' has a wrong offset!");
+static_assert(offsetof(FComGadgetEquipRivalLevel, NormalRacerGadget) == 0x000020, "Member 'FComGadgetEquipRivalLevel::NormalRacerGadget' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetShortenDamagetTimeInfo
+// 0x0024 (0x0024 - 0x0000)
+struct FGadgetShortenDamagetTimeInfo final
+{
+public:
+	int32                                         SpinTime1st;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpinTime12th;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReduceDamageOnSpeedRatio;                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CrashReduceRatio;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemSpeedValueChangeRatio_Anchor;                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemSpeedValueChangeRatio_BodyCut;                 // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemSpeedValueChangeRatio_Slime;                   // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemSpeedValueChangeRatio_Magnet;                  // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemSpeedValueChangeRatio_Splash;                  // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetShortenDamagetTimeInfo) == 0x000004, "Wrong alignment on FGadgetShortenDamagetTimeInfo");
+static_assert(sizeof(FGadgetShortenDamagetTimeInfo) == 0x000024, "Wrong size on FGadgetShortenDamagetTimeInfo");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, SpinTime1st) == 0x000000, "Member 'FGadgetShortenDamagetTimeInfo::SpinTime1st' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, SpinTime12th) == 0x000004, "Member 'FGadgetShortenDamagetTimeInfo::SpinTime12th' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ReduceDamageOnSpeedRatio) == 0x000008, "Member 'FGadgetShortenDamagetTimeInfo::ReduceDamageOnSpeedRatio' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, CrashReduceRatio) == 0x00000C, "Member 'FGadgetShortenDamagetTimeInfo::CrashReduceRatio' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Anchor) == 0x000010, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Anchor' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_BodyCut) == 0x000014, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_BodyCut' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Slime) == 0x000018, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Slime' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Magnet) == 0x00001C, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Magnet' has a wrong offset!");
+static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Splash) == 0x000020, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Splash' has a wrong offset!");
+
+// ScriptStruct UnionRun.GadgetRecoveryBonusInfo
+// 0x000C (0x000C - 0x0000)
+struct FGadgetRecoveryBonusInfo final
+{
+public:
+	int32                                         RingNum;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InvincibleSeconds;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CountDownSeconds;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGadgetRecoveryBonusInfo) == 0x000004, "Wrong alignment on FGadgetRecoveryBonusInfo");
+static_assert(sizeof(FGadgetRecoveryBonusInfo) == 0x00000C, "Wrong size on FGadgetRecoveryBonusInfo");
+static_assert(offsetof(FGadgetRecoveryBonusInfo, RingNum) == 0x000000, "Member 'FGadgetRecoveryBonusInfo::RingNum' has a wrong offset!");
+static_assert(offsetof(FGadgetRecoveryBonusInfo, InvincibleSeconds) == 0x000004, "Member 'FGadgetRecoveryBonusInfo::InvincibleSeconds' has a wrong offset!");
+static_assert(offsetof(FGadgetRecoveryBonusInfo, CountDownSeconds) == 0x000008, "Member 'FGadgetRecoveryBonusInfo::CountDownSeconds' has a wrong offset!");
+
+// ScriptStruct UnionRun.ComBranchRingParams
+// 0x0044 (0x0044 - 0x0000)
+struct FComBranchRingParams final
+{
+public:
+	int32                                         NumCondition;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions1;                                       // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions2;                                       // 0x000C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions3;                                       // 0x0014(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions4;                                       // 0x001C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions5;                                       // 0x0024(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions6;                                       // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions7;                                       // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComBranchRingCondition                Conditions8;                                       // 0x003C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComBranchRingParams) == 0x000004, "Wrong alignment on FComBranchRingParams");
+static_assert(sizeof(FComBranchRingParams) == 0x000044, "Wrong size on FComBranchRingParams");
+static_assert(offsetof(FComBranchRingParams, NumCondition) == 0x000000, "Member 'FComBranchRingParams::NumCondition' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions1) == 0x000004, "Member 'FComBranchRingParams::Conditions1' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions2) == 0x00000C, "Member 'FComBranchRingParams::Conditions2' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions3) == 0x000014, "Member 'FComBranchRingParams::Conditions3' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions4) == 0x00001C, "Member 'FComBranchRingParams::Conditions4' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions5) == 0x000024, "Member 'FComBranchRingParams::Conditions5' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions6) == 0x00002C, "Member 'FComBranchRingParams::Conditions6' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions7) == 0x000034, "Member 'FComBranchRingParams::Conditions7' has a wrong offset!");
+static_assert(offsetof(FComBranchRingParams, Conditions8) == 0x00003C, "Member 'FComBranchRingParams::Conditions8' has a wrong offset!");
 
 // ScriptStruct UnionRun.ComLevelParams
 // 0x02E8 (0x02F0 - 0x0008)
@@ -6409,183 +6516,6 @@ static_assert(offsetof(FComLevelParams, RivalPaceUpTopDist) == 0x0002E4, "Member
 static_assert(offsetof(FComLevelParams, RivalPaceUpValue) == 0x0002E8, "Member 'FComLevelParams::RivalPaceUpValue' has a wrong offset!");
 static_assert(offsetof(FComLevelParams, SlimeCancelPace) == 0x0002EC, "Member 'FComLevelParams::SlimeCancelPace' has a wrong offset!");
 
-// ScriptStruct UnionRun.GadgetBonusDashPanelComboInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FGadgetBonusDashPanelComboInfo final
-{
-public:
-	struct FGadgetBoostRingBonusInfo              AddRingNum;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MaxAddRingNum;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ComboValidTime;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetBonusDashPanelComboInfo) == 0x000004, "Wrong alignment on FGadgetBonusDashPanelComboInfo");
-static_assert(sizeof(FGadgetBonusDashPanelComboInfo) == 0x000018, "Wrong size on FGadgetBonusDashPanelComboInfo");
-static_assert(offsetof(FGadgetBonusDashPanelComboInfo, AddRingNum) == 0x000000, "Member 'FGadgetBonusDashPanelComboInfo::AddRingNum' has a wrong offset!");
-static_assert(offsetof(FGadgetBonusDashPanelComboInfo, MaxAddRingNum) == 0x000010, "Member 'FGadgetBonusDashPanelComboInfo::MaxAddRingNum' has a wrong offset!");
-static_assert(offsetof(FGadgetBonusDashPanelComboInfo, ComboValidTime) == 0x000014, "Member 'FGadgetBonusDashPanelComboInfo::ComboValidTime' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetExpandGetRingRangeInfo
-// 0x0008 (0x0008 - 0x0000)
-struct FGadgetExpandGetRingRangeInfo final
-{
-public:
-	float                                         CollisionRadiusMag;                                // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CollisionHeightMag;                                // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetExpandGetRingRangeInfo) == 0x000004, "Wrong alignment on FGadgetExpandGetRingRangeInfo");
-static_assert(sizeof(FGadgetExpandGetRingRangeInfo) == 0x000008, "Wrong size on FGadgetExpandGetRingRangeInfo");
-static_assert(offsetof(FGadgetExpandGetRingRangeInfo, CollisionRadiusMag) == 0x000000, "Member 'FGadgetExpandGetRingRangeInfo::CollisionRadiusMag' has a wrong offset!");
-static_assert(offsetof(FGadgetExpandGetRingRangeInfo, CollisionHeightMag) == 0x000004, "Member 'FGadgetExpandGetRingRangeInfo::CollisionHeightMag' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComAvoidPolishingMachineParams
-// 0x0008 (0x0008 - 0x0000)
-struct FComAvoidPolishingMachineParams final
-{
-public:
-	float                                         RightPathMovePosARatioStart;                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RightPathMovePosARatioEnd;                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComAvoidPolishingMachineParams) == 0x000004, "Wrong alignment on FComAvoidPolishingMachineParams");
-static_assert(sizeof(FComAvoidPolishingMachineParams) == 0x000008, "Wrong size on FComAvoidPolishingMachineParams");
-static_assert(offsetof(FComAvoidPolishingMachineParams, RightPathMovePosARatioStart) == 0x000000, "Member 'FComAvoidPolishingMachineParams::RightPathMovePosARatioStart' has a wrong offset!");
-static_assert(offsetof(FComAvoidPolishingMachineParams, RightPathMovePosARatioEnd) == 0x000004, "Member 'FComAvoidPolishingMachineParams::RightPathMovePosARatioEnd' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetSuppressRunoffInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetSuppressRunoffInfo final
-{
-public:
-	float                                         AddSpeed;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetSuppressRunoffInfo) == 0x000004, "Wrong alignment on FGadgetSuppressRunoffInfo");
-static_assert(sizeof(FGadgetSuppressRunoffInfo) == 0x000004, "Wrong size on FGadgetSuppressRunoffInfo");
-static_assert(offsetof(FGadgetSuppressRunoffInfo, AddSpeed) == 0x000000, "Member 'FGadgetSuppressRunoffInfo::AddSpeed' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetEnhanceHookTurnInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FGadgetEnhanceHookTurnInfo final
-{
-public:
-	float                                         StartDegreeOffset_Horizontal;                      // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartDegreeOffset_Vertical;                        // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AddAngularVelocity_Horizontal;                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AddAngularVelocity_Vertical;                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetEnhanceHookTurnInfo) == 0x000004, "Wrong alignment on FGadgetEnhanceHookTurnInfo");
-static_assert(sizeof(FGadgetEnhanceHookTurnInfo) == 0x000010, "Wrong size on FGadgetEnhanceHookTurnInfo");
-static_assert(offsetof(FGadgetEnhanceHookTurnInfo, StartDegreeOffset_Horizontal) == 0x000000, "Member 'FGadgetEnhanceHookTurnInfo::StartDegreeOffset_Horizontal' has a wrong offset!");
-static_assert(offsetof(FGadgetEnhanceHookTurnInfo, StartDegreeOffset_Vertical) == 0x000004, "Member 'FGadgetEnhanceHookTurnInfo::StartDegreeOffset_Vertical' has a wrong offset!");
-static_assert(offsetof(FGadgetEnhanceHookTurnInfo, AddAngularVelocity_Horizontal) == 0x000008, "Member 'FGadgetEnhanceHookTurnInfo::AddAngularVelocity_Horizontal' has a wrong offset!");
-static_assert(offsetof(FGadgetEnhanceHookTurnInfo, AddAngularVelocity_Vertical) == 0x00000C, "Member 'FGadgetEnhanceHookTurnInfo::AddAngularVelocity_Vertical' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComUseGadget
-// 0x0018 (0x0020 - 0x0008)
-struct FComUseGadget final : public FTableRowBase
-{
-public:
-	int32                                         GadgetEquipGr;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GadgetSlotSize;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<EGadgetId>                             ComUseGadget;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComUseGadget) == 0x000008, "Wrong alignment on FComUseGadget");
-static_assert(sizeof(FComUseGadget) == 0x000020, "Wrong size on FComUseGadget");
-static_assert(offsetof(FComUseGadget, GadgetEquipGr) == 0x000008, "Member 'FComUseGadget::GadgetEquipGr' has a wrong offset!");
-static_assert(offsetof(FComUseGadget, GadgetSlotSize) == 0x00000C, "Member 'FComUseGadget::GadgetSlotSize' has a wrong offset!");
-static_assert(offsetof(FComUseGadget, ComUseGadget) == 0x000010, "Member 'FComUseGadget::ComUseGadget' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetBoatChargeJumpUpInfo
-// 0x000C (0x000C - 0x0000)
-struct FGadgetBoatChargeJumpUpInfo final
-{
-public:
-	float                                         AirTrickRateX;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AirTrickRateY;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AirTrickLimitNum;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetBoatChargeJumpUpInfo) == 0x000004, "Wrong alignment on FGadgetBoatChargeJumpUpInfo");
-static_assert(sizeof(FGadgetBoatChargeJumpUpInfo) == 0x00000C, "Wrong size on FGadgetBoatChargeJumpUpInfo");
-static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickRateX) == 0x000000, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickRateX' has a wrong offset!");
-static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickRateY) == 0x000004, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickRateY' has a wrong offset!");
-static_assert(offsetof(FGadgetBoatChargeJumpUpInfo, AirTrickLimitNum) == 0x000008, "Member 'FGadgetBoatChargeJumpUpInfo::AirTrickLimitNum' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetItemNumInfo
-// 0x0004 (0x0004 - 0x0000)
-struct FGadgetItemNumInfo final
-{
-public:
-	int32                                         itemNum;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetItemNumInfo) == 0x000004, "Wrong alignment on FGadgetItemNumInfo");
-static_assert(sizeof(FGadgetItemNumInfo) == 0x000004, "Wrong size on FGadgetItemNumInfo");
-static_assert(offsetof(FGadgetItemNumInfo, itemNum) == 0x000000, "Member 'FGadgetItemNumInfo::itemNum' has a wrong offset!");
-
-// ScriptStruct UnionRun.UnionRaceHUDGroupRingUI
-// 0x0010 (0x0010 - 0x0000)
-struct FUnionRaceHUDGroupRingUI final
-{
-public:
-	TArray<class URaceUISubGroupRing*>            RingCountUI;                                       // 0x0000(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionRaceHUDGroupRingUI) == 0x000008, "Wrong alignment on FUnionRaceHUDGroupRingUI");
-static_assert(sizeof(FUnionRaceHUDGroupRingUI) == 0x000010, "Wrong size on FUnionRaceHUDGroupRingUI");
-static_assert(offsetof(FUnionRaceHUDGroupRingUI, RingCountUI) == 0x000000, "Member 'FUnionRaceHUDGroupRingUI::RingCountUI' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetShortenDamagetTimeInfo
-// 0x0024 (0x0024 - 0x0000)
-struct FGadgetShortenDamagetTimeInfo final
-{
-public:
-	int32                                         SpinTime1st;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpinTime12th;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReduceDamageOnSpeedRatio;                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CrashReduceRatio;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemSpeedValueChangeRatio_Anchor;                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemSpeedValueChangeRatio_BodyCut;                 // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemSpeedValueChangeRatio_Slime;                   // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemSpeedValueChangeRatio_Magnet;                  // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemSpeedValueChangeRatio_Splash;                  // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetShortenDamagetTimeInfo) == 0x000004, "Wrong alignment on FGadgetShortenDamagetTimeInfo");
-static_assert(sizeof(FGadgetShortenDamagetTimeInfo) == 0x000024, "Wrong size on FGadgetShortenDamagetTimeInfo");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, SpinTime1st) == 0x000000, "Member 'FGadgetShortenDamagetTimeInfo::SpinTime1st' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, SpinTime12th) == 0x000004, "Member 'FGadgetShortenDamagetTimeInfo::SpinTime12th' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ReduceDamageOnSpeedRatio) == 0x000008, "Member 'FGadgetShortenDamagetTimeInfo::ReduceDamageOnSpeedRatio' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, CrashReduceRatio) == 0x00000C, "Member 'FGadgetShortenDamagetTimeInfo::CrashReduceRatio' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Anchor) == 0x000010, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Anchor' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_BodyCut) == 0x000014, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_BodyCut' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Slime) == 0x000018, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Slime' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Magnet) == 0x00001C, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Magnet' has a wrong offset!");
-static_assert(offsetof(FGadgetShortenDamagetTimeInfo, ItemSpeedValueChangeRatio_Splash) == 0x000020, "Member 'FGadgetShortenDamagetTimeInfo::ItemSpeedValueChangeRatio_Splash' has a wrong offset!");
-
-// ScriptStruct UnionRun.GadgetRecoveryBonusInfo
-// 0x000C (0x000C - 0x0000)
-struct FGadgetRecoveryBonusInfo final
-{
-public:
-	int32                                         RingNum;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InvincibleSeconds;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CountDownSeconds;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGadgetRecoveryBonusInfo) == 0x000004, "Wrong alignment on FGadgetRecoveryBonusInfo");
-static_assert(sizeof(FGadgetRecoveryBonusInfo) == 0x00000C, "Wrong size on FGadgetRecoveryBonusInfo");
-static_assert(offsetof(FGadgetRecoveryBonusInfo, RingNum) == 0x000000, "Member 'FGadgetRecoveryBonusInfo::RingNum' has a wrong offset!");
-static_assert(offsetof(FGadgetRecoveryBonusInfo, InvincibleSeconds) == 0x000004, "Member 'FGadgetRecoveryBonusInfo::InvincibleSeconds' has a wrong offset!");
-static_assert(offsetof(FGadgetRecoveryBonusInfo, CountDownSeconds) == 0x000008, "Member 'FGadgetRecoveryBonusInfo::CountDownSeconds' has a wrong offset!");
-
-// ScriptStruct UnionRun.ComGadgetEquipComSpeedLevel
-// 0x0018 (0x0020 - 0x0008)
-struct FComGadgetEquipComSpeedLevel final : public FTableRowBase
-{
-public:
-	ERaceSettingComSpeed                          ComSpeedLevel;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComGadgetEquipTableSetting            NormalRacerGadget;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FComGadgetEquipComSpeedLevel) == 0x000008, "Wrong alignment on FComGadgetEquipComSpeedLevel");
-static_assert(sizeof(FComGadgetEquipComSpeedLevel) == 0x000020, "Wrong size on FComGadgetEquipComSpeedLevel");
-static_assert(offsetof(FComGadgetEquipComSpeedLevel, ComSpeedLevel) == 0x000008, "Member 'FComGadgetEquipComSpeedLevel::ComSpeedLevel' has a wrong offset!");
-static_assert(offsetof(FComGadgetEquipComSpeedLevel, NormalRacerGadget) == 0x000010, "Member 'FComGadgetEquipComSpeedLevel::NormalRacerGadget' has a wrong offset!");
-
 // ScriptStruct UnionRun.GadgetLowRankRingBonusInfo
 // 0x0020 (0x0020 - 0x0000)
 struct FGadgetLowRankRingBonusInfo final
@@ -6598,20 +6528,6 @@ static_assert(alignof(FGadgetLowRankRingBonusInfo) == 0x000008, "Wrong alignment
 static_assert(sizeof(FGadgetLowRankRingBonusInfo) == 0x000020, "Wrong size on FGadgetLowRankRingBonusInfo");
 static_assert(offsetof(FGadgetLowRankRingBonusInfo, GetRingNum) == 0x000000, "Member 'FGadgetLowRankRingBonusInfo::GetRingNum' has a wrong offset!");
 static_assert(offsetof(FGadgetLowRankRingBonusInfo, GetRingInterval) == 0x000010, "Member 'FGadgetLowRankRingBonusInfo::GetRingInterval' has a wrong offset!");
-
-// ScriptStruct UnionRun.FakeComName
-// 0x0018 (0x0020 - 0x0008)
-struct FFakeComName final : public FTableRowBase
-{
-public:
-	class FText                                   Name;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	ESupportedCulture                             Language;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFakeComName) == 0x000008, "Wrong alignment on FFakeComName");
-static_assert(sizeof(FFakeComName) == 0x000020, "Wrong size on FFakeComName");
-static_assert(offsetof(FFakeComName, Name) == 0x000008, "Member 'FFakeComName::Name' has a wrong offset!");
-static_assert(offsetof(FFakeComName, Language) == 0x000018, "Member 'FFakeComName::Language' has a wrong offset!");
 
 // ScriptStruct UnionRun.GadgetIDCRM
 // 0x0008 (0x0010 - 0x0008)
@@ -7249,6 +7165,17 @@ static_assert(offsetof(FMinimapIconData, bPowerRival) == 0x00002B, "Member 'FMin
 static_assert(offsetof(FMinimapIconData, bReader) == 0x00002C, "Member 'FMinimapIconData::bReader' has a wrong offset!");
 static_assert(offsetof(FMinimapIconData, GroupColor) == 0x000030, "Member 'FMinimapIconData::GroupColor' has a wrong offset!");
 
+// ScriptStruct UnionRun.MinimapIconInfoDataTableRow
+// 0x0028 (0x0030 - 0x0008)
+struct FMinimapIconInfoDataTableRow final : public FTableRowBase
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0008(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMinimapIconInfoDataTableRow) == 0x000008, "Wrong alignment on FMinimapIconInfoDataTableRow");
+static_assert(sizeof(FMinimapIconInfoDataTableRow) == 0x000030, "Wrong size on FMinimapIconInfoDataTableRow");
+static_assert(offsetof(FMinimapIconInfoDataTableRow, IconTexture) == 0x000008, "Member 'FMinimapIconInfoDataTableRow::IconTexture' has a wrong offset!");
+
 // ScriptStruct UnionRun.MinimapIconInfoRow
 // 0x0010 (0x0010 - 0x0000)
 struct FMinimapIconInfoRow final
@@ -7409,6 +7336,33 @@ static_assert(sizeof(FUnionRaceTickObjectData) == 0x000030, "Wrong size on FUnio
 static_assert(offsetof(FUnionRaceTickObjectData, SkeletalActors) == 0x000000, "Member 'FUnionRaceTickObjectData::SkeletalActors' has a wrong offset!");
 static_assert(offsetof(FUnionRaceTickObjectData, SimpleAnimComponents) == 0x000010, "Member 'FUnionRaceTickObjectData::SimpleAnimComponents' has a wrong offset!");
 
+// ScriptStruct UnionRun.UnionRaceStageDynamicData
+// 0x0070 (0x0070 - 0x0000)
+struct FUnionRaceStageDynamicData final
+{
+public:
+	TArray<class ULevel*>                         ObjectLevels;                                      // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UUnionBtCollisionBinaryAsset*           CollisionAsset;                                    // 0x0010(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionNavigationBinaryDataAsset*        NavigationAsset;                                   // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionRunPathBinaryDataAsset*           RunPathAsset;                                      // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionComPathBinaryDataAsset*           ComPathAsset;                                      // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOverwriteDirectionalLightParameter;            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverwriteDirectionalLightIntensity;                // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 OverwriteDirectionalLightColor;                    // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x34];                                      // 0x003C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUnionRaceStageDynamicData) == 0x000008, "Wrong alignment on FUnionRaceStageDynamicData");
+static_assert(sizeof(FUnionRaceStageDynamicData) == 0x000070, "Wrong size on FUnionRaceStageDynamicData");
+static_assert(offsetof(FUnionRaceStageDynamicData, ObjectLevels) == 0x000000, "Member 'FUnionRaceStageDynamicData::ObjectLevels' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, CollisionAsset) == 0x000010, "Member 'FUnionRaceStageDynamicData::CollisionAsset' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, NavigationAsset) == 0x000018, "Member 'FUnionRaceStageDynamicData::NavigationAsset' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, RunPathAsset) == 0x000020, "Member 'FUnionRaceStageDynamicData::RunPathAsset' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, ComPathAsset) == 0x000028, "Member 'FUnionRaceStageDynamicData::ComPathAsset' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, bUseOverwriteDirectionalLightParameter) == 0x000030, "Member 'FUnionRaceStageDynamicData::bUseOverwriteDirectionalLightParameter' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, OverwriteDirectionalLightIntensity) == 0x000034, "Member 'FUnionRaceStageDynamicData::OverwriteDirectionalLightIntensity' has a wrong offset!");
+static_assert(offsetof(FUnionRaceStageDynamicData, OverwriteDirectionalLightColor) == 0x000038, "Member 'FUnionRaceStageDynamicData::OverwriteDirectionalLightColor' has a wrong offset!");
+
 // ScriptStruct UnionRun.UnionRaceStageData
 // 0x0170 (0x0170 - 0x0000)
 struct FUnionRaceStageData final
@@ -7440,6 +7394,20 @@ static_assert(alignof(FUnionRaceDomainData) == 0x000008, "Wrong alignment on FUn
 static_assert(sizeof(FUnionRaceDomainData) == 0x0001B8, "Wrong size on FUnionRaceDomainData");
 static_assert(offsetof(FUnionRaceDomainData, DomainInfo) == 0x000000, "Member 'FUnionRaceDomainData::DomainInfo' has a wrong offset!");
 static_assert(offsetof(FUnionRaceDomainData, StageData) == 0x000048, "Member 'FUnionRaceDomainData::StageData' has a wrong offset!");
+
+// ScriptStruct UnionRun.UnionRaceRedStarRingParam
+// 0x0018 (0x0018 - 0x0000)
+struct FUnionRaceRedStarRingParam final
+{
+public:
+	bool                                          bEnableRedStarRing;                                // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUserRedStarRingAcquisitionProperty> AcquisitionPerPlayer;                         // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionRaceRedStarRingParam) == 0x000008, "Wrong alignment on FUnionRaceRedStarRingParam");
+static_assert(sizeof(FUnionRaceRedStarRingParam) == 0x000018, "Wrong size on FUnionRaceRedStarRingParam");
+static_assert(offsetof(FUnionRaceRedStarRingParam, bEnableRedStarRing) == 0x000000, "Member 'FUnionRaceRedStarRingParam::bEnableRedStarRing' has a wrong offset!");
+static_assert(offsetof(FUnionRaceRedStarRingParam, AcquisitionPerPlayer) == 0x000008, "Member 'FUnionRaceRedStarRingParam::AcquisitionPerPlayer' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionRacePreCreateParam
 // 0x0040 (0x0040 - 0x0000)
@@ -7683,6 +7651,27 @@ static_assert(alignof(FUnionRaceHUDPlayerNameUI) == 0x000008, "Wrong alignment o
 static_assert(sizeof(FUnionRaceHUDPlayerNameUI) == 0x000010, "Wrong size on FUnionRaceHUDPlayerNameUI");
 static_assert(offsetof(FUnionRaceHUDPlayerNameUI, PlayerNameUI) == 0x000000, "Member 'FUnionRaceHUDPlayerNameUI::PlayerNameUI' has a wrong offset!");
 
+// ScriptStruct UnionRun.FestaRacerContribution
+// 0x0014 (0x0014 - 0x0000)
+struct FFestaRacerContribution final
+{
+public:
+	int32                                         RacerIndex;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TractionTimes;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTractionTimes1st;                               // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BonusPoint;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBonusPoint1st;                                  // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFestaRacerContribution) == 0x000004, "Wrong alignment on FFestaRacerContribution");
+static_assert(sizeof(FFestaRacerContribution) == 0x000014, "Wrong size on FFestaRacerContribution");
+static_assert(offsetof(FFestaRacerContribution, RacerIndex) == 0x000000, "Member 'FFestaRacerContribution::RacerIndex' has a wrong offset!");
+static_assert(offsetof(FFestaRacerContribution, TractionTimes) == 0x000004, "Member 'FFestaRacerContribution::TractionTimes' has a wrong offset!");
+static_assert(offsetof(FFestaRacerContribution, bIsTractionTimes1st) == 0x000008, "Member 'FFestaRacerContribution::bIsTractionTimes1st' has a wrong offset!");
+static_assert(offsetof(FFestaRacerContribution, BonusPoint) == 0x00000C, "Member 'FFestaRacerContribution::BonusPoint' has a wrong offset!");
+static_assert(offsetof(FFestaRacerContribution, bIsBonusPoint1st) == 0x000010, "Member 'FFestaRacerContribution::bIsBonusPoint1st' has a wrong offset!");
+
 // ScriptStruct UnionRun.FestaTeamResultInfo
 // 0x0014 (0x0014 - 0x0000)
 struct FFestaTeamResultInfo final
@@ -7705,25 +7694,6 @@ static_assert(offsetof(FFestaTeamResultInfo, TeamBonusPoint) == 0x000008, "Membe
 static_assert(offsetof(FFestaTeamResultInfo, TotalTeamPoint) == 0x00000C, "Member 'FFestaTeamResultInfo::TotalTeamPoint' has a wrong offset!");
 static_assert(offsetof(FFestaTeamResultInfo, TotalTeamRank) == 0x000010, "Member 'FFestaTeamResultInfo::TotalTeamRank' has a wrong offset!");
 
-// ScriptStruct UnionRun.FestaRacerResultInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FFestaRacerResultInfo final
-{
-public:
-	bool                                          bIsMvp;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BonusPoint;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBonusPoint1st;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TeamNo;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FFestaRacerResultInfo) == 0x000004, "Wrong alignment on FFestaRacerResultInfo");
-static_assert(sizeof(FFestaRacerResultInfo) == 0x000010, "Wrong size on FFestaRacerResultInfo");
-static_assert(offsetof(FFestaRacerResultInfo, bIsMvp) == 0x000000, "Member 'FFestaRacerResultInfo::bIsMvp' has a wrong offset!");
-static_assert(offsetof(FFestaRacerResultInfo, BonusPoint) == 0x000004, "Member 'FFestaRacerResultInfo::BonusPoint' has a wrong offset!");
-static_assert(offsetof(FFestaRacerResultInfo, bIsBonusPoint1st) == 0x000008, "Member 'FFestaRacerResultInfo::bIsBonusPoint1st' has a wrong offset!");
-static_assert(offsetof(FFestaRacerResultInfo, TeamNo) == 0x00000C, "Member 'FFestaRacerResultInfo::TeamNo' has a wrong offset!");
-
 // ScriptStruct UnionRun.FestaResultInfo
 // 0x0040 (0x0040 - 0x0000)
 struct FFestaResultInfo final
@@ -7740,6 +7710,16 @@ static_assert(offsetof(FFestaResultInfo, TeamList) == 0x000000, "Member 'FFestaR
 static_assert(offsetof(FFestaResultInfo, RacerList) == 0x000010, "Member 'FFestaResultInfo::RacerList' has a wrong offset!");
 static_assert(offsetof(FFestaResultInfo, TitleText) == 0x000020, "Member 'FFestaResultInfo::TitleText' has a wrong offset!");
 static_assert(offsetof(FFestaResultInfo, DetailText) == 0x000030, "Member 'FFestaResultInfo::DetailText' has a wrong offset!");
+
+// ScriptStruct UnionRun.PlayerRaceResultData
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FPlayerRaceResultData final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPlayerRaceResultData) == 0x000008, "Wrong alignment on FPlayerRaceResultData");
+static_assert(sizeof(FPlayerRaceResultData) == 0x000028, "Wrong size on FPlayerRaceResultData");
 
 // ScriptStruct UnionRun.PlayerTotalResultData
 // 0x0058 (0x0058 - 0x0000)
@@ -7929,21 +7909,6 @@ static_assert(offsetof(FRoundTripMoveComponentParams, racCastInnerOffset_) == 0x
 static_assert(offsetof(FRoundTripMoveComponentParams, startDelay_) == 0x000078, "Member 'FRoundTripMoveComponentParams::startDelay_' has a wrong offset!");
 static_assert(offsetof(FRoundTripMoveComponentParams, startOffsetBySeconds_) == 0x00007C, "Member 'FRoundTripMoveComponentParams::startOffsetBySeconds_' has a wrong offset!");
 
-// ScriptStruct UnionRun.UnionRunPathBinaryParameter
-// 0x0018 (0x0018 - 0x0000)
-struct FUnionRunPathBinaryParameter final
-{
-public:
-	int32                                         DataVersion;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChunkDataCount;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Data;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionRunPathBinaryParameter) == 0x000008, "Wrong alignment on FUnionRunPathBinaryParameter");
-static_assert(sizeof(FUnionRunPathBinaryParameter) == 0x000018, "Wrong size on FUnionRunPathBinaryParameter");
-static_assert(offsetof(FUnionRunPathBinaryParameter, DataVersion) == 0x000000, "Member 'FUnionRunPathBinaryParameter::DataVersion' has a wrong offset!");
-static_assert(offsetof(FUnionRunPathBinaryParameter, ChunkDataCount) == 0x000004, "Member 'FUnionRunPathBinaryParameter::ChunkDataCount' has a wrong offset!");
-static_assert(offsetof(FUnionRunPathBinaryParameter, Data) == 0x000008, "Member 'FUnionRunPathBinaryParameter::Data' has a wrong offset!");
-
 // ScriptStruct UnionRun.CoursePathCreateParams
 // 0x0078 (0x0078 - 0x0000)
 struct FCoursePathCreateParams final
@@ -7981,6 +7946,49 @@ static_assert(offsetof(FCoursePathCreateParams, endIndex_) == 0x000068, "Member 
 static_assert(offsetof(FCoursePathCreateParams, bUseRayCast_) == 0x00006C, "Member 'FCoursePathCreateParams::bUseRayCast_' has a wrong offset!");
 static_assert(offsetof(FCoursePathCreateParams, rayStartHeight_) == 0x000070, "Member 'FCoursePathCreateParams::rayStartHeight_' has a wrong offset!");
 static_assert(offsetof(FCoursePathCreateParams, rayEndHeight_) == 0x000074, "Member 'FCoursePathCreateParams::rayEndHeight_' has a wrong offset!");
+
+// ScriptStruct UnionRun.SplineParam
+// 0x0014 (0x0014 - 0x0000)
+struct FSplineParam final
+{
+public:
+	bool                                          bHidden;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPointCut;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCarRoute;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBoatRoute;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPlaneRoute;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShortCut;                                         // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSlide;                                            // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNeverItem;                                        // 0x0007(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNoItemRelease;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRunOff;                                           // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGuidedJump;                                       // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bYellowDrill;                                      // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRespotInvalid;                                    // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvalidSection;                                   // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvalidAssist;                                    // 0x000E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERandomObjType                                RandomType;                                        // 0x000F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RandomId;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSplineParam) == 0x000004, "Wrong alignment on FSplineParam");
+static_assert(sizeof(FSplineParam) == 0x000014, "Wrong size on FSplineParam");
+static_assert(offsetof(FSplineParam, bHidden) == 0x000000, "Member 'FSplineParam::bHidden' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bPointCut) == 0x000001, "Member 'FSplineParam::bPointCut' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bCarRoute) == 0x000002, "Member 'FSplineParam::bCarRoute' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bBoatRoute) == 0x000003, "Member 'FSplineParam::bBoatRoute' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bPlaneRoute) == 0x000004, "Member 'FSplineParam::bPlaneRoute' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bShortCut) == 0x000005, "Member 'FSplineParam::bShortCut' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bSlide) == 0x000006, "Member 'FSplineParam::bSlide' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bNeverItem) == 0x000007, "Member 'FSplineParam::bNeverItem' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bNoItemRelease) == 0x000008, "Member 'FSplineParam::bNoItemRelease' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bRunOff) == 0x000009, "Member 'FSplineParam::bRunOff' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bGuidedJump) == 0x00000A, "Member 'FSplineParam::bGuidedJump' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bYellowDrill) == 0x00000B, "Member 'FSplineParam::bYellowDrill' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bRespotInvalid) == 0x00000C, "Member 'FSplineParam::bRespotInvalid' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bInvalidSection) == 0x00000D, "Member 'FSplineParam::bInvalidSection' has a wrong offset!");
+static_assert(offsetof(FSplineParam, bInvalidAssist) == 0x00000E, "Member 'FSplineParam::bInvalidAssist' has a wrong offset!");
+static_assert(offsetof(FSplineParam, RandomType) == 0x00000F, "Member 'FSplineParam::RandomType' has a wrong offset!");
+static_assert(offsetof(FSplineParam, RandomId) == 0x000010, "Member 'FSplineParam::RandomId' has a wrong offset!");
 
 // ScriptStruct UnionRun.SplinePointParam
 // 0x00C0 (0x00C0 - 0x0000)
@@ -8115,32 +8123,6 @@ static_assert(alignof(FSwingCameraStagePreset) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(FSwingCameraStagePreset) == 0x000010, "Wrong size on FSwingCameraStagePreset");
 static_assert(offsetof(FSwingCameraStagePreset, SwingCameraPresetList) == 0x000000, "Member 'FSwingCameraStagePreset::SwingCameraPresetList' has a wrong offset!");
 
-// ScriptStruct UnionRun.VehicleModelDefine
-// 0x0068 (0x0068 - 0x0000)
-struct FVehicleModelDefine final
-{
-public:
-	EVehicleType                                  VehicleType;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECarStatusType                                CarStatusType;                                     // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECarCustomType                                CarCustomType;                                     // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ECarBodyPartType, int32>                 CarBodyPartMap;                                    // 0x0008(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         TireRotSpeedMax_30fps1Screen;                      // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TireRotSpeedMax_30fpsOther;                        // 0x005C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TireRotSpeedMax_60fps1Screen;                      // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TireRotSpeedMax_60fpsOther;                        // 0x0064(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVehicleModelDefine) == 0x000008, "Wrong alignment on FVehicleModelDefine");
-static_assert(sizeof(FVehicleModelDefine) == 0x000068, "Wrong size on FVehicleModelDefine");
-static_assert(offsetof(FVehicleModelDefine, VehicleType) == 0x000000, "Member 'FVehicleModelDefine::VehicleType' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, CarStatusType) == 0x000001, "Member 'FVehicleModelDefine::CarStatusType' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, CarCustomType) == 0x000002, "Member 'FVehicleModelDefine::CarCustomType' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, CarBodyPartMap) == 0x000008, "Member 'FVehicleModelDefine::CarBodyPartMap' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_30fps1Screen) == 0x000058, "Member 'FVehicleModelDefine::TireRotSpeedMax_30fps1Screen' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_30fpsOther) == 0x00005C, "Member 'FVehicleModelDefine::TireRotSpeedMax_30fpsOther' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_60fps1Screen) == 0x000060, "Member 'FVehicleModelDefine::TireRotSpeedMax_60fps1Screen' has a wrong offset!");
-static_assert(offsetof(FVehicleModelDefine, TireRotSpeedMax_60fpsOther) == 0x000064, "Member 'FVehicleModelDefine::TireRotSpeedMax_60fpsOther' has a wrong offset!");
-
 // ScriptStruct UnionRun.VehiclePhysicsPart
 // 0x0050 (0x0050 - 0x0000)
 struct FVehiclePhysicsPart final
@@ -8193,6 +8175,20 @@ static_assert(offsetof(FVehiclePhysicsPart, CollisionBaseHeight) == 0x000044, "M
 static_assert(offsetof(FVehiclePhysicsPart, CollisionPivotHeight) == 0x000048, "Member 'FVehiclePhysicsPart::CollisionPivotHeight' has a wrong offset!");
 static_assert(offsetof(FVehiclePhysicsPart, CollisionHeightLength) == 0x00004C, "Member 'FVehiclePhysicsPart::CollisionHeightLength' has a wrong offset!");
 
+// ScriptStruct UnionRun.MachineSoundData
+// 0x0030 (0x0038 - 0x0008)
+struct FMachineSoundData final : public FTableRowBase
+{
+public:
+	EVehicleSound                                 SoundType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class USoundAtomCue>           Cue;                                               // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMachineSoundData) == 0x000008, "Wrong alignment on FMachineSoundData");
+static_assert(sizeof(FMachineSoundData) == 0x000038, "Wrong size on FMachineSoundData");
+static_assert(offsetof(FMachineSoundData, SoundType) == 0x000008, "Member 'FMachineSoundData::SoundType' has a wrong offset!");
+static_assert(offsetof(FMachineSoundData, Cue) == 0x000010, "Member 'FMachineSoundData::Cue' has a wrong offset!");
+
 // ScriptStruct UnionRun.MachineLevelSoundData
 // 0x0018 (0x0020 - 0x0008)
 struct FMachineLevelSoundData final : public FTableRowBase
@@ -8207,20 +8203,6 @@ static_assert(sizeof(FMachineLevelSoundData) == 0x000020, "Wrong size on FMachin
 static_assert(offsetof(FMachineLevelSoundData, SoundType) == 0x000008, "Member 'FMachineLevelSoundData::SoundType' has a wrong offset!");
 static_assert(offsetof(FMachineLevelSoundData, CueList) == 0x000010, "Member 'FMachineLevelSoundData::CueList' has a wrong offset!");
 
-// ScriptStruct UnionRun.MachineSurfaceSoundData
-// 0x0058 (0x0060 - 0x0008)
-struct FMachineSurfaceSoundData final : public FTableRowBase
-{
-public:
-	EVehicleSound                                 SoundType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EUnionSurfaceType, TSoftObjectPtr<class USoundAtomCue>> CueMap;                             // 0x0010(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMachineSurfaceSoundData) == 0x000008, "Wrong alignment on FMachineSurfaceSoundData");
-static_assert(sizeof(FMachineSurfaceSoundData) == 0x000060, "Wrong size on FMachineSurfaceSoundData");
-static_assert(offsetof(FMachineSurfaceSoundData, SoundType) == 0x000008, "Member 'FMachineSurfaceSoundData::SoundType' has a wrong offset!");
-static_assert(offsetof(FMachineSurfaceSoundData, CueMap) == 0x000010, "Member 'FMachineSurfaceSoundData::CueMap' has a wrong offset!");
-
 // ScriptStruct UnionRun.MachineMaterialAnimationTargetData
 // 0x0028 (0x0030 - 0x0008)
 struct FMachineMaterialAnimationTargetData final : public FTableRowBase
@@ -8231,6 +8213,24 @@ public:
 static_assert(alignof(FMachineMaterialAnimationTargetData) == 0x000008, "Wrong alignment on FMachineMaterialAnimationTargetData");
 static_assert(sizeof(FMachineMaterialAnimationTargetData) == 0x000030, "Wrong size on FMachineMaterialAnimationTargetData");
 static_assert(offsetof(FMachineMaterialAnimationTargetData, TargetMatreial) == 0x000008, "Member 'FMachineMaterialAnimationTargetData::TargetMatreial' has a wrong offset!");
+
+// ScriptStruct UnionRun.MachineMaterialAnimationData
+// 0x0020 (0x0028 - 0x0008)
+struct FMachineMaterialAnimationData final : public FTableRowBase
+{
+public:
+	EVehicleMaterialAnimationType                 AnimationType;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveTable*                            CurveTable;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             TargetMaterialTable;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetTag;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMachineMaterialAnimationData) == 0x000008, "Wrong alignment on FMachineMaterialAnimationData");
+static_assert(sizeof(FMachineMaterialAnimationData) == 0x000028, "Wrong size on FMachineMaterialAnimationData");
+static_assert(offsetof(FMachineMaterialAnimationData, AnimationType) == 0x000008, "Member 'FMachineMaterialAnimationData::AnimationType' has a wrong offset!");
+static_assert(offsetof(FMachineMaterialAnimationData, CurveTable) == 0x000010, "Member 'FMachineMaterialAnimationData::CurveTable' has a wrong offset!");
+static_assert(offsetof(FMachineMaterialAnimationData, TargetMaterialTable) == 0x000018, "Member 'FMachineMaterialAnimationData::TargetMaterialTable' has a wrong offset!");
+static_assert(offsetof(FMachineMaterialAnimationData, TargetTag) == 0x000020, "Member 'FMachineMaterialAnimationData::TargetTag' has a wrong offset!");
 
 // ScriptStruct UnionRun.UnionVehicleSoundData
 // 0x0010 (0x0010 - 0x0000)

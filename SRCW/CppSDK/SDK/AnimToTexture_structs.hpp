@@ -65,19 +65,6 @@ static_assert(alignof(FAnimToTextureInstancePlaybackData) == 0x000004, "Wrong al
 static_assert(sizeof(FAnimToTextureInstancePlaybackData) == 0x000014, "Wrong size on FAnimToTextureInstancePlaybackData");
 static_assert(offsetof(FAnimToTextureInstancePlaybackData, CurrentState) == 0x000000, "Member 'FAnimToTextureInstancePlaybackData::CurrentState' has a wrong offset!");
 
-// ScriptStruct AnimToTexture.AnimToTextureInstanceData
-// 0x0020 (0x0020 - 0x0000)
-struct FAnimToTextureInstanceData final
-{
-public:
-	TArray<struct FAnimToTextureInstancePlaybackData> PlaybackData;                                  // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStaticMeshInstanceData> StaticMeshInstanceData;                          // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAnimToTextureInstanceData) == 0x000008, "Wrong alignment on FAnimToTextureInstanceData");
-static_assert(sizeof(FAnimToTextureInstanceData) == 0x000020, "Wrong size on FAnimToTextureInstanceData");
-static_assert(offsetof(FAnimToTextureInstanceData, PlaybackData) == 0x000000, "Member 'FAnimToTextureInstanceData::PlaybackData' has a wrong offset!");
-static_assert(offsetof(FAnimToTextureInstanceData, StaticMeshInstanceData) == 0x000010, "Member 'FAnimToTextureInstanceData::StaticMeshInstanceData' has a wrong offset!");
-
 // ScriptStruct AnimToTexture.AnimToTextureMiniAnimState
 // 0x000C (0x000C - 0x0000)
 struct FAnimToTextureMiniAnimState final
@@ -179,6 +166,19 @@ public:
 };
 static_assert(alignof(FAnimToTextureAnimationSyncData) == 0x000004, "Wrong alignment on FAnimToTextureAnimationSyncData");
 static_assert(sizeof(FAnimToTextureAnimationSyncData) == 0x000004, "Wrong size on FAnimToTextureAnimationSyncData");
+
+// ScriptStruct AnimToTexture.AnimToTextureInstanceData
+// 0x0020 (0x0020 - 0x0000)
+struct FAnimToTextureInstanceData final
+{
+public:
+	TArray<struct FAnimToTextureInstancePlaybackData> PlaybackData;                                  // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStaticMeshInstanceData> StaticMeshInstanceData;                          // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAnimToTextureInstanceData) == 0x000008, "Wrong alignment on FAnimToTextureInstanceData");
+static_assert(sizeof(FAnimToTextureInstanceData) == 0x000020, "Wrong size on FAnimToTextureInstanceData");
+static_assert(offsetof(FAnimToTextureInstanceData, PlaybackData) == 0x000000, "Member 'FAnimToTextureInstanceData::PlaybackData' has a wrong offset!");
+static_assert(offsetof(FAnimToTextureInstanceData, StaticMeshInstanceData) == 0x000010, "Member 'FAnimToTextureInstanceData::StaticMeshInstanceData' has a wrong offset!");
 
 }
 

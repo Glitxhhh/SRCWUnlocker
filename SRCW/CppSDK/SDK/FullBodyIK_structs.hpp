@@ -36,6 +36,43 @@ enum class EPoleVectorOption : uint8
 	EPoleVectorOption_MAX                    = 2,
 };
 
+// ScriptStruct FullBodyIK.FBIKEndEffector
+// 0x0060 (0x0060 - 0x0000)
+struct FFBIKEndEffector final
+{
+public:
+	struct FRigElementKey                         Item;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Position;                                          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PositionAlpha;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PositionDepth;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  Rotation;                                          // 0x0030(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationAlpha;                                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RotationDepth;                                     // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Pull;                                              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFBIKEndEffector) == 0x000010, "Wrong alignment on FFBIKEndEffector");
+static_assert(sizeof(FFBIKEndEffector) == 0x000060, "Wrong size on FFBIKEndEffector");
+static_assert(offsetof(FFBIKEndEffector, Item) == 0x000000, "Member 'FFBIKEndEffector::Item' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, Position) == 0x000010, "Member 'FFBIKEndEffector::Position' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, PositionAlpha) == 0x000028, "Member 'FFBIKEndEffector::PositionAlpha' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, PositionDepth) == 0x00002C, "Member 'FFBIKEndEffector::PositionDepth' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, Rotation) == 0x000030, "Member 'FFBIKEndEffector::Rotation' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, RotationAlpha) == 0x000050, "Member 'FFBIKEndEffector::RotationAlpha' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, RotationDepth) == 0x000054, "Member 'FFBIKEndEffector::RotationDepth' has a wrong offset!");
+static_assert(offsetof(FFBIKEndEffector, Pull) == 0x000058, "Member 'FFBIKEndEffector::Pull' has a wrong offset!");
+
+// ScriptStruct FullBodyIK.RigUnit_FullbodyIK_WorkData
+// 0x0198 (0x0198 - 0x0000)
+struct alignas(0x08) FRigUnit_FullbodyIK_WorkData final
+{
+public:
+	uint8                                         Pad_0[0x198];                                      // 0x0000(0x0198)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRigUnit_FullbodyIK_WorkData) == 0x000008, "Wrong alignment on FRigUnit_FullbodyIK_WorkData");
+static_assert(sizeof(FRigUnit_FullbodyIK_WorkData) == 0x000198, "Wrong size on FRigUnit_FullbodyIK_WorkData");
+
 // ScriptStruct FullBodyIK.FBIKBoneLimit
 // 0x0020 (0x0020 - 0x0000)
 struct FFBIKBoneLimit final
@@ -88,6 +125,34 @@ static_assert(offsetof(FFBIKConstraintOption, PoleVectorOption) == 0x000069, "Me
 static_assert(offsetof(FFBIKConstraintOption, PoleVector) == 0x000070, "Member 'FFBIKConstraintOption::PoleVector' has a wrong offset!");
 static_assert(offsetof(FFBIKConstraintOption, OffsetRotation) == 0x000088, "Member 'FFBIKConstraintOption::OffsetRotation' has a wrong offset!");
 
+// ScriptStruct FullBodyIK.SolverInput
+// 0x0024 (0x0024 - 0x0000)
+struct FSolverInput final
+{
+public:
+	float                                         LinearMotionStrength;                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinLinearMotionStrength;                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularMotionStrength;                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinAngularMotionStrength;                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultTargetClamp;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Precision;                                         // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Damping;                                           // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxIterations;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseJacobianTranspose;                             // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSolverInput) == 0x000004, "Wrong alignment on FSolverInput");
+static_assert(sizeof(FSolverInput) == 0x000024, "Wrong size on FSolverInput");
+static_assert(offsetof(FSolverInput, LinearMotionStrength) == 0x000000, "Member 'FSolverInput::LinearMotionStrength' has a wrong offset!");
+static_assert(offsetof(FSolverInput, MinLinearMotionStrength) == 0x000004, "Member 'FSolverInput::MinLinearMotionStrength' has a wrong offset!");
+static_assert(offsetof(FSolverInput, AngularMotionStrength) == 0x000008, "Member 'FSolverInput::AngularMotionStrength' has a wrong offset!");
+static_assert(offsetof(FSolverInput, MinAngularMotionStrength) == 0x00000C, "Member 'FSolverInput::MinAngularMotionStrength' has a wrong offset!");
+static_assert(offsetof(FSolverInput, DefaultTargetClamp) == 0x000010, "Member 'FSolverInput::DefaultTargetClamp' has a wrong offset!");
+static_assert(offsetof(FSolverInput, Precision) == 0x000014, "Member 'FSolverInput::Precision' has a wrong offset!");
+static_assert(offsetof(FSolverInput, Damping) == 0x000018, "Member 'FSolverInput::Damping' has a wrong offset!");
+static_assert(offsetof(FSolverInput, MaxIterations) == 0x00001C, "Member 'FSolverInput::MaxIterations' has a wrong offset!");
+static_assert(offsetof(FSolverInput, bUseJacobianTranspose) == 0x000020, "Member 'FSolverInput::bUseJacobianTranspose' has a wrong offset!");
+
 // ScriptStruct FullBodyIK.MotionProcessInput
 // 0x0002 (0x0002 - 0x0000)
 struct FMotionProcessInput final
@@ -127,71 +192,6 @@ static_assert(offsetof(FFBIKDebugOption, bDrawDebugEffector) == 0x000004, "Membe
 static_assert(offsetof(FFBIKDebugOption, bDrawDebugConstraints) == 0x000005, "Member 'FFBIKDebugOption::bDrawDebugConstraints' has a wrong offset!");
 static_assert(offsetof(FFBIKDebugOption, DrawWorldOffset) == 0x000010, "Member 'FFBIKDebugOption::DrawWorldOffset' has a wrong offset!");
 static_assert(offsetof(FFBIKDebugOption, DrawSize) == 0x000070, "Member 'FFBIKDebugOption::DrawSize' has a wrong offset!");
-
-// ScriptStruct FullBodyIK.SolverInput
-// 0x0024 (0x0024 - 0x0000)
-struct FSolverInput final
-{
-public:
-	float                                         LinearMotionStrength;                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinLinearMotionStrength;                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularMotionStrength;                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinAngularMotionStrength;                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultTargetClamp;                                // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Precision;                                         // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Damping;                                           // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxIterations;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseJacobianTranspose;                             // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSolverInput) == 0x000004, "Wrong alignment on FSolverInput");
-static_assert(sizeof(FSolverInput) == 0x000024, "Wrong size on FSolverInput");
-static_assert(offsetof(FSolverInput, LinearMotionStrength) == 0x000000, "Member 'FSolverInput::LinearMotionStrength' has a wrong offset!");
-static_assert(offsetof(FSolverInput, MinLinearMotionStrength) == 0x000004, "Member 'FSolverInput::MinLinearMotionStrength' has a wrong offset!");
-static_assert(offsetof(FSolverInput, AngularMotionStrength) == 0x000008, "Member 'FSolverInput::AngularMotionStrength' has a wrong offset!");
-static_assert(offsetof(FSolverInput, MinAngularMotionStrength) == 0x00000C, "Member 'FSolverInput::MinAngularMotionStrength' has a wrong offset!");
-static_assert(offsetof(FSolverInput, DefaultTargetClamp) == 0x000010, "Member 'FSolverInput::DefaultTargetClamp' has a wrong offset!");
-static_assert(offsetof(FSolverInput, Precision) == 0x000014, "Member 'FSolverInput::Precision' has a wrong offset!");
-static_assert(offsetof(FSolverInput, Damping) == 0x000018, "Member 'FSolverInput::Damping' has a wrong offset!");
-static_assert(offsetof(FSolverInput, MaxIterations) == 0x00001C, "Member 'FSolverInput::MaxIterations' has a wrong offset!");
-static_assert(offsetof(FSolverInput, bUseJacobianTranspose) == 0x000020, "Member 'FSolverInput::bUseJacobianTranspose' has a wrong offset!");
-
-// ScriptStruct FullBodyIK.FBIKEndEffector
-// 0x0060 (0x0060 - 0x0000)
-struct FFBIKEndEffector final
-{
-public:
-	struct FRigElementKey                         Item;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Position;                                          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PositionAlpha;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PositionDepth;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  Rotation;                                          // 0x0030(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationAlpha;                                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RotationDepth;                                     // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Pull;                                              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFBIKEndEffector) == 0x000010, "Wrong alignment on FFBIKEndEffector");
-static_assert(sizeof(FFBIKEndEffector) == 0x000060, "Wrong size on FFBIKEndEffector");
-static_assert(offsetof(FFBIKEndEffector, Item) == 0x000000, "Member 'FFBIKEndEffector::Item' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, Position) == 0x000010, "Member 'FFBIKEndEffector::Position' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, PositionAlpha) == 0x000028, "Member 'FFBIKEndEffector::PositionAlpha' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, PositionDepth) == 0x00002C, "Member 'FFBIKEndEffector::PositionDepth' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, Rotation) == 0x000030, "Member 'FFBIKEndEffector::Rotation' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, RotationAlpha) == 0x000050, "Member 'FFBIKEndEffector::RotationAlpha' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, RotationDepth) == 0x000054, "Member 'FFBIKEndEffector::RotationDepth' has a wrong offset!");
-static_assert(offsetof(FFBIKEndEffector, Pull) == 0x000058, "Member 'FFBIKEndEffector::Pull' has a wrong offset!");
-
-// ScriptStruct FullBodyIK.RigUnit_FullbodyIK_WorkData
-// 0x0198 (0x0198 - 0x0000)
-struct alignas(0x08) FRigUnit_FullbodyIK_WorkData final
-{
-public:
-	uint8                                         Pad_0[0x198];                                      // 0x0000(0x0198)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRigUnit_FullbodyIK_WorkData) == 0x000008, "Wrong alignment on FRigUnit_FullbodyIK_WorkData");
-static_assert(sizeof(FRigUnit_FullbodyIK_WorkData) == 0x000198, "Wrong size on FRigUnit_FullbodyIK_WorkData");
 
 // ScriptStruct FullBodyIK.RigUnit_FullbodyIK
 // 0x0280 (0x0450 - 0x01D0)

@@ -46,37 +46,6 @@ struct alignas(0x01) FTypedElementDataStorageColumn
 static_assert(alignof(FTypedElementDataStorageColumn) == 0x000001, "Wrong alignment on FTypedElementDataStorageColumn");
 static_assert(sizeof(FTypedElementDataStorageColumn) == 0x000001, "Wrong size on FTypedElementDataStorageColumn");
 
-// ScriptStruct TypedElementFramework.TypedElementUObjectColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTypedElementUObjectColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementUObjectColumn) == 0x000004, "Wrong alignment on FTypedElementUObjectColumn");
-static_assert(sizeof(FTypedElementUObjectColumn) == 0x000008, "Wrong size on FTypedElementUObjectColumn");
-
-// ScriptStruct TypedElementFramework.TypedElementPackagePathColumn
-// 0x0010 (0x0010 - 0x0000)
-struct FTypedElementPackagePathColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTypedElementPackagePathColumn) == 0x000008, "Wrong alignment on FTypedElementPackagePathColumn");
-static_assert(sizeof(FTypedElementPackagePathColumn) == 0x000010, "Wrong size on FTypedElementPackagePathColumn");
-static_assert(offsetof(FTypedElementPackagePathColumn, Path) == 0x000000, "Member 'FTypedElementPackagePathColumn::Path' has a wrong offset!");
-
-// ScriptStruct TypedElementFramework.ScriptTypedElementHandle
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FScriptTypedElementHandle final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FScriptTypedElementHandle) == 0x000008, "Wrong alignment on FScriptTypedElementHandle");
-static_assert(sizeof(FScriptTypedElementHandle) == 0x000008, "Wrong size on FScriptTypedElementHandle");
-
 // ScriptStruct TypedElementFramework.TypedElementAlertColumn
 // 0x0020 (0x0020 - 0x0000)
 struct FTypedElementAlertColumn final : public FTypedElementDataStorageColumn
@@ -92,6 +61,26 @@ static_assert(sizeof(FTypedElementAlertColumn) == 0x000020, "Wrong size on FType
 static_assert(offsetof(FTypedElementAlertColumn, Message) == 0x000000, "Member 'FTypedElementAlertColumn::Message' has a wrong offset!");
 static_assert(offsetof(FTypedElementAlertColumn, AlertType) == 0x00001A, "Member 'FTypedElementAlertColumn::AlertType' has a wrong offset!");
 
+// ScriptStruct TypedElementFramework.TypedElementPackageUnresolvedReference
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FTypedElementPackageUnresolvedReference final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementPackageUnresolvedReference) == 0x000008, "Wrong alignment on FTypedElementPackageUnresolvedReference");
+static_assert(sizeof(FTypedElementPackageUnresolvedReference) == 0x000018, "Wrong size on FTypedElementPackageUnresolvedReference");
+
+// ScriptStruct TypedElementFramework.ScriptTypedElementHandle
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FScriptTypedElementHandle final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FScriptTypedElementHandle) == 0x000008, "Wrong alignment on FScriptTypedElementHandle");
+static_assert(sizeof(FScriptTypedElementHandle) == 0x000008, "Wrong size on FScriptTypedElementHandle");
+
 // ScriptStruct TypedElementFramework.TypedElementChildAlertColumn
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FTypedElementChildAlertColumn final : public FTypedElementDataStorageColumn
@@ -101,6 +90,16 @@ public:
 };
 static_assert(alignof(FTypedElementChildAlertColumn) == 0x000008, "Wrong alignment on FTypedElementChildAlertColumn");
 static_assert(sizeof(FTypedElementChildAlertColumn) == 0x000010, "Wrong size on FTypedElementChildAlertColumn");
+
+// ScriptStruct TypedElementFramework.TypedElementUObjectColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FTypedElementUObjectColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementUObjectColumn) == 0x000004, "Wrong alignment on FTypedElementUObjectColumn");
+static_assert(sizeof(FTypedElementUObjectColumn) == 0x000008, "Wrong size on FTypedElementUObjectColumn");
 
 // ScriptStruct TypedElementFramework.TypedElementExternalObjectColumn
 // 0x0008 (0x0008 - 0x0000)
@@ -229,16 +228,6 @@ public:
 static_assert(alignof(FObjectOverrideColumn) == 0x000001, "Wrong alignment on FObjectOverrideColumn");
 static_assert(sizeof(FObjectOverrideColumn) == 0x000001, "Wrong size on FObjectOverrideColumn");
 
-// ScriptStruct TypedElementFramework.TypedElementPackageUnresolvedReference
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FTypedElementPackageUnresolvedReference final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementPackageUnresolvedReference) == 0x000008, "Wrong alignment on FTypedElementPackageUnresolvedReference");
-static_assert(sizeof(FTypedElementPackageUnresolvedReference) == 0x000018, "Wrong size on FTypedElementPackageUnresolvedReference");
-
 // ScriptStruct TypedElementFramework.TypedElementPackageReference
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FTypedElementPackageReference final : public FTypedElementDataStorageColumn
@@ -248,6 +237,17 @@ public:
 };
 static_assert(alignof(FTypedElementPackageReference) == 0x000008, "Wrong alignment on FTypedElementPackageReference");
 static_assert(sizeof(FTypedElementPackageReference) == 0x000008, "Wrong size on FTypedElementPackageReference");
+
+// ScriptStruct TypedElementFramework.TypedElementPackagePathColumn
+// 0x0010 (0x0010 - 0x0000)
+struct FTypedElementPackagePathColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTypedElementPackagePathColumn) == 0x000008, "Wrong alignment on FTypedElementPackagePathColumn");
+static_assert(sizeof(FTypedElementPackagePathColumn) == 0x000010, "Wrong size on FTypedElementPackagePathColumn");
+static_assert(offsetof(FTypedElementPackagePathColumn, Path) == 0x000000, "Member 'FTypedElementPackagePathColumn::Path' has a wrong offset!");
 
 // ScriptStruct TypedElementFramework.TypedElementPackageLoadedPathColumn
 // 0x000C (0x000C - 0x0000)

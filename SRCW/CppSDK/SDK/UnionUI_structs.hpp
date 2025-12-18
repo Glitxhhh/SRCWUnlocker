@@ -331,6 +331,22 @@ enum class EWidgetManZLayer : uint8
 	EWidgetManZLayer_MAX                     = 4,
 };
 
+// ScriptStruct UnionUI.UnionUIGridSideNavigationData
+// 0x0020 (0x0020 - 0x0000)
+struct FUnionUIGridSideNavigationData final
+{
+public:
+	EUnionUIGridSideNavigationRule                Rule;                                              // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                Widget;                                            // 0x0008(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EUnionUIControlDir InDirection, class UUnionUIButtonBase* InButton, int32 InRowIndex, int32 InColumnIndex)> CustomDelegate; // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FUnionUIGridSideNavigationData) == 0x000008, "Wrong alignment on FUnionUIGridSideNavigationData");
+static_assert(sizeof(FUnionUIGridSideNavigationData) == 0x000020, "Wrong size on FUnionUIGridSideNavigationData");
+static_assert(offsetof(FUnionUIGridSideNavigationData, Rule) == 0x000000, "Member 'FUnionUIGridSideNavigationData::Rule' has a wrong offset!");
+static_assert(offsetof(FUnionUIGridSideNavigationData, Widget) == 0x000008, "Member 'FUnionUIGridSideNavigationData::Widget' has a wrong offset!");
+static_assert(offsetof(FUnionUIGridSideNavigationData, CustomDelegate) == 0x000010, "Member 'FUnionUIGridSideNavigationData::CustomDelegate' has a wrong offset!");
+
 // ScriptStruct UnionUI.UnionUIGridLayoutButtonData
 // 0x0038 (0x0038 - 0x0000)
 struct FUnionUIGridLayoutButtonData final
@@ -439,22 +455,6 @@ static_assert(offsetof(FUnionUIGridLayoutSideNav, Up) == 0x000000, "Member 'FUni
 static_assert(offsetof(FUnionUIGridLayoutSideNav, Right) == 0x000020, "Member 'FUnionUIGridLayoutSideNav::Right' has a wrong offset!");
 static_assert(offsetof(FUnionUIGridLayoutSideNav, Down) == 0x000040, "Member 'FUnionUIGridLayoutSideNav::Down' has a wrong offset!");
 static_assert(offsetof(FUnionUIGridLayoutSideNav, Left) == 0x000060, "Member 'FUnionUIGridLayoutSideNav::Left' has a wrong offset!");
-
-// ScriptStruct UnionUI.UnionUIGridSideNavigationData
-// 0x0020 (0x0020 - 0x0000)
-struct FUnionUIGridSideNavigationData final
-{
-public:
-	EUnionUIGridSideNavigationRule                Rule;                                              // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                Widget;                                            // 0x0008(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(EUnionUIControlDir InDirection, class UUnionUIButtonBase* InButton, int32 InRowIndex, int32 InColumnIndex)> CustomDelegate; // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FUnionUIGridSideNavigationData) == 0x000008, "Wrong alignment on FUnionUIGridSideNavigationData");
-static_assert(sizeof(FUnionUIGridSideNavigationData) == 0x000020, "Wrong size on FUnionUIGridSideNavigationData");
-static_assert(offsetof(FUnionUIGridSideNavigationData, Rule) == 0x000000, "Member 'FUnionUIGridSideNavigationData::Rule' has a wrong offset!");
-static_assert(offsetof(FUnionUIGridSideNavigationData, Widget) == 0x000008, "Member 'FUnionUIGridSideNavigationData::Widget' has a wrong offset!");
-static_assert(offsetof(FUnionUIGridSideNavigationData, CustomDelegate) == 0x000010, "Member 'FUnionUIGridSideNavigationData::CustomDelegate' has a wrong offset!");
 
 // ScriptStruct UnionUI.UnionUIGridSideNavigation
 // 0x0080 (0x0080 - 0x0000)

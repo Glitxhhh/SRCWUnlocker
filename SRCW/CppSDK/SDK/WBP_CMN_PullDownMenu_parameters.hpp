@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "ST_PullDownMenuData_structs.hpp"
 #include "UMG_structs.hpp"
-#include "UnionSystem_structs.hpp"
 
 
 namespace SDK::Params

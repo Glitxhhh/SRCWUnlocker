@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "EColorPresetSelectPageItemType_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UNION_structs.hpp"
 
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "CriWareRuntime_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "MovieScene_structs.hpp"
 
 

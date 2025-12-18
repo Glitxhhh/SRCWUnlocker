@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "InputCore_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "ST_IntroduceCourseSceneData_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UnionUI_structs.hpp"

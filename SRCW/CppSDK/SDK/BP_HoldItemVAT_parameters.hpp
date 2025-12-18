@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "ST_HoldItemVATData_structs.hpp"
+#include "UNION_structs.hpp"
 
 
 namespace SDK::Params

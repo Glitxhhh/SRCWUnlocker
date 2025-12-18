@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPC_SaveAndLoadPlayLogState.BPC_SaveAndLoadPlayLogState_C
-// 0x0008 (0x0188 - 0x0180)
+// 0x0008 (0x0190 - 0x0188)
 class UBPC_SaveAndLoadPlayLogState_C final : public USaveAndLoadPlayLogState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0180(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0188(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BPC_SaveAndLoadPlayLogState(int32 EntryPoint);
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(UBPC_SaveAndLoadPlayLogState_C) == 0x000008, "Wrong alignment on UBPC_SaveAndLoadPlayLogState_C");
-static_assert(sizeof(UBPC_SaveAndLoadPlayLogState_C) == 0x000188, "Wrong size on UBPC_SaveAndLoadPlayLogState_C");
-static_assert(offsetof(UBPC_SaveAndLoadPlayLogState_C, UberGraphFrame) == 0x000180, "Member 'UBPC_SaveAndLoadPlayLogState_C::UberGraphFrame' has a wrong offset!");
+static_assert(sizeof(UBPC_SaveAndLoadPlayLogState_C) == 0x000190, "Wrong size on UBPC_SaveAndLoadPlayLogState_C");
+static_assert(offsetof(UBPC_SaveAndLoadPlayLogState_C, UberGraphFrame) == 0x000188, "Member 'UBPC_SaveAndLoadPlayLogState_C::UberGraphFrame' has a wrong offset!");
 
 }
 

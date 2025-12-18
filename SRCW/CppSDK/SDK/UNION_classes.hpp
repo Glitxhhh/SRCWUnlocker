@@ -11513,6 +11513,8 @@ public:
 	void OnConfigDataSaveComplete(ESaveDataStatus Status);
 	void OnNetDataLoadComplete(ESaveDataStatus Status);
 	void OnNetDataSaveComplete(ESaveDataStatus Status);
+	void OnPlayLogCRMUUIDSaveComplete(ESaveDataStatus Status);
+	void OnPlayLogDataLoadComplete(ESaveDataStatus Status);
 	void OnPlayLogDataSaveComplete(ESaveDataStatus Status);
 	void OnReplayDataSaveComplete(ESaveDataStatus Status);
 
@@ -30760,14 +30762,13 @@ static_assert(sizeof(UPreRaceSequenceStateBase) == 0x000108, "Wrong size on UPre
 static_assert(offsetof(UPreRaceSequenceStateBase, DefaultSequenceState) == 0x0000F8, "Member 'UPreRaceSequenceStateBase::DefaultSequenceState' has a wrong offset!");
 
 // Class UNION.SaveAndLoadPlayLogState
-// 0x0048 (0x0180 - 0x0138)
+// 0x0050 (0x0188 - 0x0138)
 class USaveAndLoadPlayLogState : public UMenuSequenceStateBase
 {
 public:
-	uint8                                         Pad_138[0x48];                                     // 0x0138(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_138[0x50];                                     // 0x0138(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnPlayLogLoadComplete(ESaveDataStatus Status);
 	void OnPlayLogSaveComplete(ESaveDataStatus Status);
 
 public:
@@ -30781,7 +30782,7 @@ public:
 	}
 };
 static_assert(alignof(USaveAndLoadPlayLogState) == 0x000008, "Wrong alignment on USaveAndLoadPlayLogState");
-static_assert(sizeof(USaveAndLoadPlayLogState) == 0x000180, "Wrong size on USaveAndLoadPlayLogState");
+static_assert(sizeof(USaveAndLoadPlayLogState) == 0x000188, "Wrong size on USaveAndLoadPlayLogState");
 
 // Class UNION.PreRaceSequenceStateCheckLobbyMember
 // 0x0018 (0x0120 - 0x0108)

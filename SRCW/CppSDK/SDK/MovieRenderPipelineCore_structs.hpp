@@ -269,6 +269,17 @@ static_assert(alignof(FMovieGraphEvaluatedSettingsStack) == 0x000008, "Wrong ali
 static_assert(sizeof(FMovieGraphEvaluatedSettingsStack) == 0x000010, "Wrong size on FMovieGraphEvaluatedSettingsStack");
 static_assert(offsetof(FMovieGraphEvaluatedSettingsStack, NodeInstances) == 0x000000, "Member 'FMovieGraphEvaluatedSettingsStack::NodeInstances' has a wrong offset!");
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluatedBranchConfig final
+{
+public:
+	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
+static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
+static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
 // 0x0050 (0x0050 - 0x0000)
 struct FMovieGraphEvaluationContext_VisitedNodeInfo final
@@ -372,17 +383,6 @@ static_assert(offsetof(FMovieGraphEvaluationContext, PinBeingFollowed) == 0x0001
 static_assert(offsetof(FMovieGraphEvaluationContext, SubgraphStack) == 0x000128, "Member 'FMovieGraphEvaluationContext::SubgraphStack' has a wrong offset!");
 static_assert(offsetof(FMovieGraphEvaluationContext, bCircularGraphReferenceFound) == 0x000138, "Member 'FMovieGraphEvaluationContext::bCircularGraphReferenceFound' has a wrong offset!");
 static_assert(offsetof(FMovieGraphEvaluationContext, TraversalError) == 0x000140, "Member 'FMovieGraphEvaluationContext::TraversalError' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluatedBranchConfig final
-{
-public:
-	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
-static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
-static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphImagePreviewData
 // 0x0050 (0x0050 - 0x0000)

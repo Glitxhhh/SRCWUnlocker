@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ST_ColorDetailWindowData_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
+#include "ST_ColorDetailWindowData_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
 
