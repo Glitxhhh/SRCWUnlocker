@@ -102,5 +102,7 @@ MIT License (or your preferred license)
 ## 👤 Authors
 
 **Glitxhhh**
+---
 **GathoChocolat**
+---
 **HAWGT**
