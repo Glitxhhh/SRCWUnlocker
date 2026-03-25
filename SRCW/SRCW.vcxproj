@@ -138,36 +138,27 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdclatest</LanguageStandard_C>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
-    <PostBuildEvent>
-      <Command>signtool sign ^
- /f "$(ProjectDir)cert.pfx" ^
- /p password123 ^
- /fd SHA256 ^
- /tr http://timestamp.digicert.com ^
- /td SHA256 ^
- "$(TargetPath)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CppSDK\SDK\Basic.cpp" />
-    <ClCompile Include="CppSDK\SDK\BP_MenuRacerLobby_functions.cpp" />
     <ClCompile Include="CppSDK\SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="CppSDK\SDK\Engine_functions.cpp" />
-    <ClCompile Include="CppSDK\SDK\UnionSystem_functions.cpp" />
-    <ClCompile Include="CppSDK\SDK\UNION_functions.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Features.cpp" />
     <ClCompile Include="Helpers.cpp" />
+    <ClCompile Include="Reflect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Features.h" />
     <ClInclude Include="Helpers.h" />
+    <ClInclude Include="Reflect.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

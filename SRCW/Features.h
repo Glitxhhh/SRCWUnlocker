@@ -1,41 +1,31 @@
 #pragma once
-#include <random>
 #include <vector>
 #include <string>
-#include <unordered_map>
 
 #include "Helpers.h"
+#include "Reflect.h"
+
+// Only engine-level SDK includes needed — NO game-specific headers
 #include "CppSDK/SDK/Engine_classes.hpp"
-#include "CppSDK/SDK/BP_UnionGameInstance_classes.hpp"
-#include "CppSDK/SDK/BP_MenuPlayerController_classes.hpp"
-#include "CppSDK/SDK/UnionSystem_classes.hpp"
-#include "CppSDK/SDK/UnionSystem_structs.hpp"
-#include "CppSDK/SDK/UnionRun_structs.hpp"
-#include "CppSDK/SDK/UNION_parameters.hpp"
-#include "CppSDK/SDK/UNION_classes.hpp"
-#include "CppSDK/SDK/BP_MenuRacerLobby_classes.hpp"
 
 // =============================================================================
-// RUNTIME CONFIG — defaults below, overridden by SRCW.ini at load time
+// RUNTIME CONFIG — loaded from SRCW.ini, no recompile needed
 // =============================================================================
 struct SRCWConfig
 {
-    // General
     bool Console          = false;
     bool ClearOnly        = false;
-    int  PhaseDelayMs     = 750;
+    int  PhaseDelayMs     = 500;
     bool AutoRun          = false;
     bool HotkeyEnabled    = true;
-    int  UnlockKey        = 0xC0;   // VK_OEM_3 (tilde ~)
+    int  UnlockKey        = 0xC0;
 
-    // DLC Gate Removal
     bool ClearCharaDLC    = true;
     bool ClearMachineDLC  = true;
     bool ClearHonorDLC    = true;
     bool ClearAlbumDLC    = true;
     bool ClearStickerDLC  = true;
 
-    // Save Data Unlocks
     bool HonorTitles      = true;
     bool Drivers          = true;
     bool MachineCustomize = true;
@@ -45,12 +35,10 @@ struct SRCWConfig
     bool GadgetPlate      = true;
     bool Challenges       = true;
 
-    // Stage Unlocks
     bool StagesDLC        = true;
     bool StagesGPOpen     = true;
     bool StagesSecret     = true;
 
-    // New Flag Clearing
     bool NF_CompleteMachine = true;
     bool NF_Sticker       = true;
     bool NF_ColorPreset   = true;
