@@ -140,6 +140,7 @@ bool RunUnlockPhase(int phase)
     case 10: { if (cfg.Challenges)   { Reflect::CallStatic("CheatChallenge", "AllChallengeClear"); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteMainChallenge", true); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteSpecialChallenge", true); int32_t pc = Reflect::CallStaticRetInt32("ChallengeStatsUtility", "GetChallengeProgressCount"); Reflect::CallStaticInt32("AppSaveGameHelper", "SetChallengeShowProgress", pc); Reflect::CallStaticFloat("AppSaveGameHelper", "SetChallengeLastShowProgress", 1.0f); std::cout << "[Phase 10] Challenges\n"; } return true; }
     case 11: {
         if (cfg.SuperSonicAll) {
+            // Save-data layer: mark driver 46 selectable and open all Super Sonic prerequisites.
             Reflect::CallStaticUInt8("AppSaveGameHelper", "SetDriverSelectable", 46);
             Reflect::CallStaticBool("AppSaveGameHelper", "SetOpenSuperSonicSpeed", true);
             auto* gp = Reflect::FindCDO("CheatGrandPrix");
@@ -161,231 +162,229 @@ bool RunUnlockPhase(int phase)
 }
 
 // ---------------------------------------------------------------------------
-// Super Sonic All-Modes: Character Select Screen Patch
+// Super Sonic All-Modes: Character Select Screen (CSS) Patch
 //
-// The screenshots confirm that Super Sonic's slot is ABSENT from the CSS
-// grid in Time Trial / Race Park — the widget that builds the driver list
-// simply doesn't include driver 46 in non-Grand Prix modes.
+// ROOT CAUSE (confirmed from full CppSDK dump):
+//   IsDriverSelectable(WorldContextObject, EDriverId) -> bool
+//   Param layout in Parms buffer:
+//     0x0000: UObject* WorldContextObject  (8 bytes)
+//     0x0008: EDriverId InDriverId          (1 byte / uint8)
+//     0x0009: bool ReturnValue              (1 byte, OutParm|ReturnParm)
 //
-// The fix has three layers, all inside hk_AActor_ProcessEvent:
+//   UCharaSelectWindow::Setup() is a Native function. It iterates all
+//   EDriverId values, calls IsDriverSelectable() for each, and only
+//   creates a grid icon for drivers that return true. For non-GP modes
+//   (Race Park / Time Trial) driver 46 (Super Sonic) returns false unless
+//   the save data flag + fever flag are both set AND the mode allows it.
 //
-// LAYER 1 — IsDriverSelectable post-call patch
-//   Forces return value to true for driver 46 so clicks are accepted.
+//   Even after Phase 11 sets all save flags, Super Sonic is absent from
+//   the Race Park and Time Trial CSS grids because:
+//     (a) Setup() was already called before Phase 11 completed, or
+//     (b) The CSS was closed and re-opened between phase runs, or
+//     (c) Mode-specific logic inside IsDriverSelectable still blocks it.
 //
-// LAYER 2 — Driver list injection (post-call on SetDriverIdList / equivalent)
-//   WBP_CharaSelect_Sub_Window_C builds its icon list by calling a function
-//   that takes or sets a TArray<uint8> of driver IDs (e.g. SetDriverIdList,
-//   InitDriverList, or BuildCharaList). We intercept this post-call and,
-//   if driver 46 is not in the output array property, append it.
+// STRATEGY:
+//   Layer 1 — Pre-call intercept on IsDriverSelectable:
+//     Force ReturnValue = true for driver 46 BEFORE the native function
+//     executes so Setup() sees it as selectable and creates the icon slot.
+//     We intercept PRE-call (before Orig fires) unlike the old code which
+//     patched post-call — pre-call is correct because Setup() reads the
+//     return value after ProcessEvent returns.
 //
-// LAYER 3 — CSS window init event intercept (post-call)
-//   On any Init/Construct event fired by a WBP_CharaSelect_Sub_Window_C
-//   object, we call AddDriverIcon(46) or equivalent to force the slot to
-//   be created. This is a fallback if layer 2 misses the exact function.
+//     NOTE: IsDriverSelectable is marked Native|Static|Final, so it reaches
+//     our ProcessEvent hook. We write the ReturnValue to true before
+//     forwarding to Orig, causing the engine's native dispatcher to see true
+//     already written in the out-param slot and return it directly.
+//     Actually for Native functions the engine calls the C++ implementation
+//     directly, which will overwrite our pre-set value. Therefore we ALSO
+//     patch it post-call (keeping both to be safe).
+//
+//   Layer 2 — Post-call intercept on UCharaSelectWindow::Setup:
+//     After Setup() runs on any CharaSelectWindow instance, we call
+//     UpdateRivalIconsSelectable() on the same object to ensure the new
+//     icon is visible and not greyed out.
+//
+//   Layer 3 — OnInitState / Construct intercept (per-mode CSS open):
+//     BPC_CharaSelectState_C::OnInitState fires every time ANY game mode
+//     opens the character select screen (GP, Race Park, Time Trial, etc.)
+//     We detect this event, find the live CharaSelectWindow instance, and
+//     call Setup() on it again to rebuild the icon grid with driver 46
+//     now forced selectable via Layer 1. This is the primary re-trigger
+//     mechanism that fixes the "already loaded" problem.
+//
+//     We do NOT use a one-shot bSuperSonicIconAdded flag. Instead we
+//     track which CharaSelectWindow instances we've already patched by
+//     pointer, and re-patch whenever a NEW instance appears. This handles
+//     mode transitions cleanly.
 // ---------------------------------------------------------------------------
 
 static SDK::UFunction* s_IsDriverSelectableFunc  = nullptr;
+static SDK::UFunction* s_SetupFunc               = nullptr;
+static SDK::UFunction* s_UpdateRivalSelectableFunc = nullptr;
 
-// Candidate function names the CSS window uses to build its driver list.
-// We search for each at runtime and cache the first one found.
-static SDK::UFunction* s_SetDriverIdListFunc     = nullptr;
-static SDK::UFunction* s_InitDriverListFunc      = nullptr;
-static SDK::UFunction* s_BuildCharaListFunc      = nullptr;
-static SDK::UFunction* s_AddDriverIconFunc       = nullptr;
+// Set of CharaSelectWindow instance pointers we've already triggered Setup() on.
+// Stored as raw uintptr_t to avoid lifetime issues.
+static std::vector<uintptr_t> s_PatchedCSS;
 
-// Candidate CSS window event names that trigger a roster rebuild
-static const char* kCSSWindowInitEvents[] = {
-    "OnInitStateSelectPlayMode",
-    "InitCharaSelectWindow",
-    "BuildCharaSelectList",
-    "OnConstruct",
-    nullptr
-};
+static bool s_FuncsResolved = false;
 
-// Lazy-resolve all driver-list related functions from the CSS window class.
-// Called once after the first CSS window event fires.
-static bool s_DriverListFuncsResolved = false;
-static void ResolveDriverListFuncs()
+static void ResolveSSFuncs()
 {
-    if (s_DriverListFuncsResolved) return;
-    s_DriverListFuncsResolved = true;
+    if (s_FuncsResolved) return;
+    s_FuncsResolved = true;
 
-    // Try several plausible class/function name combinations.
-    // We try both the _C (Blueprint) and plain variants.
-    static const char* classes[] = {
-        "WBP_CharaSelect_Sub_Window_C",
-        "WBP_CharaSelect_Sub_Window",
-        "BPC_CharaSelectState_C",
-        "BPC_CharaSelectState",
-        "CharaSelectUtilityLibrary",
-        nullptr
-    };
-    static const char* listFuncs[] = {
-        "SetDriverIdList", "InitDriverList", "SetDisplayDriverIds",
-        "SetCharaIdList",  "BuildDriverList","SetSelectDriverList",
-        "SetShowDriverList","SetDispDriverList",
-        nullptr
-    };
-    static const char* addFuncs[] = {
-        "AddDriverIcon", "AddCharaIcon", "AddDriverSlot",
-        "CreateDriverIcon", "SpawnCharaIcon",
-        nullptr
-    };
+    s_IsDriverSelectableFunc   = Reflect::FindFunction("CharaSelectUtilityLibrary", "IsDriverSelectable");
+    s_SetupFunc                = Reflect::FindFunction("CharaSelectWindow", "Setup");
+    s_UpdateRivalSelectableFunc = Reflect::FindFunction("CharaSelectWindow", "UpdateRivalIconsSelectable");
 
-    for (int ci = 0; classes[ci]; ci++) {
-        for (int fi = 0; listFuncs[fi]; fi++) {
-            if (!s_SetDriverIdListFunc)
-                s_SetDriverIdListFunc = Reflect::FindFunction(classes[ci], listFuncs[fi]);
-        }
-        for (int fi = 0; addFuncs[fi]; fi++) {
-            if (!s_AddDriverIconFunc)
-                s_AddDriverIconFunc = Reflect::FindFunction(classes[ci], addFuncs[fi]);
-        }
-    }
+    if (s_IsDriverSelectableFunc)
+        std::cout << "[SuperSonic] Found IsDriverSelectable\n";
+    else
+        std::cout << "[SuperSonic] WARNING: IsDriverSelectable not found\n";
 
-    if (s_SetDriverIdListFunc)
-        std::cout << "[SuperSonic] Resolved driver list func: " << s_SetDriverIdListFunc->GetName() << "\n";
-    if (s_AddDriverIconFunc)
-        std::cout << "[SuperSonic] Resolved add icon func:    " << s_AddDriverIconFunc->GetName() << "\n";
-    if (!s_SetDriverIdListFunc && !s_AddDriverIconFunc)
-        std::cout << "[SuperSonic] Warning: no driver list func found — using TArray scan fallback\n";
+    if (s_SetupFunc)
+        std::cout << "[SuperSonic] Found CharaSelectWindow::Setup\n";
+    else
+        std::cout << "[SuperSonic] WARNING: CharaSelectWindow::Setup not found\n";
 }
 
-// Layer 1: patch IsDriverSelectable return value post-call
-static void PatchIsDriverSelectable(SDK::UFunction* Function, void* Parms)
+// ---------------------------------------------------------------------------
+// Layer 1: Force IsDriverSelectable to return true for driver 46.
+//
+// Called BEFORE Orig_AActor_ProcessEvent to pre-set the return value,
+// and AFTER to overwrite any false the native wrote.
+//
+// Param struct layout (confirmed from UNION_parameters.hpp):
+//   [0x00] UObject* WorldContextObject  (8 bytes)
+//   [0x08] uint8    InDriverId           (1 byte)
+//   [0x09] bool     ReturnValue          (1 byte)
+// ---------------------------------------------------------------------------
+static void PatchIsDriverSelectablePre(SDK::UFunction* Function, void* Parms)
 {
-    if (!s_IsDriverSelectableFunc)
-        s_IsDriverSelectableFunc = Reflect::FindFunction("CharaSelectUtilityLibrary", "IsDriverSelectable");
     if (!s_IsDriverSelectableFunc || Function != s_IsDriverSelectableFunc) return;
+    if (!Parms) return;
 
-    int32_t driverIdOffset  = -1;
-    int32_t returnValOffset = -1;
-    for (SDK::FField* field = Function->ChildProperties; field; field = field->Next) {
-        auto* prop    = static_cast<SDK::FProperty*>(field);
-        bool isReturn = (prop->PropertyFlags & static_cast<uint64_t>(SDK::EPropertyFlags::ReturnParm)) != 0;
-        if (isReturn && returnValOffset < 0)                            returnValOffset = prop->Offset;
-        else if (!isReturn && driverIdOffset < 0 && prop->ElementSize <= 4) driverIdOffset  = prop->Offset;
-    }
-    if (driverIdOffset < 0 || returnValOffset < 0) return;
-
-    uint8_t* bytes    = static_cast<uint8_t*>(Parms);
-    int32_t  driverId = static_cast<int32_t>(*reinterpret_cast<uint8_t*>(bytes + driverIdOffset));
+    uint8_t* bytes = static_cast<uint8_t*>(Parms);
+    uint8_t  driverId = bytes[0x08];
     if (driverId == 46)
-        *reinterpret_cast<bool*>(bytes + returnValOffset) = true;
+        bytes[0x09] = 1; // pre-set ReturnValue = true
 }
 
-// Layer 2: after SetDriverIdList (or equivalent) returns, scan the output
-// TArray<uint8> property on the object and append driver 46 if absent.
-static void PatchDriverIdListOutput(SDK::AActor* Caller, SDK::UFunction* Function, void* Parms)
+static void PatchIsDriverSelectablePost(SDK::UFunction* Function, void* Parms)
 {
-    if (!s_SetDriverIdListFunc || Function != s_SetDriverIdListFunc) return;
+    if (!s_IsDriverSelectableFunc || Function != s_IsDriverSelectableFunc) return;
+    if (!Parms) return;
+
+    uint8_t* bytes = static_cast<uint8_t*>(Parms);
+    uint8_t  driverId = bytes[0x08];
+    if (driverId == 46)
+        bytes[0x09] = 1; // overwrite any false the native wrote
+}
+
+// ---------------------------------------------------------------------------
+// Layer 2: After Setup() finishes on a CharaSelectWindow, call
+// UpdateRivalIconsSelectable() to refresh selectability state of all icons.
+// ---------------------------------------------------------------------------
+static void PostSetupRefresh(SDK::AActor* Caller, SDK::UFunction* Function)
+{
+    if (!s_SetupFunc || Function != s_SetupFunc) return;
 
     SDK::UObject* obj = reinterpret_cast<SDK::UObject*>(Caller);
-    if (!obj || !obj->Class) return;
+    if (!obj) return;
 
-    // Find a TArray property that looks like a driver ID list on this object.
-    // It will be a TArray whose InnerProperty is uint8 or int32 sized.
-    for (SDK::FField* field = obj->Class->ChildProperties; field; field = field->Next) {
-        auto* prop = static_cast<SDK::FProperty*>(field);
-        // Look for array properties
-        if (prop->ElementSize < 16) continue; // TArray is 16 bytes
-        std::string pname = prop->Name.ToString();
-        // Heuristic: name contains "Driver", "Chara", "Id", "List", "Ids"
-        bool looksLikeList = (pname.find("Driver") != std::string::npos ||
-                              pname.find("Chara")  != std::string::npos ||
-                              pname.find("Id")     != std::string::npos ||
-                              pname.find("List")   != std::string::npos);
-        if (!looksLikeList) continue;
-
-        void* arrAddr = reinterpret_cast<uint8_t*>(obj) + prop->Offset;
-        auto* arr     = reinterpret_cast<ReflectRaw::RawTArray*>(arrAddr);
-        if (!arr->Data || arr->NumElements <= 0 || arr->NumElements > 512) continue;
-
-        // Check if all values fit in uint8 range (driver IDs are 0-255)
-        uint8_t* data = reinterpret_cast<uint8_t*>(arr->Data);
-        bool allByte  = true;
-        for (int i = 0; i < arr->NumElements; i++)
-            if (data[i] > 200) { allByte = false; break; }
-        if (!allByte) continue;
-
-        // Check driver 46 isn't already in the list
-        bool has46 = false;
-        for (int i = 0; i < arr->NumElements; i++)
-            if (data[i] == 46) { has46 = true; break; }
-        if (has46) continue;
-
-        // Append driver 46
-        int32_t nc = arr->NumElements + 1;
-        if (nc <= arr->MaxElements) {
-            data[arr->NumElements] = 46;
-            arr->NumElements = nc;
-        } else {
-            uint8_t* nd = (uint8_t*)VirtualAlloc(nullptr, nc, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-            if (nd) {
-                memcpy(nd, data, arr->NumElements);
-                nd[arr->NumElements] = 46;
-                arr->Data        = nd;
-                arr->NumElements = nc;
-                arr->MaxElements = nc;
-            }
-        }
-        std::cout << "[SuperSonic] Injected driver 46 into " << pname << " list\n";
+    if (s_UpdateRivalSelectableFunc) {
+        uint8_t p[64] = {};
+        obj->ProcessEvent(s_UpdateRivalSelectableFunc, p);
     }
 }
 
-// Layer 3: when a CSS window init event fires, call AddDriverIcon(46) directly
-// and also trigger a rebuild of the icon list via known refresh functions.
-static bool s_SuperSonicIconAdded = false;
-static void InjectSuperSonicIcon(SDK::AActor* Caller, SDK::UFunction* Function)
+// ---------------------------------------------------------------------------
+// Layer 3: When OnInitState fires on BPC_CharaSelectState_C (or Construct
+// fires on WBP_CharaSelect_Sub_Window_C), find the live CharaSelectWindow
+// instance and call Setup() again so driver 46's slot gets created.
+//
+// We only do this once per unique CSS window instance — tracked by pointer.
+// This fires for every mode transition (GP → Race Park → Time Trial, etc.)
+// ---------------------------------------------------------------------------
+static bool WasPatched(uintptr_t ptr)
 {
-    if (s_SuperSonicIconAdded) return;
+    for (auto p : s_PatchedCSS) if (p == ptr) return true;
+    return false;
+}
 
-    // Check if this event is one of the known CSS window init events
+static void TriggerSetupOnCSSWindow(SDK::UObject* obj)
+{
+    if (!obj || !s_SetupFunc) return;
+
+    uintptr_t key = reinterpret_cast<uintptr_t>(obj);
+    if (WasPatched(key)) return;
+    s_PatchedCSS.push_back(key);
+
+    // Call Setup() — Layer 1 will intercept IsDriverSelectable calls inside it
+    uint8_t p[64] = {};
+    obj->ProcessEvent(s_SetupFunc, p);
+
+    // Then refresh selectable state
+    if (s_UpdateRivalSelectableFunc) {
+        obj->ProcessEvent(s_UpdateRivalSelectableFunc, p);
+    }
+
+    std::cout << "[SuperSonic] Triggered Setup() on CSS window instance 0x"
+              << std::hex << key << std::dec << "\n";
+}
+
+static void InjectSuperSonicOnCSSInit(SDK::AActor* Caller, SDK::UFunction* Function)
+{
+    if (!Caller || !Function) return;
+
     std::string fname = Function->GetName();
-    bool isCSSEvent   = false;
-    for (int i = 0; kCSSWindowInitEvents[i]; i++)
-        if (fname == kCSSWindowInitEvents[i]) { isCSSEvent = true; break; }
-    if (!isCSSEvent) return;
+
+    // Trigger events from the CharaSelect state machine — fires for ALL modes
+    // BPC_CharaSelectState_C::OnInitState  — GP, Race Park, TT all share this
+    // WBP_CharaSelect_Sub_Window_C::Construct — widget-level construction
+    bool isCSSInitEvent =
+        (fname == "OnInitState") ||
+        (fname == "Construct");
+
+    if (!isCSSInitEvent) return;
 
     SDK::UObject* obj = reinterpret_cast<SDK::UObject*>(Caller);
     if (!obj || !obj->Class) return;
 
-    // Only act on objects that look like the CSS window widget
     std::string cname = obj->Class->GetName();
-    bool isCSSWindow  = (cname.find("CharaSelect") != std::string::npos ||
-                         cname.find("CharaSel")    != std::string::npos ||
-                         cname.find("BPC_Chara")   != std::string::npos);
-    if (!isCSSWindow) return;
 
-    ResolveDriverListFuncs();
+    // Check caller is actually a CSS-related class
+    bool isCSSClass =
+        (cname.find("CharaSelectState") != std::string::npos) ||
+        (cname.find("CharaSelect_Sub_Window") != std::string::npos) ||
+        (cname.find("CharaSelect") != std::string::npos && cname.find("State") != std::string::npos);
 
-    // Try AddDriverIcon(46) directly on the widget
-    if (s_AddDriverIconFunc) {
-        uint8_t params[512] = {};
-        SDK::FProperty* p = nullptr;
-        for (SDK::FField* f = s_AddDriverIconFunc->ChildProperties; f; f = f->Next) {
-            auto* prop = static_cast<SDK::FProperty*>(f);
-            if (!(prop->PropertyFlags & static_cast<uint64_t>(SDK::EPropertyFlags::ReturnParm))) {
-                p = prop; break;
+    if (!isCSSClass) return;
+
+    // For state classes (BPC_CharaSelectState_C), find the live CharaSelectWindow
+    // instance in GObjects and trigger Setup() on it.
+    // For widget classes (WBP_CharaSelect_Sub_Window_C), trigger directly on Caller.
+
+    if (cname.find("Sub_Window") != std::string::npos) {
+        // Direct widget instance — trigger Setup() on it
+        TriggerSetupOnCSSWindow(obj);
+    } else {
+        // State machine — find the live CharaSelectWindow widget instance
+        SDK::UClass* cssWindowClass = Reflect::FindClass("WBP_CharaSelect_Sub_Window_C");
+        if (!cssWindowClass) cssWindowClass = Reflect::FindClass("CharaSelectWindow");
+        if (!cssWindowClass) {
+            std::cout << "[SuperSonic] WARNING: Could not find CharaSelectWindow class\n";
+            return;
+        }
+
+        for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
+            SDK::UObject* candidate = SDK::UObject::GObjects->GetByIndex(i);
+            if (!candidate || candidate->IsDefaultObject()) continue;
+            if (candidate->IsA(cssWindowClass)) {
+                TriggerSetupOnCSSWindow(candidate);
+                // Don't break — patch all active instances (splitscreen, etc.)
             }
         }
-        if (p) {
-            *(uint8_t*)(params + p->Offset) = 46;
-            obj->ProcessEvent(s_AddDriverIconFunc, params);
-            std::cout << "[SuperSonic] Called AddDriverIcon(46) on " << cname << "\n";
-            s_SuperSonicIconAdded = true;
-        }
-    }
-
-    // Also try known refresh/rebuild function names as a belt-and-suspenders
-    static const char* rebuildFuncs[] = {
-        "RebuildCharaList", "RefreshCharaList", "UpdateCharaList",
-        "ResetCharaSelect", "RefreshDriverList",
-        nullptr
-    };
-    for (int i = 0; rebuildFuncs[i]; i++) {
-        SDK::UFunction* rf = Reflect::FindFunction(cname.c_str(), rebuildFuncs[i]);
-        if (rf) { uint8_t p[64] = {}; obj->ProcessEvent(rf, p); }
     }
 }
 
@@ -411,15 +410,52 @@ void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Funct
         ULONGLONG now = GetTickCount64();
         if (now - lastPhaseTime >= (ULONGLONG)cfg.PhaseDelayMs) {
             if (RunUnlockPhase(unlockPhase)) { unlockPhase++; lastPhaseTime = now; }
-            else { bUnlockDone = true; std::cout << "All phases complete!\n"; }
+            else {
+                bUnlockDone = true;
+                std::cout << "All phases complete!\n";
+                // Reset CSS patch tracker so the next CSS open gets a fresh Setup() call
+                s_PatchedCSS.clear();
+
+                // Immediately resolve function pointers and patch any CSS window that is
+                // already live in GObjects (handles the "CSS open when unlock finishes" case).
+                if (cfg.SuperSonicAll) {
+                    ResolveSSFuncs();
+                    if (s_SetupFunc) {
+                        SDK::UClass* cssClass = Reflect::FindClass("WBP_CharaSelect_Sub_Window_C");
+                        if (!cssClass) cssClass = Reflect::FindClass("CharaSelectWindow");
+                        if (cssClass) {
+                            for (int i = 0; i < SDK::UObject::GObjects->Num(); i++) {
+                                SDK::UObject* obj = SDK::UObject::GObjects->GetByIndex(i);
+                                if (!obj || obj->IsDefaultObject()) continue;
+                                if (obj->IsA(cssClass))
+                                    TriggerSetupOnCSSWindow(obj);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
+    // Resolve Super Sonic function pointers once the game is ready (fallback if not done above)
+    if (cfg.SuperSonicAll && bUnlockDone && !s_FuncsResolved)
+        ResolveSSFuncs();
+
+    // Layer 1 PRE: force IsDriverSelectable true for driver 46 before native runs
+    if (cfg.SuperSonicAll && s_FuncsResolved)
+        PatchIsDriverSelectablePre(Function, Parms);
+
     Orig_AActor_ProcessEvent(Class, Function, Parms);
 
-    if (cfg.SuperSonicAll) {
-        PatchIsDriverSelectable(Function, Parms);        // Layer 1
-        PatchDriverIdListOutput(Class, Function, Parms); // Layer 2
-        InjectSuperSonicIcon(Class, Function);           // Layer 3
-    }
+    // Layer 1 POST: overwrite false that native may have written
+    if (cfg.SuperSonicAll && s_FuncsResolved)
+        PatchIsDriverSelectablePost(Function, Parms);
+
+    // Layer 2: after Setup() finishes, refresh icon selectability
+    if (cfg.SuperSonicAll && s_FuncsResolved)
+        PostSetupRefresh(Class, Function);
+
+    // Layer 3: on CSS init events, re-trigger Setup() so the driver 46 slot is created
+    if (cfg.SuperSonicAll && s_FuncsResolved)
+        InjectSuperSonicOnCSSInit(Class, Function);
 }
