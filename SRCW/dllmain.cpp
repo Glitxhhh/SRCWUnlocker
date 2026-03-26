@@ -35,7 +35,7 @@ void LoadConfig()
         else if (key == "GadgetPlate") cfg.GadgetPlate = b;
         else if (key == "Challenges") cfg.Challenges = b;
         else if (key == "Achievements") cfg.Achievements = b;
-        else if (key == "SuperSonicAll") cfg.SuperSonicAll = b;
+        //else if (key == "SuperSonicAll") cfg.SuperSonicAll = b;
         else if (key == "StagesDLC") cfg.StagesDLC = b;
         else if (key == "StagesGPOpen") cfg.StagesGPOpen = b;
         else if (key == "StagesSecret") cfg.StagesSecret = b;
