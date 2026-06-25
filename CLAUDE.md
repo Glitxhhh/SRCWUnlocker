@@ -134,9 +134,43 @@ category's actual save-data field on `UAppSaveGame` (`UnionSystem_classes.hpp`):
 (`FUserMachineAssemblyData.ColorPresetList`, keyed by `EMachineColorPresetId`/`EMachineId`), and
 there's no dedicated lock UFunction for it (unlike Gadgets/Horns). Don't add one without first
 confirming a safe mechanism — under `RemovalMode` it currently just skips and logs a notice.
-Stickers/Horns/Auras/MachineParts are in the same "TMap-presence = unlocked" boat and are
-currently only category-toggle-controlled (no per-ID override, no relock) — extending them needs
-the same kind of save-field tracing done above, not a guess.
+Stickers/Horns/Auras are in the same "TMap-presence = unlocked" boat and are currently only
+category-toggle-controlled (no per-ID override, no relock) — extending them needs the same kind
+of save-field tracing done above, not a guess. `GiveSticker(int32)` exists as a clean per-ID add
+function for Stickers specifically if that's tackled next; Horns/Auras have no per-ID add
+function found yet (only `StoreAllHorn`/`StoreAllAura` bulk calls).
+
+### Machines (v3.2) and the bulk-vs-per-ID safety pattern
+
+`[Machines]` overrides individual kart models via `AddFrontPartsById`/`AddRearPartsById`/
+`AddTirePartsById(EMachineId)` + `UpdateMachineAssemblyData()`, replacing the bulk
+`StoreAllMachineAssembly()`/`StoreAllMachineParts()` calls — **this per-ID path has not been
+verified in-game.** The bulk calls are proven (tested in v3.1); whether granting all three part
+types + forcing a recompute actually marks a machine "complete" the same way is an assumption.
+
+This established a pattern worth keeping for any future per-ID category: **default to the
+proven bulk "unlock/store all" call, and only switch to a per-ID loop when the user actually
+populates that category's override section or RemovalMode is on.** Don't replace a bulk call
+outright just because a per-ID equivalent exists — that swaps tested behavior for untested
+behavior on every user, not just the ones who opted into granular control. (Gadgets was
+initially swapped outright in early v3.2 work and had to be retrofitted with this same
+bulk-by-default guard — see `RunUnlockPhase` case 2 in `Features.cpp` for the pattern to copy.)
+
+### FestivalOnlyMode (v3.2)
+
+`UContentDataAsset` (`UnionSystem_classes.hpp`) already encodes which content is time-limited:
+`ServerTimeContent` is a flat `TArray<EContentId>` of festival/seasonal content IDs, and
+`CharaContentSeverTimeMap`/`MachineContentSeverTimeMap`/`AlbumSeverTimeMap` (each
+`TMap<EContentId, FContent*Data>`) map each of those IDs to the actual `EDriverId`/`EMachineId`/
+album IDs it grants. `ApplyFestivalOnlyMode()` (`Features.cpp`) walks this to inject those IDs as
+overrides and forces every other category's master switch off, called from `ResolveOverrides()`
+when `cfg.FestivalOnlyMode` is set. No new save-data tracing was needed — this reuses the same
+override mechanism already built for per-ID control.
+
+Honor Titles/Tracks/Stickers/Horns/Auras have no `*SeverTimeMap` counterpart in the SDK, so they
+aren't touched by Festival mode (forced off, not partially granted) — if a future game update
+adds time-gated honor titles or tracks, check for a similarly-named map before assuming they're
+uncovered.
 
 ## Coding Conventions
 

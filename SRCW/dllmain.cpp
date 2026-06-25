@@ -23,6 +23,7 @@ void LoadConfig()
             else if (section == "Tracks")       activeSection = &cfg.TrackOverridesRaw;
             else if (section == "ColorPresets") activeSection = &cfg.ColorPresetOverridesRaw;
             else if (section == "Gadgets")      activeSection = &cfg.GadgetOverridesRaw;
+            else if (section == "Machines")     activeSection = &cfg.MachineOverridesRaw;
             else activeSection = nullptr;
             continue;
         }
@@ -39,6 +40,7 @@ void LoadConfig()
         else if (key == "HotkeyEnabled") cfg.HotkeyEnabled = b;
         else if (key == "UnlockKey") cfg.UnlockKey = value;
         else if (key == "RemovalMode") cfg.RemovalMode = b;
+        else if (key == "FestivalOnlyMode") cfg.FestivalOnlyMode = b;
         else if (key == "ClearCharaDLC") cfg.ClearCharaDLC = b;
         else if (key == "ClearMachineDLC") cfg.ClearMachineDLC = b;
         else if (key == "ClearHonorDLC") cfg.ClearHonorDLC = b;
@@ -51,6 +53,7 @@ void LoadConfig()
         else if (key == "MirrorSpeed") cfg.MirrorSpeed = b;
         else if (key == "Music") cfg.Music = b;
         else if (key == "Gadgets") cfg.Gadgets = b;
+        else if (key == "Machines") cfg.Machines = b;
         else if (key == "GadgetPlate") cfg.GadgetPlate = b;
         else if (key == "Challenges") cfg.Challenges = b;
         else if (key == "Achievements") cfg.Achievements = b;
@@ -94,7 +97,13 @@ void WriteDefaultConfig()
     f << "; RemovalMode 1 = anything disabled below is actively re-locked in save data,\n";
     f << ";   wherever the game exposes a lock function for that category (currently: Gadgets only).\n";
     f << ";   Categories without a lock primitive will just be skipped and a notice logged.\n";
-    f << "RemovalMode 0\n\n";
+    f << "RemovalMode 0\n";
+    f << "; FestivalOnlyMode 1 forces Drivers/Music/MachineCustomize/ColorPresets/HonorTitles/\n";
+    f << ";   Gadgets/Machines OFF regardless of their settings below, and unlocks ONLY the\n";
+    f << ";   drivers/machines/albums tied to past limited-time festival content (read live\n";
+    f << ";   from the game). Use this if you want missed festival content without unlocking\n";
+    f << ";   the full permanent roster.\n";
+    f << "FestivalOnlyMode 0\n\n";
     f << "; --- DLC Gate Removal ---\n";
     f << "ClearCharaDLC 1\nClearMachineDLC 1\nClearHonorDLC 1\nClearAlbumDLC 1\nClearStickerDLC 1\n\n";
     f << "; --- Save Data Unlocks (category master switches) ---\n";
@@ -102,7 +111,7 @@ void WriteDefaultConfig()
     f << "; [Tracks]/[ColorPresets]/[Gadgets] sections below. An ID not listed in its section\n";
     f << "; falls back to the master switch here, so new content from a future update still\n";
     f << "; auto-unlocks unless you explicitly pin it.\n";
-    f << "HonorTitles 1\nDrivers 1\nMachineCustomize 1\nColorPresets 1\nMirrorSpeed 1\nMusic 1\nGadgets 1\nGadgetPlate 1\nChallenges 1\n\n";
+    f << "HonorTitles 1\nDrivers 1\nMachineCustomize 1\nColorPresets 1\nMirrorSpeed 1\nMusic 1\nGadgets 1\nMachines 1\nGadgetPlate 1\nChallenges 1\n\n";
     f << "; --- Optional (OFF by default) ---\n";
     f << "; WARNING: Achievements will permanently unlock on Steam\nAchievements 0\n";
     f << "; Super Sonic selectable + Fever mode in Race Park/Time Trial\nSuperSonicAll 1\n\n";
@@ -114,7 +123,7 @@ void WriteDefaultConfig()
     f << "NF_Horn 1\nNF_HonorTitles 1\nNF_Jukebox 1\nNF_Challenges 1\nNF_Rewards 1\n\n";
     f << "; --- Per-item overrides (optional, sparse) ---\n";
     f << "; Format: <key> <0 or 1>, one per line.\n";
-    f << "; [Drivers]/[ColorPresets]/[Gadgets] keys may be the enum name (e.g. Axel) OR a\n";
+    f << "; [Drivers]/[ColorPresets]/[Gadgets]/[Machines] keys may be the enum name (e.g. Axel) OR a\n";
     f << "; numeric ID -- names are resolved against the running game, so this works for\n";
     f << "; content added by future updates without needing a new DLL build.\n";
     f << "; [HonorTitles]/[Albums]/[Tracks] only support numeric IDs (no names exposed).\n";
@@ -134,7 +143,8 @@ void WriteDefaultConfig()
     f << "[Albums]\n\n";
     f << "[Tracks]\n\n";
     f << "[ColorPresets]\n\n";
-    f << "[Gadgets]\n";
+    f << "[Gadgets]\n\n";
+    f << "[Machines]\n";
     f.close();
 }
 

@@ -24,6 +24,13 @@ struct SRCWConfig
     // wherever the game exposes a lock/clear primitive for that category.
     bool RemovalMode      = false;
 
+    // When true, forces Drivers/Music/MachineCustomize/ColorPresets/HonorTitles/
+    // Gadgets/Machines master toggles off regardless of their own ini values, and
+    // unlocks ONLY the drivers/machines/albums tied to past limited-time festival
+    // content (read live from the game's own ContentDataAsset.ServerTimeContent).
+    // For replaying missed festivals without unlocking the full permanent roster.
+    bool FestivalOnlyMode = false;
+
     bool ClearCharaDLC    = true;
     bool ClearMachineDLC  = true;
     bool ClearHonorDLC    = true;
@@ -37,6 +44,7 @@ struct SRCWConfig
     bool MirrorSpeed      = true;
     bool Music            = true;
     bool Gadgets          = true;
+    bool Machines         = true;
     bool GadgetPlate      = true;
     bool Challenges       = true;
     bool Achievements     = false;
@@ -72,17 +80,21 @@ struct SRCWConfig
     std::unordered_map<std::string, bool> TrackOverridesRaw;
     std::unordered_map<std::string, bool> ColorPresetOverridesRaw;
     std::unordered_map<std::string, bool> GadgetOverridesRaw;
+    std::unordered_map<std::string, bool> MachineOverridesRaw;
 
     // Resolved numeric-ID overrides, populated once by ResolveOverrides(). An ID
     // absent from its map falls back to the category master toggle above (so new
     // content introduced by a future game update still auto-unlocks unless
-    // explicitly pinned here).
+    // explicitly pinned here). When FestivalOnlyMode is on, ResolveOverrides()
+    // additionally injects the ServerTimeContent-derived IDs into Driver/Machine/
+    // AlbumOverrides on top of whatever the ini specified.
     std::unordered_map<int32_t, bool> DriverOverrides;
     std::unordered_map<int32_t, bool> HonorTitleOverrides;
     std::unordered_map<int32_t, bool> AlbumOverrides;
     std::unordered_map<int32_t, bool> TrackOverrides;
     std::unordered_map<int32_t, bool> ColorPresetOverrides;
     std::unordered_map<int32_t, bool> GadgetOverrides;
+    std::unordered_map<int32_t, bool> MachineOverrides;
 };
 
 inline SRCWConfig cfg;

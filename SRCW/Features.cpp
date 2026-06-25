@@ -65,14 +65,49 @@ static void ResolveOverrideMapNumeric(const std::unordered_map<std::string, bool
     }
 }
 
+// Reads UContentDataAsset.ServerTimeContent and the per-category *SeverTimeMap fields to
+// find exactly which drivers/machines/albums are tied to past limited-time festival content,
+// then injects those IDs as explicit "=true" overrides and forces the relevant category
+// master switches off, so FestivalOnlyMode unlocks ONLY that content.
+static void ApplyFestivalOnlyMode()
+{
+    cfg.Drivers = false;
+    cfg.Music = false;
+    cfg.MachineCustomize = false;
+    cfg.ColorPresets = false;
+    cfg.HonorTitles = false;
+    cfg.Gadgets = false;
+    cfg.Machines = false;
+
+    auto* content = static_cast<SDK::UContentDataAsset*>(Reflect::FindInstance("ContentDataAsset"));
+    if (!content) { std::cout << "[FestivalOnlyMode] ContentDataAsset not found, nothing unlocked\n"; return; }
+
+    int drivers = 0, machines = 0, albums = 0;
+    for (auto& contentId : content->ServerTimeContent) {
+        for (auto& pair : content->CharaContentSeverTimeMap) {
+            if (pair.Key() == contentId) for (auto driverId : pair.Value().DriverIds) { cfg.DriverOverrides[(int32_t)driverId] = true; drivers++; }
+        }
+        for (auto& pair : content->MachineContentSeverTimeMap) {
+            if (pair.Key() == contentId) for (auto machineId : pair.Value().MachineIds) { cfg.MachineOverrides[(int32_t)machineId] = true; machines++; }
+        }
+        for (auto& pair : content->AlbumSeverTimeMap) {
+            if (pair.Key() == contentId) for (auto albumId : pair.Value().AlbumIds) { cfg.AlbumOverrides[albumId] = true; albums++; }
+        }
+    }
+    std::cout << "[FestivalOnlyMode] Unlocking " << drivers << " drivers, " << machines << " machines, " << albums << " albums from past festivals\n";
+}
+
 void ResolveOverrides()
 {
     ResolveOverrideMap(cfg.DriverOverridesRaw, cfg.DriverOverrides, "EDriverId");
     ResolveOverrideMap(cfg.ColorPresetOverridesRaw, cfg.ColorPresetOverrides, "EMachineId");
     ResolveOverrideMap(cfg.GadgetOverridesRaw, cfg.GadgetOverrides, "EGadgetId");
+    ResolveOverrideMap(cfg.MachineOverridesRaw, cfg.MachineOverrides, "EMachineId");
     ResolveOverrideMapNumeric(cfg.HonorTitleOverridesRaw, cfg.HonorTitleOverrides);
     ResolveOverrideMapNumeric(cfg.AlbumOverridesRaw, cfg.AlbumOverrides);
     ResolveOverrideMapNumeric(cfg.TrackOverridesRaw, cfg.TrackOverrides);
+
+    if (cfg.FestivalOnlyMode) ApplyFestivalOnlyMode();
 }
 
 // =============================================================================
@@ -344,15 +379,43 @@ bool RunUnlockPhase(int phase)
         }
         return true; }
     case 2:  {
-        if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineAssembly"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineParts"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); std::cout << "[Phase 2] Machine customize\n"; }
-        if (cfg.Gadgets || !cfg.GadgetOverrides.empty()) {
+        if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); std::cout << "[Phase 2] Machine customize\n"; }
+
+        // Gadgets: use the proven bulk call by default. Only switch to the per-ID
+        // GiveGadget/LockGadget loop when the user has actually opted into per-item
+        // control or relocking -- that path is newer and less battle-tested than
+        // UnlockGadgetAll(), so it shouldn't run unless explicitly requested.
+        if (cfg.GadgetOverrides.empty() && !cfg.RemovalMode) {
+            if (cfg.Gadgets) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UnlockGadgetAll"); std::cout << "[Phase 2] Gadgets (all, bulk)\n"; }
+        } else if (cfg.Gadgets || !cfg.GadgetOverrides.empty()) {
             int n = Reflect::GetEnumNum("EGadgetId");
             int given = 0, locked = 0;
             for (int i = 0; i < n; i++) {
                 if (ResolveEnabled(cfg.GadgetOverrides, i, cfg.Gadgets)) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "GiveGadget", (uint8_t)i); given++; }
                 else if (cfg.RemovalMode) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "LockGadget", (uint8_t)i); locked++; }
             }
-            std::cout << "[Phase 2] Gadgets (" << given << " given, " << locked << " locked)\n";
+            std::cout << "[Phase 2] Gadgets (" << given << " given, " << locked << " locked, per-ID)\n";
+        }
+
+        // Machines (kart models): StoreAllMachineAssembly/StoreAllMachineParts cover
+        // everyone by default. Per-machine control swaps to AddFrontPartsById/
+        // AddRearPartsById/AddTirePartsById + UpdateMachineAssemblyData -- this path
+        // is unverified in-game so far, only engage it when actually requested.
+        if (cfg.MachineOverrides.empty()) {
+            if (cfg.Machines) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineAssembly"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineParts"); std::cout << "[Phase 2] Machines (all, bulk)\n"; }
+        } else {
+            int n = Reflect::GetEnumNum("EMachineId");
+            int unlocked = 0;
+            for (int i = 0; i < n; i++) {
+                if (ResolveEnabled(cfg.MachineOverrides, i, cfg.Machines)) {
+                    Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "AddFrontPartsById", (uint8_t)i);
+                    Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "AddRearPartsById", (uint8_t)i);
+                    Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "AddTirePartsById", (uint8_t)i);
+                    unlocked++;
+                }
+            }
+            Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UpdateMachineAssemblyData");
+            std::cout << "[Phase 2] Machines (" << unlocked << " unlocked, per-ID, UNVERIFIED in-game)\n";
         }
         return true; }
     case 3:  {
