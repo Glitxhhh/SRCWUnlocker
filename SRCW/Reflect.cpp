@@ -1,4 +1,5 @@
 #include "Reflect.h"
+#include <cctype>
 
 namespace Reflect
 {
@@ -313,5 +314,37 @@ namespace Reflect
         }
         std::cout << "[Reflect] Warning: enum '" << enumName << "' not found\n";
         return 0;
+    }
+
+    static std::string ToLower(const std::string& s)
+    {
+        std::string out = s;
+        for (char& c : out) c = (char)tolower((unsigned char)c);
+        return out;
+    }
+
+    int32_t ResolveEnumValueByName(const char* enumName, const std::string& valueName)
+    {
+        std::string target = ToLower(valueName);
+        for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
+        {
+            SDK::UObject* obj = SDK::UObject::GObjects->GetByIndex(i);
+            if (!obj) continue;
+            if (obj->IsA(SDK::EClassCastFlags::Enum) && obj->GetName() == enumName)
+            {
+                auto* uenum = static_cast<SDK::UEnum*>(obj);
+                for (int j = 0; j < uenum->Names.Num(); j++)
+                {
+                    std::string name = uenum->Names[j].Key().ToString();
+                    size_t colonPos = name.rfind("::");
+                    std::string valueOnly = (colonPos != std::string::npos) ? name.substr(colonPos + 2) : name;
+                    if (ToLower(valueOnly) == target)
+                        return (int32_t)uenum->Names[j].Value();
+                }
+                return -1;
+            }
+        }
+        std::cout << "[Reflect] Warning: enum '" << enumName << "' not found while resolving '" << valueName << "'\n";
+        return -1;
     }
 }

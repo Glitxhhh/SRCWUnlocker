@@ -52,6 +52,13 @@ namespace Reflect
     bool CallStaticUInt8RetBool(const char* className, const char* funcName, uint8_t param);
 
     int32_t GetEnumNum(const char* enumName);
+
+    // Resolves an enum value's numeric ID by its name (e.g. "EDriverId", "Axel") by
+    // reading the live UEnum's Names list at runtime. Returns -1 if not found.
+    // Because this reads the running game's actual enum, a value added by a future
+    // game update resolves correctly without recompiling against a new SDK dump.
+    int32_t ResolveEnumValueByName(const char* enumName, const std::string& valueName);
+
     void ClearCache();
 }
 

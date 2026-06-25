@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <cstdint>
+#include <unordered_map>
 
 #include "Helpers.h"
 #include "Reflect.h"
@@ -18,6 +19,11 @@ struct SRCWConfig
     bool HotkeyEnabled    = false;  // false = autorun on menu load
     int  UnlockKey        = 0xC0;   // VK_OEM_3 (~)
 
+    // When false (default), an ID resolved as "disabled" is left untouched (skipped).
+    // When true, an ID resolved as "disabled" is actively re-locked in save data
+    // wherever the game exposes a lock/clear primitive for that category.
+    bool RemovalMode      = false;
+
     bool ClearCharaDLC    = true;
     bool ClearMachineDLC  = true;
     bool ClearHonorDLC    = true;
@@ -30,6 +36,7 @@ struct SRCWConfig
     bool ColorPresets     = true;
     bool MirrorSpeed      = true;
     bool Music            = true;
+    bool Gadgets          = true;
     bool GadgetPlate      = true;
     bool Challenges       = true;
     bool Achievements     = false;
@@ -53,9 +60,40 @@ struct SRCWConfig
     bool NF_Jukebox       = true;
     bool NF_Challenges    = true;
     bool NF_Rewards       = true;
+
+    // Raw text keys parsed from [Drivers]/[HonorTitles]/[Albums]/[Tracks]/
+    // [ColorPresets]/[Gadgets] INI sections. Keys may be a numeric ID or, for
+    // enum-backed categories (Drivers/ColorPresets/Gadgets), the enum value's
+    // name (e.g. "Axel"), resolved at runtime via Reflect::ResolveEnumValueByName
+    // once the game's enums are loaded — see ResolveOverrides() in Features.cpp.
+    std::unordered_map<std::string, bool> DriverOverridesRaw;
+    std::unordered_map<std::string, bool> HonorTitleOverridesRaw;
+    std::unordered_map<std::string, bool> AlbumOverridesRaw;
+    std::unordered_map<std::string, bool> TrackOverridesRaw;
+    std::unordered_map<std::string, bool> ColorPresetOverridesRaw;
+    std::unordered_map<std::string, bool> GadgetOverridesRaw;
+
+    // Resolved numeric-ID overrides, populated once by ResolveOverrides(). An ID
+    // absent from its map falls back to the category master toggle above (so new
+    // content introduced by a future game update still auto-unlocks unless
+    // explicitly pinned here).
+    std::unordered_map<int32_t, bool> DriverOverrides;
+    std::unordered_map<int32_t, bool> HonorTitleOverrides;
+    std::unordered_map<int32_t, bool> AlbumOverrides;
+    std::unordered_map<int32_t, bool> TrackOverrides;
+    std::unordered_map<int32_t, bool> ColorPresetOverrides;
+    std::unordered_map<int32_t, bool> GadgetOverrides;
 };
 
 inline SRCWConfig cfg;
+
+// Resolves whether `id` should be unlocked: explicit per-ID override if present,
+// otherwise the category master toggle.
+inline bool ResolveEnabled(const std::unordered_map<int32_t, bool>& overrides, int32_t id, bool categoryDefault)
+{
+    auto it = overrides.find(id);
+    return it != overrides.end() ? it->second : categoryDefault;
+}
 inline const char ConfigFileName[] = ".\\UNION\\Binaries\\Win64\\SRCW.ini";
 
 inline bool     bCleared = false;
@@ -70,9 +108,12 @@ void LoadConfig();
 void WriteDefaultConfig();
 void HookGame();
 void Clear();
+void ResolveOverrides();
 bool RunUnlockPhase(int phase);
 bool UnlockSteamAchievements();
 void Cleanup();
+
+SDK::UAppSaveGame* GetSaveGame();
 
 void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Function, void* Parms);
 typedef void(__fastcall* AActor_ProcessEvent_t)(SDK::AActor* Class, SDK::UFunction* Function, void* Parms);

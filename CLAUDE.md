@@ -94,7 +94,49 @@ All game objects resolved by name at runtime:
 Key-value, one setting per line, matching the `SRCWConfig` fields in `Features.h` (e.g.
 `Console`, `PhaseDelayMs`, `HotkeyEnabled`, `UnlockKey`, and the per-feature `Clear*`/feature
 toggles). `LoadConfig()`/`WriteDefaultConfig()` in `dllmain.cpp`/`Features.cpp` define exact keys —
-check there before assuming a flag name.
+check there before assuming a flag name. A static copy lives at the repo root (`SRCW.ini`) purely
+so the release CI has something to bundle — keep it in sync with `WriteDefaultConfig()`'s output.
+
+### Per-ID overrides + RemovalMode (v3.2)
+
+Six categories support sparse per-ID overrides via INI sections: `[Drivers]`, `[HonorTitles]`,
+`[Albums]`, `[Tracks]`, `[ColorPresets]`, `[Gadgets]`. Each line is `<key> <0|1>`. For
+**Drivers/ColorPresets/Gadgets** the key may be a numeric ID *or* an enum value name (e.g.
+`Axel`) — resolved at runtime against the live `EDriverId`/`EMachineId`/`EGadgetId` `UEnum` via
+`Reflect::ResolveEnumValueByName` (see `Reflect.cpp`), not the compiled SDK constants. This means
+a name added by a future game update resolves correctly without rebuilding the DLL. HonorTitles/
+Albums/Tracks have no enum backing their IDs, so those sections are numeric-only.
+
+An ID absent from its section falls back to the category's master toggle (`cfg.Drivers`,
+`cfg.Music`, etc.) — this preserves the "new content auto-unlocks" property; explicit overrides
+are for pinning specific items, not for replacing the master switch.
+
+Resolution happens once, lazily, via `ResolveOverrides()` (`Features.cpp`), called from
+`RunUnlockPhase()` on its first invocation — **not** from `LoadConfig()`, because `LoadConfig()`
+runs at `DLL_PROCESS_ATTACH` before `GObjects`/enums are populated. `LoadConfig()` only stores the
+raw string keys into `cfg.*OverridesRaw`.
+
+`RemovalMode 1` turns a resolved-disabled ID from "skip" into "actively re-lock in save data."
+This is **not** implemented by removing TMap entries — the lightweight `TMap`/`TSet` reflection
+containers in `UnrealContainers.hpp` can mutate existing values in place (proven safe; used
+throughout) but cannot safely insert/remove keys (no hash-table sync with native code), so doing
+that would desync the live save object. Verified safe relock primitives, found by tracing each
+category's actual save-data field on `UAppSaveGame` (`UnionSystem_classes.hpp`):
+- **Drivers** → flip `FUserDriverProperty.bIsSelectable` (`_UserDriverData.UserDriverList`)
+- **Albums** → flip `FAlbumCondition.bUnlocked`/`bAvailable` (`_UserJukeboxData.AlbumCondition`)
+- **Tracks** → flip `FTrackCondition.bAvailable` (`_UserJukeboxData.TrackCondition`)
+- **Honor Titles** → remove the ID from `_UserHonorTitleData.UnlockedHonorTitleList`, a flat
+  `TArray<int32>` (safe — no hash table involved, just a `TArray::Remove(Index)` shift)
+- **Gadgets** → real `MachineCustomizeUtilityLibrary::LockGadget(EGadgetId)` UFunction (safest —
+  goes through the game's own logic, not a raw field write)
+
+**Color Presets has no verified relock path.** Its unlock state is presence-in-`TMap`
+(`FUserMachineAssemblyData.ColorPresetList`, keyed by `EMachineColorPresetId`/`EMachineId`), and
+there's no dedicated lock UFunction for it (unlike Gadgets/Horns). Don't add one without first
+confirming a safe mechanism — under `RemovalMode` it currently just skips and logs a notice.
+Stickers/Horns/Auras/MachineParts are in the same "TMap-presence = unlocked" boat and are
+currently only category-toggle-controlled (no per-ID override, no relock) — extending them needs
+the same kind of save-field tracing done above, not a guess.
 
 ## Coding Conventions
 

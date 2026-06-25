@@ -1,4 +1,5 @@
 #include "Features.h"
+#include <cctype>
 
 // =============================================================================
 // Steam Achievement Unlocking
@@ -36,6 +37,43 @@ bool UnlockSteamAchievements()
 }
 
 void Cleanup() { if (cfg.Console) FreeConsole(); }
+
+// =============================================================================
+// Save game access & per-ID override resolution
+// =============================================================================
+SDK::UAppSaveGame* GetSaveGame()
+{
+    return static_cast<SDK::UAppSaveGame*>(Reflect::FindInstance("AppSaveGame"));
+}
+
+static void ResolveOverrideMap(const std::unordered_map<std::string, bool>& raw, std::unordered_map<int32_t, bool>& resolved, const char* enumName)
+{
+    for (auto& [key, value] : raw) {
+        bool numeric = !key.empty() && (isdigit((unsigned char)key[0]) || (key[0] == '-' && key.size() > 1));
+        int32_t id = numeric ? std::stoi(key) : Reflect::ResolveEnumValueByName(enumName, key);
+        if (id < 0) { std::cout << "[Config] Warning: could not resolve '" << key << "' against " << enumName << "\n"; continue; }
+        resolved[id] = value;
+    }
+}
+
+// Numeric-only categories (no enum backing these IDs in the SDK)
+static void ResolveOverrideMapNumeric(const std::unordered_map<std::string, bool>& raw, std::unordered_map<int32_t, bool>& resolved)
+{
+    for (auto& [key, value] : raw) {
+        try { resolved[std::stoi(key)] = value; }
+        catch (...) { std::cout << "[Config] Warning: '" << key << "' is not a valid numeric ID for this section\n"; }
+    }
+}
+
+void ResolveOverrides()
+{
+    ResolveOverrideMap(cfg.DriverOverridesRaw, cfg.DriverOverrides, "EDriverId");
+    ResolveOverrideMap(cfg.ColorPresetOverridesRaw, cfg.ColorPresetOverrides, "EMachineId");
+    ResolveOverrideMap(cfg.GadgetOverridesRaw, cfg.GadgetOverrides, "EGadgetId");
+    ResolveOverrideMapNumeric(cfg.HonorTitleOverridesRaw, cfg.HonorTitleOverrides);
+    ResolveOverrideMapNumeric(cfg.AlbumOverridesRaw, cfg.AlbumOverrides);
+    ResolveOverrideMapNumeric(cfg.TrackOverridesRaw, cfg.TrackOverrides);
+}
 
 // =============================================================================
 // Super Sonic — Native ExecFunction pointer swap
@@ -255,37 +293,109 @@ void Clear()
 // =============================================================================
 // Phased unlock
 // =============================================================================
+static bool bOverridesResolved = false;
+
 bool RunUnlockPhase(int phase)
 {
+    if (!bOverridesResolved) { ResolveOverrides(); bOverridesResolved = true; }
+
     switch (phase) {
     case 0:  {
-        if (cfg.HonorTitles) {
-            int unlocked = 0;
+        if (cfg.HonorTitles || !cfg.HonorTitleOverrides.empty()) {
+            int unlocked = 0, relocked = 0;
             auto* honorAsset = static_cast<SDK::UHonorTitleListDataAsset*>(Reflect::FindInstance("HonorTitleListDataAsset"));
             if (honorAsset) {
                 Reflect::CallInstance(honorAsset, "HonorTitleListDataAsset", "Update");
                 for (auto& pair : honorAsset->HonorTitleTableDataMap) {
-                    Reflect::CallStaticInt32("AppSaveGameHelper", "UnlockHonorTitle", pair.Key());
-                    unlocked++;
+                    int32_t id = pair.Key();
+                    if (ResolveEnabled(cfg.HonorTitleOverrides, id, cfg.HonorTitles)) {
+                        Reflect::CallStaticInt32("AppSaveGameHelper", "UnlockHonorTitle", id);
+                        unlocked++;
+                    } else if (cfg.RemovalMode) {
+                        auto* save = GetSaveGame();
+                        if (save) {
+                            auto& list = save->_UserHonorTitleData.UnlockedHonorTitleList;
+                            for (int i = list.Num() - 1; i >= 0; i--) if (list[i] == id) list.Remove(i);
+                            relocked++;
+                        }
+                    }
                 }
             }
-            std::cout << "[Phase 0] Honor titles (" << unlocked << ")\n";
+            std::cout << "[Phase 0] Honor titles (" << unlocked << " unlocked, " << relocked << " relocked)\n";
         }
         return true; }
-    case 1:  { if (cfg.Drivers) { int n = Reflect::GetEnumNum("EDriverId"); for (int i = 0; i < n; i++) { Reflect::CallStaticUInt8("AppSaveGameHelper", "SetDriverSelectable", (uint8_t)i); Reflect::CallStaticUInt8("AppSaveGameHelper", "ClearDriverNew", (uint8_t)i); } std::cout << "[Phase 1] Drivers (" << n << ")\n"; } return true; }
-    case 2:  { if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineAssembly"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineParts"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UnlockGadgetAll"); std::cout << "[Phase 2] Machine customize\n"; } return true; }
-    case 3:  { if (cfg.ColorPresets) { int n = Reflect::GetEnumNum("EMachineId"); for (int i = 0; i < n; i++) Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "UnlockMachinePresetColor", (uint8_t)i); std::cout << "[Phase 3] Color presets\n"; } return true; }
+    case 1:  {
+        if (cfg.Drivers || !cfg.DriverOverrides.empty()) {
+            int n = Reflect::GetEnumNum("EDriverId");
+            int unlocked = 0, relocked = 0;
+            auto* save = cfg.RemovalMode ? GetSaveGame() : nullptr;
+            for (int i = 0; i < n; i++) {
+                if (ResolveEnabled(cfg.DriverOverrides, i, cfg.Drivers)) {
+                    Reflect::CallStaticUInt8("AppSaveGameHelper", "SetDriverSelectable", (uint8_t)i);
+                    Reflect::CallStaticUInt8("AppSaveGameHelper", "ClearDriverNew", (uint8_t)i);
+                    unlocked++;
+                } else if (save) {
+                    for (auto& pair : save->_UserDriverData.UserDriverList) {
+                        if ((int32_t)pair.Key() == i) { pair.Value().bIsSelectable = false; relocked++; }
+                    }
+                }
+            }
+            std::cout << "[Phase 1] Drivers (" << unlocked << " unlocked, " << relocked << " relocked)\n";
+        }
+        return true; }
+    case 2:  {
+        if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineAssembly"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineParts"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); std::cout << "[Phase 2] Machine customize\n"; }
+        if (cfg.Gadgets || !cfg.GadgetOverrides.empty()) {
+            int n = Reflect::GetEnumNum("EGadgetId");
+            int given = 0, locked = 0;
+            for (int i = 0; i < n; i++) {
+                if (ResolveEnabled(cfg.GadgetOverrides, i, cfg.Gadgets)) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "GiveGadget", (uint8_t)i); given++; }
+                else if (cfg.RemovalMode) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "LockGadget", (uint8_t)i); locked++; }
+            }
+            std::cout << "[Phase 2] Gadgets (" << given << " given, " << locked << " locked)\n";
+        }
+        return true; }
+    case 3:  {
+        if (cfg.ColorPresets || !cfg.ColorPresetOverrides.empty()) {
+            int n = Reflect::GetEnumNum("EMachineId");
+            int unlocked = 0, skipped = 0;
+            for (int i = 0; i < n; i++) {
+                if (ResolveEnabled(cfg.ColorPresetOverrides, i, cfg.ColorPresets)) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "UnlockMachinePresetColor", (uint8_t)i); unlocked++; }
+                else skipped++;
+            }
+            if (cfg.RemovalMode && skipped > 0) std::cout << "[Phase 3] Note: RemovalMode can't relock color presets yet (no safe lock primitive found) - " << skipped << " skipped\n";
+            std::cout << "[Phase 3] Color presets (" << unlocked << ")\n";
+        }
+        return true; }
     case 4:  { if (cfg.MirrorSpeed) { Reflect::CallStaticBool("AppSaveGameHelper", "SetOpenMirror", true); Reflect::CallStaticBool("AppSaveGameHelper", "SetOpenSuperSonicSpeed", true); std::cout << "[Phase 4] Mirror & SSS\n"; } return true; }
     case 5:  {
-        if (cfg.Music) {
-            int albums = 0, tracks = 0;
+        if (cfg.Music || !cfg.AlbumOverrides.empty() || !cfg.TrackOverrides.empty()) {
+            int albums = 0, tracks = 0, albumsRelocked = 0, tracksRelocked = 0;
             auto* jukebox = static_cast<SDK::UJukeboxDataAsset*>(Reflect::FindInstance("JukeboxDataAsset"));
+            auto* save = cfg.RemovalMode ? GetSaveGame() : nullptr;
             if (jukebox) {
                 Reflect::CallInstance(jukebox, "JukeboxDataAsset", "Update");
-                for (auto& pair : jukebox->AlbumDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetAlbumAvailable", pair.Key()); albums++; }
-                for (auto& pair : jukebox->TrackDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetTrackAvailable", pair.Key()); tracks++; }
+                for (auto& pair : jukebox->AlbumDataMap) {
+                    int32_t id = pair.Key();
+                    if (ResolveEnabled(cfg.AlbumOverrides, id, cfg.Music)) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetAlbumAvailable", id); albums++; }
+                    else if (save) {
+                        for (auto& cond : save->_UserJukeboxData.AlbumCondition) {
+                            if (cond.Key() == id) { cond.Value().bUnlocked = false; cond.Value().bAvailable = false; albumsRelocked++; }
+                        }
+                    }
+                }
+                for (auto& pair : jukebox->TrackDataMap) {
+                    int32_t id = pair.Key();
+                    if (ResolveEnabled(cfg.TrackOverrides, id, cfg.Music)) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetTrackAvailable", id); tracks++; }
+                    else if (save) {
+                        for (auto& cond : save->_UserJukeboxData.TrackCondition) {
+                            if (cond.Key() == id) { cond.Value().bAvailable = false; tracksRelocked++; }
+                        }
+                    }
+                }
             }
-            std::cout << "[Phase 5] Music (" << albums << " albums, " << tracks << " tracks)\n";
+            std::cout << "[Phase 5] Music (" << albums << " albums, " << tracks << " tracks unlocked; "
+                      << albumsRelocked << "/" << tracksRelocked << " albums/tracks relocked)\n";
         }
         return true; }
     case 6:  { if (cfg.StagesDLC) { Reflect::CallStaticBool("UnionContentUtils", "RequestCheckContent", true); std::cout << "[Phase 6] DLC stages\n"; } return true; }
