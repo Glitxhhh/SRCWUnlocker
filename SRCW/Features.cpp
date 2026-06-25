@@ -258,12 +258,36 @@ void Clear()
 bool RunUnlockPhase(int phase)
 {
     switch (phase) {
-    case 0:  { if (cfg.HonorTitles) { for (int i = 0; i < 500; i++) Reflect::CallStaticInt32("AppSaveGameHelper", "UnlockHonorTitle", i); std::cout << "[Phase 0] Honor titles\n"; } return true; }
+    case 0:  {
+        if (cfg.HonorTitles) {
+            int unlocked = 0;
+            auto* honorAsset = static_cast<SDK::UHonorTitleListDataAsset*>(Reflect::FindInstance("HonorTitleListDataAsset"));
+            if (honorAsset) {
+                Reflect::CallInstance(honorAsset, "HonorTitleListDataAsset", "Update");
+                for (auto& pair : honorAsset->HonorTitleTableDataMap) {
+                    Reflect::CallStaticInt32("AppSaveGameHelper", "UnlockHonorTitle", pair.Key());
+                    unlocked++;
+                }
+            }
+            std::cout << "[Phase 0] Honor titles (" << unlocked << ")\n";
+        }
+        return true; }
     case 1:  { if (cfg.Drivers) { int n = Reflect::GetEnumNum("EDriverId"); for (int i = 0; i < n; i++) { Reflect::CallStaticUInt8("AppSaveGameHelper", "SetDriverSelectable", (uint8_t)i); Reflect::CallStaticUInt8("AppSaveGameHelper", "ClearDriverNew", (uint8_t)i); } std::cout << "[Phase 1] Drivers (" << n << ")\n"; } return true; }
     case 2:  { if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineAssembly"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllMachineParts"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UnlockGadgetAll"); std::cout << "[Phase 2] Machine customize\n"; } return true; }
     case 3:  { if (cfg.ColorPresets) { int n = Reflect::GetEnumNum("EMachineId"); for (int i = 0; i < n; i++) Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "UnlockMachinePresetColor", (uint8_t)i); std::cout << "[Phase 3] Color presets\n"; } return true; }
     case 4:  { if (cfg.MirrorSpeed) { Reflect::CallStaticBool("AppSaveGameHelper", "SetOpenMirror", true); Reflect::CallStaticBool("AppSaveGameHelper", "SetOpenSuperSonicSpeed", true); std::cout << "[Phase 4] Mirror & SSS\n"; } return true; }
-    case 5:  { if (cfg.Music) { for (int i = 0; i < 200; i++) Reflect::CallStaticInt32("AppSaveGameHelper", "SetAlbumAvailable", i); for (int i = 0; i < 500; i++) Reflect::CallStaticInt32("AppSaveGameHelper", "SetTrackAvailable", i); std::cout << "[Phase 5] Music\n"; } return true; }
+    case 5:  {
+        if (cfg.Music) {
+            int albums = 0, tracks = 0;
+            auto* jukebox = static_cast<SDK::UJukeboxDataAsset*>(Reflect::FindInstance("JukeboxDataAsset"));
+            if (jukebox) {
+                Reflect::CallInstance(jukebox, "JukeboxDataAsset", "Update");
+                for (auto& pair : jukebox->AlbumDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetAlbumAvailable", pair.Key()); albums++; }
+                for (auto& pair : jukebox->TrackDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetTrackAvailable", pair.Key()); tracks++; }
+            }
+            std::cout << "[Phase 5] Music (" << albums << " albums, " << tracks << " tracks)\n";
+        }
+        return true; }
     case 6:  { if (cfg.StagesDLC) { Reflect::CallStaticBool("UnionContentUtils", "RequestCheckContent", true); std::cout << "[Phase 6] DLC stages\n"; } return true; }
     case 7:  {
         if (cfg.StagesGPOpen) {
@@ -277,10 +301,21 @@ bool RunUnlockPhase(int phase)
     case 8:  {
         if (cfg.StagesSecret) {
             auto* gp = Reflect::FindCDO("CheatGrandPrix");
-            if (gp) { Reflect::CallInstance(gp, "CheatGrandPrix", "SetPlayedAnotherStageAll"); Reflect::CallInstanceUInt8Bool(gp, "CheatGrandPrix", "SetClearedGrandPrixEnding", 0, true); Reflect::CallInstanceUInt8Bool(gp, "CheatGrandPrix", "SetClearedGrandPrixEnding", 1, true); }
+            if (gp) {
+                Reflect::CallInstance(gp, "CheatGrandPrix", "SetPlayedAnotherStageAll");
+                int ne = Reflect::GetEnumNum("EGrandPrixEndingId");
+                for (int i = 0; i < ne; i++) Reflect::CallInstanceUInt8Bool(gp, "CheatGrandPrix", "SetClearedGrandPrixEnding", (uint8_t)i, true);
+            }
             std::cout << "[Phase 8] Secret stages\n"; }
         return true; }
-    case 9:  { if (cfg.GadgetPlate) { Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "SetCurrentGadgetPlateIdUseId", 7); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UpdateGadgetSlotNumInUserData"); std::cout << "[Phase 9] Gadget plate\n"; } return true; }
+    case 9:  {
+        if (cfg.GadgetPlate) {
+            int n = Reflect::GetEnumNum("EGadgetPlateId");
+            if (n > 0) Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "SetCurrentGadgetPlateIdUseId", (uint8_t)(n - 1));
+            Reflect::CallStatic("MachineCustomizeUtilityLibrary", "UpdateGadgetSlotNumInUserData");
+            std::cout << "[Phase 9] Gadget plate (highest id " << (n - 1) << ")\n";
+        }
+        return true; }
     case 10: { if (cfg.Challenges) { Reflect::CallStatic("CheatChallenge", "AllChallengeClear"); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteMainChallenge", true); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteSpecialChallenge", true); int32_t pc = Reflect::CallStaticRetInt32("ChallengeStatsUtility", "GetChallengeProgressCount"); Reflect::CallStaticInt32("AppSaveGameHelper", "SetChallengeShowProgress", pc); Reflect::CallStaticFloat("AppSaveGameHelper", "SetChallengeLastShowProgress", 1.0f); std::cout << "[Phase 10] Challenges\n"; } return true; }
 
     // Phase 11: Super Sonic — save-data + ExecFunction hooks

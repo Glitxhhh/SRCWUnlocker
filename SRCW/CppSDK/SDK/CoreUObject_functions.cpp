@@ -165,22 +165,27 @@ bool UStruct::IsSubclassOf(const UStruct* Base) const
 	if (!Base)
 		return false;
 
-	const int32 NumParentStructBasesInChainMinusOne = Base->BaseChain.NumStructBasesInChainMinusOne;
-	return NumParentStructBasesInChainMinusOne <= BaseChain.NumStructBasesInChainMinusOne && BaseChain.StructBaseChainArray[NumParentStructBasesInChainMinusOne] == &Base->BaseChain;
+	for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
+	{
+		if (Struct == Base)
+			return true;
+	}
+
+	return false;
 }
 
 
 // Predefined Function
 // Checks if this class has a certain base
 
-bool UStruct::IsSubclassOf(const FName& BaseClassName) const
+bool UStruct::IsSubclassOf(const FName& baseClassName) const
 {
-	if (BaseClassName.IsNone())
+	if (baseClassName.IsNone())
 		return false;
 
-	for (const UStruct* Struct = this; Struct; Struct = Struct->SuperStruct)
+	for (const UStruct* Struct = this; Struct; Struct = Struct->Super)
 	{
-		if (Struct->Name == BaseClassName)
+		if (Struct->Name == baseClassName)
 			return true;
 	}
 
@@ -193,7 +198,7 @@ bool UStruct::IsSubclassOf(const FName& BaseClassName) const
 
 class UFunction* UClass::GetFunction(const char* ClassName, const char* FuncName) const
 {
-	for(const UStruct* Clss = this; Clss; Clss = Clss->SuperStruct)
+	for(const UStruct* Clss = this; Clss; Clss = Clss->Super)
 	{
 		if (Clss->GetName() != ClassName)
 			continue;

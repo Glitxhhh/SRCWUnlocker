@@ -35,6 +35,28 @@ enum class EAnimToTextureBonePrecision : uint8
 	EAnimToTextureBonePrecision_MAX          = 2,
 };
 
+// ScriptStruct AnimToTexture.AnimToTextureAnimState
+// 0x0014 (0x0014 - 0x0000)
+struct FAnimToTextureAnimState final
+{
+public:
+	float                                         StartFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NumFrames;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         bLooping;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalStartTime;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnimToTextureAnimState;
+
+// ScriptStruct AnimToTexture.AnimToTextureInstancePlaybackData
+// 0x0014 (0x0014 - 0x0000)
+struct FAnimToTextureInstancePlaybackData final
+{
+public:
+	struct FAnimToTextureAnimState                CurrentState;                                      // 0x0000(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnimToTextureInstancePlaybackData;
+
 // ScriptStruct AnimToTexture.AnimToTextureMiniAnimState
 // 0x000C (0x000C - 0x0000)
 struct FAnimToTextureMiniAnimState final
@@ -96,28 +118,6 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimInfo;
-
-// ScriptStruct AnimToTexture.AnimToTextureAnimState
-// 0x0014 (0x0014 - 0x0000)
-struct FAnimToTextureAnimState final
-{
-public:
-	float                                         StartFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NumFrames;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayRate;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         bLooping;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalStartTime;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAnimToTextureAnimState;
-
-// ScriptStruct AnimToTexture.AnimToTextureInstancePlaybackData
-// 0x0014 (0x0014 - 0x0000)
-struct FAnimToTextureInstancePlaybackData final
-{
-public:
-	struct FAnimToTextureAnimState                CurrentState;                                      // 0x0000(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAnimToTextureInstancePlaybackData;
 
 // ScriptStruct AnimToTexture.AnimToTextureAnimationSyncData
 // 0x0004 (0x0004 - 0x0000)

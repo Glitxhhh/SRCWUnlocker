@@ -8,6 +8,7 @@
 #include "Helpers.h"
 #include "Reflect.h"
 #include "CppSDK/SDK/Engine_classes.hpp"
+#include "CppSDK/SDK/UnionSystem_classes.hpp"
 
 struct SRCWConfig
 {

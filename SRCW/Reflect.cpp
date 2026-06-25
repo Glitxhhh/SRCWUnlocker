@@ -20,7 +20,7 @@ namespace Reflect
     SDK::UObject* FindCDO(const char* className)
     {
         SDK::UClass* cls = FindClass(className);
-        return cls ? cls->ClassDefaultObject : nullptr;
+        return cls ? cls->DefaultObject : nullptr;
     }
 
     SDK::UObject* FindInstance(const char* className)
@@ -56,8 +56,8 @@ namespace Reflect
             if (field->Name.ToString() == propName)
                 return static_cast<SDK::FProperty*>(field);
         }
-        if (structType->SuperStruct)
-            return FindProperty(structType->SuperStruct, propName);
+        if (structType->Super)
+            return FindProperty(structType->Super, propName);
         return nullptr;
     }
 

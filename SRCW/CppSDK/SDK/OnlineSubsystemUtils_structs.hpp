@@ -171,17 +171,6 @@ public:
 };
 DUMPER7_ASSERTS_FOnlineProxyStoreOffer;
 
-// ScriptStruct OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
-// 0x0030 (0x0030 - 0x0000)
-struct FInAppPurchaseRestoreInfo2 final
-{
-public:
-	class FString                                 ItemName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemId;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FInAppPurchaseRestoreInfo2;
-
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductInfo2
 // 0x00F8 (0x00F8 - 0x0000)
 struct FInAppPurchaseProductInfo2 final
@@ -202,6 +191,17 @@ public:
 	TMap<class FString, class FString>            DynamicFields;                                     // 0x00A8(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInAppPurchaseProductInfo2;
+
+// ScriptStruct OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
+// 0x0030 (0x0030 - 0x0000)
+struct FInAppPurchaseRestoreInfo2 final
+{
+public:
+	class FString                                 ItemName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemId;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInAppPurchaseRestoreInfo2;
 
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductRequest2
 // 0x0018 (0x0018 - 0x0000)

@@ -33,11 +33,11 @@ using namespace UC;
 */
 namespace Offsets
 {
-	constexpr int32 GObjects          = 0x08513D30;
-	constexpr int32 AppendString      = 0x0107C040;
-	constexpr int32 GNames            = 0x083F90C8;
-	constexpr int32 GWorld            = 0x0868CD58;
-	constexpr int32 ProcessEvent      = 0x01266690;
+	constexpr int32 GObjects          = 0x085A6D30;
+	constexpr int32 AppendString      = 0x01081010;
+	constexpr int32 GNames            = 0x0848C0C8;
+	constexpr int32 GWorld            = 0x0871FD58;
+	constexpr int32 ProcessEvent      = 0x0126B420;
 	constexpr int32 ProcessEventIdx   = 0x0000004D;
 }
 
@@ -157,7 +157,7 @@ ClassType* GetDefaultObjImpl()
 
 	if (StaticClass)
 	{
-		return reinterpret_cast<ClassType*>(StaticClass->ClassDefaultObject);
+		return reinterpret_cast<ClassType*>(StaticClass->DefaultObject);
 	}
 
 	return nullptr;
@@ -318,11 +318,11 @@ class FName final
 public:
 	static inline void*                           AppendString = nullptr;                            // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
-	int32                                         ComparisonIndex = 0x0;                             // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint32                                        Number = 0x0;                                      // 0x0004(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	int32                                         ComparisonIndex;                                   // 0x0000(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	uint32                                        Number;                                            // 0x0004(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
 public:
-	constexpr explicit FName(int32 ComparisonIndex, uint32 Number = 0)
+	constexpr FName(int32 ComparisonIndex = 0, uint32 Number = 0)
 		: ComparisonIndex(ComparisonIndex), Number(Number)
 	{
 	}
@@ -332,16 +332,10 @@ public:
 		AppendString = reinterpret_cast<void*>(Location);
 	}
 
-	constexpr FName() = default;
-	
-	constexpr FName(const FName&) = default;
-	
-	constexpr FName(FName&&) = default;
-	
-	constexpr FName& operator=(const FName&) = default;
-	
-	constexpr  FName& operator=(FName&&) = default;
-	
+	constexpr FName(const FName& other)
+		: ComparisonIndex(other.ComparisonIndex), Number(other.Number)
+	{
+	}
 
 	static void InitInternal()
 	{
@@ -383,6 +377,15 @@ public:
 		return OutputString.substr(pos + 1);
 	}
 	
+
+	FName& operator=(const FName& Other)
+	{
+		ComparisonIndex = Other.ComparisonIndex;
+		Number = Other.Number;
+	
+		return *this;
+	}
+
 	bool operator==(const FName& Other) const
 	{
 		return ComparisonIndex == Other.ComparisonIndex && Number == Other.Number;
@@ -455,17 +458,6 @@ public:
 		return ClassPtr != Other;
 	}
 };
-
-// Predefined struct FStructBaseChain
-// 0x0010 (0x0010 - 0x0000)
-struct FStructBaseChain
-{
-public:
-	FStructBaseChain**                            StructBaseChainArray;                              // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	int32                                         NumStructBasesInChainMinusOne;                     // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
-};
-DUMPER7_ASSERTS_FStructBaseChain;
-
 namespace FTextImpl
 {
 // Predefined struct FTextData

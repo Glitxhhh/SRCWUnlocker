@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -74,7 +74,7 @@ public:
 	uint8                                         Pad_7AE[0x2];                                      // 0x07AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_CustomEvent_PlayerNo;                       // 0x07B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECarStatusType                                K2Node_CustomEvent_CarStatusType;                  // 0x07B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    K2Node_CustomEvent_MachineID;                      // 0x07B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineId                                    K2Node_CustomEvent_MachineId;                      // 0x07B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7B6[0x2];                                      // 0x07B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x07B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x07C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

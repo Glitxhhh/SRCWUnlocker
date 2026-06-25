@@ -12,8 +12,8 @@
 
 #include "InterchangeCore_classes.hpp"
 #include "CinematicCamera_structs.hpp"
-#include "Engine_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -52,6 +52,60 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeActorFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeBaseLightFactoryNode
+// 0x0040 (0x01C0 - 0x0180)
+class UInterchangeBaseLightFactoryNode : public UInterchangeActorFactoryNode
+{
+public:
+	uint8                                         Pad_180[0x40];                                     // 0x0180(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomIntensity(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomLightColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomTemperature(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseTemperature(bool AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomIntensity(float* AttributeValue) const;
+	bool GetCustomLightColor(struct FColor* AttributeValue) const;
+	bool GetCustomTemperature(float* AttributeValue) const;
+	bool GetCustomUseTemperature(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeBaseLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseLightFactoryNode")
+	}
+	static class UInterchangeBaseLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeBaseLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeBaseLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeDirectionalLightFactoryNode
+// 0x0000 (0x01C0 - 0x01C0)
+class UInterchangeDirectionalLightFactoryNode final : public UInterchangeBaseLightFactoryNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeDirectionalLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeDirectionalLightFactoryNode")
+	}
+	static class UInterchangeDirectionalLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeDirectionalLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeDirectionalLightFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangePhysicalCameraFactoryNode
 // 0x0040 (0x01C0 - 0x0180)
@@ -186,6 +240,104 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeBaseMaterialFactoryNode;
 
+// Class InterchangeFactoryNodes.InterchangeLightFactoryNode
+// 0x0060 (0x0220 - 0x01C0)
+class UInterchangeLightFactoryNode : public UInterchangeBaseLightFactoryNode
+{
+public:
+	uint8                                         Pad_1C0[0x60];                                     // 0x01C0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomAttenuationRadius(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomIESBrightnessScale(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomIESTexture(const class FString& AttributeValue);
+	bool SetCustomIntensityUnits(ELightUnits AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRotation(const struct FRotator& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseIESBrightness(const bool& AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomAttenuationRadius(float* AttributeValue) const;
+	bool GetCustomIESBrightnessScale(float* AttributeValue) const;
+	bool GetCustomIESTexture(class FString* AttributeValue) const;
+	bool GetCustomIntensityUnits(ELightUnits* AttributeValue) const;
+	bool GetCustomRotation(struct FRotator* AttributeValue) const;
+	bool GetCustomUseIESBrightness(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeLightFactoryNode")
+	}
+	static class UInterchangeLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangePointLightFactoryNode
+// 0x0020 (0x0240 - 0x0220)
+class UInterchangePointLightFactoryNode : public UInterchangeLightFactoryNode
+{
+public:
+	uint8                                         Pad_220[0x20];                                     // 0x0220(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomLightFalloffExponent(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseInverseSquaredFalloff(bool AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomLightFalloffExponent(float* AttributeValue) const;
+	bool GetCustomUseInverseSquaredFalloff(bool* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangePointLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangePointLightFactoryNode")
+	}
+	static class UInterchangePointLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangePointLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangePointLightFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSpotLightFactoryNode
+// 0x0020 (0x0260 - 0x0240)
+class UInterchangeSpotLightFactoryNode final : public UInterchangePointLightFactoryNode
+{
+public:
+	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomInnerConeAngle(float AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomOuterConeAngle(float AttributeValue, bool bAddApplyDelegate);
+
+	bool GetCustomInnerConeAngle(float* AttributeValue) const;
+	bool GetCustomOuterConeAngle(float* AttributeValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSpotLightFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpotLightFactoryNode")
+	}
+	static class UInterchangeSpotLightFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSpotLightFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSpotLightFactoryNode;
+
 // Class InterchangeFactoryNodes.InterchangeDecalMaterialFactoryNode
 // 0x0020 (0x0170 - 0x0150)
 class UInterchangeDecalMaterialFactoryNode final : public UInterchangeBaseMaterialFactoryNode
@@ -251,98 +403,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeLevelSequenceFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeBaseLightFactoryNode
-// 0x0040 (0x01C0 - 0x0180)
-class UInterchangeBaseLightFactoryNode : public UInterchangeActorFactoryNode
-{
-public:
-	uint8                                         Pad_180[0x40];                                     // 0x0180(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomIntensity(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomLightColor(const struct FColor& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomTemperature(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseTemperature(bool AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomIntensity(float* AttributeValue) const;
-	bool GetCustomLightColor(struct FColor* AttributeValue) const;
-	bool GetCustomTemperature(float* AttributeValue) const;
-	bool GetCustomUseTemperature(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeBaseLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeBaseLightFactoryNode")
-	}
-	static class UInterchangeBaseLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeBaseLightFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeBaseLightFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeDirectionalLightFactoryNode
-// 0x0000 (0x01C0 - 0x01C0)
-class UInterchangeDirectionalLightFactoryNode final : public UInterchangeBaseLightFactoryNode
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeDirectionalLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeDirectionalLightFactoryNode")
-	}
-	static class UInterchangeDirectionalLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeDirectionalLightFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeDirectionalLightFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeLightFactoryNode
-// 0x0060 (0x0220 - 0x01C0)
-class UInterchangeLightFactoryNode : public UInterchangeBaseLightFactoryNode
-{
-public:
-	uint8                                         Pad_1C0[0x60];                                     // 0x01C0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomAttenuationRadius(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomIESBrightnessScale(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomIESTexture(const class FString& AttributeValue);
-	bool SetCustomIntensityUnits(ELightUnits AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRotation(const struct FRotator& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseIESBrightness(const bool& AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomAttenuationRadius(float* AttributeValue) const;
-	bool GetCustomIESBrightnessScale(float* AttributeValue) const;
-	bool GetCustomIESTexture(class FString* AttributeValue) const;
-	bool GetCustomIntensityUnits(ELightUnits* AttributeValue) const;
-	bool GetCustomRotation(struct FRotator* AttributeValue) const;
-	bool GetCustomUseIESBrightness(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeLightFactoryNode")
-	}
-	static class UInterchangeLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeLightFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeLightFactoryNode;
-
 // Class InterchangeFactoryNodes.InterchangeRectLightFactoryNode
 // 0x0020 (0x0240 - 0x0220)
 class UInterchangeRectLightFactoryNode final : public UInterchangeLightFactoryNode
@@ -372,66 +432,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeRectLightFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangePointLightFactoryNode
-// 0x0020 (0x0240 - 0x0220)
-class UInterchangePointLightFactoryNode : public UInterchangeLightFactoryNode
-{
-public:
-	uint8                                         Pad_220[0x20];                                     // 0x0220(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomLightFalloffExponent(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseInverseSquaredFalloff(bool AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomLightFalloffExponent(float* AttributeValue) const;
-	bool GetCustomUseInverseSquaredFalloff(bool* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangePointLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangePointLightFactoryNode")
-	}
-	static class UInterchangePointLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangePointLightFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangePointLightFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeSpotLightFactoryNode
-// 0x0020 (0x0260 - 0x0240)
-class UInterchangeSpotLightFactoryNode final : public UInterchangePointLightFactoryNode
-{
-public:
-	uint8                                         Pad_240[0x20];                                     // 0x0240(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool SetCustomInnerConeAngle(float AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomOuterConeAngle(float AttributeValue, bool bAddApplyDelegate);
-
-	bool GetCustomInnerConeAngle(float* AttributeValue) const;
-	bool GetCustomOuterConeAngle(float* AttributeValue) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeSpotLightFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeSpotLightFactoryNode")
-	}
-	static class UInterchangeSpotLightFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeSpotLightFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeSpotLightFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangePhysicsAssetFactoryNode
 // 0x0030 (0x0170 - 0x0140)
