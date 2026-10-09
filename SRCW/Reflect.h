@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <cstring>
 #include <iostream>
+#include <atomic>
 
 #include "CppSDK/SDK/CoreUObject_classes.hpp"
 
@@ -62,6 +63,15 @@ namespace Reflect
     // Locates GObjects and the FNamePool at runtime (no hardcoded offsets) and wires them
     // into the SDK. Safe to call repeatedly; returns true once both are ready.
     bool InitGlobals();
+
+    // When true, every game function we call is logged before it runs (see SRCW.log).
+    inline bool TraceCalls = false;
+
+    // Diagnostics for the heartbeat thread: the game function we are currently inside (null when idle),
+    // the most recent one, and how many we've issued.
+    inline std::atomic<SDK::UFunction*> CurrentCall{nullptr};
+    inline std::atomic<SDK::UFunction*> LastCall{nullptr};
+    inline std::atomic<uint64_t> CallCount{0};
 
     // Calls UObject::ProcessEvent via the signature-located function (SDK vtable fallback).
     void ProcessEvent(SDK::UObject* obj, SDK::UFunction* fn, void* parms);

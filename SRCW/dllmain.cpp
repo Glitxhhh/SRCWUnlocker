@@ -3,6 +3,9 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <io.h>
+#include <psapi.h>
+#include <cstdio>
 
 inline HMODULE CurrentModule = nullptr;
 
@@ -32,8 +35,7 @@ void LoadConfig()
         if (!(iss >> key >> value)) continue;
         bool b = (value != 0);
 
-        if (activeSection) { (*activeSection)[key] = b; continue; }
-
+        bool handled = true;
         if      (key == "Console") cfg.Console = b;
         else if (key == "ClearOnly") cfg.ClearOnly = b;
         else if (key == "PhaseDelayMs") cfg.PhaseDelayMs = value;
@@ -41,6 +43,7 @@ void LoadConfig()
         else if (key == "UnlockKey") cfg.UnlockKey = value;
         else if (key == "RemovalMode") cfg.RemovalMode = b;
         else if (key == "FestivalOnlyMode") cfg.FestivalOnlyMode = b;
+        else if (key == "TraceCalls") cfg.TraceCalls = b;
         else if (key == "ClearCharaDLC") cfg.ClearCharaDLC = b;
         else if (key == "ClearMachineDLC") cfg.ClearMachineDLC = b;
         else if (key == "ClearHonorDLC") cfg.ClearHonorDLC = b;
@@ -75,6 +78,14 @@ void LoadConfig()
         else if (key == "NF_Jukebox") cfg.NF_Jukebox = b;
         else if (key == "NF_Challenges") cfg.NF_Challenges = b;
         else if (key == "NF_Rewards") cfg.NF_Rewards = b;
+        else handled = false;
+
+        // Anything that isn't a known setting belongs to the active per-item section. Known settings are
+        // honored anywhere in the file, even if they were appended after a [Section] header.
+        if (!handled) {
+            if (activeSection) (*activeSection)[key] = b;
+            else std::cout << "[Config] Warning: unknown setting '" << key << "'\n";
+        }
     }
     file.close();
     if (cfg.ClearOnly) bUnlockDone = true;
@@ -103,7 +114,10 @@ void WriteDefaultConfig()
     f << ";   drivers/machines/albums tied to past limited-time festival content (read live\n";
     f << ";   from the game). Use this if you want missed festival content without unlocking\n";
     f << ";   the full permanent roster.\n";
-    f << "FestivalOnlyMode 0\n\n";
+    f << "FestivalOnlyMode 0\n";
+    f << "; TraceCalls 1 logs every game function we call to SRCW.log BEFORE it runs, so if the game\n";
+    f << ";   hangs or crashes, the last line shows what it was doing. SRCW.log is always written.\n";
+    f << "TraceCalls 0\n\n";
     f << "; --- DLC Gate Removal ---\n";
     f << "ClearCharaDLC 1\nClearMachineDLC 1\nClearHonorDLC 1\nClearAlbumDLC 1\nClearStickerDLC 1\n\n";
     f << "; --- Save Data Unlocks (category master switches) ---\n";
@@ -148,10 +162,64 @@ void WriteDefaultConfig()
     f.close();
 }
 
+// Mirrors everything written to std::cout into SRCW.log, flushed to disk on every line. A hard
+// freeze or OOM-kill can't lose what was already written, so the last line is the last thing we did.
+class TeeBuf : public std::streambuf
+{
+public:
+    TeeBuf(std::streambuf* console, FILE* file) : console_(console), file_(file) {}
+protected:
+    int overflow(int c) override
+    {
+        if (c == EOF) return !EOF;
+        if (console_) console_->sputc((char)c);
+        if (file_) { fputc(c, file_); if (c == '\n') { fflush(file_); _commit(_fileno(file_)); } }
+        return c;
+    }
+    int sync() override { if (console_) console_->pubsync(); if (file_) fflush(file_); return 0; }
+private:
+    std::streambuf* console_; FILE* file_;
+};
+
+// Periodic status line so a hang/OOM leaves a trail: where we are, what game call we're inside,
+// and process memory. If the log ends mid-call, that call is the one that never returned.
+static DWORD WINAPI HeartbeatThread(LPVOID)
+{
+    for (;;) {
+        // 500ms while unlocking; once done, slow to every 30s so the log doesn't grow forever.
+        Sleep(bUnlockStarted && !bUnlockDone ? 500 : 30000);
+        // The unlock finished since the last beat: log one final line below, then end this thread.
+        bool finished = bUnlockDone;
+        PROCESS_MEMORY_COUNTERS_EX pmc{};
+        K32GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc, sizeof(pmc));
+        auto* cur = Reflect::CurrentCall.load();
+        auto* last = Reflect::LastCall.load();
+        auto* gfn = GameLastFn.load();
+        std::cout << "[HB] phase=" << unlockPhase << (bUnlockDone ? " (done)" : "")
+                  << " inCall=" << (cur ? cur->GetName() : std::string("-"))
+                  << " lastCall=" << (last ? last->GetName() : std::string("-"))
+                  << " ourCalls=" << Reflect::CallCount.load()
+                  << " gameEvents=" << GameEventCount.load() << " lastGameFn=" << (gfn ? gfn->GetName() : std::string("-"))
+                  << " mem=" << (pmc.WorkingSetSize >> 20) << "MB commit=" << (pmc.PrivateUsage >> 20) << "MB\n";
+        if (finished) return 0;
+    }
+}
+
 void Init()
 {
     LoadConfig();
     if (cfg.Console) { FILE* io; AllocConsole(); freopen_s(&io, "CONIN$", "r", stdin); freopen_s(&io, "CONOUT$", "w", stderr); freopen_s(&io, "CONOUT$", "w", stdout); SetConsoleTitleA("SRCW"); }
+    {
+        FILE* logFile = nullptr;
+        std::string logPath = ConfigFileName;
+        logPath = logPath.substr(0, logPath.find_last_of("\\/") + 1) + "SRCW.log";
+        fopen_s(&logFile, logPath.c_str(), "w");
+        static TeeBuf tee(std::cout.rdbuf(), logFile);
+        std::cout.rdbuf(&tee);
+        std::cout.setf(std::ios::unitbuf);
+        Reflect::TraceCalls = cfg.TraceCalls;
+    }
+    CreateThread(nullptr, 0, HeartbeatThread, nullptr, 0, nullptr);
     std::cout << "[*] SRCW Unlocker (Reflection Build)\n[+] Delay: " << cfg.PhaseDelayMs << "ms\n";
     if (cfg.HotkeyEnabled) std::cout << "[+] Mode: Hotkey 0x" << std::hex << cfg.UnlockKey << std::dec << "\n";
     else std::cout << "[+] Mode: AutoRun\n";

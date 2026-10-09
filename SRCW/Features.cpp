@@ -337,9 +337,15 @@ void Clear()
 // =============================================================================
 static bool bOverridesResolved = false;
 
+// Highest phase number with a case below. Update when adding a phase. Anything past it is just
+// the "no more phases" probe that ends the sequence, so it isn't announced like a real phase.
+static constexpr int kLastPhase = 17;
+
 bool RunUnlockPhase(int phase)
 {
     if (!bOverridesResolved) { ResolveOverrides(); bOverridesResolved = true; }
+    // Logged before the phase runs so a hang inside it leaves the phase number in SRCW.log.
+    if (phase <= kLastPhase) std::cout << "[Phase " << phase << "] begin\n";
 
     switch (phase) {
     case 0:  {
@@ -498,7 +504,9 @@ bool RunUnlockPhase(int phase)
         return true; }
     case 10: { if (cfg.Challenges) { Reflect::CallStatic("CheatChallenge", "AllChallengeClear"); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteMainChallenge", true); Reflect::CallStaticBool("AppSaveGameHelper", "SetCompleteSpecialChallenge", true); int32_t pc = Reflect::CallStaticRetInt32("ChallengeStatsUtility", "GetChallengeProgressCount"); Reflect::CallStaticInt32("AppSaveGameHelper", "SetChallengeShowProgress", pc); Reflect::CallStaticFloat("AppSaveGameHelper", "SetChallengeLastShowProgress", 1.0f); std::cout << "[Phase 10] Challenges\n"; } return true; }
 
-    // Phase 11: Super Sonic — save-data + ExecFunction hooks
+    // Phase 11: reserved for Super Sonic outside of the menus (selectable + Fever in Race Park/Time Trial).
+    // Disabled: we never found a way to make it do anything in those modes. Kept as a no-op so the
+    // phase numbering after it stays stable.
 //    case 11: {
 //        if (cfg.SuperSonicAll) {
 //            Reflect::CallStaticUInt8("AppSaveGameHelper", "SetDriverSelectable", kSuperSonicDriverId);
@@ -507,21 +515,66 @@ bool RunUnlockPhase(int phase)
 //            std::cout << "[Phase 11] Super Sonic save-data set\n";
 //        }
 //        return true; }
-//
-//    case 12: { if (cfg.NF_CompleteMachine) Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableCompleteMachineNewFlags"); if (cfg.NF_Sticker) Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableStickerNewFlags"); if (cfg.NF_ColorPreset) Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableMachineColorPresetNewFlags"); if (cfg.NF_Gadget) Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableDisplayedGadgetNewFlags"); std::cout << "[Phase 12] Machine NF\n"; return true; }
-//    case 13: { if (cfg.NF_PartsSpeed)  Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "DisablePartsListNewFlagByType", 0); return true; }
-//    case 14: { if (cfg.NF_PartsAccel)  Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "DisablePartsListNewFlagByType", 1); return true; }
-//    case 15: { if (cfg.NF_PartsHandle) Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "DisablePartsListNewFlagByType", 2); return true; }
-//    case 16: { if (cfg.NF_PartsPower)  Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "DisablePartsListNewFlagByType", 3); return true; }
-//    case 17: { if (cfg.NF_PartsDash)   Reflect::CallStaticUInt8("MachineCustomizeUtilityLibrary", "DisablePartsListNewFlagByType", 4); return true; }
-//    case 18: { if (cfg.NF_Horn) { int n = Reflect::GetEnumNum("EMachineHornType"); for (int i = 0; i < n; i++) Reflect::CallStaticUInt8Bool("MachineCustomizeUtilityLibrary", "SetCustomMachineHornNew", (uint8_t)i, false); } return true; }
-//    case 19: { if (cfg.NF_HonorTitles) { for (int i = 0; i < 500; i++) Reflect::CallStaticInt32("AppSaveGameHelper", "ResetNewHonorTitle", i); } return true; }
-//    case 20: { return true; }
-//    case 21: { if (cfg.NF_Challenges) { int32_t pc = Reflect::CallStaticRetInt32("ChallengeStatsUtility", "GetChallengeProgressCount"); Reflect::CallStaticInt32("AppSaveGameHelper", "SetChallengeShowProgress", pc); Reflect::CallStaticFloat("AppSaveGameHelper", "SetChallengeLastShowProgress", 1.0f); } if (cfg.NF_Rewards) Reflect::CallStatic("AppSaveGameHelper", "ClearRewardGetDisplayRequestDataAll"); return true; }
-//    case 22: { if (cfg.Achievements) { UnlockSteamAchievements(); std::cout << "[Phase 22] Achievements\n"; } return true; }
-//    default: return false;
+    case 11: return true;
+
+    // ---- New-flag clearing (red exclamation marks) ----
+    case 12: {
+        if (cfg.NF_CompleteMachine) Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableCompleteMachineNewFlags");
+        if (cfg.NF_Sticker)         Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableStickerNewFlags");
+        if (cfg.NF_ColorPreset)     Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableMachineColorPresetNewFlags");
+        if (cfg.NF_Gadget)          Reflect::CallStatic("MachineCustomizeUtilityLibrary", "DisableDisplayedGadgetNewFlags");
+        std::cout << "[Phase 12] Machine new-flags\n";
+        return true; }
+    case 13: {
+        // DO NOT call MachineCustomizeUtilityLibrary::DisablePartsListNewFlagByType here. On the current
+        // game build each call blocks the game thread and commits ~1GB (the log showed commit going
+        // 4.5GB -> 13.7GB over five calls, freezing low-memory machines and ending in a GPU OOM crash).
+        // Clear the same per-part "new" flags straight out of the save data instead: these are
+        // TMap<EMachineId, {bIsNew}> value flips in place, which is safe and instant.
+        if (cfg.NF_PartsSpeed || cfg.NF_PartsAccel || cfg.NF_PartsHandle || cfg.NF_PartsPower || cfg.NF_PartsDash) {
+            int cleared = 0;
+            if (auto* save = GetSaveGame()) {
+                auto& assembly = save->_UserMachineAssemblyData;
+                for (auto& p : assembly.FrontPartsList) if (p.Value().bIsNew) { p.Value().bIsNew = false; cleared++; }
+                for (auto& p : assembly.RearPartsList)  if (p.Value().bIsNew) { p.Value().bIsNew = false; cleared++; }
+                for (auto& p : assembly.TirePartsList)  if (p.Value().bIsNew) { p.Value().bIsNew = false; cleared++; }
+            } else std::cout << "[Phase 13] AppSaveGame not found, parts new-flags not cleared\n";
+            std::cout << "[Phase 13] Parts new-flags cleared directly in save (" << cleared << " flags)\n";
+        }
+        return true; }
+    case 14: {
+        if (cfg.NF_Horn) {
+            int n = Reflect::GetEnumNum("EMachineHornType");
+            for (int i = 0; i < n; i++) Reflect::CallStaticUInt8Bool("MachineCustomizeUtilityLibrary", "SetCustomMachineHornNew", (uint8_t)i, false);
+            std::cout << "[Phase 14] Horn new-flags (" << n << ")\n";
+        }
+        return true; }
+    case 15: {
+        if (cfg.NF_HonorTitles) {
+            int cleared = 0;
+            auto* honorAsset = static_cast<SDK::UHonorTitleListDataAsset*>(Reflect::FindInstance("HonorTitleListDataAsset"));
+            if (honorAsset) for (auto& pair : honorAsset->HonorTitleTableDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "ResetNewHonorTitle", pair.Key()); cleared++; }
+            std::cout << "[Phase 15] Honor title new-flags (" << cleared << ")\n";
+        }
+        return true; }
+    case 16: {
+        if (cfg.NF_Challenges) {
+            int32_t pc = Reflect::CallStaticRetInt32("ChallengeStatsUtility", "GetChallengeProgressCount");
+            Reflect::CallStaticInt32("AppSaveGameHelper", "SetChallengeShowProgress", pc);
+            Reflect::CallStaticFloat("AppSaveGameHelper", "SetChallengeLastShowProgress", 1.0f);
+        }
+        if (cfg.NF_Rewards) Reflect::CallStatic("AppSaveGameHelper", "ClearRewardGetDisplayRequestDataAll");
+        std::cout << "[Phase 16] Challenge/reward new-flags\n";
+        return true; }
+
+    // ---- Steam achievements (opt-in: permanent on the Steam account) ----
+    case 17: {
+        if (cfg.Achievements) { UnlockSteamAchievements(); std::cout << "[Phase 17] Achievements\n"; }
+        return true; }
   }
-// 
+    // No more phases: a bool function must not fall off its end (undefined behavior);
+    // returning false tells the caller the sequence is finished.
+    return false;
 }
 
 // =============================================================================
@@ -533,6 +586,9 @@ void __fastcall hk_AActor_ProcessEvent(SDK::AActor* Class, SDK::UFunction* Funct
     //if (!s_ssHooksInstalled && cfg.SuperSonicAll) {
     //    InstallSuperSonicHooks();
     //}
+
+    // Bookkeeping for the heartbeat thread only; pointless (and skipped) once the unlock is done.
+    if (!bUnlockDone) { GameLastFn = Function; GameEventCount++; }
 
     // ===== PRE-CALL =====
     if (!bCleared)

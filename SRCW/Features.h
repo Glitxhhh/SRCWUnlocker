@@ -5,6 +5,7 @@
 #include <string>
 #include <cstdint>
 #include <unordered_map>
+#include <atomic>
 
 #include "Helpers.h"
 #include "Reflect.h"
@@ -30,6 +31,9 @@ struct SRCWConfig
     // content (read live from the game's own ContentDataAsset.ServerTimeContent).
     // For replaying missed festivals without unlocking the full permanent roster.
     bool FestivalOnlyMode = false;
+
+    // Log every game function call (before it executes) to SRCW.log. For diagnosing hangs/crashes.
+    bool TraceCalls       = false;
 
     bool ClearCharaDLC    = true;
     bool ClearMachineDLC  = true;
@@ -107,6 +111,10 @@ inline bool ResolveEnabled(const std::unordered_map<int32_t, bool>& overrides, i
     return it != overrides.end() ? it->second : categoryDefault;
 }
 inline const char ConfigFileName[] = ".\\UNION\\Binaries\\Win64\\SRCW.ini";
+
+// Updated by the ProcessEvent hook for the heartbeat log (what the game itself was last doing).
+inline std::atomic<SDK::UFunction*> GameLastFn{nullptr};
+inline std::atomic<uint64_t>        GameEventCount{0};
 
 inline bool     bCleared = false;
 inline int      unlockPhase = -1;

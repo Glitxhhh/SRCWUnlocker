@@ -14,8 +14,22 @@ namespace Reflect
     static void* g_ProcessEventFn = nullptr;
     void ProcessEvent(SDK::UObject* obj, SDK::UFunction* fn, void* parms)
     {
+        CallCount++;
+        LastCall = fn;
+        CurrentCall = fn;
+        if (TraceCalls && fn) {
+            // Logged (and flushed to SRCW.log) BEFORE the call, so if the game hangs inside it the last
+            // line names the culprit. Includes the first bytes of the parameter block (the arguments).
+            std::cout << "[Call #" << CallCount.load() << "] " << fn->GetFullName() << "  args=";
+            const uint8_t* pb = static_cast<const uint8_t*>(parms);
+            int n = pb ? (fn->Size < 16 ? fn->Size : 16) : 0;
+            static const char* hex = "0123456789abcdef";
+            for (int i = 0; i < n; i++) std::cout << hex[pb[i] >> 4] << hex[pb[i] & 15] << (i + 1 < n ? " " : "");
+            std::cout << "\n";
+        }
         if (g_ProcessEventFn) reinterpret_cast<void(*)(SDK::UObject*, SDK::UFunction*, void*)>(g_ProcessEventFn)(obj, fn, parms);
         else obj->ProcessEvent(fn, parms);
+        CurrentCall = nullptr;
     }
 
     void ClearCache() { classCache.clear(); funcCache.clear(); propOffsetCache.clear(); }
@@ -317,6 +331,14 @@ namespace Reflect
                     size_t colonPos = name.rfind("::");
                     std::string valueName = (colonPos != std::string::npos) ? name.substr(colonPos + 2) : name;
                     if (valueName == "Num")
+                        return (int32_t)uenum->Names[j].Value();
+                }
+                // Some enums terminate with "Max" instead of "Num" (e.g. ECarStatusType).
+                for (int j = 0; j < uenum->Names.Num(); j++)
+                {
+                    std::string name = uenum->Names[j].Key().ToString();
+                    size_t colonPos = name.rfind("::");
+                    if (((colonPos != std::string::npos) ? name.substr(colonPos + 2) : name) == "Max")
                         return (int32_t)uenum->Names[j].Value();
                 }
                 if (uenum->Names.Num() > 1)

@@ -209,3 +209,20 @@ Pushing a `v*` tag (e.g. `v3.2`) runs `.github/workflows/build.yml`, which build
 GitHub Release containing `SRCWUnlocker-<tag>.zip`. The zip holds `UNION/Binaries/Win64/umpdc.dll` and
 `SRCW.ini`, so users drag the `UNION` folder onto the game root. Keep the repo-root `SRCW.ini` in sync with
 `WriteDefaultConfig()`. Never add Claude co-author/attribution lines to commits in this repo.
+
+## Diagnostics (SRCW.log)
+
+Everything printed to `std::cout` is mirrored to `SRCW.log` next to the DLL (even with `Console 0`) and
+flushed to disk on every line, so a hard freeze or OOM-kill can't lose it. A `[HB]` heartbeat (every 500ms
+while unlocking) records the current phase, the game function we're inside (`inCall=`), call counts, and
+working-set/commit memory. `TraceCalls 1` additionally logs every game call (with the first 16 argument
+bytes) *before* it runs. Read the log from the bottom: a stuck `inCall=` names the hung function, and a
+climbing `commit=` means something is allocating without bound.
+
+Lesson recorded from this: `MachineCustomizeUtilityLibrary::DisablePartsListNewFlagByType` blocks the game
+thread and commits ~1GB per call on the current build (froze low-memory laptops, ended in a GPU OOM crash),
+so phase 13 clears the parts "new" flags directly in `_UserMachineAssemblyData.{Front,Rear,Tire}PartsList`
+instead. Before re-enabling any game call that looks cheap, check its cost in the log.
+
+Config keys are honored anywhere in the file, even under a `[Section]` header; only unrecognised keys fall
+through to the active per-item section.
