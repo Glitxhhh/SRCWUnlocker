@@ -181,3 +181,31 @@ uncovered.
 - `VirtualAlloc` for growing native arrays in place (see `Clear()`'s `m_packageIds` growth) — same
   pattern used for any other TArray that needs to grow beyond `MaxElements`
 - `TrampHook64` for inline hooks; `PatternScan` for locating functions without fixed RVAs
+
+## Engine global discovery (no per-update offsets)
+
+Dumper-7's `Basic.hpp` offsets (`GObjects`, `GNames`, `GWorld`, `AppendString`, `ProcessEvent`) all shift on
+every game update, so the DLL no longer trusts them. `Reflect::InitGlobals()` (called first in `HookGame()`)
+derives everything at runtime:
+- **GObjects**: `FindGObjectsArray()` (`Helpers.cpp`) scans the module's writable memory for a
+  `TUObjectArray` by structural consistency (`MaxChunks == ceil(Max/0x10000)`, `NumChunks == ceil(Num/0x10000)`,
+  first chunk's items are readable UObjects with in-image vtables). Fed to the SDK via `GObjects.InitManually`.
+- **Names**: `FindFNamePool()` finds the `FNamePool` (Blocks table at +0x10, entry 0 must decode to "None").
+  `Reflect.cpp` supplies its own `CustomAppendString` via `FName::InitManually`, so the game's obfuscated
+  `AppendString` (a jmp stub) is never called.
+- **GWorld**: not used; `HookGame()` takes the world from `UEngine::GetEngine()->GameViewport->World`.
+- **UObject::ProcessEvent**: located by prologue signature; all reflection calls go through
+  `Reflect::ProcessEvent`, bypassing the SDK's hardcoded vtable index (`ProcessEventIdx`). The log prints the
+  derived vtable index and whether it matches the SDK. Falls back to the SDK vtable call if the signature fails.
+
+Still compiled in (regenerate `CppSDK` if the engine/game changes these): UE struct member offsets inside the
+SDK headers (`UStruct::Super`, `UClass::DefaultObject`, `FField` layout, `UEnum::Names`), `FUObjectItem` stride,
+and the byte patterns for the hooked function / `UObject::ProcessEvent`. If startup logs stall at
+"Still searching for GObjects/FNamePool", the engine layout changed, not just addresses.
+
+## Releases
+
+Pushing a `v*` tag (e.g. `v3.2`) runs `.github/workflows/build.yml`, which builds Release x64 and publishes a
+GitHub Release containing `SRCWUnlocker-<tag>.zip`. The zip holds `UNION/Binaries/Win64/umpdc.dll` and
+`SRCW.ini`, so users drag the `UNION` folder onto the game root. Keep the repo-root `SRCW.ini` in sync with
+`WriteDefaultConfig()`. Never add Claude co-author/attribution lines to commits in this repo.

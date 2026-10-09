@@ -229,6 +229,7 @@ public:
 	static struct FMariaQRCode MakeQRCode(const class FString& Text, int32 ErrorCorrectionLevel);
 	static class FString MakeQRCodeSvgString(const struct FMariaQRCode& QRCode, int32 Border);
 	static void nn_nifm_CancelNetworkRequest();
+	static bool nn_nifm_HandleNetworkRequestErrorResult();
 	static bool nn_nifm_IsNetworkAvailable();
 	static bool nn_nifm_IsNetworkRequestOnHold();
 	static void nn_nifm_SubmitNetworkRequest();
@@ -239,6 +240,7 @@ public:
 	static void PushMessage(const class FString& EventName);
 	static void RegenerateSessionID();
 	static bool ResetSegaAccountID();
+	static void ResetThreadCoreMask_Switch();
 	static void SetAccessEndpointDevMode(EMariaDevMode DevMode);
 	static void SetActive(bool Active);
 	static void SetAppInformations(const class FString& AppID, const class FString& PlatformId, const class FString& Language, const class FString& Region);
@@ -246,6 +248,7 @@ public:
 	static void SetAuthenticateDevMode_GDK(EMariaDevMode DevMode);
 	static void SetAuthenticateDevMode_Steam(EMariaDevMode DevMode);
 	static void SetAuthenticateDevMode_Switch(EMariaDevMode DevMode);
+	static void SetCloudMode(bool Enable);
 	static void SetDevMode(EMariaDevMode LogAuthDevMode, EMariaDevMode SegaAccountDevMode);
 	static void SetDummySegaAccountStatus(EMariaDummySegaAccountStatus Status);
 	static void SetHaltSending(bool Halt);
@@ -282,6 +285,7 @@ public:
 	static void TerminateNNLibraries();
 	static void TerminateUltThread();
 	static void UseAccountAuthInteraction_Switch(bool Enable);
+	static void UseAccountComErrorViewer_Switch(bool Enable);
 	static void UseEnsureNSAAvailable(bool Enable);
 	static void UseSegaAccountOnWindows(bool Enable);
 	static bool WaitRewardApi();

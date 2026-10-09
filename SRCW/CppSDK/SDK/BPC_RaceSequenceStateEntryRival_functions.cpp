@@ -17,37 +17,37 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRival
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnInitState
+// (Event, Public, BlueprintEvent)
 
-void UBPC_RaceSequenceStateEntryRival_C::ExecuteUbergraph_BPC_RaceSequenceStateEntryRival(int32 EntryPoint)
+void UBPC_RaceSequenceStateEntryRival_C::OnInitState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRival");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnInitState");
 
-	Params::BPC_RaceSequenceStateEntryRival_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRival Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnChangeScene_Event
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnUpdateState
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateEntryRival_C::OnChangeScene_Event()
+void UBPC_RaceSequenceStateEntryRival_C::OnUpdateState(float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnChangeScene_Event");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnUpdateState");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateEntryRival_C_OnUpdateState Parms{};
+
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -65,6 +65,20 @@ void UBPC_RaceSequenceStateEntryRival_C::OnExitState()
 }
 
 
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnChangeScene_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRival_C::OnChangeScene_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnChangeScene_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnFinishedPlay_Event
 // (BlueprintCallable, BlueprintEvent)
 
@@ -74,34 +88,6 @@ void UBPC_RaceSequenceStateEntryRival_C::OnFinishedPlay_Event()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnFinishedPlay_Event");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnFullScreenMouseClick
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateEntryRival_C::OnFullScreenMouseClick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnFullScreenMouseClick");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateEntryRival_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,21 +113,35 @@ void UBPC_RaceSequenceStateEntryRival_C::OnKeyPressed_Event(const struct FKey& P
 }
 
 
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnUpdateState
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnFullScreenMouseClick
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateEntryRival_C::OnUpdateState(float InDeltaTime)
+void UBPC_RaceSequenceStateEntryRival_C::OnFullScreenMouseClick()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnUpdateState");
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "OnFullScreenMouseClick");
 
-	Params::BPC_RaceSequenceStateEntryRival_C_OnUpdateState Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InDeltaTime = InDeltaTime;
+
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRival
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateEntryRival_C::ExecuteUbergraph_BPC_RaceSequenceStateEntryRival(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRival_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRival");
+
+	Params::BPC_RaceSequenceStateEntryRival_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRival Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

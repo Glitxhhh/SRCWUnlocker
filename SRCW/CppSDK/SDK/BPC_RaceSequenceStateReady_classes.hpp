@@ -41,30 +41,30 @@ public:
 	EGameModeId                                   GameModeID;                                        // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Begin_RaceRuleUI();
-	void Begin_StartRace(int32 InRaceStartTimeSec);
-	void Begin_TipsUI();
-	void CheckNeedTips();
-	void CheckOnlineWaiting();
-	void CheckRuleUI();
-	void CheckTips(EHintId* OutHintId);
-	void CheckTipsFirstRaceControl(bool* OutShowTips);
 	void CheckTipsFirstTimeTrialMode(bool* OutShowTips);
-	void CheckTipsGrandPrixRound(EHintId* OutHintId);
 	class UUserWidget* CreateInfoWidget();
-	void CreateTipsWindow(EHintId InHintId);
-	void ExecuteUbergraph_BPC_RaceSequenceStateReady(int32 EntryPoint);
-	void InitOnlineWaiting();
 	void IsPartyRaceMissionExists(bool* Exists);
-	void NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue);
-	void NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState);
-	void OnExitState();
-	void OnHintPopupCloseEnd();
-	void OnInitState();
-	void OnOutAnimFinished_イベント();
-	void OnUpdateState(float InDeltaTime);
+	void CheckTipsGrandPrixRound(EHintId* OutHintId);
+	void CheckTipsFirstRaceControl(bool* OutShowTips);
+	void CheckTips(EHintId* OutHintId);
+	void Begin_RaceRuleUI();
+	void CheckNeedTips();
+	void Begin_TipsUI();
+	void CheckRuleUI();
+	void CheckOnlineWaiting();
 	void OutOnlineWaitingUI();
+	void OnOutAnimFinished_イベント();
+	void InitOnlineWaiting();
+	void OnExitState();
+	void OnInitState();
+	void NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState);
+	void CreateTipsWindow(EHintId InHintId);
+	void OnHintPopupCloseEnd();
 	void SetRaceUI();
+	void OnUpdateState(float InDeltaTime);
+	void Begin_StartRace(int32 InRaceStartTimeSec);
+	void NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue);
+	void ExecuteUbergraph_BPC_RaceSequenceStateReady(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

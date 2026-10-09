@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "ST_ColorDetailWindowSurfaceItemData_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UnionSystem_structs.hpp"
 
 

@@ -19,6 +19,23 @@
 namespace SDK::Params
 {
 
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.IsNextEntryRacerSequence
+// 0x0009 (0x0009 - 0x0000)
+struct BPC_RaceSequenceStateCreateRace_C_IsNextEntryRacerSequence final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDebugForcePlayIntroduceCourse;                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetBoolFromConfig_ConfigValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetBoolFromConfig_ReturnValue;            // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsShippingBuild_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_IsNextEntryRacerSequence;
+
 // Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.EndLoadTimeMeasurement
 // 0x01D8 (0x01D8 - 0x0000)
 struct BPC_RaceSequenceStateCreateRace_C_EndLoadTimeMeasurement final
@@ -63,6 +80,24 @@ public:
 	double                                        CallFunc_Conv_DoubleToString_InDouble_ImplicitCast; // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_EndLoadTimeMeasurement;
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnFinishedFade
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_RaceSequenceStateCreateRace_C_OnFinishedFade final
+{
+public:
+	EUnionUIFadeDirection                         FadeDirection;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_OnFinishedFade;
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateCreateRace_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_OnUpdateState;
 
 // Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.ExecuteUbergraph_BPC_RaceSequenceStateCreateRace
 // 0x00E0 (0x00E0 - 0x0000)
@@ -117,41 +152,6 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_ExecuteUbergraph_BPC_RaceSequenceStateCreateRace;
-
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.IsNextEntryRacerSequence
-// 0x0009 (0x0009 - 0x0000)
-struct BPC_RaceSequenceStateCreateRace_C_IsNextEntryRacerSequence final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDebugForcePlayIntroduceCourse;                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetBoolFromConfig_ConfigValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetBoolFromConfig_ReturnValue;            // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsShippingBuild_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_IsNextEntryRacerSequence;
-
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnFinishedFade
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_RaceSequenceStateCreateRace_C_OnFinishedFade final
-{
-public:
-	EUnionUIFadeDirection                         FadeDirection;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_OnFinishedFade;
-
-// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateCreateRace_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateCreateRace_C_OnUpdateState;
 
 }
 

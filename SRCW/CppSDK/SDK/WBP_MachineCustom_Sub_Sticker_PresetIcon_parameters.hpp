@@ -12,10 +12,10 @@
 
 #include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "ST_StickerPresetPageItemData_structs.hpp"
-#include "UMG_structs.hpp"
 #include "EStickerPresetSelectPageItemType_structs.hpp"
+#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

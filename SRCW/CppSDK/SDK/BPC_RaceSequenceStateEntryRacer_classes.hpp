@@ -31,17 +31,17 @@ public:
 
 public:
 	void CloseRaceRuleInfoUIForFriendMatch();
-	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint);
 	void GetOffsetTransformByStageId(EStageId In_StageId, const struct FTransform& In_Transform, struct FTransform* Out_Transform);
-	void OnChangeSequence();
-	void OnEnabledSkip();
+	void OnInitState();
+	void OnUpdateState(float InDeltaTime);
 	void OnExitState();
 	void OnFinishedPlay_Sequence();
-	void OnFullScreenMouseClick();
-	void OnInitState();
+	void OnChangeSequence();
 	void OnKeyPressed_Event(const struct FKey& PressedKey);
 	void OnScenePlayerFinishedUI();
-	void OnUpdateState(float InDeltaTime);
+	void OnFullScreenMouseClick();
+	void OnEnabledSkip();
+	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

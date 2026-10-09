@@ -29,14 +29,14 @@ public:
 	int32                                         TargetRacerIndex;                                  // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_RaceSequenceStateFeaturedRacer(int32 EntryPoint);
-	void OnChangeScene_Event();
-	void OnEnabledSkip();
+	void OnInitState();
+	void OnUpdateState(float InDeltaTime);
 	void OnExitState();
 	void OnFinishedPlay_イベント();
-	void OnInitState();
+	void OnChangeScene_Event();
 	void OnKeyPressed_Event(const struct FKey& PressedKey);
-	void OnUpdateState(float InDeltaTime);
+	void OnEnabledSkip();
+	void ExecuteUbergraph_BPC_RaceSequenceStateFeaturedRacer(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

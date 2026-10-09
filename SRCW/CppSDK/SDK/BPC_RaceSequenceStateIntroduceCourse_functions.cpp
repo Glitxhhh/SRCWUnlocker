@@ -17,32 +17,27 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.CreateSequncePlayerByStageId
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.IsOpenGrandprixFinalTipsWindow
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class ALevelSequenceActor**             Out_Actor                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ULevelSequencePlayer**            Out_Player                                             (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Out_Result                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   EnableOpenWindow                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::CreateSequncePlayerByStageId(class ALevelSequenceActor** Out_Actor, class ULevelSequencePlayer** Out_Player, bool* Out_Result)
+void UBPC_RaceSequenceStateIntroduceCourse_C::IsOpenGrandprixFinalTipsWindow(EHintId InHintId, bool* EnableOpenWindow)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "CreateSequncePlayerByStageId");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "IsOpenGrandprixFinalTipsWindow");
 
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId Parms{};
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow Parms{};
+
+	Parms.InHintId = InHintId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Out_Actor != nullptr)
-		*Out_Actor = Parms.Out_Actor;
-
-	if (Out_Player != nullptr)
-		*Out_Player = Parms.Out_Player;
-
-	if (Out_Result != nullptr)
-		*Out_Result = Parms.Out_Result;
+	if (EnableOpenWindow != nullptr)
+		*EnableOpenWindow = Parms.EnableOpenWindow;
 }
 
 
@@ -90,231 +85,50 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::DebugLoadLevelSequence(EStageId In
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.CreateSequncePlayerByStageId
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ALevelSequenceActor**             Out_Actor                                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ULevelSequencePlayer**            Out_Player                                             (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Out_Result                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse(int32 EntryPoint)
+void UBPC_RaceSequenceStateIntroduceCourse_C::CreateSequncePlayerByStageId(class ALevelSequenceActor** Out_Actor, class ULevelSequencePlayer** Out_Player, bool* Out_Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "CreateSequncePlayerByStageId");
 
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.IsOpenGrandprixFinalTipsWindow
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   EnableOpenWindow                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::IsOpenGrandprixFinalTipsWindow(EHintId InHintId, bool* EnableOpenWindow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "IsOpenGrandprixFinalTipsWindow");
-
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow Parms{};
-
-	Parms.InHintId = InHintId;
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (EnableOpenWindow != nullptr)
-		*EnableOpenWindow = Parms.EnableOpenWindow;
+	if (Out_Actor != nullptr)
+		*Out_Actor = Parms.Out_Actor;
+
+	if (Out_Player != nullptr)
+		*Out_Player = Parms.Out_Player;
+
+	if (Out_Result != nullptr)
+		*Out_Result = Parms.Out_Result;
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnAnimCompleted_Event
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnAnimCompleted_Event()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnAnimCompleted_Event");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnChangeSequence
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnChangeSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnChangeSequence");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEnabledSkip
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEnabledSkip2
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip2()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip2");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEndLoadFinalRoundTexture
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnEndLoadFinalRoundTexture()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEndLoadFinalRoundTexture");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnExitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnExitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnExitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFadeEnd
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_68D7799743460276E4D57EAD7AE3E92C
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnFadeEnd(EUnionUIFadeDirection FadeDirection)
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_68D7799743460276E4D57EAD7AE3E92C(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFadeEnd");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnLoaded_68D7799743460276E4D57EAD7AE3E92C");
 
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd Parms{};
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C Parms{};
 
-	Parms.FadeDirection = FadeDirection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFinalRoundSceneSkip
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FKey&                      PressedKey                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnFinalRoundSceneSkip(const struct FKey& PressedKey)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFinalRoundSceneSkip");
-
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip Parms{};
-
-	Parms.PressedKey = std::move(PressedKey);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFullScreenMouseClickEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseClickEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseClickEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFullScreenMouseSkipEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseSkipEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseSkipEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnKeyPressed_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FKey&                      PressedKey                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnKeyPressed_Event(const struct FKey& PressedKey)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnKeyPressed_Event");
-
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event Parms{};
-
-	Parms.PressedKey = std::move(PressedKey);
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -340,49 +154,29 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_07CB097840A0285D5C47FF9CB
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_68D7799743460276E4D57EAD7AE3E92C
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.StartFinalRoundTextureLoad
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_68D7799743460276E4D57EAD7AE3E92C(class UObject* Loaded)
+void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundTextureLoad()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnLoaded_68D7799743460276E4D57EAD7AE3E92C");
-
-	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnPlayEnd_イベント
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnPlayEnd_イベント()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnPlayEnd_イベント");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartFinalRoundTextureLoad");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnRemoved_イベント
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnInitState
+// (Event, Public, BlueprintEvent)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::OnRemoved_イベント()
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnInitState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnRemoved_イベント");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnInitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -408,29 +202,43 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.RemoveFinalRoundWidget
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnExitState
+// (Event, Public, BlueprintEvent)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::RemoveFinalRoundWidget()
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnExitState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "RemoveFinalRoundWidget");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnExitState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.StartCourseInfoBasicRoundUI
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnChangeSequence
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseInfoBasicRoundUI()
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnChangeSequence()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartCourseInfoBasicRoundUI");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnChangeSequence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnPlayEnd_イベント
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnPlayEnd_イベント()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnPlayEnd_イベント");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -464,17 +272,113 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundScene()
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.StartFinalRoundTextureLoad
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFinalRoundSceneSkip
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FKey&                      PressedKey                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundTextureLoad()
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnFinalRoundSceneSkip(const struct FKey& PressedKey)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartFinalRoundTextureLoad");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFinalRoundSceneSkip");
+
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip Parms{};
+
+	Parms.PressedKey = std::move(PressedKey);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnAnimCompleted_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnAnimCompleted_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnAnimCompleted_Event");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.StartCourseInfoBasicRoundUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseInfoBasicRoundUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartCourseInfoBasicRoundUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnRemoved_イベント
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnRemoved_イベント()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnRemoved_イベント");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.RemoveFinalRoundWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::RemoveFinalRoundWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "RemoveFinalRoundWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.TipsWindow_CloseEndDelegate
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::TipsWindow_CloseEndDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "TipsWindow_CloseEndDelegate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFadeEnd
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnFadeEnd(EUnionUIFadeDirection FadeDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFadeEnd");
+
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -492,17 +396,113 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartShowTipsWindow()
 }
 
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.TipsWindow_CloseEndDelegate
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEndLoadFinalRoundTexture
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateIntroduceCourse_C::TipsWindow_CloseEndDelegate()
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnEndLoadFinalRoundTexture()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "TipsWindow_CloseEndDelegate");
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEndLoadFinalRoundTexture");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFullScreenMouseClickEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseClickEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseClickEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFullScreenMouseSkipEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseSkipEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseSkipEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnKeyPressed_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FKey&                      PressedKey                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnKeyPressed_Event(const struct FKey& PressedKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnKeyPressed_Event");
+
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event Parms{};
+
+	Parms.PressedKey = std::move(PressedKey);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEnabledSkip
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnEnabledSkip2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateIntroduceCourse_C::ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse");
+
+	Params::BPC_RaceSequenceStateIntroduceCourse_C_ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

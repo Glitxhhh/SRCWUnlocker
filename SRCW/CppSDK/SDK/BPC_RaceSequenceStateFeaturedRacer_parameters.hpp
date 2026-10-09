@@ -18,6 +18,24 @@
 namespace SDK::Params
 {
 
+// Function BPC_RaceSequenceStateFeaturedRacer.BPC_RaceSequenceStateFeaturedRacer_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateFeaturedRacer_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateFeaturedRacer_C_OnUpdateState;
+
+// Function BPC_RaceSequenceStateFeaturedRacer.BPC_RaceSequenceStateFeaturedRacer_C.OnKeyPressed_Event
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStateFeaturedRacer_C_OnKeyPressed_Event final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateFeaturedRacer_C_OnKeyPressed_Event;
+
 // Function BPC_RaceSequenceStateFeaturedRacer.BPC_RaceSequenceStateFeaturedRacer_C.ExecuteUbergraph_BPC_RaceSequenceStateFeaturedRacer
 // 0x0330 (0x0330 - 0x0000)
 struct BPC_RaceSequenceStateFeaturedRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateFeaturedRacer final
@@ -72,24 +90,6 @@ public:
 	bool                                          CallFunc_SwitchFooterVisible_bCanSkip;             // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateFeaturedRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateFeaturedRacer;
-
-// Function BPC_RaceSequenceStateFeaturedRacer.BPC_RaceSequenceStateFeaturedRacer_C.OnKeyPressed_Event
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStateFeaturedRacer_C_OnKeyPressed_Event final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateFeaturedRacer_C_OnKeyPressed_Event;
-
-// Function BPC_RaceSequenceStateFeaturedRacer.BPC_RaceSequenceStateFeaturedRacer_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateFeaturedRacer_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateFeaturedRacer_C_OnUpdateState;
 
 }
 

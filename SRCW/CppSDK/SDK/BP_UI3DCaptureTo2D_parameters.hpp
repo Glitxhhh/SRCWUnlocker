@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ImageWriteQueue_structs.hpp"
 #include "E3DCaptureMenuType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ImageWriteQueue_structs.hpp"
 
 
 namespace SDK::Params

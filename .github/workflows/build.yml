@@ -55,14 +55,18 @@ jobs:
         path: release/
 
     - name: Prepare release package
-      run: cp SRCW.ini release/
+      run: |
+        # Mirror the game's folder layout so users can drag-and-drop the contents of the zip
+        # straight onto the game's root folder.
+        mkdir -p package/UNION/Binaries/Win64
+        cp release/umpdc.dll package/UNION/Binaries/Win64/
+        cp SRCW.ini package/UNION/Binaries/Win64/
+        cd package && zip -r ../SRCWUnlocker-${{ github.ref_name }}.zip UNION
 
     - name: Create Release
       uses: softprops/action-gh-release@v2
       with:
         name: SRCWUnlocker ${{ github.ref_name }}
-        files: |
-          release/umpdc.dll
-          release/SRCW.ini
+        files: SRCWUnlocker-${{ github.ref_name }}.zip
         generate_release_notes: true
         draft: false

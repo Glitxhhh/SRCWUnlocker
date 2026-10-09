@@ -59,6 +59,13 @@ namespace Reflect
     // game update resolves correctly without recompiling against a new SDK dump.
     int32_t ResolveEnumValueByName(const char* enumName, const std::string& valueName);
 
+    // Locates GObjects and the FNamePool at runtime (no hardcoded offsets) and wires them
+    // into the SDK. Safe to call repeatedly; returns true once both are ready.
+    bool InitGlobals();
+
+    // Calls UObject::ProcessEvent via the signature-located function (SDK vtable fallback).
+    void ProcessEvent(SDK::UObject* obj, SDK::UFunction* fn, void* parms);
+
     void ClearCache();
 }
 

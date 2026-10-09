@@ -1,4 +1,5 @@
 #include "Reflect.h"
+#include "Helpers.h"
 #include <cctype>
 
 namespace Reflect
@@ -6,6 +7,16 @@ namespace Reflect
     static std::unordered_map<std::string, SDK::UClass*> classCache;
     static std::unordered_map<std::string, SDK::UFunction*> funcCache;
     static std::unordered_map<std::string, int32_t> propOffsetCache;
+
+    // UObject::ProcessEvent located by signature at startup (see InitGlobals). The SDK's own
+    // UObject::ProcessEvent calls through a vtable index hardcoded in a generated header, which
+    // can shift between builds; we only fall back to it if the signature isn't found.
+    static void* g_ProcessEventFn = nullptr;
+    void ProcessEvent(SDK::UObject* obj, SDK::UFunction* fn, void* parms)
+    {
+        if (g_ProcessEventFn) reinterpret_cast<void(*)(SDK::UObject*, SDK::UFunction*, void*)>(g_ProcessEventFn)(obj, fn, parms);
+        else obj->ProcessEvent(fn, parms);
+    }
 
     void ClearCache() { classCache.clear(); funcCache.clear(); propOffsetCache.clear(); }
 
@@ -117,7 +128,7 @@ namespace Reflect
         SDK::UObject* cdo = FindCDO(className);
         if (!func || !cdo) return false;
         uint8_t params[512] = {};
-        cdo->ProcessEvent(func, func->Size > 0 ? params : nullptr);
+        ProcessEvent(cdo, func, func->Size > 0 ? params : nullptr);
         return true;
     }
 
@@ -129,7 +140,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(bool*)(params + p->Offset) = value;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -141,7 +152,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(int32_t*)(params + p->Offset) = value;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -153,7 +164,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(uint8_t*)(params + p->Offset) = value;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -165,7 +176,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(float*)(params + p->Offset) = value;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -179,7 +190,7 @@ namespace Reflect
         SDK::FProperty* param1 = FindNthParam(func, 1);
         if (param0) *(uint8_t*)(params + param0->Offset) = p1;
         if (param1) *(bool*)(params + param1->Offset) = p2;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -193,7 +204,7 @@ namespace Reflect
         SDK::FProperty* param1 = FindNthParam(func, 1);
         if (param0) *(int32_t*)(params + param0->Offset) = p1;
         if (param1) *(bool*)(params + param1->Offset) = p2;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         return true;
     }
 
@@ -202,7 +213,7 @@ namespace Reflect
         SDK::UFunction* func = FindFunction(className, funcName);
         SDK::UObject* cdo = FindCDO(className);
         if (!func || !cdo) return false;
-        cdo->ProcessEvent(func, paramsIn);
+        ProcessEvent(cdo, func, paramsIn);
         return true;
     }
 
@@ -211,7 +222,7 @@ namespace Reflect
         SDK::UFunction* func = FindFunction(className, funcName);
         if (!func || !obj) return false;
         uint8_t params[512] = {};
-        obj->ProcessEvent(func, func->Size > 0 ? params : nullptr);
+        ProcessEvent(obj, func, func->Size > 0 ? params : nullptr);
         return true;
     }
 
@@ -222,7 +233,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(bool*)(params + p->Offset) = value;
-        obj->ProcessEvent(func, params);
+        ProcessEvent(obj, func, params);
         return true;
     }
 
@@ -235,7 +246,7 @@ namespace Reflect
         SDK::FProperty* param1 = FindNthParam(func, 1);
         if (param0) *(uint8_t*)(params + param0->Offset) = p1;
         if (param1) *(bool*)(params + param1->Offset) = p2;
-        obj->ProcessEvent(func, params);
+        ProcessEvent(obj, func, params);
         return true;
     }
 
@@ -245,7 +256,7 @@ namespace Reflect
         SDK::UObject* cdo = FindCDO(className);
         if (!func || !cdo) return 0;
         uint8_t params[512] = {};
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         SDK::FProperty* ret = FindReturnParam(func);
         if (!ret) return 0;
         return *(int32_t*)(params + ret->Offset);
@@ -259,7 +270,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(uint8_t*)(params + p->Offset) = param;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         SDK::FProperty* ret = FindReturnParam(func);
         if (!ret) return 0;
         return *(uint8_t*)(params + ret->Offset);
@@ -271,7 +282,7 @@ namespace Reflect
         SDK::UObject* cdo = FindCDO(className);
         if (!func || !cdo) return false;
         uint8_t params[512] = {};
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         SDK::FProperty* ret = FindReturnParam(func);
         if (!ret) return false;
         return *(bool*)(params + ret->Offset);
@@ -285,7 +296,7 @@ namespace Reflect
         uint8_t params[512] = {};
         SDK::FProperty* p = FindFirstParam(func);
         if (p) *(uint8_t*)(params + p->Offset) = param;
-        cdo->ProcessEvent(func, params);
+        ProcessEvent(cdo, func, params);
         SDK::FProperty* ret = FindReturnParam(func);
         if (!ret) return false;
         return *(bool*)(params + ret->Offset);
@@ -346,5 +357,68 @@ namespace Reflect
         }
         std::cout << "[Reflect] Warning: enum '" << enumName << "' not found while resolving '" << valueName << "'\n";
         return -1;
+    }
+
+    // -------------------------------------------------------------------------
+    // Engine global discovery
+    // -------------------------------------------------------------------------
+    static const uint8_t* const* g_NameBlocks = nullptr;
+    struct RawFString { wchar_t* Data; int32_t Num; int32_t Max; };
+
+    // Replacement for the game's FName::AppendString, decoding straight from the
+    // FNamePool we located. Matches the SDK's expected (const FName*, FString&) shape.
+    static void CustomAppendString(const SDK::FName* name, SDK::FString& outRef)
+    {
+        auto& out = *reinterpret_cast<RawFString*>(&outRef);
+        std::wstring s;
+        uint32_t idx = (uint32_t)name->ComparisonIndex, number = name->Number;
+        uint32_t block = idx >> 16;
+        if (g_NameBlocks && block < 8192 && g_NameBlocks[block]) {
+            const uint8_t* entry = g_NameBlocks[block] + (size_t)(idx & 0xFFFF) * 2;
+            uint16_t hdr = *(const uint16_t*)entry;
+            int len = hdr >> 6; bool wide = hdr & 1;
+            for (int i = 0; i < len; i++)
+                s.push_back(wide ? ((const wchar_t*)(entry + 2))[i] : (wchar_t)entry[2 + i]);
+        }
+        if (number > 0) s += L"_" + std::to_wstring(number - 1);
+        if (!out.Data || out.Max <= 0) return;
+        int32_t n = (int32_t)s.size(); if (n > out.Max - 1) n = out.Max - 1;
+        memcpy(out.Data, s.c_str(), (size_t)n * sizeof(wchar_t));
+        out.Data[n] = 0; out.Num = n + 1;
+    }
+
+    bool InitGlobals()
+    {
+        static void* objs = nullptr; static void* pool = nullptr;
+        uintptr_t base = (uintptr_t)module;
+
+        if (!objs) {
+            if ((objs = FindGObjectsArray())) std::cout << "[Init] GObjects found by scan at RVA 0x" << std::hex << ((uintptr_t)objs - base) << std::dec << "\n";
+            if (objs) SDK::UObject::GObjects.InitManually(objs);
+        }
+        if (!pool) {
+            if ((pool = FindFNamePool())) {
+                g_NameBlocks = reinterpret_cast<const uint8_t* const*>((uint8_t*)pool + 0x10);
+                SDK::FName::InitManually((void*)&CustomAppendString);
+                std::cout << "[Init] FNamePool found at RVA 0x" << std::hex << ((uintptr_t)pool - base) << std::dec << "\n";
+            }
+        }
+        if (objs && pool && !g_ProcessEventFn) {
+            // Prologue + stack-protector load of UObject::ProcessEvent; '?' wildcards the cookie address.
+            g_ProcessEventFn = PatternScan("40 55 56 57 41 54 41 55 41 56 41 57 48 81 EC 10 01 00 00 48 8D 6C 24 30 48 89 9D 38 01 00 00 48 8B 05 ? ? ? ? 48 33 C5 48 89 85 D0 00 00 00");
+            if (g_ProcessEventFn) {
+                // Cross-check: it should appear in a real UObject's vtable. Report the index so drift is visible.
+                int idx = -1;
+                for (int i = 0; i < 64 && idx < 0; i++) {
+                    SDK::UObject* o = SDK::UObject::GObjects->GetByIndex(i);
+                    if (!o) continue;
+                    void** vt = *reinterpret_cast<void***>(o);
+                    for (int j = 0; j < 0x200; j++) if (vt[j] == g_ProcessEventFn) { idx = j; break; }
+                }
+                std::cout << "[Init] UObject::ProcessEvent at RVA 0x" << std::hex << ((uintptr_t)g_ProcessEventFn - base) << ", vtable index 0x" << idx << std::dec
+                          << (idx == SDK::Offsets::ProcessEventIdx ? " (matches SDK)\n" : " (DIFFERS from SDK - good thing we derive it)\n");
+            } else std::cout << "[Init] ProcessEvent signature not found, falling back to SDK vtable index\n";
+        }
+        return objs && pool;
     }
 }

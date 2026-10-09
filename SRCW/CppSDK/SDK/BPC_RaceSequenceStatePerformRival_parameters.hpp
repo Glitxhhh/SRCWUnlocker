@@ -18,6 +18,24 @@
 namespace SDK::Params
 {
 
+// Function BPC_RaceSequenceStatePerformRival.BPC_RaceSequenceStatePerformRival_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStatePerformRival_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStatePerformRival_C_OnUpdateState;
+
+// Function BPC_RaceSequenceStatePerformRival.BPC_RaceSequenceStatePerformRival_C.OnSkipped
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStatePerformRival_C_OnSkipped final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStatePerformRival_C_OnSkipped;
+
 // Function BPC_RaceSequenceStatePerformRival.BPC_RaceSequenceStatePerformRival_C.ExecuteUbergraph_BPC_RaceSequenceStatePerformRival
 // 0x05E0 (0x05E0 - 0x0000)
 struct BPC_RaceSequenceStatePerformRival_C_ExecuteUbergraph_BPC_RaceSequenceStatePerformRival final
@@ -112,24 +130,6 @@ public:
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x05DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStatePerformRival_C_ExecuteUbergraph_BPC_RaceSequenceStatePerformRival;
-
-// Function BPC_RaceSequenceStatePerformRival.BPC_RaceSequenceStatePerformRival_C.OnSkipped
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStatePerformRival_C_OnSkipped final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStatePerformRival_C_OnSkipped;
-
-// Function BPC_RaceSequenceStatePerformRival.BPC_RaceSequenceStatePerformRival_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStatePerformRival_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStatePerformRival_C_OnUpdateState;
 
 }
 

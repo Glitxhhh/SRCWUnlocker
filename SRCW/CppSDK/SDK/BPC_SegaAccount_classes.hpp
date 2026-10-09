@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0130(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnUpdateState(float InDeltaTime);
 	void ExecuteUbergraph_BPC_SegaAccount(int32 EntryPoint);
+	void OnUpdateState(float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

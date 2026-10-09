@@ -31,12 +31,12 @@ public:
 	bool                                          bIsNextEntryRacer;                                 // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void EndLoadTimeMeasurement();
-	void ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint);
 	bool IsNextEntryRacerSequence();
-	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
+	void EndLoadTimeMeasurement();
 	void OnInitState();
+	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
 	void OnUpdateState(float InDeltaTime);
+	void ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

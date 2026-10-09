@@ -16,6 +16,15 @@
 namespace SDK::Params
 {
 
+// Function BPC_RaceResultReward.BPC_RaceResultReward_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceResultReward_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceResultReward_C_OnUpdateState;
+
 // Function BPC_RaceResultReward.BPC_RaceResultReward_C.ExecuteUbergraph_BPC_RaceResultReward
 // 0x0070 (0x0070 - 0x0000)
 struct BPC_RaceResultReward_C_ExecuteUbergraph_BPC_RaceResultReward final
@@ -66,15 +75,6 @@ public:
 	class ARaceSequence*                          CallFunc_GetOwnerRaceSequence_ReturnValue;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceResultReward_C_ExecuteUbergraph_BPC_RaceResultReward;
-
-// Function BPC_RaceResultReward.BPC_RaceResultReward_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceResultReward_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceResultReward_C_OnUpdateState;
 
 }
 

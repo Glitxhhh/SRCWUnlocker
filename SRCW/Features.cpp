@@ -254,14 +254,21 @@ static void InstallSuperSonicHooks()
 // =============================================================================
 void HookGame()
 {
+    // Locate engine globals first; the SDK offsets go stale on every game update.
+    int attempts = 0;
+    while (!Reflect::InitGlobals()) {
+        if (++attempts % 20 == 0) std::cout << "[Init] Still searching for GObjects/FNamePool (" << attempts << " tries)...\n";
+        Sleep(250);
+    }
+
     bool bHooked = false;
     while (!bHooked) {
-        auto World = SDK::UWorld::GetWorld();
+        // GWorld's fixed offset goes stale too; derive the world from the engine object instead.
         auto Engine = SDK::UEngine::GetEngine();
-        if (!World || !Engine || !Engine->GameViewport) continue;
+        if (!Engine || !Engine->GameViewport || !Engine->GameViewport->World) { Sleep(100); continue; }
         Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(
             PatternScan("48 89 5C 24 10 48 89 6C 24 18 57 48 83 EC ? F7 82 B0 00 00 00 ? ? ? ?"));
-        if (!Orig_AActor_ProcessEvent) continue;
+        if (!Orig_AActor_ProcessEvent) { std::cout << "[Init] ProcessEvent pattern not found\n"; Sleep(500); continue; }
         Orig_AActor_ProcessEvent = reinterpret_cast<AActor_ProcessEvent_t>(
             TrampHook64((BYTE*)Orig_AActor_ProcessEvent, (BYTE*)hk_AActor_ProcessEvent, 15));
         bHooked = true;

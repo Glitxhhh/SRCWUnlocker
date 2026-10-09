@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BPC_SegaAccount.BPC_SegaAccount_C.OnUpdateState
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_SegaAccount_C::OnUpdateState(float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SegaAccount_C", "OnUpdateState");
-
-	Params::BPC_SegaAccount_C_OnUpdateState Parms{};
-
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_SegaAccount.BPC_SegaAccount_C.ExecuteUbergraph_BPC_SegaAccount
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UBPC_SegaAccount_C::ExecuteUbergraph_BPC_SegaAccount(int32 EntryPoint)
 	Params::BPC_SegaAccount_C_ExecuteUbergraph_BPC_SegaAccount Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_SegaAccount.BPC_SegaAccount_C.OnUpdateState
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_SegaAccount_C::OnUpdateState(float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_SegaAccount_C", "OnUpdateState");
+
+	Params::BPC_SegaAccount_C_OnUpdateState Parms{};
+
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

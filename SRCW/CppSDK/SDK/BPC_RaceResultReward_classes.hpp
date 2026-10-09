@@ -29,10 +29,10 @@ public:
 	bool                                          NomalInited;                                       // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_RaceResultReward(int32 EntryPoint);
 	void OnExitState();
-	void OnInitState();
 	void OnUpdateState(float InDeltaTime);
+	void OnInitState();
+	void ExecuteUbergraph_BPC_RaceResultReward(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

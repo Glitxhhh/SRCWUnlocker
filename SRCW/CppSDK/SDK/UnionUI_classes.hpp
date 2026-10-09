@@ -1535,7 +1535,7 @@ DUMPER7_ASSERTS_UUnionUIRivalTransition;
 
 // Class UnionUI.UnionUILoadingDisplay
 // 0x0020 (0x0300 - 0x02E0)
-class UUnionUILoadingDisplay final : public UUserWidget
+class UUnionUILoadingDisplay : public UUserWidget
 {
 public:
 	TMulticastInlineDelegate<void()>              OnLoadingEndAnimFinished;                          // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)

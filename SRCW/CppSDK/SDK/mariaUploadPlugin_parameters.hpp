@@ -798,6 +798,15 @@ public:
 };
 DUMPER7_ASSERTS_MariaUpload_MakeQRCodeSvgString;
 
+// Function mariaUploadPlugin.MariaUpload.nn_nifm_HandleNetworkRequestErrorResult
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_nn_nifm_HandleNetworkRequestErrorResult final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_nn_nifm_HandleNetworkRequestErrorResult;
+
 // Function mariaUploadPlugin.MariaUpload.nn_nifm_IsNetworkAvailable
 // 0x0001 (0x0001 - 0x0000)
 struct MariaUpload_nn_nifm_IsNetworkAvailable final
@@ -919,6 +928,15 @@ public:
 	EMariaDevMode                                 DevMode;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MariaUpload_SetAuthenticateDevMode_Switch;
+
+// Function mariaUploadPlugin.MariaUpload.SetCloudMode
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_SetCloudMode final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_SetCloudMode;
 
 // Function mariaUploadPlugin.MariaUpload.SetDevMode
 // 0x0002 (0x0002 - 0x0000)
@@ -1223,6 +1241,15 @@ public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MariaUpload_UseAccountAuthInteraction_Switch;
+
+// Function mariaUploadPlugin.MariaUpload.UseAccountComErrorViewer_Switch
+// 0x0001 (0x0001 - 0x0000)
+struct MariaUpload_UseAccountComErrorViewer_Switch final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MariaUpload_UseAccountComErrorViewer_Switch;
 
 // Function mariaUploadPlugin.MariaUpload.UseEnsureNSAAvailable
 // 0x0001 (0x0001 - 0x0000)

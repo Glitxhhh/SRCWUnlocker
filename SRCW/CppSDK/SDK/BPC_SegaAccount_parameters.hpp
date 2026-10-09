@@ -14,15 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BPC_SegaAccount.BPC_SegaAccount_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_SegaAccount_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_SegaAccount_C_OnUpdateState;
-
 // Function BPC_SegaAccount.BPC_SegaAccount_C.ExecuteUbergraph_BPC_SegaAccount
 // 0x0028 (0x0028 - 0x0000)
 struct BPC_SegaAccount_C_ExecuteUbergraph_BPC_SegaAccount final
@@ -41,6 +32,15 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_SegaAccount_C_ExecuteUbergraph_BPC_SegaAccount;
+
+// Function BPC_SegaAccount.BPC_SegaAccount_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_SegaAccount_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_SegaAccount_C_OnUpdateState;
 
 }
 

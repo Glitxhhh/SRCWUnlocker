@@ -4682,7 +4682,7 @@ DUMPER7_ASSERTS_UStaffrollLogoTextWidget;
 
 // Class UNION.CharaMachineSelectBase
 // 0x01B8 (0x0498 - 0x02E0)
-class UCharaMachineSelectBase : public UUserWidget
+class UCharaMachineSelectBase final : public UUserWidget
 {
 public:
 	TMulticastInlineDelegate<void(ECharaSelectControlState NextMode, ECharaSelectControlState PrevMode, int32 SelectedPlayerControllerIndex)> OnChangeCharaSelectModeEvent; // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -4824,7 +4824,7 @@ DUMPER7_ASSERTS_IRacerAnimPlayerHandler;
 
 // Class UNION.CharaMachineSelectPartsMachineType
 // 0x0030 (0x0310 - 0x02E0)
-class UCharaMachineSelectPartsMachineType : public UUserWidget
+class UCharaMachineSelectPartsMachineType final : public UUserWidget
 {
 public:
 	class UImage*                                 PAT_Icon_Type;                                     // 0x02E0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
@@ -4856,7 +4856,7 @@ DUMPER7_ASSERTS_UCharaMachineSelectPartsMachineType;
 
 // Class UNION.CharaMachineSelectsBase
 // 0x00A0 (0x0380 - 0x02E0)
-class UCharaMachineSelectsBase : public UUserWidget
+class UCharaMachineSelectsBase final : public UUserWidget
 {
 public:
 	uint8                                         Pad_2E0[0x10];                                     // 0x02E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
@@ -5613,7 +5613,7 @@ DUMPER7_ASSERTS_UCharaSelectResourceElement;
 
 // Class UNION.DodonpaBase
 // 0x0010 (0x02A0 - 0x0290)
-class ADodonpaBase final : public AActor
+class ADodonpaBase : public AActor
 {
 public:
 	TMulticastInlineDelegate<void()>              OnCommandWaitEndEvent;                             // 0x0290(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -10037,7 +10037,7 @@ DUMPER7_ASSERTS_UTimeTrialUtilityLibrary;
 
 // Class UNION.MachinePartsCharaParameter
 // 0x0028 (0x0308 - 0x02E0)
-class UMachinePartsCharaParameter : public UUserWidget
+class UMachinePartsCharaParameter final : public UUserWidget
 {
 public:
 	TMulticastInlineDelegate<void()>              OnClick;                                           // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -14064,7 +14064,7 @@ DUMPER7_ASSERTS_UFestaRuleInfoWidgetBase;
 
 // Class UNION.FestaSignage
 // 0x0078 (0x0308 - 0x0290)
-class AFestaSignage : public AActor
+class AFestaSignage final : public AActor
 {
 public:
 	bool                                          bIsTopSignage;                                     // 0x0290(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -23358,7 +23358,7 @@ DUMPER7_ASSERTS_URivalSelectNextRivalMarkWidget;
 
 // Class UNION.MachineOptionWindow
 // 0x0040 (0x0418 - 0x03D8)
-class UMachineOptionWindow : public UUnionUISceneBase
+class UMachineOptionWindow final : public UUnionUISceneBase
 {
 public:
 	TMulticastInlineDelegate<void(bool IsIn)>     OnFinishedAnim;                                    // 0x03D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -25462,7 +25462,7 @@ DUMPER7_ASSERTS_UObjectAccessorLibrary;
 
 // Class UNION.WindowCharaChange
 // 0x0090 (0x0468 - 0x03D8)
-class UWindowCharaChange : public UUnionUISceneBase
+class UWindowCharaChange final : public UUnionUISceneBase
 {
 public:
 	TMulticastInlineDelegate<void(int32 InPlayerIndex, int32 InCharaIndex)> OnEventHover;            // 0x03D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
+#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 

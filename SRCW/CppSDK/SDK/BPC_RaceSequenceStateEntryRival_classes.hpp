@@ -28,14 +28,14 @@ public:
 	TArray<class UNiagaraComponent*>              Out_Effects;                                       // 0x0138(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRival(int32 EntryPoint);
-	void OnChangeScene_Event();
-	void OnExitState();
-	void OnFinishedPlay_Event();
-	void OnFullScreenMouseClick();
 	void OnInitState();
-	void OnKeyPressed_Event(const struct FKey& PressedKey);
 	void OnUpdateState(float InDeltaTime);
+	void OnExitState();
+	void OnChangeScene_Event();
+	void OnFinishedPlay_Event();
+	void OnKeyPressed_Event(const struct FKey& PressedKey);
+	void OnFullScreenMouseClick();
+	void ExecuteUbergraph_BPC_RaceSequenceStateEntryRival(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

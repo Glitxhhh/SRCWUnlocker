@@ -17,109 +17,81 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_RaceRuleUI
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateReady_C::Begin_RaceRuleUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_RaceRuleUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_StartRace
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTipsFirstTimeTrialMode
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   InRaceStartTimeSec                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   OutShowTips                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::Begin_StartRace(int32 InRaceStartTimeSec)
+void UBPC_RaceSequenceStateReady_C::CheckTipsFirstTimeTrialMode(bool* OutShowTips)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_StartRace");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsFirstTimeTrialMode");
 
-	Params::BPC_RaceSequenceStateReady_C_Begin_StartRace Parms{};
-
-	Parms.InRaceStartTimeSec = InRaceStartTimeSec;
+	Params::BPC_RaceSequenceStateReady_C_CheckTipsFirstTimeTrialMode Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutShowTips != nullptr)
+		*OutShowTips = Parms.OutShowTips;
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_TipsUI
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CreateInfoWidget
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::Begin_TipsUI()
+class UUserWidget* UBPC_RaceSequenceStateReady_C::CreateInfoWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_TipsUI");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateInfoWidget");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateReady_C_CreateInfoWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckNeedTips
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.IsPartyRaceMissionExists
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   Exists                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::CheckNeedTips()
+void UBPC_RaceSequenceStateReady_C::IsPartyRaceMissionExists(bool* Exists)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckNeedTips");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "IsPartyRaceMissionExists");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateReady_C_IsPartyRaceMissionExists Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Exists != nullptr)
+		*Exists = Parms.Exists;
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckOnlineWaiting
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateReady_C::CheckOnlineWaiting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckOnlineWaiting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckRuleUI
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_RaceSequenceStateReady_C::CheckRuleUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckRuleUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTips
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTipsGrandPrixRound
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EHintId*                                OutHintId                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::CheckTips(EHintId* OutHintId)
+void UBPC_RaceSequenceStateReady_C::CheckTipsGrandPrixRound(EHintId* OutHintId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTips");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsGrandPrixRound");
 
-	Params::BPC_RaceSequenceStateReady_C_CheckTips Parms{};
+	Params::BPC_RaceSequenceStateReady_C_CheckTipsGrandPrixRound Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -149,40 +121,19 @@ void UBPC_RaceSequenceStateReady_C::CheckTipsFirstRaceControl(bool* OutShowTips)
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTipsFirstTimeTrialMode
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   OutShowTips                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateReady_C::CheckTipsFirstTimeTrialMode(bool* OutShowTips)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsFirstTimeTrialMode");
-
-	Params::BPC_RaceSequenceStateReady_C_CheckTipsFirstTimeTrialMode Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutShowTips != nullptr)
-		*OutShowTips = Parms.OutShowTips;
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTipsGrandPrixRound
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTips
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EHintId*                                OutHintId                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::CheckTipsGrandPrixRound(EHintId* OutHintId)
+void UBPC_RaceSequenceStateReady_C::CheckTips(EHintId* OutHintId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsGrandPrixRound");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTips");
 
-	Params::BPC_RaceSequenceStateReady_C_CheckTipsGrandPrixRound Parms{};
+	Params::BPC_RaceSequenceStateReady_C_CheckTips Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -191,63 +142,101 @@ void UBPC_RaceSequenceStateReady_C::CheckTipsGrandPrixRound(EHintId* OutHintId)
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CreateInfoWidget
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UUserWidget* UBPC_RaceSequenceStateReady_C::CreateInfoWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateInfoWidget");
-
-	Params::BPC_RaceSequenceStateReady_C_CreateInfoWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CreateTipsWindow
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_RaceRuleUI
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::CreateTipsWindow(EHintId InHintId)
+void UBPC_RaceSequenceStateReady_C::Begin_RaceRuleUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateTipsWindow");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_RaceRuleUI");
 
-	Params::BPC_RaceSequenceStateReady_C_CreateTipsWindow Parms{};
-
-	Parms.InHintId = InHintId;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.ExecuteUbergraph_BPC_RaceSequenceStateReady
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckNeedTips
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateReady_C::ExecuteUbergraph_BPC_RaceSequenceStateReady(int32 EntryPoint)
+void UBPC_RaceSequenceStateReady_C::CheckNeedTips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "ExecuteUbergraph_BPC_RaceSequenceStateReady");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckNeedTips");
 
-	Params::BPC_RaceSequenceStateReady_C_ExecuteUbergraph_BPC_RaceSequenceStateReady Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_TipsUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateReady_C::Begin_TipsUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_TipsUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckRuleUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateReady_C::CheckRuleUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckRuleUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckOnlineWaiting
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateReady_C::CheckOnlineWaiting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckOnlineWaiting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OutOnlineWaitingUI
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateReady_C::OutOnlineWaitingUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OutOnlineWaitingUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnOutAnimFinished_イベント
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateReady_C::OnOutAnimFinished_イベント()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnOutAnimFinished_イベント");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -265,46 +254,31 @@ void UBPC_RaceSequenceStateReady_C::InitOnlineWaiting()
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.IsPartyRaceMissionExists
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   Exists                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnExitState
+// (Event, Public, BlueprintEvent)
 
-void UBPC_RaceSequenceStateReady_C::IsPartyRaceMissionExists(bool* Exists)
+void UBPC_RaceSequenceStateReady_C::OnExitState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "IsPartyRaceMissionExists");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnExitState");
 
-	Params::BPC_RaceSequenceStateReady_C_IsPartyRaceMissionExists Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Exists != nullptr)
-		*Exists = Parms.Exists;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.NoticeChangeCountDownEvent
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InNewValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InOldValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnInitState
+// (Event, Public, BlueprintEvent)
 
-void UBPC_RaceSequenceStateReady_C::NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue)
+void UBPC_RaceSequenceStateReady_C::OnInitState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "NoticeChangeCountDownEvent");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnInitState");
 
-	Params::BPC_RaceSequenceStateReady_C_NoticeChangeCountDownEvent Parms{};
-
-	Parms.InNewValue = InNewValue;
-	Parms.InOldValue = InOldValue;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -330,17 +304,23 @@ void UBPC_RaceSequenceStateReady_C::NoticeChangeRaceStateEvent(ERaceInfoStateTyp
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnExitState
-// (Event, Public, BlueprintEvent)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CreateTipsWindow
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EHintId                                 InHintId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::OnExitState()
+void UBPC_RaceSequenceStateReady_C::CreateTipsWindow(EHintId InHintId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnExitState");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateTipsWindow");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateReady_C_CreateTipsWindow Parms{};
+
+	Parms.InHintId = InHintId;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -358,29 +338,15 @@ void UBPC_RaceSequenceStateReady_C::OnHintPopupCloseEnd()
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateReady_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OnOutAnimFinished_イベント
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.SetRaceUI
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_RaceSequenceStateReady_C::OnOutAnimFinished_イベント()
+void UBPC_RaceSequenceStateReady_C::SetRaceUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnOutAnimFinished_イベント");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "SetRaceUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -406,31 +372,65 @@ void UBPC_RaceSequenceStateReady_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.OutOnlineWaitingUI
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.Begin_StartRace
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InRaceStartTimeSec                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::OutOnlineWaitingUI()
+void UBPC_RaceSequenceStateReady_C::Begin_StartRace(int32 InRaceStartTimeSec)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OutOnlineWaitingUI");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_StartRace");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateReady_C_Begin_StartRace Parms{};
+
+	Parms.InRaceStartTimeSec = InRaceStartTimeSec;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.SetRaceUI
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.NoticeChangeCountDownEvent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InNewValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InOldValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateReady_C::SetRaceUI()
+void UBPC_RaceSequenceStateReady_C::NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "SetRaceUI");
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "NoticeChangeCountDownEvent");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_RaceSequenceStateReady_C_NoticeChangeCountDownEvent Parms{};
+
+	Parms.InNewValue = InNewValue;
+	Parms.InOldValue = InOldValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.ExecuteUbergraph_BPC_RaceSequenceStateReady
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateReady_C::ExecuteUbergraph_BPC_RaceSequenceStateReady(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "ExecuteUbergraph_BPC_RaceSequenceStateReady");
+
+	Params::BPC_RaceSequenceStateReady_C_ExecuteUbergraph_BPC_RaceSequenceStateReady Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -28,7 +28,7 @@ enum class EMariaDevelopLogCategory : uint8
 };
 
 // Enum mariaUploadPlugin.EMariaInitializeAuthResult
-// NumValues: 0x0010
+// NumValues: 0x0011
 enum class EMariaInitializeAuthResult : uint8
 {
 	Pending                                  = 0,
@@ -45,6 +45,7 @@ enum class EMariaInitializeAuthResult : uint8
 	ExternalError                            = 11,
 	NSAccountLink                            = 12,
 	NeedInteraction                          = 13,
+	NSAComError                              = 14,
 	InapropriateCall                         = 255,
 	EMariaInitializeAuthResult_MAX           = 256,
 };

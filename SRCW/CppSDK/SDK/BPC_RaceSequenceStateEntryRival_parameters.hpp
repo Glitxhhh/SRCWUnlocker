@@ -18,6 +18,24 @@
 namespace SDK::Params
 {
 
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateEntryRival_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRival_C_OnUpdateState;
+
+// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnKeyPressed_Event
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStateEntryRival_C_OnKeyPressed_Event final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRival_C_OnKeyPressed_Event;
+
 // Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRival
 // 0x0400 (0x0400 - 0x0000)
 struct BPC_RaceSequenceStateEntryRival_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRival final
@@ -89,24 +107,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRival_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRival;
-
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnKeyPressed_Event
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStateEntryRival_C_OnKeyPressed_Event final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRival_C_OnKeyPressed_Event;
-
-// Function BPC_RaceSequenceStateEntryRival.BPC_RaceSequenceStateEntryRival_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateEntryRival_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRival_C_OnUpdateState;
 
 }
 

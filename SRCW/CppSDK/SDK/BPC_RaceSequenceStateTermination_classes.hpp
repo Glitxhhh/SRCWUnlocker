@@ -31,21 +31,21 @@ public:
 	bool                                          In_End_Hide;                                       // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BindOnLoadingEndAnimFinished();
-	void ConstructionScript();
-	void ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint);
 	void NextCeremony();
-	void OnInitState();
-	void OnRaceTermination();
-	void SetGrandPrixNextRaceSetting();
+	void BindOnLoadingEndAnimFinished();
 	void SetSelectMode();
+	void SetGrandPrixNextRaceSetting();
+	void ConstructionScript();
+	void StartOpenLevelToMenu();
+	void StartMatchRace();
 	void StartErrorHandling();
 	void StartGrandPrix();
-	void StartMatchRace();
-	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);
-	void StartOpenLevelToMenu();
-	void StartParty();
 	void StartTimeTrial();
+	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);
+	void StartParty();
+	void OnInitState();
+	void OnRaceTermination();
+	void ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

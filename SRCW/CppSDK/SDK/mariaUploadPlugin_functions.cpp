@@ -2159,6 +2159,31 @@ void UMariaUpload::nn_nifm_CancelNetworkRequest()
 }
 
 
+// Function mariaUploadPlugin.MariaUpload.nn_nifm_HandleNetworkRequestErrorResult
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMariaUpload::nn_nifm_HandleNetworkRequestErrorResult()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MariaUpload", "nn_nifm_HandleNetworkRequestErrorResult");
+
+	Params::MariaUpload_nn_nifm_HandleNetworkRequestErrorResult Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function mariaUploadPlugin.MariaUpload.nn_nifm_IsNetworkAvailable
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2388,6 +2413,25 @@ bool UMariaUpload::ResetSegaAccountID()
 }
 
 
+// Function mariaUploadPlugin.MariaUpload.ResetThreadCoreMask_Switch
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UMariaUpload::ResetThreadCoreMask_Switch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MariaUpload", "ResetThreadCoreMask_Switch");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function mariaUploadPlugin.MariaUpload.SetAccessEndpointDevMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2559,6 +2603,31 @@ void UMariaUpload::SetAuthenticateDevMode_Switch(EMariaDevMode DevMode)
 	Params::MariaUpload_SetAuthenticateDevMode_Switch Parms{};
 
 	Parms.DevMode = DevMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function mariaUploadPlugin.MariaUpload.SetCloudMode
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMariaUpload::SetCloudMode(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MariaUpload", "SetCloudMode");
+
+	Params::MariaUpload_SetCloudMode Parms{};
+
+	Parms.Enable = Enable;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3466,6 +3535,31 @@ void UMariaUpload::UseAccountAuthInteraction_Switch(bool Enable)
 		Func = StaticClass()->GetFunction("MariaUpload", "UseAccountAuthInteraction_Switch");
 
 	Params::MariaUpload_UseAccountAuthInteraction_Switch Parms{};
+
+	Parms.Enable = Enable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function mariaUploadPlugin.MariaUpload.UseAccountComErrorViewer_Switch
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    Enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMariaUpload::UseAccountComErrorViewer_Switch(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MariaUpload", "UseAccountComErrorViewer_Switch");
+
+	Params::MariaUpload_UseAccountComErrorViewer_Switch Parms{};
 
 	Parms.Enable = Enable;
 

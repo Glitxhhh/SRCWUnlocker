@@ -14,8 +14,8 @@
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
 #include "EMachineSelectMode_structs.hpp"
+#include "UnionRun_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
 

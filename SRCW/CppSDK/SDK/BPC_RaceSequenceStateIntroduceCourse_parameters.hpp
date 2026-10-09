@@ -13,47 +13,39 @@
 #include "UNION_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ST_IntroduceCourseSceneData_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.CreateSequncePlayerByStageId
-// 0x0090 (0x0090 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId final
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.IsOpenGrandprixFinalTipsWindow
+// 0x001C (0x001C - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow final
 {
 public:
-	class ALevelSequenceActor*                    Out_Actor;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULevelSequencePlayer*                   Out_Player;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Out_Result;                                        // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMovieSceneSequencePlaybackSettings    K2Node_MakeStruct_MovieSceneSequencePlaybackSettings; // 0x0020(0x0028)(NoDestructor)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EStageId>                              CallFunc_GetSelectedStageIds_ReturnValue;          // 0x0050(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EStageId                                      CallFunc_Array_Get_Item;                           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelSequence*                         CallFunc_DebugLoadLevelSequence_Out_LevelSequence; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ALevelSequenceActor*                    CallFunc_CreateLevelSequencePlayer_OutActor;       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULevelSequencePlayer*                   CallFunc_CreateLevelSequencePlayer_ReturnValue;    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMainStage_ReturnValue;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       InHintId;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableOpenWindow;                                  // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameModeId                                   GrandPrixId;                                       // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSelectedPlayerCount_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId;
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow;
 
 // Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.CreateTipsWindow
 // 0x0038 (0x0038 - 0x0000)
@@ -92,6 +84,93 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_DebugLoadLevelSequence;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.CreateSequncePlayerByStageId
+// 0x0090 (0x0090 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId final
+{
+public:
+	class ALevelSequenceActor*                    Out_Actor;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULevelSequencePlayer*                   Out_Player;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Out_Result;                                        // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMovieSceneSequencePlaybackSettings    K2Node_MakeStruct_MovieSceneSequencePlaybackSettings; // 0x0020(0x0028)(NoDestructor)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EStageId>                              CallFunc_GetSelectedStageIds_ReturnValue;          // 0x0050(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EStageId                                      CallFunc_Array_Get_Item;                           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequence*                         CallFunc_DebugLoadLevelSequence_Out_LevelSequence; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ALevelSequenceActor*                    CallFunc_CreateLevelSequencePlayer_OutActor;       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULevelSequencePlayer*                   CallFunc_CreateLevelSequencePlayer_ReturnValue;    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMainStage_ReturnValue;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_68D7799743460276E4D57EAD7AE3E92C
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_07CB097840A0285D5C47FF9CB2FE2527
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_07CB097840A0285D5C47FF9CB2FE2527 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_07CB097840A0285D5C47FF9CB2FE2527;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnUpdateState;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFinalRoundSceneSkip
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFadeEnd
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd final
+{
+public:
+	EUnionUIFadeDirection                         FadeDirection;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd;
+
+// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnKeyPressed_Event
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event;
 
 // Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse
 // 0x07B0 (0x07B0 - 0x0000)
@@ -303,85 +382,6 @@ public:
 	float                                         CallFunc_Delay_Duration_ImplicitCast_1;            // 0x07AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.IsOpenGrandprixFinalTipsWindow
-// 0x001C (0x001C - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow final
-{
-public:
-	EHintId                                       InHintId;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableOpenWindow;                                  // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameModeId                                   GrandPrixId;                                       // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameModeId                                   CallFunc_GetSelectedGameModeId_ReturnValue;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsOnlineGameMode_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSelectedPlayerCount_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFadeEnd
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd final
-{
-public:
-	EUnionUIFadeDirection                         FadeDirection;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnFinalRoundSceneSkip
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnKeyPressed_Event
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_07CB097840A0285D5C47FF9CB2FE2527
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_07CB097840A0285D5C47FF9CB2FE2527 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_07CB097840A0285D5C47FF9CB2FE2527;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnLoaded_68D7799743460276E4D57EAD7AE3E92C
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C;
-
-// Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateIntroduceCourse_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateIntroduceCourse_C_OnUpdateState;
 
 }
 

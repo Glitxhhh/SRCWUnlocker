@@ -6919,7 +6919,7 @@ DUMPER7_ASSERTS_UGadgetDashUp;
 
 // Class UnionRun.RaceObjectSimpleAnimation
 // 0x0058 (0x02E8 - 0x0290)
-class ARaceObjectSimpleAnimation : public AActor
+class ARaceObjectSimpleAnimation final : public AActor
 {
 public:
 	class UUnionStaticMeshComponent*              StaticMeshComponent;                               // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

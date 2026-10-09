@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.ExecuteUbergraph_BPC_RaceSequenceStateDrive
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateDrive_C::ExecuteUbergraph_BPC_RaceSequenceStateDrive(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "ExecuteUbergraph_BPC_RaceSequenceStateDrive");
-
-	Params::BPC_RaceSequenceStateDrive_C_ExecuteUbergraph_BPC_RaceSequenceStateDrive Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.NoticeChangeRaceStateEvent
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -59,20 +39,6 @@ void UBPC_RaceSequenceStateDrive_C::NoticeChangeRaceStateEvent(ERaceInfoStateTyp
 }
 
 
-// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceSequenceStateDrive_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.OnUpdateState
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -88,6 +54,40 @@ void UBPC_RaceSequenceStateDrive_C::OnUpdateState(float InDeltaTime)
 	Params::BPC_RaceSequenceStateDrive_C_OnUpdateState Parms{};
 
 	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_RaceSequenceStateDrive_C::OnInitState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "OnInitState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.ExecuteUbergraph_BPC_RaceSequenceStateDrive
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateDrive_C::ExecuteUbergraph_BPC_RaceSequenceStateDrive(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "ExecuteUbergraph_BPC_RaceSequenceStateDrive");
+
+	Params::BPC_RaceSequenceStateDrive_C_ExecuteUbergraph_BPC_RaceSequenceStateDrive Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

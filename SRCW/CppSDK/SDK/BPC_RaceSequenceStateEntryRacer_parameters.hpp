@@ -39,6 +39,50 @@ public:
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_CloseRaceRuleInfoUIForFriendMatch;
 
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.GetOffsetTransformByStageId
+// 0x02B0 (0x02B0 - 0x0000)
+struct BPC_RaceSequenceStateEntryRacer_C_GetOffsetTransformByStageId final
+{
+public:
+	EStageId                                      In_StageId;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             In_Transform;                                      // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Out_Transform;                                     // 0x0070(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetEnumeratorName_ReturnValue_1;          // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_OffsetTransform                    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0xF];                                      // 0x0171(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0180(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_OffsetTransform                    CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x01E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0xF];                                      // 0x0241(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue_1;          // 0x0250(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_GetOffsetTransformByStageId;
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnUpdateState
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_RaceSequenceStateEntryRacer_C_OnUpdateState final
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_OnUpdateState;
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnKeyPressed_Event
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_RaceSequenceStateEntryRacer_C_OnKeyPressed_Event final
+{
+public:
+	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_OnKeyPressed_Event;
+
 // Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer
 // 0x0240 (0x0240 - 0x0000)
 struct BPC_RaceSequenceStateEntryRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer final
@@ -121,50 +165,6 @@ public:
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer;
-
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.GetOffsetTransformByStageId
-// 0x02B0 (0x02B0 - 0x0000)
-struct BPC_RaceSequenceStateEntryRacer_C_GetOffsetTransformByStageId final
-{
-public:
-	EStageId                                      In_StageId;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             In_Transform;                                      // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Out_Transform;                                     // 0x0070(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEnumeratorName_ReturnValue;            // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetEnumeratorName_ReturnValue_1;          // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_OffsetTransform                    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0xF];                                      // 0x0171(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0180(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_OffsetTransform                    CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x01E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_241[0xF];                                      // 0x0241(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue_1;          // 0x0250(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_GetOffsetTransformByStageId;
-
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnKeyPressed_Event
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_RaceSequenceStateEntryRacer_C_OnKeyPressed_Event final
-{
-public:
-	struct FKey                                   PressedKey;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_OnKeyPressed_Event;
-
-// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.OnUpdateState
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_RaceSequenceStateEntryRacer_C_OnUpdateState final
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_RaceSequenceStateEntryRacer_C_OnUpdateState;
 
 }
 

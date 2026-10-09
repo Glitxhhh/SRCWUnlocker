@@ -26,10 +26,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0118(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BPC_RaceSequenceStateDrive(int32 EntryPoint);
 	void NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState);
-	void OnInitState();
 	void OnUpdateState(float InDeltaTime);
+	void OnInitState();
+	void ExecuteUbergraph_BPC_RaceSequenceStateDrive(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

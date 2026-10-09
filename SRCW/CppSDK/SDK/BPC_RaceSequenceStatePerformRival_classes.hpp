@@ -33,15 +33,15 @@ public:
 	double                                        SkipDelaySeconds;                                  // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_RaceSequenceStatePerformRival(int32 EntryPoint);
-	void OnClosedSequnce();
-	void OnEnabledSkip();
+	void OnInitState();
+	void OnUpdateState(float InDeltaTime);
 	void OnExitState();
 	void OnFinishedPlay();
-	void OnFullScreenMouseClick();
-	void OnInitState();
+	void OnClosedSequnce();
 	void OnSkipped(const struct FKey& PressedKey);
-	void OnUpdateState(float InDeltaTime);
+	void OnFullScreenMouseClick();
+	void OnEnabledSkip();
+	void ExecuteUbergraph_BPC_RaceSequenceStatePerformRival(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -28,12 +28,12 @@ public:
 	bool                                          IsCreated;                                         // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu);
-	void ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint);
+	void カスタムイベント();
 	void OnExitState();
 	void OnInitState();
 	void ReceiveBeginPlay();
-	void カスタムイベント();
+	void CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu);
+	void ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

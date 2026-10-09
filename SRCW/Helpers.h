@@ -19,3 +19,9 @@ const void* VTHook(const void** vtable, const int index, const void* hook);
 void* ShadowVT(void* instance);
 
 inline std::unordered_map<uint64_t, uint64_t> ShadowVTMap;
+
+// Runtime discovery of engine globals (no hardcoded offsets).
+// Both return the address of the structure, or nullptr if not (yet) found.
+void* FindGObjectsArray();          // FChunkedFixedUObjectArray (TUObjectArray)
+void* FindFNamePool();              // FNamePool; Blocks[] table lives at +0x10
+bool  IsGObjectsArrayValid(const void* candidate);
