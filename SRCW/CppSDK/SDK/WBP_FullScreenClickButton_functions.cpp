@@ -14,18 +14,15 @@
 #include "WBP_FullScreenClickButton_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FullScreenClickButton.WBP_FullScreenClickButton_C.BndEvt__WBP_FullScreenClickButton_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_FullScreenClickButton_C::BndEvt__WBP_FullScreenClickButton_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FullScreenClickButton_C", "BndEvt__WBP_FullScreenClickButton_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FullScreenClickButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FullScreenClickButton_C::BndEvt__WBP_FullScreenClickButton_MouseIntera
 
 void UWBP_FullScreenClickButton_C::ExecuteUbergraph_WBP_FullScreenClickButton(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FullScreenClickButton_C", "ExecuteUbergraph_WBP_FullScreenClickButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FullScreenClickButton_C", "ExecuteUbergraph_WBP_FullScreenClickButton", FuncInfo);
 
 	Params::WBP_FullScreenClickButton_C_ExecuteUbergraph_WBP_FullScreenClickButton Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_FullScreenClickButton_C::ExecuteUbergraph_WBP_FullScreenClickButton(in
 
 void UWBP_FullScreenClickButton_C::ReleaseMouseDrag()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FullScreenClickButton_C", "ReleaseMouseDrag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FullScreenClickButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UWBP_FullScreenClickButton_C::ReleaseMouseDrag()
 
 void UWBP_FullScreenClickButton_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FullScreenClickButton_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FullScreenClickButton_C", FnName));
 
 	Params::WBP_FullScreenClickButton_C_Tick Parms{};
 
@@ -86,5 +77,5 @@ void UWBP_FullScreenClickButton_C::Tick(const struct FGeometry& MyGeometry, floa
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

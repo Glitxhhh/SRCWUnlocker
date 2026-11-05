@@ -14,18 +14,27 @@
 #include "BPC_RaceSequenceStateEntryRacer_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryRacerUI_Duel
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryRacerUI_Duel()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CloseRaceRuleInfoUIForFriendMatch
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceSequenceStateEntryRacer_C::CloseRaceRuleInfoUIForFriendMatch()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "CloseRaceRuleInfoUIForFriendMatch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -40,10 +49,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::CloseRaceRuleInfoUIForFriendMatch()
 
 void UBPC_RaceSequenceStateEntryRacer_C::GetOffsetTransformByStageId(EStageId In_StageId, const struct FTransform& In_Transform, struct FTransform* Out_Transform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "GetOffsetTransformByStageId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	Params::BPC_RaceSequenceStateEntryRacer_C_GetOffsetTransformByStageId Parms{};
 
@@ -62,10 +69,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::GetOffsetTransformByStageId(EStageId In
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +83,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnInitState()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	Params::BPC_RaceSequenceStateEntryRacer_C_OnUpdateState Parms{};
 
@@ -96,10 +99,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +111,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnExitState()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnFinishedPlay_Sequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnFinishedPlay_Sequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +123,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnFinishedPlay_Sequence()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnChangeSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnChangeSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +137,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnChangeSequence()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnKeyPressed_Event(const struct FKey& PressedKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnKeyPressed_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	Params::BPC_RaceSequenceStateEntryRacer_C_OnKeyPressed_Event Parms{};
 
@@ -158,10 +153,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnKeyPressed_Event(const struct FKey& P
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnScenePlayerFinishedUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnScenePlayerFinishedUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -172,10 +165,56 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnScenePlayerFinishedUI()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnFullScreenMouseClick");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryRaceUI
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryRaceUI()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.DestroyEntryRaceUI
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::DestroyEntryRaceUI()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.WidgetStartDisplayEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::WidgetStartDisplayEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateEntryRacer.BPC_RaceSequenceStateEntryRacer_C.CreateEntryEvent
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_RaceSequenceStateEntryRacer_C::CreateEntryEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -186,10 +225,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnFullScreenMouseClick()
 
 void UBPC_RaceSequenceStateEntryRacer_C::OnEnabledSkip()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "OnEnabledSkip");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEntryRacer_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,10 +239,8 @@ void UBPC_RaceSequenceStateEntryRacer_C::OnEnabledSkip()
 
 void UBPC_RaceSequenceStateEntryRacer_C::ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEntryRacer_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateEntryRacer_C", "ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer", FuncInfo);
 
 	Params::BPC_RaceSequenceStateEntryRacer_C_ExecuteUbergraph_BPC_RaceSequenceStateEntryRacer Parms{};
 
@@ -214,5 +249,5 @@ void UBPC_RaceSequenceStateEntryRacer_C::ExecuteUbergraph_BPC_RaceSequenceStateE
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

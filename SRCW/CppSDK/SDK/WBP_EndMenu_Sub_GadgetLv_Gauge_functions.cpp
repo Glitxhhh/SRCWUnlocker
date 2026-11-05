@@ -14,8 +14,7 @@
 #include "WBP_EndMenu_Sub_GadgetLv_Gauge_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_EndMenu_Sub_GadgetLv_Gauge.WBP_EndMenu_Sub_GadgetLv_Gauge_C.ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_EndMenu_Sub_GadgetLv_Gauge_C::ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_Sub_GadgetLv_Gauge_C", "ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_EndMenu_Sub_GadgetLv_Gauge_C", "ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge", FuncInfo);
 
 	Params::WBP_EndMenu_Sub_GadgetLv_Gauge_C_ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_EndMenu_Sub_GadgetLv_Gauge_C::ExecuteUbergraph_WBP_EndMenu_Sub_GadgetL
 
 void UWBP_EndMenu_Sub_GadgetLv_Gauge_C::SetGauge(double Now, double Next, double Low)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_Sub_GadgetLv_Gauge_C", "SetGauge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_Sub_GadgetLv_Gauge_C", FnName));
 
 	Params::WBP_EndMenu_Sub_GadgetLv_Gauge_C_SetGauge Parms{};
 
@@ -60,5 +55,5 @@ void UWBP_EndMenu_Sub_GadgetLv_Gauge_C::SetGauge(double Now, double Next, double
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

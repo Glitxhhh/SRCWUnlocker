@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge.WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C
 // 0x0098 (0x0378 - 0x02E0)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C;
 
-}
-
+SDK_NAMESPACE_END

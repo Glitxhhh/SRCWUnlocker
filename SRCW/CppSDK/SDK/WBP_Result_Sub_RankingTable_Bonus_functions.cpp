@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_RankingTable_Bonus_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RankingTable_Bonus.WBP_Result_Sub_RankingTable_Bonus_C.Close
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Result_Sub_RankingTable_Bonus_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_Bonus_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_Bonus_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_RankingTable_Bonus_C::Close()
 
 void UWBP_Result_Sub_RankingTable_Bonus_C::ExecuteUbergraph_WBP_Result_Sub_RankingTable_Bonus(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_Bonus_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_Bonus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RankingTable_Bonus_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_Bonus", FuncInfo);
 
 	Params::WBP_Result_Sub_RankingTable_Bonus_C_ExecuteUbergraph_WBP_Result_Sub_RankingTable_Bonus Parms{};
 
@@ -59,10 +54,8 @@ void UWBP_Result_Sub_RankingTable_Bonus_C::ExecuteUbergraph_WBP_Result_Sub_Ranki
 
 void UWBP_Result_Sub_RankingTable_Bonus_C::Open(const class FText& BonusText, const class FText& BonusNumText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_Bonus_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_Bonus_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_Bonus_C_Open Parms{};
 
@@ -78,13 +71,11 @@ void UWBP_Result_Sub_RankingTable_Bonus_C::Open(const class FText& BonusText, co
 
 void UWBP_Result_Sub_RankingTable_Bonus_C::OpenMVP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_Bonus_C", "OpenMVP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_Bonus_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

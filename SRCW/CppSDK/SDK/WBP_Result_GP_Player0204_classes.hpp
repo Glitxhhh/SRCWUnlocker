@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Result_GP_Player0204.WBP_Result_GP_Player0204_C
 // 0x00A8 (0x0430 - 0x0388)
@@ -83,5 +82,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Result_GP_Player0204_C;
 
-}
-
+SDK_NAMESPACE_END

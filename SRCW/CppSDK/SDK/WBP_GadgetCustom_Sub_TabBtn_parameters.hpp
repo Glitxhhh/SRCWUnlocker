@@ -15,8 +15,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBtn
 // 0x0044 (0x0044 - 0x0000)
@@ -120,5 +120,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_GadgetCustom_Sub_TabBtn_C_SetShape;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

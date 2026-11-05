@@ -14,18 +14,15 @@
 #include "WBP_ClassSelect_Sub_Trophy_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ClassSelect_Sub_Trophy.WBP_ClassSelect_Sub_Trophy_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_ClassSelect_Sub_Trophy_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ClassSelect_Sub_Trophy_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ClassSelect_Sub_Trophy_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_ClassSelect_Sub_Trophy_C::Construct()
 
 void UWBP_ClassSelect_Sub_Trophy_C::ExecuteUbergraph_WBP_ClassSelect_Sub_Trophy(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ClassSelect_Sub_Trophy_C", "ExecuteUbergraph_WBP_ClassSelect_Sub_Trophy");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ClassSelect_Sub_Trophy_C", "ExecuteUbergraph_WBP_ClassSelect_Sub_Trophy", FuncInfo);
 
 	Params::WBP_ClassSelect_Sub_Trophy_C_ExecuteUbergraph_WBP_ClassSelect_Sub_Trophy Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_ClassSelect_Sub_Trophy_C::ExecuteUbergraph_WBP_ClassSelect_Sub_Trophy(
 
 void UWBP_ClassSelect_Sub_Trophy_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ClassSelect_Sub_Trophy_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ClassSelect_Sub_Trophy_C", FnName));
 
 	Params::WBP_ClassSelect_Sub_Trophy_C_PreConstruct Parms{};
 
@@ -70,5 +63,5 @@ void UWBP_ClassSelect_Sub_Trophy_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

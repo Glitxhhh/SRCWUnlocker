@@ -14,8 +14,7 @@
 #include "BC7Codec_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BC7Codec.BC7EncoderAsyncExecution.EncodeBC7
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -52,5 +51,5 @@ class UBC7EncoderAsyncExecution* UBC7EncoderAsyncExecution::EncodeBC7(class UObj
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

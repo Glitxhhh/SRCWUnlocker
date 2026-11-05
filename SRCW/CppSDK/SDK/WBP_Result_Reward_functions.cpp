@@ -14,18 +14,15 @@
 #include "WBP_Result_Reward_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Reward.WBP_Result_Reward_C.CloseReward
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Result_Reward_C::CloseReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "CloseReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Result_Reward_C::CloseReward()
 
 void UWBP_Result_Reward_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_Result_Reward_C::Construct()
 
 void UWBP_Result_Reward_C::ExecuteUbergraph_WBP_Result_Reward(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "ExecuteUbergraph_WBP_Result_Reward");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Reward_C", "ExecuteUbergraph_WBP_Result_Reward", FuncInfo);
 
 	Params::WBP_Result_Reward_C_ExecuteUbergraph_WBP_Result_Reward Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_Result_Reward_C::ExecuteUbergraph_WBP_Result_Reward(int32 EntryPoint)
 
 void UWBP_Result_Reward_C::Finished_4CD729594DBA348EDC0AE5A094CC2F28()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Finished_4CD729594DBA348EDC0AE5A094CC2F28");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_Result_Reward_C::Finished_4CD729594DBA348EDC0AE5A094CC2F28()
 
 void UWBP_Result_Reward_C::Finished_5FE04722478441073E465CA7CE2C5AB5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Finished_5FE04722478441073E465CA7CE2C5AB5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_Result_Reward_C::Finished_5FE04722478441073E465CA7CE2C5AB5()
 
 void UWBP_Result_Reward_C::Finished_63BCFB8D460E3CE107EC0BB899C3ACB4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Finished_63BCFB8D460E3CE107EC0BB899C3ACB4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_Result_Reward_C::Finished_63BCFB8D460E3CE107EC0BB899C3ACB4()
 
 void UWBP_Result_Reward_C::Finished_D392C6B74ABB8831DC622AB0C5B56700()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Finished_D392C6B74ABB8831DC622AB0C5B56700");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_Result_Reward_C::Finished_D392C6B74ABB8831DC622AB0C5B56700()
 
 void UWBP_Result_Reward_C::Finished_FC2AD635457559839A132387D5C2AFBE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "Finished_FC2AD635457559839A132387D5C2AFBE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -143,10 +126,8 @@ void UWBP_Result_Reward_C::Finished_FC2AD635457559839A132387D5C2AFBE()
 
 void UWBP_Result_Reward_C::GetItemWidget(int32 Index_0, class UWBP_Result_Sub_DonpaTicket_Details_C** Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "GetItemWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_GetItemWidget Parms{};
 
@@ -166,10 +147,8 @@ void UWBP_Result_Reward_C::GetItemWidget(int32 Index_0, class UWBP_Result_Sub_Do
 
 void UWBP_Result_Reward_C::IsResultReward(bool* bIsResultReward)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "IsResultReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_IsResultReward Parms{};
 
@@ -187,10 +166,8 @@ void UWBP_Result_Reward_C::IsResultReward(bool* bIsResultReward)
 
 void UWBP_Result_Reward_C::IsRewardDispComplete(bool* bIsComplete)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "IsRewardDispComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_IsRewardDispComplete Parms{};
 
@@ -208,10 +185,8 @@ void UWBP_Result_Reward_C::IsRewardDispComplete(bool* bIsComplete)
 
 void UWBP_Result_Reward_C::IsVisibleRSR(bool* visisble)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "IsVisibleRSR");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_IsVisibleRSR Parms{};
 
@@ -227,10 +202,8 @@ void UWBP_Result_Reward_C::IsVisibleRSR(bool* visisble)
 
 void UWBP_Result_Reward_C::OnTicketAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "OnTicketAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -241,10 +214,8 @@ void UWBP_Result_Reward_C::OnTicketAnimationFinished()
 
 void UWBP_Result_Reward_C::OnTicketInAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "OnTicketInAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -258,10 +229,8 @@ void UWBP_Result_Reward_C::OnTicketInAnimationFinished()
 
 void UWBP_Result_Reward_C::PlayOtherResultReward(const TArray<struct FHonorCommendationData>& HonorList, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "PlayOtherResultReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_PlayOtherResultReward Parms{};
 
@@ -280,10 +249,8 @@ void UWBP_Result_Reward_C::PlayOtherResultReward(const TArray<struct FHonorComme
 
 void UWBP_Result_Reward_C::PlayOtherSE(class USoundAtomCue* SoundID, int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "PlayOtherSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_PlayOtherSE Parms{};
 
@@ -301,10 +268,8 @@ void UWBP_Result_Reward_C::PlayOtherSE(class USoundAtomCue* SoundID, int32 Playe
 
 void UWBP_Result_Reward_C::PlayPlayerSE(class USoundAtomCue* SoundID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "PlayPlayerSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_PlayPlayerSE Parms{};
 
@@ -319,10 +284,8 @@ void UWBP_Result_Reward_C::PlayPlayerSE(class USoundAtomCue* SoundID)
 
 void UWBP_Result_Reward_C::PlayResultReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "PlayResultReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +298,8 @@ void UWBP_Result_Reward_C::PlayResultReward()
 
 void UWBP_Result_Reward_C::SetRewardInfo(const TArray<struct FRewardRedStarRingData>& RSRList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Reward_C", "SetRewardInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Reward_C", FnName));
 
 	Params::WBP_Result_Reward_C_SetRewardInfo Parms{};
 
@@ -347,5 +308,5 @@ void UWBP_Result_Reward_C::SetRewardInfo(const TArray<struct FRewardRedStarRingD
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_StickerRenderPlane.BP_StickerRenderPlane_C
 // 0x0000 (0x02A0 - 0x02A0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_StickerRenderPlane_C;
 
-}
-
+SDK_NAMESPACE_END

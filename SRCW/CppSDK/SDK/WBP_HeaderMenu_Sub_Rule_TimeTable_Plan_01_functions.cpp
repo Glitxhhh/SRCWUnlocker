@@ -14,8 +14,7 @@
 #include "WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C.Fixed Display
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,14 +23,30 @@ namespace SDK
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::Fixed_Display(bool Fixed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", "Fixed Display");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C_Fixed_Display Parms{};
 
 	Parms.Fixed = Fixed;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C.SetupEXGadget
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGadgetId                               exGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::SetupEXGadget(EGadgetId exGadgetId)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C_SetupEXGadget Parms{};
+
+	Parms.exGadgetId = exGadgetId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -45,10 +60,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::Fixed_Display(bool Fixed)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::StartAnimation(bool Normal, bool Sp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", "StartAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C_StartAnimation Parms{};
 
@@ -58,5 +71,5 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_01_C::StartAnimation(bool Normal, b
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

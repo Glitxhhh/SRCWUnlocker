@@ -13,15 +13,14 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemYellowDrillObject.BP_ItemYellowDrillObject_C
-// 0x0010 (0x06A0 - 0x0690)
+// 0x0010 (0x06B0 - 0x06A0)
 class ABP_ItemYellowDrillObject_C final : public AItemYellowDrillObject
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x06A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemYellowDrillObject_C;
 
-}
-
+SDK_NAMESPACE_END

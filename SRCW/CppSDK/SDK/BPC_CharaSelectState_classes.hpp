@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionLib_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_CharaSelectState.BPC_CharaSelectState_C
 // 0x0010 (0x0148 - 0x0138)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_CharaSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

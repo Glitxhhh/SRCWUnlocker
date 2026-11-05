@@ -14,18 +14,15 @@
 #include "WBP_GroupResult_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GroupResult.WBP_GroupResult_C.BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_GroupResult_C::BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_GroupResult_C::BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBo
 
 void UWBP_GroupResult_C::BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_GroupResult_C::BndEvt__WBP_GroupResult_Button_front_K2Node_ComponentBo
 
 void UWBP_GroupResult_C::CloseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "CloseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_GroupResult_C::CloseAnim()
 
 void UWBP_GroupResult_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UWBP_GroupResult_C::Construct()
 
 void UWBP_GroupResult_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +83,8 @@ void UWBP_GroupResult_C::Destruct()
 
 void UWBP_GroupResult_C::ExecuteUbergraph_WBP_GroupResult(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "ExecuteUbergraph_WBP_GroupResult");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GroupResult_C", "ExecuteUbergraph_WBP_GroupResult", FuncInfo);
 
 	Params::WBP_GroupResult_C_ExecuteUbergraph_WBP_GroupResult Parms{};
 
@@ -112,10 +99,8 @@ void UWBP_GroupResult_C::ExecuteUbergraph_WBP_GroupResult(int32 EntryPoint)
 
 void UWBP_GroupResult_C::FestaResult()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "FestaResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +113,8 @@ void UWBP_GroupResult_C::FestaResult()
 
 void UWBP_GroupResult_C::Is_Count_Anim_End(bool* bIsEnd_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Is Count Anim End");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	Params::WBP_GroupResult_C_Is_Count_Anim_End Parms{};
 
@@ -147,10 +130,8 @@ void UWBP_GroupResult_C::Is_Count_Anim_End(bool* bIsEnd_0)
 
 void UWBP_GroupResult_C::LastTeamAnimSet_Party()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "LastTeamAnimSet_Party");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +142,8 @@ void UWBP_GroupResult_C::LastTeamAnimSet_Party()
 
 void UWBP_GroupResult_C::OnAccept()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "OnAccept");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +156,8 @@ void UWBP_GroupResult_C::OnAccept()
 
 void UWBP_GroupResult_C::OnAcceptButton(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "OnAcceptButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	Params::WBP_GroupResult_C_OnAcceptButton Parms{};
 
@@ -197,10 +174,8 @@ void UWBP_GroupResult_C::OnAcceptButton(class UObject* Object)
 
 void UWBP_GroupResult_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	Params::WBP_GroupResult_C_PreConstruct Parms{};
 
@@ -215,10 +190,8 @@ void UWBP_GroupResult_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GroupResult_C::RemoveInputRevieveObj()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "RemoveInputRevieveObj");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +204,8 @@ void UWBP_GroupResult_C::RemoveInputRevieveObj()
 
 void UWBP_GroupResult_C::Set_Group_Result_Impl(class UWBP_GroupResult_C* GroupResult_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Set Group Result Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	Params::WBP_GroupResult_C_Set_Group_Result_Impl Parms{};
 
@@ -249,10 +220,8 @@ void UWBP_GroupResult_C::Set_Group_Result_Impl(class UWBP_GroupResult_C* GroupRe
 
 void UWBP_GroupResult_C::SetLoadingMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "SetLoadingMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -263,10 +232,8 @@ void UWBP_GroupResult_C::SetLoadingMode()
 
 void UWBP_GroupResult_C::SetTeamColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "SetTeamColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -277,10 +244,8 @@ void UWBP_GroupResult_C::SetTeamColor()
 
 void UWBP_GroupResult_C::SetupWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "SetupWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -291,10 +256,8 @@ void UWBP_GroupResult_C::SetupWidget()
 
 void UWBP_GroupResult_C::StartAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "StartAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +271,8 @@ void UWBP_GroupResult_C::StartAnim()
 
 void UWBP_GroupResult_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	Params::WBP_GroupResult_C_Tick Parms{};
 
@@ -327,13 +288,11 @@ void UWBP_GroupResult_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 void UWBP_GroupResult_C::Update()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_C", "Update");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

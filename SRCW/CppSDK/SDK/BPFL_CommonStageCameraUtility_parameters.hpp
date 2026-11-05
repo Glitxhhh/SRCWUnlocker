@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPFL_CommonStageCameraUtility.BPFL_CommonStageCameraUtility_C.ApplySettingsCineCameraAll
 // 0x0098 (0x0098 - 0x0000)
@@ -104,5 +104,5 @@ public:
 };
 DUMPER7_ASSERTS_BPFL_CommonStageCameraUtility_C_ApplySettingsSceneCaptureAll;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

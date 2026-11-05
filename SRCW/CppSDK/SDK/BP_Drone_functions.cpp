@@ -14,18 +14,15 @@
 #include "BP_Drone_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Drone.BP_Drone_C.DismissDrone
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Drone_C::DismissDrone()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "DismissDrone");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_Drone_C::DismissDrone()
 
 void ABP_Drone_C::DroneInOut__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "DroneInOut__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void ABP_Drone_C::DroneInOut__FinishedFunc()
 
 void ABP_Drone_C::DroneInOut__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "DroneInOut__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void ABP_Drone_C::DroneInOut__UpdateFunc()
 
 void ABP_Drone_C::ExecuteUbergraph_BP_Drone(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "ExecuteUbergraph_BP_Drone");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_Drone_C", "ExecuteUbergraph_BP_Drone", FuncInfo);
 
 	Params::BP_Drone_C_ExecuteUbergraph_BP_Drone Parms{};
 
@@ -84,10 +75,8 @@ void ABP_Drone_C::ExecuteUbergraph_BP_Drone(int32 EntryPoint)
 
 void ABP_Drone_C::IdleMove__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "IdleMove__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void ABP_Drone_C::IdleMove__FinishedFunc()
 
 void ABP_Drone_C::IdleMove__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "IdleMove__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void ABP_Drone_C::IdleMove__UpdateFunc()
 
 void ABP_Drone_C::OnCallDrone(bool bNewAdded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "OnCallDrone");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	Params::BP_Drone_C_OnCallDrone Parms{};
 
@@ -134,10 +119,8 @@ void ABP_Drone_C::OnCallDrone(bool bNewAdded)
 
 void ABP_Drone_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	Params::BP_Drone_C_ReceiveTick Parms{};
 
@@ -154,10 +137,8 @@ void ABP_Drone_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_Drone_C::SetDroneMaterialReverse(bool bIsReverse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "SetDroneMaterialReverse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	Params::BP_Drone_C_SetDroneMaterialReverse Parms{};
 
@@ -172,13 +153,11 @@ void ABP_Drone_C::SetDroneMaterialReverse(bool bIsReverse)
 
 void ABP_Drone_C::SetDroneMaterials()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Drone_C", "SetDroneMaterials");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Drone_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

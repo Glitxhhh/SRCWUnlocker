@@ -16,8 +16,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Hedgehog.GOCMovement
 // 0x02E0 (0x0380 - 0x00A0)
@@ -334,5 +333,4 @@ public:
 };
 DUMPER7_ASSERTS_URotateTowardsTarget;
 
-}
-
+SDK_NAMESPACE_END

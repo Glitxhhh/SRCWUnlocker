@@ -14,8 +14,7 @@
 #include "WBP_CMN_PlayerDetail_Sub_Info_Number_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PlayerDetail_Sub_Info_Number.WBP_CMN_PlayerDetail_Sub_Info_Number_C.ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_PlayerDetail_Sub_Info_Number_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number", FuncInfo);
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::ExecuteUbergraph_WBP_CMN_PlayerDet
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::LoadAndSetCharaIcons(TArray<TSoftObjectPtr<class UTexture2D>>& InLoadIcons)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "LoadAndSetCharaIcons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_LoadAndSetCharaIcons Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::LoadAndSetCharaIcons(TArray<TSoftO
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_E1FC87B2465ECB976AB2DBB9011E3990(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "OnLoaded_E1FC87B2465ECB976AB2DBB9011E3990");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_OnLoaded_E1FC87B2465ECB976AB2DBB9011E3990 Parms{};
 
@@ -86,10 +79,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_E1FC87B2465ECB976AB2DBB90
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_E710B00048C3BFD801C030B76AAAC944(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "OnLoaded_E710B00048C3BFD801C030B76AAAC944");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_OnLoaded_E710B00048C3BFD801C030B76AAAC944 Parms{};
 
@@ -106,10 +97,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_E710B00048C3BFD801C030B76
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_FE5531144032839B249608AE27D2DF6C(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "OnLoaded_FE5531144032839B249608AE27D2DF6C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_OnLoaded_FE5531144032839B249608AE27D2DF6C Parms{};
 
@@ -127,10 +116,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::OnLoaded_FE5531144032839B249608AE2
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::SetUsedCharacterTopThree(TArray<struct FUsageCountChara>& InCharaCounts, TArray<TSoftObjectPtr<class UTexture2D>>& InCharaIcons)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "SetUsedCharacterTopThree");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_SetUsedCharacterTopThree Parms{};
 
@@ -151,10 +138,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::SetUsedCharacterTopThree(TArray<st
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::SetUsedMachineTypeCounts(TArray<int32>& UsedMachineCounts)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_C", "SetUsedMachineTypeCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_C_SetUsedMachineTypeCounts Parms{};
 
@@ -165,5 +150,5 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_C::SetUsedMachineTypeCounts(TArray<in
 	UsedMachineCounts = std::move(Parms.UsedMachineCounts);
 }
 
-}
 
+SDK_NAMESPACE_END

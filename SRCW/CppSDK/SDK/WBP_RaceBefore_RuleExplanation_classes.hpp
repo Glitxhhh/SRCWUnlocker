@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C
 // 0x0240 (0x0548 - 0x0308)
@@ -102,5 +101,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_RaceBefore_RuleExplanation_C;
 
-}
-
+SDK_NAMESPACE_END

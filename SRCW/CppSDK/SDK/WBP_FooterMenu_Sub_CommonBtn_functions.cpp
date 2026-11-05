@@ -14,18 +14,15 @@
 #include "WBP_FooterMenu_Sub_CommonBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterMenu_Sub_CommonBtn.WBP_FooterMenu_Sub_CommonBtn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::Construct()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::ExecuteUbergraph_WBP_FooterMenu_Sub_CommonBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_CommonBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterMenu_Sub_CommonBtn_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_CommonBtn", FuncInfo);
 
 	Params::WBP_FooterMenu_Sub_CommonBtn_C_ExecuteUbergraph_WBP_FooterMenu_Sub_CommonBtn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::ExecuteUbergraph_WBP_FooterMenu_Sub_Common
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnAcceptKeyPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnAcceptKeyReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnBackKeyPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnBackKeyReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnChangeInputRegistration(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnChangeInputRegistration");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_CommonBtn_C_OnChangeInputRegistration Parms{};
 
@@ -132,10 +117,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnChangeInputRegistration(ESlateVisibility
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +129,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonLeftPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +141,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonLeftReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +153,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonTopPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,10 +165,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnFaceButtonTopReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,10 +177,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnLeftShoulderPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -216,10 +189,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnLeftShoulderReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +201,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnRightShoulderPressed()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -246,10 +215,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::OnRightShoulderReleased()
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_CommonBtn_C_PreConstruct Parms{};
 
@@ -266,10 +233,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::SetIconGauge(float InGaugeParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "SetIconGauge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_CommonBtn_C_SetIconGauge Parms{};
 
@@ -286,10 +251,8 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::SetIconGauge(float InGaugeParam)
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_CommonBtn_C_SetText Parms{};
 
@@ -304,13 +267,11 @@ void UWBP_FooterMenu_Sub_CommonBtn_C::SetText(const class FText& InText)
 
 void UWBP_FooterMenu_Sub_CommonBtn_C::SetupButtonIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_CommonBtn_C", "SetupButtonIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_CommonBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_MachineBtn.WBP_MachineSelect_Sub_MachineBtn_C
 // 0x0000 (0x0310 - 0x0310)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineSelect_Sub_MachineBtn_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "KawaiiPhysics_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function KawaiiPhysics.KawaiiPhysicsLibrary.ConvertToKawaiiPhysics
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -633,5 +632,5 @@ struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::SetWindScale(const struct 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

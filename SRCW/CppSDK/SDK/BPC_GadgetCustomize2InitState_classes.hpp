@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_GadgetCustomize2InitState.BPC_GadgetCustomize2InitState_C
 // 0x0000 (0x00F8 - 0x00F8)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_GadgetCustomize2InitState_C;
 
-}
-
+SDK_NAMESPACE_END

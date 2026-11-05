@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum Constraints.EHandleEvent
 // NumValues: 0x0005
@@ -27,17 +26,6 @@ enum class EHandleEvent : uint8
 	UpperDependencyUpdated                   = 3,
 	Max                                      = 4,
 };
-
-// ScriptStruct Constraints.ConstraintsInWorld
-// 0x0028 (0x0028 - 0x0000)
-struct FConstraintsInWorld final
-{
-public:
-	TWeakObjectPtr<class UWorld>                  World;                                             // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UTickableConstraint>> Constraints;                                   // 0x0008(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FConstraintsInWorld;
 
 // ScriptStruct Constraints.MovieSceneConstraintChannel
 // 0x0000 (0x0108 - 0x0108)
@@ -56,6 +44,17 @@ public:
 };
 DUMPER7_ASSERTS_FConstraintAndActiveChannel;
 
+// ScriptStruct Constraints.ConstraintsInWorld
+// 0x0028 (0x0028 - 0x0000)
+struct FConstraintsInWorld final
+{
+public:
+	TWeakObjectPtr<class UWorld>                  World;                                             // 0x0000(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UTickableConstraint>> Constraints;                                   // 0x0008(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FConstraintsInWorld;
+
 // ScriptStruct Constraints.ConstraintTickFunction
 // 0x0018 (0x0040 - 0x0028)
 struct FConstraintTickFunction final : public FTickFunction
@@ -65,5 +64,4 @@ public:
 };
 DUMPER7_ASSERTS_FConstraintTickFunction;
 
-}
-
+SDK_NAMESPACE_END

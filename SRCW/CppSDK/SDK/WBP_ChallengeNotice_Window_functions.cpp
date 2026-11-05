@@ -14,8 +14,7 @@
 #include "WBP_ChallengeNotice_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ChallengeNotice_Window.WBP_ChallengeNotice_Window_C.ExecuteUbergraph_WBP_ChallengeNotice_Window
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ChallengeNotice_Window_C::ExecuteUbergraph_WBP_ChallengeNotice_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ChallengeNotice_Window_C", "ExecuteUbergraph_WBP_ChallengeNotice_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ChallengeNotice_Window_C", "ExecuteUbergraph_WBP_ChallengeNotice_Window", FuncInfo);
 
 	Params::WBP_ChallengeNotice_Window_C_ExecuteUbergraph_WBP_ChallengeNotice_Window Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_ChallengeNotice_Window_C::ExecuteUbergraph_WBP_ChallengeNotice_Window(
 
 void UWBP_ChallengeNotice_Window_C::SpawnChallengeNotice(int32 ChallengeId, float Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ChallengeNotice_Window_C", "SpawnChallengeNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ChallengeNotice_Window_C", FnName));
 
 	Params::WBP_ChallengeNotice_Window_C_SpawnChallengeNotice Parms{};
 
@@ -58,5 +53,5 @@ void UWBP_ChallengeNotice_Window_C::SpawnChallengeNotice(int32 ChallengeId, floa
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

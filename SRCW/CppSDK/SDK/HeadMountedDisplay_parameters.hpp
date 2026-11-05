@@ -15,8 +15,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function HeadMountedDisplay.HandKeypointConversion.Conv_HandKeypointToInt32
 // 0x0008 (0x0008 - 0x0000)
@@ -131,5 +131,5 @@ public:
 };
 DUMPER7_ASSERTS_MotionControllerComponent_IsTracked;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

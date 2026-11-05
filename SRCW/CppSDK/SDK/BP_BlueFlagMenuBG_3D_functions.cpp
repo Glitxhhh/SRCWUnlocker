@@ -14,8 +14,7 @@
 #include "BP_BlueFlagMenuBG_3D_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_BlueFlagMenuBG_3D.BP_BlueFlagMenuBG_3D_C.ExecuteUbergraph_BP_BlueFlagMenuBG_3D
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_BlueFlagMenuBG_3D_C::ExecuteUbergraph_BP_BlueFlagMenuBG_3D(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "ExecuteUbergraph_BP_BlueFlagMenuBG_3D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_BlueFlagMenuBG_3D_C", "ExecuteUbergraph_BP_BlueFlagMenuBG_3D", FuncInfo);
 
 	Params::BP_BlueFlagMenuBG_3D_C_ExecuteUbergraph_BP_BlueFlagMenuBG_3D Parms{};
 
@@ -42,10 +39,8 @@ void ABP_BlueFlagMenuBG_3D_C::ExecuteUbergraph_BP_BlueFlagMenuBG_3D(int32 EntryP
 
 void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -76,10 +69,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyPressedWithPlayerId(const int32& Player
 
 void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -110,10 +99,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnAcceptKeyReleasedWithPlayerId(const int32& Playe
 
 void ABP_BlueFlagMenuBG_3D_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnBackKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -144,10 +129,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnBackKeyPressedWithPlayerId(const int32& PlayerCo
 
 void ABP_BlueFlagMenuBG_3D_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +143,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnBackKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -178,10 +159,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerC
 
 void ABP_BlueFlagMenuBG_3D_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,10 +173,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnDownKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -212,10 +189,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnDownKeyPressedWithPlayerId(const int32& PlayerCo
 
 void ABP_BlueFlagMenuBG_3D_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -228,10 +203,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnDownKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -246,10 +219,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerC
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +233,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -280,10 +249,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftPressedWithPlayerId(const int32& P
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +263,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -314,10 +279,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& 
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -330,10 +293,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -348,10 +309,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopPressedWithPlayerId(const int32& Pl
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -364,10 +323,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -382,10 +339,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnFaceButtonTopReleasedWithPlayerId(const int32& P
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -398,10 +353,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -416,10 +369,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerCo
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -432,10 +383,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -450,10 +399,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerC
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -466,10 +413,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -484,10 +429,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderPressedWithPlayerId(const int32& Pla
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -500,10 +443,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -520,10 +461,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftShoulderReleasedWithPlayerId(const int32& Pl
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftStickAxis Parms{};
 
@@ -541,10 +480,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickAxis(const struct FVector2D& Value)
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -560,10 +497,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickAxisWithPlayerId(const struct FVector2D
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -576,10 +511,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -594,10 +527,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonPressedWithPlayerId(const int32& 
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -610,10 +541,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -628,10 +557,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnLeftStickButtonReleasedWithPlayerId(const int32&
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -644,10 +571,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -662,10 +587,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightKeyPressedWithPlayerId(const int32& PlayerC
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -678,10 +601,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -696,10 +617,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightKeyReleasedWithPlayerId(const int32& Player
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -712,10 +631,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -730,10 +647,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderPressedWithPlayerId(const int32& Pl
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -746,10 +661,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -766,10 +679,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightShoulderReleasedWithPlayerId(const int32& P
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightStickAxis Parms{};
 
@@ -787,10 +698,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickAxis(const struct FVector2D& Value)
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -806,10 +715,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickAxisWithPlayerId(const struct FVector2
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -822,10 +729,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -840,10 +745,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonPressedWithPlayerId(const int32&
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -856,10 +759,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -874,10 +775,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnRightStickButtonReleasedWithPlayerId(const int32
 
 void ABP_BlueFlagMenuBG_3D_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -890,10 +789,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnSpecialPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -908,10 +805,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnSpecialPressedWithPlayerId(const int32& PlayerCo
 
 void ABP_BlueFlagMenuBG_3D_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -924,10 +819,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnSpecialReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -942,10 +835,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnSpecialReleasedWithPlayerId(const int32& PlayerC
 
 void ABP_BlueFlagMenuBG_3D_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -958,10 +849,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnUpKeyPressed()
 
 void ABP_BlueFlagMenuBG_3D_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -976,10 +865,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnUpKeyPressedWithPlayerId(const int32& PlayerCont
 
 void ABP_BlueFlagMenuBG_3D_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -992,10 +879,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnUpKeyReleased()
 
 void ABP_BlueFlagMenuBG_3D_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1010,10 +895,8 @@ void ABP_BlueFlagMenuBG_3D_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerCon
 
 void ABP_BlueFlagMenuBG_3D_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1024,10 +907,8 @@ void ABP_BlueFlagMenuBG_3D_C::ReceiveBeginPlay()
 
 void ABP_BlueFlagMenuBG_3D_C::Rotate__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "Rotate__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1038,10 +919,8 @@ void ABP_BlueFlagMenuBG_3D_C::Rotate__FinishedFunc()
 
 void ABP_BlueFlagMenuBG_3D_C::Rotate__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "Rotate__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1052,10 +931,8 @@ void ABP_BlueFlagMenuBG_3D_C::Rotate__UpdateFunc()
 
 void ABP_BlueFlagMenuBG_3D_C::RotateStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "RotateStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1066,10 +943,8 @@ void ABP_BlueFlagMenuBG_3D_C::RotateStart()
 
 void ABP_BlueFlagMenuBG_3D_C::RotateTimeline__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "RotateTimeline__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1080,10 +955,8 @@ void ABP_BlueFlagMenuBG_3D_C::RotateTimeline__FinishedFunc()
 
 void ABP_BlueFlagMenuBG_3D_C::RotateTimeline__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "RotateTimeline__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1096,10 +969,8 @@ void ABP_BlueFlagMenuBG_3D_C::RotateTimeline__UpdateFunc()
 
 void ABP_BlueFlagMenuBG_3D_C::SetPartyPresetVisible(bool Visible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "SetPartyPresetVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_SetPartyPresetVisible Parms{};
 
@@ -1116,10 +987,8 @@ void ABP_BlueFlagMenuBG_3D_C::SetPartyPresetVisible(bool Visible)
 
 void ABP_BlueFlagMenuBG_3D_C::SetUpdate(bool InUpdate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "SetUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_SetUpdate Parms{};
 
@@ -1136,10 +1005,8 @@ void ABP_BlueFlagMenuBG_3D_C::SetUpdate(bool InUpdate)
 
 void ABP_BlueFlagMenuBG_3D_C::SetVisible(bool Visible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "SetVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_SetVisible Parms{};
 
@@ -1156,10 +1023,8 @@ void ABP_BlueFlagMenuBG_3D_C::SetVisible(bool Visible)
 
 void ABP_BlueFlagMenuBG_3D_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	Params::BP_BlueFlagMenuBG_3D_C_SilentFocusReady Parms{};
 
@@ -1174,13 +1039,11 @@ void ABP_BlueFlagMenuBG_3D_C::SilentFocusReady(bool bOnce)
 
 void ABP_BlueFlagMenuBG_3D_C::TransformInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BlueFlagMenuBG_3D_C", "TransformInit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_BlueFlagMenuBG_3D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

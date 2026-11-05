@@ -15,8 +15,7 @@
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_Widget.BPFL_Widget_C
 // 0x0000 (0x0028 - 0x0028)
@@ -24,6 +23,7 @@ class UBPFL_Widget_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static void ChangeInputRegistrationOnVisibilityChanged(class UWidget* Target, ESlateVisibility Visibility, class UObject* __WorldContext);
+	static void CreateWidgetFromSoftClass(TSoftClassPtr<class UClass> SoftClass, class APlayerController* OwningPlayer, class UObject* __WorldContext, class UUserWidget** UserWidget);
 	static void ReplacementPlatformIconTexture_(class UImage* InImage, class UObject* __WorldContext);
 
 public:
@@ -42,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_Widget_C;
 
-}
-
+SDK_NAMESPACE_END

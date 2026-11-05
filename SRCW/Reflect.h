@@ -9,6 +9,7 @@
 #include <cstring>
 #include <iostream>
 #include <atomic>
+#include <vector>
 
 #include "CppSDK/SDK/CoreUObject_classes.hpp"
 
@@ -35,6 +36,8 @@ namespace Reflect
     bool CallStaticUInt8(const char* className, const char* funcName, uint8_t value);
     bool CallStaticFloat(const char* className, const char* funcName, float value);
     bool CallStaticUInt8Bool(const char* className, const char* funcName, uint8_t p1, bool p2);
+    bool CallStaticUInt8UInt8(const char* className, const char* funcName, uint8_t p1, uint8_t p2);
+    bool ReadSeasonStickerIds(SDK::UObject* object, std::vector<int32_t>& ids);
     bool CallStaticInt32Bool(const char* className, const char* funcName, int32_t p1, bool p2);
     bool CallStaticRaw(const char* className, const char* funcName, void* params, int32_t paramsSize);
 
@@ -75,6 +78,9 @@ namespace Reflect
 
     // Calls UObject::ProcessEvent via the signature-located function (SDK vtable fallback).
     void ProcessEvent(SDK::UObject* obj, SDK::UFunction* fn, void* parms);
+
+    // Reads integer keys using the live value struct size/alignment, never sizeof a generated struct.
+    bool ReadIntStructMapKeys(SDK::UObject* object, const char* propertyName, std::vector<int32_t>& keys);
 
     void ClearCache();
 }

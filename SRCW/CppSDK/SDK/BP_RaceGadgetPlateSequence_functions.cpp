@@ -14,18 +14,15 @@
 #include "BP_RaceGadgetPlateSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceGadgetPlateSequence.BP_RaceGadgetPlateSequence_C.CustomEvent_GadgetPlateLevelCountClose
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_RaceGadgetPlateSequence_C::CustomEvent_GadgetPlateLevelCountClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "CustomEvent_GadgetPlateLevelCountClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_RaceGadgetPlateSequence_C::CustomEvent_GadgetPlateLevelCountClose()
 
 void ABP_RaceGadgetPlateSequence_C::CustomEvent_GadgetPlateRunkUp()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "CustomEvent_GadgetPlateRunkUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void ABP_RaceGadgetPlateSequence_C::CustomEvent_GadgetPlateRunkUp()
 
 void ABP_RaceGadgetPlateSequence_C::CustomEvent_RewardWidget_Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "CustomEvent_RewardWidget_Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void ABP_RaceGadgetPlateSequence_C::CustomEvent_RewardWidget_Close()
 
 void ABP_RaceGadgetPlateSequence_C::ExecuteUbergraph_BP_RaceGadgetPlateSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "ExecuteUbergraph_BP_RaceGadgetPlateSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceGadgetPlateSequence_C", "ExecuteUbergraph_BP_RaceGadgetPlateSequence", FuncInfo);
 
 	Params::BP_RaceGadgetPlateSequence_C_ExecuteUbergraph_BP_RaceGadgetPlateSequence Parms{};
 
@@ -87,10 +78,8 @@ void ABP_RaceGadgetPlateSequence_C::ExecuteUbergraph_BP_RaceGadgetPlateSequence(
 
 void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax(int32 TotalCount, bool* newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "IsGadgetSlotMax");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	Params::BP_RaceGadgetPlateSequence_C_IsGadgetSlotMax Parms{};
 
@@ -111,10 +100,8 @@ void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax(int32 TotalCount, bool* newP
 
 void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax_PlateId(EGadgetPlateId InGadgetPlateId, bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "IsGadgetSlotMax_PlateId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	Params::BP_RaceGadgetPlateSequence_C_IsGadgetSlotMax_PlateId Parms{};
 
@@ -132,10 +119,8 @@ void ABP_RaceGadgetPlateSequence_C::IsGadgetSlotMax_PlateId(EGadgetPlateId InGad
 
 void ABP_RaceGadgetPlateSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +131,8 @@ void ABP_RaceGadgetPlateSequence_C::OnFinalize()
 
 void ABP_RaceGadgetPlateSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +143,8 @@ void ABP_RaceGadgetPlateSequence_C::OnInitialize()
 
 void ABP_RaceGadgetPlateSequence_C::Retry_GadgetLvUpWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "Retry_GadgetLvUpWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +157,8 @@ void ABP_RaceGadgetPlateSequence_C::Retry_GadgetLvUpWindow()
 
 void ABP_RaceGadgetPlateSequence_C::SetGadgetPlateWidget(class UWBP_EndMenu_GudgetLv_Window_C* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceGadgetPlateSequence_C", "SetGadgetPlateWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceGadgetPlateSequence_C", FnName));
 
 	Params::BP_RaceGadgetPlateSequence_C_SetGadgetPlateWidget Parms{};
 
@@ -188,5 +167,5 @@ void ABP_RaceGadgetPlateSequence_C::SetGadgetPlateWidget(class UWBP_EndMenu_Gudg
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

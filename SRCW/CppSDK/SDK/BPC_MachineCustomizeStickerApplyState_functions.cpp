@@ -14,18 +14,15 @@
 #include "BPC_MachineCustomizeStickerApplyState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.HidePopupWindow
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MachineCustomizeStickerApplyState_C::HidePopupWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "HidePopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::HidePopupWindow()
 
 void UBPC_MachineCustomizeStickerApplyState_C::ShowPopupWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "ShowPopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::ShowPopupWindow()
 
 void UBPC_MachineCustomizeStickerApplyState_C::OverrideStickers(TArray<class AActor*>& OverlapStickers, bool IsRear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OverrideStickers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_OverrideStickers Parms{};
 
@@ -76,10 +69,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::OverrideStickers(TArray<class AAc
 
 void UBPC_MachineCustomizeStickerApplyState_C::SetRearMaterial(class UTexture* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "SetRearMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_SetRearMaterial Parms{};
 
@@ -96,10 +87,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::SetRearMaterial(class UTexture* T
 
 void UBPC_MachineCustomizeStickerApplyState_C::SetFrontMaterial(class UTexture* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "SetFrontMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_SetFrontMaterial Parms{};
 
@@ -114,10 +103,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::SetFrontMaterial(class UTexture* 
 
 void UBPC_MachineCustomizeStickerApplyState_C::ExitStickerApply()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "ExitStickerApply");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +115,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::ExitStickerApply()
 
 void UBPC_MachineCustomizeStickerApplyState_C::SetupStickerApply()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "SetupStickerApply");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +129,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::SetupStickerApply()
 
 void UBPC_MachineCustomizeStickerApplyState_C::StickerMasterSystem_OnColorPickerStateChanged(bool bIsOpened)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "StickerMasterSystem_OnColorPickerStateChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_StickerMasterSystem_OnColorPickerStateChanged Parms{};
 
@@ -162,10 +145,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::StickerMasterSystem_OnColorPicker
 
 void UBPC_MachineCustomizeStickerApplyState_C::OnFinishMoveEditSticker()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OnFinishMoveEditSticker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +157,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::OnFinishMoveEditSticker()
 
 void UBPC_MachineCustomizeStickerApplyState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +171,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::OnExitState()
 
 void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnDecision(class UObject* Objcet)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "StickerApply_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_StickerApply_OnDecision Parms{};
 
@@ -210,12 +187,28 @@ void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnDecision(class UOb
 
 void UBPC_MachineCustomizeStickerApplyState_C::ToStickerEdit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "ToStickerEdit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.StickerApply_OnCancel
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Objcet                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnCancel(class UObject* Objcet)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
+
+	Params::BPC_MachineCustomizeStickerApplyState_C_StickerApply_OnCancel Parms{};
+
+	Parms.Objcet = Objcet;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -228,10 +221,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::ToStickerEdit()
 
 void UBPC_MachineCustomizeStickerApplyState_C::PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "PopupWindow_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_PopupWindow_OnDecision Parms{};
 
@@ -243,21 +234,19 @@ void UBPC_MachineCustomizeStickerApplyState_C::PopupWindow_OnDecision(class UUni
 }
 
 
-// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.StickerApply_OnCancel
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.SetActiveAuraEffect
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                          Objcet                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsActive_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnCancel(class UObject* Objcet)
+void UBPC_MachineCustomizeStickerApplyState_C::SetActiveAuraEffect(bool IsActive_0)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "StickerApply_OnCancel");
+	Params::BPC_MachineCustomizeStickerApplyState_C_SetActiveAuraEffect Parms{};
 
-	Params::BPC_MachineCustomizeStickerApplyState_C_StickerApply_OnCancel Parms{};
-
-	Parms.Objcet = Objcet;
+	Parms.IsActive_0 = IsActive_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -268,32 +257,10 @@ void UBPC_MachineCustomizeStickerApplyState_C::StickerApply_OnCancel(class UObje
 
 void UBPC_MachineCustomizeStickerApplyState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerApplyState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C.SetActiveAuraEffect
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    IsActive_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_MachineCustomizeStickerApplyState_C::SetActiveAuraEffect(bool IsActive_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "SetActiveAuraEffect");
-
-	Params::BPC_MachineCustomizeStickerApplyState_C_SetActiveAuraEffect Parms{};
-
-	Parms.IsActive_0 = IsActive_0;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -304,10 +271,8 @@ void UBPC_MachineCustomizeStickerApplyState_C::SetActiveAuraEffect(bool IsActive
 
 void UBPC_MachineCustomizeStickerApplyState_C::ExecuteUbergraph_BPC_MachineCustomizeStickerApplyState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerApplyState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerApplyState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizeStickerApplyState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerApplyState", FuncInfo);
 
 	Params::BPC_MachineCustomizeStickerApplyState_C_ExecuteUbergraph_BPC_MachineCustomizeStickerApplyState Parms{};
 
@@ -316,5 +281,5 @@ void UBPC_MachineCustomizeStickerApplyState_C::ExecuteUbergraph_BPC_MachineCusto
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

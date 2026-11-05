@@ -14,18 +14,15 @@
 #include "WBP_Ready_M2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Ready_M2.WBP_Ready_M2_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Ready_M2_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Ready_M2_C::Construct()
 
 void UWBP_Ready_M2_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_Ready_M2_C::Destruct()
 
 void UWBP_Ready_M2_C::ExecuteUbergraph_WBP_Ready_M2(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "ExecuteUbergraph_WBP_Ready_M2");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Ready_M2_C", "ExecuteUbergraph_WBP_Ready_M2", FuncInfo);
 
 	Params::WBP_Ready_M2_C_ExecuteUbergraph_WBP_Ready_M2 Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_Ready_M2_C::ExecuteUbergraph_WBP_Ready_M2(int32 EntryPoint)
 
 void UWBP_Ready_M2_C::GadgetIconMouseEnable(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "GadgetIconMouseEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_GadgetIconMouseEnable Parms{};
 
@@ -90,10 +81,8 @@ void UWBP_Ready_M2_C::GadgetIconMouseEnable(ESlateVisibility InVisibility)
 
 void UWBP_Ready_M2_C::OnDecideGoAnimDinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "OnDecideGoAnimDinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_Ready_M2_C::OnDecideGoAnimDinished()
 
 void UWBP_Ready_M2_C::PlayGoAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "PlayGoAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +105,8 @@ void UWBP_Ready_M2_C::PlayGoAnimation()
 
 void UWBP_Ready_M2_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +117,8 @@ void UWBP_Ready_M2_C::PlayInAnimation()
 
 void UWBP_Ready_M2_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +131,8 @@ void UWBP_Ready_M2_C::PlayOutAnimation()
 
 void UWBP_Ready_M2_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_PreConstruct Parms{};
 
@@ -166,10 +147,8 @@ void UWBP_Ready_M2_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Ready_M2_C::SetCollapse()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "SetCollapse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +161,8 @@ void UWBP_Ready_M2_C::SetCollapse()
 
 void UWBP_Ready_M2_C::SetReadyColor(bool bIsCheck)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "SetReadyColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_SetReadyColor Parms{};
 
@@ -202,10 +179,8 @@ void UWBP_Ready_M2_C::SetReadyColor(bool bIsCheck)
 
 void UWBP_Ready_M2_C::UpdateGadgetDetailWindowToSlotZero(const int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "UpdateGadgetDetailWindowToSlotZero");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_UpdateGadgetDetailWindowToSlotZero Parms{};
 
@@ -222,10 +197,8 @@ void UWBP_Ready_M2_C::UpdateGadgetDetailWindowToSlotZero(const int32 InPlayerInd
 
 void UWBP_Ready_M2_C::GetCharaMachineParamWindow(TArray<class UCharaMachineParamWindow*>* OutCharaMachineParamWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "GetCharaMachineParamWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_GetCharaMachineParamWindow Parms{};
 
@@ -243,10 +216,8 @@ void UWBP_Ready_M2_C::GetCharaMachineParamWindow(TArray<class UCharaMachineParam
 
 void UWBP_Ready_M2_C::GetGadgetPlateWindows(TArray<class UGadgetPlateWindow*>* OutGadgetPlateWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "GetGadgetPlateWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_GetGadgetPlateWindows Parms{};
 
@@ -264,10 +235,8 @@ void UWBP_Ready_M2_C::GetGadgetPlateWindows(TArray<class UGadgetPlateWindow*>* O
 
 void UWBP_Ready_M2_C::GetReadyOptions(TArray<class UReadyOption*>* OutReadyOptions) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "GetReadyOptions");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_GetReadyOptions Parms{};
 
@@ -285,10 +254,8 @@ void UWBP_Ready_M2_C::GetReadyOptions(TArray<class UReadyOption*>* OutReadyOptio
 
 void UWBP_Ready_M2_C::GetReadyWindowCharacterIcons(TArray<class UReadyWindowCharacterIcon*>* OutReadyWindowCharacterIcons) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_M2_C", "GetReadyWindowCharacterIcons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_M2_C", FnName));
 
 	Params::WBP_Ready_M2_C_GetReadyWindowCharacterIcons Parms{};
 
@@ -298,5 +265,5 @@ void UWBP_Ready_M2_C::GetReadyWindowCharacterIcons(TArray<class UReadyWindowChar
 		*OutReadyWindowCharacterIcons = std::move(Parms.OutReadyWindowCharacterIcons);
 }
 
-}
 
+SDK_NAMESPACE_END

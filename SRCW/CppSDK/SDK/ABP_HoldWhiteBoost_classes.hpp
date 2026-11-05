@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ABPT_HoldItem_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_HoldWhiteBoost.ABP_HoldWhiteBoost_C
 // 0x0000 (0x1130 - 0x1130)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_HoldWhiteBoost_C;
 
-}
-
+SDK_NAMESPACE_END

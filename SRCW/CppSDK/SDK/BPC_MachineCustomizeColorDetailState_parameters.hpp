@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "UNION_structs.hpp"
 #include "ST_ColorDetailWindowData_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
-#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_MachineCustomizeColorDetailState.BPC_MachineCustomizeColorDetailState_C.ColorDetailWindow_OnColorItemFocused
 // 0x0018 (0x0018 - 0x0000)
@@ -236,5 +236,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorDetailState_C_SetSurface;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_RaceBefore_MessageInfo.WBP_RaceBefore_MessageInfo_C
 // 0x0070 (0x0390 - 0x0320)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_RaceBefore_MessageInfo_C;
 
-}
-
+SDK_NAMESPACE_END

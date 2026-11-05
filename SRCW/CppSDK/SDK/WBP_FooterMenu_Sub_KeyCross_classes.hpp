@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_FooterMenu_Sub_KeyCross.WBP_FooterMenu_Sub_KeyCross_C
 // 0x0008 (0x02E8 - 0x02E0)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_FooterMenu_Sub_KeyCross_C;
 
-}
-
+SDK_NAMESPACE_END

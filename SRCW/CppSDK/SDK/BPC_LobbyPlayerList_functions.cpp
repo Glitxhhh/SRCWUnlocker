@@ -14,8 +14,7 @@
 #include "BPC_LobbyPlayerList_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_LobbyPlayerList.BPC_LobbyPlayerList_C.ExecuteUbergraph_BPC_LobbyPlayerList
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_LobbyPlayerList_C::ExecuteUbergraph_BPC_LobbyPlayerList(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LobbyPlayerList_C", "ExecuteUbergraph_BPC_LobbyPlayerList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_LobbyPlayerList_C", "ExecuteUbergraph_BPC_LobbyPlayerList", FuncInfo);
 
 	Params::BPC_LobbyPlayerList_C_ExecuteUbergraph_BPC_LobbyPlayerList Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_LobbyPlayerList_C::ExecuteUbergraph_BPC_LobbyPlayerList(int32 EntryPoi
 
 void UBPC_LobbyPlayerList_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LobbyPlayerList_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LobbyPlayerList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UBPC_LobbyPlayerList_C::OnExitState()
 
 void UBPC_LobbyPlayerList_C::OnInitialize(const int32 InPlayerNameMaxCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LobbyPlayerList_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LobbyPlayerList_C", FnName));
 
 	Params::BPC_LobbyPlayerList_C_OnInitialize Parms{};
 
@@ -76,10 +69,8 @@ void UBPC_LobbyPlayerList_C::OnInitialize(const int32 InPlayerNameMaxCount)
 
 void UBPC_LobbyPlayerList_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LobbyPlayerList_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LobbyPlayerList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +85,8 @@ void UBPC_LobbyPlayerList_C::OnInitState()
 
 void UBPC_LobbyPlayerList_C::Setup(class UUnionUISceneBase* InBaseScene, class UCanvasPanel* InCanvasPanel, bool InIsSquadMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LobbyPlayerList_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LobbyPlayerList_C", FnName));
 
 	Params::BPC_LobbyPlayerList_C_Setup Parms{};
 
@@ -108,5 +97,5 @@ void UBPC_LobbyPlayerList_C::Setup(class UUnionUISceneBase* InBaseScene, class U
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_CourseSelect_Sub_StageBox_3piece_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_StageBox_3piece.WBP_CourseSelect_Sub_StageBox_3piece_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::Construct()
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_3piece(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_3piece");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_StageBox_3piece_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_3piece", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_3piece Parms{};
 
@@ -60,10 +55,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::ExecuteUbergraph_WBP_CourseSelect_
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::GetCourseIds(EStageId* StageCourseId, EStageId* StageCourseId1, EStageId* StageCourseId2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "GetCourseIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_GetCourseIds Parms{};
 
@@ -88,10 +81,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::GetCourseIds(EStageId* StageCourse
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::IsEnableCourseIndex(int32 Index_0, bool* bEnableCourse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "IsEnableCourseIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_IsEnableCourseIndex Parms{};
 
@@ -111,10 +102,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::IsEnableCourseIndex(int32 Index_0,
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnCancelEvent_Event(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "OnCancelEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_OnCancelEvent_Event Parms{};
 
@@ -131,10 +120,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnCancelEvent_Event(class UUnionUI
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnFocusEvent_Event_0(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "OnFocusEvent_Event_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_OnFocusEvent_Event_0 Parms{};
 
@@ -151,10 +138,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnFocusEvent_Event_0(class UUnionU
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnSelectedEvent_Event(class UUnionUIButtonBaseCore* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "OnSelectedEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_OnSelectedEvent_Event Parms{};
 
@@ -171,10 +156,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnSelectedEvent_Event(class UUnion
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnStoreShortcutClicked(EStageId StageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "OnStoreShortcutClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_OnStoreShortcutClicked Parms{};
 
@@ -193,10 +176,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::OnStoreShortcutClicked(EStageId St
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetCourseId(int32 InIndex, EStageId InStageId, double OpenThreshold)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetCourseId Parms{};
 
@@ -215,10 +196,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetCourseId(int32 InIndex, EStageI
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetGameModeId(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetGameModeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetGameModeId Parms{};
 
@@ -235,10 +214,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetGameModeId(EGameModeId InGameMo
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetLastFocusedId(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetLastFocusedId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetLastFocusedId Parms{};
 
@@ -255,10 +232,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetLastFocusedId(int32 InButtonInd
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetThumbnailInteractableState(bool Interactable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetThumbnailInteractableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetThumbnailInteractableState Parms{};
 
@@ -275,10 +250,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetThumbnailInteractableState(bool
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetTimeTrialData(TArray<ETimeTrialClearRankId>& InTimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetTimeTrialData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetTimeTrialData Parms{};
 
@@ -297,10 +270,8 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetTimeTrialData(TArray<ETimeTrial
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetupTmb(const TMap<EStageId, TSoftObjectPtr<class UTexture2D>>& StageId_Tmb)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "SetupTmb");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_3piece_C_SetupTmb Parms{};
 
@@ -315,13 +286,11 @@ void UWBP_CourseSelect_Sub_StageBox_3piece_C::SetupTmb(const TMap<EStageId, TSof
 
 void UWBP_CourseSelect_Sub_StageBox_3piece_C::StartFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_3piece_C", "StartFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_3piece_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

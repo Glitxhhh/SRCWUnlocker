@@ -10,73 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "RedpointEOSAuth_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
+#include "RedpointEOSAuth_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
-
-// Class RedpointEOSAuth.EOSDefaultUserInterface_EnterDevicePinCode
-// 0x04F0 (0x07D0 - 0x02E0)
-class alignas(0x10) UEOSDefaultUserInterface_EnterDevicePinCode final : public UUserWidget
-{
-public:
-	uint8                                         Pad_2E0[0x420];                                    // 0x02E0(0x0420)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         TitleFont;                                         // 0x0700(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         RegularFont;                                       // 0x0760(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEOSUserInterface_EnterDevicePinCode_Context* Context;                                     // 0x07C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C8[0x8];                                      // 0x07C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EOSDefaultUserInterface_EnterDevicePinCode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EOSDefaultUserInterface_EnterDevicePinCode")
-	}
-	static class UEOSDefaultUserInterface_EnterDevicePinCode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEOSDefaultUserInterface_EnterDevicePinCode>();
-	}
-};
-DUMPER7_ASSERTS_UEOSDefaultUserInterface_EnterDevicePinCode;
-
-// Class RedpointEOSAuth.EOSDefaultUserInterface_SignInOrCreateAccount
-// 0x04D0 (0x07B0 - 0x02E0)
-class alignas(0x10) UEOSDefaultUserInterface_SignInOrCreateAccount final : public UUserWidget
-{
-public:
-	uint8                                         Pad_2E0[0x400];                                    // 0x02E0(0x0400)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         TitleFont;                                         // 0x06E0(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateFontInfo                         RegularFont;                                       // 0x0740(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEOSUserInterface_SignInOrCreateAccount_Context* Context;                                  // 0x07A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A8[0x8];                                      // 0x07A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EOSDefaultUserInterface_SignInOrCreateAccount")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EOSDefaultUserInterface_SignInOrCreateAccount")
-	}
-	static class UEOSDefaultUserInterface_SignInOrCreateAccount* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEOSDefaultUserInterface_SignInOrCreateAccount>();
-	}
-};
-DUMPER7_ASSERTS_UEOSDefaultUserInterface_SignInOrCreateAccount;
+SDK_NAMESPACE_START
 
 // Class RedpointEOSAuth.EOSUserInterface_EnterDevicePinCode
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_EnterDevicePinCode final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_EnterDevicePinCode
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_EnterDevicePinCode_Context* Context, const class FString& VerificationUrl, const class FString& PinCode);
 
@@ -105,36 +53,43 @@ public:
 };
 DUMPER7_ASSERTS_IEOSUserInterface_EnterDevicePinCode;
 
-// Class RedpointEOSAuth.EOSUserInterface_EnterDevicePinCode_Context
-// 0x0010 (0x0038 - 0x0028)
-class UEOSUserInterface_EnterDevicePinCode_Context final : public UObject
+// Class RedpointEOSAuth.EOSDefaultUserInterface_EnterDevicePinCode
+// 0x04F0 (0x07D0 - 0x02E0)
+class alignas(0x10) UEOSDefaultUserInterface_EnterDevicePinCode final : public UUserWidget, public IEOSUserInterface_EnterDevicePinCode
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void CancelLogin();
+	uint8                                         Pad_2E8[0x418];                                    // 0x02E8(0x0418)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         TitleFont;                                         // 0x0700(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         RegularFont;                                       // 0x0760(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEOSUserInterface_EnterDevicePinCode_Context* Context;                                     // 0x07C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C8[0x8];                                      // 0x07C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("EOSUserInterface_EnterDevicePinCode_Context")
+		STATIC_CLASS_IMPL("EOSDefaultUserInterface_EnterDevicePinCode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"EOSUserInterface_EnterDevicePinCode_Context")
+		STATIC_NAME_IMPL(L"EOSDefaultUserInterface_EnterDevicePinCode")
 	}
-	static class UEOSUserInterface_EnterDevicePinCode_Context* GetDefaultObj()
+	static class UEOSDefaultUserInterface_EnterDevicePinCode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UEOSUserInterface_EnterDevicePinCode_Context>();
+		return GetDefaultObjImpl<UEOSDefaultUserInterface_EnterDevicePinCode>();
 	}
+
+public:
+	void SetupUserInterface(class UEOSUserInterface_EnterDevicePinCode_Context* Context, const class FString& VerificationUrl, const class FString& PinCode);
 };
-DUMPER7_ASSERTS_UEOSUserInterface_EnterDevicePinCode_Context;
+DUMPER7_ASSERTS_UEOSDefaultUserInterface_EnterDevicePinCode;
 
 // Class RedpointEOSAuth.EOSUserInterface_SignInOrCreateAccount
-// 0x0000 (0x0000 - 0x0000)
-class IEOSUserInterface_SignInOrCreateAccount final
+// 0x0008 (0x0008 - 0x0000)
+class IEOSUserInterface_SignInOrCreateAccount
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context);
 
@@ -163,6 +118,62 @@ public:
 };
 DUMPER7_ASSERTS_IEOSUserInterface_SignInOrCreateAccount;
 
+// Class RedpointEOSAuth.EOSDefaultUserInterface_SignInOrCreateAccount
+// 0x04D0 (0x07B0 - 0x02E0)
+class alignas(0x10) UEOSDefaultUserInterface_SignInOrCreateAccount final : public UUserWidget, public IEOSUserInterface_SignInOrCreateAccount
+{
+public:
+	uint8                                         Pad_2E8[0x3F8];                                    // 0x02E8(0x03F8)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         TitleFont;                                         // 0x06E0(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateFontInfo                         RegularFont;                                       // 0x0740(0x0060)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEOSUserInterface_SignInOrCreateAccount_Context* Context;                                  // 0x07A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7A8[0x8];                                      // 0x07A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EOSDefaultUserInterface_SignInOrCreateAccount")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EOSDefaultUserInterface_SignInOrCreateAccount")
+	}
+	static class UEOSDefaultUserInterface_SignInOrCreateAccount* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEOSDefaultUserInterface_SignInOrCreateAccount>();
+	}
+
+public:
+	void SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context);
+};
+DUMPER7_ASSERTS_UEOSDefaultUserInterface_SignInOrCreateAccount;
+
+// Class RedpointEOSAuth.EOSUserInterface_EnterDevicePinCode_Context
+// 0x0010 (0x0038 - 0x0028)
+class UEOSUserInterface_EnterDevicePinCode_Context final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void CancelLogin();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EOSUserInterface_EnterDevicePinCode_Context")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EOSUserInterface_EnterDevicePinCode_Context")
+	}
+	static class UEOSUserInterface_EnterDevicePinCode_Context* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEOSUserInterface_EnterDevicePinCode_Context>();
+	}
+};
+DUMPER7_ASSERTS_UEOSUserInterface_EnterDevicePinCode_Context;
+
 // Class RedpointEOSAuth.EOSUserInterface_SignInOrCreateAccount_Context
 // 0x0010 (0x0038 - 0x0028)
 class UEOSUserInterface_SignInOrCreateAccount_Context final : public UObject
@@ -189,5 +200,4 @@ public:
 };
 DUMPER7_ASSERTS_UEOSUserInterface_SignInOrCreateAccount_Context;
 
-}
-
+SDK_NAMESPACE_END

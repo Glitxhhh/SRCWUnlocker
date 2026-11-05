@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Result_Sub_RankingTable_Crown.WBP_Result_Sub_RankingTable_Crown_C
 // 0x0020 (0x0300 - 0x02E0)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Result_Sub_RankingTable_Crown_C;
 
-}
-
+SDK_NAMESPACE_END

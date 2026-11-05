@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum InterchangeCommonParser.EInterchangeCurveInterpMode
 // NumValues: 0x0005
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_FInterchangeStepCurve;
 
-}
-
+SDK_NAMESPACE_END

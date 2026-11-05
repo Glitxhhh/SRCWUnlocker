@@ -15,8 +15,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_GadgetCountFullWindow.WBP_CMN_GadgetCountFullWindow_C
 // 0x0030 (0x0310 - 0x02E0)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_GadgetCountFullWindow_C;
 
-}
-
+SDK_NAMESPACE_END

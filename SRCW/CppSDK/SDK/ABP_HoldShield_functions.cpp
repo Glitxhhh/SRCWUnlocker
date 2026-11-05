@@ -14,8 +14,7 @@
 #include "ABP_HoldShield_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldShield.ABP_HoldShield_C.IsValidOutState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldShield_C::IsValidOutState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldShield_C", "IsValidOutState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldShield_C", FnName));
 
 	Params::ABP_HoldShield_C_IsValidOutState Parms{};
 
@@ -37,5 +34,5 @@ void UABP_HoldShield_C::IsValidOutState(bool* Out_Valid) const
 		*Out_Valid = Parms.Out_Valid;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemKingBoomBooObject.BP_ItemKingBoomBooObject_C
 // 0x0010 (0x0A80 - 0x0A70)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemKingBoomBooObject_C;
 
-}
-
+SDK_NAMESPACE_END

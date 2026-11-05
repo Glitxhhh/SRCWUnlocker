@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_TabBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_TabBtn.WBP_MachineCustom_Sub_TabBtn_C.BndEvt__WBP_MachineCustom_Sub_TabBtn_UnionUIButton_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_TabBtn_C::BndEvt__WBP_MachineCustom_Sub_TabBtn_UnionUIButton_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "BndEvt__WBP_MachineCustom_Sub_TabBtn_UnionUIButton_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::BndEvt__WBP_MachineCustom_Sub_TabBtn_Union
 
 void UWBP_MachineCustom_Sub_TabBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::Construct()
 
 void UWBP_MachineCustom_Sub_TabBtn_C::ExecuteUbergraph_WBP_MachineCustom_Sub_TabBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_TabBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_TabBtn_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_TabBtn", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_ExecuteUbergraph_WBP_MachineCustom_Sub_TabBtn Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Tab
 
 void UWBP_MachineCustom_Sub_TabBtn_C::PlayAnim(bool bInIsActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "PlayAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_PlayAnim Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::PlayAnim(bool bInIsActive)
 
 void UWBP_MachineCustom_Sub_TabBtn_C::SetEnabled(bool bInIsEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "SetEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_SetEnabled Parms{};
 
@@ -112,10 +101,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::SetEnabled(bool bInIsEnabled)
 
 void UWBP_MachineCustom_Sub_TabBtn_C::SetEnableMouseInput(bool bInIsEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "SetEnableMouseInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_SetEnableMouseInput Parms{};
 
@@ -132,10 +119,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::SetEnableMouseInput(bool bInIsEnabled)
 
 void UWBP_MachineCustom_Sub_TabBtn_C::SetFriendListIconIndex(int32 InIconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "SetFriendListIconIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_SetFriendListIconIndex Parms{};
 
@@ -152,10 +137,8 @@ void UWBP_MachineCustom_Sub_TabBtn_C::SetFriendListIconIndex(int32 InIconIndex)
 
 void UWBP_MachineCustom_Sub_TabBtn_C::SetPlatformIconType(ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_TabBtn_C", "SetPlatformIconType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_TabBtn_C_SetPlatformIconType Parms{};
 
@@ -164,5 +147,5 @@ void UWBP_MachineCustom_Sub_TabBtn_C::SetPlatformIconType(ECrossplayPlatform InP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

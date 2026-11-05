@@ -12,14 +12,13 @@
 
 #include "Engine_classes.hpp"
 #include "ChaosSolverEngine_structs.hpp"
-#include "Chaos_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Chaos_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class ChaosSolverEngine.ChaosDebugDrawComponent
 // 0x0008 (0x00A8 - 0x00A0)
@@ -96,9 +95,12 @@ public:
 DUMPER7_ASSERTS_UChaosGameplayEventDispatcher;
 
 // Class ChaosSolverEngine.ChaosNotifyHandlerInterface
-// 0x0000 (0x0000 - 0x0000)
-class IChaosNotifyHandlerInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IChaosNotifyHandlerInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -243,5 +245,4 @@ public:
 };
 DUMPER7_ASSERTS_UChaosSolverSettings;
 
-}
-
+SDK_NAMESPACE_END

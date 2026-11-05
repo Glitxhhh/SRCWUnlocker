@@ -15,8 +15,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Ready_Sub_Gadget.WBP_Ready_Sub_Gadget_C
 // 0x0030 (0x0310 - 0x02E0)
@@ -36,7 +35,7 @@ public:
 	void ExecuteUbergraph_WBP_Ready_Sub_Gadget(int32 EntryPoint);
 	void HiddenCaptionEvent(bool bIsHidden);
 	void SetGadgetCaptionEvent(int32 PlayerIndex_0, int32 SlotState, int32 SlotIndex);
-	void UpdateGadgetDetail(int32 InGadgetId);
+	void UpdateGadgetDetail(int32 InSlotIndex);
 	void UpdatePlayerIndex();
 
 public:
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Ready_Sub_Gadget_C;
 
-}
-
+SDK_NAMESPACE_END

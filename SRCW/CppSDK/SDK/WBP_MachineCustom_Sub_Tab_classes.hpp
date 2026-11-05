@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_Tab.WBP_MachineCustom_Sub_Tab_C
 // 0x0048 (0x0360 - 0x0318)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_Tab_C;
 
-}
-
+SDK_NAMESPACE_END

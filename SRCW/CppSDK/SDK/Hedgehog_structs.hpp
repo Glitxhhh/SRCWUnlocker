@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum Hedgehog.EHHOriginPointType
 // NumValues: 0x0004
@@ -72,5 +71,4 @@ public:
 };
 DUMPER7_ASSERTS_FHHSplinePoint;
 
-}
-
+SDK_NAMESPACE_END

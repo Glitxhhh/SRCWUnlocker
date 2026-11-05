@@ -14,18 +14,15 @@
 #include "ABP_MenuDriver_Large_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_MenuDriver_Large.ABP_MenuDriver_Large_C.AnimNotify_CrownOff
 // (BlueprintCallable, BlueprintEvent)
 
 void UABP_MenuDriver_Large_C::AnimNotify_CrownOff()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MenuDriver_Large_C", "AnimNotify_CrownOff");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MenuDriver_Large_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UABP_MenuDriver_Large_C::AnimNotify_CrownOff()
 
 void UABP_MenuDriver_Large_C::AnimNotify_CrownOn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MenuDriver_Large_C", "AnimNotify_CrownOn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MenuDriver_Large_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UABP_MenuDriver_Large_C::AnimNotify_CrownOn()
 
 void UABP_MenuDriver_Large_C::ExecuteUbergraph_ABP_MenuDriver_Large(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MenuDriver_Large_C", "ExecuteUbergraph_ABP_MenuDriver_Large");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_MenuDriver_Large_C", "ExecuteUbergraph_ABP_MenuDriver_Large", FuncInfo);
 
 	Params::ABP_MenuDriver_Large_C_ExecuteUbergraph_ABP_MenuDriver_Large Parms{};
 
@@ -64,5 +57,5 @@ void UABP_MenuDriver_Large_C::ExecuteUbergraph_ABP_MenuDriver_Large(int32 EntryP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

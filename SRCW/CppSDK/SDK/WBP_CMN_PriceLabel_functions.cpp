@@ -14,8 +14,7 @@
 #include "WBP_CMN_PriceLabel_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PriceLabel.WBP_CMN_PriceLabel_C.SetColorNumber
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_PriceLabel_C::SetColorNumber(const struct FSlateColor& InColorAndOpacity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PriceLabel_C", "SetColorNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PriceLabel_C", FnName));
 
 	Params::WBP_CMN_PriceLabel_C_SetColorNumber Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_PriceLabel_C::SetColorNumber(const struct FSlateColor& InColorAndO
 
 void UWBP_CMN_PriceLabel_C::SetTextNumber(int32 InNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PriceLabel_C", "SetTextNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PriceLabel_C", FnName));
 
 	Params::WBP_CMN_PriceLabel_C_SetTextNumber Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_CMN_PriceLabel_C::SetTextNumber(int32 InNum)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

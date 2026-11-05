@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_ItemDarkChaoHero.ABP_ItemDarkChaoHero_C
 // 0x0040 (0x03B0 - 0x0370)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_ItemDarkChaoHero_C;
 
-}
-
+SDK_NAMESPACE_END

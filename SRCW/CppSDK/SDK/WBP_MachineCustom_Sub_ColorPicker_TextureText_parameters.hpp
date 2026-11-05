@@ -14,8 +14,8 @@
 #include "ST_ColorDetailWindowSurfaceItemData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ColorPicker_TextureText.WBP_MachineCustom_Sub_ColorPicker_TextureText_C.ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_TextureText
 // 0x0004 (0x0004 - 0x0000)
@@ -57,5 +57,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_ColorPicker_TextureText_C_Setup;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

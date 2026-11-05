@@ -14,18 +14,15 @@
 #include "WBP_CourseSelect_Sub_Thumbnail_CrossWorld_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,16 +35,34 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Construct()
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail_CrossWorld(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail_CrossWorld");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail_CrossWorld", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail_CrossWorld Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.InitializeCommonCourseSelect
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<EStageId>&                       InStageIds                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::InitializeCommonCourseSelect(TArray<EStageId>& InStageIds)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_InitializeCommonCourseSelect Parms{};
+
+	Parms.InStageIds = std::move(InStageIds);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InStageIds = std::move(Parms.InStageIds);
 }
 
 
@@ -58,10 +73,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::ExecuteUbergraph_WBP_CourseSe
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::InitializeCrossWorldCourseSelect(ESpeedClassId InSpeedClassId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "InitializeCrossWorldCourseSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_InitializeCrossWorldCourseSelect Parms{};
 
@@ -78,10 +91,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::InitializeCrossWorldCourseSel
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::NextPanelNavigation(EUINavigation Selection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "NextPanelNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_NextPanelNavigation Parms{};
 
@@ -100,10 +111,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::NextPanelNavigation(EUINaviga
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnCancelCourseEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "OnCancelCourseEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_OnCancelCourseEvent Parms{};
 
@@ -124,10 +133,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnCancelCourseEvent(class UUn
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnDecideCourseEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "OnDecideCourseEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_OnDecideCourseEvent Parms{};
 
@@ -146,10 +153,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnDecideCourseEvent(class UUn
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusCourseEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "OnFocusCourseEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_OnFocusCourseEvent Parms{};
 
@@ -164,10 +169,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusCourseEvent(class UUni
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusPanel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "OnFocusPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +185,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusPanel()
 
 struct FEventReply UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_OnFocusReceived Parms{};
 
@@ -205,10 +206,8 @@ struct FEventReply UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::OnFocusReceived
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_PreConstruct Parms{};
 
@@ -225,10 +224,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::PreConstruct(bool IsDesignTim
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetFocusIndex(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetFocusIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetFocusIndex Parms{};
 
@@ -245,14 +242,30 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetFocusIndex(int32 InIndex)
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetGameModeId(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetGameModeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetGameModeId Parms{};
 
 	Parms.InGameModeId = InGameModeId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.SetInitializeFocusIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   FocusIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetInitializeFocusIndex(int32 FocusIndex)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetInitializeFocusIndex Parms{};
+
+	Parms.FocusIndex = FocusIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -267,10 +280,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetGameModeId(EGameModeId InG
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetMedalView(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, const TArray<ETimeTrialClearRankId>& TimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetMedalView");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetMedalView Parms{};
 
@@ -289,10 +300,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetMedalView(class UWBP_Cours
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetScrollActiveFlag(bool bIsScrollActive_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetScrollActiveFlag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetScrollActiveFlag Parms{};
 
@@ -309,10 +318,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetScrollActiveFlag(bool bIsS
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetStageBoxInteractableState(bool Interactable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetStageBoxInteractableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetStageBoxInteractableState Parms{};
 
@@ -329,10 +336,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetStageBoxInteractableState(
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Setup_Medal_Acquisitions(ESpeedClassId InSpeedClass)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "Setup Medal Acquisitions");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_Setup_Medal_Acquisitions Parms{};
 
@@ -349,10 +354,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Setup_Medal_Acquisitions(ESpe
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Setup_Tmb(const TMap<EStageId, TSoftObjectPtr<class UTexture2D>>& StageId_Tmb)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "Setup Tmb");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_Setup_Tmb Parms{};
 
@@ -372,10 +375,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::Setup_Tmb(const TMap<EStageId
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetupCourseSelectSubStageBox(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, TArray<EStageId>& InStageIds, TArray<bool>& InMedalAcuisitions)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "SetupCourseSelectSubStageBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetupCourseSelectSubStageBox Parms{};
 
@@ -391,18 +392,40 @@ void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetupCourseSelectSubStageBox(
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.SetupCourseSelectSubStageBox_Common
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_CourseSelect_Sub_StageBox_Multiple_C*InCourseSelect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   InPageIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<EStageId>&                       InStageIds                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::SetupCourseSelectSubStageBox_Common(class UWBP_CourseSelect_Sub_StageBox_Multiple_C* InCourseSelect, int32 InPageIndex, TArray<EStageId>& InStageIds)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C_SetupCourseSelectSubStageBox_Common Parms{};
+
+	Parms.InCourseSelect = InCourseSelect;
+	Parms.InPageIndex = InPageIndex;
+	Parms.InStageIds = std::move(InStageIds);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	InStageIds = std::move(Parms.InStageIds);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail_CrossWorld.WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C.ThumbnailBindEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_Thumbnail_CrossWorld_C::ThumbnailBindEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", "ThumbnailBindEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_CrossWorld_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

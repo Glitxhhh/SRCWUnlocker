@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCustom_Sub_HexagonCursor.WBP_GadgetCustom_Sub_HexagonCursor_C
 // 0x0020 (0x0300 - 0x02E0)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GadgetCustom_Sub_HexagonCursor_C;
 
-}
-
+SDK_NAMESPACE_END

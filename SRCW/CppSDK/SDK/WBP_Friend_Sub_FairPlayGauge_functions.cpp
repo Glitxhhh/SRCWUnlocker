@@ -14,8 +14,7 @@
 #include "WBP_Friend_Sub_FairPlayGauge_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_Sub_FairPlayGauge.WBP_Friend_Sub_FairPlayGauge_C.ExecuteUbergraph_WBP_Friend_Sub_FairPlayGauge
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_Sub_FairPlayGauge_C::ExecuteUbergraph_WBP_Friend_Sub_FairPlayGauge(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_FairPlayGauge_C", "ExecuteUbergraph_WBP_Friend_Sub_FairPlayGauge");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_Sub_FairPlayGauge_C", "ExecuteUbergraph_WBP_Friend_Sub_FairPlayGauge", FuncInfo);
 
 	Params::WBP_Friend_Sub_FairPlayGauge_C_ExecuteUbergraph_WBP_Friend_Sub_FairPlayGauge Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_Friend_Sub_FairPlayGauge_C::ExecuteUbergraph_WBP_Friend_Sub_FairPlayGa
 
 void UWBP_Friend_Sub_FairPlayGauge_C::Get_Point_Color_Index(int32 InFairPlayPoint, int32* OutColorIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_FairPlayGauge_C", "Get Point Color Index");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_FairPlayGauge_C", FnName));
 
 	Params::WBP_Friend_Sub_FairPlayGauge_C_Get_Point_Color_Index Parms{};
 
@@ -68,10 +63,8 @@ void UWBP_Friend_Sub_FairPlayGauge_C::Get_Point_Color_Index(int32 InFairPlayPoin
 
 void UWBP_Friend_Sub_FairPlayGauge_C::SetGaugeColor(int32 InColorIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_FairPlayGauge_C", "SetGaugeColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_FairPlayGauge_C", FnName));
 
 	Params::WBP_Friend_Sub_FairPlayGauge_C_SetGaugeColor Parms{};
 
@@ -88,10 +81,8 @@ void UWBP_Friend_Sub_FairPlayGauge_C::SetGaugeColor(int32 InColorIndex)
 
 void UWBP_Friend_Sub_FairPlayGauge_C::Setup(int32 InPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_FairPlayGauge_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_FairPlayGauge_C", FnName));
 
 	Params::WBP_Friend_Sub_FairPlayGauge_C_Setup Parms{};
 
@@ -100,5 +91,5 @@ void UWBP_Friend_Sub_FairPlayGauge_C::Setup(int32 InPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

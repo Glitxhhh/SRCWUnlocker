@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Sub_Friend_LobbyNoticePlate_Guide.WBP_Sub_Friend_LobbyNoticePlate_Guide_C
 // 0x00A8 (0x0388 - 0x02E0)
@@ -60,5 +59,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Sub_Friend_LobbyNoticePlate_Guide_C;
 
-}
-
+SDK_NAMESPACE_END

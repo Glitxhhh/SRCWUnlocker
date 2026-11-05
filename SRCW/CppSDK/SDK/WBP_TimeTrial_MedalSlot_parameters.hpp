@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_TimeTrial_MedalSlot.WBP_TimeTrial_MedalSlot_C.ExecuteUbergraph_WBP_TimeTrial_MedalSlot
 // 0x0080 (0x0080 - 0x0000)
@@ -71,5 +71,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TimeTrial_MedalSlot_C_SetupMedalSlot;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

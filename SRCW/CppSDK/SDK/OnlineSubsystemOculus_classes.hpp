@@ -15,8 +15,7 @@
 #include "OnlineSubsystemUtils_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class OnlineSubsystemOculus.OculusCreateSessionCallbackProxy
 // 0x0068 (0x0098 - 0x0030)
@@ -204,5 +203,4 @@ public:
 };
 DUMPER7_ASSERTS_UOculusUpdateSessionCallbackProxy;
 
-}
-
+SDK_NAMESPACE_END

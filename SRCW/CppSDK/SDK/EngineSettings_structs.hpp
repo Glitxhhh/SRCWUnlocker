@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum EngineSettings.ETwoPlayerSplitScreenType
 // NumValues: 0x0003
@@ -87,5 +86,4 @@ public:
 };
 DUMPER7_ASSERTS_FTemplateMapInfoOverride;
 
-}
-
+SDK_NAMESPACE_END

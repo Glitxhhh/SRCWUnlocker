@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class TypedElementFramework.TypedElementDataStorageCompatibilityInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementDataStorageCompatibilityInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementDataStorageCompatibilityInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -66,9 +68,12 @@ public:
 DUMPER7_ASSERTS_UTypedElementDataStorageFactory;
 
 // Class TypedElementFramework.TypedElementDataStorageInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementDataStorageInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementDataStorageInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -95,9 +100,12 @@ public:
 DUMPER7_ASSERTS_ITypedElementDataStorageInterface;
 
 // Class TypedElementFramework.TypedElementDataStorageUiInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementDataStorageUiInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementDataStorageUiInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -192,9 +200,12 @@ public:
 DUMPER7_ASSERTS_UTypedElementListLibrary;
 
 // Class TypedElementFramework.TypedElementCounterInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITypedElementCounterInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITypedElementCounterInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -249,9 +260,12 @@ public:
 DUMPER7_ASSERTS_UTypedElementRegistry;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceA final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceA
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
 	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
@@ -282,9 +296,12 @@ public:
 DUMPER7_ASSERTS_ITestTypedElementInterfaceA;
 
 // Class TypedElementFramework.TestTypedElementInterfaceB
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceB final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceB
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool MarkAsTested(const struct FScriptTypedElementHandle& InElementHandle);
 
@@ -314,9 +331,12 @@ public:
 DUMPER7_ASSERTS_ITestTypedElementInterfaceB;
 
 // Class TypedElementFramework.TestTypedElementInterfaceC
-// 0x0000 (0x0000 - 0x0000)
-class ITestTypedElementInterfaceC final
+// 0x0008 (0x0008 - 0x0000)
+class ITestTypedElementInterfaceC
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	bool GetIsTested(const struct FScriptTypedElementHandle& InElementHandle) const;
 
@@ -347,10 +367,9 @@ DUMPER7_ASSERTS_ITestTypedElementInterfaceC;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplTyped
 // 0x0008 (0x0030 - 0x0028)
-class UTestTypedElementInterfaceA_ImplTyped final : public UObject
+class UTestTypedElementInterfaceA_ImplTyped final : public UObject, public ITestTypedElementInterfaceA
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -365,15 +384,18 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplTyped>();
 	}
+
+public:
+	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
+	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
 };
 DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplTyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplUntyped
 // 0x0008 (0x0030 - 0x0028)
-class UTestTypedElementInterfaceA_ImplUntyped final : public UObject
+class UTestTypedElementInterfaceA_ImplUntyped final : public UObject, public ITestTypedElementInterfaceA
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -388,15 +410,18 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplUntyped>();
 	}
+
+public:
+	class FText GetDisplayName(const struct FScriptTypedElementHandle& InElementHandle);
+	bool SetDisplayName(const struct FScriptTypedElementHandle& InElementHandle, const class FText& InNewName, bool bNotify);
 };
 DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplUntyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceBAndC_Typed
 // 0x0010 (0x0038 - 0x0028)
-class UTestTypedElementInterfaceBAndC_Typed final : public UObject
+class UTestTypedElementInterfaceBAndC_Typed final : public UObject, public ITestTypedElementInterfaceB, public ITestTypedElementInterfaceC
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -411,8 +436,11 @@ public:
 	{
 		return GetDefaultObjImpl<UTestTypedElementInterfaceBAndC_Typed>();
 	}
+
+public:
+	bool MarkAsTested(const struct FScriptTypedElementHandle& InElementHandle);
+	bool GetIsTested(const struct FScriptTypedElementHandle& InElementHandle) const;
 };
 DUMPER7_ASSERTS_UTestTypedElementInterfaceBAndC_Typed;
 
-}
-
+SDK_NAMESPACE_END

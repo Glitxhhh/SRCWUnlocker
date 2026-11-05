@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_RSR_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RSR.WBP_Result_Sub_RSR_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Result_Sub_RSR_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_RSR_C::Construct()
 
 void UWBP_Result_Sub_RSR_C::ExecuteUbergraph_WBP_Result_Sub_RSR(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "ExecuteUbergraph_WBP_Result_Sub_RSR");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RSR_C", "ExecuteUbergraph_WBP_Result_Sub_RSR", FuncInfo);
 
 	Params::WBP_Result_Sub_RSR_C_ExecuteUbergraph_WBP_Result_Sub_RSR Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Result_Sub_RSR_C::ExecuteUbergraph_WBP_Result_Sub_RSR(int32 EntryPoint
 
 void UWBP_Result_Sub_RSR_C::InitRing(bool bPickUp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "InitRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_C_InitRing Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_Result_Sub_RSR_C::InitRing(bool bPickUp)
 
 void UWBP_Result_Sub_RSR_C::OnEndGetInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "OnEndGetInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_Result_Sub_RSR_C::OnEndGetInAnim()
 
 void UWBP_Result_Sub_RSR_C::OnEndOverlapAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "OnEndOverlapAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_Result_Sub_RSR_C::OnEndOverlapAnim()
 
 void UWBP_Result_Sub_RSR_C::PickUpRing()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "PickUpRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +105,8 @@ void UWBP_Result_Sub_RSR_C::PickUpRing()
 
 void UWBP_Result_Sub_RSR_C::Play_Level_Up_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "Play Level Up Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +117,8 @@ void UWBP_Result_Sub_RSR_C::Play_Level_Up_Impl()
 
 void UWBP_Result_Sub_RSR_C::PlayBonusGetImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "PlayBonusGetImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +129,8 @@ void UWBP_Result_Sub_RSR_C::PlayBonusGetImpl()
 
 void UWBP_Result_Sub_RSR_C::ResetRing()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "ResetRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +141,8 @@ void UWBP_Result_Sub_RSR_C::ResetRing()
 
 void UWBP_Result_Sub_RSR_C::SkipRSRRing()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "SkipRSRRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +153,8 @@ void UWBP_Result_Sub_RSR_C::SkipRSRRing()
 
 void UWBP_Result_Sub_RSR_C::WidgetAnimationEvt_RSR_Get_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "WidgetAnimationEvt_RSR_Get_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,13 +165,11 @@ void UWBP_Result_Sub_RSR_C::WidgetAnimationEvt_RSR_Get_In_K2Node_WidgetAnimation
 
 void UWBP_Result_Sub_RSR_C::WidgetAnimationEvt_RSR_Overlap_In_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_C", "WidgetAnimationEvt_RSR_Overlap_In_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

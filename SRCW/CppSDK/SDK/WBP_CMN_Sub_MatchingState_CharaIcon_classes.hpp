@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_Sub_MatchingState_CharaIcon.WBP_CMN_Sub_MatchingState_CharaIcon_C
 // 0x0060 (0x0450 - 0x03F0)
@@ -59,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_Sub_MatchingState_CharaIcon_C;
 
-}
-
+SDK_NAMESPACE_END

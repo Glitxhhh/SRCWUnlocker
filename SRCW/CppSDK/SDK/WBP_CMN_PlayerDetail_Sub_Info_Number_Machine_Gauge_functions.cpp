@@ -14,18 +14,15 @@
 #include "WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge.WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::Construct()
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge", FuncInfo);
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C_ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::ExecuteUbergraph_WBP
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C_PreConstruct Parms{};
 
@@ -79,10 +72,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::PreConstruct(bool Is
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::SetUsedCounts(int32 InCounts, int32 InMaxCounts)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", "SetUsedCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C_SetUsedCounts Parms{};
 
@@ -92,5 +83,5 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Number_Machine_Gauge_C::SetUsedCounts(int32 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

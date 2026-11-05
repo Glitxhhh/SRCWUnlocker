@@ -14,8 +14,7 @@
 #include "WBP_Sub_Friend_LobbyNoticePlate_Guide_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Sub_Friend_LobbyNoticePlate_Guide.WBP_Sub_Friend_LobbyNoticePlate_Guide_C.ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate_Guide
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate_Guide(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_Guide_C", "ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate_Guide");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Sub_Friend_LobbyNoticePlate_Guide_C", "ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate_Guide", FuncInfo);
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_Guide_C_ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate_Guide Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::ExecuteUbergraph_WBP_Sub_Friend_L
 
 void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_Guide_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_Guide_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_Guide_C_PreConstruct Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::SetupNotAvailable(ELobbyInvitationSequenceType CurrentNotAvailable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_Guide_C", "SetupNotAvailable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_Guide_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_Guide_C_SetupNotAvailable Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_Sub_Friend_LobbyNoticePlate_Guide_C::SetupNotAvailable(ELobbyInvitatio
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

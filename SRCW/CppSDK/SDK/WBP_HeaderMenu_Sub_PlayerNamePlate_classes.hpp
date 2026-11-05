@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C
 // 0x0080 (0x0458 - 0x03D8)
@@ -45,7 +44,11 @@ public:
 public:
 	void Construct();
 	void ExecuteUbergraph_WBP_HeaderMenu_Sub_PlayerNamePlate(int32 EntryPoint);
+	void SetArabicVerticalOffset(const class FText& InText);
+	void SetupDuelCompeUserData(int32 InRoundPoint);
+	void SetupLegendCompeUserData(ELegendCompeRateGrade InLegendGrade, int32 InLegendRate);
 	void SetUpUserData(const class FText& InUserName, int32 InHonorId, ECrossplayPlatform InPlatform, int32 InWinCounts, uint8 InRateRank, float InRankPercent, bool IsShowingLegendCompeIcon, ELegendCompeRateGrade LegendGrade, int32 InLegendRate);
+	void SetWinStreakVisibility(bool IsVisible_0);
 	void UpdateUserData(const class FText& InUserName, int32 InHonorId);
 
 public:
@@ -64,5 +67,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_HeaderMenu_Sub_PlayerNamePlate_C;
 
-}
-
+SDK_NAMESPACE_END

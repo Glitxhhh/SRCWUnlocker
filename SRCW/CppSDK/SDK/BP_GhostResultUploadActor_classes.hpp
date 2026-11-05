@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GhostResultUploadActor.BP_GhostResultUploadActor_C
 // 0x0070 (0x0300 - 0x0290)
@@ -76,5 +75,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_GhostResultUploadActor_C;
 
-}
-
+SDK_NAMESPACE_END

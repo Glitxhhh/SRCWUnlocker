@@ -12,13 +12,12 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_SubMenu_Btn.WBP_Friend_SubMenu_Btn_C
 // 0x0080 (0x0500 - 0x0480)
@@ -86,5 +85,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_SubMenu_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

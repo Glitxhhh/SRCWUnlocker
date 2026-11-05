@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_StickerActorGroup.BP_StickerActorGroup_C
 // 0x0008 (0x0298 - 0x0290)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_StickerActorGroup_C;
 
-}
-
+SDK_NAMESPACE_END

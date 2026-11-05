@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_ItemOmochao.ABP_ItemOmochao_C
 // 0x0490 (0x0810 - 0x0380)
@@ -68,5 +67,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_ItemOmochao_C;
 
-}
-
+SDK_NAMESPACE_END

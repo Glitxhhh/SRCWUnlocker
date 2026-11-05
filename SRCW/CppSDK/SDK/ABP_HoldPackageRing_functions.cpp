@@ -14,8 +14,7 @@
 #include "ABP_HoldPackageRing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldPackageRing.ABP_HoldPackageRing_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldPackageRing_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldPackageRing_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldPackageRing_C", FnName));
 
 	Params::ABP_HoldPackageRing_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_HoldPackageRing_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_51ECFB854A5A66E462F2AAB89725EB34()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldPackageRing_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_51ECFB854A5A66E462F2AAB89725EB34");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldPackageRing_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Hol
 
 void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_773FE3F04A86002C2754A39A0F982CFB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldPackageRing_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_773FE3F04A86002C2754A39A0F982CFB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldPackageRing_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Hol
 
 void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_D9F96AEA491BB22143B3EB96B6E985EB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldPackageRing_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldPackageRing_AnimGraphNode_TransitionResult_D9F96AEA491BB22143B3EB96B6E985EB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldPackageRing_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,10 +78,8 @@ void UABP_HoldPackageRing_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Hol
 
 void UABP_HoldPackageRing_C::ExecuteUbergraph_ABP_HoldPackageRing(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldPackageRing_C", "ExecuteUbergraph_ABP_HoldPackageRing");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_HoldPackageRing_C", "ExecuteUbergraph_ABP_HoldPackageRing", FuncInfo);
 
 	Params::ABP_HoldPackageRing_C_ExecuteUbergraph_ABP_HoldPackageRing Parms{};
 
@@ -99,5 +88,5 @@ void UABP_HoldPackageRing_C::ExecuteUbergraph_ABP_HoldPackageRing(int32 EntryPoi
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

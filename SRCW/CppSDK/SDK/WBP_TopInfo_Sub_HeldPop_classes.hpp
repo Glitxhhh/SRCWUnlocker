@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopInfo_Sub_HeldPop.WBP_TopInfo_Sub_HeldPop_C
 // 0x0038 (0x0318 - 0x02E0)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopInfo_Sub_HeldPop_C;
 
-}
-
+SDK_NAMESPACE_END

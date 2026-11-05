@@ -14,18 +14,15 @@
 #include "WBP_RaceBefore_RuleExplanation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_RaceBefore_RuleExplanation.WBP_RaceBefore_RuleExplanation_C.CallAnimFinishEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_RaceBefore_RuleExplanation_C::CallAnimFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "CallAnimFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_RaceBefore_RuleExplanation_C::CallAnimFinishEvent()
 
 void UWBP_RaceBefore_RuleExplanation_C::Close(bool bSelfRemove)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	Params::WBP_RaceBefore_RuleExplanation_C_Close Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_RaceBefore_RuleExplanation_C::Close(bool bSelfRemove)
 
 void UWBP_RaceBefore_RuleExplanation_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_RaceBefore_RuleExplanation_C::Construct()
 
 void UWBP_RaceBefore_RuleExplanation_C::ExecuteUbergraph_WBP_RaceBefore_RuleExplanation(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "ExecuteUbergraph_WBP_RaceBefore_RuleExplanation");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_RaceBefore_RuleExplanation_C", "ExecuteUbergraph_WBP_RaceBefore_RuleExplanation", FuncInfo);
 
 	Params::WBP_RaceBefore_RuleExplanation_C_ExecuteUbergraph_WBP_RaceBefore_RuleExplanation Parms{};
 
@@ -90,10 +81,8 @@ void UWBP_RaceBefore_RuleExplanation_C::ExecuteUbergraph_WBP_RaceBefore_RuleExpl
 
 void UWBP_RaceBefore_RuleExplanation_C::ExtremeSetting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "ExtremeSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_RaceBefore_RuleExplanation_C::ExtremeSetting()
 
 void UWBP_RaceBefore_RuleExplanation_C::OnFestaHidePeople()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "OnFestaHidePeople");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +105,8 @@ void UWBP_RaceBefore_RuleExplanation_C::OnFestaHidePeople()
 
 void UWBP_RaceBefore_RuleExplanation_C::OnOutFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "OnOutFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +119,8 @@ void UWBP_RaceBefore_RuleExplanation_C::OnOutFinished()
 
 void UWBP_RaceBefore_RuleExplanation_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	Params::WBP_RaceBefore_RuleExplanation_C_PreConstruct Parms{};
 
@@ -152,10 +135,8 @@ void UWBP_RaceBefore_RuleExplanation_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "SequenceEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +147,8 @@ void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent()
 
 void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "SequenceEvent__ENTRYPOINTWBP_RaceBefore_RuleExplanation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +161,8 @@ void UWBP_RaceBefore_RuleExplanation_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_
 
 void UWBP_RaceBefore_RuleExplanation_C::SetRuleDetail(const class FString& RuleDetail)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "SetRuleDetail");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	Params::WBP_RaceBefore_RuleExplanation_C_SetRuleDetail Parms{};
 
@@ -200,10 +177,8 @@ void UWBP_RaceBefore_RuleExplanation_C::SetRuleDetail(const class FString& RuleD
 
 void UWBP_RaceBefore_RuleExplanation_C::UpdateMatchFormatText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "UpdateMatchFormatText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -214,13 +189,11 @@ void UWBP_RaceBefore_RuleExplanation_C::UpdateMatchFormatText()
 
 void UWBP_RaceBefore_RuleExplanation_C::UpdateWithRuleVisible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_RuleExplanation_C", "UpdateWithRuleVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_RuleExplanation_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

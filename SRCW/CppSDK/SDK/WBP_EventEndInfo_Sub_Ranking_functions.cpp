@@ -14,8 +14,7 @@
 #include "WBP_EventEndInfo_Sub_Ranking_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_EventEndInfo_Sub_Ranking.WBP_EventEndInfo_Sub_Ranking_C.SetRanking
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_EventEndInfo_Sub_Ranking_C::SetRanking(int32 Ranking)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Ranking_C", "SetRanking");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Ranking_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Ranking_C_SetRanking Parms{};
 
@@ -36,5 +33,5 @@ void UWBP_EventEndInfo_Sub_Ranking_C::SetRanking(int32 Ranking)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

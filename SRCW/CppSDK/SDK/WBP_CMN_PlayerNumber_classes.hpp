@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PlayerNumber.WBP_CMN_PlayerNumber_C
 // 0x0010 (0x0320 - 0x0310)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_PlayerNumber_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_ChancePop_Magnification_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_ChancePop_Magnification.WBP_CMN_Sub_ChancePop_Magnification_C.SetRatioText
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_ChancePop_Magnification_C::SetRatioText(const class FText& InRatioText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_ChancePop_Magnification_C", "SetRatioText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_ChancePop_Magnification_C", FnName));
 
 	Params::WBP_CMN_Sub_ChancePop_Magnification_C_SetRatioText Parms{};
 
@@ -36,5 +33,5 @@ void UWBP_CMN_Sub_ChancePop_Magnification_C::SetRatioText(const class FText& InR
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

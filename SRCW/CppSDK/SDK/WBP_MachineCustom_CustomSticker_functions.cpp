@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_CustomSticker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_CustomSticker.WBP_MachineCustom_CustomSticker_C.GetVisibility_ColorPicker
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_CustomSticker_C::GetVisibility_ColorPicker(ESlateVisibility* Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "GetVisibility_ColorPicker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	Params::WBP_MachineCustom_CustomSticker_C_GetVisibility_ColorPicker Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_MachineCustom_CustomSticker_C::GetVisibility_ColorPicker(ESlateVisibil
 
 void UWBP_MachineCustom_CustomSticker_C::GetVisibility_OperationGuide(ESlateVisibility* Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "GetVisibility_OperationGuide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	Params::WBP_MachineCustom_CustomSticker_C_GetVisibility_OperationGuide Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_MachineCustom_CustomSticker_C::GetVisibility_OperationGuide(ESlateVisi
 
 void UWBP_MachineCustom_CustomSticker_C::PlayColorPickerIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "PlayColorPickerIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_MachineCustom_CustomSticker_C::PlayColorPickerIn()
 
 void UWBP_MachineCustom_CustomSticker_C::PlayColorPickerOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "PlayColorPickerOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +85,8 @@ void UWBP_MachineCustom_CustomSticker_C::PlayColorPickerOut()
 
 void UWBP_MachineCustom_CustomSticker_C::SetVisibility_ColorPicker(ESlateVisibility Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "SetVisibility_ColorPicker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	Params::WBP_MachineCustom_CustomSticker_C_SetVisibility_ColorPicker Parms{};
 
@@ -114,10 +103,8 @@ void UWBP_MachineCustom_CustomSticker_C::SetVisibility_ColorPicker(ESlateVisibil
 
 void UWBP_MachineCustom_CustomSticker_C::SetVisibility_OperationGuide(ESlateVisibility Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_CustomSticker_C", "SetVisibility_OperationGuide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_CustomSticker_C", FnName));
 
 	Params::WBP_MachineCustom_CustomSticker_C_SetVisibility_OperationGuide Parms{};
 
@@ -126,5 +113,5 @@ void UWBP_MachineCustom_CustomSticker_C::SetVisibility_OperationGuide(ESlateVisi
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCustom_SnapPoint.WBP_GadgetCustom_SnapPoint_C
 // 0x0008 (0x0308 - 0x0300)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GadgetCustom_SnapPoint_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ResultRate_Sub_Rate_Window.WBP_ResultRate_Sub_Rate_Window_C
 // 0x00A0 (0x0390 - 0x02F0)
@@ -65,5 +64,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ResultRate_Sub_Rate_Window_C;
 
-}
-
+SDK_NAMESPACE_END

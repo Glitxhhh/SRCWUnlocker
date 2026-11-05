@@ -14,8 +14,7 @@
 #include "BP_ItemThornBallObject_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ItemThornBallObject.BP_ItemThornBallObject_C.ExecuteUbergraph_BP_ItemThornBallObject
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_ItemThornBallObject_C::ExecuteUbergraph_BP_ItemThornBallObject(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "ExecuteUbergraph_BP_ItemThornBallObject");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ItemThornBallObject_C", "ExecuteUbergraph_BP_ItemThornBallObject", FuncInfo);
 
 	Params::BP_ItemThornBallObject_C_ExecuteUbergraph_BP_ItemThornBallObject Parms{};
 
@@ -42,10 +39,8 @@ void ABP_ItemThornBallObject_C::ExecuteUbergraph_BP_ItemThornBallObject(int32 En
 
 void ABP_ItemThornBallObject_C::OnDeactiveBreakEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "OnDeactiveBreakEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void ABP_ItemThornBallObject_C::OnDeactiveBreakEffect()
 
 void ABP_ItemThornBallObject_C::OnPlayBreakEffect(float Scale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "OnPlayBreakEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	Params::BP_ItemThornBallObject_C_OnPlayBreakEffect Parms{};
 
@@ -76,10 +69,8 @@ void ABP_ItemThornBallObject_C::OnPlayBreakEffect(float Scale)
 
 void ABP_ItemThornBallObject_C::OnPlayBreakSound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "OnPlayBreakSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void ABP_ItemThornBallObject_C::OnPlayBreakSound()
 
 void ABP_ItemThornBallObject_C::OnPlayDamegeSound(ESoundPan SoundPan)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "OnPlayDamegeSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	Params::BP_ItemThornBallObject_C_OnPlayDamegeSound Parms{};
 
@@ -112,10 +101,8 @@ void ABP_ItemThornBallObject_C::OnPlayDamegeSound(ESoundPan SoundPan)
 
 void ABP_ItemThornBallObject_C::OnPlayLandingSound(bool waterFlag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "OnPlayLandingSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	Params::BP_ItemThornBallObject_C_OnPlayLandingSound Parms{};
 
@@ -130,13 +117,11 @@ void ABP_ItemThornBallObject_C::OnPlayLandingSound(bool waterFlag)
 
 void ABP_ItemThornBallObject_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemThornBallObject_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemThornBallObject_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

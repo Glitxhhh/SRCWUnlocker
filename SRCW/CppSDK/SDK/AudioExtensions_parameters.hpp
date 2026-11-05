@@ -13,17 +13,20 @@
 #include "AudioExtensions_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetBoolArrayParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetBoolArrayParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetBoolArrayParameter
 struct AudioParameterControllerInterface_SetBoolArrayParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<bool>                                  InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetBoolArrayParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetBoolParameter
@@ -39,12 +42,15 @@ DUMPER7_ASSERTS_AudioParameterControllerInterface_SetBoolParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetFloatArrayParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetFloatArrayParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetFloatArrayParameter
 struct AudioParameterControllerInterface_SetFloatArrayParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<float>                                 InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetFloatArrayParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetFloatParameter
@@ -59,12 +65,15 @@ DUMPER7_ASSERTS_AudioParameterControllerInterface_SetFloatParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetIntArrayParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetIntArrayParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetIntArrayParameter
 struct AudioParameterControllerInterface_SetIntArrayParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetIntArrayParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetIntParameter
@@ -79,61 +88,79 @@ DUMPER7_ASSERTS_AudioParameterControllerInterface_SetIntParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetObjectArrayParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetObjectArrayParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetObjectArrayParameter
 struct AudioParameterControllerInterface_SetObjectArrayParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetObjectArrayParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetObjectParameter
 // 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetObjectParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetObjectParameter
 struct AudioParameterControllerInterface_SetObjectParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                InValue;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetObjectParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetParameters_Blueprint
 // 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetParameters_Blueprint
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetParameters_Blueprint
 struct AudioParameterControllerInterface_SetParameters_Blueprint final
 {
 public:
 	TArray<struct FAudioParameter>                InParameters;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetParameters_Blueprint;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetStringArrayParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetStringArrayParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetStringArrayParameter
 struct AudioParameterControllerInterface_SetStringArrayParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetStringArrayParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetStringParameter
 // 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetStringParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetStringParameter
 struct AudioParameterControllerInterface_SetStringParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InValue;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetStringParameter;
 
 // Function AudioExtensions.AudioParameterControllerInterface.SetTriggerParameter
 // 0x0008 (0x0008 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetTriggerParameter
+#define DUMPER7_PARAM_DEFINED_AudioParameterControllerInterface_SetTriggerParameter
 struct AudioParameterControllerInterface_SetTriggerParameter final
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_AudioParameterControllerInterface_SetTriggerParameter;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

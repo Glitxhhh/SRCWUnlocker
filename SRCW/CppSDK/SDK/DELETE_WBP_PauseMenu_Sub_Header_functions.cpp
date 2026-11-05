@@ -14,18 +14,15 @@
 #include "DELETE_WBP_PauseMenu_Sub_Header_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function DELETE_WBP_PauseMenu_Sub_Header.DELETE_WBP_PauseMenu_Sub_Header_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UDELETE_WBP_PauseMenu_Sub_Header_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Header_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Header_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UDELETE_WBP_PauseMenu_Sub_Header_C::Construct()
 
 void UDELETE_WBP_PauseMenu_Sub_Header_C::ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Header(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Header_C", "ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Header");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DELETE_WBP_PauseMenu_Sub_Header_C", "ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Header", FuncInfo);
 
 	Params::DELETE_WBP_PauseMenu_Sub_Header_C_ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Header Parms{};
 
@@ -58,10 +53,8 @@ void UDELETE_WBP_PauseMenu_Sub_Header_C::ExecuteUbergraph_DELETE_WBP_PauseMenu_S
 
 void UDELETE_WBP_PauseMenu_Sub_Header_C::SetPlayerIndex(int32 NewPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Header_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Header_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Header_C_SetPlayerIndex Parms{};
 
@@ -70,5 +63,5 @@ void UDELETE_WBP_PauseMenu_Sub_Header_C::SetPlayerIndex(int32 NewPlayerIndex)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

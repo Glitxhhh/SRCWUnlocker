@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Result_Sub_RSR.WBP_Result_Sub_RSR_C
 // 0x00A0 (0x0398 - 0x02F8)
@@ -72,5 +71,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Result_Sub_RSR_C;
 
-}
-
+SDK_NAMESPACE_END

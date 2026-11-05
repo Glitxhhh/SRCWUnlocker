@@ -14,8 +14,7 @@
 #include "ABP_ItemOmochao_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_ItemOmochao.ABP_ItemOmochao_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_ItemOmochao_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemOmochao_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemOmochao_C", FnName));
 
 	Params::ABP_ItemOmochao_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_ItemOmochao_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_ItemOmochao_C::AnimNotify_OnLeaveFlyToHover()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemOmochao_C", "AnimNotify_OnLeaveFlyToHover");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemOmochao_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,10 +54,8 @@ void UABP_ItemOmochao_C::AnimNotify_OnLeaveFlyToHover()
 
 void UABP_ItemOmochao_C::ExecuteUbergraph_ABP_ItemOmochao(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemOmochao_C", "ExecuteUbergraph_ABP_ItemOmochao");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_ItemOmochao_C", "ExecuteUbergraph_ABP_ItemOmochao", FuncInfo);
 
 	Params::ABP_ItemOmochao_C_ExecuteUbergraph_ABP_ItemOmochao Parms{};
 
@@ -71,5 +64,5 @@ void UABP_ItemOmochao_C::ExecuteUbergraph_ABP_ItemOmochao(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

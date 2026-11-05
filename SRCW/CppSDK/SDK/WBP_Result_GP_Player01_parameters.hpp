@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UNION_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Result_GP_Player01.WBP_Result_GP_Player01_C.ExecuteUbergraph_WBP_Result_GP_Player01
 // 0x01B0 (0x01B0 - 0x0000)
@@ -169,5 +169,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Result_GP_Player01_C_Tick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

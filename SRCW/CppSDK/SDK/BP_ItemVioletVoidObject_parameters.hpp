@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_ItemVioletVoidObject.BP_ItemVioletVoidObject_C.ExecuteUbergraph_BP_ItemVioletVoidObject
 // 0x0080 (0x0080 - 0x0000)
@@ -99,5 +99,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_ItemVioletVoidObject_C_RequestMeshAnimAppearance;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

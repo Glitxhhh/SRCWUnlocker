@@ -14,18 +14,15 @@
 #include "WBP_Online_MatchingInfo_Sub_WaitingIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Online_MatchingInfo_Sub_WaitingIcon.WBP_Online_MatchingInfo_Sub_WaitingIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Online_MatchingInfo_Sub_WaitingIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_MatchingInfo_Sub_WaitingIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_MatchingInfo_Sub_WaitingIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Online_MatchingInfo_Sub_WaitingIcon_C::Construct()
 
 void UWBP_Online_MatchingInfo_Sub_WaitingIcon_C::ExecuteUbergraph_WBP_Online_MatchingInfo_Sub_WaitingIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_MatchingInfo_Sub_WaitingIcon_C", "ExecuteUbergraph_WBP_Online_MatchingInfo_Sub_WaitingIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Online_MatchingInfo_Sub_WaitingIcon_C", "ExecuteUbergraph_WBP_Online_MatchingInfo_Sub_WaitingIcon", FuncInfo);
 
 	Params::WBP_Online_MatchingInfo_Sub_WaitingIcon_C_ExecuteUbergraph_WBP_Online_MatchingInfo_Sub_WaitingIcon Parms{};
 
@@ -50,5 +45,5 @@ void UWBP_Online_MatchingInfo_Sub_WaitingIcon_C::ExecuteUbergraph_WBP_Online_Mat
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

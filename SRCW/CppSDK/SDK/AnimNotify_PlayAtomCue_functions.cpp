@@ -14,8 +14,7 @@
 #include "AnimNotify_PlayAtomCue_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimNotify_PlayAtomCue.PlayAtomCue_C.GetNotifyName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 class FString UPlayAtomCue_C::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayAtomCue_C", "GetNotifyName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayAtomCue_C", FnName));
 
 	Params::PlayAtomCue_C_GetNotifyName Parms{};
 
@@ -47,10 +44,8 @@ class FString UPlayAtomCue_C::GetNotifyName() const
 
 bool UPlayAtomCue_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayAtomCue_C", "Received_Notify");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayAtomCue_C", FnName));
 
 	Params::PlayAtomCue_C_Received_Notify Parms{};
 
@@ -63,5 +58,5 @@ bool UPlayAtomCue_C::Received_Notify(class USkeletalMeshComponent* MeshComp, cla
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_ItemDarkChaoHero.ABP_ItemDarkChaoHero_C.AnimBlueprintGeneratedConstantData
 // 0x0127 (0x0128 - 0x0001)
@@ -31,5 +30,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemDarkChaoHero__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

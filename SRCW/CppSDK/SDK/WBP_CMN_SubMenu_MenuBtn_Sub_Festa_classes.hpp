@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_SubMenu_MenuBtn_Sub_Festa.WBP_CMN_SubMenu_MenuBtn_Sub_Festa_C
 // 0x0010 (0x02F0 - 0x02E0)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_SubMenu_MenuBtn_Sub_Festa_C;
 
-}
-
+SDK_NAMESPACE_END

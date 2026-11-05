@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_BonusCountIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_BonusCountIcon.WBP_Result_Sub_BonusCountIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Result_Sub_BonusCountIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusCountIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_BonusCountIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_BonusCountIcon_C::Construct()
 
 void UWBP_Result_Sub_BonusCountIcon_C::ExecuteUbergraph_WBP_Result_Sub_BonusCountIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusCountIcon_C", "ExecuteUbergraph_WBP_Result_Sub_BonusCountIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_BonusCountIcon_C", "ExecuteUbergraph_WBP_Result_Sub_BonusCountIcon", FuncInfo);
 
 	Params::WBP_Result_Sub_BonusCountIcon_C_ExecuteUbergraph_WBP_Result_Sub_BonusCountIcon Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_Result_Sub_BonusCountIcon_C::ExecuteUbergraph_WBP_Result_Sub_BonusCoun
 
 void UWBP_Result_Sub_BonusCountIcon_C::Open()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusCountIcon_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_BonusCountIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UWBP_Result_Sub_BonusCountIcon_C::Open()
 
 void UWBP_Result_Sub_BonusCountIcon_C::SetNum(int32 Point, bool bIs1st)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusCountIcon_C", "SetNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_BonusCountIcon_C", FnName));
 
 	Params::WBP_Result_Sub_BonusCountIcon_C_SetNum Parms{};
 
@@ -86,5 +77,5 @@ void UWBP_Result_Sub_BonusCountIcon_C::SetNum(int32 Point, bool bIs1st)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum NiagaraCore.ENiagaraIterationSource
 // NumValues: 0x0004
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_FNiagaraCompileHash;
 
-}
-
+SDK_NAMESPACE_END

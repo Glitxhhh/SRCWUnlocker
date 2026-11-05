@@ -14,8 +14,7 @@
 #include "WBP_MachineSelect_Sub_PartsIcon_W_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_PartsIcon_W.WBP_MachineSelect_Sub_PartsIcon_W_C.ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_W
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_W(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_W");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_PartsIcon_W_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_W", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_PartsIcon_W_C_ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_W Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::ExecuteUbergraph_WBP_MachineSelect_Su
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnAcceptKeyPressed()
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_PartsIcon_W_C_OnAnimationFinished Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnAnimationFinished(const class UWidg
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::OnBackKeyPressed()
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::PlayAnimDefault()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "PlayAnimDefault");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::PlayAnimDefault()
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::PlayAnimLock()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "PlayAnimLock");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,13 +105,11 @@ void UWBP_MachineSelect_Sub_PartsIcon_W_C::PlayAnimLock()
 
 void UWBP_MachineSelect_Sub_PartsIcon_W_C::PlayAnimUnLock()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_W_C", "PlayAnimUnLock");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

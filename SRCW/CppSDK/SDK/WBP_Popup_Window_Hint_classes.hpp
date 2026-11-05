@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C
 // 0x00D0 (0x0598 - 0x04C8)
@@ -99,7 +98,7 @@ public:
 	void SetTestTextParam();
 	void SetTitleText(const class FText& InText);
 	void Setup(EHintId InHintId, bool bInDecisionClose);
-	void UnBindAnimationEvent();
+	void UnbindAnimationEvent();
 	void UpdateDisplay(EHintId InHintId);
 	void UpdateFooter(bool bInIsTips);
 	void UpdateInputType();
@@ -122,5 +121,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_Window_Hint_C;
 
-}
-
+SDK_NAMESPACE_END

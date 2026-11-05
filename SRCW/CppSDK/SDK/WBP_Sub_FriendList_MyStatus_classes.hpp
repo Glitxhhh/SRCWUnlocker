@@ -16,8 +16,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Sub_FriendList_MyStatus.WBP_Sub_FriendList_MyStatus_C
 // 0x0038 (0x0318 - 0x02E0)
@@ -57,5 +56,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Sub_FriendList_MyStatus_C;
 
-}
-
+SDK_NAMESPACE_END

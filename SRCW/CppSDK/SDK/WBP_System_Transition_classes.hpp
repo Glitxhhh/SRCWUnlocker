@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_Transition.WBP_System_Transition_C
 // 0x0060 (0x0368 - 0x0308)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_Transition_C;
 
-}
-
+SDK_NAMESPACE_END

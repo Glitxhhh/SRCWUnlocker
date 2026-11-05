@@ -14,8 +14,7 @@
 #include "WBP_Tutorial_Controller_Wrapper_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Tutorial_Controller_Wrapper.WBP_Tutorial_Controller_Wrapper_C.Create
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void UWBP_Tutorial_Controller_Wrapper_C::Create(class FName InRowName, EUnionControllerType InType, EUnionPlatform InPlatform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Wrapper_C", "Create");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Wrapper_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Wrapper_C_Create Parms{};
 
@@ -50,10 +47,8 @@ void UWBP_Tutorial_Controller_Wrapper_C::Create(class FName InRowName, EUnionCon
 
 void UWBP_Tutorial_Controller_Wrapper_C::CreateController(EUnionControllerType InType, EUnionPlatform InPlatform, class UCommonUIController** newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Wrapper_C", "CreateController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Wrapper_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Wrapper_C_CreateController Parms{};
 
@@ -75,10 +70,8 @@ void UWBP_Tutorial_Controller_Wrapper_C::CreateController(EUnionControllerType I
 
 void UWBP_Tutorial_Controller_Wrapper_C::CreateHintID(EHintId InHintId, bool bIsKeyboard)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Wrapper_C", "CreateHintID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Wrapper_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Wrapper_C_CreateHintID Parms{};
 
@@ -96,10 +89,8 @@ void UWBP_Tutorial_Controller_Wrapper_C::CreateHintID(EHintId InHintId, bool bIs
 
 void UWBP_Tutorial_Controller_Wrapper_C::CreateTutorialAction(ETutorialAction InTutorialAction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Wrapper_C", "CreateTutorialAction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Wrapper_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Wrapper_C_CreateTutorialAction Parms{};
 
@@ -116,10 +107,8 @@ void UWBP_Tutorial_Controller_Wrapper_C::CreateTutorialAction(ETutorialAction In
 
 void UWBP_Tutorial_Controller_Wrapper_C::CreateTutorialActionKeyboard(ETutorialAction tutorialAction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Wrapper_C", "CreateTutorialActionKeyboard");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Wrapper_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Wrapper_C_CreateTutorialActionKeyboard Parms{};
 
@@ -128,5 +117,5 @@ void UWBP_Tutorial_Controller_Wrapper_C::CreateTutorialActionKeyboard(ETutorialA
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

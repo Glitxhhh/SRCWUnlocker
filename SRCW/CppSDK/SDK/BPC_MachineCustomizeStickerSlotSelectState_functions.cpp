@@ -14,8 +14,7 @@
 #include "BPC_MachineCustomizeStickerSlotSelectState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeStickerSlotSelectState.BPC_MachineCustomizeStickerSlotSelectState_C.SetIsStickerClearSEEnable
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetIsStickerClearSEEnable(int32 SlotIndex, bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetIsStickerClearSEEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_SetIsStickerClearSEEnable Parms{};
 
@@ -47,10 +44,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetIsStickerClearSEEnable(in
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetStickerClearFooterVisibility(int32 SlotIndex, bool IsRear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetStickerClearFooterVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_SetStickerClearFooterVisibility Parms{};
 
@@ -68,10 +63,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetStickerClearFooterVisibil
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFaceTopEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "StickerSlot_OnFaceTopEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_StickerSlot_OnFaceTopEvent Parms{};
 
@@ -88,10 +81,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFaceTopEvent(c
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnDecision(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "StickerSlot_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_StickerSlot_OnDecision Parms{};
 
@@ -106,10 +97,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnDecision(class
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFocused()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "StickerSlot_OnFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +113,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFocused()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFocus(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "StickerSlot_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_StickerSlot_OnFocus Parms{};
 
@@ -148,10 +135,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::StickerSlot_OnFocus(class UU
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetupSlot(TArray<struct FStickerUIData>& UIData, TArray<class UMachineStickerSlotIcon*>& Stickers, TArray<struct FUserStickerData>& UserStickerData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetupSlot");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_SetupSlot Parms{};
 
@@ -174,10 +159,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetupSlot(TArray<struct FSti
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetRearMaterial(class UTexture* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetRearMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_SetRearMaterial Parms{};
 
@@ -194,10 +177,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetRearMaterial(class UTextu
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetFrontMaterial(class UTexture* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetFrontMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_SetFrontMaterial Parms{};
 
@@ -212,10 +193,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetFrontMaterial(class UText
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::OnSetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "OnSetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,10 +205,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::OnSetupPage()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::OnSetup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "OnSetup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +217,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::OnSetup()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::SetProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "SetProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,10 +229,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::SetProperties()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::BindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "BindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -268,10 +241,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::BindTab()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::UnbindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "UnbindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +253,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::UnbindTab()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::BindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "BindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +265,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::BindPage()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::UnbindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "UnbindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -312,10 +279,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::UnbindPage()
 
 void UBPC_MachineCustomizeStickerSlotSelectState_C::ExecuteUbergraph_BPC_MachineCustomizeStickerSlotSelectState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerSlotSelectState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizeStickerSlotSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeStickerSlotSelectState", FuncInfo);
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeStickerSlotSelectState Parms{};
 
@@ -332,10 +297,8 @@ void UBPC_MachineCustomizeStickerSlotSelectState_C::ExecuteUbergraph_BPC_Machine
 
 class AGarageCamera* UBPC_MachineCustomizeStickerSlotSelectState_C::GetCamera() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeStickerSlotSelectState_C", "GetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeStickerSlotSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeStickerSlotSelectState_C_GetCamera Parms{};
 
@@ -344,5 +307,5 @@ class AGarageCamera* UBPC_MachineCustomizeStickerSlotSelectState_C::GetCamera() 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

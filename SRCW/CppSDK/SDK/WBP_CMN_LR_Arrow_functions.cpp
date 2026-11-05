@@ -14,18 +14,15 @@
 #include "WBP_CMN_LR_Arrow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.BndEvt__WBP_CMN_LR_Arrow_ButtonL_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_CMN_LR_Arrow_C::BndEvt__WBP_CMN_LR_Arrow_ButtonL_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "BndEvt__WBP_CMN_LR_Arrow_ButtonL_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_CMN_LR_Arrow_C::BndEvt__WBP_CMN_LR_Arrow_ButtonL_K2Node_ComponentBound
 
 void UWBP_CMN_LR_Arrow_C::BndEvt__WBP_CMN_LR_Arrow_ButtonR_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "BndEvt__WBP_CMN_LR_Arrow_ButtonR_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_CMN_LR_Arrow_C::BndEvt__WBP_CMN_LR_Arrow_ButtonR_K2Node_ComponentBound
 
 void UWBP_CMN_LR_Arrow_C::ExecuteUbergraph_WBP_CMN_LR_Arrow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "ExecuteUbergraph_WBP_CMN_LR_Arrow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_LR_Arrow_C", "ExecuteUbergraph_WBP_CMN_LR_Arrow", FuncInfo);
 
 	Params::WBP_CMN_LR_Arrow_C_ExecuteUbergraph_WBP_CMN_LR_Arrow Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_CMN_LR_Arrow_C::ExecuteUbergraph_WBP_CMN_LR_Arrow(int32 EntryPoint)
 
 void UWBP_CMN_LR_Arrow_C::PlayAnimationLeftIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "PlayAnimationLeftIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,32 +75,10 @@ void UWBP_CMN_LR_Arrow_C::PlayAnimationLeftIn()
 
 void UWBP_CMN_LR_Arrow_C::PlayAnimationRightIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "PlayAnimationRightIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_LR_Arrow_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "PreConstruct");
-
-	Params::WBP_CMN_LR_Arrow_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -120,10 +89,8 @@ void UWBP_CMN_LR_Arrow_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CMN_LR_Arrow_C::SetIsGamepadKey(bool Is_Game_Pad_Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "SetIsGamepadKey");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	Params::WBP_CMN_LR_Arrow_C_SetIsGamepadKey Parms{};
 
@@ -133,21 +100,19 @@ void UWBP_CMN_LR_Arrow_C::SetIsGamepadKey(bool Is_Game_Pad_Key)
 }
 
 
-// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibleButton
+// Function WBP_CMN_LR_Arrow.WBP_CMN_LR_Arrow_C.SetVisibilityControllerBtn
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_LR_Arrow_C::SetVisibleButton(bool IsVisibility)
+void UWBP_CMN_LR_Arrow_C::SetVisibilityControllerBtn(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "SetVisibleButton");
+	Params::WBP_CMN_LR_Arrow_C_SetVisibilityControllerBtn Parms{};
 
-	Params::WBP_CMN_LR_Arrow_C_SetVisibleButton Parms{};
-
-	Parms.IsVisibility = IsVisibility;
+	Parms.InVisibility = InVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -160,10 +125,8 @@ void UWBP_CMN_LR_Arrow_C::SetVisibleButton(bool IsVisibility)
 
 void UWBP_CMN_LR_Arrow_C::IsVisibleButton(bool* ButtonVisibility_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_LR_Arrow_C", "IsVisibleButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_LR_Arrow_C", FnName));
 
 	Params::WBP_CMN_LR_Arrow_C_IsVisibleButton Parms{};
 
@@ -173,5 +136,5 @@ void UWBP_CMN_LR_Arrow_C::IsVisibleButton(bool* ButtonVisibility_0) const
 		*ButtonVisibility_0 = Parms.ButtonVisibility_0;
 }
 
-}
 
+SDK_NAMESPACE_END

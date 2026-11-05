@@ -14,8 +14,7 @@
 #include "ABPT_Menu_CockpitBase_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABPT_Menu_CockpitBase.ABPT_Menu_CockpitBase_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABPT_Menu_CockpitBase_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Menu_CockpitBase_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Menu_CockpitBase_C", FnName));
 
 	Params::ABPT_Menu_CockpitBase_C_AnimGraph Parms{};
 
@@ -45,10 +42,8 @@ void UABPT_Menu_CockpitBase_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABPT_Menu_CockpitBase_C::ExecuteUbergraph_ABPT_Menu_CockpitBase(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Menu_CockpitBase_C", "ExecuteUbergraph_ABPT_Menu_CockpitBase");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Menu_CockpitBase_C", "ExecuteUbergraph_ABPT_Menu_CockpitBase", FuncInfo);
 
 	Params::ABPT_Menu_CockpitBase_C_ExecuteUbergraph_ABPT_Menu_CockpitBase Parms{};
 
@@ -57,5 +52,5 @@ void UABPT_Menu_CockpitBase_C::ExecuteUbergraph_ABPT_Menu_CockpitBase(int32 Entr
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

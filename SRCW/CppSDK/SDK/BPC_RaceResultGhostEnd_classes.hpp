@@ -16,8 +16,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceResultGhostEnd.BPC_RaceResultGhostEnd_C
 // 0x0028 (0x0130 - 0x0108)
@@ -60,5 +59,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceResultGhostEnd_C;
 
-}
-
+SDK_NAMESPACE_END

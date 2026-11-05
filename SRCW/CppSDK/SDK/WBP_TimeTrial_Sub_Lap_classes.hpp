@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TimeTrial_Sub_Lap.WBP_TimeTrial_Sub_Lap_C
 // 0x0020 (0x0300 - 0x02E0)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TimeTrial_Sub_Lap_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "BP_StartingLights_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_StartingLights.BP_StartingLights_C.AutoModeStart
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_StartingLights_C::AutoModeStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "AutoModeStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_StartingLights_C::AutoModeStart()
 
 void ABP_StartingLights_C::BeginCountDown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "BeginCountDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void ABP_StartingLights_C::BeginCountDown()
 
 void ABP_StartingLights_C::DelayStarted__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "DelayStarted__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void ABP_StartingLights_C::DelayStarted__FinishedFunc()
 
 void ABP_StartingLights_C::DelayStarted__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "DelayStarted__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +71,8 @@ void ABP_StartingLights_C::DelayStarted__UpdateFunc()
 
 void ABP_StartingLights_C::ExecuteUbergraph_BP_StartingLights(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "ExecuteUbergraph_BP_StartingLights");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_StartingLights_C", "ExecuteUbergraph_BP_StartingLights", FuncInfo);
 
 	Params::BP_StartingLights_C_ExecuteUbergraph_BP_StartingLights Parms{};
 
@@ -101,10 +90,8 @@ void ABP_StartingLights_C::ExecuteUbergraph_BP_StartingLights(int32 EntryPoint)
 
 void ABP_StartingLights_C::NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "NoticeChangeCountDownEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_NoticeChangeCountDownEvent Parms{};
 
@@ -123,10 +110,8 @@ void ABP_StartingLights_C::NoticeChangeCountDownEvent(int32 InNewValue, int32 In
 
 void ABP_StartingLights_C::NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "NoticeChangeRaceStateEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_NoticeChangeRaceStateEvent Parms{};
 
@@ -142,10 +127,8 @@ void ABP_StartingLights_C::NoticeChangeRaceStateEvent(ERaceInfoStateType InNewSt
 
 void ABP_StartingLights_C::NoticeRaceFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "NoticeRaceFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,10 +139,8 @@ void ABP_StartingLights_C::NoticeRaceFinishEvent()
 
 void ABP_StartingLights_C::OnStarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "OnStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,10 +151,8 @@ void ABP_StartingLights_C::OnStarted()
 
 void ABP_StartingLights_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -184,10 +163,8 @@ void ABP_StartingLights_C::ReceiveBeginPlay()
 
 void ABP_StartingLights_C::ReplayWait()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "ReplayWait");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +177,8 @@ void ABP_StartingLights_C::ReplayWait()
 
 void ABP_StartingLights_C::SetCount(int32 NewCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetCount Parms{};
 
@@ -221,10 +196,8 @@ void ABP_StartingLights_C::SetCount(int32 NewCount)
 
 void ABP_StartingLights_C::SetCountAndSound(int32 NewCount, bool bSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetCountAndSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetCountAndSound Parms{};
 
@@ -242,10 +215,8 @@ void ABP_StartingLights_C::SetCountAndSound(int32 NewCount, bool bSound)
 
 void ABP_StartingLights_C::SetPlayerIndex(int32 PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetPlayerIndex Parms{};
 
@@ -262,10 +233,8 @@ void ABP_StartingLights_C::SetPlayerIndex(int32 PlayerControllerIndex)
 
 void ABP_StartingLights_C::SetRaceInfo(class UUnionRaceInfo* InRaceInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetRaceInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetRaceInfo Parms{};
 
@@ -283,10 +252,8 @@ void ABP_StartingLights_C::SetRaceInfo(class UUnionRaceInfo* InRaceInfo)
 
 void ABP_StartingLights_C::SetSignalMaterial(int32 ElementIndex, class UMaterialInterface* Material)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetSignalMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetSignalMaterial Parms{};
 
@@ -305,10 +272,8 @@ void ABP_StartingLights_C::SetSignalMaterial(int32 ElementIndex, class UMaterial
 
 void ABP_StartingLights_C::SetSignalMaterialU0(class UMaterialInstanceDynamic* Target, double Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetSignalMaterialU0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetSignalMaterialU0 Parms{};
 
@@ -326,10 +291,8 @@ void ABP_StartingLights_C::SetSignalMaterialU0(class UMaterialInstanceDynamic* T
 
 void ABP_StartingLights_C::SetSignalsMaterialU0(double Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SetSignalsMaterialU0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SetSignalsMaterialU0 Parms{};
 
@@ -344,10 +307,8 @@ void ABP_StartingLights_C::SetSignalsMaterialU0(double Value)
 
 void ABP_StartingLights_C::StartFalling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "StartFalling");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,10 +321,8 @@ void ABP_StartingLights_C::StartFalling()
 
 void ABP_StartingLights_C::StartTransformFromCameraActor(class UCameraComponent* CameraActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "StartTransformFromCameraActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_StartTransformFromCameraActor Parms{};
 
@@ -380,10 +339,8 @@ void ABP_StartingLights_C::StartTransformFromCameraActor(class UCameraComponent*
 
 void ABP_StartingLights_C::SwitchCountMaterial(int32 Count)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StartingLights_C", "SwitchCountMaterial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StartingLights_C", FnName));
 
 	Params::BP_StartingLights_C_SwitchCountMaterial Parms{};
 
@@ -392,5 +349,5 @@ void ABP_StartingLights_C::SwitchCountMaterial(int32 Count)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

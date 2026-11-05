@@ -14,8 +14,7 @@
 #include "ABP_KingBoomBoo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_KingBoomBoo.ABP_KingBoomBoo_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_KingBoomBoo_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_KingBoomBoo_C", FnName));
 
 	Params::ABP_KingBoomBoo_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_KingBoomBoo_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_KingBoomBoo_C::AnimNotify_AnimationEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "AnimNotify_AnimationEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_KingBoomBoo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_KingBoomBoo_C::AnimNotify_AnimationEnd()
 
 void UABP_KingBoomBoo_C::AnimNotify_Avoid()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "AnimNotify_Avoid");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_KingBoomBoo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_KingBoomBoo_C::AnimNotify_Avoid()
 
 void UABP_KingBoomBoo_C::AnimNotify_EndAttack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "AnimNotify_EndAttack");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_KingBoomBoo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABP_KingBoomBoo_C::AnimNotify_EndAttack()
 
 void UABP_KingBoomBoo_C::AnimNotify_StartAttack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "AnimNotify_StartAttack");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_KingBoomBoo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +90,8 @@ void UABP_KingBoomBoo_C::AnimNotify_StartAttack()
 
 void UABP_KingBoomBoo_C::ExecuteUbergraph_ABP_KingBoomBoo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_KingBoomBoo_C", "ExecuteUbergraph_ABP_KingBoomBoo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_KingBoomBoo_C", "ExecuteUbergraph_ABP_KingBoomBoo", FuncInfo);
 
 	Params::ABP_KingBoomBoo_C_ExecuteUbergraph_ABP_KingBoomBoo Parms{};
 
@@ -113,5 +100,5 @@ void UABP_KingBoomBoo_C::ExecuteUbergraph_ABP_KingBoomBoo(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

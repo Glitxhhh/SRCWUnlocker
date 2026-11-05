@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ResultLegend_Sub_NUM.WBP_ResultLegend_Sub_NUM_C
 // 0x0038 (0x0318 - 0x02E0)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ResultLegend_Sub_NUM_C;
 
-}
-
+SDK_NAMESPACE_END

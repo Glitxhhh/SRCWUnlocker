@@ -14,8 +14,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RaceCameraActor.BP_RaceCameraActor_C
 // 0x0018 (0x03D0 - 0x03B8)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RaceCameraActor_C;
 
-}
-
+SDK_NAMESPACE_END

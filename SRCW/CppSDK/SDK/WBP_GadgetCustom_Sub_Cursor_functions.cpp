@@ -14,18 +14,15 @@
 #include "WBP_GadgetCustom_Sub_Cursor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_GadgetCustom_Sub_Cursor_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::Construct()
 
 void UWBP_GadgetCustom_Sub_Cursor_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Cursor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_Cursor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_Cursor_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_Cursor", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_Cursor Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Curso
 
 void UWBP_GadgetCustom_Sub_Cursor_C::MoveDelay_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "MoveDelay_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::MoveDelay_Impl()
 
 class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Down(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "Navigation Down");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_Navigation_Down Parms{};
 
@@ -96,10 +87,8 @@ class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Down(EUINavigation Nav
 
 class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Right(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "Navigation Right");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_Navigation_Right Parms{};
 
@@ -119,10 +108,8 @@ class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Right(EUINavigation Na
 
 class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Up(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "Navigation Up");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_Navigation_Up Parms{};
 
@@ -142,10 +129,8 @@ class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::Navigation_Up(EUINavigation Navig
 
 class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::NavigationLeft(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "NavigationLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_NavigationLeft Parms{};
 
@@ -162,10 +147,8 @@ class UWidget* UWBP_GadgetCustom_Sub_Cursor_C::NavigationLeft(EUINavigation Navi
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnAccept_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnAccept_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +159,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnAccept_Impl()
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +173,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnAcceptKeyPressed()
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnAddedToFocusPath Parms{};
 
@@ -210,10 +189,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnAddedToFocusPath(const struct FFocusEvent
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -224,10 +201,20 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnBackKeyPressed()
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnFaceButtonLeftPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnFaceButtonTopPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnFaceButtonTopPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +227,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnFaceButtonLeftPressed()
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnFocus_Impl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnFocus_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnFocus_Impl Parms{};
 
@@ -260,10 +245,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnFocus_Impl(class UUnionUIButtonBase* Butt
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnFocusLost Parms{};
 
@@ -282,10 +265,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnFocusLost(const struct FFocusEvent& InFoc
 
 struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnFocusReceived Parms{};
 
@@ -298,6 +279,42 @@ struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnFocusReceived(const struct 
 }
 
 
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftShoulderPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftStickButtonPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftStickButtonPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnLeftStickButtonReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnLeftStickButtonReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnMouseButtonDown
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -307,10 +324,8 @@ struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnFocusReceived(const struct 
 
 struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnMouseButtonDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnMouseButtonDown Parms{};
 
@@ -330,16 +345,26 @@ struct FEventReply UWBP_GadgetCustom_Sub_Cursor_C::OnMouseButtonDown(const struc
 
 void UWBP_GadgetCustom_Sub_Cursor_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_OnRemovedFromFocusPath Parms{};
 
 	Parms.InFocusEvent = std::move(InFocusEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GadgetCustom_Sub_Cursor.WBP_GadgetCustom_Sub_Cursor_C.OnRightShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetCustom_Sub_Cursor_C::OnRightShoulderPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -350,10 +375,8 @@ void UWBP_GadgetCustom_Sub_Cursor_C::OnRemovedFromFocusPath(const struct FFocusE
 
 void UWBP_GadgetCustom_Sub_Cursor_C::SetPlayerControllerIndex(const int32 InPlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Cursor_C", "SetPlayerControllerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Cursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Cursor_C_SetPlayerControllerIndex Parms{};
 
@@ -362,5 +385,5 @@ void UWBP_GadgetCustom_Sub_Cursor_C::SetPlayerControllerIndex(const int32 InPlay
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

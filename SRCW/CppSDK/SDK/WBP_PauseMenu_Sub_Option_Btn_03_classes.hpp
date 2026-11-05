@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_PauseMenu_Sub_Option_Btn_03.WBP_PauseMenu_Sub_Option_Btn_03_C
 // 0x0058 (0x0338 - 0x02E0)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_PauseMenu_Sub_Option_Btn_03_C;
 
-}
-
+SDK_NAMESPACE_END

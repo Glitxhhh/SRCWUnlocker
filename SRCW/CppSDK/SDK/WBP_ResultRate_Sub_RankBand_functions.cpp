@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_Sub_RankBand_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RankBand.WBP_ResultRate_Sub_RankBand_C.ExecuteUbergraph_WBP_ResultRate_Sub_RankBand
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_Sub_RankBand_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankBand(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankBand");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_Sub_RankBand_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankBand", FuncInfo);
 
 	Params::WBP_ResultRate_Sub_RankBand_C_ExecuteUbergraph_WBP_ResultRate_Sub_RankBand Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_ResultRate_Sub_RankBand_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankBan
 
 void UWBP_ResultRate_Sub_RankBand_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankBand_C_PreConstruct Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_ResultRate_Sub_RankBand_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_ResultRate_Sub_RankBand_C::RateNotice(double Current)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "RateNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankBand_C_RateNotice Parms{};
 
@@ -82,10 +75,8 @@ void UWBP_ResultRate_Sub_RankBand_C::RateNotice(double Current)
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -96,10 +87,8 @@ void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +99,8 @@ void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,13 +135,11 @@ void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub
 
 void UWBP_ResultRate_Sub_RankBand_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankBand_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankBand_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankBand_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

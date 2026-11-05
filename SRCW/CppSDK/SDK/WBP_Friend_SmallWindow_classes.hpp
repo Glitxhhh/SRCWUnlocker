@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_SmallWindow.WBP_Friend_SmallWindow_C
 // 0x0060 (0x0438 - 0x03D8)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_SmallWindow_C;
 
-}
-
+SDK_NAMESPACE_END

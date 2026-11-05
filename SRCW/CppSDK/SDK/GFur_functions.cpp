@@ -13,8 +13,7 @@
 #include "GFur_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GFur.GFurComponent.RegenerateFur
 // (Final, Native, Public, BlueprintCallable)
@@ -34,5 +33,5 @@ void UGFurComponent::RegenerateFur()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

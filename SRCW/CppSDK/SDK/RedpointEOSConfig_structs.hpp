@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum RedpointEOSConfig.EDedicatedServersDistributionMode
 // NumValues: 0x0004
@@ -76,5 +75,4 @@ enum class EStatTypingRule : uint8
 	EStatTypingRule_MAX                      = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

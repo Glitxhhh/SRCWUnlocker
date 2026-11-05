@@ -10,19 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
+#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionLib_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C
-// 0x0040 (0x0178 - 0x0138)
+// 0x0048 (0x0180 - 0x0138)
 class UBPC_MenuStateTopMenu_C final : public UMenuSequenceStateBase
 {
 public:
@@ -34,6 +33,7 @@ public:
 	TArray<struct FRewardAchievementData>         RewardAchievementDataArray;                        // 0x0158(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UUnionUIPopupWindowBase*                PopupWindow;                                       // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUnionUIPopupWindowBase*                RewardWindow;                                      // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EDriverId                                     TempDriverId;                                      // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetupRacerConfig();
@@ -74,5 +74,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MenuStateTopMenu_C;
 
-}
-
+SDK_NAMESPACE_END

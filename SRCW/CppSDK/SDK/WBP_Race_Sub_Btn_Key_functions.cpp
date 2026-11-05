@@ -14,8 +14,7 @@
 #include "WBP_Race_Sub_Btn_Key_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.ExecuteUbergraph_WBP_Race_Sub_Btn_Key
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Race_Sub_Btn_Key_C::ExecuteUbergraph_WBP_Race_Sub_Btn_Key(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "ExecuteUbergraph_WBP_Race_Sub_Btn_Key");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Race_Sub_Btn_Key_C", "ExecuteUbergraph_WBP_Race_Sub_Btn_Key", FuncInfo);
 
 	Params::WBP_Race_Sub_Btn_Key_C_ExecuteUbergraph_WBP_Race_Sub_Btn_Key Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Race_Sub_Btn_Key_C::ExecuteUbergraph_WBP_Race_Sub_Btn_Key(int32 EntryP
 
 void UWBP_Race_Sub_Btn_Key_C::OnAccelInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnAccelInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnAccelInput Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnAccelInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnBrakeInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnBrakeInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnBrakeInput Parms{};
 
@@ -82,10 +75,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnBrakeInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnDriftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnDriftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -96,10 +87,32 @@ void UWBP_Race_Sub_Btn_Key_C::OnDriftPressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnDriftReleased()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnDriftReleased");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.OnDuelUltimatePressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Race_Sub_Btn_Key_C::OnDuelUltimatePressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C.OnDuelUltimateReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Race_Sub_Btn_Key_C::OnDuelUltimateReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +123,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnDriftReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnEmotePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnEmotePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +135,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnEmotePressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnEmoteReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnEmoteReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +147,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnEmoteReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnHornPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnHornPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +159,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnHornPressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnHornReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnHornReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +171,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnHornReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnPausePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnPausePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +183,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnPausePressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnPauseReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnPauseReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +197,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnPauseReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnPitchInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnPitchInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnPitchInput Parms{};
 
@@ -214,10 +213,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnPitchInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnRearViewPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnRearViewPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -228,10 +225,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnRearViewPressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnRearViewReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnRearViewReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -244,10 +239,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnRearViewReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnSlimeCancelXInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnSlimeCancelXInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnSlimeCancelXInput Parms{};
 
@@ -264,10 +257,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnSlimeCancelXInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnSlimeCancelYInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnSlimeCancelYInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnSlimeCancelYInput Parms{};
 
@@ -284,10 +275,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnSlimeCancelYInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnSteerInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnSteerInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnSteerInput Parms{};
 
@@ -302,10 +291,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnSteerInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnTradeItemPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTradeItemPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -316,10 +303,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTradeItemPressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnTradeItemReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTradeItemReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -332,10 +317,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTradeItemReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::OnTrickX2Input(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTrickX2Input");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnTrickX2Input Parms{};
 
@@ -352,10 +335,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTrickX2Input(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnTrickXInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTrickXInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnTrickXInput Parms{};
 
@@ -372,10 +353,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTrickXInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnTrickY2Input(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTrickY2Input");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnTrickY2Input Parms{};
 
@@ -392,10 +371,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTrickY2Input(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnTrickYInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnTrickYInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_OnTrickYInput Parms{};
 
@@ -410,10 +387,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnTrickYInput(float InValue)
 
 void UWBP_Race_Sub_Btn_Key_C::OnUseItemPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnUseItemPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -424,10 +399,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnUseItemPressed()
 
 void UWBP_Race_Sub_Btn_Key_C::OnUseItemReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "OnUseItemReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -440,10 +413,8 @@ void UWBP_Race_Sub_Btn_Key_C::OnUseItemReleased()
 
 void UWBP_Race_Sub_Btn_Key_C::SetButtonState(int32 InState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "SetButtonState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_SetButtonState Parms{};
 
@@ -461,10 +432,8 @@ void UWBP_Race_Sub_Btn_Key_C::SetButtonState(int32 InState)
 
 void UWBP_Race_Sub_Btn_Key_C::SetKey(const struct FKey& InKey, int32 PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_Sub_Btn_Key_C", "SetKey");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_Sub_Btn_Key_C", FnName));
 
 	Params::WBP_Race_Sub_Btn_Key_C_SetKey Parms{};
 
@@ -474,5 +443,5 @@ void UWBP_Race_Sub_Btn_Key_C::SetKey(const struct FKey& InKey, int32 PlayerContr
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

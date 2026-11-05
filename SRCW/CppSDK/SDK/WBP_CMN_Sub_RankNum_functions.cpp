@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_RankNum_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_RankNum.WBP_CMN_Sub_RankNum_C.ExecuteUbergraph_WBP_CMN_Sub_RankNum
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_RankNum_C::ExecuteUbergraph_WBP_CMN_Sub_RankNum(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_RankNum_C", "ExecuteUbergraph_WBP_CMN_Sub_RankNum");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_RankNum_C", "ExecuteUbergraph_WBP_CMN_Sub_RankNum", FuncInfo);
 
 	Params::WBP_CMN_Sub_RankNum_C_ExecuteUbergraph_WBP_CMN_Sub_RankNum Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_Sub_RankNum_C::ExecuteUbergraph_WBP_CMN_Sub_RankNum(int32 EntryPoi
 
 void UWBP_CMN_Sub_RankNum_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_RankNum_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_RankNum_C", FnName));
 
 	Params::WBP_CMN_Sub_RankNum_C_PreConstruct Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_CMN_Sub_RankNum_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CMN_Sub_RankNum_C::SetNum(int32 Num_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_RankNum_C", "SetNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_RankNum_C", FnName));
 
 	Params::WBP_CMN_Sub_RankNum_C_SetNum Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_CMN_Sub_RankNum_C::SetNum(int32 Num_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

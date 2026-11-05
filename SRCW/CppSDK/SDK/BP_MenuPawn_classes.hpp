@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuPawn.BP_MenuPawn_C
 // 0x0018 (0x0330 - 0x0318)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MenuPawn_C;
 
-}
-
+SDK_NAMESPACE_END

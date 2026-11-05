@@ -14,18 +14,15 @@
 #include "WBP_System_Title_Communication_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Title_Communication.WBP_System_Title_Communication_C.InvisibleText
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_System_Title_Communication_C::InvisibleText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Title_Communication_C", "InvisibleText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Title_Communication_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_System_Title_Communication_C::InvisibleText()
 
 void UWBP_System_Title_Communication_C::PlayLoadAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Title_Communication_C", "PlayLoadAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Title_Communication_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_System_Title_Communication_C::PlayLoadAnimation()
 
 void UWBP_System_Title_Communication_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Title_Communication_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Title_Communication_C", FnName));
 
 	Params::WBP_System_Title_Communication_C_SetText Parms{};
 
@@ -64,5 +57,5 @@ void UWBP_System_Title_Communication_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

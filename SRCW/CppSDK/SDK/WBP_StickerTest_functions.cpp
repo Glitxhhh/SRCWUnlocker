@@ -14,18 +14,15 @@
 #include "WBP_StickerTest_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_StickerTest.WBP_StickerTest_C.PlayGuideIn
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_StickerTest_C::PlayGuideIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StickerTest_C", "PlayGuideIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_StickerTest_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_StickerTest_C::PlayGuideIn()
 
 void UWBP_StickerTest_C::PlayGuideOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StickerTest_C", "PlayGuideOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_StickerTest_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void UWBP_StickerTest_C::PlayGuideOut()
 
 void UWBP_StickerTest_C::SetUvPreviewMid(class UMaterialInstanceDynamic* InUvPreviewMid, bool bInFlipUv)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StickerTest_C", "SetUvPreviewMid");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_StickerTest_C", FnName));
 
 	Params::WBP_StickerTest_C_SetUvPreviewMid Parms{};
 
@@ -74,10 +67,8 @@ void UWBP_StickerTest_C::SetUvPreviewMid(class UMaterialInstanceDynamic* InUvPre
 
 void UWBP_StickerTest_C::SetWarningVisibility(bool InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StickerTest_C", "SetWarningVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_StickerTest_C", FnName));
 
 	Params::WBP_StickerTest_C_SetWarningVisibility Parms{};
 
@@ -92,13 +83,11 @@ void UWBP_StickerTest_C::SetWarningVisibility(bool InVisibility)
 
 void UWBP_StickerTest_C::ToggleUvPreviewMid()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StickerTest_C", "ToggleUvPreviewMid");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_StickerTest_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

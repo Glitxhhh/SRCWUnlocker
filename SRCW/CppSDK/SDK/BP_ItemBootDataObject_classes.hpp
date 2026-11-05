@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBootDataObject.BP_ItemBootDataObject_C
 // 0x0008 (0x0338 - 0x0330)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemBootDataObject_C;
 
-}
-
+SDK_NAMESPACE_END

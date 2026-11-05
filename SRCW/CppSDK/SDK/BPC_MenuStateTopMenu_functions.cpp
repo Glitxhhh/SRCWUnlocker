@@ -14,18 +14,15 @@
 #include "BPC_MenuStateTopMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MenuStateTopMenu.BPC_MenuStateTopMenu_C.SetupRacerConfig
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MenuStateTopMenu_C::SetupRacerConfig()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetupRacerConfig");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +36,8 @@ void UBPC_MenuStateTopMenu_C::SetupRacerConfig()
 
 void UBPC_MenuStateTopMenu_C::ConvertDriverIdToIndex(EDriverId ID, int32* Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ConvertDriverIdToIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_ConvertDriverIdToIndex Parms{};
 
@@ -63,10 +58,8 @@ void UBPC_MenuStateTopMenu_C::ConvertDriverIdToIndex(EDriverId ID, int32* Index_
 
 void UBPC_MenuStateTopMenu_C::ConvertIndexToDriverId(int32 Index_0, EDriverId* ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ConvertIndexToDriverId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_ConvertIndexToDriverId Parms{};
 
@@ -84,10 +77,8 @@ void UBPC_MenuStateTopMenu_C::ConvertIndexToDriverId(int32 Index_0, EDriverId* I
 
 void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "CreateRewardGetDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +89,8 @@ void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplay()
 
 void UBPC_MenuStateTopMenu_C::OnRewardDisplayEnd_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEnd_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +101,8 @@ void UBPC_MenuStateTopMenu_C::OnRewardDisplayEnd_Impl()
 
 void UBPC_MenuStateTopMenu_C::SetRewardDisplayParam()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "SetRewardDisplayParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UBPC_MenuStateTopMenu_C::SetRewardDisplayParam()
 
 void UBPC_MenuStateTopMenu_C::ClearRewardDisplayRequest()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ClearRewardDisplayRequest");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +129,8 @@ void UBPC_MenuStateTopMenu_C::ClearRewardDisplayRequest()
 
 void UBPC_MenuStateTopMenu_C::OnUISceneDecisionEvent_Impl(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUISceneDecisionEvent_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_OnUISceneDecisionEvent_Impl Parms{};
 
@@ -164,10 +147,8 @@ void UBPC_MenuStateTopMenu_C::OnUISceneDecisionEvent_Impl(class UUnionUIButtonBa
 
 void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplayConfirmWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "CreateRewardGetDisplayConfirmWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +161,8 @@ void UBPC_MenuStateTopMenu_C::CreateRewardGetDisplayConfirmWindow()
 
 void UBPC_MenuStateTopMenu_C::OnRewardDisplayEndSaveComplete(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnRewardDisplayEndSaveComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_OnRewardDisplayEndSaveComplete Parms{};
 
@@ -198,10 +177,8 @@ void UBPC_MenuStateTopMenu_C::OnRewardDisplayEndSaveComplete(ESaveDataStatus Sta
 
 void UBPC_MenuStateTopMenu_C::StartRewardGetDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "StartRewardGetDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -212,10 +189,8 @@ void UBPC_MenuStateTopMenu_C::StartRewardGetDisplay()
 
 void UBPC_MenuStateTopMenu_C::EndRewardGetDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "EndRewardGetDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,10 +201,8 @@ void UBPC_MenuStateTopMenu_C::EndRewardGetDisplay()
 
 void UBPC_MenuStateTopMenu_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -242,10 +215,8 @@ void UBPC_MenuStateTopMenu_C::OnInitState()
 
 void UBPC_MenuStateTopMenu_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_OnUpdateState Parms{};
 
@@ -260,10 +231,8 @@ void UBPC_MenuStateTopMenu_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_MenuStateTopMenu_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -278,10 +247,8 @@ void UBPC_MenuStateTopMenu_C::OnExitState()
 
 void UBPC_MenuStateTopMenu_C::OnPopupOK(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnPopupOK");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_OnPopupOK Parms{};
 
@@ -298,10 +265,8 @@ void UBPC_MenuStateTopMenu_C::OnPopupOK(class UUnionUIButtonBase* Button, int32 
 
 void UBPC_MenuStateTopMenu_C::NgCreatePopupWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "NgCreatePopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -314,10 +279,8 @@ void UBPC_MenuStateTopMenu_C::NgCreatePopupWindow()
 
 void UBPC_MenuStateTopMenu_C::EventFinishedFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "EventFinishedFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_EventFinishedFade Parms{};
 
@@ -335,10 +298,8 @@ void UBPC_MenuStateTopMenu_C::EventFinishedFade(EUnionUIFadeDirection FadeDirect
 
 void UBPC_MenuStateTopMenu_C::OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPlayMode, ETopMenuGameMode TopMenuGameMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnFinishedTopMenuEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	Params::BPC_MenuStateTopMenu_C_OnFinishedTopMenuEvent Parms{};
 
@@ -354,10 +315,8 @@ void UBPC_MenuStateTopMenu_C::OnFinishedTopMenuEvent(ETopMenuPlayMode TopMenuPla
 
 void UBPC_MenuStateTopMenu_C::OnBackEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "OnBackEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -370,10 +329,8 @@ void UBPC_MenuStateTopMenu_C::OnBackEvent()
 
 void UBPC_MenuStateTopMenu_C::ExecuteUbergraph_BPC_MenuStateTopMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTopMenu_C", "ExecuteUbergraph_BPC_MenuStateTopMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MenuStateTopMenu_C", "ExecuteUbergraph_BPC_MenuStateTopMenu", FuncInfo);
 
 	Params::BPC_MenuStateTopMenu_C_ExecuteUbergraph_BPC_MenuStateTopMenu Parms{};
 
@@ -382,5 +339,5 @@ void UBPC_MenuStateTopMenu_C::ExecuteUbergraph_BPC_MenuStateTopMenu(int32 EntryP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

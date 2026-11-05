@@ -14,8 +14,7 @@
 #include "WBP_LegendInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_LegendInfo.WBP_LegendInfo_C.ExecuteUbergraph_WBP_LegendInfo
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_LegendInfo_C::ExecuteUbergraph_WBP_LegendInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "ExecuteUbergraph_WBP_LegendInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_LegendInfo_C", "ExecuteUbergraph_WBP_LegendInfo", FuncInfo);
 
 	Params::WBP_LegendInfo_C_ExecuteUbergraph_WBP_LegendInfo Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_LegendInfo_C::ExecuteUbergraph_WBP_LegendInfo(int32 EntryPoint)
 
 void UWBP_LegendInfo_C::FireFocusEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "FireFocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_LegendInfo_C::FireFocusEvent()
 
 void UWBP_LegendInfo_C::FireUnfocusEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "FireUnfocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_LegendInfo_C::FireUnfocusEvent()
 
 void UWBP_LegendInfo_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_LegendInfo_C::OnInitialized()
 
 void UWBP_LegendInfo_C::SetCurrentRateNumber()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "SetCurrentRateNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_LegendInfo_C::SetCurrentRateNumber()
 
 void UWBP_LegendInfo_C::SetInfoDispData(const struct FLegendCompeInfoDispData& InDispData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_C", "SetInfoDispData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_C", FnName));
 
 	Params::WBP_LegendInfo_C_SetInfoDispData Parms{};
 
@@ -112,5 +99,5 @@ void UWBP_LegendInfo_C::SetInfoDispData(const struct FLegendCompeInfoDispData& I
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

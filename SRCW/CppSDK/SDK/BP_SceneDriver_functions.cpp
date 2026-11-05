@@ -14,8 +14,7 @@
 #include "BP_SceneDriver_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_SceneDriver.BP_SceneDriver_C.ExecuteUbergraph_BP_SceneDriver
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_SceneDriver_C::ExecuteUbergraph_BP_SceneDriver(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "ExecuteUbergraph_BP_SceneDriver");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_SceneDriver_C", "ExecuteUbergraph_BP_SceneDriver", FuncInfo);
 
 	Params::BP_SceneDriver_C_ExecuteUbergraph_BP_SceneDriver Parms{};
 
@@ -42,10 +39,8 @@ void ABP_SceneDriver_C::ExecuteUbergraph_BP_SceneDriver(int32 EntryPoint)
 
 void ABP_SceneDriver_C::OnAssetLoaded()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "OnAssetLoaded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void ABP_SceneDriver_C::OnAssetLoaded()
 
 void ABP_SceneDriver_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void ABP_SceneDriver_C::ReceiveBeginPlay()
 
 void ABP_SceneDriver_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	Params::BP_SceneDriver_C_ReceiveTick Parms{};
 
@@ -92,10 +83,8 @@ void ABP_SceneDriver_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_SceneDriver_C::SetEnableGFur(bool Enable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "SetEnableGFur");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	Params::BP_SceneDriver_C_SetEnableGFur Parms{};
 
@@ -112,10 +101,8 @@ void ABP_SceneDriver_C::SetEnableGFur(bool Enable)
 
 void ABP_SceneDriver_C::SetupCharacterById(EDriverId In_DriverId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "SetupCharacterById");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	Params::BP_SceneDriver_C_SetupCharacterById Parms{};
 
@@ -130,10 +117,8 @@ void ABP_SceneDriver_C::SetupCharacterById(EDriverId In_DriverId)
 
 void ABP_SceneDriver_C::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "UserConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +132,8 @@ void ABP_SceneDriver_C::UserConstructionScript()
 
 class USkeletalMesh* ABP_SceneDriver_C::GetRivalMesh(EDriverId In_DriverId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SceneDriver_C", "GetRivalMesh");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SceneDriver_C", FnName));
 
 	Params::BP_SceneDriver_C_GetRivalMesh Parms{};
 
@@ -161,5 +144,5 @@ class USkeletalMesh* ABP_SceneDriver_C::GetRivalMesh(EDriverId In_DriverId) cons
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

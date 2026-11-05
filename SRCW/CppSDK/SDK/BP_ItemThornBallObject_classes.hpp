@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemThornBallObject.BP_ItemThornBallObject_C
 // 0x0010 (0x0780 - 0x0770)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemThornBallObject_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn.WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C.ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::ExecuteUbergraph_
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C_PreConstruct Parms{};
 
@@ -67,10 +62,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::PreConstruct(bool
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::SetButton(bool bRequirePlusButton, bool bIsSimultaneously, TArray<int32>& SwitchIndex, TArray<int32>& ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", "SetButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C_SetButton Parms{};
 
@@ -93,10 +86,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::SetButton(bool bR
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::SetButtonText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C_SetButtonText Parms{};
 
@@ -105,5 +96,5 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C::SetButtonText(con
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

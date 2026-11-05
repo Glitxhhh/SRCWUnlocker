@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_PresetPaint_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_PresetPaint.WBP_MachineCustom_Sub_PresetPaint_C.BndEvt__WBP_MachineCustom_Sub_PresetPaint_WBP_CMN_LR_Arrow_L_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::BndEvt__WBP_MachineCustom_Sub_PresetPaint_WBP_CMN_LR_Arrow_L_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "BndEvt__WBP_MachineCustom_Sub_PresetPaint_WBP_CMN_LR_Arrow_L_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::BndEvt__WBP_MachineCustom_Sub_PresetP
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::BndEvt__WBP_MachineCustom_Sub_PresetPaint_WBP_CMN_LR_Arrow_R_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "BndEvt__WBP_MachineCustom_Sub_PresetPaint_WBP_CMN_LR_Arrow_R_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::BndEvt__WBP_MachineCustom_Sub_PresetP
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -68,10 +61,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Construct()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnCancel Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnCancel(class UUnionUIButtonBa
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnDecision Parms{};
 
@@ -116,10 +105,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnDecision(class UUnionUIButton
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnFocus(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnFocus Parms{};
 
@@ -140,10 +127,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnFocus(class UUnionUIButtonBas
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnLShoulder(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnLShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnLShoulder Parms{};
 
@@ -164,10 +149,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnLShoulder(class UUnionUIButto
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnRShoulder(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnRShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnRShoulder Parms{};
 
@@ -189,10 +172,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnRShoulder(class UUnionUIButto
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnSideNavigationCustom(EUnionUIControlDir Direction, class UUnionUIButtonBase* Button, int32 RowIndex, int32 ColumnIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Event_OnSideNavigationCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Event_OnSideNavigationCustom Parms{};
 
@@ -212,10 +193,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Event_OnSideNavigationCustom(EUnionUI
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_PresetPaint_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_ExecuteUbergraph_WBP_MachineCustom_Sub_PresetPaint Parms{};
 
@@ -234,10 +213,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::ExecuteUbergraph_WBP_MachineCustom_Su
 
 struct FEventReply UWBP_MachineCustom_Sub_PresetPaint_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_OnFocusReceived Parms{};
 
@@ -258,10 +235,8 @@ struct FEventReply UWBP_MachineCustom_Sub_PresetPaint_C::OnFocusReceived(const s
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_OnFocusReceivedInternal Parms{};
 
@@ -277,10 +252,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::OnFocusReceivedInternal(const struct 
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationLeftIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "PlayAnimationLeftIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -291,10 +264,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationLeftIn()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "PlayAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,10 +276,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationLoop()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationRightIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "PlayAnimationRightIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -319,10 +288,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::PlayAnimationRightIn()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::PlaySETab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "PlaySETab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +302,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::PlaySETab()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetEnableShoulderItem(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetEnableShoulderItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetEnableShoulderItem Parms{};
 
@@ -355,10 +320,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetEnableShoulderItem(bool IsEnable)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusItem(int32 InItemIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetFocusItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetFocusItem Parms{};
 
@@ -375,10 +338,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusItem(int32 InItemIndex)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusToItemInNextPage(int32 InRowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetFocusToItemInNextPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetFocusToItemInNextPage Parms{};
 
@@ -395,10 +356,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusToItemInNextPage(int32 InRowI
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusToItemInPrevPage(int32 InRowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetFocusToItemInPrevPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetFocusToItemInPrevPage Parms{};
 
@@ -413,10 +372,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetFocusToItemInPrevPage(int32 InRowI
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetIndices()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetIndices");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -429,10 +386,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetIndices()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetIsGamepadKey(bool Is_Game_Pad_Key)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetIsGamepadKey");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetIsGamepadKey Parms{};
 
@@ -450,10 +405,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetIsGamepadKey(bool Is_Game_Pad_Key)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetPageItems(int32 InPageDataIndex, int32 InPageIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetPageItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetPageItems Parms{};
 
@@ -472,10 +425,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetPageItems(int32 InPageDataIndex, i
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetPagePlayerIndex(int32 InPlayerIndex, int32 InPageIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetPagePlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetPagePlayerIndex Parms{};
 
@@ -493,10 +444,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetPagePlayerIndex(int32 InPlayerInde
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::Setup(TArray<struct FST_ColorPresetSelectPageItemData>& InItemDataList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_Setup Parms{};
 
@@ -513,10 +462,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::Setup(TArray<struct FST_ColorPresetSe
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetupArrows()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetupArrows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -527,10 +474,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetupArrows()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -541,10 +486,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetupPage()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetupScrollPointBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetupScrollPointBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -557,10 +500,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetupScrollPointBox()
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SetVisibleArrowButton(bool IsVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SetVisibleArrowButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SetVisibleArrowButton Parms{};
 
@@ -577,10 +518,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SetVisibleArrowButton(bool IsVisibili
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SwitchPageToNext(int32 RowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SwitchPageToNext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SwitchPageToNext Parms{};
 
@@ -597,10 +536,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SwitchPageToNext(int32 RowIndex)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::SwitchPageToPrev(int32 RowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "SwitchPageToPrev");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_SwitchPageToPrev Parms{};
 
@@ -615,10 +552,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::SwitchPageToPrev(int32 RowIndex)
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::WidgetAnimationEvt_PresetWindow_Left_In_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "WidgetAnimationEvt_PresetWindow_Left_In_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -629,10 +564,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::WidgetAnimationEvt_PresetWindow_Left_
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::WidgetAnimationEvt_PresetWindow_Right_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "WidgetAnimationEvt_PresetWindow_Right_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -646,10 +579,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::WidgetAnimationEvt_PresetWindow_Right
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::GetItem(int32 InItemIndex, class UWBP_MachinrCustom_Sub_Paint_PresetIcon_C** OutItem) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "GetItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_GetItem Parms{};
 
@@ -669,10 +600,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::GetItem(int32 InItemIndex, class UWBP
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::GetPage(TArray<class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C*>* OutList) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "GetPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_GetPage Parms{};
 
@@ -691,10 +620,8 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::GetPage(TArray<class UWBP_MachinrCust
 
 void UWBP_MachineCustom_Sub_PresetPaint_C::GetPageForIndex(int32 InIndex, class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C** Output) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_PresetPaint_C", "GetPageForIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_PresetPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_PresetPaint_C_GetPageForIndex Parms{};
 
@@ -706,5 +633,5 @@ void UWBP_MachineCustom_Sub_PresetPaint_C::GetPageForIndex(int32 InIndex, class 
 		*Output = Parms.Output;
 }
 
-}
 
+SDK_NAMESPACE_END

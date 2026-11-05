@@ -14,8 +14,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct CriWareMovieScenes.MovieSceneAtomSectionTemplate
 // 0x0008 (0x0028 - 0x0020)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneManaSectionTemplate;
 
-}
-
+SDK_NAMESPACE_END

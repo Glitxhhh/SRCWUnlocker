@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CourseSelect_Sub_TimeTrialIcon.WBP_CourseSelect_Sub_TimeTrialIcon_C
 // 0x0080 (0x06D8 - 0x0658)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CourseSelect_Sub_TimeTrialIcon_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_Friend_SubMenu_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_SubMenu_Btn.WBP_Friend_SubMenu_Btn_C.Check Release Response InputType
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_SubMenu_Btn_C::Check_Release_Response_InputType(bool* bOutReleaseResponseInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "Check Release Response InputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_Check_Release_Response_InputType Parms{};
 
@@ -43,10 +40,8 @@ void UWBP_Friend_SubMenu_Btn_C::Check_Release_Response_InputType(bool* bOutRelea
 
 void UWBP_Friend_SubMenu_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,10 +54,8 @@ void UWBP_Friend_SubMenu_Btn_C::Construct()
 
 void UWBP_Friend_SubMenu_Btn_C::ExecuteUbergraph_WBP_Friend_SubMenu_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "ExecuteUbergraph_WBP_Friend_SubMenu_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_SubMenu_Btn_C", "ExecuteUbergraph_WBP_Friend_SubMenu_Btn", FuncInfo);
 
 	Params::WBP_Friend_SubMenu_Btn_C_ExecuteUbergraph_WBP_Friend_SubMenu_Btn Parms{};
 
@@ -77,10 +70,8 @@ void UWBP_Friend_SubMenu_Btn_C::ExecuteUbergraph_WBP_Friend_SubMenu_Btn(int32 En
 
 void UWBP_Friend_SubMenu_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +82,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnAcceptKeyPressed()
 
 void UWBP_Friend_SubMenu_Btn_C::OnAcceptKeyPressedImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnAcceptKeyPressedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +96,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnAcceptKeyPressedImpl()
 
 void UWBP_Friend_SubMenu_Btn_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_OnAddedToFocusPath Parms{};
 
@@ -125,10 +112,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnAddedToFocusPath(const struct FFocusEvent& InF
 
 void UWBP_Friend_SubMenu_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +124,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnBackKeyPressed()
 
 void UWBP_Friend_SubMenu_Btn_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +138,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnFocusAnimStart()
 
 void UWBP_Friend_SubMenu_Btn_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnFocusImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_OnFocusImpl Parms{};
 
@@ -175,10 +156,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 
 void UWBP_Friend_SubMenu_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_OnFocusLost Parms{};
 
@@ -197,10 +176,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEve
 
 struct FEventReply UWBP_Friend_SubMenu_Btn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_OnFocusReceived Parms{};
 
@@ -220,10 +197,8 @@ struct FEventReply UWBP_Friend_SubMenu_Btn_C::OnFocusReceived(const struct FGeom
 
 void UWBP_Friend_SubMenu_Btn_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_OnRemovedFromFocusPath Parms{};
 
@@ -238,10 +213,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnRemovedFromFocusPath(const struct FFocusEvent&
 
 void UWBP_Friend_SubMenu_Btn_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,10 +227,8 @@ void UWBP_Friend_SubMenu_Btn_C::OnUnFocusAnimStart()
 
 void UWBP_Friend_SubMenu_Btn_C::SetButtonDetailText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetButtonDetailText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetButtonDetailText Parms{};
 
@@ -274,10 +245,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetButtonDetailText(const class FText& InText)
 
 void UWBP_Friend_SubMenu_Btn_C::SetButtonExplansion(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetButtonExplansion");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetButtonExplansion Parms{};
 
@@ -294,10 +263,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetButtonExplansion(bool bInEnable)
 
 void UWBP_Friend_SubMenu_Btn_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetButtonFocusType Parms{};
 
@@ -314,10 +281,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetButtonFocusType(EButtonFocusType InButtonFocu
 
 void UWBP_Friend_SubMenu_Btn_C::SetButtonText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetButtonText Parms{};
 
@@ -334,10 +299,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetButtonText(const class FText& InText)
 
 void UWBP_Friend_SubMenu_Btn_C::SetCursorTextureVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetCursorTextureVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetCursorTextureVisible Parms{};
 
@@ -354,10 +317,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetCursorTextureVisible(bool bInVisible)
 
 void UWBP_Friend_SubMenu_Btn_C::SetDecisionEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetDecisionEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetDecisionEnable Parms{};
 
@@ -374,10 +335,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetDecisionEnable(bool bInEnable)
 
 void UWBP_Friend_SubMenu_Btn_C::SetFocusDisplay(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetFocusDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetFocusDisplay Parms{};
 
@@ -394,10 +353,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetFocusDisplay(bool bInEnable)
 
 void UWBP_Friend_SubMenu_Btn_C::SetMouseInteractionVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetMouseInteractionVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetMouseInteractionVisible Parms{};
 
@@ -414,10 +371,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetMouseInteractionVisible(bool bInVisible)
 
 void UWBP_Friend_SubMenu_Btn_C::SetPlayDecisionSe(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetPlayDecisionSe");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetPlayDecisionSe Parms{};
 
@@ -434,10 +389,8 @@ void UWBP_Friend_SubMenu_Btn_C::SetPlayDecisionSe(bool bInEnable)
 
 void UWBP_Friend_SubMenu_Btn_C::SetWidgetFocus(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SubMenu_Btn_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SubMenu_Btn_C", FnName));
 
 	Params::WBP_Friend_SubMenu_Btn_C_SetWidgetFocus Parms{};
 
@@ -446,5 +399,5 @@ void UWBP_Friend_SubMenu_Btn_C::SetWidgetFocus(bool bInPlayFocusSound)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

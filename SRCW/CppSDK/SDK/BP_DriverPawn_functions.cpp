@@ -14,8 +14,7 @@
 #include "BP_DriverPawn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DriverPawn.BP_DriverPawn_C.BindCurvesMaterialPlayer
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void ABP_DriverPawn_C::BindCurvesMaterialPlayer(class UCurveTable* In_CurveTable, ERacerMaterialAnimation In_Enum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "BindCurvesMaterialPlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_BindCurvesMaterialPlayer Parms{};
 
@@ -44,10 +41,8 @@ void ABP_DriverPawn_C::BindCurvesMaterialPlayer(class UCurveTable* In_CurveTable
 
 void ABP_DriverPawn_C::ClearItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "ClearItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +55,8 @@ void ABP_DriverPawn_C::ClearItem()
 
 void ABP_DriverPawn_C::CreateDriver(EDriverId ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "CreateDriver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_CreateDriver Parms{};
 
@@ -80,10 +73,8 @@ void ABP_DriverPawn_C::CreateDriver(EDriverId ID)
 
 void ABP_DriverPawn_C::ExecuteUbergraph_BP_DriverPawn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "ExecuteUbergraph_BP_DriverPawn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_DriverPawn_C", "ExecuteUbergraph_BP_DriverPawn", FuncInfo);
 
 	Params::BP_DriverPawn_C_ExecuteUbergraph_BP_DriverPawn Parms{};
 
@@ -100,10 +91,8 @@ void ABP_DriverPawn_C::ExecuteUbergraph_BP_DriverPawn(int32 EntryPoint)
 
 void ABP_DriverPawn_C::LoadSkeletalMesh(EDriverId In_DriverId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "LoadSkeletalMesh");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_LoadSkeletalMesh Parms{};
 
@@ -120,10 +109,8 @@ void ABP_DriverPawn_C::LoadSkeletalMesh(EDriverId In_DriverId)
 
 void ABP_DriverPawn_C::OnDestroyed_Driver(class AActor* DestroyedActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "OnDestroyed_Driver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_OnDestroyed_Driver Parms{};
 
@@ -140,10 +127,8 @@ void ABP_DriverPawn_C::OnDestroyed_Driver(class AActor* DestroyedActor)
 
 void ABP_DriverPawn_C::PlayHoldItemDirectionEffect(EItemThrowDirection In_ItemThrowDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "PlayHoldItemDirectionEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_PlayHoldItemDirectionEffect Parms{};
 
@@ -158,10 +143,8 @@ void ABP_DriverPawn_C::PlayHoldItemDirectionEffect(EItemThrowDirection In_ItemTh
 
 void ABP_DriverPawn_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +157,8 @@ void ABP_DriverPawn_C::ReceiveBeginPlay()
 
 void ABP_DriverPawn_C::SetAnimClass(const class UClass* NewClass)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetAnimClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetAnimClass Parms{};
 
@@ -194,10 +175,8 @@ void ABP_DriverPawn_C::SetAnimClass(const class UClass* NewClass)
 
 void ABP_DriverPawn_C::SetEnableGFur(bool Enable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetEnableGFur");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetEnableGFur Parms{};
 
@@ -215,10 +194,8 @@ void ABP_DriverPawn_C::SetEnableGFur(bool Enable)
 
 void ABP_DriverPawn_C::SetItemParam(const struct FHoldItemCreateParam& InHoldItemParam, bool* Return)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetItemParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetItemParam Parms{};
 
@@ -240,10 +217,8 @@ void ABP_DriverPawn_C::SetItemParam(const struct FHoldItemCreateParam& InHoldIte
 
 void ABP_DriverPawn_C::SetLightingChannels(bool Channel0, bool Channel1, bool Channel2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetLightingChannels");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetLightingChannels Parms{};
 
@@ -262,16 +237,35 @@ void ABP_DriverPawn_C::SetLightingChannels(bool Channel0, bool Channel1, bool Ch
 
 void ABP_DriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetRideableStatusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetRideableStatusType Parms{};
 
 	Parms.StatusType = StatusType;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DriverPawn.BP_DriverPawn_C.SetSkeletalMeshLOD
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InLOD                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_DriverPawn_C::SetSkeletalMeshLOD(const int32 InLOD)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
+
+	Params::BP_DriverPawn_C_SetSkeletalMeshLOD Parms{};
+
+	Parms.InLOD = InLOD;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -282,10 +276,8 @@ void ABP_DriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 
 void ABP_DriverPawn_C::SetupCharacterById(EDriverId In_DriverId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "SetupCharacterById");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_SetupCharacterById Parms{};
 
@@ -302,10 +294,8 @@ void ABP_DriverPawn_C::SetupCharacterById(EDriverId In_DriverId)
 
 bool ABP_DriverPawn_C::UseItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "UseItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_UseItem Parms{};
 
@@ -323,10 +313,8 @@ bool ABP_DriverPawn_C::UseItem()
 
 bool ABP_DriverPawn_C::UseItemInDirection(const EDriverDirection Direction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "UseItemInDirection");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_UseItemInDirection Parms{};
 
@@ -345,10 +333,8 @@ bool ABP_DriverPawn_C::UseItemInDirection(const EDriverDirection Direction)
 
 bool ABP_DriverPawn_C::UseItemWithoutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "UseItemWithoutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_UseItemWithoutAnimation Parms{};
 
@@ -363,10 +349,8 @@ bool ABP_DriverPawn_C::UseItemWithoutAnimation()
 
 void ABP_DriverPawn_C::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "UserConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -380,10 +364,8 @@ void ABP_DriverPawn_C::UserConstructionScript()
 
 class USkeletalMesh* ABP_DriverPawn_C::GetRivalMesh(EDriverId In_DriverId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "GetRivalMesh");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_GetRivalMesh Parms{};
 
@@ -403,10 +385,8 @@ class USkeletalMesh* ABP_DriverPawn_C::GetRivalMesh(EDriverId In_DriverId) const
 
 void ABP_DriverPawn_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const ESoundPan InSoundPan) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DriverPawn_C", "PlayVoice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_DriverPawn_C", FnName));
 
 	Params::BP_DriverPawn_C_PlayVoice Parms{};
 
@@ -416,5 +396,5 @@ void ABP_DriverPawn_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const ESo
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

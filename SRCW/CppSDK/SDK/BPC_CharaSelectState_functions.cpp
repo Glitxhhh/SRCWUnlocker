@@ -14,8 +14,7 @@
 #include "BPC_CharaSelectState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_CharaSelectState.BPC_CharaSelectState_C.ExecuteUbergraph_BPC_CharaSelectState
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_CharaSelectState_C::ExecuteUbergraph_BPC_CharaSelectState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharaSelectState_C", "ExecuteUbergraph_BPC_CharaSelectState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_CharaSelectState_C", "ExecuteUbergraph_BPC_CharaSelectState", FuncInfo);
 
 	Params::BPC_CharaSelectState_C_ExecuteUbergraph_BPC_CharaSelectState Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_CharaSelectState_C::ExecuteUbergraph_BPC_CharaSelectState(int32 EntryP
 
 void UBPC_CharaSelectState_C::OnCharaEventCancelBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharaSelectState_C", "OnCharaEventCancelBack");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_CharaSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_CharaSelectState_C::OnCharaEventCancelBack()
 
 void UBPC_CharaSelectState_C::OnCharaEventFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharaSelectState_C", "OnCharaEventFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_CharaSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UBPC_CharaSelectState_C::OnCharaEventFinished()
 
 void UBPC_CharaSelectState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharaSelectState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_CharaSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,13 +75,11 @@ void UBPC_CharaSelectState_C::OnExitState()
 
 void UBPC_CharaSelectState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharaSelectState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_CharaSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

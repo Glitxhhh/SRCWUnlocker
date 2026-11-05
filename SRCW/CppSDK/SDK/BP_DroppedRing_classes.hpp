@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedRing.BP_DroppedRing_C
 // 0x0000 (0x0470 - 0x0470)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedRing_C;
 
-}
-
+SDK_NAMESPACE_END

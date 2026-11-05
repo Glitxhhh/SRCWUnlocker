@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EHoldItemAnimationSequence.EHoldItemAnimationSequence
 // NumValues: 0x0005
@@ -25,5 +24,4 @@ enum class EHoldItemAnimationSequence : uint8
 	EHoldItemAnimationSequence_MAX           = 4,
 };
 
-}
-
+SDK_NAMESPACE_END

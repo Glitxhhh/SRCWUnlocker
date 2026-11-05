@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_AutoSave.WBP_System_AutoSave_C
 // 0x0038 (0x0318 - 0x02E0)
@@ -34,6 +33,7 @@ public:
 
 public:
 	void Construct();
+	void Destruct();
 	void ExecuteUbergraph_WBP_System_AutoSave(int32 EntryPoint);
 	void OnInAnimFinished();
 	void OnOutAnimFinished();
@@ -57,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_AutoSave_C;
 
-}
-
+SDK_NAMESPACE_END

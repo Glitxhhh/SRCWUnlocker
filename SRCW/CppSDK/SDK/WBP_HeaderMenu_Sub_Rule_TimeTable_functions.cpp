@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_Sub_Rule_TimeTable_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable.WBP_HeaderMenu_Sub_Rule_TimeTable_C.BndEvt__WBP_HeaderMenu_Sub_Rule_TimeTable_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::BndEvt__WBP_HeaderMenu_Sub_Rule_TimeTable_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "BndEvt__WBP_HeaderMenu_Sub_Rule_TimeTable_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::BndEvt__WBP_HeaderMenu_Sub_Rule_TimeT
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::Construct()
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_Rule_TimeTable(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_Rule_TimeTable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_Sub_Rule_TimeTable_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_Rule_TimeTable", FuncInfo);
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_ExecuteUbergraph_WBP_HeaderMenu_Sub_Rule_TimeTable Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_R
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::FixedDisplay(EGroupRaceRule FixedRule_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "FixedDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_FixedDisplay Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::FixedDisplay(EGroupRaceRule FixedRule
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::FixedRule(EGroupRaceRule InFixedRule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "FixedRule");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_FixedRule Parms{};
 
@@ -110,10 +99,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::FixedRule(EGroupRaceRule InFixedRule)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::InEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "InEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::InEvent()
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::OnInitialize()
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::PlayInOutAnimation(bool IsInAnim)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "PlayInOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_PlayInOutAnimation Parms{};
 
@@ -160,10 +143,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::PlayInOutAnimation(bool IsInAnim)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetInnerVisible(bool bDisplay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetInnerVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetInnerVisible Parms{};
 
@@ -181,13 +162,12 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetInnerVisible(bool bDisplay)
 // EGroupRaceRule                          InGroupRaceRule                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InIsEnd                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InIsSpRule                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId                               InExGadgetId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, const struct FDateTime& InTime, EGroupRaceRule InGroupRaceRule, bool InIsEnd, bool InIsSpRule)
+void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, const struct FDateTime& InTime, EGroupRaceRule InGroupRaceRule, bool InIsEnd, bool InIsSpRule, EGadgetId InExGadgetId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetTimeTable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetTimeTable Parms{};
 
@@ -196,6 +176,7 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, 
 	Parms.InGroupRaceRule = InGroupRaceRule;
 	Parms.InIsEnd = InIsEnd;
 	Parms.InIsSpRule = InIsSpRule;
+	Parms.InExGadgetId = InExGadgetId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -209,10 +190,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetTimeTable(int32 InTimetableIndex, 
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetupInfo(int32 TargetIndex, EGroupRaceRule Rule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetupInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetupInfo Parms{};
 
@@ -230,10 +209,8 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetupInfo(int32 TargetIndex, EGroupRa
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityButtonIcon(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetVisibilityButtonIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetVisibilityButtonIcon Parms{};
 
@@ -244,16 +221,14 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityButtonIcon(ESlateVisibil
 
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable.WBP_HeaderMenu_Sub_Rule_TimeTable_C.SetVisibilityOpenWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityOpenWidget(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetVisibilityOpenWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetVisibilityOpenWidget Parms{};
 
@@ -264,16 +239,14 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityOpenWidget(ESlateVisibil
 
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable.WBP_HeaderMenu_Sub_Rule_TimeTable_C.SetVisibilityRankCalcWidget
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityRankCalcWidget(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "SetVisibilityRankCalcWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_C_SetVisibilityRankCalcWidget Parms{};
 
@@ -288,13 +261,11 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::SetVisibilityRankCalcWidget(ESlateVis
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_C::StartInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_C", "StartInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

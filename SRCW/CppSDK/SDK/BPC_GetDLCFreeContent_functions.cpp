@@ -14,18 +14,15 @@
 #include "BPC_GetDLCFreeContent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.CreateSilentSkipFooter
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_GetDLCFreeContent_C::CreateSilentSkipFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "CreateSilentSkipFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_GetDLCFreeContent_C::CreateSilentSkipFooter()
 
 void UBPC_GetDLCFreeContent_C::DLCFlow_End()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "DLCFlow_End");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UBPC_GetDLCFreeContent_C::DLCFlow_End()
 
 void UBPC_GetDLCFreeContent_C::DLCFlow_RewardDialog()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "DLCFlow_RewardDialog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UBPC_GetDLCFreeContent_C::DLCFlow_RewardDialog()
 
 void UBPC_GetDLCFreeContent_C::DLCFlow_Start()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "DLCFlow_Start");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UBPC_GetDLCFreeContent_C::DLCFlow_Start()
 
 void UBPC_GetDLCFreeContent_C::DLCFlow_UnlockCharacter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "DLCFlow_UnlockCharacter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +83,8 @@ void UBPC_GetDLCFreeContent_C::DLCFlow_UnlockCharacter()
 
 void UBPC_GetDLCFreeContent_C::ExecuteUbergraph_BPC_GetDLCFreeContent(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "ExecuteUbergraph_BPC_GetDLCFreeContent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_GetDLCFreeContent_C", "ExecuteUbergraph_BPC_GetDLCFreeContent", FuncInfo);
 
 	Params::BPC_GetDLCFreeContent_C_ExecuteUbergraph_BPC_GetDLCFreeContent Parms{};
 
@@ -112,10 +99,8 @@ void UBPC_GetDLCFreeContent_C::ExecuteUbergraph_BPC_GetDLCFreeContent(int32 Entr
 
 void UBPC_GetDLCFreeContent_C::FreeContentFlow_End()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "FreeContentFlow_End");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UBPC_GetDLCFreeContent_C::FreeContentFlow_End()
 
 void UBPC_GetDLCFreeContent_C::FreeContentFlow_RewardDialog()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "FreeContentFlow_RewardDialog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +123,8 @@ void UBPC_GetDLCFreeContent_C::FreeContentFlow_RewardDialog()
 
 void UBPC_GetDLCFreeContent_C::FreeContentFlow_Start()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "FreeContentFlow_Start");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +135,8 @@ void UBPC_GetDLCFreeContent_C::FreeContentFlow_Start()
 
 void UBPC_GetDLCFreeContent_C::FreeContentFlow_UnlockCharacter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "FreeContentFlow_UnlockCharacter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +147,8 @@ void UBPC_GetDLCFreeContent_C::FreeContentFlow_UnlockCharacter()
 
 void UBPC_GetDLCFreeContent_C::MainFlow_DLC()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "MainFlow_DLC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +159,8 @@ void UBPC_GetDLCFreeContent_C::MainFlow_DLC()
 
 void UBPC_GetDLCFreeContent_C::MainFlow_EndSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "MainFlow_EndSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +171,20 @@ void UBPC_GetDLCFreeContent_C::MainFlow_EndSequence()
 
 void UBPC_GetDLCFreeContent_C::MainFlow_FreeContent()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "MainFlow_FreeContent");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.MainFlow_RivalDuelSpecialReward
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::MainFlow_RivalDuelSpecialReward()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -210,10 +195,8 @@ void UBPC_GetDLCFreeContent_C::MainFlow_FreeContent()
 
 void UBPC_GetDLCFreeContent_C::NoRewardError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "NoRewardError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -224,10 +207,8 @@ void UBPC_GetDLCFreeContent_C::NoRewardError()
 
 void UBPC_GetDLCFreeContent_C::OnClosed_DLCNoticeUnlockItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnClosed_DLCNoticeUnlockItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -238,10 +219,20 @@ void UBPC_GetDLCFreeContent_C::OnClosed_DLCNoticeUnlockItem()
 
 void UBPC_GetDLCFreeContent_C::OnClosed_FreeContentNoticeUnlockItem()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnClosed_FreeContentNoticeUnlockItem");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OnClosed_RivalDuelSpecialRewardNoticeUnlockItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::OnClosed_RivalDuelSpecialRewardNoticeUnlockItem()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,10 +245,8 @@ void UBPC_GetDLCFreeContent_C::OnClosed_FreeContentNoticeUnlockItem()
 
 void UBPC_GetDLCFreeContent_C::OnComplete_Save(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnComplete_Save");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	Params::BPC_GetDLCFreeContent_C_OnComplete_Save Parms{};
 
@@ -272,10 +261,8 @@ void UBPC_GetDLCFreeContent_C::OnComplete_Save(ESaveDataStatus Status)
 
 void UBPC_GetDLCFreeContent_C::OnEndAnim_DLCUnclockCharacter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnEndAnim_DLCUnclockCharacter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -286,10 +273,20 @@ void UBPC_GetDLCFreeContent_C::OnEndAnim_DLCUnclockCharacter()
 
 void UBPC_GetDLCFreeContent_C::OnEndAnim_FreeContentUnclockCharacter()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnEndAnim_FreeContentUnclockCharacter");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OnEndAnim_RivalDuelSpecialRewardUnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::OnEndAnim_RivalDuelSpecialRewardUnlockCharacter()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -300,10 +297,8 @@ void UBPC_GetDLCFreeContent_C::OnEndAnim_FreeContentUnclockCharacter()
 
 void UBPC_GetDLCFreeContent_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -316,10 +311,8 @@ void UBPC_GetDLCFreeContent_C::OnExitState()
 
 void UBPC_GetDLCFreeContent_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnFinishedFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	Params::BPC_GetDLCFreeContent_C_OnFinishedFade Parms{};
 
@@ -334,10 +327,8 @@ void UBPC_GetDLCFreeContent_C::OnFinishedFade(EUnionUIFadeDirection FadeDirectio
 
 void UBPC_GetDLCFreeContent_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +339,8 @@ void UBPC_GetDLCFreeContent_C::OnInitState()
 
 void UBPC_GetDLCFreeContent_C::OnSkip()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OnSkip");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,40 +349,72 @@ void UBPC_GetDLCFreeContent_C::OnSkip()
 // Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OpenRewardWindow
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FRewardGetWindowParam>&   rewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FRewardGetWindowParam>&   RewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UWBP_ItemGet_Window_C**           newParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GetDLCFreeContent_C::OpenRewardWindow(TArray<struct FRewardGetWindowParam>& rewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam)
+void UBPC_GetDLCFreeContent_C::OpenRewardWindow(TArray<struct FRewardGetWindowParam>& RewardList, const class FText& Title, class UWBP_ItemGet_Window_C** newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OpenRewardWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	Params::BPC_GetDLCFreeContent_C_OpenRewardWindow Parms{};
 
-	Parms.rewardList = std::move(rewardList);
+	Parms.RewardList = std::move(RewardList);
 	Parms.Title = std::move(Title);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	rewardList = std::move(Parms.rewardList);
+	RewardList = std::move(Parms.RewardList);
 
 	if (newParam != nullptr)
 		*newParam = Parms.newParam;
 }
 
 
-// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.OpenUnlockCharacter
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialReward_RewardDialog
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_GetDLCFreeContent_C::OpenUnlockCharacter()
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialReward_RewardDialog()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "OpenUnlockCharacter");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialReward_UnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialReward_UnlockCharacter()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialRewardFlow_End
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialRewardFlow_End()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.RivalDuelSpecialRewardFlow_Start
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::RivalDuelSpecialRewardFlow_Start()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -404,10 +425,8 @@ void UBPC_GetDLCFreeContent_C::OpenUnlockCharacter()
 
 void UBPC_GetDLCFreeContent_C::SkipDLC_UnlockCharacter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "SkipDLC_UnlockCharacter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -418,13 +437,23 @@ void UBPC_GetDLCFreeContent_C::SkipDLC_UnlockCharacter()
 
 void UBPC_GetDLCFreeContent_C::SKIPFreeContent_UnlockCharacter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetDLCFreeContent_C", "SKIPFreeContent_UnlockCharacter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BPC_GetDLCFreeContent.BPC_GetDLCFreeContent_C.SkipRivalDuelSpecialReward_UnlockCharacter
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GetDLCFreeContent_C::SkipRivalDuelSpecialReward_UnlockCharacter()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GetDLCFreeContent_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

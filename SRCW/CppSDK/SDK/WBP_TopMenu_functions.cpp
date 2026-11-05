@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu.WBP_TopMenu_C.BackFocuｓEvent
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_C::BackFocuｓEvent(class UUnionUIButtonsPanel* ButtonsPanel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "BackFocuｓEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_BackFocuｓEvent Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_TopMenu_C::BackFocuｓEvent(class UUnionUIButtonsPanel* ButtonsPanel)
 
 void UWBP_TopMenu_C::Button_Setting(class UCommonMenuSubMenu* Sub_Menu)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "Button Setting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_Button_Setting Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_TopMenu_C::Button_Setting(class UCommonMenuSubMenu* Sub_Menu)
 
 void UWBP_TopMenu_C::ExecuteUbergraph_WBP_TopMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "ExecuteUbergraph_WBP_TopMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_C", "ExecuteUbergraph_WBP_TopMenu", FuncInfo);
 
 	Params::WBP_TopMenu_C_ExecuteUbergraph_WBP_TopMenu Parms{};
 
@@ -82,10 +75,8 @@ void UWBP_TopMenu_C::ExecuteUbergraph_WBP_TopMenu(int32 EntryPoint)
 
 void UWBP_TopMenu_C::Finished_177C5CB140E58384F738E89F82C61AA8()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "Finished_177C5CB140E58384F738E89F82C61AA8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -96,10 +87,8 @@ void UWBP_TopMenu_C::Finished_177C5CB140E58384F738E89F82C61AA8()
 
 void UWBP_TopMenu_C::Finished_1E175CCC473196656C07A2B0A365A421()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "Finished_1E175CCC473196656C07A2B0A365A421");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +103,8 @@ void UWBP_TopMenu_C::Finished_1E175CCC473196656C07A2B0A365A421()
 
 void UWBP_TopMenu_C::InitializeGameMode(const ETopMenuPlayMode PlayMode, const TArray<ETopMenuGameMode>& BeltButtonTypeArr, ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "InitializeGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_InitializeGameMode Parms{};
 
@@ -134,10 +121,8 @@ void UWBP_TopMenu_C::InitializeGameMode(const ETopMenuPlayMode PlayMode, const T
 
 void UWBP_TopMenu_C::InitializePlayerNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "InitializePlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -150,10 +135,8 @@ void UWBP_TopMenu_C::InitializePlayerNum()
 
 void UWBP_TopMenu_C::InitializePlayMode(ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "InitializePlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_InitializePlayMode Parms{};
 
@@ -170,10 +153,8 @@ void UWBP_TopMenu_C::InitializePlayMode(ETopMenuSequenceState PrevState)
 
 void UWBP_TopMenu_C::InitializeTopMenu(ETopMenuSequenceState InitState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "InitializeTopMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_InitializeTopMenu Parms{};
 
@@ -190,10 +171,8 @@ void UWBP_TopMenu_C::InitializeTopMenu(ETopMenuSequenceState InitState)
 
 void UWBP_TopMenu_C::IsPlayerNumButtonAnimationPlaying(bool* PlayingAnimation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "IsPlayerNumButtonAnimationPlaying");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_IsPlayerNumButtonAnimationPlaying Parms{};
 
@@ -213,10 +192,8 @@ void UWBP_TopMenu_C::IsPlayerNumButtonAnimationPlaying(bool* PlayingAnimation)
 
 void UWBP_TopMenu_C::OnCancelSubMenu(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "OnCancelSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_OnCancelSubMenu Parms{};
 
@@ -237,10 +214,8 @@ void UWBP_TopMenu_C::OnCancelSubMenu(class UUnionUIButtonBase* Button, int32 Pan
 
 void UWBP_TopMenu_C::OnDecisionSubMenu(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "OnDecisionSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_OnDecisionSubMenu Parms{};
 
@@ -257,10 +232,8 @@ void UWBP_TopMenu_C::OnDecisionSubMenu(class UUnionUIButtonBase* Button, int32 P
 
 void UWBP_TopMenu_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -271,10 +244,8 @@ void UWBP_TopMenu_C::PlayAnimationIn()
 
 void UWBP_TopMenu_C::PlayAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "PlayAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -288,10 +259,8 @@ void UWBP_TopMenu_C::PlayAnimationLoop()
 
 void UWBP_TopMenu_C::PlayAnimationNumActivePlayerNum(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "PlayAnimationNumActivePlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_PlayAnimationNumActivePlayerNum Parms{};
 
@@ -310,10 +279,8 @@ void UWBP_TopMenu_C::PlayAnimationNumActivePlayerNum(class UUnionUIButtonBase* B
 
 void UWBP_TopMenu_C::SetButtonVisible(ESlateVisibility Visibility_0, ETopMenuSequenceState BackState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetButtonVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_SetButtonVisible Parms{};
 
@@ -331,10 +298,8 @@ void UWBP_TopMenu_C::SetButtonVisible(ESlateVisibility Visibility_0, ETopMenuSeq
 
 void UWBP_TopMenu_C::SetIconGameMode(const ETopMenuPlayMode PlayMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetIconGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_SetIconGameMode Parms{};
 
@@ -351,10 +316,8 @@ void UWBP_TopMenu_C::SetIconGameMode(const ETopMenuPlayMode PlayMode)
 
 void UWBP_TopMenu_C::SetTextGameModeTitle(const ETopMenuPlayMode PlayMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetTextGameModeTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_SetTextGameModeTitle Parms{};
 
@@ -369,10 +332,8 @@ void UWBP_TopMenu_C::SetTextGameModeTitle(const ETopMenuPlayMode PlayMode)
 
 void UWBP_TopMenu_C::SetupGameMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetupGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -383,10 +344,8 @@ void UWBP_TopMenu_C::SetupGameMode()
 
 void UWBP_TopMenu_C::SetupPlayerNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetupPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -399,14 +358,50 @@ void UWBP_TopMenu_C::SetupPlayerNum()
 
 void UWBP_TopMenu_C::SetupPlayMode(const TArray<ETopMenuPlayMode>& TopMenuPlayModeArr)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "SetupPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	Params::WBP_TopMenu_C_SetupPlayMode Parms{};
 
 	Parms.TopMenuPlayModeArr = std::move(TopMenuPlayModeArr);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopMenu.WBP_TopMenu_C.SetVisibilityGameModeButtons
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_C::SetVisibilityGameModeButtons(ESlateVisibility InVisibility)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
+
+	Params::WBP_TopMenu_C_SetVisibilityGameModeButtons Parms{};
+
+	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopMenu.WBP_TopMenu_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
+
+	Params::WBP_TopMenu_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -417,13 +412,11 @@ void UWBP_TopMenu_C::SetupPlayMode(const TArray<ETopMenuPlayMode>& TopMenuPlayMo
 
 void UWBP_TopMenu_C::UnbindAllEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_C", "UnbindAllEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

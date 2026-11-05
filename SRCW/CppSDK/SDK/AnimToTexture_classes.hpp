@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AnimToTexture.AnimToTextureDataAsset
 // 0x00B0 (0x00E0 - 0x0030)
@@ -124,5 +123,4 @@ public:
 };
 DUMPER7_ASSERTS_UVATMeshComponent;
 
-}
-
+SDK_NAMESPACE_END

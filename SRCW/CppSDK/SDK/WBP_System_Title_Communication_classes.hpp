@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_Title_Communication.WBP_System_Title_Communication_C
 // 0x0048 (0x0328 - 0x02E0)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_Title_Communication_C;
 
-}
-
+SDK_NAMESPACE_END

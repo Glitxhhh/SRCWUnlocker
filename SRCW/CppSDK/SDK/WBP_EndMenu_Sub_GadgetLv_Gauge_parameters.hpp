@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_EndMenu_Sub_GadgetLv_Gauge.WBP_EndMenu_Sub_GadgetLv_Gauge_C.ExecuteUbergraph_WBP_EndMenu_Sub_GadgetLv_Gauge
 // 0x00A0 (0x00A0 - 0x0000)
@@ -50,5 +50,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_EndMenu_Sub_GadgetLv_Gauge_C_SetGauge;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

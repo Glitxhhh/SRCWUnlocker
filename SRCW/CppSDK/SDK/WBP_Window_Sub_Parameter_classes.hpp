@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Window_Sub_Parameter.WBP_Window_Sub_Parameter_C
 // 0x0080 (0x0400 - 0x0380)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Window_Sub_Parameter_C;
 
-}
-
+SDK_NAMESPACE_END

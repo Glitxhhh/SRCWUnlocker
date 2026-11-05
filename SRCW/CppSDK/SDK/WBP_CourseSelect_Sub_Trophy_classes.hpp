@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CourseSelect_Sub_Trophy.WBP_CourseSelect_Sub_Trophy_C
 // 0x0008 (0x0340 - 0x0338)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CourseSelect_Sub_Trophy_C;
 
-}
-
+SDK_NAMESPACE_END

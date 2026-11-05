@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PL_Menu.PL_Menu_C
 // 0x0008 (0x02A0 - 0x0298)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_APL_Menu_C;
 
-}
-
+SDK_NAMESPACE_END

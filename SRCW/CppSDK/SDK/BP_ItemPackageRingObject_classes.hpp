@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemPackageRingObject.BP_ItemPackageRingObject_C
 // 0x0010 (0x0620 - 0x0610)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemPackageRingObject_C;
 
-}
-
+SDK_NAMESPACE_END

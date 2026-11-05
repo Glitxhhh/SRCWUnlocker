@@ -13,8 +13,7 @@
 #include "ST_PullDownMenuItemData_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_PullDownMenuData.ST_PullDownMenuData
 // 0x0010 (0x0010 - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_PullDownMenuData;
 
-}
-
+SDK_NAMESPACE_END

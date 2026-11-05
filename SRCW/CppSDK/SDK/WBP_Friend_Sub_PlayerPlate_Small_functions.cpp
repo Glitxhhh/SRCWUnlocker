@@ -14,18 +14,15 @@
 #include "WBP_Friend_Sub_PlayerPlate_Small_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_Sub_PlayerPlate_Small.WBP_Friend_Sub_PlayerPlate_Small_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Friend_Sub_PlayerPlate_Small_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_Small_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Friend_Sub_PlayerPlate_Small_C::Construct()
 
 void UWBP_Friend_Sub_PlayerPlate_Small_C::ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate_Small(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_Small_C", "ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate_Small");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_Sub_PlayerPlate_Small_C", "ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate_Small", FuncInfo);
 
 	Params::WBP_Friend_Sub_PlayerPlate_Small_C_ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate_Small Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Friend_Sub_PlayerPlate_Small_C::ExecuteUbergraph_WBP_Friend_Sub_Player
 
 void UWBP_Friend_Sub_PlayerPlate_Small_C::GetMainWidget(class UWBP_Friend_Sub_PlayerPlate_C** OutMainWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_Small_C", "GetMainWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_Small_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_Small_C_GetMainWidget Parms{};
 
@@ -71,5 +64,5 @@ void UWBP_Friend_Sub_PlayerPlate_Small_C::GetMainWidget(class UWBP_Friend_Sub_Pl
 		*OutMainWidget = Parms.OutMainWidget;
 }
 
-}
 
+SDK_NAMESPACE_END

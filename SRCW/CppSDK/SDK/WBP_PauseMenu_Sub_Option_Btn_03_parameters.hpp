@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_PauseMenu_Sub_Option_Btn_03.WBP_PauseMenu_Sub_Option_Btn_03_C.ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_03
 // 0x0008 (0x0008 - 0x0000)
@@ -124,5 +124,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PauseMenu_Sub_Option_Btn_03_C_SetText;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

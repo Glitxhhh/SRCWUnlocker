@@ -14,18 +14,15 @@
 #include "WBP_CMN_NiceNotice_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_NiceNotice.WBP_CMN_NiceNotice_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_NiceNotice_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_NiceNotice_C::Construct()
 
 void UWBP_CMN_NiceNotice_C::ExecuteUbergraph_WBP_CMN_NiceNotice(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "ExecuteUbergraph_WBP_CMN_NiceNotice");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_NiceNotice_C", "ExecuteUbergraph_WBP_CMN_NiceNotice", FuncInfo);
 
 	Params::WBP_CMN_NiceNotice_C_ExecuteUbergraph_WBP_CMN_NiceNotice Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_CMN_NiceNotice_C::ExecuteUbergraph_WBP_CMN_NiceNotice(int32 EntryPoint
 
 void UWBP_CMN_NiceNotice_C::Finished_1E4A955E4489BE95F2D4EE9B3D7AD6D4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "Finished_1E4A955E4489BE95F2D4EE9B3D7AD6D4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CMN_NiceNotice_C::Finished_1E4A955E4489BE95F2D4EE9B3D7AD6D4()
 
 void UWBP_CMN_NiceNotice_C::Hidden()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "Hidden");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_CMN_NiceNotice_C::Hidden()
 
 void UWBP_CMN_NiceNotice_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_OnAnimationFinished Parms{};
 
@@ -106,10 +95,8 @@ void UWBP_CMN_NiceNotice_C::OnAnimationFinished(const class UWidgetAnimation* An
 
 void UWBP_CMN_NiceNotice_C::OutAnimEndEvent_ChallengeClear(class UWBP_CMN_NiceNotice_C* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "OutAnimEndEvent_ChallengeClear");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_OutAnimEndEvent_ChallengeClear Parms{};
 
@@ -126,10 +113,8 @@ void UWBP_CMN_NiceNotice_C::OutAnimEndEvent_ChallengeClear(class UWBP_CMN_NiceNo
 
 void UWBP_CMN_NiceNotice_C::SetChallengeId(EChallengeId InChallengeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "SetChallengeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_SetChallengeId Parms{};
 
@@ -148,10 +133,8 @@ void UWBP_CMN_NiceNotice_C::SetChallengeId(EChallengeId InChallengeId)
 
 void UWBP_CMN_NiceNotice_C::SetupChallengeClearNotice(class UWrapBox* Owner, const int32 InChallengeIndex, const float InTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "SetupChallengeClearNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_SetupChallengeClearNotice Parms{};
 
@@ -171,10 +154,8 @@ void UWBP_CMN_NiceNotice_C::SetupChallengeClearNotice(class UWrapBox* Owner, con
 
 void UWBP_CMN_NiceNotice_C::SetUpNiceNotice(const class FText& InName, ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "SetUpNiceNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_SetUpNiceNotice Parms{};
 
@@ -192,10 +173,8 @@ void UWBP_CMN_NiceNotice_C::SetUpNiceNotice(const class FText& InName, ECrosspla
 
 void UWBP_CMN_NiceNotice_C::ShowOnly(EChallengeId ChallengeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "ShowOnly");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_C_ShowOnly Parms{};
 
@@ -210,13 +189,11 @@ void UWBP_CMN_NiceNotice_C::ShowOnly(EChallengeId ChallengeId)
 
 void UWBP_CMN_NiceNotice_C::TimerEvent_NiceNoticeWait()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_C", "TimerEvent_NiceNoticeWait");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

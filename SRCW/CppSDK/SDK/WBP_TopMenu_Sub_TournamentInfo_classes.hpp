@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C
 // 0x0030 (0x04B0 - 0x0480)
@@ -30,7 +30,10 @@ public:
 
 public:
 	void BndEvt__WBP_TopMenu_Sub_TournamentInfo_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void Destruct();
 	void ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo(int32 EntryPoint);
+	void OnVisibilityChangedEvent(ESlateVisibility InVisibility);
 	void PreConstruct(bool IsDesignTime);
 
 public:
@@ -49,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopMenu_Sub_TournamentInfo_C;
 
-}
-
+SDK_NAMESPACE_END

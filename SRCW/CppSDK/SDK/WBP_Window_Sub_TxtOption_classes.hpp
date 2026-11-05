@@ -12,13 +12,12 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Window_Sub_TxtOption.WBP_Window_Sub_TxtOption_C
 // 0x0068 (0x04E8 - 0x0480)
@@ -86,5 +85,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Window_Sub_TxtOption_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_MatchingState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_MatchingState.WBP_CMN_Sub_MatchingState_C.ChangeMatchingAnim
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_MatchingState_C::ChangeMatchingAnim(bool bIsStartMatching)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "ChangeMatchingAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_ChangeMatchingAnim Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_CMN_Sub_MatchingState_C::ChangeMatchingAnim(bool bIsStartMatching)
 
 void UWBP_CMN_Sub_MatchingState_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_CMN_Sub_MatchingState_C::Construct()
 
 void UWBP_CMN_Sub_MatchingState_C::ExecuteUbergraph_WBP_CMN_Sub_MatchingState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_MatchingState_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState", FuncInfo);
 
 	Params::WBP_CMN_Sub_MatchingState_C_ExecuteUbergraph_WBP_CMN_Sub_MatchingState Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_CMN_Sub_MatchingState_C::ExecuteUbergraph_WBP_CMN_Sub_MatchingState(in
 
 void UWBP_CMN_Sub_MatchingState_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_OnAnimationFinished Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_CMN_Sub_MatchingState_C::OnAnimationFinished(const class UWidgetAnimat
 
 void UWBP_CMN_Sub_MatchingState_C::PlayInOutAnimation(bool bIsInAnim)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "PlayInOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_PlayInOutAnimation Parms{};
 
@@ -118,10 +107,8 @@ void UWBP_CMN_Sub_MatchingState_C::PlayInOutAnimation(bool bIsInAnim)
 
 void UWBP_CMN_Sub_MatchingState_C::PlayLoopRemindAnim(bool bPlayLoopRemind)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "PlayLoopRemindAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_PlayLoopRemindAnim Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_CMN_Sub_MatchingState_C::PlayLoopRemindAnim(bool bPlayLoopRemind)
 
 void UWBP_CMN_Sub_MatchingState_C::RemindLoopAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "RemindLoopAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +139,8 @@ void UWBP_CMN_Sub_MatchingState_C::RemindLoopAnim()
 
 void UWBP_CMN_Sub_MatchingState_C::SetHeaderText(bool bIsWait, bool bIsHost, bool bIsReady)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "SetHeaderText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_SetHeaderText Parms{};
 
@@ -177,10 +160,8 @@ void UWBP_CMN_Sub_MatchingState_C::SetHeaderText(bool bIsWait, bool bIsHost, boo
 
 void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameMode(EOnlineGameMode InOnlineGameMode, bool bIsMulti)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "SetOnlineGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_SetOnlineGameMode Parms{};
 
@@ -196,21 +177,23 @@ void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameMode(EOnlineGameMode InOnlineGam
 // Parameters:
 // bool                                    bIsMulti                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EOnlineGameMode                         InOnlineGameMode                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EOnlineGameMode                         InSquadOnlineGameMode                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode)
+void UWBP_CMN_Sub_MatchingState_C::SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode, EOnlineGameMode InSquadOnlineGameMode, bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_C", "SetOnlineGameModeIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_C_SetOnlineGameModeIcon Parms{};
 
 	Parms.bIsMulti = bIsMulti;
 	Parms.InOnlineGameMode = InOnlineGameMode;
+	Parms.InSquadOnlineGameMode = InSquadOnlineGameMode;
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

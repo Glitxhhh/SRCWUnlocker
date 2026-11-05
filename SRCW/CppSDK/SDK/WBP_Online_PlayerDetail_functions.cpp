@@ -14,18 +14,15 @@
 #include "WBP_Online_PlayerDetail_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Online_PlayerDetail.WBP_Online_PlayerDetail_C.BndEvt__WBP_Online_PlayerDetail_MouseInteractionLeft_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_Online_PlayerDetail_C::BndEvt__WBP_Online_PlayerDetail_MouseInteractionLeft_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "BndEvt__WBP_Online_PlayerDetail_MouseInteractionLeft_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Online_PlayerDetail_C::BndEvt__WBP_Online_PlayerDetail_MouseInteractio
 
 void UWBP_Online_PlayerDetail_C::BndEvt__WBP_Online_PlayerDetail_MouseInteractionRight_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "BndEvt__WBP_Online_PlayerDetail_MouseInteractionRight_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Online_PlayerDetail_C::BndEvt__WBP_Online_PlayerDetail_MouseInteractio
 
 void UWBP_Online_PlayerDetail_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_Online_PlayerDetail_C::Construct()
 
 void UWBP_Online_PlayerDetail_C::ExecuteUbergraph_WBP_Online_PlayerDetail(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "ExecuteUbergraph_WBP_Online_PlayerDetail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Online_PlayerDetail_C", "ExecuteUbergraph_WBP_Online_PlayerDetail", FuncInfo);
 
 	Params::WBP_Online_PlayerDetail_C_ExecuteUbergraph_WBP_Online_PlayerDetail Parms{};
 
@@ -84,10 +75,8 @@ void UWBP_Online_PlayerDetail_C::ExecuteUbergraph_WBP_Online_PlayerDetail(int32 
 
 void UWBP_Online_PlayerDetail_C::Finished_2C2E66D04B49E1E67A141281AAECF75E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Finished_2C2E66D04B49E1E67A141281AAECF75E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_Online_PlayerDetail_C::Finished_2C2E66D04B49E1E67A141281AAECF75E()
 
 void UWBP_Online_PlayerDetail_C::Finished_313853F64CC3D4D327F064BECA46477C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Finished_313853F64CC3D4D327F064BECA46477C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_Online_PlayerDetail_C::Finished_313853F64CC3D4D327F064BECA46477C()
 
 void UWBP_Online_PlayerDetail_C::Finished_3F374074423901EAE5BD6BA0AE4BA0CA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Finished_3F374074423901EAE5BD6BA0AE4BA0CA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_Online_PlayerDetail_C::Finished_3F374074423901EAE5BD6BA0AE4BA0CA()
 
 void UWBP_Online_PlayerDetail_C::Finished_4038A3DD4AD1DD246A76F9BC3D2446A5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Finished_4038A3DD4AD1DD246A76F9BC3D2446A5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +123,8 @@ void UWBP_Online_PlayerDetail_C::Finished_4038A3DD4AD1DD246A76F9BC3D2446A5()
 
 void UWBP_Online_PlayerDetail_C::Finished_5D342DE8494A7409EAD869BF14F136F8()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Finished_5D342DE8494A7409EAD869BF14F136F8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +135,8 @@ void UWBP_Online_PlayerDetail_C::Finished_5D342DE8494A7409EAD869BF14F136F8()
 
 void UWBP_Online_PlayerDetail_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +147,8 @@ void UWBP_Online_PlayerDetail_C::OnAcceptKeyPressed()
 
 void UWBP_Online_PlayerDetail_C::OnAcceptNiceEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnAcceptNiceEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +159,8 @@ void UWBP_Online_PlayerDetail_C::OnAcceptNiceEvent()
 
 void UWBP_Online_PlayerDetail_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +171,8 @@ void UWBP_Online_PlayerDetail_C::OnBackKeyPressed()
 
 void UWBP_Online_PlayerDetail_C::OnClosedBlockWindowEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnClosedBlockWindowEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -210,10 +183,8 @@ void UWBP_Online_PlayerDetail_C::OnClosedBlockWindowEvent()
 
 void UWBP_Online_PlayerDetail_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -224,10 +195,8 @@ void UWBP_Online_PlayerDetail_C::OnFaceButtonLeftPressed()
 
 void UWBP_Online_PlayerDetail_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -238,10 +207,8 @@ void UWBP_Online_PlayerDetail_C::OnFaceButtonTopPressed()
 
 void UWBP_Online_PlayerDetail_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -252,10 +219,8 @@ void UWBP_Online_PlayerDetail_C::OnLeftKeyPressed()
 
 void UWBP_Online_PlayerDetail_C::OnPlayDetailInAnimEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnPlayDetailInAnimEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -266,10 +231,8 @@ void UWBP_Online_PlayerDetail_C::OnPlayDetailInAnimEvent()
 
 void UWBP_Online_PlayerDetail_C::OnPlayDetailOutAnimEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnPlayDetailOutAnimEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,10 +243,8 @@ void UWBP_Online_PlayerDetail_C::OnPlayDetailOutAnimEvent()
 
 void UWBP_Online_PlayerDetail_C::OnPlayerProfileFocusEndEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnPlayerProfileFocusEndEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -294,10 +255,8 @@ void UWBP_Online_PlayerDetail_C::OnPlayerProfileFocusEndEvent()
 
 void UWBP_Online_PlayerDetail_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,10 +269,8 @@ void UWBP_Online_PlayerDetail_C::OnRightKeyPressed()
 
 void UWBP_Online_PlayerDetail_C::OnUpdateNiceCount(int32 InNiceCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "OnUpdateNiceCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	Params::WBP_Online_PlayerDetail_C_OnUpdateNiceCount Parms{};
 
@@ -330,10 +287,8 @@ void UWBP_Online_PlayerDetail_C::OnUpdateNiceCount(int32 InNiceCount)
 
 void UWBP_Online_PlayerDetail_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	Params::WBP_Online_PlayerDetail_C_PreConstruct Parms{};
 
@@ -357,10 +312,8 @@ void UWBP_Online_PlayerDetail_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Online_PlayerDetail_C::Set_Lobby_Player_Data(const struct FLobbyPlayerData& InPlayerData, bool bIsBlocked, bool bIsOwn, bool bIsSentNice, int32 NiceCounts, const class FString& ProductUserId_0, EBlockPlayerState BlockType, bool bIsNPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "Set Lobby Player Data");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	Params::WBP_Online_PlayerDetail_C_Set_Lobby_Player_Data Parms{};
 
@@ -392,13 +345,12 @@ void UWBP_Online_PlayerDetail_C::Set_Lobby_Player_Data(const struct FLobbyPlayer
 // const class FString&                    InPlatformId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const class FString&                    InPlatform                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bInIsEnableBlockWindowButton                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bExceptGadgetPage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton)
+void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerData& InPlayerData, EBlockPlayerState InBlockType, bool bInIsOwn, bool bInIsSendNice, bool bInIsNPC, int32 InNiceCount, const class FString& InProductUserId, bool bInIsOwnHost, EMatchingLobbyType InLobbyType, const class FString& InPlatformId, const class FString& InPlatform, bool bInIsEnableBlockWindowButton, bool bExceptGadgetPage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerDetail_C", "SetPlayerDetailData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerDetail_C", FnName));
 
 	Params::WBP_Online_PlayerDetail_C_SetPlayerDetailData Parms{};
 
@@ -414,9 +366,10 @@ void UWBP_Online_PlayerDetail_C::SetPlayerDetailData(const struct FLobbyPlayerDa
 	Parms.InPlatformId = std::move(InPlatformId);
 	Parms.InPlatform = std::move(InPlatform);
 	Parms.bInIsEnableBlockWindowButton = bInIsEnableBlockWindowButton;
+	Parms.bExceptGadgetPage = bExceptGadgetPage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

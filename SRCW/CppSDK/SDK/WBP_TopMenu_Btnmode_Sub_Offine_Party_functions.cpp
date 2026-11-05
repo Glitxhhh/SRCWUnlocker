@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_Btnmode_Sub_Offine_Party_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Btnmode_Sub_Offine_Party.WBP_TopMenu_Btnmode_Sub_Offine_Party_C.ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_Party_C::ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_Party_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Btnmode_Sub_Offine_Party_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party", FuncInfo);
 
 	Params::WBP_TopMenu_Btnmode_Sub_Offine_Party_C_ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_TopMenu_Btnmode_Sub_Offine_Party_C::ExecuteUbergraph_WBP_TopMenu_Btnmo
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_Party_C::UpdateProgress(int32 NumEliminatedRivalTeams, int32 NumRivalTeams)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_Party_C", "UpdateProgress");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Btnmode_Sub_Offine_Party_C", FnName));
 
 	Params::WBP_TopMenu_Btnmode_Sub_Offine_Party_C_UpdateProgress Parms{};
 
@@ -58,5 +53,5 @@ void UWBP_TopMenu_Btnmode_Sub_Offine_Party_C::UpdateProgress(int32 NumEliminated
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

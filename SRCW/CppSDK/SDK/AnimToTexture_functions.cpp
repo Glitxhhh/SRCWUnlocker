@@ -14,8 +14,7 @@
 #include "AnimToTexture_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimToTexture.AnimToTextureDataAsset.GetIndexFromAnimSequence
 // (Final, Native, Public, BlueprintCallable)
@@ -389,5 +388,5 @@ int32 UVATMeshComponent::GetNumAnimations() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

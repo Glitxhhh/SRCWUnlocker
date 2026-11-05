@@ -14,18 +14,15 @@
 #include "WBP_Popup_Sub_Btn_Standard_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Sub_Btn_Standard.WBP_Popup_Sub_Btn_Standard_C.AcceptKeyResponse
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Popup_Sub_Btn_Standard_C::AcceptKeyResponse()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "AcceptKeyResponse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::AcceptKeyResponse()
 
 void UWBP_Popup_Sub_Btn_Standard_C::Check_Release_Response_InputType(bool* bOutReleaseResponseInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "Check Release Response InputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_Check_Release_Response_InputType Parms{};
 
@@ -57,10 +52,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::Check_Release_Response_InputType(bool* bOutR
 
 void UWBP_Popup_Sub_Btn_Standard_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::Construct()
 
 void UWBP_Popup_Sub_Btn_Standard_C::ExecuteUbergraph_WBP_Popup_Sub_Btn_Standard(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "ExecuteUbergraph_WBP_Popup_Sub_Btn_Standard");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Sub_Btn_Standard_C", "ExecuteUbergraph_WBP_Popup_Sub_Btn_Standard", FuncInfo);
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_ExecuteUbergraph_WBP_Popup_Sub_Btn_Standard Parms{};
 
@@ -91,10 +82,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::ExecuteUbergraph_WBP_Popup_Sub_Btn_Standard(
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +94,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnAcceptKeyPressed()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +106,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnAcceptKeyReleased()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnActiveToSelectAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnActiveToSelectAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -135,10 +120,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnActiveToSelectAnimFinished()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnAddedToFocusPath Parms{};
 
@@ -153,10 +136,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnAddedToFocusPath(const struct FFocusEvent&
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +150,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnBackKeyPressed()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnFocus_Imp(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnFocus_Imp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnFocus_Imp Parms{};
 
@@ -187,10 +166,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnFocus_Imp(class UUnionUIButtonBase* Button
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,10 +180,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnFocusAnimStart()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnFocusLost Parms{};
 
@@ -225,10 +200,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnFocusLost(const struct FFocusEvent& InFocu
 
 struct FEventReply UWBP_Popup_Sub_Btn_Standard_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnFocusReceived Parms{};
 
@@ -250,10 +223,8 @@ struct FEventReply UWBP_Popup_Sub_Btn_Standard_C::OnFocusReceived(const struct F
 
 struct FEventReply UWBP_Popup_Sub_Btn_Standard_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnMouseButtonUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnMouseButtonUp Parms{};
 
@@ -273,10 +244,8 @@ struct FEventReply UWBP_Popup_Sub_Btn_Standard_C::OnMouseButtonUp(const struct F
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_OnRemovedFromFocusPath Parms{};
 
@@ -291,10 +260,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnRemovedFromFocusPath(const struct FFocusEv
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnSelectOutAnimDinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnSelectOutAnimDinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -305,10 +272,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnSelectOutAnimDinished()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnSlectToActiveAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnSlectToActiveAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -319,10 +284,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnSlectToActiveAnimFinished()
 
 void UWBP_Popup_Sub_Btn_Standard_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +298,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::OnUnFocusAnimStart()
 
 void UWBP_Popup_Sub_Btn_Standard_C::SetButtonColorIndex(int32 ColorIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "SetButtonColorIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_SetButtonColorIndex Parms{};
 
@@ -355,10 +316,8 @@ void UWBP_Popup_Sub_Btn_Standard_C::SetButtonColorIndex(int32 ColorIndex)
 
 void UWBP_Popup_Sub_Btn_Standard_C::SetDecisionSound(class USoundAtomCue* InDecisionSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Sub_Btn_Standard_C", "SetDecisionSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Sub_Btn_Standard_C", FnName));
 
 	Params::WBP_Popup_Sub_Btn_Standard_C_SetDecisionSound Parms{};
 
@@ -367,5 +326,5 @@ void UWBP_Popup_Sub_Btn_Standard_C::SetDecisionSound(class USoundAtomCue* InDeci
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

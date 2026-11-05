@@ -14,8 +14,7 @@
 #include "WBP_GadgetCustom_Sub_HexagonCursor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_HexagonCursor.WBP_GadgetCustom_Sub_HexagonCursor_C.SetShape
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_GadgetCustom_Sub_HexagonCursor_C::SetShape(int32 InSizeX, int32 InSizeY)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_HexagonCursor_C", "SetShape");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_HexagonCursor_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_HexagonCursor_C_SetShape Parms{};
 
@@ -38,5 +35,5 @@ void UWBP_GadgetCustom_Sub_HexagonCursor_C::SetShape(int32 InSizeX, int32 InSize
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

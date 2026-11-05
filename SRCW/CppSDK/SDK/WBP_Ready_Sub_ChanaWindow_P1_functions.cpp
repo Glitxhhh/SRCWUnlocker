@@ -14,8 +14,7 @@
 #include "WBP_Ready_Sub_ChanaWindow_P1_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Ready_Sub_ChanaWindow_P1.WBP_Ready_Sub_ChanaWindow_P1_C.ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Ready_Sub_ChanaWindow_P1_C::ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_ChanaWindow_P1_C", "ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Ready_Sub_ChanaWindow_P1_C", "ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1", FuncInfo);
 
 	Params::WBP_Ready_Sub_ChanaWindow_P1_C_ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow_P1 Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Ready_Sub_ChanaWindow_P1_C::ExecuteUbergraph_WBP_Ready_Sub_ChanaWindow
 
 void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconCheckMark(bool bIsCheck)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_ChanaWindow_P1_C", "SetCharacterIconCheckMark");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_ChanaWindow_P1_C", FnName));
 
 	Params::WBP_Ready_Sub_ChanaWindow_P1_C_SetCharacterIconCheckMark Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconCheckMark(bool bIsCheck)
 
 void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_ChanaWindow_P1_C", "SetCharacterIconData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_ChanaWindow_P1_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconData()
 
 void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconTextureObj(const class UTexture2D* InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_ChanaWindow_P1_C", "SetCharacterIconTextureObj");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_ChanaWindow_P1_C", FnName));
 
 	Params::WBP_Ready_Sub_ChanaWindow_P1_C_SetCharacterIconTextureObj Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterIconTextureObj(const class UTe
 
 void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterName(const class FText& InName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_ChanaWindow_P1_C", "SetCharacterName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_ChanaWindow_P1_C", FnName));
 
 	Params::WBP_Ready_Sub_ChanaWindow_P1_C_SetCharacterName Parms{};
 
@@ -110,5 +99,5 @@ void UWBP_Ready_Sub_ChanaWindow_P1_C::SetCharacterName(const class FText& InName
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

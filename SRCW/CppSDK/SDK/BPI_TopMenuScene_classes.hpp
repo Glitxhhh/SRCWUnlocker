@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_TopMenuScene.BPI_TopMenuScene_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_TopMenuScene_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_TopMenuScene_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetDodonpaEventSceneCamera(class ACameraActor** newParam);
 	void GetPartyRaceSceneCamera(class ACameraActor** OutCamera);
@@ -49,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_TopMenuScene_C;
 
-}
-
+SDK_NAMESPACE_END

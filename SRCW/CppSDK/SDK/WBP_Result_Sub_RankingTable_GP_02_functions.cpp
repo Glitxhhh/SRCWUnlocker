@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_RankingTable_GP_02_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.ApplyByRacers
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyByRacers()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "ApplyByRacers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyByRacers()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyWaitingAddPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "ApplyWaitingAddPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyWaitingAddPoint()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyWaitingAddPoint_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "ApplyWaitingAddPoint_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::ApplyWaitingAddPoint_Impl()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::CloseMatchPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "CloseMatchPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::CloseMatchPoint()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -95,10 +84,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::Construct()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::DumpStat(float Duration, bool bPrintToLog)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "DumpStat");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_DumpStat Parms{};
 
@@ -116,10 +103,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::DumpStat(float Duration, bool bPrintT
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::ExecuteUbergraph_WBP_Result_Sub_RankingTable_GP_02(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_GP_02");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RankingTable_GP_02_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_GP_02", FuncInfo);
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_ExecuteUbergraph_WBP_Result_Sub_RankingTable_GP_02 Parms{};
 
@@ -137,10 +122,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::ExecuteUbergraph_WBP_Result_Sub_Ranki
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::GetHonorTitleId(int32 RacerIndex_0, int32* HonorTitleId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "GetHonorTitleId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_GetHonorTitleId Parms{};
 
@@ -160,10 +143,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::GetHonorTitleId(int32 RacerIndex_0, i
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::GetLegendGrade(ELegendCompeRateGrade* LegendGrade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "GetLegendGrade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_GetLegendGrade Parms{};
 
@@ -181,10 +162,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::GetLegendGrade(ELegendCompeRateGrade*
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::GetRateRank_impl(ERateRank* RateRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "GetRateRank_impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_GetRateRank_impl Parms{};
 
@@ -200,10 +179,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::GetRateRank_impl(ERateRank* RateRank)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::MVP_Anim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "MVP_Anim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -214,10 +191,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::MVP_Anim()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::OnAddMoveFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "OnAddMoveFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +205,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::OnAddMoveFinished()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::OnLoaded_C86804D04FF09BEF514CE08E48C28201(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "OnLoaded_C86804D04FF09BEF514CE08E48C28201");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_OnLoaded_C86804D04FF09BEF514CE08E48C28201 Parms{};
 
@@ -250,10 +223,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::OnLoaded_C86804D04FF09BEF514CE08E48C2
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::OpenFestaBonusIcon(double DelayNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "OpenFestaBonusIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_OpenFestaBonusIcon Parms{};
 
@@ -268,10 +239,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::OpenFestaBonusIcon(double DelayNum)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::Play_Add_Bonus_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "Play Add Bonus Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +251,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::Play_Add_Bonus_Impl()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::Play_Loop_1st_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "Play Loop 1st Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +263,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::Play_Loop_1st_Impl()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayAddBonus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayAddBonus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,10 +275,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayAddBonus()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayAddedPointSE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayAddedPointSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -327,10 +290,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayAddedPointSE()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayBonusPoint(const class FText& BonusName, const class FText& BonusNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayBonusPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_PlayBonusPoint Parms{};
 
@@ -346,10 +307,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayBonusPoint(const class FText& Bon
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayBonusPointClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayBonusPointClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -362,10 +321,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayBonusPointClose()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayCheckMatchPoint(int32 TotalPoint_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayCheckMatchPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_PlayCheckMatchPoint Parms{};
 
@@ -382,10 +339,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayCheckMatchPoint(int32 TotalPoint_
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayCheckMatchPointImpl(int32 TotalPoint_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayCheckMatchPointImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_PlayCheckMatchPointImpl Parms{};
 
@@ -400,10 +355,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayCheckMatchPointImpl(int32 TotalPo
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayGetAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayGetAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -416,10 +369,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayGetAnimation()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayGetAnimation_Impl(bool bSkiping)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayGetAnimation_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_PlayGetAnimation_Impl Parms{};
 
@@ -434,10 +385,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayGetAnimation_Impl(bool bSkiping)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayLoop1st()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayLoop1st");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -448,24 +397,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayLoop1st()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayMatchPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayMatchPoint");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.PlayPlayerEffect
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Result_Sub_RankingTable_GP_02_C::PlayPlayerEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayPlayerEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -476,10 +409,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayPlayerEffect()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayPlayerEffect_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayPlayerEffect_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -490,10 +421,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayPlayerEffect_Impl()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayTotalPoint_Loop_After2nd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayTotalPoint_Loop_After2nd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -504,10 +433,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayTotalPoint_Loop_After2nd()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PlayTotalPoint_Loop_After2nd_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PlayTotalPoint_Loop_After2nd_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -520,10 +447,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PlayTotalPoint_Loop_After2nd_Impl()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_PreConstruct Parms{};
 
@@ -538,10 +463,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_02()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SequenceEvent__ENTRYPOINTWBP_Result_Sub_RankingTable_GP_02");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -555,10 +478,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SequenceEvent__ENTRYPOINTWBP_Result_S
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::Set_Rank_Index_Impl(int32 RankIndex, bool bIsCrownCheck)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "Set Rank Index Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_Set_Rank_Index_Impl Parms{};
 
@@ -576,10 +497,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::Set_Rank_Index_Impl(int32 RankIndex, 
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::Set_Total_Point_Value_Impl(int32 InTotalPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "Set Total Point Value Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_Set_Total_Point_Value_Impl Parms{};
 
@@ -596,10 +515,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::Set_Total_Point_Value_Impl(int32 InTo
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetAddAnimSpeed(float PlaybackSpeed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetAddAnimSpeed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetAddAnimSpeed Parms{};
 
@@ -616,10 +533,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetAddAnimSpeed(float PlaybackSpeed)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetArrowIndex(int32 ArrowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetArrowIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetArrowIndex Parms{};
 
@@ -636,10 +551,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetArrowIndex(int32 ArrowIndex)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetArrowIndex_Impl(int32 ArrowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetArrowIndex_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetArrowIndex_Impl Parms{};
 
@@ -656,10 +569,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetArrowIndex_Impl(int32 ArrowIndex)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetBeforePointValue_Impl(int32 InBeforePoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetBeforePointValue_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetBeforePointValue_Impl Parms{};
 
@@ -676,10 +587,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetBeforePointValue_Impl(int32 InBefo
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetBeforeTotalPointValue(int32 BeforeTotalPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetBeforeTotalPointValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetBeforeTotalPointValue Parms{};
 
@@ -696,10 +605,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetBeforeTotalPointValue(int32 Before
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetCharacterId(EDriverId CharaId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetCharacterId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetCharacterId Parms{};
 
@@ -716,10 +623,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetCharacterId(EDriverId CharaId_0)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetCharacterIndex_Impl(EDriverId InDriverId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetCharacterIndex_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetCharacterIndex_Impl Parms{};
 
@@ -736,10 +641,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetCharacterIndex_Impl(EDriverId InDr
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetCrossPlayIcon(ECrossplayPlatform CrossplayType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetCrossPlayIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetCrossPlayIcon Parms{};
 
@@ -756,10 +659,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetCrossPlayIcon(ECrossplayPlatform C
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetCursorLoop(bool IsPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetCursorLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetCursorLoop Parms{};
 
@@ -774,10 +675,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetCursorLoop(bool IsPlayer)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetCursorLoopDefault()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetCursorLoopDefault");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -788,10 +687,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetCursorLoopDefault()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetDrawRatePoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetDrawRatePoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -804,30 +701,14 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetDrawRatePoint()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetEarnPointValue(int32 EarnPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetEarnPointValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetEarnPointValue Parms{};
 
 	Parms.EarnPoint = EarnPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.SetFace
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Result_Sub_RankingTable_GP_02_C::SetFace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetFace");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -839,10 +720,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetFace()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetFestaBonusPoint(int32 Point, bool bIs1st)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetFestaBonusPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetFestaBonusPoint Parms{};
 
@@ -860,10 +739,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetFestaBonusPoint(int32 Point, bool 
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetGetPointValue_Impl(int32 InAddPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetGetPointValue_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetGetPointValue_Impl Parms{};
 
@@ -878,10 +755,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetGetPointValue_Impl(int32 InAddPoin
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetHonorTitle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetHonorTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -894,10 +769,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetHonorTitle()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTime(float Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetLapTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetLapTime Parms{};
 
@@ -914,10 +787,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTime(float Time)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimeAdd(double Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetLapTimeAdd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetLapTimeAdd Parms{};
 
@@ -934,10 +805,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimeAdd(double Time)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimeBase(double Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetLapTimeBase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetLapTimeBase Parms{};
 
@@ -954,10 +823,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimeBase(double Time)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimePlus(float Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetLapTimePlus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetLapTimePlus Parms{};
 
@@ -972,10 +839,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetLapTimePlus(float Time)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetLoadingModeOther()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetLoadingModeOther");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -988,10 +853,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetLoadingModeOther()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetOnlineIconAndPlate(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetOnlineIconAndPlate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetOnlineIconAndPlate Parms{};
 
@@ -1008,10 +871,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetOnlineIconAndPlate(int32 PlayerInd
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPartyPoint(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPartyPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPartyPoint Parms{};
 
@@ -1028,10 +889,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPartyPoint(int32 Point)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPartyResultModeImpl(bool bIsLoading)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPartyResultModeImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPartyResultModeImpl Parms{};
 
@@ -1049,10 +908,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPartyResultModeImpl(bool bIsLoadin
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlateColor(int32 Index_0, bool bIsNoRival)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlateColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlateColor Parms{};
 
@@ -1068,10 +925,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlateColor(int32 Index_0, bool bIs
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlatformIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1084,10 +939,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlatformIcon()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerControllerIndex_Impl(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlayerControllerIndex_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlayerControllerIndex_Impl Parms{};
 
@@ -1104,10 +957,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerControllerIndex_Impl(int32 I
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerIndex(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlayerIndex Parms{};
 
@@ -1124,10 +975,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerIndex(int32 PlayerIndex)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerIndexEx(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlayerIndexEx");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlayerIndexEx Parms{};
 
@@ -1144,10 +993,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerIndexEx(int32 Index_0)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerName_Impl(const class FText& InPlayerName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlayerName_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlayerName_Impl Parms{};
 
@@ -1164,10 +1011,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerName_Impl(const class FText&
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerNumber_Impl(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetPlayerNumber_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetPlayerNumber_Impl Parms{};
 
@@ -1184,10 +1029,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetPlayerNumber_Impl(int32 PlayerInde
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRacerIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRacerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetRacerIndex Parms{};
 
@@ -1204,10 +1047,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRacerIndex(int32 Index_0)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRacerName(const class FText& RacerName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRacerName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetRacerName Parms{};
 
@@ -1225,10 +1066,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRacerName(const class FText& Racer
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRankIndex(int32 RankIndex, bool bIsCheckCrown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRankIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetRankIndex Parms{};
 
@@ -1244,10 +1083,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRankIndex(int32 RankIndex, bool bI
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRankMatchMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRankMatchMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1258,10 +1095,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRankMatchMode()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRateRankIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRateRankIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1275,10 +1110,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRateRankIcon()
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetRivalIF(bool IsRival, bool IsPowerRival)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetRivalIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetRivalIF Parms{};
 
@@ -1296,10 +1129,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetRivalIF(bool IsRival, bool IsPower
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetTeamColor(int32 TeamNo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetTeamColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetTeamColor Parms{};
 
@@ -1316,10 +1147,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetTeamColor(int32 TeamNo)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetTotalPointValue(int32 TotalPoint_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetTotalPointValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetTotalPointValue Parms{};
 
@@ -1336,10 +1165,8 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetTotalPointValue(int32 TotalPoint_0
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::SetupVisibleSettingByGameMode(EGameModeId GameMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "SetupVisibleSettingByGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	Params::WBP_Result_Sub_RankingTable_GP_02_C_SetupVisibleSettingByGameMode Parms{};
 
@@ -1349,18 +1176,28 @@ void UWBP_Result_Sub_RankingTable_GP_02_C::SetupVisibleSettingByGameMode(EGameMo
 }
 
 
+// Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.UpdateFaceIcon
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_Sub_RankingTable_GP_02_C::UpdateFaceIcon()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Result_Sub_RankingTable_GP_02.WBP_Result_Sub_RankingTable_GP_02_C.UpdateRivalRacer
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Result_Sub_RankingTable_GP_02_C::UpdateRivalRacer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_GP_02_C", "UpdateRivalRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_GP_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

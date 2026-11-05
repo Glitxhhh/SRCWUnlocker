@@ -14,18 +14,15 @@
 #include "WBP_Race_HUD_Sub_RSR_5rings_Simple_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Race_HUD_Sub_RSR_5rings_Simple.WBP_Race_HUD_Sub_RSR_5rings_Simple_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_HUD_Sub_RSR_5rings_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::Construct()
 
 void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple", FuncInfo);
 
 	Params::WBP_Race_HUD_Sub_RSR_5rings_Simple_C_ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::ExecuteUbergraph_WBP_Race_HUD_Sub_RS
 
 void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::PickupRedStarRing(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "PickupRedStarRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_HUD_Sub_RSR_5rings_Simple_C", FnName));
 
 	Params::WBP_Race_HUD_Sub_RSR_5rings_Simple_C_PickupRedStarRing Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::PickupRedStarRing(int32 Index_0)
 
 void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::ResetRedStarRing()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "ResetRedStarRing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_HUD_Sub_RSR_5rings_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::ResetRedStarRing()
 
 void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::SetOtherRSRBAnimation(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Race_HUD_Sub_RSR_5rings_Simple_C", "SetOtherRSRBAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Race_HUD_Sub_RSR_5rings_Simple_C", FnName));
 
 	Params::WBP_Race_HUD_Sub_RSR_5rings_Simple_C_SetOtherRSRBAnimation Parms{};
 
@@ -104,5 +93,5 @@ void UWBP_Race_HUD_Sub_RSR_5rings_Simple_C::SetOtherRSRBAnimation(int32 Index_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

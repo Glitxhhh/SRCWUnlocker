@@ -14,8 +14,7 @@
 #include "BP_RacePlayerController_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RacePlayerController.BP_RacePlayerController_C.ExecuteUbergraph_BP_RacePlayerController
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_RacePlayerController_C::ExecuteUbergraph_BP_RacePlayerController(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "ExecuteUbergraph_BP_RacePlayerController");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RacePlayerController_C", "ExecuteUbergraph_BP_RacePlayerController", FuncInfo);
 
 	Params::BP_RacePlayerController_C_ExecuteUbergraph_BP_RacePlayerController Parms{};
 
@@ -45,10 +42,8 @@ void ABP_RacePlayerController_C::ExecuteUbergraph_BP_RacePlayerController(int32 
 
 void ABP_RacePlayerController_C::InpActEvt_Alt_G_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Alt_G_K2Node_InputDebugKeyEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Alt_G_K2Node_InputDebugKeyEvent_0 Parms{};
 
@@ -67,10 +62,8 @@ void ABP_RacePlayerController_C::InpActEvt_Alt_G_K2Node_InputDebugKeyEvent_0(con
 
 void ABP_RacePlayerController_C::InpActEvt_B_K2Node_InputDebugKeyEvent_5(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_B_K2Node_InputDebugKeyEvent_5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_B_K2Node_InputDebugKeyEvent_5 Parms{};
 
@@ -89,10 +82,8 @@ void ABP_RacePlayerController_C::InpActEvt_B_K2Node_InputDebugKeyEvent_5(const s
 
 void ABP_RacePlayerController_C::InpActEvt_Ctrl_G_K2Node_InputDebugKeyEvent_1(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Ctrl_G_K2Node_InputDebugKeyEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Ctrl_G_K2Node_InputDebugKeyEvent_1 Parms{};
 
@@ -111,10 +102,8 @@ void ABP_RacePlayerController_C::InpActEvt_Ctrl_G_K2Node_InputDebugKeyEvent_1(co
 
 void ABP_RacePlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_10(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_F9_K2Node_InputDebugKeyEvent_10");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_F9_K2Node_InputDebugKeyEvent_10 Parms{};
 
@@ -133,10 +122,8 @@ void ABP_RacePlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_10(const
 
 void ABP_RacePlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_11(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_F9_K2Node_InputDebugKeyEvent_11");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_F9_K2Node_InputDebugKeyEvent_11 Parms{};
 
@@ -155,10 +142,8 @@ void ABP_RacePlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_11(const
 
 void ABP_RacePlayerController_C::InpActEvt_F_K2Node_InputDebugKeyEvent_3(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_F_K2Node_InputDebugKeyEvent_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_F_K2Node_InputDebugKeyEvent_3 Parms{};
 
@@ -177,10 +162,8 @@ void ABP_RacePlayerController_C::InpActEvt_F_K2Node_InputDebugKeyEvent_3(const s
 
 void ABP_RacePlayerController_C::InpActEvt_G_K2Node_InputDebugKeyEvent_20(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_G_K2Node_InputDebugKeyEvent_20");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_G_K2Node_InputDebugKeyEvent_20 Parms{};
 
@@ -199,10 +182,8 @@ void ABP_RacePlayerController_C::InpActEvt_G_K2Node_InputDebugKeyEvent_20(const 
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_16(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_16");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_16 Parms{};
 
@@ -221,10 +202,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDe
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_17(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_17");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_17 Parms{};
 
@@ -243,10 +222,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDe
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_14(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_14");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_14 Parms{};
 
@@ -265,10 +242,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputD
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_15(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_15");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_15 Parms{};
 
@@ -287,10 +262,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputD
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_12(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_12");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_12 Parms{};
 
@@ -309,10 +282,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebu
 
 void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_13(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_13");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_13 Parms{};
 
@@ -331,10 +302,8 @@ void ABP_RacePlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebu
 
 void ABP_RacePlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_8(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_8 Parms{};
 
@@ -353,10 +322,8 @@ void ABP_RacePlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent
 
 void ABP_RacePlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_9(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_9 Parms{};
 
@@ -375,10 +342,8 @@ void ABP_RacePlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_9
 
 void ABP_RacePlayerController_C::InpActEvt_M_K2Node_InputDebugKeyEvent_7(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_M_K2Node_InputDebugKeyEvent_7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_M_K2Node_InputDebugKeyEvent_7 Parms{};
 
@@ -397,10 +362,8 @@ void ABP_RacePlayerController_C::InpActEvt_M_K2Node_InputDebugKeyEvent_7(const s
 
 void ABP_RacePlayerController_C::InpActEvt_N_K2Node_InputDebugKeyEvent_6(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_N_K2Node_InputDebugKeyEvent_6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_N_K2Node_InputDebugKeyEvent_6 Parms{};
 
@@ -419,10 +382,8 @@ void ABP_RacePlayerController_C::InpActEvt_N_K2Node_InputDebugKeyEvent_6(const s
 
 void ABP_RacePlayerController_C::InpActEvt_P_K2Node_InputDebugKeyEvent_19(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_P_K2Node_InputDebugKeyEvent_19");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_P_K2Node_InputDebugKeyEvent_19 Parms{};
 
@@ -441,10 +402,8 @@ void ABP_RacePlayerController_C::InpActEvt_P_K2Node_InputDebugKeyEvent_19(const 
 
 void ABP_RacePlayerController_C::InpActEvt_Period_K2Node_InputDebugKeyEvent_18(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Period_K2Node_InputDebugKeyEvent_18");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Period_K2Node_InputDebugKeyEvent_18 Parms{};
 
@@ -463,10 +422,8 @@ void ABP_RacePlayerController_C::InpActEvt_Period_K2Node_InputDebugKeyEvent_18(c
 
 void ABP_RacePlayerController_C::InpActEvt_Shift_G_K2Node_InputDebugKeyEvent_2(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Shift_G_K2Node_InputDebugKeyEvent_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Shift_G_K2Node_InputDebugKeyEvent_2 Parms{};
 
@@ -485,10 +442,8 @@ void ABP_RacePlayerController_C::InpActEvt_Shift_G_K2Node_InputDebugKeyEvent_2(c
 
 void ABP_RacePlayerController_C::InpActEvt_Six_K2Node_InputDebugKeyEvent_4(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "InpActEvt_Six_K2Node_InputDebugKeyEvent_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_InpActEvt_Six_K2Node_InputDebugKeyEvent_4 Parms{};
 
@@ -506,10 +461,8 @@ void ABP_RacePlayerController_C::InpActEvt_Six_K2Node_InputDebugKeyEvent_4(const
 
 void ABP_RacePlayerController_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_ReceiveEndPlay Parms{};
 
@@ -526,10 +479,8 @@ void ABP_RacePlayerController_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 bool ABP_RacePlayerController_C::IsFadeClear() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "IsFadeClear");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_IsFadeClear Parms{};
 
@@ -546,10 +497,8 @@ bool ABP_RacePlayerController_C::IsFadeClear() const
 
 bool ABP_RacePlayerController_C::OnIsMenuInputEnabled() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "OnIsMenuInputEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_OnIsMenuInputEnabled Parms{};
 
@@ -566,10 +515,8 @@ bool ABP_RacePlayerController_C::OnIsMenuInputEnabled() const
 
 bool ABP_RacePlayerController_C::OnIsSubMenuInputEnabled() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePlayerController_C", "OnIsSubMenuInputEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePlayerController_C", FnName));
 
 	Params::BP_RacePlayerController_C_OnIsSubMenuInputEnabled Parms{};
 
@@ -578,5 +525,5 @@ bool ABP_RacePlayerController_C::OnIsSubMenuInputEnabled() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

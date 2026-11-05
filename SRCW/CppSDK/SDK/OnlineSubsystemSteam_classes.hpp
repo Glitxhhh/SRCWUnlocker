@@ -14,8 +14,7 @@
 #include "OnlineSubsystemUtils_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class OnlineSubsystemSteam.SteamAuthComponentModuleInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_USteamNetDriver;
 
-}
-
+SDK_NAMESPACE_END

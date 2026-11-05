@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack.WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C.ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C::ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack", FuncInfo);
 
 	Params::WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C_ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack Parms{};
 
@@ -42,13 +39,11 @@ void UWBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C::ExecuteUbergraph_WBP_TopMenu_
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C::Init()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C", "Init");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

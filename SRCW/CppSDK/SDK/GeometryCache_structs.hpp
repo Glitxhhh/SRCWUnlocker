@@ -13,8 +13,7 @@
 #include "Niagara_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct GeometryCache.TrackRenderData
 // 0x00C0 (0x00C0 - 0x0000)
@@ -74,5 +73,4 @@ public:
 };
 DUMPER7_ASSERTS_FNiagaraGeometryCacheReference;
 
-}
-
+SDK_NAMESPACE_END

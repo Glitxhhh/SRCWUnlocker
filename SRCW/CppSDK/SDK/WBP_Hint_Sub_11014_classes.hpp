@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Hint_Sub_11014.WBP_Hint_Sub_11014_C
 // 0x0040 (0x0328 - 0x02E8)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Hint_Sub_11014_C;
 
-}
-
+SDK_NAMESPACE_END

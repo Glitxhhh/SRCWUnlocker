@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum InterchangeNodes.EInterchangeAnimationPayLoadType
 // NumValues: 0x0007
@@ -110,5 +109,4 @@ public:
 };
 DUMPER7_ASSERTS_FInterchangeMeshPayLoadKey;
 
-}
-
+SDK_NAMESPACE_END

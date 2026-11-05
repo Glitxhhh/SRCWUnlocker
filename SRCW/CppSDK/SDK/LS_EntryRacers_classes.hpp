@@ -14,8 +14,7 @@
 #include "LevelSequence_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass LS_EntryRacers.LS_EntryRacers_DirectorBP_C
 // 0x0028 (0x0070 - 0x0048)
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_ULS_EntryRacers_DirectorBP_C;
 
-}
-
+SDK_NAMESPACE_END

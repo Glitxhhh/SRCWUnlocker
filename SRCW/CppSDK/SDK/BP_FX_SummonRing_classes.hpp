@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FX_SummonRing.BP_FX_SummonRing_C
 // 0x0018 (0x02A8 - 0x0290)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_FX_SummonRing_C;
 
-}
-
+SDK_NAMESPACE_END

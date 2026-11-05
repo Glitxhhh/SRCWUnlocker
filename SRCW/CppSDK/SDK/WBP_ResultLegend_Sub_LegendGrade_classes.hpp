@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ResultLegend_Sub_LegendGrade.WBP_ResultLegend_Sub_LegendGrade_C
 // 0x0058 (0x0368 - 0x0310)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ResultLegend_Sub_LegendGrade_C;
 
-}
-
+SDK_NAMESPACE_END

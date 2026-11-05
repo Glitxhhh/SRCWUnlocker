@@ -13,11 +13,10 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CharaMachineSelect_Balloon.WBP_CharaMachineSelect_Balloon_C
-// 0x0000 (0x0328 - 0x0328)
+// 0x0000 (0x0340 - 0x0340)
 class UWBP_CharaMachineSelect_Balloon_C final : public UStoreBalloon
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CharaMachineSelect_Balloon_C;
 
-}
-
+SDK_NAMESPACE_END

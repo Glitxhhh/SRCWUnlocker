@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_DonpaTicket_Use.WBP_Popup_DonpaTicket_Use_C
 // 0x0098 (0x0490 - 0x03F8)
@@ -102,5 +101,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_DonpaTicket_Use_C;
 
-}
-
+SDK_NAMESPACE_END

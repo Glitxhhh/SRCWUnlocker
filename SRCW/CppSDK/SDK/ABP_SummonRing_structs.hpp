@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_SummonRing.ABP_SummonRing_C.AnimBlueprintGeneratedConstantData
 // 0x0337 (0x0338 - 0x0001)
@@ -54,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_SummonRing__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_Friend_CMN_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_CMN_Window.WBP_Friend_CMN_Window_C.ChangeCategoryDisplay
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_Friend_CMN_Window_C::ChangeCategoryDisplay(EFriendListCategory InCategory, bool bInDataCommunicationDisplay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ChangeCategoryDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_ChangeCategoryDisplay Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_Friend_CMN_Window_C::ChangeCategoryDisplay(EFriendListCategory InCateg
 
 void UWBP_Friend_CMN_Window_C::ChangeTabWidgetCategory(EFriendListCategory InCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ChangeTabWidgetCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_ChangeTabWidgetCategory Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_Friend_CMN_Window_C::ChangeTabWidgetCategory(EFriendListCategory InCat
 
 void UWBP_Friend_CMN_Window_C::ClearContentsWidgetListPlayerInfo(EFriendListCategory InCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ClearContentsWidgetListPlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_ClearContentsWidgetListPlayerInfo Parms{};
 
@@ -84,10 +77,8 @@ void UWBP_Friend_CMN_Window_C::ClearContentsWidgetListPlayerInfo(EFriendListCate
 
 void UWBP_Friend_CMN_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +89,8 @@ void UWBP_Friend_CMN_Window_C::Construct()
 
 void UWBP_Friend_CMN_Window_C::DestroyConfirmAnimationWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "DestroyConfirmAnimationWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +103,8 @@ void UWBP_Friend_CMN_Window_C::DestroyConfirmAnimationWidget()
 
 void UWBP_Friend_CMN_Window_C::ExecuteUbergraph_WBP_Friend_CMN_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ExecuteUbergraph_WBP_Friend_CMN_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_CMN_Window_C", "ExecuteUbergraph_WBP_Friend_CMN_Window", FuncInfo);
 
 	Params::WBP_Friend_CMN_Window_C_ExecuteUbergraph_WBP_Friend_CMN_Window Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_Friend_CMN_Window_C::ExecuteUbergraph_WBP_Friend_CMN_Window(int32 Entr
 
 void UWBP_Friend_CMN_Window_C::ListDirectionEvent(EUnionUIControlDir Direction, class UUnionUIButtonBase* Button, TArray<class UWBP_Friend_Sub_PlayerPlate_Small_C*>& PlateWidgetArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ListDirectionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_ListDirectionEvent Parms{};
 
@@ -160,10 +145,8 @@ void UWBP_Friend_CMN_Window_C::ListDirectionEvent(EUnionUIControlDir Direction, 
 
 void UWBP_Friend_CMN_Window_C::OnBackKeyPressedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnBackKeyPressedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnBackKeyPressedEvent Parms{};
 
@@ -178,10 +161,8 @@ void UWBP_Friend_CMN_Window_C::OnBackKeyPressedEvent(class UObject* Object)
 
 void UWBP_Friend_CMN_Window_C::OnErrorPopupWindowEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnErrorPopupWindowEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,10 +175,8 @@ void UWBP_Friend_CMN_Window_C::OnErrorPopupWindowEnd()
 
 void UWBP_Friend_CMN_Window_C::OnFaceKeyPressedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnFaceKeyPressedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnFaceKeyPressedEvent Parms{};
 
@@ -216,10 +195,8 @@ void UWBP_Friend_CMN_Window_C::OnFaceKeyPressedEvent(class UObject* Object)
 
 struct FEventReply UWBP_Friend_CMN_Window_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnFocusReceived Parms{};
 
@@ -239,10 +216,8 @@ struct FEventReply UWBP_Friend_CMN_Window_C::OnFocusReceived(const struct FGeome
 
 void UWBP_Friend_CMN_Window_C::OnFriendListCommandSuccess(EFriendListCommandType InCommandType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnFriendListCommandSuccess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnFriendListCommandSuccess Parms{};
 
@@ -257,10 +232,8 @@ void UWBP_Friend_CMN_Window_C::OnFriendListCommandSuccess(EFriendListCommandType
 
 void UWBP_Friend_CMN_Window_C::OnInvitationWarningWindowEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnInvitationWarningWindowEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -273,10 +246,8 @@ void UWBP_Friend_CMN_Window_C::OnInvitationWarningWindowEnd()
 
 void UWBP_Friend_CMN_Window_C::OnLeftShoulderKeyPressedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnLeftShoulderKeyPressedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnLeftShoulderKeyPressedEvent Parms{};
 
@@ -295,10 +266,8 @@ void UWBP_Friend_CMN_Window_C::OnLeftShoulderKeyPressedEvent(class UObject* Obje
 
 void UWBP_Friend_CMN_Window_C::OnLobbyIdSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData, const TArray<struct FLobbyId>& InLobbyIdData, ELobbyType InLobbyType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnLobbyIdSearchSuccess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnLobbyIdSearchSuccess Parms{};
 
@@ -317,10 +286,8 @@ void UWBP_Friend_CMN_Window_C::OnLobbyIdSearchSuccess(const TArray<struct FCommo
 
 void UWBP_Friend_CMN_Window_C::OnRightShoulderKeyPressedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnRightShoulderKeyPressedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnRightShoulderKeyPressedEvent Parms{};
 
@@ -335,10 +302,8 @@ void UWBP_Friend_CMN_Window_C::OnRightShoulderKeyPressedEvent(class UObject* Obj
 
 void UWBP_Friend_CMN_Window_C::OnShowPfProfileErrorWindowEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnShowPfProfileErrorWindowEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -351,10 +316,8 @@ void UWBP_Friend_CMN_Window_C::OnShowPfProfileErrorWindowEnd()
 
 void UWBP_Friend_CMN_Window_C::OnSubWidgetDisplayEnd(EFriendListCommandType PrevWidgetCommandType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnSubWidgetDisplayEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnSubWidgetDisplayEnd Parms{};
 
@@ -371,10 +334,8 @@ void UWBP_Friend_CMN_Window_C::OnSubWidgetDisplayEnd(EFriendListCommandType Prev
 
 void UWBP_Friend_CMN_Window_C::OnTabClicked(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnTabClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnTabClicked Parms{};
 
@@ -391,10 +352,8 @@ void UWBP_Friend_CMN_Window_C::OnTabClicked(EMachineCustomizeTabID InTabID)
 
 void UWBP_Friend_CMN_Window_C::OnUserSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnUserSearchSuccess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_OnUserSearchSuccess Parms{};
 
@@ -409,10 +368,8 @@ void UWBP_Friend_CMN_Window_C::OnUserSearchSuccess(const TArray<struct FCommon_U
 
 void UWBP_Friend_CMN_Window_C::OnWaitWindowEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "OnWaitWindowEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -423,10 +380,8 @@ void UWBP_Friend_CMN_Window_C::OnWaitWindowEnd()
 
 void UWBP_Friend_CMN_Window_C::ReflectOnlineSettingData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "ReflectOnlineSettingData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -437,10 +392,8 @@ void UWBP_Friend_CMN_Window_C::ReflectOnlineSettingData()
 
 void UWBP_Friend_CMN_Window_C::RegisterMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "RegisterMenuInputReceiveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -453,10 +406,8 @@ void UWBP_Friend_CMN_Window_C::RegisterMenuInputReceiveObject()
 
 void UWBP_Friend_CMN_Window_C::SetActiveWidgetIndexByCategory(EFriendListCategory InCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetActiveWidgetIndexByCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetActiveWidgetIndexByCategory Parms{};
 
@@ -473,10 +424,8 @@ void UWBP_Friend_CMN_Window_C::SetActiveWidgetIndexByCategory(EFriendListCategor
 
 void UWBP_Friend_CMN_Window_C::SetButtonControlEnableCurrentWidget(bool bInEnanle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetButtonControlEnableCurrentWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetButtonControlEnableCurrentWidget Parms{};
 
@@ -494,10 +443,8 @@ void UWBP_Friend_CMN_Window_C::SetButtonControlEnableCurrentWidget(bool bInEnanl
 
 void UWBP_Friend_CMN_Window_C::SetCategoryNewIconVisible(EFriendListCategory InCategory, bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetCategoryNewIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetCategoryNewIconVisible Parms{};
 
@@ -513,10 +460,8 @@ void UWBP_Friend_CMN_Window_C::SetCategoryNewIconVisible(EFriendListCategory InC
 
 void UWBP_Friend_CMN_Window_C::SetDataCommunicationDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetDataCommunicationDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -527,10 +472,8 @@ void UWBP_Friend_CMN_Window_C::SetDataCommunicationDisplay()
 
 void UWBP_Friend_CMN_Window_C::SetMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetMenuInputReceiveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -543,10 +486,8 @@ void UWBP_Friend_CMN_Window_C::SetMenuInputReceiveObject()
 
 void UWBP_Friend_CMN_Window_C::SetMyListPlayerInfo(const struct FFriendListPlayerInfo& InListPlayerInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetMyListPlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetMyListPlayerInfo Parms{};
 
@@ -561,10 +502,8 @@ void UWBP_Friend_CMN_Window_C::SetMyListPlayerInfo(const struct FFriendListPlaye
 
 void UWBP_Friend_CMN_Window_C::SetMyPlayerEmpty()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetMyPlayerEmpty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -578,10 +517,8 @@ void UWBP_Friend_CMN_Window_C::SetMyPlayerEmpty()
 
 void UWBP_Friend_CMN_Window_C::SetMyPlayerIcon(const TSoftObjectPtr<class UTexture2D>& InIconTexture, const struct FLinearColor& InBgColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetMyPlayerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetMyPlayerIcon Parms{};
 
@@ -599,10 +536,8 @@ void UWBP_Friend_CMN_Window_C::SetMyPlayerIcon(const TSoftObjectPtr<class UTextu
 
 void UWBP_Friend_CMN_Window_C::SetScrollBoxVisibility(ESlateVisibility Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetScrollBoxVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetScrollBoxVisibility Parms{};
 
@@ -617,10 +552,8 @@ void UWBP_Friend_CMN_Window_C::SetScrollBoxVisibility(ESlateVisibility Param)
 
 void UWBP_Friend_CMN_Window_C::SetupDataCommunicationDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetupDataCommunicationDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -633,10 +566,8 @@ void UWBP_Friend_CMN_Window_C::SetupDataCommunicationDisplay()
 
 void UWBP_Friend_CMN_Window_C::SetupInsideListWidget(EFriendListCategory InCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetupInsideListWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetupInsideListWidget Parms{};
 
@@ -653,10 +584,8 @@ void UWBP_Friend_CMN_Window_C::SetupInsideListWidget(EFriendListCategory InCateg
 
 void UWBP_Friend_CMN_Window_C::SetupTabWidget(ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetupTabWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetupTabWidget Parms{};
 
@@ -673,10 +602,8 @@ void UWBP_Friend_CMN_Window_C::SetupTabWidget(ECrossplayPlatform InPlatformType)
 
 void UWBP_Friend_CMN_Window_C::SetWidgetFocus(class APlayerController* PlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_SetWidgetFocus Parms{};
 
@@ -694,10 +621,8 @@ void UWBP_Friend_CMN_Window_C::SetWidgetFocus(class APlayerController* PlayerCon
 
 EFriendListCategory UWBP_Friend_CMN_Window_C::TabIDToCategory(EMachineCustomizeTabID Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "TabIDToCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_TabIDToCategory Parms{};
 
@@ -714,10 +639,8 @@ EFriendListCategory UWBP_Friend_CMN_Window_C::TabIDToCategory(EMachineCustomizeT
 
 void UWBP_Friend_CMN_Window_C::UnregisterMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "UnregisterMenuInputReceiveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -731,10 +654,8 @@ void UWBP_Friend_CMN_Window_C::UnregisterMenuInputReceiveObject()
 
 void UWBP_Friend_CMN_Window_C::UpdateFriendList(const TArray<struct FFriendListPlayerInfo>& ListPlayerInfo, bool InDataError)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "UpdateFriendList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_UpdateFriendList Parms{};
 
@@ -753,10 +674,8 @@ void UWBP_Friend_CMN_Window_C::UpdateFriendList(const TArray<struct FFriendListP
 
 void UWBP_Friend_CMN_Window_C::UpdateLobbyIdDisplay(const class FString& InShortLobbyId, bool bInSuccess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "UpdateLobbyIdDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_UpdateLobbyIdDisplay Parms{};
 
@@ -775,10 +694,8 @@ void UWBP_Friend_CMN_Window_C::UpdateLobbyIdDisplay(const class FString& InShort
 
 void UWBP_Friend_CMN_Window_C::UpdateOnlineSettingList(const TArray<struct FFriendListOnlineSettingData>& InOnlineSettingData, bool InDataError)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "UpdateOnlineSettingList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_UpdateOnlineSettingList Parms{};
 
@@ -797,10 +714,8 @@ void UWBP_Friend_CMN_Window_C::UpdateOnlineSettingList(const TArray<struct FFrie
 
 void UWBP_Friend_CMN_Window_C::UpdateRecentPlayerList(const TArray<struct FFriendListPlayerInfo>& ListPlayerInfo, bool InDataError)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_CMN_Window_C", "UpdateRecentPlayerList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_CMN_Window_C", FnName));
 
 	Params::WBP_Friend_CMN_Window_C_UpdateRecentPlayerList Parms{};
 
@@ -810,5 +725,5 @@ void UWBP_Friend_CMN_Window_C::UpdateRecentPlayerList(const TArray<struct FFrien
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

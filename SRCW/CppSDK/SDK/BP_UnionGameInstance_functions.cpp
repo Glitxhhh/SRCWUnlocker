@@ -14,44 +14,21 @@
 #include "BP_UnionGameInstance_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_UnionGameInstance.BP_UnionGameInstance_C.ExecuteUbergraph_BP_UnionGameInstance
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBP_UnionGameInstance_C::ExecuteUbergraph_BP_UnionGameInstance(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "ExecuteUbergraph_BP_UnionGameInstance");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_UnionGameInstance_C", "ExecuteUbergraph_BP_UnionGameInstance", FuncInfo);
 
 	Params::BP_UnionGameInstance_C_ExecuteUbergraph_BP_UnionGameInstance Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UnionGameInstance.BP_UnionGameInstance_C.OnLoaded_C798D8744866C6A781E1E5B0E4C53C75
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_UnionGameInstance_C::OnLoaded_C798D8744866C6A781E1E5B0E4C53C75(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "OnLoaded_C798D8744866C6A781E1E5B0E4C53C75");
-
-	Params::BP_UnionGameInstance_C_OnLoaded_C798D8744866C6A781E1E5B0E4C53C75 Parms{};
-
-	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -62,24 +39,8 @@ void UBP_UnionGameInstance_C::OnLoaded_C798D8744866C6A781E1E5B0E4C53C75(class UO
 
 void UBP_UnionGameInstance_C::ReceiveInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "ReceiveInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UnionGameInstance.BP_UnionGameInstance_C.SetUpMilestone
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_UnionGameInstance_C::SetUpMilestone()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "SetUpMilestone");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionGameInstance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +53,8 @@ void UBP_UnionGameInstance_C::SetUpMilestone()
 
 void UBP_UnionGameInstance_C::GetVCSRevisionNumIF(int32* RevisionNum) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "GetVCSRevisionNumIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionGameInstance_C", FnName));
 
 	Params::BP_UnionGameInstance_C_GetVCSRevisionNumIF Parms{};
 
@@ -113,10 +72,8 @@ void UBP_UnionGameInstance_C::GetVCSRevisionNumIF(int32* RevisionNum) const
 
 void UBP_UnionGameInstance_C::GetVCSRevisionStrIF(class FString* VCSStr) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameInstance_C", "GetVCSRevisionStrIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionGameInstance_C", FnName));
 
 	Params::BP_UnionGameInstance_C_GetVCSRevisionStrIF Parms{};
 
@@ -126,5 +83,5 @@ void UBP_UnionGameInstance_C::GetVCSRevisionStrIF(class FString* VCSStr) const
 		*VCSStr = std::move(Parms.VCSStr);
 }
 
-}
 
+SDK_NAMESPACE_END

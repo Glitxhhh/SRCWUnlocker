@@ -14,18 +14,15 @@
 #include "WBP_Result_GP_Player0204_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_GP_Player0204.WBP_Result_GP_Player0204_C.BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_Result_GP_Player0204_C::BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Result_GP_Player0204_C::BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_
 
 void UWBP_Result_GP_Player0204_C::BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Result_GP_Player0204_C::BndEvt__WBP_Result_GP_Player0204_BUTTON_PRESS_
 
 void UWBP_Result_GP_Player0204_C::CalcLinesPanelVisibleByRacerCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "CalcLinesPanelVisibleByRacerCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_Result_GP_Player0204_C::CalcLinesPanelVisibleByRacerCount()
 
 void UWBP_Result_GP_Player0204_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UWBP_Result_GP_Player0204_C::Construct()
 
 void UWBP_Result_GP_Player0204_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +81,8 @@ void UWBP_Result_GP_Player0204_C::Destruct()
 
 void UWBP_Result_GP_Player0204_C::EnterStateFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "EnterStateFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +95,8 @@ void UWBP_Result_GP_Player0204_C::EnterStateFinished()
 
 void UWBP_Result_GP_Player0204_C::ExecuteUbergraph_WBP_Result_GP_Player0204(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "ExecuteUbergraph_WBP_Result_GP_Player0204");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_GP_Player0204_C", "ExecuteUbergraph_WBP_Result_GP_Player0204", FuncInfo);
 
 	Params::WBP_Result_GP_Player0204_C_ExecuteUbergraph_WBP_Result_GP_Player0204 Parms{};
 
@@ -128,10 +113,8 @@ void UWBP_Result_GP_Player0204_C::ExecuteUbergraph_WBP_Result_GP_Player0204(int3
 
 class UUnionRaceUIResultPanel* UWBP_Result_GP_Player0204_C::GetResultLinesPanel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "GetResultLinesPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_GetResultLinesPanel Parms{};
 
@@ -148,10 +131,8 @@ class UUnionRaceUIResultPanel* UWBP_Result_GP_Player0204_C::GetResultLinesPanel(
 
 void UWBP_Result_GP_Player0204_C::IsPartyRaceMissionExists(bool* Exists)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "IsPartyRaceMissionExists");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_IsPartyRaceMissionExists Parms{};
 
@@ -169,10 +150,8 @@ void UWBP_Result_GP_Player0204_C::IsPartyRaceMissionExists(bool* Exists)
 
 void UWBP_Result_GP_Player0204_C::OnAcceptButton(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "OnAcceptButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_OnAcceptButton Parms{};
 
@@ -189,10 +168,8 @@ void UWBP_Result_GP_Player0204_C::OnAcceptButton(class UObject* Object)
 
 void UWBP_Result_GP_Player0204_C::OnFinishedResultAnim(const int32& FinishedResultStateId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "OnFinishedResultAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_OnFinishedResultAnim Parms{};
 
@@ -207,10 +184,8 @@ void UWBP_Result_GP_Player0204_C::OnFinishedResultAnim(const int32& FinishedResu
 
 void UWBP_Result_GP_Player0204_C::OnForcePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "OnForcePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +196,8 @@ void UWBP_Result_GP_Player0204_C::OnForcePressed()
 
 void UWBP_Result_GP_Player0204_C::OnFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "OnFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +208,8 @@ void UWBP_Result_GP_Player0204_C::OnFullScreenMouseClick()
 
 void UWBP_Result_GP_Player0204_C::PlayLinesPanelAddMoveAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PlayLinesPanelAddMoveAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +220,8 @@ void UWBP_Result_GP_Player0204_C::PlayLinesPanelAddMoveAnim()
 
 void UWBP_Result_GP_Player0204_C::PlayLinesPanelInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PlayLinesPanelInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -263,10 +232,8 @@ void UWBP_Result_GP_Player0204_C::PlayLinesPanelInAnim()
 
 void UWBP_Result_GP_Player0204_C::PlayLinesPanelOutAnimByRacerCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PlayLinesPanelOutAnimByRacerCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -277,10 +244,8 @@ void UWBP_Result_GP_Player0204_C::PlayLinesPanelOutAnimByRacerCount()
 
 void UWBP_Result_GP_Player0204_C::PlayLinesPanelOutAnimTimelag()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PlayLinesPanelOutAnimTimelag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -291,10 +256,8 @@ void UWBP_Result_GP_Player0204_C::PlayLinesPanelOutAnimTimelag()
 
 void UWBP_Result_GP_Player0204_C::PlayLinesPanelTotalInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PlayLinesPanelTotalInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -307,10 +270,8 @@ void UWBP_Result_GP_Player0204_C::PlayLinesPanelTotalInAnim()
 
 void UWBP_Result_GP_Player0204_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_PreConstruct Parms{};
 
@@ -325,10 +286,8 @@ void UWBP_Result_GP_Player0204_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Result_GP_Player0204_C::RemoveInputRevieveObj()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "RemoveInputRevieveObj");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -341,10 +300,8 @@ void UWBP_Result_GP_Player0204_C::RemoveInputRevieveObj()
 
 void UWBP_Result_GP_Player0204_C::SetLinesPanelRacerCount(int32 RacerCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "SetLinesPanelRacerCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_SetLinesPanelRacerCount Parms{};
 
@@ -362,10 +319,8 @@ void UWBP_Result_GP_Player0204_C::SetLinesPanelRacerCount(int32 RacerCount)
 
 void UWBP_Result_GP_Player0204_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	Params::WBP_Result_GP_Player0204_C_Tick Parms{};
 
@@ -381,13 +336,11 @@ void UWBP_Result_GP_Player0204_C::Tick(const struct FGeometry& MyGeometry, float
 
 void UWBP_Result_GP_Player0204_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_GP_Player0204_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_GP_Player0204_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

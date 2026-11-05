@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Drone.BP_Drone_C
 // 0x0050 (0x0430 - 0x03E0)
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Drone_C;
 
-}
-
+SDK_NAMESPACE_END

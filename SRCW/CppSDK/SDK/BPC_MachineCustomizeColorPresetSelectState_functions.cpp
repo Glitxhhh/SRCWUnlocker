@@ -14,8 +14,7 @@
 #include "BPC_MachineCustomizeColorPresetSelectState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeColorPresetSelectState.BPC_MachineCustomizeColorPresetSelectState_C.EventCancel
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::EventCancel(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "EventCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorPresetSelectState_C_EventCancel Parms{};
 
@@ -45,10 +42,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::EventCancel(int32 InPlayerIn
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::EventColorPresetSelectPage_OnItemSelected(const struct FST_ColorPresetSelectPageItemData& newParam, int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "EventColorPresetSelectPage_OnItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorPresetSelectState_C_EventColorPresetSelectPage_OnItemSelected Parms{};
 
@@ -68,10 +63,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::EventColorPresetSelectPage_O
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::EventColorPresetSelectPage_OnItemFocused(const struct FST_ColorPresetSelectPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "EventColorPresetSelectPage_OnItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorPresetSelectState_C_EventColorPresetSelectPage_OnItemFocused Parms{};
 
@@ -88,10 +81,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::EventColorPresetSelectPage_O
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::OnSetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "OnSetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -102,10 +93,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::OnSetupPage()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::SetProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "SetProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +105,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::SetProperties()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::BindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "BindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -130,10 +117,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::BindTab()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::UnbindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "UnbindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +129,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::UnbindTab()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::BindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "BindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +141,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::BindPage()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::UnbindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "UnbindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -172,10 +153,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::UnbindPage()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,10 +167,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::OnInitState()
 
 void UBPC_MachineCustomizeColorPresetSelectState_C::ExecuteUbergraph_BPC_MachineCustomizeColorPresetSelectState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeColorPresetSelectState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizeColorPresetSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeColorPresetSelectState", FuncInfo);
 
 	Params::BPC_MachineCustomizeColorPresetSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeColorPresetSelectState Parms{};
 
@@ -208,10 +185,8 @@ void UBPC_MachineCustomizeColorPresetSelectState_C::ExecuteUbergraph_BPC_Machine
 
 class AGarageCamera* UBPC_MachineCustomizeColorPresetSelectState_C::GetCamera() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorPresetSelectState_C", "GetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorPresetSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorPresetSelectState_C_GetCamera Parms{};
 
@@ -220,5 +195,5 @@ class AGarageCamera* UBPC_MachineCustomizeColorPresetSelectState_C::GetCamera() 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

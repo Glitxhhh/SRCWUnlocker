@@ -14,8 +14,7 @@
 #include "WBP_Drone_Text_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Drone_Text.WBP_Drone_Text_C.ExecuteUbergraph_WBP_Drone_Text
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Drone_Text_C::ExecuteUbergraph_WBP_Drone_Text(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Drone_Text_C", "ExecuteUbergraph_WBP_Drone_Text");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Drone_Text_C", "ExecuteUbergraph_WBP_Drone_Text", FuncInfo);
 
 	Params::WBP_Drone_Text_C_ExecuteUbergraph_WBP_Drone_Text Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Drone_Text_C::ExecuteUbergraph_WBP_Drone_Text(int32 EntryPoint)
 
 void UWBP_Drone_Text_C::Set_Moniter_Meterial_Index(double Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Drone_Text_C", "Set Moniter Meterial Index");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Drone_Text_C", FnName));
 
 	Params::WBP_Drone_Text_C_Set_Moniter_Meterial_Index Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_Drone_Text_C::Set_Moniter_Meterial_Index(double Index_0)
 
 void UWBP_Drone_Text_C::Set_Moniter_Meterial_Reverse(bool Is_Reverse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Drone_Text_C", "Set Moniter Meterial Reverse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Drone_Text_C", FnName));
 
 	Params::WBP_Drone_Text_C_Set_Moniter_Meterial_Reverse Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_Drone_Text_C::Set_Moniter_Meterial_Reverse(bool Is_Reverse)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

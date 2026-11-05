@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_HoldItemSKM.BP_HoldItemSKM_C
 // 0x00D0 (0x0390 - 0x02C0)
@@ -69,5 +68,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_HoldItemSKM_C;
 
-}
-
+SDK_NAMESPACE_END

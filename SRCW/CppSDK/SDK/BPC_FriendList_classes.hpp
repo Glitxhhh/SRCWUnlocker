@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_FriendList.BPC_FriendList_C
 // 0x0028 (0x0170 - 0x0148)
@@ -68,5 +67,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_FriendList_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,27 @@
 #include "BP_MenuRacerLobby_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.Attach Driver
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MenuRacerLobby_C::Attach_Driver()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "Attach Driver");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.AttachCrown
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MenuRacerLobby_C::AttachCrown()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +48,8 @@ void ABP_MenuRacerLobby_C::Attach_Driver()
 
 void ABP_MenuRacerLobby_C::ChangeMachineColor(int32 InGroupIndex, bool InEnableEffect)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ChangeMachineColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_ChangeMachineColor Parms{};
 
@@ -50,20 +57,6 @@ void ABP_MenuRacerLobby_C::ChangeMachineColor(int32 InGroupIndex, bool InEnableE
 	Parms.InEnableEffect = InEnableEffect;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.ChangeVisibleCrownfromRacerVisible
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::ChangeVisibleCrownfromRacerVisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ChangeVisibleCrownfromRacerVisible");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -83,10 +76,8 @@ void ABP_MenuRacerLobby_C::ChangeVisibleCrownfromRacerVisible()
 
 void ABP_MenuRacerLobby_C::CheckChangeParam(EDriverId Racer_Data_Driver_Id, ECarStatusType Racer_Data_Vehicle_Type, EMachineId Racer_Data_Front_Parts_Id, EMachineId Racer_Data_Rear_Parts_Id, EMachineId Racer_Data_Tire_Parts_Id, bool* ChangedDriverId, bool* ChangedVehicleType, bool* ChangedFrontPartsId, bool* ChangedRearPartsId, bool* ChangedTirePartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "CheckChangeParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_CheckChangeParam Parms{};
 
@@ -115,29 +106,13 @@ void ABP_MenuRacerLobby_C::CheckChangeParam(EDriverId Racer_Data_Driver_Id, ECar
 }
 
 
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.DestroyCrown
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::DestroyCrown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "DestroyCrown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.DestroyDriverActor
 // (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_MenuRacerLobby_C::DestroyDriverActor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "DestroyDriverActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +123,8 @@ void ABP_MenuRacerLobby_C::DestroyDriverActor()
 
 void ABP_MenuRacerLobby_C::DestroyMachineComponet()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "DestroyMachineComponet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -164,10 +137,8 @@ void ABP_MenuRacerLobby_C::DestroyMachineComponet()
 
 void ABP_MenuRacerLobby_C::ExecuteUbergraph_BP_MenuRacerLobby(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ExecuteUbergraph_BP_MenuRacerLobby");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MenuRacerLobby_C", "ExecuteUbergraph_BP_MenuRacerLobby", FuncInfo);
 
 	Params::BP_MenuRacerLobby_C_ExecuteUbergraph_BP_MenuRacerLobby Parms{};
 
@@ -184,10 +155,8 @@ void ABP_MenuRacerLobby_C::ExecuteUbergraph_BP_MenuRacerLobby(int32 EntryPoint)
 
 void ABP_MenuRacerLobby_C::GetDriver(EDriverId* DriverId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "GetDriver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_GetDriver Parms{};
 
@@ -207,10 +176,8 @@ void ABP_MenuRacerLobby_C::GetDriver(EDriverId* DriverId_0)
 
 void ABP_MenuRacerLobby_C::GetDriverData(EDriverId DriverId_0, struct FDriverData* DriverData, bool* bFind)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "GetDriverData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_GetDriverData Parms{};
 
@@ -226,29 +193,13 @@ void ABP_MenuRacerLobby_C::GetDriverData(EDriverId DriverId_0, struct FDriverDat
 }
 
 
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.HiddenCrown
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MenuRacerLobby_C::HiddenCrown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "HiddenCrown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.Initialize
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MenuRacerLobby_C::Initialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "Initialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +213,8 @@ void ABP_MenuRacerLobby_C::Initialize()
 
 void ABP_MenuRacerLobby_C::OnCreateAuraEffect(EMachineAuraId InAuraID, ECarStatusType InType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "OnCreateAuraEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_OnCreateAuraEffect Parms{};
 
@@ -284,10 +233,8 @@ void ABP_MenuRacerLobby_C::OnCreateAuraEffect(EMachineAuraId InAuraID, ECarStatu
 
 void ABP_MenuRacerLobby_C::PlayDriverAnimation(int32 StateId, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "PlayDriverAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_PlayDriverAnimation Parms{};
 
@@ -305,10 +252,8 @@ void ABP_MenuRacerLobby_C::PlayDriverAnimation(int32 StateId, int32 Index_0)
 
 void ABP_MenuRacerLobby_C::PlayDriverStampVoice(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "PlayDriverStampVoice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_PlayDriverStampVoice Parms{};
 
@@ -326,10 +271,8 @@ void ABP_MenuRacerLobby_C::PlayDriverStampVoice(int32 InButtonIndex)
 
 void ABP_MenuRacerLobby_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const ESoundPan InSoundPan)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "PlayVoice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_PlayVoice Parms{};
 
@@ -348,10 +291,8 @@ void ABP_MenuRacerLobby_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const
 
 void ABP_MenuRacerLobby_C::Polling_Set_Sticker(class UStickerBakerHandle* StickerBakerHandle, bool* IsCompleteSetSticker)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "Polling Set Sticker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_Polling_Set_Sticker Parms{};
 
@@ -371,10 +312,8 @@ void ABP_MenuRacerLobby_C::Polling_Set_Sticker(class UStickerBakerHandle* Sticke
 
 void ABP_MenuRacerLobby_C::PrintFrontStickerLog(class UStickerBakerHandle* ターゲット)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "PrintFrontStickerLog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_PrintFrontStickerLog Parms{};
 
@@ -391,10 +330,8 @@ void ABP_MenuRacerLobby_C::PrintFrontStickerLog(class UStickerBakerHandle* タ�
 
 void ABP_MenuRacerLobby_C::PrintRearStickerLog(class UStickerBakerHandle* ターゲット)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "PrintRearStickerLog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_PrintRearStickerLog Parms{};
 
@@ -409,10 +346,8 @@ void ABP_MenuRacerLobby_C::PrintRearStickerLog(class UStickerBakerHandle* ター
 
 void ABP_MenuRacerLobby_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -423,10 +358,8 @@ void ABP_MenuRacerLobby_C::ReceiveBeginPlay()
 
 void ABP_MenuRacerLobby_C::ReceiveDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ReceiveDestroyed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -439,10 +372,8 @@ void ABP_MenuRacerLobby_C::ReceiveDestroyed()
 
 void ABP_MenuRacerLobby_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_ReceiveTick Parms{};
 
@@ -457,10 +388,8 @@ void ABP_MenuRacerLobby_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_MenuRacerLobby_C::RoomEntryAnimEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "RoomEntryAnimEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -471,10 +400,8 @@ void ABP_MenuRacerLobby_C::RoomEntryAnimEvent()
 
 void ABP_MenuRacerLobby_C::RoomEntryAnimLooping()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "RoomEntryAnimLooping");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -485,20 +412,18 @@ void ABP_MenuRacerLobby_C::RoomEntryAnimLooping()
 // Parameters:
 // EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FUserMachineCustomizeData& InCustomizeData                                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    bIsSpawnCrown                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECrownGrade                             InCrownGrade                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, bool bIsSpawnCrown)
+void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachineCustomizeData& InCustomizeData, ECrownGrade InCrownGrade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetAll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetAll Parms{};
 
 	Parms.InDriverId = InDriverId;
 	Parms.InCustomizeData = std::move(InCustomizeData);
-	Parms.bIsSpawnCrown = bIsSpawnCrown;
+	Parms.InCrownGrade = InCrownGrade;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -513,10 +438,8 @@ void ABP_MenuRacerLobby_C::SetAll(EDriverId InDriverId, const struct FUserMachin
 
 void ABP_MenuRacerLobby_C::SetBoneSetting(bool UseBoneControl, const struct FRotator& NeckRotation, const struct FRotator& SpineRotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetBoneSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetBoneSetting Parms{};
 
@@ -535,10 +458,8 @@ void ABP_MenuRacerLobby_C::SetBoneSetting(bool UseBoneControl, const struct FRot
 
 void ABP_MenuRacerLobby_C::SetDriver(EDriverId DriverId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetDriver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetDriver Parms{};
 
@@ -555,10 +476,8 @@ void ABP_MenuRacerLobby_C::SetDriver(EDriverId DriverId_0)
 
 void ABP_MenuRacerLobby_C::SetForcedLod(int32 NewForcedLodModel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetForcedLod");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetForcedLod Parms{};
 
@@ -575,10 +494,8 @@ void ABP_MenuRacerLobby_C::SetForcedLod(int32 NewForcedLodModel)
 
 void ABP_MenuRacerLobby_C::SetHornData(EMachineHornType InHornType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetHornData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetHornData Parms{};
 
@@ -595,10 +512,8 @@ void ABP_MenuRacerLobby_C::SetHornData(EMachineHornType InHornType)
 
 void ABP_MenuRacerLobby_C::SetLODLevel(int32 Lod_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetLODLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetLODLevel Parms{};
 
@@ -616,10 +531,8 @@ void ABP_MenuRacerLobby_C::SetLODLevel(int32 Lod_0)
 
 void ABP_MenuRacerLobby_C::SetupMeshComps(bool bUse, int32 Lod_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetupMeshComps");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SetupMeshComps Parms{};
 
@@ -630,35 +543,13 @@ void ABP_MenuRacerLobby_C::SetupMeshComps(bool bUse, int32 Lod_0)
 }
 
 
-// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SetVisibilityCrown
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MenuRacerLobby_C::SetVisibilityCrown(bool bIsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SetVisibilityCrown");
-
-	Params::BP_MenuRacerLobby_C_SetVisibilityCrown Parms{};
-
-	Parms.bIsVisible = bIsVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SpawnDriverActor
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MenuRacerLobby_C::SpawnDriverActor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SpawnDriverActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -669,10 +560,8 @@ void ABP_MenuRacerLobby_C::SpawnDriverActor()
 
 void ABP_MenuRacerLobby_C::SpawnHoverboard()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SpawnHoverboard");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -683,10 +572,8 @@ void ABP_MenuRacerLobby_C::SpawnHoverboard()
 
 void ABP_MenuRacerLobby_C::SpawnMachine()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SpawnMachine");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -695,18 +582,16 @@ void ABP_MenuRacerLobby_C::SpawnMachine()
 // Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.SpawnOrVisibleCrown
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bIsNotSpawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECrownGrade                             CrownGrade                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(bool bIsNotSpawn)
+void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(ECrownGrade CrownGrade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "SpawnOrVisibleCrown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_SpawnOrVisibleCrown Parms{};
 
-	Parms.bIsNotSpawn = bIsNotSpawn;
+	Parms.CrownGrade = CrownGrade;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -719,10 +604,8 @@ void ABP_MenuRacerLobby_C::SpawnOrVisibleCrown(bool bIsNotSpawn)
 
 void ABP_MenuRacerLobby_C::StartRotation(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "StartRotation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_StartRotation Parms{};
 
@@ -737,10 +620,20 @@ void ABP_MenuRacerLobby_C::StartRotation(int32 InPlayerIndex)
 
 void ABP_MenuRacerLobby_C::StopRotation()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "StopRotation");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MenuRacerLobby.BP_MenuRacerLobby_C.UpdateSteeringWheelMaterial
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MenuRacerLobby_C::UpdateSteeringWheelMaterial()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -754,10 +647,8 @@ void ABP_MenuRacerLobby_C::StopRotation()
 
 EMachineHornType ABP_MenuRacerLobby_C::GetHornID(const struct FST_RacerDataForPreview& ST_RacerDataForPreview) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuRacerLobby_C", "GetHornID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuRacerLobby_C", FnName));
 
 	Params::BP_MenuRacerLobby_C_GetHornID Parms{};
 
@@ -768,5 +659,5 @@ EMachineHornType ABP_MenuRacerLobby_C::GetHornID(const struct FST_RacerDataForPr
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

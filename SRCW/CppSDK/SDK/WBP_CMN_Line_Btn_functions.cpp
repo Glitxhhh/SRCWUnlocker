@@ -14,18 +14,15 @@
 #include "WBP_CMN_Line_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Line_Btn.WBP_CMN_Line_Btn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_Line_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_Line_Btn_C::Construct()
 
 void UWBP_CMN_Line_Btn_C::ExecuteUbergraph_WBP_CMN_Line_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "ExecuteUbergraph_WBP_CMN_Line_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Line_Btn_C", "ExecuteUbergraph_WBP_CMN_Line_Btn", FuncInfo);
 
 	Params::WBP_CMN_Line_Btn_C_ExecuteUbergraph_WBP_CMN_Line_Btn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_CMN_Line_Btn_C::ExecuteUbergraph_WBP_CMN_Line_Btn(int32 EntryPoint)
 
 void UWBP_CMN_Line_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CMN_Line_Btn_C::OnAcceptKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_CMN_Line_Btn_C::OnBackKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_CMN_Line_Btn_C::OnDownKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	Params::WBP_CMN_Line_Btn_C_OnFocusLost Parms{};
 
@@ -122,10 +109,8 @@ void UWBP_CMN_Line_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 
 struct FEventReply UWBP_CMN_Line_Btn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	Params::WBP_CMN_Line_Btn_C_OnFocusReceived Parms{};
 
@@ -146,10 +131,8 @@ struct FEventReply UWBP_CMN_Line_Btn_C::OnFocusReceived(const struct FGeometry& 
 
 void UWBP_CMN_Line_Btn_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	Params::WBP_CMN_Line_Btn_C_OnFocusReceivedInternal Parms{};
 
@@ -165,10 +148,8 @@ void UWBP_CMN_Line_Btn_C::OnFocusReceivedInternal(const struct FGeometry& MyGeom
 
 void UWBP_CMN_Line_Btn_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +160,8 @@ void UWBP_CMN_Line_Btn_C::OnLeftKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +172,8 @@ void UWBP_CMN_Line_Btn_C::OnLeftShoulderPressed()
 
 void UWBP_CMN_Line_Btn_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +184,8 @@ void UWBP_CMN_Line_Btn_C::OnRightKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +196,8 @@ void UWBP_CMN_Line_Btn_C::OnRightShoulderPressed()
 
 void UWBP_CMN_Line_Btn_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,10 +210,8 @@ void UWBP_CMN_Line_Btn_C::OnUpKeyPressed()
 
 void UWBP_CMN_Line_Btn_C::SetActive(bool bInIsActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "SetActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	Params::WBP_CMN_Line_Btn_C_SetActive Parms{};
 
@@ -257,10 +228,8 @@ void UWBP_CMN_Line_Btn_C::SetActive(bool bInIsActive)
 
 void UWBP_CMN_Line_Btn_C::SetUnselectableAnimationEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Line_Btn_C", "SetUnselectableAnimationEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Line_Btn_C", FnName));
 
 	Params::WBP_CMN_Line_Btn_C_SetUnselectableAnimationEnable Parms{};
 
@@ -269,5 +238,5 @@ void UWBP_CMN_Line_Btn_C::SetUnselectableAnimationEnable(bool bInEnable)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

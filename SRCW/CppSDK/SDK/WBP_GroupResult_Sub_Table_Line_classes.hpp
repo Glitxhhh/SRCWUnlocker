@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GroupResult_Sub_Table_Line.WBP_GroupResult_Sub_Table_Line_C
 // 0x0058 (0x04C8 - 0x0470)
@@ -59,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GroupResult_Sub_Table_Line_C;
 
-}
-
+SDK_NAMESPACE_END

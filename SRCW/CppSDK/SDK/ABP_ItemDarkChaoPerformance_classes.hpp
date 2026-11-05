@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ABP_ItemDarkChaoPerformance_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
+#include "ABP_ItemDarkChaoPerformance_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_ItemDarkChaoPerformance.ABP_ItemDarkChaoPerformance_C
 // 0x03C0 (0x0740 - 0x0380)
@@ -69,5 +68,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_ItemDarkChaoPerformance_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_HoldWarpRing.ABP_HoldWarpRing_C.AnimBlueprintGeneratedConstantData
 // 0x0000 (0x0D30 - 0x0D30)
@@ -23,5 +22,4 @@ struct ABP_HoldWarpRing::FAnimBlueprintGeneratedConstantData final : public ABPT
 };
 DUMPER7_ASSERTS_ABP_HoldWarpRing__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

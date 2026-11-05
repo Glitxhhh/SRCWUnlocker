@@ -14,8 +14,7 @@
 #include "BPI_MenuLightActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_MenuLightActor.BPI_MenuLightActor_C.SetPostProcessEnabled
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void IBPI_MenuLightActor_C::SetPostProcessEnabled(bool bEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_MenuLightActor_C", "SetPostProcessEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_MenuLightActor_C", FnName));
 
 	Params::BPI_MenuLightActor_C_SetPostProcessEnabled Parms{};
 
@@ -44,10 +41,8 @@ void IBPI_MenuLightActor_C::SetPostProcessEnabled(bool bEnabled)
 
 void IBPI_MenuLightActor_C::SetLightActorHiddenInGame(bool NewHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_MenuLightActor_C", "SetLightActorHiddenInGame");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_MenuLightActor_C", FnName));
 
 	Params::BPI_MenuLightActor_C_SetLightActorHiddenInGame Parms{};
 
@@ -56,5 +51,5 @@ void IBPI_MenuLightActor_C::SetLightActorHiddenInGame(bool NewHidden)
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

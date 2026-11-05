@@ -15,8 +15,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Ready_Sub_Decide.WBP_Ready_Sub_Decide_C
 // 0x0118 (0x03F8 - 0x02E0)
@@ -81,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Ready_Sub_Decide_C;
 
-}
-
+SDK_NAMESPACE_END

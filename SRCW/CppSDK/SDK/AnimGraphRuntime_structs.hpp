@@ -15,8 +15,7 @@
 #include "AnimationCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AnimGraphRuntime.EBoneModificationMode
 // NumValues: 0x0004
@@ -1842,5 +1841,4 @@ struct FSkeletalControlReference final : public FAnimNodeReference
 };
 DUMPER7_ASSERTS_FSkeletalControlReference;
 
-}
-
+SDK_NAMESPACE_END

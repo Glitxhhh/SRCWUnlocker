@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemMonsterTruckObject.BP_ItemMonsterTruckObject_C
 // 0x0010 (0x06A0 - 0x0690)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemMonsterTruckObject_C;
 
-}
-
+SDK_NAMESPACE_END

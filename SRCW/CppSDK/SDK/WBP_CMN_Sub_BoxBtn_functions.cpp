@@ -14,18 +14,15 @@
 #include "WBP_CMN_Sub_BoxBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_BoxBtn.WBP_CMN_Sub_BoxBtn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_Sub_BoxBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_Sub_BoxBtn_C::Construct()
 
 void UWBP_CMN_Sub_BoxBtn_C::ExecuteUbergraph_WBP_CMN_Sub_BoxBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "ExecuteUbergraph_WBP_CMN_Sub_BoxBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_BoxBtn_C", "ExecuteUbergraph_WBP_CMN_Sub_BoxBtn", FuncInfo);
 
 	Params::WBP_CMN_Sub_BoxBtn_C_ExecuteUbergraph_WBP_CMN_Sub_BoxBtn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_CMN_Sub_BoxBtn_C::ExecuteUbergraph_WBP_CMN_Sub_BoxBtn(int32 EntryPoint
 
 void UWBP_CMN_Sub_BoxBtn_C::GadgetSelectedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "GadgetSelectedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CMN_Sub_BoxBtn_C::GadgetSelectedEvent()
 
 void UWBP_CMN_Sub_BoxBtn_C::GadgetSelectRestartEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "GadgetSelectRestartEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,10 +79,8 @@ void UWBP_CMN_Sub_BoxBtn_C::GadgetSelectRestartEvent()
 
 struct FEventReply UWBP_CMN_Sub_BoxBtn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	Params::WBP_CMN_Sub_BoxBtn_C_OnFocusReceived Parms{};
 
@@ -109,10 +98,8 @@ struct FEventReply UWBP_CMN_Sub_BoxBtn_C::OnFocusReceived(const struct FGeometry
 
 void UWBP_CMN_Sub_BoxBtn_C::SelectStartEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "SelectStartEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -125,10 +112,8 @@ void UWBP_CMN_Sub_BoxBtn_C::SelectStartEvent()
 
 void UWBP_CMN_Sub_BoxBtn_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_BoxBtn_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_BoxBtn_C", FnName));
 
 	Params::WBP_CMN_Sub_BoxBtn_C_SetText Parms{};
 
@@ -137,5 +122,5 @@ void UWBP_CMN_Sub_BoxBtn_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

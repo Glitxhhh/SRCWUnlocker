@@ -14,18 +14,15 @@
 #include "BPC_ReceiveOnlineReward_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_ReceiveOnlineReward.BPC_ReceiveOnlineReward_C.CreateNetworkCommunicationUI
 // (Event, Protected, BlueprintEvent)
 
 void UBPC_ReceiveOnlineReward_C::CreateNetworkCommunicationUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReceiveOnlineReward_C", "CreateNetworkCommunicationUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_ReceiveOnlineReward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_ReceiveOnlineReward_C::CreateNetworkCommunicationUI()
 
 void UBPC_ReceiveOnlineReward_C::CreateRewardWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReceiveOnlineReward_C", "CreateRewardWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_ReceiveOnlineReward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UBPC_ReceiveOnlineReward_C::CreateRewardWindow()
 
 void UBPC_ReceiveOnlineReward_C::ExecuteUbergraph_BPC_ReceiveOnlineReward(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReceiveOnlineReward_C", "ExecuteUbergraph_BPC_ReceiveOnlineReward");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_ReceiveOnlineReward_C", "ExecuteUbergraph_BPC_ReceiveOnlineReward", FuncInfo);
 
 	Params::BPC_ReceiveOnlineReward_C_ExecuteUbergraph_BPC_ReceiveOnlineReward Parms{};
 
@@ -64,5 +57,5 @@ void UBPC_ReceiveOnlineReward_C::ExecuteUbergraph_BPC_ReceiveOnlineReward(int32 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

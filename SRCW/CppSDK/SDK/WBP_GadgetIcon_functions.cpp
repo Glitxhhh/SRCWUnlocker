@@ -14,8 +14,31 @@
 #include "WBP_GadgetIcon_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimPlayGadgetIconLoopBlink
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::AnimPlayGadgetIconLoopBlink()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.AnimStopGadgetIconLoopBlink
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::AnimStopGadgetIconLoopBlink()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function WBP_GadgetIcon.WBP_GadgetIcon_C.ExecuteUbergraph_WBP_GadgetIcon
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +47,8 @@ namespace SDK
 
 void UWBP_GadgetIcon_C::ExecuteUbergraph_WBP_GadgetIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "ExecuteUbergraph_WBP_GadgetIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetIcon_C", "ExecuteUbergraph_WBP_GadgetIcon", FuncInfo);
 
 	Params::WBP_GadgetIcon_C_ExecuteUbergraph_WBP_GadgetIcon Parms{};
 
@@ -42,10 +63,8 @@ void UWBP_GadgetIcon_C::ExecuteUbergraph_WBP_GadgetIcon(int32 EntryPoint)
 
 void UWBP_GadgetIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,24 +75,8 @@ void UWBP_GadgetIcon_C::OnAcceptKeyPressed()
 
 void UWBP_GadgetIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnBackKeyPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnConstInitBpWidgetRef
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetIcon_C::OnConstInitBpWidgetRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnConstInitBpWidgetRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +87,8 @@ void UWBP_GadgetIcon_C::OnConstInitBpWidgetRef()
 
 void UWBP_GadgetIcon_C::OnConstMouseInteraction()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnConstMouseInteraction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +99,8 @@ void UWBP_GadgetIcon_C::OnConstMouseInteraction()
 
 void UWBP_GadgetIcon_C::OnConstUseType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnConstUseType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +111,8 @@ void UWBP_GadgetIcon_C::OnConstUseType()
 
 void UWBP_GadgetIcon_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +125,8 @@ void UWBP_GadgetIcon_C::OnDownKeyPressed()
 
 void UWBP_GadgetIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_OnFocusLost Parms{};
 
@@ -150,10 +145,8 @@ void UWBP_GadgetIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 
 struct FEventReply UWBP_GadgetIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_OnFocusReceived Parms{};
 
@@ -174,10 +167,8 @@ struct FEventReply UWBP_GadgetIcon_C::OnFocusReceived(const struct FGeometry& My
 
 void UWBP_GadgetIcon_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_OnFocusReceivedInternal Parms{};
 
@@ -193,10 +184,8 @@ void UWBP_GadgetIcon_C::OnFocusReceivedInternal(const struct FGeometry& MyGeomet
 
 void UWBP_GadgetIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +196,32 @@ void UWBP_GadgetIcon_C::OnLeftKeyPressed()
 
 void UWBP_GadgetIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnLeftShoulderPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnLeftStickButtonPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::OnLeftStickButtonPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_GadgetIcon.WBP_GadgetIcon_C.OnLeftStickButtonReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GadgetIcon_C::OnLeftStickButtonReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +232,8 @@ void UWBP_GadgetIcon_C::OnLeftShoulderPressed()
 
 void UWBP_GadgetIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +244,8 @@ void UWBP_GadgetIcon_C::OnRightKeyPressed()
 
 void UWBP_GadgetIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +256,8 @@ void UWBP_GadgetIcon_C::OnRightShoulderPressed()
 
 void UWBP_GadgetIcon_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -263,10 +268,8 @@ void UWBP_GadgetIcon_C::OnUpKeyPressed()
 
 void UWBP_GadgetIcon_C::PlayUnselectedAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "PlayUnselectedAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +282,8 @@ void UWBP_GadgetIcon_C::PlayUnselectedAnimation()
 
 void UWBP_GadgetIcon_C::SetGadgetSelectCursorColor(const int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SetGadgetSelectCursorColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_SetGadgetSelectCursorColor Parms{};
 
@@ -300,10 +301,8 @@ void UWBP_GadgetIcon_C::SetGadgetSelectCursorColor(const int32 InPlayerIndex)
 
 void UWBP_GadgetIcon_C::SetIconBaseShape(const int32 InSizeX, const int32 InSizeY)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SetIconBaseShape");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_SetIconBaseShape Parms{};
 
@@ -321,10 +320,8 @@ void UWBP_GadgetIcon_C::SetIconBaseShape(const int32 InSizeX, const int32 InSize
 
 void UWBP_GadgetIcon_C::SetReadyWindowFlag(bool InFlag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SetReadyWindowFlag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	Params::WBP_GadgetIcon_C_SetReadyWindowFlag Parms{};
 
@@ -339,10 +336,8 @@ void UWBP_GadgetIcon_C::SetReadyWindowFlag(bool InFlag)
 
 void UWBP_GadgetIcon_C::SoundPlayMenuCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SoundPlayMenuCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -353,10 +348,8 @@ void UWBP_GadgetIcon_C::SoundPlayMenuCancel()
 
 void UWBP_GadgetIcon_C::SoundPlayMenuError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SoundPlayMenuError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -367,10 +360,8 @@ void UWBP_GadgetIcon_C::SoundPlayMenuError()
 
 void UWBP_GadgetIcon_C::SoundPlayMenuFix()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SoundPlayMenuFix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -381,13 +372,11 @@ void UWBP_GadgetIcon_C::SoundPlayMenuFix()
 
 void UWBP_GadgetIcon_C::SoundPlayMenuTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_C", "SoundPlayMenuTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

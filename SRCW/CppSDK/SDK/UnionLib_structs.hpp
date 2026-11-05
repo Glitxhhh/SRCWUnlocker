@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum UnionLib.EAppBlueprintLogVerbosity
 // NumValues: 0x0009
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_FHierarchicalStateMachineStateInfo;
 
-}
-
+SDK_NAMESPACE_END

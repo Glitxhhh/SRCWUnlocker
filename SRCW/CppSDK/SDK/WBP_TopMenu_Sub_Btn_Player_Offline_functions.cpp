@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_Sub_Btn_Player_Offline_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_Btn_Player_Offline.WBP_TopMenu_Sub_Btn_Player_Offline_C.ChangeSelectColor
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::ChangeSelectColor(bool bSelect)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "ChangeSelectColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_ChangeSelectColor Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::ChangeSelectColor(bool bSelect)
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::Construct()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::ExecuteUbergraph_WBP_TopMenu_Sub_Btn_Player_Offline(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "ExecuteUbergraph_WBP_TopMenu_Sub_Btn_Player_Offline");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Sub_Btn_Player_Offline_C", "ExecuteUbergraph_WBP_TopMenu_Sub_Btn_Player_Offline", FuncInfo);
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_ExecuteUbergraph_WBP_TopMenu_Sub_Btn_Player_Offline Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::ExecuteUbergraph_WBP_TopMenu_Sub_Btn
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnAcceptKeyPressed()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnAddedToFocusPath Parms{};
 
@@ -110,10 +99,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnAddedToFocusPath(const struct FFoc
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnBackKeyPressed()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnDecisionDown_Impl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnDecisionDown_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnDecisionDown_Impl Parms{};
 
@@ -144,10 +129,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnDecisionDown_Impl(class UUnionUIBu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnDecisionDownFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnDecisionDownFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +143,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnDecisionDownFinished()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocus_Impl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnFocus_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnFocus_Impl Parms{};
 
@@ -178,10 +159,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocus_Impl(class UUnionUIButtonBas
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnFocusAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +171,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusAnimFinished()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -208,10 +185,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusAnimStart()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnFocusLost Parms{};
 
@@ -230,10 +205,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusLost(const struct FFocusEvent
 
 struct FEventReply UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnFocusReceived Parms{};
 
@@ -254,10 +227,8 @@ struct FEventReply UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnFocusReceived(const 
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnMouseEnter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnMouseEnter Parms{};
 
@@ -275,10 +246,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnMouseEnter(const struct FGeometry&
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnMouseLeave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnMouseLeave Parms{};
 
@@ -295,10 +264,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnMouseLeave(const struct FPointerEv
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnRemovedFromFocusPath Parms{};
 
@@ -315,10 +282,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnRemovedFromFocusPath(const struct 
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocus_Impl(class UUnionUIWidgetBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnUnFocus_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_OnUnFocus_Impl Parms{};
 
@@ -333,10 +298,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocus_Impl(class UUnionUIWidgetB
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocusAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnUnFocusAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -347,10 +310,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocusAnimFinished()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -363,10 +324,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::OnUnFocusAnimStart()
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_Btn_Player_Offline_C_PreConstruct Parms{};
 
@@ -381,10 +340,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -395,10 +352,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -409,10 +364,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -423,10 +376,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -437,10 +388,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -451,10 +400,8 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -465,13 +412,11 @@ void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu
 
 void UWBP_TopMenu_Sub_Btn_Player_Offline_C::SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_Btn_Player_Offline_C", "SequenceEvent__ENTRYPOINTWBP_TopMenu_Sub_Btn_Player_Offline_5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_Btn_Player_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

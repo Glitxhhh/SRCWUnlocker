@@ -14,18 +14,15 @@
 #include "BPC_RaceResultRateRank_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceResultRateRank.BPC_RaceResultRateRank_C.ChildStateMachineExitEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceResultRateRank_C::ChildStateMachineExitEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultRateRank_C", "ChildStateMachineExitEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultRateRank_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UBPC_RaceResultRateRank_C::ChildStateMachineExitEvent()
 
 void UBPC_RaceResultRateRank_C::ExecuteUbergraph_BPC_RaceResultRateRank(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultRateRank_C", "ExecuteUbergraph_BPC_RaceResultRateRank");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceResultRateRank_C", "ExecuteUbergraph_BPC_RaceResultRateRank", FuncInfo);
 
 	Params::BPC_RaceResultRateRank_C_ExecuteUbergraph_BPC_RaceResultRateRank Parms{};
 
@@ -56,10 +51,8 @@ void UBPC_RaceResultRateRank_C::ExecuteUbergraph_BPC_RaceResultRateRank(int32 En
 
 void UBPC_RaceResultRateRank_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultRateRank_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultRateRank_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_RaceResultRateRank_C::OnInitState()
 
 void UBPC_RaceResultRateRank_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultRateRank_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultRateRank_C", FnName));
 
 	Params::BPC_RaceResultRateRank_C_OnUpdateState Parms{};
 
@@ -90,13 +81,11 @@ void UBPC_RaceResultRateRank_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceResultRateRank_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultRateRank_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultRateRank_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

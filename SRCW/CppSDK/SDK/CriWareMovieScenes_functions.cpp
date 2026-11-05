@@ -14,8 +14,7 @@
 #include "CriWareMovieScenes_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function CriWareMovieScenes.MovieSceneAtomSection.SetStartOffset
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
@@ -91,5 +90,5 @@ bool UMovieSceneAtomSection::IsLooping() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

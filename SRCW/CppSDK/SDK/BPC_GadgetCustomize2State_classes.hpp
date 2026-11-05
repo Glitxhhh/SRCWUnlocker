@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_GadgetCustomize2State.BPC_GadgetCustomize2State_C
 // 0x0028 (0x0150 - 0x0128)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_GadgetCustomize2State_C;
 
-}
-
+SDK_NAMESPACE_END

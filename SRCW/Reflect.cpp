@@ -25,7 +25,7 @@ namespace Reflect
             int n = pb ? (fn->Size < 16 ? fn->Size : 16) : 0;
             static const char* hex = "0123456789abcdef";
             for (int i = 0; i < n; i++) std::cout << hex[pb[i] >> 4] << hex[pb[i] & 15] << (i + 1 < n ? " " : "");
-            std::cout << "\n";
+            std::cout << "\n";
         }
         if (g_ProcessEventFn) reinterpret_cast<void(*)(SDK::UObject*, SDK::UFunction*, void*)>(g_ProcessEventFn)(obj, fn, parms);
         else obj->ProcessEvent(fn, parms);
@@ -46,7 +46,7 @@ namespace Reflect
     SDK::UObject* FindCDO(const char* className)
     {
         SDK::UClass* cls = FindClass(className);
-        return cls ? cls->DefaultObject : nullptr;
+        return cls ? cls->ClassDefaultObject : nullptr;
     }
 
     SDK::UObject* FindInstance(const char* className)
@@ -82,8 +82,8 @@ namespace Reflect
             if (field->Name.ToString() == propName)
                 return static_cast<SDK::FProperty*>(field);
         }
-        if (structType->Super)
-            return FindProperty(structType->Super, propName);
+        if (structType->SuperStruct)
+            return FindProperty(structType->SuperStruct, propName);
         return nullptr;
     }
 
@@ -97,6 +97,130 @@ namespace Reflect
         if (!prop) return -1;
         propOffsetCache[key] = prop->Offset;
         return prop->Offset;
+    }
+
+
+    static bool Readable(const void* address, size_t bytes)
+    {
+        uintptr_t cursor = reinterpret_cast<uintptr_t>(address);
+        if (!cursor || bytes > UINTPTR_MAX - cursor) return false;
+        const uintptr_t end = cursor + bytes;
+        while (cursor < end) {
+            MEMORY_BASIC_INFORMATION info{};
+            if (!VirtualQuery(reinterpret_cast<void*>(cursor), &info, sizeof(info)) ||
+                info.State != MEM_COMMIT || (info.Protect & (PAGE_NOACCESS | PAGE_GUARD))) return false;
+            uintptr_t next = reinterpret_cast<uintptr_t>(info.BaseAddress) + info.RegionSize;
+            if (next <= cursor) return false;
+            cursor = next;
+        }
+        return true;
+    }
+
+    bool ReadIntStructMapKeys(SDK::UObject* object, const char* propertyName, std::vector<int32_t>& keys)
+    {
+        keys.clear();
+        auto fail = [&](const char* reason) {
+            std::cout << "[Layout] " << propertyName << " rejected: " << reason << "; map operations skipped\n";
+            return false;
+        };
+        if (!object) return fail("asset unavailable");
+        auto* property = FindProperty(object->Class, propertyName);
+        if (!property || !property->ClassPrivate || property->ClassPrivate->Name.ToString() != "MapProperty")
+            return fail("expected MapProperty");
+        auto* map = static_cast<SDK::FMapProperty*>(property);
+        auto* key = map->KeyProperty;
+        auto* value = map->ValueProperty;
+        if (!key || !value || !key->ClassPrivate || !value->ClassPrivate ||
+            key->ClassPrivate->Name.ToString() != "IntProperty" || key->ElementSize != 4 ||
+            value->ClassPrivate->Name.ToString() != "StructProperty") return fail("expected int32/struct map");
+        auto* type = static_cast<SDK::FStructProperty*>(value)->Struct;
+        if (!type || type->Size <= 0 || type->Size > 65536 || type->Size != value->ElementSize)
+            return fail("invalid reflected value size");
+        const size_t alignment = type->MinAlignment;
+        if (!alignment || alignment > 16 || (alignment & (alignment - 1))) return fail("invalid value alignment");
+        auto align = [](size_t n, size_t a) { return (n + a - 1) & ~(a - 1); };
+        const size_t pairAlignment = alignment < 4 ? 4 : alignment;
+        const size_t valueOffset = align(sizeof(int32_t), alignment);
+        const size_t pairSize = align(valueOffset + type->Size, pairAlignment);
+        const size_t stride = align(pairSize + 2 * sizeof(int32_t), pairAlignment);
+        // UE5.4 sparse-array header; element stride comes from reflection above.
+        struct Header {
+            uint8_t* Data; int32_t Slots, Capacity;
+            SDK::ContainerImpl::FBitArray Flags;
+            int32_t FirstFree, FreeCount;
+        };
+        if (property->Offset < 0 || property->Offset > object->Class->Size - property->ElementSize ||
+            property->ElementSize != sizeof(SDK::TMap<int32_t, int32_t>)) return fail("invalid map offset/size");
+        auto* header = reinterpret_cast<const Header*>(reinterpret_cast<const uint8_t*>(object) + property->Offset);
+        if (!Readable(header, sizeof(Header)) || header->Slots < 0 || header->Slots > 100000 ||
+            header->Capacity < header->Slots || header->Capacity > 1000000 ||
+            header->FreeCount < 0 || header->FreeCount > header->Slots ||
+            header->Flags.Num() != header->Slots || header->Flags.Max() < header->Slots)
+            return fail("invalid sparse-array header");
+        std::cout << "[Layout] " << propertyName << " offset=" << property->Offset
+                  << " valueSize=" << type->Size << " alignment=" << alignment << " stride=" << stride
+                  << " slots=" << header->Slots << " free=" << header->FreeCount << "\n";
+        if (header->Slots == 0) return true;
+        if (!Readable(header->Data, stride * header->Slots) ||
+            !Readable(header->Flags.GetData(), ((header->Slots + 31) / 32) * sizeof(uint32_t)))
+            return fail("unreadable map storage");
+        std::unordered_map<int32_t, bool> seen;
+        for (int32_t i = 0; i < header->Slots; ++i) {
+            if (!header->Flags[i]) continue;
+            int32_t id;
+            memcpy(&id, header->Data + stride * i, sizeof(id));
+            if (id < 0 || !seen.emplace(id, true).second) return fail("negative or duplicate key");
+            keys.push_back(id);
+        }
+        if (keys.size() != static_cast<size_t>(header->Slots - header->FreeCount)) return fail("entry count mismatch");
+        return true;
+    }
+
+
+    bool ReadSeasonStickerIds(SDK::UObject* object, std::vector<int32_t>& ids)
+    {
+        ids.clear();
+        if (!object) return false;
+        struct Array { void* Data; int32_t Num; int32_t Max; };
+        std::unordered_map<int32_t, bool> seen;
+        int lists = 0;
+        for (SDK::UStruct* type = object->Class; type; type = type->SuperStruct) {
+            for (SDK::FField* field = type->ChildProperties; field; field = field->Next) {
+                const std::string name = field->Name.ToString();
+                if (name.rfind("Sticker", 0) != 0 || name.size() < 4 || name.substr(name.size()-4) != "List") continue;
+                if (!field->ClassPrivate || field->ClassPrivate->Name.ToString() != "ArrayProperty") continue;
+                auto* prop = static_cast<SDK::FArrayProperty*>(field);
+                if (!prop->InnerProperty || !prop->InnerProperty->ClassPrivate ||
+                    prop->InnerProperty->ClassPrivate->Name.ToString() != "StructProperty") continue;
+                auto* itemType = static_cast<SDK::FStructProperty*>(prop->InnerProperty)->Struct;
+                if (!itemType || itemType->Size <= 0 || itemType->Size > 65536 || prop->InnerProperty->ElementSize != itemType->Size) return false;
+                auto* inner = FindProperty(itemType, "StickerIds");
+                if (!inner || !inner->ClassPrivate || inner->ClassPrivate->Name.ToString() != "ArrayProperty") continue;
+                auto* innerArray = static_cast<SDK::FArrayProperty*>(inner);
+                if (!innerArray->InnerProperty || !innerArray->InnerProperty->ClassPrivate ||
+                    innerArray->InnerProperty->ClassPrivate->Name.ToString() != "IntProperty" || innerArray->InnerProperty->ElementSize != 4 ||
+                    inner->Offset < 0 || inner->Offset > itemType->Size - static_cast<int32_t>(sizeof(Array)) ||
+                    prop->Offset < 0 || prop->Offset > object->Class->Size - static_cast<int32_t>(sizeof(Array))) return false;
+                const auto* outer = reinterpret_cast<const Array*>(reinterpret_cast<const uint8_t*>(object) + prop->Offset);
+                auto valid = [](const Array* a, size_t stride) {
+                    return Readable(a, sizeof(*a)) && a->Num >= 0 && a->Max >= a->Num && a->Num <= 100000 &&
+                           (a->Num == 0 || Readable(a->Data, static_cast<size_t>(a->Num) * stride));
+                };
+                if (!valid(outer, itemType->Size)) return false;
+                for (int32_t i=0; i<outer->Num; ++i) {
+                    const auto* sub = reinterpret_cast<const Array*>(static_cast<const uint8_t*>(outer->Data) + static_cast<size_t>(i)*itemType->Size + inner->Offset);
+                    if (!valid(sub, sizeof(int32_t))) return false;
+                    for (int32_t j=0; j<sub->Num; ++j) {
+                        int32_t id; memcpy(&id, static_cast<const int32_t*>(sub->Data)+j, sizeof(id));
+                        if (id < 0) return false;
+                        if (seen.emplace(id, true).second) ids.push_back(id);
+                    }
+                }
+                ++lists;
+            }
+        }
+        std::cout << "[Reflect] Found " << lists << " season sticker lists; " << ids.size() << " IDs\n";
+        return lists > 0;
     }
 
     static SDK::FProperty* FindFirstParam(SDK::UFunction* func)
@@ -204,6 +328,20 @@ namespace Reflect
         SDK::FProperty* param1 = FindNthParam(func, 1);
         if (param0) *(uint8_t*)(params + param0->Offset) = p1;
         if (param1) *(bool*)(params + param1->Offset) = p2;
+        ProcessEvent(cdo, func, params);
+        return true;
+    }
+
+    bool CallStaticUInt8UInt8(const char* className, const char* funcName, uint8_t p1, uint8_t p2)
+    {
+        auto* func = FindFunction(className, funcName);
+        auto* cdo = FindCDO(className);
+        if (!func || !cdo || func->Size < 0 || func->Size > 512) return false;
+        auto* a = FindNthParam(func, 0); auto* b = FindNthParam(func, 1);
+        if (!a || !b || a->ElementSize != 1 || b->ElementSize != 1 ||
+            a->Offset < 0 || b->Offset < 0 || a->Offset >= func->Size || b->Offset >= func->Size) return false;
+        uint8_t params[512] = {};
+        params[a->Offset] = p1; params[b->Offset] = p2;
         ProcessEvent(cdo, func, params);
         return true;
     }

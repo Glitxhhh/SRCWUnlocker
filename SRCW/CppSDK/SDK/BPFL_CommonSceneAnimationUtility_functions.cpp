@@ -14,8 +14,7 @@
 #include "BPFL_CommonSceneAnimationUtility_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_CommonSceneAnimationUtility.BPFL_CommonSceneAnimationUtility_C.GetSceneDriverAnimationAsset
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -24,16 +23,14 @@ namespace SDK
 // EDriverPose                             In_Pose                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAnimSequenceBase>*Anim                                                   (Parm, OutParm, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAnimSequenceBase>*anim                                                   (Parm, OutParm, HasGetValueTypeHash)
 // double*                                 Time                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   bSkipFacialBlend                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* Anim, double* Time, bool* bSkipFacialBlend)
+void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* anim, double* Time, bool* bSkipFacialBlend)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonSceneAnimationUtility_C", "GetSceneDriverAnimationAsset");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonSceneAnimationUtility_C", "GetSceneDriverAnimationAsset", FuncInfo);
 
 	Params::BPFL_CommonSceneAnimationUtility_C_GetSceneDriverAnimationAsset Parms{};
 
@@ -44,8 +41,8 @@ void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Anim != nullptr)
-		*Anim = Parms.Anim;
+	if (anim != nullptr)
+		*anim = Parms.anim;
 
 	if (Time != nullptr)
 		*Time = Parms.Time;
@@ -65,10 +62,8 @@ void UBPFL_CommonSceneAnimationUtility_C::GetSceneDriverAnimationAsset(EDriverId
 
 void UBPFL_CommonSceneAnimationUtility_C::LoadSceneDriverAnimationAssets(TArray<class ASceneDriver*>& In_SceneDrivers, class UDataTable* DataTable, class UObject* __WorldContext, TArray<class UObject*>* LoadAssets)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonSceneAnimationUtility_C", "LoadSceneDriverAnimationAssets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonSceneAnimationUtility_C", "LoadSceneDriverAnimationAssets", FuncInfo);
 
 	Params::BPFL_CommonSceneAnimationUtility_C_LoadSceneDriverAnimationAssets Parms{};
 
@@ -84,5 +79,5 @@ void UBPFL_CommonSceneAnimationUtility_C::LoadSceneDriverAnimationAssets(TArray<
 		*LoadAssets = std::move(Parms.LoadAssets);
 }
 
-}
 
+SDK_NAMESPACE_END

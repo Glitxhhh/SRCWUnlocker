@@ -14,18 +14,15 @@
 #include "DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Construct()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn", FuncInfo);
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn Parms{};
 
@@ -56,10 +51,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::ExecuteUbergraph_DELETE_WBP_Pau
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_123E221D4303D24E9A775D824635A9D0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_123E221D4303D24E9A775D824635A9D0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_123E221D4303D24E9A775D
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_4C9264DD4011245B334598A3D7154B7F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_4C9264DD4011245B334598A3D7154B7F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_4C9264DD4011245B334598
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_7EB0CDD446C4775C214A91BBDD7F9C28()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_7EB0CDD446C4775C214A91BBDD7F9C28");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_7EB0CDD446C4775C214A91
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_B9B2CF7D431EA821DEF2A7B104D74570()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_B9B2CF7D431EA821DEF2A7B104D74570");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_B9B2CF7D431EA821DEF2A7
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_D20231E14DA366ACE2866C8994722AFE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_D20231E14DA366ACE2866C8994722AFE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_D20231E14DA366ACE2866C
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_F19E20C444646D10594D94B466E83167()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "Finished_F19E20C444646D10594D94B466E83167");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,10 +125,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::Finished_F19E20C444646D10594D94
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnAccelInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnAccelInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnAccelInput Parms{};
 
@@ -160,10 +141,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnAccelInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +153,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnAcceptKeyPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -190,10 +167,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnBackKeyPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnBrakeInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnBrakeInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnBrakeInput Parms{};
 
@@ -208,10 +183,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnBrakeInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDriftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnDriftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -222,10 +195,32 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDriftPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDriftReleased()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnDriftReleased");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.OnDuelUltimatePressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDuelUltimatePressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.OnDuelUltimateReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDuelUltimateReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,10 +231,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnDriftReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnEmotePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnEmotePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -250,10 +243,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnEmotePressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnEmoteReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnEmoteReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,10 +255,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnEmoteReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocus_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnFocus_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,10 +269,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocus_Impl()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnFocusLost Parms{};
 
@@ -302,10 +289,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocusLost(const struct FFocus
 
 struct FEventReply UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnFocusReceived Parms{};
 
@@ -323,10 +308,8 @@ struct FEventReply UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnFocusReceived(c
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnHornPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnHornPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -337,10 +320,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnHornPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnHornReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnHornReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -351,10 +332,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnHornReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPausePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnPausePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -365,10 +344,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPausePressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPauseReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnPauseReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -381,10 +358,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPauseReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPitchInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnPitchInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnPitchInput Parms{};
 
@@ -399,10 +374,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnPitchInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnRearViewPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnRearViewPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -413,10 +386,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnRearViewPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnRearViewReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnRearViewReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -429,10 +400,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnRearViewReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSlimeCancelXInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnSlimeCancelXInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnSlimeCancelXInput Parms{};
 
@@ -449,10 +418,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSlimeCancelXInput(float InVal
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSlimeCancelYInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnSlimeCancelYInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnSlimeCancelYInput Parms{};
 
@@ -467,10 +434,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSlimeCancelYInput(float InVal
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -483,10 +448,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSpecialPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSteerInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnSteerInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnSteerInput Parms{};
 
@@ -501,10 +464,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnSteerInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTradeItemPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTradeItemPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -515,10 +476,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTradeItemPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTradeItemReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTradeItemReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -531,10 +490,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTradeItemReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickX2Input(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTrickX2Input");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnTrickX2Input Parms{};
 
@@ -551,10 +508,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickX2Input(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickXInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTrickXInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnTrickXInput Parms{};
 
@@ -571,10 +526,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickXInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickY2Input(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTrickY2Input");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnTrickY2Input Parms{};
 
@@ -591,10 +544,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickY2Input(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickYInput(float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnTrickYInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	Params::DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnTrickYInput Parms{};
 
@@ -609,10 +560,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnTrickYInput(float InValue)
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnUseItemPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnUseItemPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -623,10 +572,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnUseItemPressed()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnUseItemReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "OnUseItemReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -637,10 +584,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::OnUseItemReleased()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::PlayAnimationActiveLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "PlayAnimationActiveLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -651,10 +596,8 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::PlayAnimationActiveLoop()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::PlayAnimationNoActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "PlayAnimationNoActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -665,13 +608,11 @@ void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::PlayAnimationNoActive()
 
 void UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C::PlayAnimationSelectLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", "PlayAnimationSelectLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

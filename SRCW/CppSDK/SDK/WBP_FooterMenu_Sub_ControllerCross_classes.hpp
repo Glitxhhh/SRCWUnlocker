@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_FooterMenu_Sub_ControllerCross.WBP_FooterMenu_Sub_ControllerCross_C
 // 0x0048 (0x0358 - 0x0310)
@@ -116,5 +115,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_FooterMenu_Sub_ControllerCross_C;
 
-}
-
+SDK_NAMESPACE_END

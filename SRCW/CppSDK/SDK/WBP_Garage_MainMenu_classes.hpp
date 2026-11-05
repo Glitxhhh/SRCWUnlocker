@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Garage_MainMenu.WBP_Garage_MainMenu_C
 // 0x00B0 (0x0488 - 0x03D8)
@@ -67,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Garage_MainMenu_C;
 
-}
-
+SDK_NAMESPACE_END

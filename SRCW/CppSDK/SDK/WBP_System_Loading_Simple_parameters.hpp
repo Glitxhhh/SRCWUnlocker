@@ -13,15 +13,15 @@
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_System_Loading_Simple.WBP_System_Loading_Simple_C.UpdateLoadingPhase
 // 0x0004 (0x0004 - 0x0000)
 struct WBP_System_Loading_Simple_C_UpdateLoadingPhase final
 {
 public:
-	int32                                         EndLoadingPhase;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EndLoadingPhase_UpdateLoadingPhase;                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_UpdateLoadingPhase;
 
@@ -30,7 +30,7 @@ DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_UpdateLoadingPhase;
 struct WBP_System_Loading_Simple_C_SetLoadingProgress final
 {
 public:
-	float                                         LoadingProgress;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LoadingProgress_SetLoadingProgress;                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_SetLoadingProgress;
 
@@ -39,8 +39,8 @@ DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_SetLoadingProgress;
 struct WBP_System_Loading_Simple_C_SetLoadingGaugeParam final
 {
 public:
-	int32                                         LoadingPhaseNum;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSetProgress;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LoadingPhaseNum_SetLoadingGaugeParam;              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSetProgress_SetLoadingGaugeParam;                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_SetLoadingGaugeParam;
 
@@ -49,7 +49,7 @@ DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_SetLoadingGaugeParam;
 struct WBP_System_Loading_Simple_C_GetLoadingDisplayType final
 {
 public:
-	ELoadingDisplayType                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELoadingDisplayType                           ReturnValue_GetLoadingDisplayType;                 // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_GetLoadingDisplayType;
 
@@ -72,5 +72,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_System_Loading_Simple_C_ExecuteUbergraph_WBP_System_Loading_Simple;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

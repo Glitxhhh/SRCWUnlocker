@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MeshDescription.MeshDescriptionBase
 // 0x02C8 (0x02F0 - 0x0028)
@@ -153,5 +152,4 @@ public:
 };
 DUMPER7_ASSERTS_UMeshDescriptionBaseBulkData;
 
-}
-
+SDK_NAMESPACE_END

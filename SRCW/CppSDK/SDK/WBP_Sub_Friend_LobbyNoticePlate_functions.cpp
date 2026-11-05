@@ -14,18 +14,15 @@
 #include "WBP_Sub_Friend_LobbyNoticePlate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,16 +35,32 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::Construct()
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Sub_Friend_LobbyNoticePlate_C", "ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate", FuncInfo);
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_ExecuteUbergraph_WBP_Sub_Friend_LobbyNoticePlate Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Sub_Friend_LobbyNoticePlate.WBP_Sub_Friend_LobbyNoticePlate_C.Get_LobbyNoticeBase_Brush
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateBrush                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FSlateBrush UWBP_Sub_Friend_LobbyNoticePlate_C::Get_LobbyNoticeBase_Brush()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
+
+	Params::WBP_Sub_Friend_LobbyNoticePlate_C_Get_LobbyNoticeBase_Brush Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -58,10 +71,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::ExecuteUbergraph_WBP_Sub_Friend_LobbyNo
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetControlGaugeValue(double InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetControlGaugeValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetControlGaugeValue Parms{};
 
@@ -79,10 +90,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetControlGaugeValue(double InValue)
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetControlIcon(int32 InSwitcherIndex, int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetControlIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetControlIcon Parms{};
 
@@ -100,10 +109,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetControlIcon(int32 InSwitcherIndex, i
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlatformIcon(ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetPlatformIcon Parms{};
 
@@ -122,10 +129,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlatformIcon(ECrossplayPlatform InPl
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2D> InIconTexture, const struct FLinearColor& InBgColor, bool bInNowPlaying)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetPlayerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetPlayerIcon Parms{};
 
@@ -144,10 +149,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerIcon(TSoftObjectPtr<class UTex
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetPlayerIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetPlayerIconVisible Parms{};
 
@@ -164,10 +167,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerIconVisible(bool bInVisible)
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerNameText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetPlayerNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetPlayerNameText Parms{};
 
@@ -184,10 +185,8 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetPlayerNameText(const class FText& In
 
 void UWBP_Sub_Friend_LobbyNoticePlate_C::SetRaceCustomVisibility(bool IsRaceSequence)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_Friend_LobbyNoticePlate_C", "SetRaceCustomVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_Friend_LobbyNoticePlate_C", FnName));
 
 	Params::WBP_Sub_Friend_LobbyNoticePlate_C_SetRaceCustomVisibility Parms{};
 
@@ -196,5 +195,5 @@ void UWBP_Sub_Friend_LobbyNoticePlate_C::SetRaceCustomVisibility(bool IsRaceSequ
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

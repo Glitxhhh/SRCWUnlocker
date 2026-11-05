@@ -13,15 +13,14 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPF_AppUtilityLibrary.BPF_AppUtilityLibrary_C
 // 0x0000 (0x0028 - 0x0028)
 class UBPF_AppUtilityLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& rewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder);
+	static void OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& RewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder);
 	static void Set_Input_Blocked(class APlayerController* Controller, bool bBlocked, class UObject* __WorldContext);
 
 public:
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPF_AppUtilityLibrary_C;
 
-}
-
+SDK_NAMESPACE_END

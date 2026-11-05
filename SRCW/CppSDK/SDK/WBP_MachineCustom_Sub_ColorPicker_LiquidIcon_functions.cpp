@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ColorPicker_LiquidIcon.WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::Construct()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::ExecuteUbergraph_WBP_Machi
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::GetItemData(struct FST_ColorDetailWindowColorItemData* OutItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_GetItemData Parms{};
 
@@ -77,10 +70,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::GetItemData(struct FST_Col
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +82,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +94,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +108,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnDownKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_OnFocusLost Parms{};
 
@@ -143,10 +128,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusLost(const struct F
 
 struct FEventReply UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_OnFocusReceived Parms{};
 
@@ -167,10 +150,8 @@ struct FEventReply UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusRecei
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_OnFocusReceivedInternal Parms{};
 
@@ -186,10 +167,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnFocusReceivedInternal(co
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +179,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnLeftKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -214,10 +191,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnLeftShoulderPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -228,10 +203,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnRightKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -242,10 +215,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnRightShoulderPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -258,10 +229,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::OnUpKeyPressed()
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetColor(const struct FLinearColor& InColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "SetColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_SetColor Parms{};
 
@@ -278,10 +247,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetColor(const struct FLin
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetCursorVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_SetCursorVisible Parms{};
 
@@ -298,10 +265,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetCursorVisible(bool bInI
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetSelectIconVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "SetSelectIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_SetSelectIconVisible Parms{};
 
@@ -318,10 +283,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::SetSelectIconVisible(bool 
 
 void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::Setup(const struct FST_ColorDetailWindowColorItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_Setup Parms{};
 
@@ -330,5 +293,5 @@ void UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C::Setup(const struct FST_Col
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

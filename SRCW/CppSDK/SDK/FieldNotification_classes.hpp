@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class FieldNotification.NotifyFieldValueChanged
-// 0x0000 (0x0000 - 0x0000)
-class INotifyFieldValueChanged final
+// 0x0008 (0x0008 - 0x0000)
+class INotifyFieldValueChanged
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -45,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_INotifyFieldValueChanged;
 
-}
-
+SDK_NAMESPACE_END

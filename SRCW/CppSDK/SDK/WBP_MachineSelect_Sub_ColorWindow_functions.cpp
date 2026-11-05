@@ -14,18 +14,15 @@
 #include "WBP_MachineSelect_Sub_ColorWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_ColorWindow.WBP_MachineSelect_Sub_ColorWindow_C.BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_5_OnPageSlideStart__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_5_OnPageSlideStart__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_5_OnPageSlideStart__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWi
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_6_OnPageSlideEnd__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineCustom_Sub_PresetPaint_K2Node_ComponentBoundEvent_6_OnPageSlideEnd__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWi
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineSelect_Sub_Ready_K2Node_ComponentBoundEvent_0_Event_AnimFinishedOut__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "BndEvt__WBP_MachineSelect_Sub_ColorWindow_WBP_MachineSelect_Sub_Ready_K2Node_ComponentBoundEvent_0_Event_AnimFinishedOut__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::BndEvt__WBP_MachineSelect_Sub_ColorWi
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::ExecuteUbergraph_WBP_MachineSelect_Sub_ColorWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_ColorWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_ColorWindow_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_ColorWindow", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_ColorWindow_C_ExecuteUbergraph_WBP_MachineSelect_Sub_ColorWindow Parms{};
 
@@ -86,10 +77,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::ExecuteUbergraph_WBP_MachineSelect_Su
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::OnItemFocus(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "OnItemFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_ColorWindow_C_OnItemFocus Parms{};
 
@@ -106,10 +95,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::OnItemFocus(class UUnionUIButtonBase*
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::OnSetPlayerIndex(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "OnSetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_ColorWindow_C_OnSetPlayerIndex Parms{};
 
@@ -124,10 +111,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::OnSetPlayerIndex(int32 InPlayerIndex)
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::OverrideNavigationRule()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "OverrideNavigationRule");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::OverrideNavigationRule()
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_ColorWindow_C_PreConstruct Parms{};
 
@@ -160,10 +143,8 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_MachineSelect_Sub_ColorWindow_C::SetEnableShoulder(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_ColorWindow_C", "SetEnableShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_ColorWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_ColorWindow_C_SetEnableShoulder Parms{};
 
@@ -172,5 +153,5 @@ void UWBP_MachineSelect_Sub_ColorWindow_C::SetEnableShoulder(bool IsEnable)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

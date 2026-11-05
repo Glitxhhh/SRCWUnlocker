@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DELETE_WBP_PauseMenu_Sub_Header.DELETE_WBP_PauseMenu_Sub_Header_C
 // 0x0020 (0x0300 - 0x02E0)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UDELETE_WBP_PauseMenu_Sub_Header_C;
 
-}
-
+SDK_NAMESPACE_END

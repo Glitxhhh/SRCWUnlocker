@@ -14,18 +14,15 @@
 #include "BPC_MenuStateTitle_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MenuStateTitle.BPC_MenuStateTitle_C.Play Title BGM
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MenuStateTitle_C::Play_Title_BGM()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "Play Title BGM");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTitle_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UBPC_MenuStateTitle_C::Play_Title_BGM()
 
 void UBPC_MenuStateTitle_C::OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD(TSubclassOf<class UObject> Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTitle_C", FnName));
 
 	Params::BPC_MenuStateTitle_C_OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD Parms{};
 
@@ -56,10 +51,8 @@ void UBPC_MenuStateTitle_C::OnLoaded_4765DBF64D84C160A2E9C08B7DD924AD(TSubclassO
 
 void UBPC_MenuStateTitle_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTitle_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_MenuStateTitle_C::OnInitState()
 
 void UBPC_MenuStateTitle_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTitle_C", FnName));
 
 	Params::BPC_MenuStateTitle_C_OnUpdateState Parms{};
 
@@ -90,10 +81,8 @@ void UBPC_MenuStateTitle_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_MenuStateTitle_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStateTitle_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UBPC_MenuStateTitle_C::OnExitState()
 
 void UBPC_MenuStateTitle_C::ExecuteUbergraph_BPC_MenuStateTitle(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStateTitle_C", "ExecuteUbergraph_BPC_MenuStateTitle");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MenuStateTitle_C", "ExecuteUbergraph_BPC_MenuStateTitle", FuncInfo);
 
 	Params::BPC_MenuStateTitle_C_ExecuteUbergraph_BPC_MenuStateTitle Parms{};
 
@@ -118,5 +105,5 @@ void UBPC_MenuStateTitle_C::ExecuteUbergraph_BPC_MenuStateTitle(int32 EntryPoint
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

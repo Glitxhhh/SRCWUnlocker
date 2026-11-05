@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_ColorPicker_TextureText_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ColorPicker_TextureText.WBP_MachineCustom_Sub_ColorPicker_TextureText_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_TextureText_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::Construct()
 
 void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_TextureText(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_TextureText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_TextureText", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_TextureText_C_ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_TextureText Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::ExecuteUbergraph_WBP_Mach
 
 void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::SetSelectIconVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "SetSelectIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_TextureText_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_TextureText_C_SetSelectIconVisible Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::SetSelectIconVisible(bool
 
 void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::SetSurfaceName(const class FText& InSurfaceName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "SetSurfaceName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_TextureText_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_TextureText_C_SetSurfaceName Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::SetSurfaceName(const clas
 
 void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::Setup(const struct FST_ColorDetailWindowSurfaceItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_TextureText_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_TextureText_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_TextureText_C_Setup Parms{};
 
@@ -110,5 +99,5 @@ void UWBP_MachineCustom_Sub_ColorPicker_TextureText_C::Setup(const struct FST_Co
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

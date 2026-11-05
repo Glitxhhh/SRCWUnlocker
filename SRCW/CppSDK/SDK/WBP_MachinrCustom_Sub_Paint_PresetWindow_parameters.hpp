@@ -14,8 +14,8 @@
 #include "ST_ColorPresetSelectPageItemData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachinrCustom_Sub_Paint_PresetWindow.WBP_MachinrCustom_Sub_Paint_PresetWindow_C.BuildNavigation
 // 0x00E0 (0x00E0 - 0x0000)
@@ -312,5 +312,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetNavigation;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

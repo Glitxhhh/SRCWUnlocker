@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_classes.hpp"
+#include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_Sticker_PresetWindow.WBP_MachineCustom_Sub_Sticker_PresetWindow_C
 // 0x0090 (0x0370 - 0x02E0)
@@ -74,5 +73,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_Sticker_PresetWindow_C;
 
-}
-
+SDK_NAMESPACE_END

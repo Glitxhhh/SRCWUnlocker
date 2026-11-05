@@ -14,8 +14,7 @@
 #include "WBP_EventEndInfo_Sub_Details_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.ExecuteUbergraph_WBP_EventEndInfo_Sub_Details
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_EventEndInfo_Sub_Details_C::ExecuteUbergraph_WBP_EventEndInfo_Sub_Details(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "ExecuteUbergraph_WBP_EventEndInfo_Sub_Details");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_EventEndInfo_Sub_Details_C", "ExecuteUbergraph_WBP_EventEndInfo_Sub_Details", FuncInfo);
 
 	Params::WBP_EventEndInfo_Sub_Details_C_ExecuteUbergraph_WBP_EventEndInfo_Sub_Details Parms{};
 
@@ -37,15 +34,56 @@ void UWBP_EventEndInfo_Sub_Details_C::ExecuteUbergraph_WBP_EventEndInfo_Sub_Deta
 }
 
 
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.GetPointAnimTimeLength
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 Time                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::GetPointAnimTimeLength(double* Time)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	Params::WBP_EventEndInfo_Sub_Details_C_GetPointAnimTimeLength Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Time != nullptr)
+		*Time = Parms.Time;
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnAnim_FinishedPointDisplay
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::OnAnim_FinishedPointDisplay()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnAnim_PlaySoundRankingPraise
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::OnAnim_PlaySoundRankingPraise()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_EventEndInfo_Sub_Details_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,12 +94,66 @@ void UWBP_EventEndInfo_Sub_Details_C::OnInitialized()
 
 void UWBP_EventEndInfo_Sub_Details_C::RankingAnimEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "RankingAnimEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_0
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_0()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_1
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_EventEndInfo_Sub_Details_C::SequenceEvent__ENTRYPOINTWBP_EventEndInfo_Sub_Details_1()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetFestaPointText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPoint                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseInvalidText                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetFestaPointText(int32 InPoint, bool UseInvalidText)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetFestaPointText Parms{};
+
+	Parms.InPoint = InPoint;
+	Parms.UseInvalidText = UseInvalidText;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -72,10 +164,8 @@ void UWBP_EventEndInfo_Sub_Details_C::RankingAnimEnd()
 
 void UWBP_EventEndInfo_Sub_Details_C::SetPointDisplay(int32 PlayerPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetPointDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_SetPointDisplay Parms{};
 
@@ -92,14 +182,50 @@ void UWBP_EventEndInfo_Sub_Details_C::SetPointDisplay(int32 PlayerPoint)
 
 void UWBP_EventEndInfo_Sub_Details_C::SetRankingDisplay(int32 Ranking)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetRankingDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_SetRankingDisplay Parms{};
 
 	Parms.Ranking = Ranking;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetRankingType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFestaRankingType                       InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetRankingType(EFestaRankingType InType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetRankingType Parms{};
+
+	Parms.InType = InType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetStreakPointText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InPoint                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseEachPointText                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetStreakPointText(int32 InPoint, bool UseEachPointText)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetStreakPointText Parms{};
+
+	Parms.InPoint = InPoint;
+	Parms.UseEachPointText = UseEachPointText;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -112,14 +238,30 @@ void UWBP_EventEndInfo_Sub_Details_C::SetRankingDisplay(int32 Ranking)
 
 void UWBP_EventEndInfo_Sub_Details_C::SetTextureBG(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "SetTextureBG");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_SetTextureBG Parms{};
 
 	Parms.Texture = Texture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_Sub_Details.WBP_EventEndInfo_Sub_Details_C.SetVisibilityPointWindow
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_Sub_Details_C::SetVisibilityPointWindow(ESlateVisibility Visibility_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
+
+	Params::WBP_EventEndInfo_Sub_Details_C_SetVisibilityPointWindow Parms{};
+
+	Parms.Visibility_0 = Visibility_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -132,10 +274,8 @@ void UWBP_EventEndInfo_Sub_Details_C::SetTextureBG(class UTexture2D* Texture)
 
 void UWBP_EventEndInfo_Sub_Details_C::StartPointDisplay(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "StartPointDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_StartPointDisplay Parms{};
 
@@ -152,10 +292,8 @@ void UWBP_EventEndInfo_Sub_Details_C::StartPointDisplay(int32 Point)
 
 void UWBP_EventEndInfo_Sub_Details_C::StartRankingDisplay(int32 Ranking)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "StartRankingDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_StartRankingDisplay Parms{};
 
@@ -173,10 +311,8 @@ void UWBP_EventEndInfo_Sub_Details_C::StartRankingDisplay(int32 Ranking)
 
 void UWBP_EventEndInfo_Sub_Details_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_C_Tick Parms{};
 
@@ -192,13 +328,11 @@ void UWBP_EventEndInfo_Sub_Details_C::Tick(const struct FGeometry& MyGeometry, f
 
 void UWBP_EventEndInfo_Sub_Details_C::UpdateDisplayPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_C", "UpdateDisplayPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

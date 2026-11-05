@@ -14,8 +14,7 @@
 #include "BPFL_CommonStageCameraUtility_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_CommonStageCameraUtility.BPFL_CommonStageCameraUtility_C.ApplySettingsCineCameraAll
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -27,10 +26,8 @@ namespace SDK
 
 void UBPFL_CommonStageCameraUtility_C::ApplySettingsCineCameraAll(class UDataTable* In_DataTable, EStageId In_StageId, class UObject* __WorldContext, bool* OutResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonStageCameraUtility_C", "ApplySettingsCineCameraAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonStageCameraUtility_C", "ApplySettingsCineCameraAll", FuncInfo);
 
 	Params::BPFL_CommonStageCameraUtility_C_ApplySettingsCineCameraAll Parms{};
 
@@ -56,10 +53,8 @@ void UBPFL_CommonStageCameraUtility_C::ApplySettingsCineCameraAll(class UDataTab
 
 void UBPFL_CommonStageCameraUtility_C::ApplySettingsCineCameraByTag(class UDataTable* In_DataTable, EStageId In_StageId, class FName In_Tag, class UObject* __WorldContext, bool* OutResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonStageCameraUtility_C", "ApplySettingsCineCameraByTag");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonStageCameraUtility_C", "ApplySettingsCineCameraByTag", FuncInfo);
 
 	Params::BPFL_CommonStageCameraUtility_C_ApplySettingsCineCameraByTag Parms{};
 
@@ -85,10 +80,8 @@ void UBPFL_CommonStageCameraUtility_C::ApplySettingsCineCameraByTag(class UDataT
 
 void UBPFL_CommonStageCameraUtility_C::ApplySettingsSceneCaptureAll(class UDataTable* In_DataTable, EStageId In_StageId, class UObject* __WorldContext, bool* OutResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonStageCameraUtility_C", "ApplySettingsSceneCaptureAll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonStageCameraUtility_C", "ApplySettingsSceneCaptureAll", FuncInfo);
 
 	Params::BPFL_CommonStageCameraUtility_C_ApplySettingsSceneCaptureAll Parms{};
 
@@ -102,5 +95,5 @@ void UBPFL_CommonStageCameraUtility_C::ApplySettingsSceneCaptureAll(class UDataT
 		*OutResult = Parms.OutResult;
 }
 
-}
 
+SDK_NAMESPACE_END

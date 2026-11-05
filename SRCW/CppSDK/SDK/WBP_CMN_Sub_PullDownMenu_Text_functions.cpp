@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_PullDownMenu_Text_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_PullDownMenu_Text.WBP_CMN_Sub_PullDownMenu_Text_C.SetSelectIconVisible
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_PullDownMenu_Text_C::SetSelectIconVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_PullDownMenu_Text_C", "SetSelectIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_PullDownMenu_Text_C", FnName));
 
 	Params::WBP_CMN_Sub_PullDownMenu_Text_C_SetSelectIconVisible Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_Sub_PullDownMenu_Text_C::SetSelectIconVisible(bool bInIsVisible)
 
 void UWBP_CMN_Sub_PullDownMenu_Text_C::Setup(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_PullDownMenu_Text_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_PullDownMenu_Text_C", FnName));
 
 	Params::WBP_CMN_Sub_PullDownMenu_Text_C_Setup Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_CMN_Sub_PullDownMenu_Text_C::Setup(const struct FST_PullDownMenuItemDa
 
 void UWBP_CMN_Sub_PullDownMenu_Text_C::GetItemData(struct FST_PullDownMenuItemData* OutItemData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_PullDownMenu_Text_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_PullDownMenu_Text_C", FnName));
 
 	Params::WBP_CMN_Sub_PullDownMenu_Text_C_GetItemData Parms{};
 
@@ -77,5 +70,5 @@ void UWBP_CMN_Sub_PullDownMenu_Text_C::GetItemData(struct FST_PullDownMenuItemDa
 		*OutItemData = std::move(Parms.OutItemData);
 }
 
-}
 
+SDK_NAMESPACE_END

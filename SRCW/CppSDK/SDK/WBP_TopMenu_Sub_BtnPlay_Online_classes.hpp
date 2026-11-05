@@ -11,14 +11,13 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
+#include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu_Sub_BtnPlay_Online.WBP_TopMenu_Sub_BtnPlay_Online_C
 // 0x0068 (0x0550 - 0x04E8)
@@ -69,5 +68,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopMenu_Sub_BtnPlay_Online_C;
 
-}
-
+SDK_NAMESPACE_END

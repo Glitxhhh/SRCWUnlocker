@@ -14,8 +14,7 @@
 #include "ABPT_HoldItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABPT_HoldItem.ABPT_HoldItem_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABPT_HoldItem_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	Params::ABPT_HoldItem_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABPT_HoldItem_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_BlendListByInt_5345D83E42D7EBD1E5B6C99F60E6C1F1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_BlendListByInt_5345D83E42D7EBD1E5B6C99F60E6C1F1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_0682DB304E13AB1A0ABCACA97440C46F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_0682DB304E13AB1A0ABCACA97440C46F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_10F664BB4CB816C35F9E0DBF93E91971()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_10F664BB4CB816C35F9E0DBF93E91971");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_154EC7D64DF89C9278487AA5DC9A9737()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_154EC7D64DF89C9278487AA5DC9A9737");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,10 +88,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_18E3C2E441A102482D291AAAAE7F1121()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_18E3C2E441A102482D291AAAAE7F1121");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +100,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_2507B601467CDD63B5364D8A76737436()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_2507B601467CDD63B5364D8A76737436");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,10 +112,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_2F0A3BDA496696D214AD93BA172E30F5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_2F0A3BDA496696D214AD93BA172E30F5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +124,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_4331D05E434BB1B948927C8E103695C1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_4331D05E434BB1B948927C8E103695C1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +136,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_4E6D42D240737837BB5DA6A653C7B6F0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_4E6D42D240737837BB5DA6A653C7B6F0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +148,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_52D3C1DB4AEAA6D865B56E901843B95D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_52D3C1DB4AEAA6D865B56E901843B95D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +160,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_5426A15E43B9A914C9BDA7ADE894C402()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_5426A15E43B9A914C9BDA7ADE894C402");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +172,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_665B960D45F83A8D4A6DAA93B2B8873B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_665B960D45F83A8D4A6DAA93B2B8873B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +184,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_688F2503454CC44F4F81B8BF9D1ADF45()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_688F2503454CC44F4F81B8BF9D1ADF45");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -225,10 +196,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_6C1529DB41650ED6712D1BB6030115A2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_6C1529DB41650ED6712D1BB6030115A2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -239,10 +208,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_6C15C63F424C5EFD52D0BF98BDA4E4F4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_6C15C63F424C5EFD52D0BF98BDA4E4F4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -253,10 +220,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_711EDB944F70BF9A19913A9D69EEA5DE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_711EDB944F70BF9A19913A9D69EEA5DE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -267,10 +232,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_72DEDB58454C749DCCF3BF926C30B979()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_72DEDB58454C749DCCF3BF926C30B979");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -281,10 +244,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_7CB9ADF74ABD824666D4EBA125B59780()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_7CB9ADF74ABD824666D4EBA125B59780");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -295,10 +256,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_7D07834E45DFBC7D726631B79DD9CFB7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_7D07834E45DFBC7D726631B79DD9CFB7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -309,10 +268,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_86DA47C84B506B537B1B6B84E0338198()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_86DA47C84B506B537B1B6B84E0338198");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -323,10 +280,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_92A0303D4FB0162554C105ADCE1085D1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_92A0303D4FB0162554C105ADCE1085D1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -337,10 +292,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_A0C639C747B18F2C78EA6CBDE13CBC2B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_A0C639C747B18F2C78EA6CBDE13CBC2B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -351,10 +304,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_A27238C94DFAFCE341E8E999C58BEE89()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_A27238C94DFAFCE341E8E999C58BEE89");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -365,10 +316,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_B331F4FE403E6082FD999880BC83A426()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_B331F4FE403E6082FD999880BC83A426");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -379,10 +328,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_B4D122B14AC9478052D0A6A28890D874()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_B4D122B14AC9478052D0A6A28890D874");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -393,10 +340,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_C0C839B747D5D83BE4717380EB83CC91()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_C0C839B747D5D83BE4717380EB83CC91");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -407,10 +352,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_DFB7A0714DBA2FA32C84A7BDAB1D2E9B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_DFB7A0714DBA2FA32C84A7BDAB1D2E9B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -421,10 +364,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_ED7FCD1F4F036D3F2724E69B5474EEED()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem_AnimGraphNode_TransitionResult_ED7FCD1F4F036D3F2724E69B5474EEED");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -437,10 +378,8 @@ void UABPT_HoldItem_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_HoldItem
 
 void UABPT_HoldItem_C::ExecuteUbergraph_ABPT_HoldItem(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "ExecuteUbergraph_ABPT_HoldItem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_HoldItem_C", "ExecuteUbergraph_ABPT_HoldItem", FuncInfo);
 
 	Params::ABPT_HoldItem_C_ExecuteUbergraph_ABPT_HoldItem Parms{};
 
@@ -458,10 +397,8 @@ void UABPT_HoldItem_C::ExecuteUbergraph_ABPT_HoldItem(int32 EntryPoint)
 
 void UABPT_HoldItem_C::IsSkipInState(int32 In_RemainingUses, bool* Out_Valid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "IsSkipInState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	Params::ABPT_HoldItem_C_IsSkipInState Parms{};
 
@@ -481,10 +418,8 @@ void UABPT_HoldItem_C::IsSkipInState(int32 In_RemainingUses, bool* Out_Valid)
 
 void UABPT_HoldItem_C::GetBlendTime(double* newParam) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "GetBlendTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	Params::ABPT_HoldItem_C_GetBlendTime Parms{};
 
@@ -502,10 +437,8 @@ void UABPT_HoldItem_C::GetBlendTime(double* newParam) const
 
 void UABPT_HoldItem_C::IsValidOutState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "IsValidOutState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	Params::ABPT_HoldItem_C_IsValidOutState Parms{};
 
@@ -523,10 +456,8 @@ void UABPT_HoldItem_C::IsValidOutState(bool* Out_Valid) const
 
 void UABPT_HoldItem_C::IsValidUseState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_HoldItem_C", "IsValidUseState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_HoldItem_C", FnName));
 
 	Params::ABPT_HoldItem_C_IsValidUseState Parms{};
 
@@ -536,5 +467,5 @@ void UABPT_HoldItem_C::IsValidUseState(bool* Out_Valid) const
 		*Out_Valid = Parms.Out_Valid;
 }
 
-}
 
+SDK_NAMESPACE_END

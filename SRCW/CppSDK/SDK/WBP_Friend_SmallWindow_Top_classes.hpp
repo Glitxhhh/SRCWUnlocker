@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_SmallWindow_Top.WBP_Friend_SmallWindow_Top_C
 // 0x0018 (0x03F0 - 0x03D8)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_SmallWindow_Top_C;
 
-}
-
+SDK_NAMESPACE_END

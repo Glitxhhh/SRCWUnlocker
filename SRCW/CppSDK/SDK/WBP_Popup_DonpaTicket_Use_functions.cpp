@@ -14,18 +14,15 @@
 #include "WBP_Popup_DonpaTicket_Use_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_DonpaTicket_Use.WBP_Popup_DonpaTicket_Use_C.ClearButtonNavigation
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_Popup_DonpaTicket_Use_C::ClearButtonNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "ClearButtonNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Popup_DonpaTicket_Use_C::ClearButtonNavigation()
 
 void UWBP_Popup_DonpaTicket_Use_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Popup_DonpaTicket_Use_C::Construct()
 
 void UWBP_Popup_DonpaTicket_Use_C::CustomEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "CustomEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_Popup_DonpaTicket_Use_C::CustomEvent()
 
 void UWBP_Popup_DonpaTicket_Use_C::CustomEvent_1(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "CustomEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_CustomEvent_1 Parms{};
 
@@ -86,10 +77,8 @@ void UWBP_Popup_DonpaTicket_Use_C::CustomEvent_1(EButtonFocusType InButtonFocusT
 
 void UWBP_Popup_DonpaTicket_Use_C::ExecuteUbergraph_WBP_Popup_DonpaTicket_Use(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "ExecuteUbergraph_WBP_Popup_DonpaTicket_Use");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_DonpaTicket_Use_C", "ExecuteUbergraph_WBP_Popup_DonpaTicket_Use", FuncInfo);
 
 	Params::WBP_Popup_DonpaTicket_Use_C_ExecuteUbergraph_WBP_Popup_DonpaTicket_Use Parms{};
 
@@ -106,10 +95,8 @@ void UWBP_Popup_DonpaTicket_Use_C::ExecuteUbergraph_WBP_Popup_DonpaTicket_Use(in
 
 class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetAnimationIn Parms{};
 
@@ -126,10 +113,8 @@ class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationIn()
 
 class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetAnimationLoop Parms{};
 
@@ -146,10 +131,8 @@ class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationLoop()
 
 class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetAnimationOut Parms{};
 
@@ -166,10 +149,8 @@ class UWidgetAnimation* UWBP_Popup_DonpaTicket_Use_C::GetAnimationOut()
 
 void UWBP_Popup_DonpaTicket_Use_C::GetNoButton(class UWBP_Popup_Sub_Btn_Standard_C** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetNoButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetNoButton Parms{};
 
@@ -187,10 +168,8 @@ void UWBP_Popup_DonpaTicket_Use_C::GetNoButton(class UWBP_Popup_Sub_Btn_Standard
 
 EPopupWindowButtonType UWBP_Popup_DonpaTicket_Use_C::GetPopupWindowButtonType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetPopupWindowButtonType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetPopupWindowButtonType Parms{};
 
@@ -207,10 +186,8 @@ EPopupWindowButtonType UWBP_Popup_DonpaTicket_Use_C::GetPopupWindowButtonType()
 
 EPopupWindowType UWBP_Popup_DonpaTicket_Use_C::GetPopupWindowType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetPopupWindowType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetPopupWindowType Parms{};
 
@@ -227,10 +204,8 @@ EPopupWindowType UWBP_Popup_DonpaTicket_Use_C::GetPopupWindowType()
 
 void UWBP_Popup_DonpaTicket_Use_C::GetYesButton(class UWBP_Popup_Sub_Btn_Standard_C** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "GetYesButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_GetYesButton Parms{};
 
@@ -246,10 +221,8 @@ void UWBP_Popup_DonpaTicket_Use_C::GetYesButton(class UWBP_Popup_Sub_Btn_Standar
 
 void UWBP_Popup_DonpaTicket_Use_C::InitButtonControlDelay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "InitButtonControlDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +235,8 @@ void UWBP_Popup_DonpaTicket_Use_C::InitButtonControlDelay()
 
 void UWBP_Popup_DonpaTicket_Use_C::InitParam(EPopupWindowButtonType ButtonType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "InitParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_InitParam Parms{};
 
@@ -280,10 +251,8 @@ void UWBP_Popup_DonpaTicket_Use_C::InitParam(EPopupWindowButtonType ButtonType)
 
 void UWBP_Popup_DonpaTicket_Use_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +265,8 @@ void UWBP_Popup_DonpaTicket_Use_C::OnAnimationInFinished()
 
 void UWBP_Popup_DonpaTicket_Use_C::OnButtonDecision(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "OnButtonDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_OnButtonDecision Parms{};
 
@@ -318,10 +285,8 @@ void UWBP_Popup_DonpaTicket_Use_C::OnButtonDecision(class UUnionUIButtonBase* Bu
 
 struct FEventReply UWBP_Popup_DonpaTicket_Use_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_OnFocusReceived Parms{};
 
@@ -339,10 +304,8 @@ struct FEventReply UWBP_Popup_DonpaTicket_Use_C::OnFocusReceived(const struct FG
 
 void UWBP_Popup_DonpaTicket_Use_C::OnOutAnimFinished_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "OnOutAnimFinished_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +319,8 @@ void UWBP_Popup_DonpaTicket_Use_C::OnOutAnimFinished_Impl()
 
 void UWBP_Popup_DonpaTicket_Use_C::OnPanelDecision_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "OnPanelDecision_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_OnPanelDecision_Impl Parms{};
 
@@ -375,10 +336,8 @@ void UWBP_Popup_DonpaTicket_Use_C::OnPanelDecision_Impl(class UUnionUIButtonBase
 
 void UWBP_Popup_DonpaTicket_Use_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -391,10 +350,8 @@ void UWBP_Popup_DonpaTicket_Use_C::PlayAnimationIn()
 
 void UWBP_Popup_DonpaTicket_Use_C::SetButtonControlDelayTime(float InTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetButtonControlDelayTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetButtonControlDelayTime Parms{};
 
@@ -411,10 +368,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetButtonControlDelayTime(float InTime)
 
 void UWBP_Popup_DonpaTicket_Use_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetButtonFocusType Parms{};
 
@@ -429,10 +384,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetButtonFocusType(EButtonFocusType InButtonF
 
 void UWBP_Popup_DonpaTicket_Use_C::SetButtonNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetButtonNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +398,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetButtonNavigation()
 
 void UWBP_Popup_DonpaTicket_Use_C::SetButtonText(const TArray<class FText>& BtnTextArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetButtonText Parms{};
 
@@ -465,10 +416,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetButtonText(const TArray<class FText>& BtnT
 
 void UWBP_Popup_DonpaTicket_Use_C::SetDisplayFooterButton(const bool InDisplay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetDisplayFooterButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetDisplayFooterButton Parms{};
 
@@ -486,10 +435,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetDisplayFooterButton(const bool InDisplay)
 
 void UWBP_Popup_DonpaTicket_Use_C::SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetDonpaTicketCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetDonpaTicketCount Parms{};
 
@@ -507,10 +454,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetDonpaTicketCount(int32 CurrentCount, int32
 
 void UWBP_Popup_DonpaTicket_Use_C::SetEnableInput(bool InEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetEnableInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetEnableInput Parms{};
 
@@ -529,10 +474,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetEnableInput(bool InEnable)
 
 void UWBP_Popup_DonpaTicket_Use_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetFooterMenuBtn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetFooterMenuBtn Parms{};
 
@@ -551,10 +494,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 Bt
 
 void UWBP_Popup_DonpaTicket_Use_C::SetImageButtonSelectText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetImageButtonSelectText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetImageButtonSelectText Parms{};
 
@@ -571,10 +512,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetImageButtonSelectText(const class FText& I
 
 void UWBP_Popup_DonpaTicket_Use_C::SetImageTexture(const class UTexture2D* Texture2D)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetImageTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetImageTexture Parms{};
 
@@ -591,10 +530,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetImageTexture(const class UTexture2D* Textu
 
 void UWBP_Popup_DonpaTicket_Use_C::SetInitialFocusButtonIndex(const int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetInitialFocusButtonIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetInitialFocusButtonIndex Parms{};
 
@@ -611,10 +548,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetInitialFocusButtonIndex(const int32 InButt
 
 void UWBP_Popup_DonpaTicket_Use_C::SetPopupInfoDisplayIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetPopupInfoDisplayIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetPopupInfoDisplayIndex Parms{};
 
@@ -632,10 +567,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetPopupInfoDisplayIndex(int32 Index_0)
 
 void UWBP_Popup_DonpaTicket_Use_C::SetPopupInfoMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 Btn02IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetPopupInfoMainMenuButtonIconIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetPopupInfoMainMenuButtonIconIndex Parms{};
 
@@ -653,10 +586,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetPopupInfoMainMenuButtonIconIndex(int32 Btn
 
 void UWBP_Popup_DonpaTicket_Use_C::SetTextMessege(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetTextMessege");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetTextMessege Parms{};
 
@@ -674,10 +605,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetTextMessege(const class FText& Text)
 
 void UWBP_Popup_DonpaTicket_Use_C::SetTextTitle(const class FText& Text, bool Attension)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetTextTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetTextTitle Parms{};
 
@@ -696,10 +625,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetTextTitle(const class FText& Text, bool At
 
 void UWBP_Popup_DonpaTicket_Use_C::SetYesNoTexts(const class FText& No, const class FText& Yes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "SetYesNoTexts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_SetYesNoTexts Parms{};
 
@@ -715,10 +642,8 @@ void UWBP_Popup_DonpaTicket_Use_C::SetYesNoTexts(const class FText& No, const cl
 
 void UWBP_Popup_DonpaTicket_Use_C::StartButtonContolDelay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "StartButtonContolDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -732,10 +657,8 @@ void UWBP_Popup_DonpaTicket_Use_C::StartButtonContolDelay()
 
 void UWBP_Popup_DonpaTicket_Use_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_Tick Parms{};
 
@@ -753,10 +676,8 @@ void UWBP_Popup_DonpaTicket_Use_C::Tick(const struct FGeometry& MyGeometry, floa
 
 void UWBP_Popup_DonpaTicket_Use_C::UpdateButtonControlDelay(double InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_DonpaTicket_Use_C", "UpdateButtonControlDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_DonpaTicket_Use_C", FnName));
 
 	Params::WBP_Popup_DonpaTicket_Use_C_UpdateButtonControlDelay Parms{};
 
@@ -765,5 +686,5 @@ void UWBP_Popup_DonpaTicket_Use_C::UpdateButtonControlDelay(double InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

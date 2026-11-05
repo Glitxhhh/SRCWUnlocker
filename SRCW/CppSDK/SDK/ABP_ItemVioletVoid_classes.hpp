@@ -15,8 +15,7 @@
 #include "ABP_ItemVioletVoid_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_ItemVioletVoid.ABP_ItemVioletVoid_C
 // 0x0380 (0x06F0 - 0x0370)
@@ -76,5 +75,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_ItemVioletVoid_C;
 
-}
-
+SDK_NAMESPACE_END

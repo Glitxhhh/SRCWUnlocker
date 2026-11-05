@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_Sub_ModeMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_ModeMenu.WBP_TopMenu_Sub_ModeMenu_C.ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_Sub_ModeMenu_C::ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_ModeMenu_C", "ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Sub_ModeMenu_C", "ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu", FuncInfo);
 
 	Params::WBP_TopMenu_Sub_ModeMenu_C_ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_TopMenu_Sub_ModeMenu_C::ExecuteUbergraph_WBP_TopMenu_Sub_ModeMenu(int3
 
 void UWBP_TopMenu_Sub_ModeMenu_C::InitializeGameModeMenu(const TArray<ETopMenuGameMode>& BeltButtonTypeArr, class UCommonMenuSubMenu* SubMenu)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_ModeMenu_C", "InitializeGameModeMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_ModeMenu_C", FnName));
 
 	Params::WBP_TopMenu_Sub_ModeMenu_C_InitializeGameModeMenu Parms{};
 
@@ -64,13 +59,23 @@ void UWBP_TopMenu_Sub_ModeMenu_C::InitializeGameModeMenu(const TArray<ETopMenuGa
 
 void UWBP_TopMenu_Sub_ModeMenu_C::SetupGameModeMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_ModeMenu_C", "SetupGameModeMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_ModeMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function WBP_TopMenu_Sub_ModeMenu.WBP_TopMenu_Sub_ModeMenu_C.UpdateRivalDuelButtonRivalTexture
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_ModeMenu_C::UpdateRivalDuelButtonRivalTexture()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_ModeMenu_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

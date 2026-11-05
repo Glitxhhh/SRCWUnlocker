@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_Sub_RankUp_Pyramid_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RankUp_Pyramid.WBP_ResultRate_Sub_RankUp_Pyramid_C.ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_Sub_RankUp_Pyramid_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Pyramid_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_Sub_RankUp_Pyramid_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid", FuncInfo);
 
 	Params::WBP_ResultRate_Sub_RankUp_Pyramid_C_ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_ResultRate_Sub_RankUp_Pyramid_C::ExecuteUbergraph_WBP_ResultRate_Sub_R
 
 void UWBP_ResultRate_Sub_RankUp_Pyramid_C::Set_Now_Rank_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Pyramid_C", "Set Now Rank Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Pyramid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,10 +54,8 @@ void UWBP_ResultRate_Sub_RankUp_Pyramid_C::Set_Now_Rank_Impl()
 
 void UWBP_ResultRate_Sub_RankUp_Pyramid_C::SetAnimateImpl(ERateRank NowRank_in, ERateRank NextRank_in)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Pyramid_C", "SetAnimateImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Pyramid_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankUp_Pyramid_C_SetAnimateImpl Parms{};
 
@@ -81,10 +74,8 @@ void UWBP_ResultRate_Sub_RankUp_Pyramid_C::SetAnimateImpl(ERateRank NowRank_in, 
 
 void UWBP_ResultRate_Sub_RankUp_Pyramid_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Pyramid_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Pyramid_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankUp_Pyramid_C_Tick Parms{};
 
@@ -94,5 +85,5 @@ void UWBP_ResultRate_Sub_RankUp_Pyramid_C::Tick(const struct FGeometry& MyGeomet
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

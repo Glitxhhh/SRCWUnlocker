@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_StickerRangeInfo.WBP_MachineCustom_Sub_StickerRangeInfo_C
 // 0x0038 (0x0318 - 0x02E0)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_StickerRangeInfo_C;
 
-}
-
+SDK_NAMESPACE_END

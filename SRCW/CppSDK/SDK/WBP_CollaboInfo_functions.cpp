@@ -14,8 +14,19 @@
 #include "WBP_CollaboInfo_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_CollaboInfo.WBP_CollaboInfo_C.ReleaseResource
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CollaboInfo_C::ReleaseResource()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CollaboInfo_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function WBP_CollaboInfo.WBP_CollaboInfo_C.SetSchedule
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +35,8 @@ namespace SDK
 
 void UWBP_CollaboInfo_C::SetSchedule(const class FText& Schedule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CollaboInfo_C", "SetSchedule");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CollaboInfo_C", FnName));
 
 	Params::WBP_CollaboInfo_C_SetSchedule Parms{};
 
@@ -44,10 +53,8 @@ void UWBP_CollaboInfo_C::SetSchedule(const class FText& Schedule)
 
 void UWBP_CollaboInfo_C::SetTextureBG(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CollaboInfo_C", "SetTextureBG");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CollaboInfo_C", FnName));
 
 	Params::WBP_CollaboInfo_C_SetTextureBG Parms{};
 
@@ -64,10 +71,8 @@ void UWBP_CollaboInfo_C::SetTextureBG(class UTexture2D* Texture)
 
 void UWBP_CollaboInfo_C::SetTitle(const class FText& Title)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CollaboInfo_C", "SetTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CollaboInfo_C", FnName));
 
 	Params::WBP_CollaboInfo_C_SetTitle Parms{};
 
@@ -76,5 +81,5 @@ void UWBP_CollaboInfo_C::SetTitle(const class FText& Title)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

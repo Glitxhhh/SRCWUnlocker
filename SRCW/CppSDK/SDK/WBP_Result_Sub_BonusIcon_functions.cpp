@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_BonusIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_BonusIcon.WBP_Result_Sub_BonusIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Result_Sub_BonusIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_BonusIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_BonusIcon_C::Construct()
 
 void UWBP_Result_Sub_BonusIcon_C::ExecuteUbergraph_WBP_Result_Sub_BonusIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_BonusIcon_C", "ExecuteUbergraph_WBP_Result_Sub_BonusIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_BonusIcon_C", "ExecuteUbergraph_WBP_Result_Sub_BonusIcon", FuncInfo);
 
 	Params::WBP_Result_Sub_BonusIcon_C_ExecuteUbergraph_WBP_Result_Sub_BonusIcon Parms{};
 
@@ -50,5 +45,5 @@ void UWBP_Result_Sub_BonusIcon_C::ExecuteUbergraph_WBP_Result_Sub_BonusIcon(int3
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

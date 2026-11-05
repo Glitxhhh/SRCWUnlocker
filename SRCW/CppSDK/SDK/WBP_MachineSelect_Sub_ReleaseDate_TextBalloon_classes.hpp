@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_ReleaseDate_TextBalloon.WBP_MachineSelect_Sub_ReleaseDate_TextBalloon_C
 // 0x0010 (0x02F8 - 0x02E8)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineSelect_Sub_ReleaseDate_TextBalloon_C;
 
-}
-
+SDK_NAMESPACE_END

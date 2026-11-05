@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum VariantManagerContent.EPropertyValueCategory
 // NumValues: 0x000A
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_FVariantDependency;
 
-}
-
+SDK_NAMESPACE_END

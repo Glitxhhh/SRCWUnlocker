@@ -14,7 +14,6 @@
 #include "WBP_ResultRate_Sub_Rate_Window_parameters.hpp"
 
 
-namespace SDK
-{
-}
+SDK_NAMESPACE_START
 
+SDK_NAMESPACE_END

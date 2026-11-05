@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EColorPresetSelectPageType.EColorPresetSelectPageType
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EColorPresetSelectPageType : uint8
 	EColorPresetSelectPageType_MAX           = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

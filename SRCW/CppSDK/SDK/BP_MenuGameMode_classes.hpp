@@ -13,8 +13,7 @@
 #include "BP_UnionGameModeBase_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuGameMode.BP_MenuGameMode_C
 // 0x0000 (0x0338 - 0x0338)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MenuGameMode_C;
 
-}
-
+SDK_NAMESPACE_END

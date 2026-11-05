@@ -14,8 +14,7 @@
 #include "WBP_MachineSelect_Sub_Header_MachineType_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_Header_MachineType.WBP_MachineSelect_Sub_Header_MachineType_C.ExecuteUbergraph_WBP_MachineSelect_Sub_Header_MachineType
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::ExecuteUbergraph_WBP_MachineSelect_Sub_Header_MachineType(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_Header_MachineType");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_Header_MachineType_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_Header_MachineType", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_Header_MachineType_C_ExecuteUbergraph_WBP_MachineSelect_Sub_Header_MachineType Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineSelect_Sub_Header_MachineType_C::ExecuteUbergraph_WBP_MachineSe
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Header_MachineType_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_MachineSelect_Sub_Header_MachineType_C::OnInitialized()
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Header_MachineType_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Header_MachineType_C_PreConstruct Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_MachineSelect_Sub_Header_MachineType_C::PreConstruct(bool IsDesignTime
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::SetGadgetCategory(EGadgetCategory GadgetCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "SetGadgetCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Header_MachineType_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Header_MachineType_C_SetGadgetCategory Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_MachineSelect_Sub_Header_MachineType_C::SetGadgetCategory(EGadgetCateg
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::SetMachineType(ECarStatusType Machine_Type_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "SetMachineType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Header_MachineType_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Header_MachineType_C_SetMachineType Parms{};
 
@@ -116,13 +105,11 @@ void UWBP_MachineSelect_Sub_Header_MachineType_C::SetMachineType(ECarStatusType 
 
 void UWBP_MachineSelect_Sub_Header_MachineType_C::SetupNewIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Header_MachineType_C", "SetupNewIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Header_MachineType_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

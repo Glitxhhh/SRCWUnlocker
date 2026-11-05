@@ -13,8 +13,8 @@
 #include "UnionRun_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Race_HUD_Sub_RSR_5rings_Simple.WBP_Race_HUD_Sub_RSR_5rings_Simple_C.ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple
 // 0x0018 (0x0018 - 0x0000)
@@ -22,7 +22,7 @@ struct WBP_Race_HUD_Sub_RSR_5rings_Simple_C_ExecuteUbergraph_WBP_Race_HUD_Sub_RS
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_Index;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_index;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<ERedStarRingAcquisitionType>           CallFunc_GetOtherResultRedStarRingAcquisitionType_ReturnValue; // 0x0008(0x0010)(ReferenceParm)
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_RSR_5rings_Simple_C_ExecuteUbergraph_WBP_Race_HUD_Sub_RSR_5rings_Simple;
@@ -59,5 +59,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Race_HUD_Sub_RSR_5rings_Simple_C_SetOtherRSRBAnimation;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

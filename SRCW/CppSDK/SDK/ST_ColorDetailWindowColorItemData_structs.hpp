@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_ColorDetailWindowColorItemData.ST_ColorDetailWindowColorItemData
 // 0x0018 (0x0018 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_ColorDetailWindowColorItemData;
 
-}
-
+SDK_NAMESPACE_END

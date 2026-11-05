@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_TopMenu_Btnmode_Sub_Offine_Party.WBP_TopMenu_Btnmode_Sub_Offine_Party_C.ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Party
 // 0x0040 (0x0040 - 0x0000)
@@ -51,5 +51,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TopMenu_Btnmode_Sub_Offine_Party_C_UpdateProgress;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

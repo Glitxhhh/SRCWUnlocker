@@ -14,8 +14,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SteamController2.SteamController2Settings
 // 0x0020 (0x0058 - 0x0038)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_USteamController2Settings;
 
-}
-
+SDK_NAMESPACE_END

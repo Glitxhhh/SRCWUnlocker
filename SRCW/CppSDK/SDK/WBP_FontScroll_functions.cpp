@@ -14,18 +14,15 @@
 #include "WBP_FontScroll_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FontScroll.WBP_FontScroll_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_FontScroll_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FontScroll_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FontScroll_C::Construct()
 
 void UWBP_FontScroll_C::ExecuteUbergraph_WBP_FontScroll(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FontScroll_C", "ExecuteUbergraph_WBP_FontScroll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FontScroll_C", "ExecuteUbergraph_WBP_FontScroll", FuncInfo);
 
 	Params::WBP_FontScroll_C_ExecuteUbergraph_WBP_FontScroll Parms{};
 
@@ -51,15 +46,67 @@ void UWBP_FontScroll_C::ExecuteUbergraph_WBP_FontScroll(int32 EntryPoint)
 }
 
 
+// Function WBP_FontScroll.WBP_FontScroll_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FontScroll_C::PreConstruct(bool IsDesignTime)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
+
+	Params::WBP_FontScroll_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshLocalizeText
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshLocalizeText()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshScrollDirection
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshScrollDirection()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_FontScroll.WBP_FontScroll_C.RefreshText
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_FontScroll_C::RefreshText()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FontScroll_C", "RefreshText");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FontScroll.WBP_FontScroll_C.RefreshTextJustification
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_FontScroll_C::RefreshTextJustification()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +119,8 @@ void UWBP_FontScroll_C::RefreshText()
 
 void UWBP_FontScroll_C::VisibilityChangedEvent(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FontScroll_C", "VisibilityChangedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FontScroll_C", FnName));
 
 	Params::WBP_FontScroll_C_VisibilityChangedEvent Parms{};
 
@@ -84,5 +129,5 @@ void UWBP_FontScroll_C::VisibilityChangedEvent(ESlateVisibility InVisibility)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

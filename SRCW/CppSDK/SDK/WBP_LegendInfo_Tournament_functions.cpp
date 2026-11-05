@@ -14,8 +14,7 @@
 #include "WBP_LegendInfo_Tournament_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_LegendInfo_Tournament.WBP_LegendInfo_Tournament_C.ExecuteUbergraph_WBP_LegendInfo_Tournament
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_LegendInfo_Tournament_C::ExecuteUbergraph_WBP_LegendInfo_Tournament(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "ExecuteUbergraph_WBP_LegendInfo_Tournament");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_LegendInfo_Tournament_C", "ExecuteUbergraph_WBP_LegendInfo_Tournament", FuncInfo);
 
 	Params::WBP_LegendInfo_Tournament_C_ExecuteUbergraph_WBP_LegendInfo_Tournament Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_LegendInfo_Tournament_C::ExecuteUbergraph_WBP_LegendInfo_Tournament(in
 
 void UWBP_LegendInfo_Tournament_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_Tournament_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_LegendInfo_Tournament_C::OnInitialized()
 
 void UWBP_LegendInfo_Tournament_C::SetCurrentRateNumber()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "SetCurrentRateNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_Tournament_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_LegendInfo_Tournament_C::SetCurrentRateNumber()
 
 void UWBP_LegendInfo_Tournament_C::SetInfoDispData(const struct FLegendCompeInfoDispData& InDispData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "SetInfoDispData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_Tournament_C", FnName));
 
 	Params::WBP_LegendInfo_Tournament_C_SetInfoDispData Parms{};
 
@@ -90,10 +81,8 @@ void UWBP_LegendInfo_Tournament_C::SetInfoDispData(const struct FLegendCompeInfo
 
 void UWBP_LegendInfo_Tournament_C::SetQRTexture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "SetQRTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_Tournament_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UWBP_LegendInfo_Tournament_C::SetQRTexture()
 
 void UWBP_LegendInfo_Tournament_C::SetTournamentData(int32 LegendCompeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LegendInfo_Tournament_C", "SetTournamentData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_LegendInfo_Tournament_C", FnName));
 
 	Params::WBP_LegendInfo_Tournament_C_SetTournamentData Parms{};
 
@@ -118,5 +105,5 @@ void UWBP_LegendInfo_Tournament_C::SetTournamentData(int32 LegendCompeId)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

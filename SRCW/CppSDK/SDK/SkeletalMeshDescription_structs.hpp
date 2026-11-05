@@ -13,8 +13,7 @@
 #include "MeshDescription_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct SkeletalMeshDescription.BoneID
 // 0x0000 (0x0004 - 0x0004)
@@ -30,5 +29,4 @@ struct FSourceGeometryPartID final : public FElementID
 };
 DUMPER7_ASSERTS_FSourceGeometryPartID;
 
-}
-
+SDK_NAMESPACE_END

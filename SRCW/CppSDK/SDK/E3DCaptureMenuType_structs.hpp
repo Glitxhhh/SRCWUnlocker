@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum E3DCaptureMenuType.E3DCaptureMenuType
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class E3DCaptureMenuType : uint8
 	E3DCaptureMenuType_MAX                   = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

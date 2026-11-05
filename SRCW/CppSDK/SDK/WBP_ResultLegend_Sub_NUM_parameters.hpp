@@ -13,8 +13,8 @@
 #include "UMG_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ResultLegend_Sub_NUM.WBP_ResultLegend_Sub_NUM_C.SetRateNumber
 // 0x0058 (0x0058 - 0x0000)
@@ -83,5 +83,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ResultLegend_Sub_NUM_C_SetRateVisibilityForBackground;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

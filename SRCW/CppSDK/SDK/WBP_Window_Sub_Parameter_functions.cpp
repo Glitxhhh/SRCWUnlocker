@@ -14,18 +14,15 @@
 #include "WBP_Window_Sub_Parameter_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Window_Sub_Parameter.WBP_Window_Sub_Parameter_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Window_Sub_Parameter_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_Parameter_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_Parameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Window_Sub_Parameter_C::Construct()
 
 void UWBP_Window_Sub_Parameter_C::ExecuteUbergraph_WBP_Window_Sub_Parameter(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_Parameter_C", "ExecuteUbergraph_WBP_Window_Sub_Parameter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Window_Sub_Parameter_C", "ExecuteUbergraph_WBP_Window_Sub_Parameter", FuncInfo);
 
 	Params::WBP_Window_Sub_Parameter_C_ExecuteUbergraph_WBP_Window_Sub_Parameter Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_Window_Sub_Parameter_C::ExecuteUbergraph_WBP_Window_Sub_Parameter(int3
 
 void UWBP_Window_Sub_Parameter_C::OnConstParamBarMaterials()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_Parameter_C", "OnConstParamBarMaterials");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_Parameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_Window_Sub_Parameter_C::OnConstParamBarMaterials()
 
 void UWBP_Window_Sub_Parameter_C::OnConstParamTypeMaterials()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_Parameter_C", "OnConstParamTypeMaterials");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_Parameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_Window_Sub_Parameter_C::OnConstParamTypeMaterials()
 
 void UWBP_Window_Sub_Parameter_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_Parameter_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_Parameter_C", FnName));
 
 	Params::WBP_Window_Sub_Parameter_C_PreConstruct Parms{};
 
@@ -98,5 +87,5 @@ void UWBP_Window_Sub_Parameter_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

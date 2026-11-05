@@ -14,8 +14,7 @@
 #include "WBP_CourseSelect_Sub_Trophy_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_Trophy.WBP_CourseSelect_Sub_Trophy_C.ExecuteUbergraph_WBP_CourseSelect_Sub_Trophy
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CourseSelect_Sub_Trophy_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Trophy(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Trophy_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Trophy");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_Trophy_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Trophy", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_Trophy_C_ExecuteUbergraph_WBP_CourseSelect_Sub_Trophy Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CourseSelect_Sub_Trophy_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Troph
 
 void UWBP_CourseSelect_Sub_Trophy_C::SetGrandPrix(EGrandPrixId InGrandprixId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Trophy_C", "SetGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Trophy_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Trophy_C_SetGrandPrix Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_CourseSelect_Sub_Trophy_C::SetGrandPrix(EGrandPrixId InGrandprixId)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_Popup_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Window.WBP_Popup_Window_C.AddFocusButton
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Popup_Window_C::AddFocusButton(const TArray<class UUnionUIButtonBase*>& ButtonArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "AddFocusButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_AddFocusButton Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Popup_Window_C::AddFocusButton(const TArray<class UUnionUIButtonBase*>
 
 void UWBP_Popup_Window_C::AddFocusButtonByButtonType(EPopupWindowButtonType ButtonType_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "AddFocusButtonByButtonType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_AddFocusButtonByButtonType Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_Popup_Window_C::AddFocusButtonByButtonType(EPopupWindowButtonType Butt
 
 void UWBP_Popup_Window_C::BndEvt__WBP_Popup_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "BndEvt__WBP_Popup_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UWBP_Popup_Window_C::BndEvt__WBP_Popup_Window_MouseInteraction_K2Node_Compo
 
 void UWBP_Popup_Window_C::ClearButtonNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "ClearButtonNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_Popup_Window_C::ClearButtonNavigation()
 
 void UWBP_Popup_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_Popup_Window_C::Construct()
 
 void UWBP_Popup_Window_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +105,8 @@ void UWBP_Popup_Window_C::Destruct()
 
 void UWBP_Popup_Window_C::DisableSubMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "DisableSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +117,8 @@ void UWBP_Popup_Window_C::DisableSubMenu()
 
 void UWBP_Popup_Window_C::EnableSubMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "EnableSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +131,8 @@ void UWBP_Popup_Window_C::EnableSubMenu()
 
 void UWBP_Popup_Window_C::ExecuteUbergraph_WBP_Popup_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "ExecuteUbergraph_WBP_Popup_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Window_C", "ExecuteUbergraph_WBP_Popup_Window", FuncInfo);
 
 	Params::WBP_Popup_Window_C_ExecuteUbergraph_WBP_Popup_Window Parms{};
 
@@ -168,10 +149,8 @@ void UWBP_Popup_Window_C::ExecuteUbergraph_WBP_Popup_Window(int32 EntryPoint)
 
 class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetAnimationIn Parms{};
 
@@ -188,10 +167,8 @@ class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationIn()
 
 class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetAnimationLoop Parms{};
 
@@ -208,10 +185,8 @@ class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationLoop()
 
 class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetAnimationOut Parms{};
 
@@ -228,10 +203,8 @@ class UWidgetAnimation* UWBP_Popup_Window_C::GetAnimationOut()
 
 void UWBP_Popup_Window_C::GetNoButton(class UUnionUIButtonBase** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetNoButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetNoButton Parms{};
 
@@ -249,10 +222,8 @@ void UWBP_Popup_Window_C::GetNoButton(class UUnionUIButtonBase** Button)
 
 EPopupWindowButtonType UWBP_Popup_Window_C::GetPopupWindowButtonType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetPopupWindowButtonType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetPopupWindowButtonType Parms{};
 
@@ -269,10 +240,8 @@ EPopupWindowButtonType UWBP_Popup_Window_C::GetPopupWindowButtonType()
 
 EPopupWindowType UWBP_Popup_Window_C::GetPopupWindowType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetPopupWindowType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetPopupWindowType Parms{};
 
@@ -289,10 +258,8 @@ EPopupWindowType UWBP_Popup_Window_C::GetPopupWindowType()
 
 void UWBP_Popup_Window_C::GetYesButton(class UUnionUIButtonBase** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "GetYesButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_GetYesButton Parms{};
 
@@ -308,10 +275,8 @@ void UWBP_Popup_Window_C::GetYesButton(class UUnionUIButtonBase** Button)
 
 void UWBP_Popup_Window_C::InitButtonControlDelay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "InitButtonControlDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -324,10 +289,8 @@ void UWBP_Popup_Window_C::InitButtonControlDelay()
 
 void UWBP_Popup_Window_C::InitParam(EPopupWindowButtonType ButtonType_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "InitParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_InitParam Parms{};
 
@@ -342,10 +305,8 @@ void UWBP_Popup_Window_C::InitParam(EPopupWindowButtonType ButtonType_0)
 
 void UWBP_Popup_Window_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -358,10 +319,8 @@ void UWBP_Popup_Window_C::OnAcceptKeyPressed()
 
 void UWBP_Popup_Window_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -376,10 +335,8 @@ void UWBP_Popup_Window_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerCont
 
 void UWBP_Popup_Window_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -392,10 +349,8 @@ void UWBP_Popup_Window_C::OnAcceptKeyReleased()
 
 void UWBP_Popup_Window_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -410,10 +365,8 @@ void UWBP_Popup_Window_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerCon
 
 void UWBP_Popup_Window_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -424,10 +377,8 @@ void UWBP_Popup_Window_C::OnAnimationInFinished()
 
 void UWBP_Popup_Window_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -440,10 +391,8 @@ void UWBP_Popup_Window_C::OnBackKeyPressed()
 
 void UWBP_Popup_Window_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -458,10 +407,8 @@ void UWBP_Popup_Window_C::OnBackKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_Popup_Window_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -474,10 +421,8 @@ void UWBP_Popup_Window_C::OnBackKeyReleased()
 
 void UWBP_Popup_Window_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -494,10 +439,8 @@ void UWBP_Popup_Window_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_Popup_Window_C::OnButtonDecision(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnButtonDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnButtonDecision Parms{};
 
@@ -512,10 +455,8 @@ void UWBP_Popup_Window_C::OnButtonDecision(class UUnionUIButtonBase* Button)
 
 void UWBP_Popup_Window_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -528,10 +469,8 @@ void UWBP_Popup_Window_C::OnDownKeyPressed()
 
 void UWBP_Popup_Window_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -546,10 +485,8 @@ void UWBP_Popup_Window_C::OnDownKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_Popup_Window_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -562,10 +499,8 @@ void UWBP_Popup_Window_C::OnDownKeyReleased()
 
 void UWBP_Popup_Window_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -580,10 +515,8 @@ void UWBP_Popup_Window_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_Popup_Window_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -596,10 +529,8 @@ void UWBP_Popup_Window_C::OnFaceButtonLeftPressed()
 
 void UWBP_Popup_Window_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -614,10 +545,8 @@ void UWBP_Popup_Window_C::OnFaceButtonLeftPressedWithPlayerId(const int32& Playe
 
 void UWBP_Popup_Window_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -630,10 +559,8 @@ void UWBP_Popup_Window_C::OnFaceButtonLeftReleased()
 
 void UWBP_Popup_Window_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -648,10 +575,8 @@ void UWBP_Popup_Window_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& Play
 
 void UWBP_Popup_Window_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -664,10 +589,8 @@ void UWBP_Popup_Window_C::OnFaceButtonTopPressed()
 
 void UWBP_Popup_Window_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -682,10 +605,8 @@ void UWBP_Popup_Window_C::OnFaceButtonTopPressedWithPlayerId(const int32& Player
 
 void UWBP_Popup_Window_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -698,10 +619,8 @@ void UWBP_Popup_Window_C::OnFaceButtonTopReleased()
 
 void UWBP_Popup_Window_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -720,10 +639,8 @@ void UWBP_Popup_Window_C::OnFaceButtonTopReleasedWithPlayerId(const int32& Playe
 
 struct FEventReply UWBP_Popup_Window_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnFocusReceived Parms{};
 
@@ -741,10 +658,8 @@ struct FEventReply UWBP_Popup_Window_C::OnFocusReceived(const struct FGeometry& 
 
 void UWBP_Popup_Window_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -757,10 +672,8 @@ void UWBP_Popup_Window_C::OnLeftKeyPressed()
 
 void UWBP_Popup_Window_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -775,10 +688,8 @@ void UWBP_Popup_Window_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_Popup_Window_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -791,10 +702,8 @@ void UWBP_Popup_Window_C::OnLeftKeyReleased()
 
 void UWBP_Popup_Window_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -809,10 +718,8 @@ void UWBP_Popup_Window_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_Popup_Window_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -825,10 +732,8 @@ void UWBP_Popup_Window_C::OnLeftShoulderPressed()
 
 void UWBP_Popup_Window_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -843,10 +748,8 @@ void UWBP_Popup_Window_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerC
 
 void UWBP_Popup_Window_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -859,10 +762,8 @@ void UWBP_Popup_Window_C::OnLeftShoulderReleased()
 
 void UWBP_Popup_Window_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -879,10 +780,8 @@ void UWBP_Popup_Window_C::OnLeftShoulderReleasedWithPlayerId(const int32& Player
 
 void UWBP_Popup_Window_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftStickAxis Parms{};
 
@@ -900,10 +799,8 @@ void UWBP_Popup_Window_C::OnLeftStickAxis(const struct FVector2D& Value)
 
 void UWBP_Popup_Window_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -919,10 +816,8 @@ void UWBP_Popup_Window_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Va
 
 void UWBP_Popup_Window_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -935,10 +830,8 @@ void UWBP_Popup_Window_C::OnLeftStickButtonPressed()
 
 void UWBP_Popup_Window_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -953,10 +846,8 @@ void UWBP_Popup_Window_C::OnLeftStickButtonPressedWithPlayerId(const int32& Play
 
 void UWBP_Popup_Window_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -969,10 +860,8 @@ void UWBP_Popup_Window_C::OnLeftStickButtonReleased()
 
 void UWBP_Popup_Window_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -987,10 +876,8 @@ void UWBP_Popup_Window_C::OnLeftStickButtonReleasedWithPlayerId(const int32& Pla
 
 void UWBP_Popup_Window_C::OnOutAnimFinished_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnOutAnimFinished_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1004,10 +891,8 @@ void UWBP_Popup_Window_C::OnOutAnimFinished_Impl()
 
 void UWBP_Popup_Window_C::OnPanelDecision_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnPanelDecision_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnPanelDecision_Impl Parms{};
 
@@ -1023,10 +908,8 @@ void UWBP_Popup_Window_C::OnPanelDecision_Impl(class UUnionUIButtonBase* Button,
 
 void UWBP_Popup_Window_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1039,10 +922,8 @@ void UWBP_Popup_Window_C::OnRightKeyPressed()
 
 void UWBP_Popup_Window_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -1057,10 +938,8 @@ void UWBP_Popup_Window_C::OnRightKeyPressedWithPlayerId(const int32& PlayerContr
 
 void UWBP_Popup_Window_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1073,10 +952,8 @@ void UWBP_Popup_Window_C::OnRightKeyReleased()
 
 void UWBP_Popup_Window_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -1091,10 +968,8 @@ void UWBP_Popup_Window_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerCont
 
 void UWBP_Popup_Window_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1107,10 +982,8 @@ void UWBP_Popup_Window_C::OnRightShoulderPressed()
 
 void UWBP_Popup_Window_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -1125,10 +998,8 @@ void UWBP_Popup_Window_C::OnRightShoulderPressedWithPlayerId(const int32& Player
 
 void UWBP_Popup_Window_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1141,10 +1012,8 @@ void UWBP_Popup_Window_C::OnRightShoulderReleased()
 
 void UWBP_Popup_Window_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -1161,10 +1030,8 @@ void UWBP_Popup_Window_C::OnRightShoulderReleasedWithPlayerId(const int32& Playe
 
 void UWBP_Popup_Window_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightStickAxis Parms{};
 
@@ -1182,10 +1049,8 @@ void UWBP_Popup_Window_C::OnRightStickAxis(const struct FVector2D& Value)
 
 void UWBP_Popup_Window_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -1201,10 +1066,8 @@ void UWBP_Popup_Window_C::OnRightStickAxisWithPlayerId(const struct FVector2D& V
 
 void UWBP_Popup_Window_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1217,10 +1080,8 @@ void UWBP_Popup_Window_C::OnRightStickButtonPressed()
 
 void UWBP_Popup_Window_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -1235,10 +1096,8 @@ void UWBP_Popup_Window_C::OnRightStickButtonPressedWithPlayerId(const int32& Pla
 
 void UWBP_Popup_Window_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1251,10 +1110,8 @@ void UWBP_Popup_Window_C::OnRightStickButtonReleased()
 
 void UWBP_Popup_Window_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -1269,10 +1126,8 @@ void UWBP_Popup_Window_C::OnRightStickButtonReleasedWithPlayerId(const int32& Pl
 
 void UWBP_Popup_Window_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1285,10 +1140,8 @@ void UWBP_Popup_Window_C::OnSpecialPressed()
 
 void UWBP_Popup_Window_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -1303,10 +1156,8 @@ void UWBP_Popup_Window_C::OnSpecialPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_Popup_Window_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1319,10 +1170,8 @@ void UWBP_Popup_Window_C::OnSpecialReleased()
 
 void UWBP_Popup_Window_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -1337,10 +1186,8 @@ void UWBP_Popup_Window_C::OnSpecialReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_Popup_Window_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1353,10 +1200,8 @@ void UWBP_Popup_Window_C::OnUpKeyPressed()
 
 void UWBP_Popup_Window_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -1371,10 +1216,8 @@ void UWBP_Popup_Window_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControll
 
 void UWBP_Popup_Window_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1387,10 +1230,8 @@ void UWBP_Popup_Window_C::OnUpKeyReleased()
 
 void UWBP_Popup_Window_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1405,10 +1246,8 @@ void UWBP_Popup_Window_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControl
 
 void UWBP_Popup_Window_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1421,10 +1260,8 @@ void UWBP_Popup_Window_C::PlayAnimationIn()
 
 void UWBP_Popup_Window_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_PreConstruct Parms{};
 
@@ -1439,10 +1276,8 @@ void UWBP_Popup_Window_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Popup_Window_C::RegisterMainMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "RegisterMainMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1455,10 +1290,8 @@ void UWBP_Popup_Window_C::RegisterMainMenu()
 
 void UWBP_Popup_Window_C::SetButtonControlDelayTime(float InTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetButtonControlDelayTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetButtonControlDelayTime Parms{};
 
@@ -1475,10 +1308,8 @@ void UWBP_Popup_Window_C::SetButtonControlDelayTime(float InTime)
 
 void UWBP_Popup_Window_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetButtonFocusType Parms{};
 
@@ -1493,10 +1324,8 @@ void UWBP_Popup_Window_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 
 void UWBP_Popup_Window_C::SetButtonNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetButtonNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1509,10 +1338,8 @@ void UWBP_Popup_Window_C::SetButtonNavigation()
 
 void UWBP_Popup_Window_C::SetButtonText(const TArray<class FText>& BtnTextArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetButtonText Parms{};
 
@@ -1529,10 +1356,8 @@ void UWBP_Popup_Window_C::SetButtonText(const TArray<class FText>& BtnTextArray)
 
 void UWBP_Popup_Window_C::SetDisplayFooterButton(const bool InDisplay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetDisplayFooterButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetDisplayFooterButton Parms{};
 
@@ -1550,10 +1375,8 @@ void UWBP_Popup_Window_C::SetDisplayFooterButton(const bool InDisplay)
 
 void UWBP_Popup_Window_C::SetDonpaTicketCount(int32 CurrentCount, int32 AfterCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetDonpaTicketCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetDonpaTicketCount Parms{};
 
@@ -1571,10 +1394,8 @@ void UWBP_Popup_Window_C::SetDonpaTicketCount(int32 CurrentCount, int32 AfterCou
 
 void UWBP_Popup_Window_C::SetEnableInput(bool InEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetEnableInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetEnableInput Parms{};
 
@@ -1593,10 +1414,8 @@ void UWBP_Popup_Window_C::SetEnableInput(bool InEnable)
 
 void UWBP_Popup_Window_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType, const class FText& BtnText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetFooterMenuBtn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetFooterMenuBtn Parms{};
 
@@ -1615,10 +1434,8 @@ void UWBP_Popup_Window_C::SetFooterMenuBtn(int32 BtnIconIndex, int32 BtnIconType
 
 void UWBP_Popup_Window_C::SetImageButtonSelectText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetImageButtonSelectText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetImageButtonSelectText Parms{};
 
@@ -1635,10 +1452,8 @@ void UWBP_Popup_Window_C::SetImageButtonSelectText(const class FText& InText)
 
 void UWBP_Popup_Window_C::SetImageTexture(const class UTexture2D* Texture2D)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetImageTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetImageTexture Parms{};
 
@@ -1655,10 +1470,8 @@ void UWBP_Popup_Window_C::SetImageTexture(const class UTexture2D* Texture2D)
 
 void UWBP_Popup_Window_C::SetInfoDisplay(bool SetImage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetInfoDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetInfoDisplay Parms{};
 
@@ -1675,10 +1488,8 @@ void UWBP_Popup_Window_C::SetInfoDisplay(bool SetImage)
 
 void UWBP_Popup_Window_C::SetInitialFocusButtonIndex(const int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetInitialFocusButtonIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetInitialFocusButtonIndex Parms{};
 
@@ -1695,10 +1506,8 @@ void UWBP_Popup_Window_C::SetInitialFocusButtonIndex(const int32 InButtonIndex)
 
 void UWBP_Popup_Window_C::SetPopupInfoDisplayIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetPopupInfoDisplayIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetPopupInfoDisplayIndex Parms{};
 
@@ -1716,10 +1525,8 @@ void UWBP_Popup_Window_C::SetPopupInfoDisplayIndex(int32 Index_0)
 
 void UWBP_Popup_Window_C::SetPopupInfoMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 Btn02IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetPopupInfoMainMenuButtonIconIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetPopupInfoMainMenuButtonIconIndex Parms{};
 
@@ -1737,10 +1544,8 @@ void UWBP_Popup_Window_C::SetPopupInfoMainMenuButtonIconIndex(int32 Btn01IconInd
 
 void UWBP_Popup_Window_C::SetTextMessege(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetTextMessege");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetTextMessege Parms{};
 
@@ -1758,10 +1563,8 @@ void UWBP_Popup_Window_C::SetTextMessege(const class FText& Text)
 
 void UWBP_Popup_Window_C::SetTextTitle(const class FText& Text, bool Attension)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SetTextTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SetTextTitle Parms{};
 
@@ -1779,10 +1582,8 @@ void UWBP_Popup_Window_C::SetTextTitle(const class FText& Text, bool Attension)
 
 void UWBP_Popup_Window_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_SilentFocusReady Parms{};
 
@@ -1797,10 +1598,8 @@ void UWBP_Popup_Window_C::SilentFocusReady(bool bOnce)
 
 void UWBP_Popup_Window_C::StartButtonContolDelay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "StartButtonContolDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1814,10 +1613,8 @@ void UWBP_Popup_Window_C::StartButtonContolDelay()
 
 void UWBP_Popup_Window_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_Tick Parms{};
 
@@ -1833,10 +1630,8 @@ void UWBP_Popup_Window_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 void UWBP_Popup_Window_C::UnregisterMainMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "UnregisterMainMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1849,10 +1644,8 @@ void UWBP_Popup_Window_C::UnregisterMainMenu()
 
 void UWBP_Popup_Window_C::UpdateButtonControlDelay(double InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_C", "UpdateButtonControlDelay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_C", FnName));
 
 	Params::WBP_Popup_Window_C_UpdateButtonControlDelay Parms{};
 
@@ -1861,5 +1654,5 @@ void UWBP_Popup_Window_C::UpdateButtonControlDelay(double InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

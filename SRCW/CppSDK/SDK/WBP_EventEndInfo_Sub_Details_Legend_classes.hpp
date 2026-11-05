@@ -17,8 +17,7 @@
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_EventEndInfo_Sub_Details_Legend.WBP_EventEndInfo_Sub_Details_Legend_C
 // 0x0198 (0x04E8 - 0x0350)
@@ -132,5 +131,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_EventEndInfo_Sub_Details_Legend_C;
 
-}
-
+SDK_NAMESPACE_END

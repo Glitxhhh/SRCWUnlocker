@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct AnimationBudgetAllocator.AnimationBudgetAllocatorParameters
 // 0x0058 (0x0058 - 0x0000)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_FAnimationBudgetAllocatorParameters;
 
-}
-
+SDK_NAMESPACE_END

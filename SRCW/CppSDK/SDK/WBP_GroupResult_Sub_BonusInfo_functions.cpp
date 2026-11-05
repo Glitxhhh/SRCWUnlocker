@@ -14,18 +14,15 @@
 #include "WBP_GroupResult_Sub_BonusInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GroupResult_Sub_BonusInfo.WBP_GroupResult_Sub_BonusInfo_C.Close
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_GroupResult_Sub_BonusInfo_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_BonusInfo_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_BonusInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GroupResult_Sub_BonusInfo_C::Close()
 
 void UWBP_GroupResult_Sub_BonusInfo_C::ExecuteUbergraph_WBP_GroupResult_Sub_BonusInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_BonusInfo_C", "ExecuteUbergraph_WBP_GroupResult_Sub_BonusInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GroupResult_Sub_BonusInfo_C", "ExecuteUbergraph_WBP_GroupResult_Sub_BonusInfo", FuncInfo);
 
 	Params::WBP_GroupResult_Sub_BonusInfo_C_ExecuteUbergraph_WBP_GroupResult_Sub_BonusInfo Parms{};
 
@@ -59,10 +54,8 @@ void UWBP_GroupResult_Sub_BonusInfo_C::ExecuteUbergraph_WBP_GroupResult_Sub_Bonu
 
 void UWBP_GroupResult_Sub_BonusInfo_C::Open(const class FText& Title, const class FText& Detail)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_BonusInfo_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_BonusInfo_C", FnName));
 
 	Params::WBP_GroupResult_Sub_BonusInfo_C_Open Parms{};
 
@@ -72,5 +65,5 @@ void UWBP_GroupResult_Sub_BonusInfo_C::Open(const class FText& Title, const clas
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

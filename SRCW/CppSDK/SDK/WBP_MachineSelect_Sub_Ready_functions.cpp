@@ -14,18 +14,15 @@
 #include "WBP_MachineSelect_Sub_Ready_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_Ready.WBP_MachineSelect_Sub_Ready_C.ClearText
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_Ready_C::ClearText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "ClearText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineSelect_Sub_Ready_C::ClearText()
 
 void UWBP_MachineSelect_Sub_Ready_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_MachineSelect_Sub_Ready_C::Construct()
 
 void UWBP_MachineSelect_Sub_Ready_C::ExecuteUbergraph_WBP_MachineSelect_Sub_Ready(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_Ready");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_Ready_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_Ready", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_Ready_C_ExecuteUbergraph_WBP_MachineSelect_Sub_Ready Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_MachineSelect_Sub_Ready_C::ExecuteUbergraph_WBP_MachineSelect_Sub_Read
 
 void UWBP_MachineSelect_Sub_Ready_C::FireSceneAnim(EUnionUISceneAnimation AnimType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "FireSceneAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Ready_C_FireSceneAnim Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_MachineSelect_Sub_Ready_C::FireSceneAnim(EUnionUISceneAnimation AnimTy
 
 void UWBP_MachineSelect_Sub_Ready_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Ready_C_OnAnimationFinished Parms{};
 
@@ -110,10 +99,8 @@ void UWBP_MachineSelect_Sub_Ready_C::OnAnimationFinished(const class UWidgetAnim
 
 void UWBP_MachineSelect_Sub_Ready_C::OneTextIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "OneTextIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UWBP_MachineSelect_Sub_Ready_C::OneTextIn()
 
 void UWBP_MachineSelect_Sub_Ready_C::SetAnimationText(const class FText& ReadyText_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "SetAnimationText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Ready_C_SetAnimationText Parms{};
 
@@ -144,10 +129,8 @@ void UWBP_MachineSelect_Sub_Ready_C::SetAnimationText(const class FText& ReadyTe
 
 void UWBP_MachineSelect_Sub_Ready_C::StartReadyAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "StartReadyAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +143,8 @@ void UWBP_MachineSelect_Sub_Ready_C::StartReadyAnimation()
 
 void UWBP_MachineSelect_Sub_Ready_C::TextReady(const class FString& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Ready_C", "TextReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Ready_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_Ready_C_TextReady Parms{};
 
@@ -172,5 +153,5 @@ void UWBP_MachineSelect_Sub_Ready_C::TextReady(const class FString& Text)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

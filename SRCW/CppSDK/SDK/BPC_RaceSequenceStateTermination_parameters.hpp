@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.NextCeremony
 // 0x0020 (0x0020 - 0x0000)
@@ -197,5 +197,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_RaceSequenceStateTermination_C_ExecuteUbergraph_BPC_RaceSequenceStateTermination;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

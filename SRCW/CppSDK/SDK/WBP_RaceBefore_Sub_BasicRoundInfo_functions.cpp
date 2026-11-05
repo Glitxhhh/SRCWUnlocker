@@ -14,8 +14,7 @@
 #include "WBP_RaceBefore_Sub_BasicRoundInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_RaceBefore_Sub_BasicRoundInfo.WBP_RaceBefore_Sub_BasicRoundInfo_C.SetGrandPrix
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetGrandPrix(EGrandPrixId newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_Sub_BasicRoundInfo_C", "SetGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_Sub_BasicRoundInfo_C", FnName));
 
 	Params::WBP_RaceBefore_Sub_BasicRoundInfo_C_SetGrandPrix Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetGrandPrix(EGrandPrixId newParam)
 
 void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetRoundAndStageName(const class FText& InRoundName, const class FText& InStageName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_Sub_BasicRoundInfo_C", "SetRoundAndStageName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_Sub_BasicRoundInfo_C", FnName));
 
 	Params::WBP_RaceBefore_Sub_BasicRoundInfo_C_SetRoundAndStageName Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetRoundAndStageName(const class FTex
 
 void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetStageIconTexture(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_Sub_BasicRoundInfo_C", "SetStageIconTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_Sub_BasicRoundInfo_C", FnName));
 
 	Params::WBP_RaceBefore_Sub_BasicRoundInfo_C_SetStageIconTexture Parms{};
 
@@ -78,5 +71,5 @@ void UWBP_RaceBefore_Sub_BasicRoundInfo_C::SetStageIconTexture(class UTexture2D*
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

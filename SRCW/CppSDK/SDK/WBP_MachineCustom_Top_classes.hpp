@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 #include "EMachineCustomizeWindowId_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Top.WBP_MachineCustom_Top_C
 // 0x0038 (0x0328 - 0x02F0)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Top_C;
 
-}
-
+SDK_NAMESPACE_END

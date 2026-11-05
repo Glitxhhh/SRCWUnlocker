@@ -14,18 +14,15 @@
 #include "BPC_RaceSequenceStatePauseMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C.カスタムイベント
 // (BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceSequenceStatePauseMenu_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStatePauseMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_RaceSequenceStatePauseMenu_C::カスタムイベント()
 
 void UBPC_RaceSequenceStatePauseMenu_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStatePauseMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UBPC_RaceSequenceStatePauseMenu_C::OnExitState()
 
 void UBPC_RaceSequenceStatePauseMenu_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStatePauseMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UBPC_RaceSequenceStatePauseMenu_C::OnInitState()
 
 void UBPC_RaceSequenceStatePauseMenu_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStatePauseMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -81,10 +72,8 @@ void UBPC_RaceSequenceStatePauseMenu_C::ReceiveBeginPlay()
 
 void UBPC_RaceSequenceStatePauseMenu_C::CreatePauseMenu(bool IsCreate, class UWBP_PauseMenu_C* PauseMenu)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "CreatePauseMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStatePauseMenu_C", FnName));
 
 	Params::BPC_RaceSequenceStatePauseMenu_C_CreatePauseMenu Parms{};
 
@@ -102,10 +91,8 @@ void UBPC_RaceSequenceStatePauseMenu_C::CreatePauseMenu(bool IsCreate, class UWB
 
 void UBPC_RaceSequenceStatePauseMenu_C::ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStatePauseMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStatePauseMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu", FuncInfo);
 
 	Params::BPC_RaceSequenceStatePauseMenu_C_ExecuteUbergraph_BPC_RaceSequenceStatePauseMenu Parms{};
 
@@ -114,5 +101,5 @@ void UBPC_RaceSequenceStatePauseMenu_C::ExecuteUbergraph_BPC_RaceSequenceStatePa
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

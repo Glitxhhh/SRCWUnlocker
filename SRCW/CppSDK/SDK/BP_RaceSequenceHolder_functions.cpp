@@ -14,18 +14,15 @@
 #include "BP_RaceSequenceHolder_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.BindOnLoadingEndAnimFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_RaceSequenceHolder_C::BindOnLoadingEndAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "BindOnLoadingEndAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_RaceSequenceHolder_C::BindOnLoadingEndAnimFinished()
 
 void ABP_RaceSequenceHolder_C::ExecuteUbergraph_BP_RaceSequenceHolder(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "ExecuteUbergraph_BP_RaceSequenceHolder");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceSequenceHolder_C", "ExecuteUbergraph_BP_RaceSequenceHolder", FuncInfo);
 
 	Params::BP_RaceSequenceHolder_C_ExecuteUbergraph_BP_RaceSequenceHolder Parms{};
 
@@ -59,10 +54,8 @@ void ABP_RaceSequenceHolder_C::ExecuteUbergraph_BP_RaceSequenceHolder(int32 Entr
 
 void ABP_RaceSequenceHolder_C::FinalizeWirelessModeComplete(class UWirelessLobbyContext* WirelessLobbyContext, const struct FOnlineErrorBP& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "FinalizeWirelessModeComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	Params::BP_RaceSequenceHolder_C_FinalizeWirelessModeComplete Parms{};
 
@@ -78,10 +71,8 @@ void ABP_RaceSequenceHolder_C::FinalizeWirelessModeComplete(class UWirelessLobby
 
 void ABP_RaceSequenceHolder_C::NextCeremony()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "NextCeremony");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void ABP_RaceSequenceHolder_C::NextCeremony()
 
 void ABP_RaceSequenceHolder_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +97,8 @@ void ABP_RaceSequenceHolder_C::OnFinalize()
 
 void ABP_RaceSequenceHolder_C::OnLoaded_16C6E5E145BDC897581C02A025FCFC60(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "OnLoaded_16C6E5E145BDC897581C02A025FCFC60");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	Params::BP_RaceSequenceHolder_C_OnLoaded_16C6E5E145BDC897581C02A025FCFC60 Parms{};
 
@@ -126,10 +113,8 @@ void ABP_RaceSequenceHolder_C::OnLoaded_16C6E5E145BDC897581C02A025FCFC60(class U
 
 void ABP_RaceSequenceHolder_C::SetGrandPrixNextRaceSetting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "SetGrandPrixNextRaceSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void ABP_RaceSequenceHolder_C::SetGrandPrixNextRaceSetting()
 
 void ABP_RaceSequenceHolder_C::SetSelectMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "SetSelectMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +137,68 @@ void ABP_RaceSequenceHolder_C::SetSelectMode()
 
 void ABP_RaceSequenceHolder_C::StartErrorHandling()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartErrorHandling");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_GrandPrix
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_GrandPrix()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_MatchRace
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_MatchRace()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_PartyRace
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_PartyRace()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_RivalDuel
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_RivalDuel()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceSequenceHolder.BP_RaceSequenceHolder_C.StartFinalize_TimeTrial
+// (Event, Protected, BlueprintEvent)
+
+void ABP_RaceSequenceHolder_C::StartFinalize_TimeTrial()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +209,8 @@ void ABP_RaceSequenceHolder_C::StartErrorHandling()
 
 void ABP_RaceSequenceHolder_C::StartGrandPrix()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +221,8 @@ void ABP_RaceSequenceHolder_C::StartGrandPrix()
 
 void ABP_RaceSequenceHolder_C::StartMatchRace()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartMatchRace");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +237,8 @@ void ABP_RaceSequenceHolder_C::StartMatchRace()
 
 void ABP_RaceSequenceHolder_C::StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartMiddleLoading");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	Params::BP_RaceSequenceHolder_C_StartMiddleLoading Parms{};
 
@@ -220,10 +255,8 @@ void ABP_RaceSequenceHolder_C::StartMiddleLoading(int32 InLoadingPhaseNum, bool 
 
 void ABP_RaceSequenceHolder_C::StartOpenLevelToMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartOpenLevelToMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -234,10 +267,8 @@ void ABP_RaceSequenceHolder_C::StartOpenLevelToMenu()
 
 void ABP_RaceSequenceHolder_C::StartParty()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartParty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -248,13 +279,11 @@ void ABP_RaceSequenceHolder_C::StartParty()
 
 void ABP_RaceSequenceHolder_C::StartTimeTrial()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceSequenceHolder_C", "StartTimeTrial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceSequenceHolder_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Tutorial_Controller_Key.WBP_Tutorial_Controller_Key_C
 // 0x0118 (0x03F8 - 0x02E0)
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Tutorial_Controller_Key_C;
 
-}
-
+SDK_NAMESPACE_END

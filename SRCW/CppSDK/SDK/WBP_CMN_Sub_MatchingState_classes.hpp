@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_Sub_MatchingState.WBP_CMN_Sub_MatchingState_C
 // 0x00C0 (0x04F0 - 0x0430)
@@ -60,7 +59,7 @@ public:
 	void RemindLoopAnim();
 	void SetHeaderText(bool bIsWait, bool bIsHost, bool bIsReady);
 	void SetOnlineGameMode(EOnlineGameMode InOnlineGameMode, bool bIsMulti);
-	void SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode);
+	void SetOnlineGameModeIcon(bool bIsMulti, EOnlineGameMode InOnlineGameMode, EOnlineGameMode InSquadOnlineGameMode, bool IsVisible_0);
 
 public:
 	static class UClass* StaticClass()
@@ -78,5 +77,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_Sub_MatchingState_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,15 +11,14 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_RaceMenu_Sub_Btn.WBP_CMN_RaceMenu_Sub_Btn_C
 // 0x00D8 (0x05B8 - 0x04E0)
@@ -112,5 +111,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_RaceMenu_Sub_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

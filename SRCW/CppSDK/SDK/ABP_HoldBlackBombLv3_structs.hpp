@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_HoldBlackBombLv3.ABP_HoldBlackBombLv3_C.AnimBlueprintGeneratedConstantData
 // 0x0000 (0x0D30 - 0x0D30)
@@ -23,5 +22,4 @@ struct ABP_HoldBlackBombLv3::FAnimBlueprintGeneratedConstantData final : public 
 };
 DUMPER7_ASSERTS_ABP_HoldBlackBombLv3__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

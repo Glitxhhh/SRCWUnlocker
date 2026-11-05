@@ -14,18 +14,15 @@
 #include "WBP_CMN_ControllerBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_ControllerBtn.WBP_CMN_ControllerBtn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_ControllerBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ControllerBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ControllerBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_ControllerBtn_C::Construct()
 
 void UWBP_CMN_ControllerBtn_C::ExecuteUbergraph_WBP_CMN_ControllerBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ControllerBtn_C", "ExecuteUbergraph_WBP_CMN_ControllerBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_ControllerBtn_C", "ExecuteUbergraph_WBP_CMN_ControllerBtn", FuncInfo);
 
 	Params::WBP_CMN_ControllerBtn_C_ExecuteUbergraph_WBP_CMN_ControllerBtn Parms{};
 
@@ -59,10 +54,8 @@ void UWBP_CMN_ControllerBtn_C::ExecuteUbergraph_WBP_CMN_ControllerBtn(int32 Entr
 
 void UWBP_CMN_ControllerBtn_C::SetIcon(int32 SwitherIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ControllerBtn_C", "SetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ControllerBtn_C", FnName));
 
 	Params::WBP_CMN_ControllerBtn_C_SetIcon Parms{};
 
@@ -80,10 +73,8 @@ void UWBP_CMN_ControllerBtn_C::SetIcon(int32 SwitherIndex, int32 ButtonIndex)
 
 void UWBP_CMN_ControllerBtn_C::SetMeterParam(float Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ControllerBtn_C", "SetMeterParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ControllerBtn_C", FnName));
 
 	Params::WBP_CMN_ControllerBtn_C_SetMeterParam Parms{};
 
@@ -92,5 +83,5 @@ void UWBP_CMN_ControllerBtn_C::SetMeterParam(float Value)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

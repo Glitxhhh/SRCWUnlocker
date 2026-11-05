@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_classes.hpp"
+#include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_CustomPaint_Glow.WBP_MachineCustom_Sub_CustomPaint_Glow_C
 // 0x0080 (0x0500 - 0x0480)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_CustomPaint_Glow_C;
 
-}
-
+SDK_NAMESPACE_END

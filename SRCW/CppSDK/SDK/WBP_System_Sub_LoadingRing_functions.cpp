@@ -14,18 +14,15 @@
 #include "WBP_System_Sub_LoadingRing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Sub_LoadingRing.WBP_System_Sub_LoadingRing_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_System_Sub_LoadingRing_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingRing_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingRing_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_System_Sub_LoadingRing_C::Construct()
 
 void UWBP_System_Sub_LoadingRing_C::ExecuteUbergraph_WBP_System_Sub_LoadingRing(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingRing_C", "ExecuteUbergraph_WBP_System_Sub_LoadingRing");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Sub_LoadingRing_C", "ExecuteUbergraph_WBP_System_Sub_LoadingRing", FuncInfo);
 
 	Params::WBP_System_Sub_LoadingRing_C_ExecuteUbergraph_WBP_System_Sub_LoadingRing Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_System_Sub_LoadingRing_C::ExecuteUbergraph_WBP_System_Sub_LoadingRing(
 
 void UWBP_System_Sub_LoadingRing_C::GetRing_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingRing_C", "GetRing_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingRing_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_System_Sub_LoadingRing_C::GetRing_Impl()
 
 void UWBP_System_Sub_LoadingRing_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingRing_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingRing_C", FnName));
 
 	Params::WBP_System_Sub_LoadingRing_C_PreConstruct Parms{};
 
@@ -84,5 +75,5 @@ void UWBP_System_Sub_LoadingRing_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

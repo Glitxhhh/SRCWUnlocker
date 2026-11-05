@@ -14,8 +14,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RankUp_Pyramid.WBP_ResultRate_Sub_RankUp_Pyramid_C.ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Pyramid
 // 0x0050 (0x0050 - 0x0000)
@@ -74,5 +74,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ResultRate_Sub_RankUp_Pyramid_C_Tick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

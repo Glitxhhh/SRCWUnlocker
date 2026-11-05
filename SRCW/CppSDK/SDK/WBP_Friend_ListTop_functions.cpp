@@ -14,18 +14,15 @@
 #include "WBP_Friend_ListTop_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_ListTop.WBP_Friend_ListTop_C.BindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Friend_ListTop_C::BindAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "BindAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Friend_ListTop_C::BindAnimationEvent()
 
 void UWBP_Friend_ListTop_C::CMNWindowBindEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "CMNWindowBindEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Friend_ListTop_C::CMNWindowBindEvent()
 
 void UWBP_Friend_ListTop_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_Friend_ListTop_C::Construct()
 
 void UWBP_Friend_ListTop_C::EndDisplay(bool PlayCloseSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "EndDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_EndDisplay Parms{};
 
@@ -86,10 +77,8 @@ void UWBP_Friend_ListTop_C::EndDisplay(bool PlayCloseSound)
 
 void UWBP_Friend_ListTop_C::ExecuteUbergraph_WBP_Friend_ListTop(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "ExecuteUbergraph_WBP_Friend_ListTop");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_ListTop_C", "ExecuteUbergraph_WBP_Friend_ListTop", FuncInfo);
 
 	Params::WBP_Friend_ListTop_C_ExecuteUbergraph_WBP_Friend_ListTop Parms{};
 
@@ -104,10 +93,8 @@ void UWBP_Friend_ListTop_C::ExecuteUbergraph_WBP_Friend_ListTop(int32 EntryPoint
 
 void UWBP_Friend_ListTop_C::Finished_75AF7530440141E0A3C7CE8C96CAF316()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "Finished_75AF7530440141E0A3C7CE8C96CAF316");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +108,8 @@ void UWBP_Friend_ListTop_C::Finished_75AF7530440141E0A3C7CE8C96CAF316()
 
 void UWBP_Friend_ListTop_C::Get_Platform_Type(ECrossplayPlatform InCrossplayPlatform, EAppSupportedPlatform* OutPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "Get Platform Type");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_Get_Platform_Type Parms{};
 
@@ -146,10 +131,8 @@ void UWBP_Friend_ListTop_C::Get_Platform_Type(ECrossplayPlatform InCrossplayPlat
 
 void UWBP_Friend_ListTop_C::GetBlockType(bool InIsBlock, bool InIsPFBlock, EBlockPlayerState* OutBlockType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "GetBlockType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_GetBlockType Parms{};
 
@@ -172,10 +155,8 @@ void UWBP_Friend_ListTop_C::GetBlockType(bool InIsBlock, bool InIsPFBlock, EBloc
 
 void UWBP_Friend_ListTop_C::GetRacerData(const struct FFriendListPlayerInfo& InFriendListPlayerInfo, EBlockPlayerState* OutBlockType, struct FLobbyPlayerData* OutRacerData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "GetRacerData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_GetRacerData Parms{};
 
@@ -199,10 +180,8 @@ void UWBP_Friend_ListTop_C::GetRacerData(const struct FFriendListPlayerInfo& InF
 
 void UWBP_Friend_ListTop_C::GetRank(int32 InRateId, ERateRank* OutRateRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "GetRank");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_GetRank Parms{};
 
@@ -223,10 +202,8 @@ void UWBP_Friend_ListTop_C::GetRank(int32 InRateId, ERateRank* OutRateRank)
 
 void UWBP_Friend_ListTop_C::GetUseCharacterCounts(TArray<struct FCommon_HistoryData_CharacterUsage>& InCharacterUsage, TArray<struct FUsageCountChara>* OutUsageCountChara)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "GetUseCharacterCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_GetUseCharacterCounts Parms{};
 
@@ -249,10 +226,8 @@ void UWBP_Friend_ListTop_C::GetUseCharacterCounts(TArray<struct FCommon_HistoryD
 
 void UWBP_Friend_ListTop_C::GetUseMachineTypeCounts(TArray<struct FCommon_HistoryData_MachineTypeUsage>& InMachineTypeUsages, TArray<int32>* OutUsedMachineCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "GetUseMachineTypeCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_GetUseMachineTypeCounts Parms{};
 
@@ -272,10 +247,8 @@ void UWBP_Friend_ListTop_C::GetUseMachineTypeCounts(TArray<struct FCommon_Histor
 
 void UWBP_Friend_ListTop_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -286,10 +259,8 @@ void UWBP_Friend_ListTop_C::OnAnimationInFinished()
 
 void UWBP_Friend_ListTop_C::OnAnimationOutFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnAnimationOutFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -304,10 +275,8 @@ void UWBP_Friend_ListTop_C::OnAnimationOutFinished()
 
 void UWBP_Friend_ListTop_C::OnFairPlayPointDisplayStart(int32 InFairPlayPoint, bool bInBan, const class FString& InPenaltyEndTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnFairPlayPointDisplayStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnFairPlayPointDisplayStart Parms{};
 
@@ -324,10 +293,8 @@ void UWBP_Friend_ListTop_C::OnFairPlayPointDisplayStart(int32 InFairPlayPoint, b
 
 void UWBP_Friend_ListTop_C::OnFairPlayPointWidgetDisplayEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnFairPlayPointWidgetDisplayEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -342,10 +309,8 @@ void UWBP_Friend_ListTop_C::OnFairPlayPointWidgetDisplayEnd()
 
 struct FEventReply UWBP_Friend_ListTop_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnFocusReceived Parms{};
 
@@ -365,10 +330,8 @@ struct FEventReply UWBP_Friend_ListTop_C::OnFocusReceived(const struct FGeometry
 
 void UWBP_Friend_ListTop_C::OnJoinLobbyByLobbyIdSearch(const struct FLobbyId& TargetLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnJoinLobbyByLobbyIdSearch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnJoinLobbyByLobbyIdSearch Parms{};
 
@@ -388,10 +351,8 @@ void UWBP_Friend_ListTop_C::OnJoinLobbyByLobbyIdSearch(const struct FLobbyId& Ta
 
 void UWBP_Friend_ListTop_C::OnLobbyIdSearchComplete(bool bInSuccessful, const TArray<struct FLobbyId>& InLobbyId, const class FString& InOwnerUserId, ELobbyType InLobbyType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnLobbyIdSearchComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnLobbyIdSearchComplete Parms{};
 
@@ -412,10 +373,8 @@ void UWBP_Friend_ListTop_C::OnLobbyIdSearchComplete(bool bInSuccessful, const TA
 
 void UWBP_Friend_ListTop_C::OnLobbyInvitationComplete(bool bSuccess, const struct FLobbyOperationResult& Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnLobbyInvitationComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnLobbyInvitationComplete Parms{};
 
@@ -433,10 +392,8 @@ void UWBP_Friend_ListTop_C::OnLobbyInvitationComplete(bool bSuccess, const struc
 
 void UWBP_Friend_ListTop_C::OnMainWidgetDisplayEnd(bool PlayCloseSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnMainWidgetDisplayEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnMainWidgetDisplayEnd Parms{};
 
@@ -451,10 +408,8 @@ void UWBP_Friend_ListTop_C::OnMainWidgetDisplayEnd(bool PlayCloseSound)
 
 void UWBP_Friend_ListTop_C::OnMainWidgetLobbyIdGet()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnMainWidgetLobbyIdGet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -467,10 +422,8 @@ void UWBP_Friend_ListTop_C::OnMainWidgetLobbyIdGet()
 
 void UWBP_Friend_ListTop_C::OnMainWidgetLobbyIdSearch(const class FString& TargetShortLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnMainWidgetLobbyIdSearch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnMainWidgetLobbyIdSearch Parms{};
 
@@ -487,10 +440,8 @@ void UWBP_Friend_ListTop_C::OnMainWidgetLobbyIdSearch(const class FString& Targe
 
 void UWBP_Friend_ListTop_C::OnMainWidgetLobbyInvitationAccept(class ULobbyJoinInfo* TargetLobbyJoinInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnMainWidgetLobbyInvitationAccept");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnMainWidgetLobbyInvitationAccept Parms{};
 
@@ -507,10 +458,8 @@ void UWBP_Friend_ListTop_C::OnMainWidgetLobbyInvitationAccept(class ULobbyJoinIn
 
 void UWBP_Friend_ListTop_C::OnMainWidgetLobbyInvitationDecide(const class FString& TargetUserId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnMainWidgetLobbyInvitationDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnMainWidgetLobbyInvitationDecide Parms{};
 
@@ -529,10 +478,8 @@ void UWBP_Friend_ListTop_C::OnMainWidgetLobbyInvitationDecide(const class FStrin
 
 void UWBP_Friend_ListTop_C::OnPlayerIconListCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnPlayerIconListCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnPlayerIconListCancel Parms{};
 
@@ -553,10 +500,8 @@ void UWBP_Friend_ListTop_C::OnPlayerIconListCancel(class UUnionUIButtonBase* But
 
 void UWBP_Friend_ListTop_C::OnPlayerIconListDecisionDown(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnPlayerIconListDecisionDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnPlayerIconListDecisionDown Parms{};
 
@@ -577,10 +522,8 @@ void UWBP_Friend_ListTop_C::OnPlayerIconListDecisionDown(class UUnionUIButtonBas
 
 void UWBP_Friend_ListTop_C::OnPlayerIconSelectStart(int32 InIconId, int32 InBgColorId, bool bInIconSelect)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnPlayerIconSelectStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnPlayerIconSelectStart Parms{};
 
@@ -599,10 +542,8 @@ void UWBP_Friend_ListTop_C::OnPlayerIconSelectStart(int32 InIconId, int32 InBgCo
 
 void UWBP_Friend_ListTop_C::OnRacerInfoDisplayStart(const struct FFriendListPlayerInfo& InListPlayerInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "OnRacerInfoDisplayStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_OnRacerInfoDisplayStart Parms{};
 
@@ -621,10 +562,8 @@ void UWBP_Friend_ListTop_C::OnRacerInfoDisplayStart(const struct FFriendListPlay
 
 void UWBP_Friend_ListTop_C::RacerInfoEnd(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "RacerInfoEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_RacerInfoEnd Parms{};
 
@@ -643,10 +582,8 @@ void UWBP_Friend_ListTop_C::RacerInfoEnd(class UUnionUIButtonBase* Button, int32
 
 void UWBP_Friend_ListTop_C::SetDebugListDisplay(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetDebugListDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetDebugListDisplay Parms{};
 
@@ -663,10 +600,8 @@ void UWBP_Friend_ListTop_C::SetDebugListDisplay(bool bInEnable)
 
 void UWBP_Friend_ListTop_C::SetFairPlayPointWidgetVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetFairPlayPointWidgetVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetFairPlayPointWidgetVisible Parms{};
 
@@ -683,10 +618,8 @@ void UWBP_Friend_ListTop_C::SetFairPlayPointWidgetVisible(bool bInVisible)
 
 void UWBP_Friend_ListTop_C::SetPlayerIconListVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetPlayerIconListVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetPlayerIconListVisible Parms{};
 
@@ -703,10 +636,8 @@ void UWBP_Friend_ListTop_C::SetPlayerIconListVisible(bool bInVisible)
 
 void UWBP_Friend_ListTop_C::SetRacerInfoWidgetVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetRacerInfoWidgetVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetRacerInfoWidgetVisible Parms{};
 
@@ -726,10 +657,8 @@ void UWBP_Friend_ListTop_C::SetRacerInfoWidgetVisible(bool bInVisible)
 
 void UWBP_Friend_ListTop_C::Setup(int32 InLocalUserNumber, EFriendListCategory InInitialCategory, int32 InZOrder, const struct FFriendListSetupParameterData& SetupParameterData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_Setup Parms{};
 
@@ -751,10 +680,8 @@ void UWBP_Friend_ListTop_C::Setup(int32 InLocalUserNumber, EFriendListCategory I
 
 void UWBP_Friend_ListTop_C::SetupFairPlayPointWidget(int32 InFairPlayPoint, bool bInBan, const class FString& InPenaltyEndTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetupFairPlayPointWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetupFairPlayPointWidget Parms{};
 
@@ -775,10 +702,8 @@ void UWBP_Friend_ListTop_C::SetupFairPlayPointWidget(int32 InFairPlayPoint, bool
 
 void UWBP_Friend_ListTop_C::SetupPlayerIconList(int32 InIconId, int32 InBgColorId, bool bInPlayerIconSelect)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetupPlayerIconList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetupPlayerIconList Parms{};
 
@@ -797,10 +722,8 @@ void UWBP_Friend_ListTop_C::SetupPlayerIconList(int32 InIconId, int32 InBgColorI
 
 void UWBP_Friend_ListTop_C::SetupRacerInfoWidget(const struct FFriendListPlayerInfo& InListPlayerInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "SetupRacerInfoWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_SetupRacerInfoWidget Parms{};
 
@@ -815,10 +738,8 @@ void UWBP_Friend_ListTop_C::SetupRacerInfoWidget(const struct FFriendListPlayerI
 
 void UWBP_Friend_ListTop_C::StartDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "StartDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -832,10 +753,8 @@ void UWBP_Friend_ListTop_C::StartDisplay()
 
 void UWBP_Friend_ListTop_C::UpdateLobbyIdDisplay(const class FString& InShortLobbyId, bool bInSuccess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_ListTop_C", "UpdateLobbyIdDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_ListTop_C", FnName));
 
 	Params::WBP_Friend_ListTop_C_UpdateLobbyIdDisplay Parms{};
 
@@ -845,5 +764,5 @@ void UWBP_Friend_ListTop_C::UpdateLobbyIdDisplay(const class FString& InShortLob
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

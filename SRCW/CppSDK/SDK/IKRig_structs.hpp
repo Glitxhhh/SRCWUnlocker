@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum IKRig.EPinBoneType
 // NumValues: 0x0005
@@ -459,5 +458,4 @@ public:
 };
 DUMPER7_ASSERTS_FLimbSolver;
 
-}
-
+SDK_NAMESPACE_END

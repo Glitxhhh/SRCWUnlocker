@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_AppNet.BPC_AppNet_C
 // 0x0120 (0x03A8 - 0x0288)
@@ -30,7 +29,7 @@ public:
 	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         DebugInviteUserIdStrings;                          // 0x02A8(0x0010)(Edit, BlueprintVisible)
 	class ULobbyJoinInfo*                         InviteInfo;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class ULobbyJoinInfo* InviteInfo, bool bSuccess)> OnRejectedInvitation; // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class ULobbyJoinInfo* InviteInfo_0, bool bSuccess)> OnRejectedInvitation; // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(bool bInSuccess, const struct FLobbyOperationResult& InResult)> OnSendInvitationComplete; // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FLobbyInvitationNoticeInfo             LobbyInvitationNoticeInfo;                         // 0x02E0(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 InvitePlatformUserId;                              // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash)
@@ -45,6 +44,7 @@ public:
 	void BindOnReceiveInvite();
 	void CallSendInvitationFailed();
 	void CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJoinInfo, bool* bOutDisplay);
+	void CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyInvitationNoticeInfo& LobbyInvitationNoticeInfo_0, class ULobbyJoinInfo* LobbyInfo);
 	void DisplayFinishEvent();
 	void ExecuteUbergraph_BPC_AppNet(int32 EntryPoint);
 	void GetFriendMatchLobbyContext(class UFriendMatchLobbyContext** FriendMatchLobbyContext);
@@ -101,5 +101,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_AppNet_C;
 
-}
-
+SDK_NAMESPACE_END

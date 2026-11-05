@@ -14,18 +14,15 @@
 #include "BP_CharaMachineSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.BindMachineState
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_CharaMachineSequence_C::BindMachineState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "BindMachineState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_CharaMachineSequence_C::BindMachineState()
 
 void ABP_CharaMachineSequence_C::BindOnExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "BindOnExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void ABP_CharaMachineSequence_C::BindOnExit()
 
 void ABP_CharaMachineSequence_C::BndEvt__BP_CharaMachineSequence_BPC_CharaSelectState_K2Node_ComponentBoundEvent_2_OnBackStateDelegate__DelegateSignature(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "BndEvt__BP_CharaMachineSequence_BPC_CharaSelectState_K2Node_ComponentBoundEvent_2_OnBackStateDelegate__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_BndEvt__BP_CharaMachineSequence_BPC_CharaSelectState_K2Node_ComponentBoundEvent_2_OnBackStateDelegate__DelegateSignature Parms{};
 
@@ -72,34 +65,12 @@ void ABP_CharaMachineSequence_C::BndEvt__BP_CharaMachineSequence_BPC_CharaSelect
 
 void ABP_CharaMachineSequence_C::BndEvt__BP_CharaMachineSequence_BPC_MachineState_K2Node_ComponentBoundEvent_3_OnBackStateDelegate__DelegateSignature(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "BndEvt__BP_CharaMachineSequence_BPC_MachineState_K2Node_ComponentBoundEvent_3_OnBackStateDelegate__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_BndEvt__BP_CharaMachineSequence_BPC_MachineState_K2Node_ComponentBoundEvent_3_OnBackStateDelegate__DelegateSignature Parms{};
 
 	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.CustomEvent
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::CustomEvent(EUnionUIFadeDirection FadeDirection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "CustomEvent");
-
-	Params::BP_CharaMachineSequence_C_CustomEvent Parms{};
-
-	Parms.FadeDirection = FadeDirection;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -112,10 +83,8 @@ void ABP_CharaMachineSequence_C::CustomEvent(EUnionUIFadeDirection FadeDirection
 
 void ABP_CharaMachineSequence_C::ExecuteUbergraph_BP_CharaMachineSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "ExecuteUbergraph_BP_CharaMachineSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CharaMachineSequence_C", "ExecuteUbergraph_BP_CharaMachineSequence", FuncInfo);
 
 	Params::BP_CharaMachineSequence_C_ExecuteUbergraph_BP_CharaMachineSequence Parms{};
 
@@ -130,12 +99,28 @@ void ABP_CharaMachineSequence_C::ExecuteUbergraph_BP_CharaMachineSequence(int32 
 
 void ABP_CharaMachineSequence_C::FinalizeMessageBar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "FinalizeMessageBar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.FinishedFadeEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CharaMachineSequence_C::FinishedFadeEvent(EUnionUIFadeDirection FadeDirection)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
+
+	Params::BP_CharaMachineSequence_C_FinishedFadeEvent Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -146,10 +131,8 @@ void ABP_CharaMachineSequence_C::FinalizeMessageBar()
 
 void ABP_CharaMachineSequence_C::HideLoadingDisplayWidget(class UUnionUILoadingDisplay* InLoadingDisplayWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "HideLoadingDisplayWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_HideLoadingDisplayWidget Parms{};
 
@@ -164,10 +147,8 @@ void ABP_CharaMachineSequence_C::HideLoadingDisplayWidget(class UUnionUILoadingD
 
 void ABP_CharaMachineSequence_C::InitializeSelectedPlayerCharacterIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "InitializeSelectedPlayerCharacterIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +164,8 @@ void ABP_CharaMachineSequence_C::InitializeSelectedPlayerCharacterIndex()
 
 void ABP_CharaMachineSequence_C::MachineState_OnMachinePartsFocus(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "MachineState_OnMachinePartsFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_MachineState_OnMachinePartsFocus Parms{};
 
@@ -209,10 +188,8 @@ void ABP_CharaMachineSequence_C::MachineState_OnMachinePartsFocus(int32 PlayerIn
 
 void ABP_CharaMachineSequence_C::MachineState_OnMachinePartsSelect(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "MachineState_OnMachinePartsSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_MachineState_OnMachinePartsSelect Parms{};
 
@@ -233,10 +210,8 @@ void ABP_CharaMachineSequence_C::MachineState_OnMachinePartsSelect(int32 PlayerI
 
 void ABP_CharaMachineSequence_C::MachineState_OnMachineSelectModeChanged(int32 PlayerIndex, UNION::EMachineSelectMode Mode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "MachineState_OnMachineSelectModeChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_MachineState_OnMachineSelectModeChanged Parms{};
 
@@ -256,10 +231,8 @@ void ABP_CharaMachineSequence_C::MachineState_OnMachineSelectModeChanged(int32 P
 
 void ABP_CharaMachineSequence_C::MachineTypeDecide_Event(int32 PlayerControllerIndex, ECarStatusType machineType, EMachineId MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "MachineTypeDecide_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_MachineTypeDecide_Event Parms{};
 
@@ -280,10 +253,8 @@ void ABP_CharaMachineSequence_C::MachineTypeDecide_Event(int32 PlayerControllerI
 
 void ABP_CharaMachineSequence_C::MachineTypeScrollStart_Event(int32 PlayerControllerIndex, ECarStatusType machineType, EMachineId MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "MachineTypeScrollStart_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_MachineTypeScrollStart_Event Parms{};
 
@@ -303,10 +274,8 @@ void ABP_CharaMachineSequence_C::MachineTypeScrollStart_Event(int32 PlayerContro
 
 void ABP_CharaMachineSequence_C::OnDecideCharaIcon(int32 InPlayerControllerIndex, int32 InCharaIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnDecideCharaIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnDecideCharaIcon Parms{};
 
@@ -322,10 +291,8 @@ void ABP_CharaMachineSequence_C::OnDecideCharaIcon(int32 InPlayerControllerIndex
 
 void ABP_CharaMachineSequence_C::OnExitEvent_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnExitEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -336,10 +303,8 @@ void ABP_CharaMachineSequence_C::OnExitEvent_Event()
 
 void ABP_CharaMachineSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -353,10 +318,8 @@ void ABP_CharaMachineSequence_C::OnFinalize()
 
 void ABP_CharaMachineSequence_C::OnFocusCharaIcon(int32 InPlayerControllerIndex, int32 InCharaIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnFocusCharaIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnFocusCharaIcon Parms{};
 
@@ -372,10 +335,8 @@ void ABP_CharaMachineSequence_C::OnFocusCharaIcon(int32 InPlayerControllerIndex,
 
 void ABP_CharaMachineSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -389,10 +350,8 @@ void ABP_CharaMachineSequence_C::OnInitialize()
 
 void ABP_CharaMachineSequence_C::OnSetRacerDriver(class AMenuRacerBase* InRacer, EDriverId InDriverId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnSetRacerDriver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnSetRacerDriver Parms{};
 
@@ -411,10 +370,8 @@ void ABP_CharaMachineSequence_C::OnSetRacerDriver(class AMenuRacerBase* InRacer,
 
 void ABP_CharaMachineSequence_C::OnSetRacerMachineCustomData(class AMenuRacerBase* InRacer, const struct FUserMachineCustomizeData& InData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnSetRacerMachineCustomData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnSetRacerMachineCustomData Parms{};
 
@@ -433,10 +390,8 @@ void ABP_CharaMachineSequence_C::OnSetRacerMachineCustomData(class AMenuRacerBas
 
 void ABP_CharaMachineSequence_C::OnSetRacerRotation(class AMenuRacerBase* InRacer, float InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnSetRacerRotation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnSetRacerRotation Parms{};
 
@@ -456,10 +411,8 @@ void ABP_CharaMachineSequence_C::OnSetRacerRotation(class AMenuRacerBase* InRace
 
 void ABP_CharaMachineSequence_C::OnSetRacerTransform(class AMenuRacerBase* InRacer, const struct FTransform& InTransform, bool IsNoLerp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "OnSetRacerTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_OnSetRacerTransform Parms{};
 
@@ -478,10 +431,8 @@ void ABP_CharaMachineSequence_C::OnSetRacerTransform(class AMenuRacerBase* InRac
 
 void ABP_CharaMachineSequence_C::PlayRacerAnimation(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "PlayRacerAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_PlayRacerAnimation Parms{};
 
@@ -498,10 +449,8 @@ void ABP_CharaMachineSequence_C::PlayRacerAnimation(int32 InPlayerIndex)
 
 void ABP_CharaMachineSequence_C::SetMessageBarVisible(bool bIsMessageBarVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_SetMessageBarVisible Parms{};
 
@@ -518,10 +467,8 @@ void ABP_CharaMachineSequence_C::SetMessageBarVisible(bool bIsMessageBarVisible_
 
 void ABP_CharaMachineSequence_C::SetNextMenuSequenceSubState(EMenuSequenceSubState InState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetNextMenuSequenceSubState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_SetNextMenuSequenceSubState Parms{};
 
@@ -536,10 +483,8 @@ void ABP_CharaMachineSequence_C::SetNextMenuSequenceSubState(EMenuSequenceSubSta
 
 void ABP_CharaMachineSequence_C::SetSelectedDriverIds()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetSelectedDriverIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -552,10 +497,8 @@ void ABP_CharaMachineSequence_C::SetSelectedDriverIds()
 
 void ABP_CharaMachineSequence_C::SetStartState(EMenuSequenceSubState Start_State_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetStartState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_SetStartState Parms{};
 
@@ -570,10 +513,8 @@ void ABP_CharaMachineSequence_C::SetStartState(EMenuSequenceSubState Start_State
 
 void ABP_CharaMachineSequence_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -584,10 +525,8 @@ void ABP_CharaMachineSequence_C::Setup()
 
 void ABP_CharaMachineSequence_C::SetupMessageBar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetupMessageBar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -601,10 +540,8 @@ void ABP_CharaMachineSequence_C::SetupMessageBar()
 
 void ABP_CharaMachineSequence_C::SetupParamWindowMachineSelect(int32 InPlayerIndex, UNION::EMachineSelectMode InMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "SetupParamWindowMachineSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_SetupParamWindowMachineSelect Parms{};
 
@@ -622,10 +559,8 @@ void ABP_CharaMachineSequence_C::SetupParamWindowMachineSelect(int32 InPlayerInd
 
 class UUnionUILoadingDisplay* ABP_CharaMachineSequence_C::ShowLoadingDisplayWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "ShowLoadingDisplayWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_ShowLoadingDisplayWidget Parms{};
 
@@ -640,10 +575,8 @@ class UUnionUILoadingDisplay* ABP_CharaMachineSequence_C::ShowLoadingDisplayWidg
 
 void ABP_CharaMachineSequence_C::StartFade()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "StartFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -657,10 +590,8 @@ void ABP_CharaMachineSequence_C::StartFade()
 
 void ABP_CharaMachineSequence_C::StartMoveCameraTransform(bool bCharaSelect, bool NoLerp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "StartMoveCameraTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_StartMoveCameraTransform Parms{};
 
@@ -676,102 +607,10 @@ void ABP_CharaMachineSequence_C::StartMoveCameraTransform(bool bCharaSelect, boo
 
 void ABP_CharaMachineSequence_C::UnbindMachineState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UnbindMachineState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindow
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindow(int32 InPlayerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindow");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindow Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByCharaId
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByCharaId(int32 InPlayerIndex, EDriverId InDriverId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByCharaId");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByCharaId Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InDriverId = InDriverId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByMachineId
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByMachineId(int32 InPlayerIndex, EMachineId InMachineID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByMachineId");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByMachineId Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InMachineID = InMachineID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CharaMachineSequence.BP_CharaMachineSequence_C.UpdateParamWindowByMachinePartsIds
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InPlayerIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InFrontPartsId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CharaMachineSequence_C::UpdateParamWindowByMachinePartsIds(int32 InPlayerIndex, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "UpdateParamWindowByMachinePartsIds");
-
-	Params::BP_CharaMachineSequence_C_UpdateParamWindowByMachinePartsIds Parms{};
-
-	Parms.InPlayerIndex = InPlayerIndex;
-	Parms.InFrontPartsId = InFrontPartsId;
-	Parms.InRearPartsId = InRearPartsId;
-	Parms.InTirePartsId = InTirePartsId;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -783,10 +622,8 @@ void ABP_CharaMachineSequence_C::UpdateParamWindowByMachinePartsIds(int32 InPlay
 
 struct FTransform ABP_CharaMachineSequence_C::GetMachineTransformOffset(EMachineId InMachineID) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "GetMachineTransformOffset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_GetMachineTransformOffset Parms{};
 
@@ -805,10 +642,8 @@ struct FTransform ABP_CharaMachineSequence_C::GetMachineTransformOffset(EMachine
 
 void ABP_CharaMachineSequence_C::GetMessageBarVisible(bool* IsVisible) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "GetMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_GetMessageBarVisible Parms{};
 
@@ -827,14 +662,13 @@ void ABP_CharaMachineSequence_C::GetMessageBarVisible(bool* IsVisible) const
 // EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const TArray<EGadgetId>&                InGadgetIds                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<EGadgetId>&                      InSpGadgetIds                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FRacerParamData*                 OutParamData                                           (Parm, OutParm, NoDestructor)
 
-void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const
+void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "GetParamData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_GetParamData Parms{};
 
@@ -843,8 +677,11 @@ void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId I
 	Parms.InRearPartsId = InRearPartsId;
 	Parms.InTirePartsId = InTirePartsId;
 	Parms.InGadgetIds = std::move(InGadgetIds);
+	Parms.InSpGadgetIds = std::move(InSpGadgetIds);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InSpGadgetIds = std::move(Parms.InSpGadgetIds);
 
 	if (OutParamData != nullptr)
 		*OutParamData = std::move(Parms.OutParamData);
@@ -858,10 +695,8 @@ void ABP_CharaMachineSequence_C::GetParamData(EDriverId InDriverId, EMachineId I
 
 class ULevelStreaming* ABP_CharaMachineSequence_C::GetSubLevel() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "GetSubLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_GetSubLevel Parms{};
 
@@ -880,10 +715,8 @@ class ULevelStreaming* ABP_CharaMachineSequence_C::GetSubLevel() const
 
 struct FTransform ABP_CharaMachineSequence_C::GetSubLevelTransform(int32 InPlayerIndex, bool IsCharaSelect) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "GetSubLevelTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_GetSubLevelTransform Parms{};
 
@@ -903,10 +736,8 @@ struct FTransform ABP_CharaMachineSequence_C::GetSubLevelTransform(int32 InPlaye
 
 bool ABP_CharaMachineSequence_C::IsLevelLoaded() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharaMachineSequence_C", "IsLevelLoaded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CharaMachineSequence_C", FnName));
 
 	Params::BP_CharaMachineSequence_C_IsLevelLoaded Parms{};
 
@@ -915,5 +746,5 @@ bool ABP_CharaMachineSequence_C::IsLevelLoaded() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

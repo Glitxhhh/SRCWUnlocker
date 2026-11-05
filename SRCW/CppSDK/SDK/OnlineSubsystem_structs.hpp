@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum OnlineSubsystem.EInAppPurchaseState
 // NumValues: 0x0009
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_FNamedInterfaceDef;
 
-}
-
+SDK_NAMESPACE_END

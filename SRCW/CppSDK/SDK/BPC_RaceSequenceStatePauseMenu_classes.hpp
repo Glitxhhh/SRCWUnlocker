@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStatePauseMenu.BPC_RaceSequenceStatePauseMenu_C
 // 0x0020 (0x0138 - 0x0118)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStatePauseMenu_C;
 
-}
-
+SDK_NAMESPACE_END

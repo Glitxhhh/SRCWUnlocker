@@ -14,8 +14,7 @@
 #include "LS_EntryRacers_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function LS_EntryRacers.LS_EntryRacers_DirectorBP_C.ExecuteUbergraph_LS_EntryRacers_DirectorBP
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ULS_EntryRacers_DirectorBP_C::ExecuteUbergraph_LS_EntryRacers_DirectorBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_DirectorBP_C", "ExecuteUbergraph_LS_EntryRacers_DirectorBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "LS_EntryRacers_DirectorBP_C", "ExecuteUbergraph_LS_EntryRacers_DirectorBP", FuncInfo);
 
 	Params::LS_EntryRacers_DirectorBP_C_ExecuteUbergraph_LS_EntryRacers_DirectorBP Parms{};
 
@@ -45,10 +42,8 @@ void ULS_EntryRacers_DirectorBP_C::ExecuteUbergraph_LS_EntryRacers_DirectorBP(in
 
 void ULS_EntryRacers_DirectorBP_C::OnEnterRacer(class AActor* In_RacerActor, int32 In_Index)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_DirectorBP_C", "OnEnterRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_DirectorBP_C_OnEnterRacer Parms{};
 
@@ -64,13 +59,11 @@ void ULS_EntryRacers_DirectorBP_C::OnEnterRacer(class AActor* In_RacerActor, int
 
 void ULS_EntryRacers_DirectorBP_C::OnFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_DirectorBP_C", "OnFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_DirectorBP_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

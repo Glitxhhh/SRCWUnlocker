@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
-#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "ST_PullDownMenuData_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_CMN_PullDownMenu.WBP_CMN_PullDownMenu_C.Close
 // 0x0008 (0x0008 - 0x0000)
@@ -213,5 +213,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_PullDownMenu_C_UpdateItems;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

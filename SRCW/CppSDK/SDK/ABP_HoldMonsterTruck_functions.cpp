@@ -14,8 +14,7 @@
 #include "ABP_HoldMonsterTruck_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldMonsterTruck.ABP_HoldMonsterTruck_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldMonsterTruck_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldMonsterTruck_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldMonsterTruck_C", FnName));
 
 	Params::ABP_HoldMonsterTruck_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_HoldMonsterTruck_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_67B84B27481B91EEA9683D991590DDA6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldMonsterTruck_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_67B84B27481B91EEA9683D991590DDA6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldMonsterTruck_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ho
 
 void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_68E69D42460BE3EE9B03198CE4036A8B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldMonsterTruck_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_68E69D42460BE3EE9B03198CE4036A8B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldMonsterTruck_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ho
 
 void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_BA793EB1464B9A597E5286AA3034C873()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldMonsterTruck_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HoldMonsterTruck_AnimGraphNode_TransitionResult_BA793EB1464B9A597E5286AA3034C873");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldMonsterTruck_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,10 +78,8 @@ void UABP_HoldMonsterTruck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ho
 
 void UABP_HoldMonsterTruck_C::ExecuteUbergraph_ABP_HoldMonsterTruck(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldMonsterTruck_C", "ExecuteUbergraph_ABP_HoldMonsterTruck");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_HoldMonsterTruck_C", "ExecuteUbergraph_ABP_HoldMonsterTruck", FuncInfo);
 
 	Params::ABP_HoldMonsterTruck_C_ExecuteUbergraph_ABP_HoldMonsterTruck Parms{};
 
@@ -99,5 +88,5 @@ void UABP_HoldMonsterTruck_C::ExecuteUbergraph_ABP_HoldMonsterTruck(int32 EntryP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

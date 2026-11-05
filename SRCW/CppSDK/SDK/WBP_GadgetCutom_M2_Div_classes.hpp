@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCutom_M2_Div.WBP_GadgetCutom_M2_Div_C
 // 0x00A8 (0x0390 - 0x02E8)
@@ -75,5 +74,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GadgetCutom_M2_Div_C;
 
-}
-
+SDK_NAMESPACE_END

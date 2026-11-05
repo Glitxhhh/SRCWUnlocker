@@ -14,18 +14,15 @@
 #include "WBP_Window_Sub_TxtOption_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Window_Sub_TxtOption.WBP_Window_Sub_TxtOption_C.BndEvt__WBP_Friend_Sub_PlayerPlate_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_Window_Sub_TxtOption_C::BndEvt__WBP_Friend_Sub_PlayerPlate_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "BndEvt__WBP_Friend_Sub_PlayerPlate_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Window_Sub_TxtOption_C::BndEvt__WBP_Friend_Sub_PlayerPlate_MouseIntera
 
 void UWBP_Window_Sub_TxtOption_C::BndEvt__WBP_Friend_Sub_PlayerPlate_MouseInteraction_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "BndEvt__WBP_Friend_Sub_PlayerPlate_MouseInteraction_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void UWBP_Window_Sub_TxtOption_C::BndEvt__WBP_Friend_Sub_PlayerPlate_MouseIntera
 
 void UWBP_Window_Sub_TxtOption_C::ChangePlayAnimation(class UWidgetAnimation* InStopAnimation, class UWidgetAnimation* InPlayAnimation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "ChangePlayAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_ChangePlayAnimation Parms{};
 
@@ -74,10 +67,8 @@ void UWBP_Window_Sub_TxtOption_C::ChangePlayAnimation(class UWidgetAnimation* In
 
 void UWBP_Window_Sub_TxtOption_C::Check_Release_Response_InputType(bool* bOutReleaseResponseInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "Check Release Response InputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_Check_Release_Response_InputType Parms{};
 
@@ -93,10 +84,8 @@ void UWBP_Window_Sub_TxtOption_C::Check_Release_Response_InputType(bool* bOutRel
 
 void UWBP_Window_Sub_TxtOption_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,10 +98,8 @@ void UWBP_Window_Sub_TxtOption_C::Construct()
 
 void UWBP_Window_Sub_TxtOption_C::ExecuteUbergraph_WBP_Window_Sub_TxtOption(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "ExecuteUbergraph_WBP_Window_Sub_TxtOption");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Window_Sub_TxtOption_C", "ExecuteUbergraph_WBP_Window_Sub_TxtOption", FuncInfo);
 
 	Params::WBP_Window_Sub_TxtOption_C_ExecuteUbergraph_WBP_Window_Sub_TxtOption Parms{};
 
@@ -127,10 +114,8 @@ void UWBP_Window_Sub_TxtOption_C::ExecuteUbergraph_WBP_Window_Sub_TxtOption(int3
 
 void UWBP_Window_Sub_TxtOption_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +126,8 @@ void UWBP_Window_Sub_TxtOption_C::OnAcceptKeyPressed()
 
 void UWBP_Window_Sub_TxtOption_C::OnAcceptKeyPressedImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnAcceptKeyPressedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,10 +140,8 @@ void UWBP_Window_Sub_TxtOption_C::OnAcceptKeyPressedImpl()
 
 void UWBP_Window_Sub_TxtOption_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_OnAddedToFocusPath Parms{};
 
@@ -175,10 +156,8 @@ void UWBP_Window_Sub_TxtOption_C::OnAddedToFocusPath(const struct FFocusEvent& I
 
 void UWBP_Window_Sub_TxtOption_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +168,8 @@ void UWBP_Window_Sub_TxtOption_C::OnBackKeyPressed()
 
 void UWBP_Window_Sub_TxtOption_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -205,10 +182,8 @@ void UWBP_Window_Sub_TxtOption_C::OnFocusAnimStart()
 
 void UWBP_Window_Sub_TxtOption_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnFocusImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_OnFocusImpl Parms{};
 
@@ -225,10 +200,8 @@ void UWBP_Window_Sub_TxtOption_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 
 void UWBP_Window_Sub_TxtOption_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_OnFocusLost Parms{};
 
@@ -247,10 +220,8 @@ void UWBP_Window_Sub_TxtOption_C::OnFocusLost(const struct FFocusEvent& InFocusE
 
 struct FEventReply UWBP_Window_Sub_TxtOption_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_OnFocusReceived Parms{};
 
@@ -270,10 +241,8 @@ struct FEventReply UWBP_Window_Sub_TxtOption_C::OnFocusReceived(const struct FGe
 
 void UWBP_Window_Sub_TxtOption_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_OnRemovedFromFocusPath Parms{};
 
@@ -288,10 +257,8 @@ void UWBP_Window_Sub_TxtOption_C::OnRemovedFromFocusPath(const struct FFocusEven
 
 void UWBP_Window_Sub_TxtOption_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -304,10 +271,8 @@ void UWBP_Window_Sub_TxtOption_C::OnUnFocusAnimStart()
 
 void UWBP_Window_Sub_TxtOption_C::SetButtonExplainText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetButtonExplainText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetButtonExplainText Parms{};
 
@@ -324,10 +289,8 @@ void UWBP_Window_Sub_TxtOption_C::SetButtonExplainText(const class FText& InText
 
 void UWBP_Window_Sub_TxtOption_C::SetButtonExplainTextVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetButtonExplainTextVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetButtonExplainTextVisible Parms{};
 
@@ -344,10 +307,8 @@ void UWBP_Window_Sub_TxtOption_C::SetButtonExplainTextVisible(bool bInVisible)
 
 void UWBP_Window_Sub_TxtOption_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetButtonFocusType Parms{};
 
@@ -364,10 +325,8 @@ void UWBP_Window_Sub_TxtOption_C::SetButtonFocusType(EButtonFocusType InButtonFo
 
 void UWBP_Window_Sub_TxtOption_C::SetButtonText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetButtonText Parms{};
 
@@ -384,10 +343,8 @@ void UWBP_Window_Sub_TxtOption_C::SetButtonText(const class FText& InText)
 
 void UWBP_Window_Sub_TxtOption_C::SetCursorTextureVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetCursorTextureVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetCursorTextureVisible Parms{};
 
@@ -404,10 +361,8 @@ void UWBP_Window_Sub_TxtOption_C::SetCursorTextureVisible(bool bInVisible)
 
 void UWBP_Window_Sub_TxtOption_C::SetFocusAnimation(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetFocusAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetFocusAnimation Parms{};
 
@@ -424,10 +379,8 @@ void UWBP_Window_Sub_TxtOption_C::SetFocusAnimation(bool bInEnable)
 
 void UWBP_Window_Sub_TxtOption_C::SetFocusEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetFocusEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetFocusEnable Parms{};
 
@@ -444,10 +397,8 @@ void UWBP_Window_Sub_TxtOption_C::SetFocusEnable(bool bInEnable)
 
 void UWBP_Window_Sub_TxtOption_C::SetMouseInteractionVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetMouseInteractionVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetMouseInteractionVisible Parms{};
 
@@ -464,10 +415,8 @@ void UWBP_Window_Sub_TxtOption_C::SetMouseInteractionVisible(bool bInVisible)
 
 void UWBP_Window_Sub_TxtOption_C::SetPlayDecisionSe(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetPlayDecisionSe");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetPlayDecisionSe Parms{};
 
@@ -484,10 +433,8 @@ void UWBP_Window_Sub_TxtOption_C::SetPlayDecisionSe(bool bInEnable)
 
 void UWBP_Window_Sub_TxtOption_C::SetToggleButtonState(bool bInState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetToggleButtonState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetToggleButtonState Parms{};
 
@@ -504,10 +451,8 @@ void UWBP_Window_Sub_TxtOption_C::SetToggleButtonState(bool bInState)
 
 void UWBP_Window_Sub_TxtOption_C::SetToggleButtonVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetToggleButtonVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetToggleButtonVisible Parms{};
 
@@ -524,10 +469,8 @@ void UWBP_Window_Sub_TxtOption_C::SetToggleButtonVisible(bool bInVisible)
 
 void UWBP_Window_Sub_TxtOption_C::SetWidgetFocus(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_Sub_TxtOption_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_Sub_TxtOption_C", FnName));
 
 	Params::WBP_Window_Sub_TxtOption_C_SetWidgetFocus Parms{};
 
@@ -536,5 +479,5 @@ void UWBP_Window_Sub_TxtOption_C::SetWidgetFocus(bool bInPlayFocusSound)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

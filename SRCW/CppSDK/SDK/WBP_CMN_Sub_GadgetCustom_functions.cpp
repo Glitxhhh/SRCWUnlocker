@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_GadgetCustom_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_GadgetCustom.WBP_CMN_Sub_GadgetCustom_C.ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_GadgetCustom_C::ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_GadgetCustom_C", "ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_GadgetCustom_C", "ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom", FuncInfo);
 
 	Params::WBP_CMN_Sub_GadgetCustom_C_ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_Sub_GadgetCustom_C::ExecuteUbergraph_WBP_CMN_Sub_GadgetCustom(int3
 
 void UWBP_CMN_Sub_GadgetCustom_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_GadgetCustom_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_GadgetCustom_C", FnName));
 
 	Params::WBP_CMN_Sub_GadgetCustom_C_PreConstruct Parms{};
 
@@ -62,13 +57,11 @@ void UWBP_CMN_Sub_GadgetCustom_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CMN_Sub_GadgetCustom_C::UpdateClass()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_GadgetCustom_C", "UpdateClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_GadgetCustom_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

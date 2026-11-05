@@ -14,8 +14,7 @@
 #include "StructUtils_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class StructUtils.PropertyBagMissingObject
 // 0x0000 (0x0028 - 0x0028)
@@ -61,5 +60,4 @@ public:
 };
 DUMPER7_ASSERTS_UPropertyBag;
 
-}
-
+SDK_NAMESPACE_END

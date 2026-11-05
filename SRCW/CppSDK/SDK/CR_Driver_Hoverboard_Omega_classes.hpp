@@ -13,8 +13,7 @@
 #include "ControlRig_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ControlRigBlueprintGeneratedClass CR_Driver_Hoverboard_Omega.CR_Driver_Hoverboard_Omega_C
 // 0x0000 (0x0AA8 - 0x0AA8)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UCR_Driver_Hoverboard_Omega_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "MovieRenderPipelineSettings_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MovieRenderPipelineSettings.MoviePipelineBurnInWidget.OnOutputFrameStarted
 // (Event, Public, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UMoviePipelineBurnInWidget::OnOutputFrameStarted(class UMoviePipeline* ForPipeline)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MoviePipelineBurnInWidget", "OnOutputFrameStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MoviePipelineBurnInWidget", FnName));
 
 	Params::MoviePipelineBurnInWidget_OnOutputFrameStarted Parms{};
 
@@ -181,5 +178,5 @@ TArray<struct FMoviePipelineConsoleVariableEntry> UMoviePipelineConsoleVariableS
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateReady_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateReady.BPC_RaceSequenceStateReady_C.CheckTipsFirstTimeTrialMode
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateReady_C::CheckTipsFirstTimeTrialMode(bool* OutShowTips)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsFirstTimeTrialMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CheckTipsFirstTimeTrialMode Parms{};
 
@@ -45,10 +42,8 @@ void UBPC_RaceSequenceStateReady_C::CheckTipsFirstTimeTrialMode(bool* OutShowTip
 
 class UUserWidget* UBPC_RaceSequenceStateReady_C::CreateInfoWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateInfoWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CreateInfoWidget Parms{};
 
@@ -65,10 +60,8 @@ class UUserWidget* UBPC_RaceSequenceStateReady_C::CreateInfoWidget()
 
 void UBPC_RaceSequenceStateReady_C::IsPartyRaceMissionExists(bool* Exists)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "IsPartyRaceMissionExists");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_IsPartyRaceMissionExists Parms{};
 
@@ -86,10 +79,8 @@ void UBPC_RaceSequenceStateReady_C::IsPartyRaceMissionExists(bool* Exists)
 
 void UBPC_RaceSequenceStateReady_C::CheckTipsGrandPrixRound(EHintId* OutHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsGrandPrixRound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CheckTipsGrandPrixRound Parms{};
 
@@ -107,10 +98,8 @@ void UBPC_RaceSequenceStateReady_C::CheckTipsGrandPrixRound(EHintId* OutHintId)
 
 void UBPC_RaceSequenceStateReady_C::CheckTipsFirstRaceControl(bool* OutShowTips)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTipsFirstRaceControl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CheckTipsFirstRaceControl Parms{};
 
@@ -128,10 +117,8 @@ void UBPC_RaceSequenceStateReady_C::CheckTipsFirstRaceControl(bool* OutShowTips)
 
 void UBPC_RaceSequenceStateReady_C::CheckTips(EHintId* OutHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CheckTips Parms{};
 
@@ -147,10 +134,8 @@ void UBPC_RaceSequenceStateReady_C::CheckTips(EHintId* OutHintId)
 
 void UBPC_RaceSequenceStateReady_C::Begin_RaceRuleUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_RaceRuleUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +146,8 @@ void UBPC_RaceSequenceStateReady_C::Begin_RaceRuleUI()
 
 void UBPC_RaceSequenceStateReady_C::CheckNeedTips()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckNeedTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +158,8 @@ void UBPC_RaceSequenceStateReady_C::CheckNeedTips()
 
 void UBPC_RaceSequenceStateReady_C::Begin_TipsUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_TipsUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +170,8 @@ void UBPC_RaceSequenceStateReady_C::Begin_TipsUI()
 
 void UBPC_RaceSequenceStateReady_C::CheckRuleUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckRuleUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,10 +182,8 @@ void UBPC_RaceSequenceStateReady_C::CheckRuleUI()
 
 void UBPC_RaceSequenceStateReady_C::CheckOnlineWaiting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CheckOnlineWaiting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -217,10 +194,8 @@ void UBPC_RaceSequenceStateReady_C::CheckOnlineWaiting()
 
 void UBPC_RaceSequenceStateReady_C::OutOnlineWaitingUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OutOnlineWaitingUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +206,8 @@ void UBPC_RaceSequenceStateReady_C::OutOnlineWaitingUI()
 
 void UBPC_RaceSequenceStateReady_C::OnOutAnimFinished_イベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnOutAnimFinished_イベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -245,10 +218,8 @@ void UBPC_RaceSequenceStateReady_C::OnOutAnimFinished_イベント()
 
 void UBPC_RaceSequenceStateReady_C::InitOnlineWaiting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "InitOnlineWaiting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -259,10 +230,8 @@ void UBPC_RaceSequenceStateReady_C::InitOnlineWaiting()
 
 void UBPC_RaceSequenceStateReady_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -273,10 +242,8 @@ void UBPC_RaceSequenceStateReady_C::OnExitState()
 
 void UBPC_RaceSequenceStateReady_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,10 +257,8 @@ void UBPC_RaceSequenceStateReady_C::OnInitState()
 
 void UBPC_RaceSequenceStateReady_C::NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "NoticeChangeRaceStateEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_NoticeChangeRaceStateEvent Parms{};
 
@@ -311,10 +276,8 @@ void UBPC_RaceSequenceStateReady_C::NoticeChangeRaceStateEvent(ERaceInfoStateTyp
 
 void UBPC_RaceSequenceStateReady_C::CreateTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "CreateTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_CreateTipsWindow Parms{};
 
@@ -329,10 +292,8 @@ void UBPC_RaceSequenceStateReady_C::CreateTipsWindow(EHintId InHintId)
 
 void UBPC_RaceSequenceStateReady_C::OnHintPopupCloseEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnHintPopupCloseEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -343,10 +304,8 @@ void UBPC_RaceSequenceStateReady_C::OnHintPopupCloseEnd()
 
 void UBPC_RaceSequenceStateReady_C::SetRaceUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "SetRaceUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -359,10 +318,8 @@ void UBPC_RaceSequenceStateReady_C::SetRaceUI()
 
 void UBPC_RaceSequenceStateReady_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_OnUpdateState Parms{};
 
@@ -379,10 +336,8 @@ void UBPC_RaceSequenceStateReady_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceSequenceStateReady_C::Begin_StartRace(int32 InRaceStartTimeSec)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "Begin_StartRace");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_Begin_StartRace Parms{};
 
@@ -400,10 +355,8 @@ void UBPC_RaceSequenceStateReady_C::Begin_StartRace(int32 InRaceStartTimeSec)
 
 void UBPC_RaceSequenceStateReady_C::NoticeChangeCountDownEvent(int32 InNewValue, int32 InOldValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "NoticeChangeCountDownEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateReady_C", FnName));
 
 	Params::BPC_RaceSequenceStateReady_C_NoticeChangeCountDownEvent Parms{};
 
@@ -421,10 +374,8 @@ void UBPC_RaceSequenceStateReady_C::NoticeChangeCountDownEvent(int32 InNewValue,
 
 void UBPC_RaceSequenceStateReady_C::ExecuteUbergraph_BPC_RaceSequenceStateReady(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateReady_C", "ExecuteUbergraph_BPC_RaceSequenceStateReady");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateReady_C", "ExecuteUbergraph_BPC_RaceSequenceStateReady", FuncInfo);
 
 	Params::BPC_RaceSequenceStateReady_C_ExecuteUbergraph_BPC_RaceSequenceStateReady Parms{};
 
@@ -433,5 +384,5 @@ void UBPC_RaceSequenceStateReady_C::ExecuteUbergraph_BPC_RaceSequenceStateReady(
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

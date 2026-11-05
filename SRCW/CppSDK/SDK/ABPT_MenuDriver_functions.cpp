@@ -14,8 +14,7 @@
 #include "ABPT_MenuDriver_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABPT_MenuDriver.ABPT_MenuDriver_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABPT_MenuDriver_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABPT_MenuDriver_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABPT_MenuDriver_C::AnimNotify_CrownOff()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "AnimNotify_CrownOff");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABPT_MenuDriver_C::AnimNotify_CrownOff()
 
 void UABPT_MenuDriver_C::AnimNotify_CrownOn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "AnimNotify_CrownOn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABPT_MenuDriver_C::AnimNotify_CrownOn()
 
 void UABPT_MenuDriver_C::AnimNotify_OnBlendEndIdle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "AnimNotify_OnBlendEndIdle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABPT_MenuDriver_C::AnimNotify_OnBlendEndIdle()
 
 void UABPT_MenuDriver_C::BlueprintBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "BlueprintBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,10 +88,8 @@ void UABPT_MenuDriver_C::BlueprintBeginPlay()
 
 void UABPT_MenuDriver_C::BlueprintInitializeAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "BlueprintInitializeAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,12 +100,34 @@ void UABPT_MenuDriver_C::BlueprintInitializeAnimation()
 
 void UABPT_MenuDriver_C::BlueprintLinkedAnimationLayersInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "BlueprintLinkedAnimationLayersInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.DrivingControlRigLayer
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPose_Driving                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   machineType_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       DrivingControlRigLayer_0                               (Parm, OutParm, NoDestructor)
+
+void UABPT_MenuDriver_C::DrivingControlRigLayer(const struct FPoseLink& InPose_Driving, int32 machineType_0, struct FPoseLink* DrivingControlRigLayer_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "DrivingControlRigLayer", FuncInfo);
+
+	Params::ABPT_MenuDriver_C_DrivingControlRigLayer Parms{};
+
+	Parms.InPose_Driving = std::move(InPose_Driving);
+	Parms.machineType_0 = machineType_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DrivingControlRigLayer_0 != nullptr)
+		*DrivingControlRigLayer_0 = std::move(Parms.DrivingControlRigLayer_0);
 }
 
 
@@ -127,10 +136,8 @@ void UABPT_MenuDriver_C::BlueprintLinkedAnimationLayersInitialized()
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_5088D58A4E80CBC8CDB193BD89C5CC0C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_5088D58A4E80CBC8CDB193BD89C5CC0C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +148,80 @@ void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDr
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_AA30489346D7EEC10ECBB3A470766139()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_AA30489346D7EEC10ECBB3A470766139");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_E286BB574D584C58DD125CA4C89DC248
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_BlendListByBool_E286BB574D584C58DD125CA4C89DC248()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_ControlRig_2FE98B594A0494045E7F2D9A2C4B6D78
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_ControlRig_2FE98B594A0494045E7F2D9A2C4B6D78()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_ControlRig_6517309544019FADA64838AC60DA1D78
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_ControlRig_6517309544019FADA64838AC60DA1D78()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_LinkedAnimLayer_D14AF07042CD191962DDCCB403BE906D
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_LinkedAnimLayer_D14AF07042CD191962DDCCB403BE906D()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_LinkedAnimLayer_E4F164B34A2F7AED1679EFA3CD07BCB0
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_LinkedAnimLayer_E4F164B34A2F7AED1679EFA3CD07BCB0()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_0FD84CCA4EF9A4B17189BE954D770BA8
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_0FD84CCA4EF9A4B17189BE954D770BA8()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +232,8 @@ void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDr
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_29E5A232495793ADF3DF5C89BA94DC8F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_29E5A232495793ADF3DF5C89BA94DC8F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +244,20 @@ void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDr
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_5AD8FB42493AFFB0CA79FBAF24B1C8F5()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_5AD8FB42493AFFB0CA79FBAF24B1C8F5");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_BA314DA3463A105CAE3C86A647BC0C9A
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_BA314DA3463A105CAE3C86A647BC0C9A()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +268,8 @@ void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDr
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_D698B7504A81BF25EE4392A792653425()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_D698B7504A81BF25EE4392A792653425");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,32 +280,100 @@ void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDr
 
 void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_FA8BB0E54C84F399B768EB94CB4B1D33()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_SequencePlayer_FA8BB0E54C84F399B768EB94CB4B1D33");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_00307C8243F08555D593CA8320F2556C
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_00307C8243F08555D593CA8320F2556C()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_139B74834497EF80391BCAAFC1BF9B3B
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_139B74834497EF80391BCAAFC1BF9B3B()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_6F6F5C4141C89D6D4223969DBEDD71BE
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_6F6F5C4141C89D6D4223969DBEDD71BE()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_E51429604AC8503839915E8D26633487
+// (BlueprintEvent)
+
+void UABPT_MenuDriver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_MenuDriver_AnimGraphNode_TransitionResult_E51429604AC8503839915E8D26633487()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function ABPT_MenuDriver.ABPT_MenuDriver_C.ExecuteUbergraph_ABPT_MenuDriver
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UABPT_MenuDriver_C::ExecuteUbergraph_ABPT_MenuDriver(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "ExecuteUbergraph_ABPT_MenuDriver");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "ExecuteUbergraph_ABPT_MenuDriver", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_ExecuteUbergraph_ABPT_MenuDriver Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.FullTimeControlRigLayer
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPose_Emote                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   InMachineType_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       FullTimeControlRigLayer_0                              (Parm, OutParm, NoDestructor)
+
+void UABPT_MenuDriver_C::FullTimeControlRigLayer(const struct FPoseLink& InPose_Emote, int32 InMachineType_0, struct FPoseLink* FullTimeControlRigLayer_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "FullTimeControlRigLayer", FuncInfo);
+
+	Params::ABPT_MenuDriver_C_FullTimeControlRigLayer Parms{};
+
+	Parms.InPose_Emote = std::move(InPose_Emote);
+	Parms.InMachineType_0 = InMachineType_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FullTimeControlRigLayer_0 != nullptr)
+		*FullTimeControlRigLayer_0 = std::move(Parms.FullTimeControlRigLayer_0);
 }
 
 
@@ -233,10 +384,8 @@ void UABPT_MenuDriver_C::ExecuteUbergraph_ABPT_MenuDriver(int32 EntryPoint)
 
 void UABPT_MenuDriver_C::GetLinkedAnimLayerClass(class UClass** OutAnimInstance)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "GetLinkedAnimLayerClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_GetLinkedAnimLayerClass Parms{};
 
@@ -254,10 +403,8 @@ void UABPT_MenuDriver_C::GetLinkedAnimLayerClass(class UClass** OutAnimInstance)
 
 void UABPT_MenuDriver_C::GetUseBoneControl(bool* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "GetUseBoneControl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_GetUseBoneControl Parms{};
 
@@ -276,10 +423,8 @@ void UABPT_MenuDriver_C::GetUseBoneControl(bool* Output_Get)
 
 void UABPT_MenuDriver_C::HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "HoverboardControlRogLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "HoverboardControlRogLayer", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_HoverboardControlRogLayer Parms{};
 
@@ -301,10 +446,8 @@ void UABPT_MenuDriver_C::HoverboardControlRogLayer(const struct FPoseLink& Hover
 
 void UABPT_MenuDriver_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "HoverboardItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "HoverboardItemHoldBlendLeft", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_HoverboardItemHoldBlendLeft Parms{};
 
@@ -327,10 +470,8 @@ void UABPT_MenuDriver_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& Bas
 
 void UABPT_MenuDriver_C::HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "HoverboardItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "HoverboardItemHoldBlendRight", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_HoverboardItemHoldBlendRight Parms{};
 
@@ -348,18 +489,20 @@ void UABPT_MenuDriver_C::HoverboardItemHoldBlendRight(const struct FPoseLink& Ba
 // (HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void UABPT_MenuDriver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void UABPT_MenuDriver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "KawaiiPhysicsLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "KawaiiPhysicsLayer", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -377,10 +520,8 @@ void UABPT_MenuDriver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, stru
 
 void UABPT_MenuDriver_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "MachineItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "MachineItemHoldBlendLeft", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_MachineItemHoldBlendLeft Parms{};
 
@@ -403,10 +544,8 @@ void UABPT_MenuDriver_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePo
 
 void UABPT_MenuDriver_C::MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "MachineItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "MachineItemHoldBlendRight", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_MachineItemHoldBlendRight Parms{};
 
@@ -431,10 +570,8 @@ void UABPT_MenuDriver_C::MachineItemHoldBlendRight(const struct FPoseLink& BaseP
 
 void UABPT_MenuDriver_C::MenuFacialOverride(const struct FPoseLink& MenuFinalPose, bool InPlayingMontage, const struct FPoseLink& MenuDefaltFace, const struct FPoseLink& MenuOverrideFace, struct FPoseLink* MenuFacialOverride_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "MenuFacialOverride");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "MenuFacialOverride", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_MenuFacialOverride Parms{};
 
@@ -458,10 +595,8 @@ void UABPT_MenuDriver_C::MenuFacialOverride(const struct FPoseLink& MenuFinalPos
 
 void UABPT_MenuDriver_C::On_State_Entry_Emote(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "On State Entry Emote");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_On_State_Entry_Emote Parms{};
 
@@ -477,10 +612,8 @@ void UABPT_MenuDriver_C::On_State_Entry_Emote(const struct FAnimUpdateContext& C
 
 void UABPT_MenuDriver_C::Refresh()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "Refresh");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -497,10 +630,8 @@ void UABPT_MenuDriver_C::Refresh()
 
 void UABPT_MenuDriver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "ScaleFaceLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "ScaleFaceLayer", FuncInfo);
 
 	Params::ABPT_MenuDriver_C_ScaleFaceLayer Parms{};
 
@@ -516,6 +647,30 @@ void UABPT_MenuDriver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, 
 }
 
 
+// Function ABPT_MenuDriver.ABPT_MenuDriver_C.ScaleFacialOverrideVerTwo
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InBasePose                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 InDefaultPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       ScaleFacialOverrideVerTwo_0                            (Parm, OutParm, NoDestructor)
+
+void UABPT_MenuDriver_C::ScaleFacialOverrideVerTwo(const struct FPoseLink& InBasePose, const struct FPoseLink& InDefaultPose, struct FPoseLink* ScaleFacialOverrideVerTwo_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_MenuDriver_C", "ScaleFacialOverrideVerTwo", FuncInfo);
+
+	Params::ABPT_MenuDriver_C_ScaleFacialOverrideVerTwo Parms{};
+
+	Parms.InBasePose = std::move(InBasePose);
+	Parms.InDefaultPose = std::move(InDefaultPose);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScaleFacialOverrideVerTwo_0 != nullptr)
+		*ScaleFacialOverrideVerTwo_0 = std::move(Parms.ScaleFacialOverrideVerTwo_0);
+}
+
+
 // Function ABPT_MenuDriver.ABPT_MenuDriver_C.Set Is Drive Idle Low Loop
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -523,10 +678,8 @@ void UABPT_MenuDriver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, 
 
 void UABPT_MenuDriver_C::Set_Is_Drive_Idle_Low_Loop(bool IsDriveIdleLowLoop_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "Set Is Drive Idle Low Loop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_Set_Is_Drive_Idle_Low_Loop Parms{};
 
@@ -543,10 +696,8 @@ void UABPT_MenuDriver_C::Set_Is_Drive_Idle_Low_Loop(bool IsDriveIdleLowLoop_0)
 
 void UABPT_MenuDriver_C::Set_Playing_Face_Montage(bool IsPlayingMontage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "Set Playing Face Montage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_Set_Playing_Face_Montage Parms{};
 
@@ -564,10 +715,8 @@ void UABPT_MenuDriver_C::Set_Playing_Face_Montage(bool IsPlayingMontage)
 
 void UABPT_MenuDriver_C::SetBoneRotation(const struct FRotator& NeckRotation_0, const struct FRotator& SpineRotation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "SetBoneRotation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_SetBoneRotation Parms{};
 
@@ -585,10 +734,8 @@ void UABPT_MenuDriver_C::SetBoneRotation(const struct FRotator& NeckRotation_0, 
 
 void UABPT_MenuDriver_C::SetUseBoneControl(bool UseBoneControl_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_MenuDriver_C", "SetUseBoneControl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_MenuDriver_C", FnName));
 
 	Params::ABPT_MenuDriver_C_SetUseBoneControl Parms{};
 
@@ -597,5 +744,5 @@ void UABPT_MenuDriver_C::SetUseBoneControl(bool UseBoneControl_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

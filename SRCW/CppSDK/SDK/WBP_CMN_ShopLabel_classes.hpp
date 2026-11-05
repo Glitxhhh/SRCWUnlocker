@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_ShopLabel.WBP_CMN_ShopLabel_C
 // 0x0008 (0x0310 - 0x0308)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_ShopLabel_C;
 
-}
-
+SDK_NAMESPACE_END

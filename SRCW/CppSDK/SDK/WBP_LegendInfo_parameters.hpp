@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_LegendInfo.WBP_LegendInfo_C.ExecuteUbergraph_WBP_LegendInfo
 // 0x0108 (0x0108 - 0x0000)
@@ -84,5 +84,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_LegendInfo_C_SetInfoDispData;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

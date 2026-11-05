@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_StickerColorPicker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerColorPicker.WBP_MachineCustom_Sub_StickerColorPicker_C.ButtonsPanel_OnDecision
 // (BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::ButtonsPanel_OnDecision(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "ButtonsPanel_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_ButtonsPanel_OnDecision Parms{};
 
@@ -47,10 +44,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::ButtonsPanel_OnDecision(class 
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::ButtonsPanel_OnFocus(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "ButtonsPanel_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_ButtonsPanel_OnFocus Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::ButtonsPanel_OnFocus(class UUn
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -82,10 +75,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::Construct()
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::ExecuteUbergraph_WBP_MachineCustom_Sub_StickerColorPicker(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerColorPicker");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_StickerColorPicker_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerColorPicker", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerColorPicker Parms{};
 
@@ -100,10 +91,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::ExecuteUbergraph_WBP_MachineCu
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::PlayColorPickerIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "PlayColorPickerIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +103,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::PlayColorPickerIn()
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::PlayColorPickerOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "PlayColorPickerOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +119,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::PlayColorPickerOut()
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::Scene_OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "Scene_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_Scene_OnCancel Parms{};
 
@@ -154,10 +139,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::Scene_OnCancel(class UUnionUIB
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::Setup(const struct FST_ColorDetailWindowData& InWindowData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_Setup Parms{};
 
@@ -174,10 +157,8 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::Setup(const struct FST_ColorDe
 
 void UWBP_MachineCustom_Sub_StickerColorPicker_C::SurfaceButton_OnFocus(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerColorPicker_C", "SurfaceButton_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerColorPicker_C_SurfaceButton_OnFocus Parms{};
 
@@ -186,5 +167,5 @@ void UWBP_MachineCustom_Sub_StickerColorPicker_C::SurfaceButton_OnFocus(class UU
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -17,8 +17,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class GameplayTags.BlueprintGameplayTagLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -76,9 +75,12 @@ public:
 DUMPER7_ASSERTS_UBlueprintGameplayTagLibrary;
 
 // Class GameplayTags.GameplayTagAssetInterface
-// 0x0000 (0x0000 - 0x0000)
-class IGameplayTagAssetInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IGameplayTagAssetInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer) const;
 	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer) const;
@@ -429,5 +431,4 @@ public:
 };
 DUMPER7_ASSERTS_UGameplayTagsDeveloperSettings;
 
-}
-
+SDK_NAMESPACE_END

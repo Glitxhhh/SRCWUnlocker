@@ -16,8 +16,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PullDownMenu.WBP_CMN_PullDownMenu_C
 // 0x00E0 (0x0560 - 0x0480)
@@ -90,5 +89,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_PullDownMenu_C;
 
-}
-
+SDK_NAMESPACE_END

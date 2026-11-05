@@ -14,8 +14,7 @@
 #include "ABP_HoldWispDrill_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldWispDrill.ABP_HoldWispDrill_C.IsValidOutState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldWispDrill_C::IsValidOutState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldWispDrill_C", "IsValidOutState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldWispDrill_C", FnName));
 
 	Params::ABP_HoldWispDrill_C_IsValidOutState Parms{};
 
@@ -37,5 +34,5 @@ void UABP_HoldWispDrill_C::IsValidOutState(bool* Out_Valid) const
 		*Out_Valid = Parms.Out_Valid;
 }
 
-}
 
+SDK_NAMESPACE_END

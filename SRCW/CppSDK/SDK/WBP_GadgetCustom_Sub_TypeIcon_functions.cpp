@@ -14,22 +14,7 @@
 #include "WBP_GadgetCustom_Sub_TypeIcon_parameters.hpp"
 
 
-namespace SDK
-{
-
-// Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TypeIcon_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon
 // (Final, UbergraphFunction)
@@ -38,10 +23,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::Construct()
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_TypeIcon_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeIcon Parms{};
 
@@ -58,10 +41,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Typ
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::GetIndex(int32* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "GetIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_GetIndex Parms{};
 
@@ -69,20 +50,6 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::GetIndex(int32* Output_Get)
 
 	if (Output_Get != nullptr)
 		*Output_Get = Parms.Output_Get;
-}
-
-
-// Function WBP_GadgetCustom_Sub_TypeIcon.WBP_GadgetCustom_Sub_TypeIcon_C.InitGadgetIConRef
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TypeIcon_C::InitGadgetIConRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "InitGadgetIConRef");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -95,10 +62,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::InitGadgetIConRef()
 
 struct FEventReply UWBP_GadgetCustom_Sub_TypeIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_OnFocusReceived Parms{};
 
@@ -116,10 +81,8 @@ struct FEventReply UWBP_GadgetCustom_Sub_TypeIcon_C::OnFocusReceived(const struc
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -130,10 +93,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::OnInitialized()
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::PlayPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "PlayPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +105,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::PlayPurchaseAnim()
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::Purchase()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "Purchase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +119,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::Purchase()
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetGadgetCategory(const EGadgetCategory InGadgetCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetGadgetCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetGadgetCategory Parms{};
 
@@ -180,10 +137,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetGadgetCategory(const EGadgetCategory I
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetGadgetState(const EGadgetState InGadgetState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetGadgetState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetGadgetState Parms{};
 
@@ -200,10 +155,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetGadgetState(const EGadgetState InGadge
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetPlayerNum(int32 InPlayerNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetPlayerNum Parms{};
 
@@ -220,10 +173,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetPlayerNum(int32 InPlayerNum)
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsLocked(EGadgetId InGadgetId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetupAsLocked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetupAsLocked Parms{};
 
@@ -238,10 +189,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsLocked(EGadgetId InGadgetId)
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsNone()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetupAsNone");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -255,10 +204,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsNone()
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsUnpurchased(EGadgetId InGadgetId, bool bCanPurchase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetupAsUnpurchased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetupAsUnpurchased Parms{};
 
@@ -276,10 +223,8 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupAsUnpurchased(EGadgetId InGadgetId, 
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupByUIData(const struct FGadgetUIData2& InUIData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "SetupByUIData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeIcon_C_SetupByUIData Parms{};
 
@@ -294,13 +239,11 @@ void UWBP_GadgetCustom_Sub_TypeIcon_C::SetupByUIData(const struct FGadgetUIData2
 
 void UWBP_GadgetCustom_Sub_TypeIcon_C::WidgetAnimationEvt_UnLock_Inout_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeIcon_C", "WidgetAnimationEvt_UnLock_Inout_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

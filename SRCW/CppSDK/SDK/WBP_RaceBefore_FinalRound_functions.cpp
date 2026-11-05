@@ -14,18 +14,15 @@
 #include "WBP_RaceBefore_FinalRound_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_RaceBefore_FinalRound.WBP_RaceBefore_FinalRound_C.BeginRaceBeforOut
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_RaceBefore_FinalRound_C::BeginRaceBeforOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "BeginRaceBeforOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_RaceBefore_FinalRound_C::BeginRaceBeforOut()
 
 void UWBP_RaceBefore_FinalRound_C::CheckOpenTips()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "CheckOpenTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_RaceBefore_FinalRound_C::CheckOpenTips()
 
 void UWBP_RaceBefore_FinalRound_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_RaceBefore_FinalRound_C::Construct()
 
 void UWBP_RaceBefore_FinalRound_C::ExecuteUbergraph_WBP_RaceBefore_FinalRound(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "ExecuteUbergraph_WBP_RaceBefore_FinalRound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_RaceBefore_FinalRound_C", "ExecuteUbergraph_WBP_RaceBefore_FinalRound", FuncInfo);
 
 	Params::WBP_RaceBefore_FinalRound_C_ExecuteUbergraph_WBP_RaceBefore_FinalRound Parms{};
 
@@ -84,10 +75,8 @@ void UWBP_RaceBefore_FinalRound_C::ExecuteUbergraph_WBP_RaceBefore_FinalRound(in
 
 void UWBP_RaceBefore_FinalRound_C::LoadCompleted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "LoadCompleted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_RaceBefore_FinalRound_C::LoadCompleted()
 
 void UWBP_RaceBefore_FinalRound_C::OnAnimationEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "OnAnimationEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_RaceBefore_FinalRound_C::OnAnimationEnd()
 
 void UWBP_RaceBefore_FinalRound_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	Params::WBP_RaceBefore_FinalRound_C_PreConstruct Parms{};
 
@@ -132,10 +117,8 @@ void UWBP_RaceBefore_FinalRound_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_RaceBefore_FinalRound_C::ResumeRaceBeforeIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "ResumeRaceBeforeIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +129,8 @@ void UWBP_RaceBefore_FinalRound_C::ResumeRaceBeforeIn()
 
 void UWBP_RaceBefore_FinalRound_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_FinalRound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "SequenceEvent__ENTRYPOINTWBP_RaceBefore_FinalRound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +141,8 @@ void UWBP_RaceBefore_FinalRound_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_Final
 
 void UWBP_RaceBefore_FinalRound_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_FinalRound_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "SequenceEvent__ENTRYPOINTWBP_RaceBefore_FinalRound_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +155,8 @@ void UWBP_RaceBefore_FinalRound_C::SequenceEvent__ENTRYPOINTWBP_RaceBefore_Final
 
 void UWBP_RaceBefore_FinalRound_C::Set_Open_Tips_Window(bool InOpenWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "Set Open Tips Window");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	Params::WBP_RaceBefore_FinalRound_C_Set_Open_Tips_Window Parms{};
 
@@ -196,10 +173,8 @@ void UWBP_RaceBefore_FinalRound_C::Set_Open_Tips_Window(bool InOpenWindow)
 
 void UWBP_RaceBefore_FinalRound_C::SetGrandPrixIcon(EGrandPrixId InGrandprixId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "SetGrandPrixIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	Params::WBP_RaceBefore_FinalRound_C_SetGrandPrixIcon Parms{};
 
@@ -216,10 +191,8 @@ void UWBP_RaceBefore_FinalRound_C::SetGrandPrixIcon(EGrandPrixId InGrandprixId)
 
 void UWBP_RaceBefore_FinalRound_C::SetMedleyText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "SetMedleyText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	Params::WBP_RaceBefore_FinalRound_C_SetMedleyText Parms{};
 
@@ -236,10 +209,8 @@ void UWBP_RaceBefore_FinalRound_C::SetMedleyText(const class FText& InText)
 
 void UWBP_RaceBefore_FinalRound_C::SetTextures(TArray<class UTexture2D*>& Textures)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "SetTextures");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	Params::WBP_RaceBefore_FinalRound_C_SetTextures Parms{};
 
@@ -256,13 +227,11 @@ void UWBP_RaceBefore_FinalRound_C::SetTextures(TArray<class UTexture2D*>& Textur
 
 void UWBP_RaceBefore_FinalRound_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_FinalRound_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_FinalRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

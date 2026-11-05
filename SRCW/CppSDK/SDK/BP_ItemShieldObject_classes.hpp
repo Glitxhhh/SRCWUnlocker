@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemShieldObject.BP_ItemShieldObject_C
 // 0x0000 (0x0620 - 0x0620)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemShieldObject_C;
 
-}
-
+SDK_NAMESPACE_END

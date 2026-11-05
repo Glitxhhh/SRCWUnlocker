@@ -14,8 +14,7 @@
 #include "PL_Menu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function PL_Menu.PL_Menu_C.ExecuteUbergraph_PL_Menu
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void APL_Menu_C::ExecuteUbergraph_PL_Menu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PL_Menu_C", "ExecuteUbergraph_PL_Menu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "PL_Menu_C", "ExecuteUbergraph_PL_Menu", FuncInfo);
 
 	Params::PL_Menu_C_ExecuteUbergraph_PL_Menu Parms{};
 
@@ -42,13 +39,11 @@ void APL_Menu_C::ExecuteUbergraph_PL_Menu(int32 EntryPoint)
 
 void APL_Menu_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PL_Menu_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PL_Menu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

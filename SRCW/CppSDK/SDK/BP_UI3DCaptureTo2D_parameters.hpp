@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "E3DCaptureMenuType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E3DCaptureMenuType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ImageWriteQueue_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_UI3DCaptureTo2D.BP_UI3DCaptureTo2D_C.CustomEvent_0
 // 0x0001 (0x0001 - 0x0000)
@@ -104,5 +104,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_UI3DCaptureTo2D_C_TakePicture;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

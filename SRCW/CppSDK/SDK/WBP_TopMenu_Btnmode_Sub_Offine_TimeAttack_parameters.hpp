@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack.WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C.ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack
 // 0x0058 (0x0058 - 0x0000)
@@ -32,5 +32,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack_C_ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_TimeAttack;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

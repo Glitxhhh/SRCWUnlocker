@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HeaderMenu_Sub_NewsBtn.WBP_HeaderMenu_Sub_NewsBtn_C
 // 0x0070 (0x04F8 - 0x0488)
@@ -46,6 +45,7 @@ public:
 	void PressButtonAnimation();
 	void Set_Icon_Visibility(ESlateVisibility Visibility_0);
 	void SetText(const class FText& InText);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()
@@ -63,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_HeaderMenu_Sub_NewsBtn_C;
 
-}
-
+SDK_NAMESPACE_END

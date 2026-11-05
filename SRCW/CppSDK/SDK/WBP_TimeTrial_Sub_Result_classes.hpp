@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TimeTrial_Sub_Result.WBP_TimeTrial_Sub_Result_C
 // 0x01D8 (0x0560 - 0x0388)
@@ -120,5 +119,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TimeTrial_Sub_Result_C;
 
-}
-
+SDK_NAMESPACE_END

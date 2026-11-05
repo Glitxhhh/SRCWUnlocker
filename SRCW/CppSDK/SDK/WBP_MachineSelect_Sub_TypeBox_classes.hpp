@@ -11,15 +11,14 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EMachineSelectMode_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_TypeBox.WBP_MachineSelect_Sub_TypeBox_C
 // 0x00A0 (0x0610 - 0x0570)
@@ -82,7 +81,7 @@ public:
 	void GetIconTexture(EMachineId InMachineID, class UTexture2D** OutIconTexture, bool* bOutIsFound) const;
 	void GetMachineId(int32 InMachineIndex, EMachineId* OutMachineId) const;
 	void GetMachineIdCurrent(EMachineId* MachineId) const;
-	void GetMachineIdNext(bool isNext, EMachineId* MachineId) const;
+	void GetMachineIdNext(bool IsNext, EMachineId* MachineId) const;
 	void GetMachineIds(TArray<EMachineId>* MachineIds_0) const;
 	void GetMachineNum(int32* OutMachineNum) const;
 	void GetMachineType(ECarStatusType* Machine_Type) const;
@@ -104,5 +103,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineSelect_Sub_TypeBox_C;
 
-}
-
+SDK_NAMESPACE_END

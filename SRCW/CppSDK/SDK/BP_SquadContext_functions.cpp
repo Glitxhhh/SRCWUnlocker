@@ -14,8 +14,7 @@
 #include "BP_SquadContext_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_SquadContext.BP_SquadContext_C.ExecuteUbergraph_BP_SquadContext
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBP_SquadContext_C::ExecuteUbergraph_BP_SquadContext(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SquadContext_C", "ExecuteUbergraph_BP_SquadContext");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_SquadContext_C", "ExecuteUbergraph_BP_SquadContext", FuncInfo);
 
 	Params::BP_SquadContext_C_ExecuteUbergraph_BP_SquadContext Parms{};
 
@@ -45,10 +42,8 @@ void UBP_SquadContext_C::ExecuteUbergraph_BP_SquadContext(int32 EntryPoint)
 
 void UBP_SquadContext_C::OnConnectLobbyCompletedInternal(bool bSuccessful, const struct FOnlineErrorBP& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SquadContext_C", "OnConnectLobbyCompletedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SquadContext_C", FnName));
 
 	Params::BP_SquadContext_C_OnConnectLobbyCompletedInternal Parms{};
 
@@ -67,10 +62,8 @@ void UBP_SquadContext_C::OnConnectLobbyCompletedInternal(bool bSuccessful, const
 
 void UBP_SquadContext_C::OnCreateLobbyCompletedInternal(bool bSuccessful, const struct FOnlineErrorBP& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SquadContext_C", "OnCreateLobbyCompletedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SquadContext_C", FnName));
 
 	Params::BP_SquadContext_C_OnCreateLobbyCompletedInternal Parms{};
 
@@ -89,10 +82,8 @@ void UBP_SquadContext_C::OnCreateLobbyCompletedInternal(bool bSuccessful, const 
 
 void UBP_SquadContext_C::OnSearchLobbyCompletedInternal(bool bSuccessful, const struct FSearchLobbyResult& Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SquadContext_C", "OnSearchLobbyCompletedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SquadContext_C", FnName));
 
 	Params::BP_SquadContext_C_OnSearchLobbyCompletedInternal Parms{};
 
@@ -111,10 +102,8 @@ void UBP_SquadContext_C::OnSearchLobbyCompletedInternal(bool bSuccessful, const 
 
 void UBP_SquadContext_C::OnSendInvitationCompletedInternal(bool bSuccessful, const struct FOnlineErrorBP& Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SquadContext_C", "OnSendInvitationCompletedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_SquadContext_C", FnName));
 
 	Params::BP_SquadContext_C_OnSendInvitationCompletedInternal Parms{};
 
@@ -124,5 +113,5 @@ void UBP_SquadContext_C::OnSendInvitationCompletedInternal(bool bSuccessful, con
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

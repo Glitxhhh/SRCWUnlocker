@@ -14,8 +14,7 @@
 #include "BP_RaceMasterDataAccessor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceMasterDataAccessor.BP_RaceMasterDataAccessor_C.ExecuteUbergraph_BP_RaceMasterDataAccessor
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBP_RaceMasterDataAccessor_C::ExecuteUbergraph_BP_RaceMasterDataAccessor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceMasterDataAccessor_C", "ExecuteUbergraph_BP_RaceMasterDataAccessor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceMasterDataAccessor_C", "ExecuteUbergraph_BP_RaceMasterDataAccessor", FuncInfo);
 
 	Params::BP_RaceMasterDataAccessor_C_ExecuteUbergraph_BP_RaceMasterDataAccessor Parms{};
 
@@ -42,13 +39,11 @@ void UBP_RaceMasterDataAccessor_C::ExecuteUbergraph_BP_RaceMasterDataAccessor(in
 
 void UBP_RaceMasterDataAccessor_C::Initialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceMasterDataAccessor_C", "Initialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceMasterDataAccessor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

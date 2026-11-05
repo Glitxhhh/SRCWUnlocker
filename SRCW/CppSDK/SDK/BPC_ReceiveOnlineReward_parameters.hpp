@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_ReceiveOnlineReward.BPC_ReceiveOnlineReward_C.ExecuteUbergraph_BPC_ReceiveOnlineReward
 // 0x0028 (0x0028 - 0x0000)
@@ -29,5 +29,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_ReceiveOnlineReward_C_ExecuteUbergraph_BPC_ReceiveOnlineReward;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

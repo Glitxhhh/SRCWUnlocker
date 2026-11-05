@@ -17,8 +17,7 @@
 #include "Foliage_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Foliage.FoliageStatistics
 // 0x0000 (0x0028 - 0x0028)
@@ -490,10 +489,9 @@ DUMPER7_ASSERTS_UProceduralFoliageTile;
 
 // Class Foliage.ProceduralFoliageVolume
 // 0x0010 (0x02D8 - 0x02C8)
-class AProceduralFoliageVolume final : public AVolume
+class AProceduralFoliageVolume final : public AVolume, public IWorldPartitionActorLoaderInterface
 {
 public:
-	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProceduralFoliageComponent*            ProceduralComponent;                               // 0x02D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
@@ -512,5 +510,4 @@ public:
 };
 DUMPER7_ASSERTS_AProceduralFoliageVolume;
 
-}
-
+SDK_NAMESPACE_END

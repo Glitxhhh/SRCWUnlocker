@@ -14,8 +14,7 @@
 #include "MovieSceneTracks_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
 // (RequiredAPI, Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 struct FTransform IMovieSceneTransformOrigin::BP_GetTransformOrigin() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("MovieSceneTransformOrigin", "BP_GetTransformOrigin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"MovieSceneTransformOrigin", FnName));
 
 	Params::MovieSceneTransformOrigin_BP_GetTransformOrigin Parms{};
 
@@ -1679,5 +1676,5 @@ ESwapRootBone UMovieSceneSkeletalAnimationTrack::GetSwapRootBone() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

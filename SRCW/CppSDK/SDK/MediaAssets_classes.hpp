@@ -18,8 +18,7 @@
 #include "AudioMixer_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MediaAssets.MediaPlayer
 // 0x0140 (0x0168 - 0x0028)
@@ -154,9 +153,12 @@ public:
 DUMPER7_ASSERTS_UMediaPlayer;
 
 // Class MediaAssets.MediaSourceRendererInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMediaSourceRendererInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IMediaSourceRendererInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -364,9 +366,12 @@ public:
 DUMPER7_ASSERTS_UMediaTimeStampInfo;
 
 // Class MediaAssets.MediaPlayerProxyInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMediaPlayerProxyInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IMediaPlayerProxyInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -571,5 +576,4 @@ public:
 };
 DUMPER7_ASSERTS_UMediaBlueprintFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

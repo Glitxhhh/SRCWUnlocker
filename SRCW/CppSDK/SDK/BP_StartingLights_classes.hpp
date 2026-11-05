@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UnionRun_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_StartingLights.BP_StartingLights_C
 // 0x00E0 (0x0380 - 0x02A0)
@@ -85,5 +84,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_StartingLights_C;
 
-}
-
+SDK_NAMESPACE_END

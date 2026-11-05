@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EColorDetailWindowMode_structs.hpp"
-#include "ST_ColorDetailWindowColorItemData_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_StickerColorPicker.WBP_MachineCustom_Sub_StickerColorPicker_C
 // 0x0420 (0x07F8 - 0x03D8)
@@ -156,5 +155,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_StickerColorPicker_C;
 
-}
-
+SDK_NAMESPACE_END

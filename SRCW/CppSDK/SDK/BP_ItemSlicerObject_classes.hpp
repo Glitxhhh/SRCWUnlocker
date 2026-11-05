@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemSlicerObject.BP_ItemSlicerObject_C
 // 0x0000 (0x0680 - 0x0680)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemSlicerObject_C;
 
-}
-
+SDK_NAMESPACE_END

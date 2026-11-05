@@ -13,8 +13,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RTD_UnionImageDecorator_3.RTD_UnionImageDecorator_3_C
 // 0x0000 (0x0040 - 0x0040)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_URTD_UnionImageDecorator_3_C;
 
-}
-
+SDK_NAMESPACE_END

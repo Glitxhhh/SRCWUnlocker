@@ -14,8 +14,7 @@
 #include "ABP_MonsterTruck_SmallCockpit_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_MonsterTruck_SmallCockpit.ABP_MonsterTruck_SmallCockpit_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_MonsterTruck_SmallCockpit_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	Params::ABP_MonsterTruck_SmallCockpit_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_MonsterTruck_SmallCockpit_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_BlendSpacePlayer_26DB4060459C5A9FA519EEBE543D1E82()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_BlendSpacePlayer_26DB4060459C5A9FA519EEBE543D1E82");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_BlendSpacePlayer_4602F422466B5DF47E68E185AD0488F7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_BlendSpacePlayer_4602F422466B5DF47E68E185AD0488F7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_ControlRig_7F785B4B4DDA1AD29E7EAC94026DA528()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_ControlRig_7F785B4B4DDA1AD29E7EAC94026DA528");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_07A26828494EEC4B2222DC8A07D252F1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_07A26828494EEC4B2222DC8A07D252F1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,10 +88,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_1C8A7F98400D37421DF73F8D645ED7E0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_1C8A7F98400D37421DF73F8D645ED7E0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +100,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_1F5964A546F21E0BF4A3419F9B20934B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_1F5964A546F21E0BF4A3419F9B20934B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,10 +112,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_2F75ABA44C969CFFB31B579ABC3FF3E7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_2F75ABA44C969CFFB31B579ABC3FF3E7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,10 +124,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_59F209744764E593C5C93986AB9714A3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_59F209744764E593C5C93986AB9714A3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +136,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_651FFFB34BCC65A33BA694A208D1883A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_651FFFB34BCC65A33BA694A208D1883A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +148,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_68525560402F9EABE426038B728106C0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_68525560402F9EABE426038B728106C0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -183,10 +160,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_79A831FB4598FEAAB9EBC1B36383BEF7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_79A831FB4598FEAAB9EBC1B36383BEF7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +172,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_7E2AB23B4622C5A93843309D0C42E2D3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_7E2AB23B4622C5A93843309D0C42E2D3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +184,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_89AA0C9742CE33BAB644889D072A0D68()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_89AA0C9742CE33BAB644889D072A0D68");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -225,10 +196,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_A982F18B48E1CF6D44FD3899DF9D616B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_A982F18B48E1CF6D44FD3899DF9D616B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -239,10 +208,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_B1D7467D48C77B7721C3E580C65CCF6E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit_AnimGraphNode_TransitionResult_B1D7467D48C77B7721C3E580C65CCF6E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_MonsterTruck_SmallCockpit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -255,10 +222,8 @@ void UABP_MonsterTruck_SmallCockpit_C::EvaluateGraphExposedInputs_ExecuteUbergra
 
 void UABP_MonsterTruck_SmallCockpit_C::ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_MonsterTruck_SmallCockpit_C", "ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_MonsterTruck_SmallCockpit_C", "ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit", FuncInfo);
 
 	Params::ABP_MonsterTruck_SmallCockpit_C_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit Parms{};
 
@@ -267,5 +232,5 @@ void UABP_MonsterTruck_SmallCockpit_C::ExecuteUbergraph_ABP_MonsterTruck_SmallCo
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

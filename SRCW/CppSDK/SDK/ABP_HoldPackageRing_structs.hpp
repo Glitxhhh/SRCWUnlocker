@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_HoldPackageRing.ABP_HoldPackageRing_C.AnimBlueprintGeneratedConstantData
 // 0x033F (0x0340 - 0x0001)
@@ -57,5 +56,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_HoldPackageRing__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

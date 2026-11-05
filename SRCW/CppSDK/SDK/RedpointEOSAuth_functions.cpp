@@ -14,8 +14,7 @@
 #include "RedpointEOSAuth_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function RedpointEOSAuth.EOSUserInterface_EnterDevicePinCode.SetupUserInterface
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void IEOSUserInterface_EnterDevicePinCode::SetupUserInterface(class UEOSUserInterface_EnterDevicePinCode_Context* Context, const class FString& VerificationUrl, const class FString& PinCode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EOSUserInterface_EnterDevicePinCode", "SetupUserInterface");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"EOSUserInterface_EnterDevicePinCode", FnName));
 
 	Params::EOSUserInterface_EnterDevicePinCode_SetupUserInterface Parms{};
 
@@ -41,6 +38,79 @@ void IEOSUserInterface_EnterDevicePinCode::SetupUserInterface(class UEOSUserInte
 	Func->FunctionFlags |= 0x400;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RedpointEOSAuth.EOSUserInterface_EnterDevicePinCode.SetupUserInterface
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEOSUserInterface_EnterDevicePinCode_Context*Context                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    VerificationUrl                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PinCode                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEOSDefaultUserInterface_EnterDevicePinCode::SetupUserInterface(class UEOSUserInterface_EnterDevicePinCode_Context* Context, const class FString& VerificationUrl, const class FString& PinCode)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"EOSUserInterface_EnterDevicePinCode", FnName));
+
+	Params::EOSUserInterface_EnterDevicePinCode_SetupUserInterface Parms{};
+
+	Parms.Context = Context;
+	Parms.VerificationUrl = std::move(VerificationUrl);
+	Parms.PinCode = std::move(PinCode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RedpointEOSAuth.EOSUserInterface_SignInOrCreateAccount.SetupUserInterface
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEOSUserInterface_SignInOrCreateAccount_Context*Context                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IEOSUserInterface_SignInOrCreateAccount::SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"EOSUserInterface_SignInOrCreateAccount", FnName));
+
+	Params::EOSUserInterface_SignInOrCreateAccount_SetupUserInterface Parms{};
+
+	Parms.Context = Context;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RedpointEOSAuth.EOSUserInterface_SignInOrCreateAccount.SetupUserInterface
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEOSUserInterface_SignInOrCreateAccount_Context*Context                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEOSDefaultUserInterface_SignInOrCreateAccount::SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"EOSUserInterface_SignInOrCreateAccount", FnName));
+
+	Params::EOSUserInterface_SignInOrCreateAccount_SetupUserInterface Parms{};
+
+	Parms.Context = Context;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -60,31 +130,6 @@ void UEOSUserInterface_EnterDevicePinCode_Context::CancelLogin()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function RedpointEOSAuth.EOSUserInterface_SignInOrCreateAccount.SetupUserInterface
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEOSUserInterface_SignInOrCreateAccount_Context*Context                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IEOSUserInterface_SignInOrCreateAccount::SetupUserInterface(class UEOSUserInterface_SignInOrCreateAccount_Context* Context)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("EOSUserInterface_SignInOrCreateAccount", "SetupUserInterface");
-
-	Params::EOSUserInterface_SignInOrCreateAccount_SetupUserInterface Parms{};
-
-	Parms.Context = Context;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -114,5 +159,5 @@ void UEOSUserInterface_SignInOrCreateAccount_Context::SelectChoice(EEOSUserInter
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

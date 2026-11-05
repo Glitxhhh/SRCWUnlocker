@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C.ExecuteUbergraph_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn
 // 0x0140 (0x0140 - 0x0000)
@@ -189,5 +189,5 @@ public:
 };
 DUMPER7_ASSERTS_DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C_OnTrickYInput;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

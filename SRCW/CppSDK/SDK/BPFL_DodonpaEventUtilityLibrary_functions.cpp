@@ -14,8 +14,7 @@
 #include "BPFL_DodonpaEventUtilityLibrary_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_DodonpaEventUtilityLibrary.BPFL_DodonpaEventUtilityLibrary_C.Call Dodonpa Event
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void UBPFL_DodonpaEventUtilityLibrary_C::Call_Dodonpa_Event(class FName EventName, class UObject* __WorldContext, bool* IsSucceeded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "Call Dodonpa Event");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "Call Dodonpa Event", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_Call_Dodonpa_Event Parms{};
 
@@ -50,10 +47,8 @@ void UBPFL_DodonpaEventUtilityLibrary_C::Call_Dodonpa_Event(class FName EventNam
 
 void UBPFL_DodonpaEventUtilityLibrary_C::DodonpaEventDestroy(class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "DodonpaEventDestroy");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "DodonpaEventDestroy", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_DodonpaEventDestroy Parms{};
 
@@ -71,10 +66,8 @@ void UBPFL_DodonpaEventUtilityLibrary_C::DodonpaEventDestroy(class UObject* __Wo
 
 void UBPFL_DodonpaEventUtilityLibrary_C::GetDodonpaEventCamera(class UObject* __WorldContext, class ACameraActor** Camera)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "GetDodonpaEventCamera");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "GetDodonpaEventCamera", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_GetDodonpaEventCamera Parms{};
 
@@ -95,10 +88,8 @@ void UBPFL_DodonpaEventUtilityLibrary_C::GetDodonpaEventCamera(class UObject* __
 
 void UBPFL_DodonpaEventUtilityLibrary_C::GetMapLevelStreaming(class UObject* __WorldContext, class ULevelStreaming** MapLevelStreaming)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "GetMapLevelStreaming");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "GetMapLevelStreaming", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_GetMapLevelStreaming Parms{};
 
@@ -119,10 +110,8 @@ void UBPFL_DodonpaEventUtilityLibrary_C::GetMapLevelStreaming(class UObject* __W
 
 void UBPFL_DodonpaEventUtilityLibrary_C::IsDestroyedDodonpaEvent(class UObject* __WorldContext, bool* IsDestroyed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "IsDestroyedDodonpaEvent");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "IsDestroyedDodonpaEvent", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_IsDestroyedDodonpaEvent Parms{};
 
@@ -143,10 +132,8 @@ void UBPFL_DodonpaEventUtilityLibrary_C::IsDestroyedDodonpaEvent(class UObject* 
 
 void UBPFL_DodonpaEventUtilityLibrary_C::IsEventComplete(class UObject* __WorldContext, bool* IsComplete)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_DodonpaEventUtilityLibrary_C", "IsEventComplete");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_DodonpaEventUtilityLibrary_C", "IsEventComplete", FuncInfo);
 
 	Params::BPFL_DodonpaEventUtilityLibrary_C_IsEventComplete Parms{};
 
@@ -158,5 +145,5 @@ void UBPFL_DodonpaEventUtilityLibrary_C::IsEventComplete(class UObject* __WorldC
 		*IsComplete = Parms.IsComplete;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
-#include "UNION_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GroupResult.WBP_GroupResult_C
 // 0x01A0 (0x04C0 - 0x0320)
@@ -106,5 +105,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GroupResult_C;
 
-}
-
+SDK_NAMESPACE_END

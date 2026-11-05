@@ -13,8 +13,7 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_IntroduceCourseSceneData.ST_IntroduceCourseSceneData
 // 0x0030 (0x0030 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_IntroduceCourseSceneData;
 
-}
-
+SDK_NAMESPACE_END

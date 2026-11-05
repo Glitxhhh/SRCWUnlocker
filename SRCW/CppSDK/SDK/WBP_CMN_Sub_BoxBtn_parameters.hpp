@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_CMN_Sub_BoxBtn.WBP_CMN_Sub_BoxBtn_C.ExecuteUbergraph_WBP_CMN_Sub_BoxBtn
 // 0x0020 (0x0020 - 0x0000)
@@ -52,5 +52,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_Sub_BoxBtn_C_SetText;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

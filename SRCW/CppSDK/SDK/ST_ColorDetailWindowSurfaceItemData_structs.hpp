@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_ColorDetailWindowSurfaceItemData.ST_ColorDetailWindowSurfaceItemData
 // 0x0020 (0x0020 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_ColorDetailWindowSurfaceItemData;
 
-}
-
+SDK_NAMESPACE_END

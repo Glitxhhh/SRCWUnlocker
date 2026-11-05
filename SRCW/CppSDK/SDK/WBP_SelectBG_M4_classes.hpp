@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_SelectBG_M4.WBP_SelectBG_M4_C
 // 0x0078 (0x0358 - 0x02E0)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_SelectBG_M4_C;
 
-}
-
+SDK_NAMESPACE_END

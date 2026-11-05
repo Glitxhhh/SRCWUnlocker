@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_SummonRing.ABP_SummonRing_C
 // 0x0290 (0x0600 - 0x0370)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_SummonRing_C;
 
-}
-
+SDK_NAMESPACE_END

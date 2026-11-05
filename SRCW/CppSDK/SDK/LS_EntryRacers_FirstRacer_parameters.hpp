@@ -15,8 +15,8 @@
 #include "MovieScene_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function LS_EntryRacers_FirstRacer.LS_EntryRacers_FirstRacer_DirectorBP_C.ExecuteUbergraph_LS_EntryRacers_FirstRacer_DirectorBP
 // 0x01F8 (0x01F8 - 0x0000)
@@ -86,5 +86,5 @@ public:
 };
 DUMPER7_ASSERTS_LS_EntryRacers_FirstRacer_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_FirstRacer_DirectorBP;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

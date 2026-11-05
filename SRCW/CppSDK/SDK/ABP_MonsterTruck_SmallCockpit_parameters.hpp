@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function ABP_MonsterTruck_SmallCockpit.ABP_MonsterTruck_SmallCockpit_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -104,5 +104,5 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MonsterTruck_SmallCockpit_C_ExecuteUbergraph_ABP_MonsterTruck_SmallCockpit;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

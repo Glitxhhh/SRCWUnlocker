@@ -14,18 +14,15 @@
 #include "BPC_RaceResultStats_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceResultStats.BPC_RaceResultStats_C.DispRaceResult
 // (BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceResultStats_C::DispRaceResult()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "DispRaceResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UBPC_RaceResultStats_C::DispRaceResult()
 
 void UBPC_RaceResultStats_C::ExecuteUbergraph_BPC_RaceResultStats(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "ExecuteUbergraph_BPC_RaceResultStats");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceResultStats_C", "ExecuteUbergraph_BPC_RaceResultStats", FuncInfo);
 
 	Params::BPC_RaceResultStats_C_ExecuteUbergraph_BPC_RaceResultStats Parms{};
 
@@ -56,10 +51,8 @@ void UBPC_RaceResultStats_C::ExecuteUbergraph_BPC_RaceResultStats(int32 EntryPoi
 
 void UBPC_RaceResultStats_C::Finished_615A47C04CDE41C13318319FBABF5AAC()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "Finished_615A47C04CDE41C13318319FBABF5AAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_RaceResultStats_C::Finished_615A47C04CDE41C13318319FBABF5AAC()
 
 void UBPC_RaceResultStats_C::OnAcceptKeyPressedEvent_Event(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnAcceptKeyPressedEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	Params::BPC_RaceResultStats_C_OnAcceptKeyPressedEvent_Event Parms{};
 
@@ -90,10 +81,8 @@ void UBPC_RaceResultStats_C::OnAcceptKeyPressedEvent_Event(class UObject* Object
 
 void UBPC_RaceResultStats_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UBPC_RaceResultStats_C::OnExitState()
 
 void UBPC_RaceResultStats_C::OnFinishedResultAnim(const int32& FinishedResultStateId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnFinishedResultAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	Params::BPC_RaceResultStats_C_OnFinishedResultAnim Parms{};
 
@@ -124,10 +111,8 @@ void UBPC_RaceResultStats_C::OnFinishedResultAnim(const int32& FinishedResultSta
 
 void UBPC_RaceResultStats_C::OnFinishedResultDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnFinishedResultDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void UBPC_RaceResultStats_C::OnFinishedResultDisplay()
 
 void UBPC_RaceResultStats_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +135,8 @@ void UBPC_RaceResultStats_C::OnInitState()
 
 void UBPC_RaceResultStats_C::OnRaceHUDOutFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnRaceHUDOutFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +149,8 @@ void UBPC_RaceResultStats_C::OnRaceHUDOutFinished()
 
 void UBPC_RaceResultStats_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	Params::BPC_RaceResultStats_C_OnUpdateState Parms{};
 
@@ -186,10 +165,8 @@ void UBPC_RaceResultStats_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceResultStats_C::PlayTimeTrialWinLoseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "PlayTimeTrialWinLoseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,13 +177,11 @@ void UBPC_RaceResultStats_C::PlayTimeTrialWinLoseAnim()
 
 void UBPC_RaceResultStats_C::UnloadLevel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultStats_C", "UnloadLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultStats_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

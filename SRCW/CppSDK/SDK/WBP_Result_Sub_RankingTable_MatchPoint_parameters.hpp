@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Result_Sub_RankingTable_MatchPoint.WBP_Result_Sub_RankingTable_MatchPoint_C.ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint
 // 0x0018 (0x0018 - 0x0000)
@@ -26,5 +26,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Result_Sub_RankingTable_MatchPoint_C_ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "InterchangeCore_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class InterchangeExport.InterchangeTextureWriter
 // 0x0000 (0x0028 - 0x0028)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeTextureWriter;
 
-}
-
+SDK_NAMESPACE_END

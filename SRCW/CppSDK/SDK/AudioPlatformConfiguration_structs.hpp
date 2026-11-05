@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AudioPlatformConfiguration.ESoundwaveSampleRateSettings
 // NumValues: 0x0006
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FPlatformRuntimeAudioCompressionOverrides;
 
-}
-
+SDK_NAMESPACE_END

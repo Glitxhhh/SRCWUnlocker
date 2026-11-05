@@ -12,13 +12,12 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionUI_structs.hpp"
 #include "UnionUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_PlayerIcon.WBP_Friend_PlayerIcon_C
 // 0x0038 (0x04B8 - 0x0480)
@@ -74,5 +73,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_PlayerIcon_C;
 
-}
-
+SDK_NAMESPACE_END

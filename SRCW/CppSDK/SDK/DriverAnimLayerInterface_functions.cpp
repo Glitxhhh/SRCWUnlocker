@@ -14,8 +14,55 @@
 #include "DriverAnimLayerInterface_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.DrivingControlRigLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPose_Driving                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   machineType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       DrivingControlRigLayer_0                               (Parm, OutParm, NoDestructor)
+
+void IDriverAnimLayerInterface_C::DrivingControlRigLayer(const struct FPoseLink& InPose_Driving, int32 machineType, struct FPoseLink* DrivingControlRigLayer_0)
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
+
+	Params::DriverAnimLayerInterface_C_DrivingControlRigLayer Parms{};
+
+	Parms.InPose_Driving = std::move(InPose_Driving);
+	Parms.machineType = machineType;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (DrivingControlRigLayer_0 != nullptr)
+		*DrivingControlRigLayer_0 = std::move(Parms.DrivingControlRigLayer_0);
+}
+
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.FullTimeControlRigLayer
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPose_Emote                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   InMachineType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       FullTimeControlRigLayer_0                              (Parm, OutParm, NoDestructor)
+
+void IDriverAnimLayerInterface_C::FullTimeControlRigLayer(const struct FPoseLink& InPose_Emote, int32 InMachineType, struct FPoseLink* FullTimeControlRigLayer_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
+
+	Params::DriverAnimLayerInterface_C_FullTimeControlRigLayer Parms{};
+
+	Parms.InPose_Emote = std::move(InPose_Emote);
+	Parms.InMachineType = InMachineType;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (FullTimeControlRigLayer_0 != nullptr)
+		*FullTimeControlRigLayer_0 = std::move(Parms.FullTimeControlRigLayer_0);
+}
+
 
 // Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.HoverboardControlRogLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -25,10 +72,8 @@ namespace SDK
 
 void IDriverAnimLayerInterface_C::HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "HoverboardControlRogLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_HoverboardControlRogLayer Parms{};
 
@@ -50,10 +95,8 @@ void IDriverAnimLayerInterface_C::HoverboardControlRogLayer(const struct FPoseLi
 
 void IDriverAnimLayerInterface_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "HoverboardItemHoldBlendLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_HoverboardItemHoldBlendLeft Parms{};
 
@@ -76,10 +119,8 @@ void IDriverAnimLayerInterface_C::HoverboardItemHoldBlendLeft(const struct FPose
 
 void IDriverAnimLayerInterface_C::HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "HoverboardItemHoldBlendRight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_HoverboardItemHoldBlendRight Parms{};
 
@@ -97,18 +138,20 @@ void IDriverAnimLayerInterface_C::HoverboardItemHoldBlendRight(const struct FPos
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void IDriverAnimLayerInterface_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void IDriverAnimLayerInterface_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "KawaiiPhysicsLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
@@ -126,10 +169,8 @@ void IDriverAnimLayerInterface_C::KawaiiPhysicsLayer(const struct FPoseLink& InP
 
 void IDriverAnimLayerInterface_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "MachineItemHoldBlendLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_MachineItemHoldBlendLeft Parms{};
 
@@ -152,10 +193,8 @@ void IDriverAnimLayerInterface_C::MachineItemHoldBlendLeft(const struct FPoseLin
 
 void IDriverAnimLayerInterface_C::MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "MachineItemHoldBlendRight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_MachineItemHoldBlendRight Parms{};
 
@@ -180,10 +219,8 @@ void IDriverAnimLayerInterface_C::MachineItemHoldBlendRight(const struct FPoseLi
 
 void IDriverAnimLayerInterface_C::MenuFacialOverride(const struct FPoseLink& MenuFinalPose, bool InPlayingMontage, const struct FPoseLink& MenuDefaltFace, const struct FPoseLink& MenuOverrideFace, struct FPoseLink* MenuFacialOverride_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "MenuFacialOverride");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_MenuFacialOverride Parms{};
 
@@ -210,10 +247,8 @@ void IDriverAnimLayerInterface_C::MenuFacialOverride(const struct FPoseLink& Men
 
 void IDriverAnimLayerInterface_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("DriverAnimLayerInterface_C", "ScaleFaceLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
 
 	Params::DriverAnimLayerInterface_C_ScaleFaceLayer Parms{};
 
@@ -228,5 +263,29 @@ void IDriverAnimLayerInterface_C::ScaleFaceLayer(const struct FPoseLink& InFaceO
 		*ScaleFaceLayer_0 = std::move(Parms.ScaleFaceLayer_0);
 }
 
+
+// Function DriverAnimLayerInterface.DriverAnimLayerInterface_C.ScaleFacialOverrideVerTwo
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InBasePose                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 InDefaultPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       ScaleFacialOverrideVerTwo_0                            (Parm, OutParm, NoDestructor)
+
+void IDriverAnimLayerInterface_C::ScaleFacialOverrideVerTwo(const struct FPoseLink& InBasePose, const struct FPoseLink& InDefaultPose, struct FPoseLink* ScaleFacialOverrideVerTwo_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"DriverAnimLayerInterface_C", FnName));
+
+	Params::DriverAnimLayerInterface_C_ScaleFacialOverrideVerTwo Parms{};
+
+	Parms.InBasePose = std::move(InBasePose);
+	Parms.InDefaultPose = std::move(InDefaultPose);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (ScaleFacialOverrideVerTwo_0 != nullptr)
+		*ScaleFacialOverrideVerTwo_0 = std::move(Parms.ScaleFacialOverrideVerTwo_0);
 }
 
+
+SDK_NAMESPACE_END

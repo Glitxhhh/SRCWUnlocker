@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemWeightPerformance.BP_ItemWeightPerformance_C
 // 0x0000 (0x05B8 - 0x05B8)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemWeightPerformance_C;
 
-}
-
+SDK_NAMESPACE_END

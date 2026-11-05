@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct MovieRenderPipelineSettings.MoviePipelineConsoleVariableEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FMoviePipelineConsoleVariableEntry;
 
-}
-
+SDK_NAMESPACE_END

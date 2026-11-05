@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemSlimePerformance.BP_ItemSlimePerformance_C
 // 0x0008 (0x0548 - 0x0540)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemSlimePerformance_C;
 
-}
-
+SDK_NAMESPACE_END

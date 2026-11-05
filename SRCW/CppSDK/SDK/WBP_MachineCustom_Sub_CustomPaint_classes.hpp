@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_CustomPaint.WBP_MachineCustom_Sub_CustomPaint_C
 // 0x0080 (0x0458 - 0x03D8)
@@ -75,5 +74,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_CustomPaint_C;
 
-}
-
+SDK_NAMESPACE_END

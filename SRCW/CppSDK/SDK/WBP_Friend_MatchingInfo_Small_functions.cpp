@@ -14,18 +14,15 @@
 #include "WBP_Friend_MatchingInfo_Small_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_MatchingInfo_Small.WBP_Friend_MatchingInfo_Small_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Friend_MatchingInfo_Small_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Friend_MatchingInfo_Small_C::Construct()
 
 void UWBP_Friend_MatchingInfo_Small_C::ExecuteUbergraph_WBP_Friend_MatchingInfo_Small(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "ExecuteUbergraph_WBP_Friend_MatchingInfo_Small");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_MatchingInfo_Small_C", "ExecuteUbergraph_WBP_Friend_MatchingInfo_Small", FuncInfo);
 
 	Params::WBP_Friend_MatchingInfo_Small_C_ExecuteUbergraph_WBP_Friend_MatchingInfo_Small Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_Friend_MatchingInfo_Small_C::ExecuteUbergraph_WBP_Friend_MatchingInfo_
 
 void UWBP_Friend_MatchingInfo_Small_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_Friend_MatchingInfo_Small_C::OnAnimationInFinished()
 
 void UWBP_Friend_MatchingInfo_Small_C::OnAnimationOutFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "OnAnimationOutFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_Friend_MatchingInfo_Small_C::OnAnimationOutFinished()
 
 void UWBP_Friend_MatchingInfo_Small_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_Friend_MatchingInfo_Small_C::PlayAnimationIn()
 
 void UWBP_Friend_MatchingInfo_Small_C::PlayAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "PlayAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_Friend_MatchingInfo_Small_C::PlayAnimationOut()
 
 void UWBP_Friend_MatchingInfo_Small_C::SetMessageText(const class FText& InMessageText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "SetMessageText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	Params::WBP_Friend_MatchingInfo_Small_C_SetMessageText Parms{};
 
@@ -132,13 +117,11 @@ void UWBP_Friend_MatchingInfo_Small_C::SetMessageText(const class FText& InMessa
 
 void UWBP_Friend_MatchingInfo_Small_C::SetupAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_MatchingInfo_Small_C", "SetupAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_MatchingInfo_Small_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "HoudiniEngineRuntime_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function HoudiniEngineRuntime.HoudiniAssetBlueprintComponent.HasParameter
 // (Final, Native, Public, BlueprintCallable)
@@ -1434,5 +1433,5 @@ bool UHoudiniToolData::ConvertToJSONData(class FString* JSONData) const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

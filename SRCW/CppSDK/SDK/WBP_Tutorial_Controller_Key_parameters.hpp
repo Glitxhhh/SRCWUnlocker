@@ -15,8 +15,8 @@
 #include "UMG_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Tutorial_Controller_Key.WBP_Tutorial_Controller_Key_C.ExecuteUbergraph_WBP_Tutorial_Controller_Key
 // 0x00B8 (0x00B8 - 0x0000)
@@ -157,5 +157,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Tutorial_Controller_Key_C_UpdateTutorialIndex;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

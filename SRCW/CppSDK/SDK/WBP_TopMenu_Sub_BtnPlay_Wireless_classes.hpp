@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu_Sub_BtnPlay_Wireless.WBP_TopMenu_Sub_BtnPlay_Wireless_C
 // 0x0048 (0x0530 - 0x04E8)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopMenu_Sub_BtnPlay_Wireless_C;
 
-}
-
+SDK_NAMESPACE_END

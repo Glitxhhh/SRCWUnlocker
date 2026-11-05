@@ -14,8 +14,7 @@
 #include "OnlineSubsystem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
 // (Event, Public, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ITurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TurnBasedMatchInterface", "OnMatchEnded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"TurnBasedMatchInterface", FnName));
 
 	Params::TurnBasedMatchInterface_OnMatchEnded Parms{};
 
@@ -45,10 +42,8 @@ void ITurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
 
 void ITurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TurnBasedMatchInterface", "OnMatchReceivedTurn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"TurnBasedMatchInterface", FnName));
 
 	Params::TurnBasedMatchInterface_OnMatchReceivedTurn Parms{};
 
@@ -58,5 +53,5 @@ void ITurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, b
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

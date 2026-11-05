@@ -14,8 +14,7 @@
 #include "WBP_TopMenu_Sub_BtnMode_Offline_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_BtnMode_Offline.WBP_TopMenu_Sub_BtnMode_Offline_C.ExecuteUbergraph_WBP_TopMenu_Sub_BtnMode_Offline
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::ExecuteUbergraph_WBP_TopMenu_Sub_BtnMode_Offline(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "ExecuteUbergraph_WBP_TopMenu_Sub_BtnMode_Offline");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Sub_BtnMode_Offline_C", "ExecuteUbergraph_WBP_TopMenu_Sub_BtnMode_Offline", FuncInfo);
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_ExecuteUbergraph_WBP_TopMenu_Sub_BtnMode_Offline Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::ExecuteUbergraph_WBP_TopMenu_Sub_BtnMod
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::JudgeMenuClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "JudgeMenuClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::JudgeMenuClose()
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnAcceptKeyPressed()
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnBackKeyPressed()
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_OnFocusLost Parms{};
 
@@ -108,10 +97,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnFocusLost(const struct FFocusEvent& I
 
 struct FEventReply UWBP_TopMenu_Sub_BtnMode_Offline_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_OnFocusReceived Parms{};
 
@@ -129,10 +116,8 @@ struct FEventReply UWBP_TopMenu_Sub_BtnMode_Offline_C::OnFocusReceived(const str
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -145,10 +130,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::OnInitialize()
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_PreConstruct Parms{};
 
@@ -165,10 +148,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::SetIcon(ECommonMenuButtonType Type)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "SetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_SetIcon Parms{};
 
@@ -185,10 +166,8 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::SetIcon(ECommonMenuButtonType Type)
 
 void UWBP_TopMenu_Sub_BtnMode_Offline_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_BtnMode_Offline_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
 
 	Params::WBP_TopMenu_Sub_BtnMode_Offline_C_SetText Parms{};
 
@@ -197,5 +176,17 @@ void UWBP_TopMenu_Sub_BtnMode_Offline_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function WBP_TopMenu_Sub_BtnMode_Offline.WBP_TopMenu_Sub_BtnMode_Offline_C.UpdateRivalDuelButtonRivalTexture
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_BtnMode_Offline_C::UpdateRivalDuelButtonRivalTexture()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_BtnMode_Offline_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Ready_Sub_CharaWindow_P2P4.WBP_Ready_Sub_CharaWindow_P2P4_C
 // 0x0058 (0x0348 - 0x02F0)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Ready_Sub_CharaWindow_P2P4_C;
 
-}
-
+SDK_NAMESPACE_END

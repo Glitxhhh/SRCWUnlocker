@@ -13,15 +13,14 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemLotteryObject.BP_ItemLotteryObject_C
-// 0x0008 (0x13F8 - 0x13F0)
+// 0x0008 (0x1448 - 0x1440)
 class ABP_ItemLotteryObject_C final : public AItemLotteryObject
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x13F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemLotteryObject_C;
 
-}
-
+SDK_NAMESPACE_END

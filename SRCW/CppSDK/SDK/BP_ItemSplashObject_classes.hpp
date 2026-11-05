@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemSplashObject.BP_ItemSplashObject_C
 // 0x0000 (0x0760 - 0x0760)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemSplashObject_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint.WBP_MachineCustom_Sub_CustomPaint_C.BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_4_OnUnionButtonEvent__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -287,5 +287,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_CustomPaint_C_Setup;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

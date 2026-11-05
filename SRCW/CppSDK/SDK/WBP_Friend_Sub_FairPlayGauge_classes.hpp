@@ -15,8 +15,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_FairPlayGauge.WBP_Friend_Sub_FairPlayGauge_C
 // 0x00B0 (0x0390 - 0x02E0)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_Sub_FairPlayGauge_C;
 
-}
-
+SDK_NAMESPACE_END

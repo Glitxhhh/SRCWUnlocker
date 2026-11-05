@@ -14,8 +14,7 @@
 #include "MachineResourceElement_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MachineResourceElement.MachineResourceElement_C.ExecuteUbergraph_MachineResourceElement
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UMachineResourceElement_C::ExecuteUbergraph_MachineResourceElement(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "ExecuteUbergraph_MachineResourceElement");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "MachineResourceElement_C", "ExecuteUbergraph_MachineResourceElement", FuncInfo);
 
 	Params::MachineResourceElement_C_ExecuteUbergraph_MachineResourceElement Parms{};
 
@@ -46,10 +43,8 @@ void UMachineResourceElement_C::ExecuteUbergraph_MachineResourceElement(int32 En
 
 void UMachineResourceElement_C::Initialize(int32 PlayerNo_0, ECarStatusType CarStatusType_0, EMachineId MachineId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "Initialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	Params::MachineResourceElement_C_Initialize Parms{};
 
@@ -68,10 +63,8 @@ void UMachineResourceElement_C::Initialize(int32 PlayerNo_0, ECarStatusType CarS
 
 void UMachineResourceElement_C::OnLoaded_7EC97FE04E6C0C687DDC7C8EAE6DB204(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnLoaded_7EC97FE04E6C0C687DDC7C8EAE6DB204");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	Params::MachineResourceElement_C_OnLoaded_7EC97FE04E6C0C687DDC7C8EAE6DB204 Parms{};
 
@@ -88,10 +81,8 @@ void UMachineResourceElement_C::OnLoaded_7EC97FE04E6C0C687DDC7C8EAE6DB204(class 
 
 void UMachineResourceElement_C::OnLoaded_95CBE1C547B13B8B9D57678CC6841399(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnLoaded_95CBE1C547B13B8B9D57678CC6841399");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	Params::MachineResourceElement_C_OnLoaded_95CBE1C547B13B8B9D57678CC6841399 Parms{};
 
@@ -108,10 +99,8 @@ void UMachineResourceElement_C::OnLoaded_95CBE1C547B13B8B9D57678CC6841399(class 
 
 void UMachineResourceElement_C::OnLoaded_A4A9566F4CFB176F6C82718A086116EC(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnLoaded_A4A9566F4CFB176F6C82718A086116EC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	Params::MachineResourceElement_C_OnLoaded_A4A9566F4CFB176F6C82718A086116EC Parms{};
 
@@ -128,10 +117,8 @@ void UMachineResourceElement_C::OnLoaded_A4A9566F4CFB176F6C82718A086116EC(class 
 
 void UMachineResourceElement_C::OnLoaded_F35FE6E84B36E7912B5397B1CD02FC96(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnLoaded_F35FE6E84B36E7912B5397B1CD02FC96");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	Params::MachineResourceElement_C_OnLoaded_F35FE6E84B36E7912B5397B1CD02FC96 Parms{};
 
@@ -146,10 +133,8 @@ void UMachineResourceElement_C::OnLoaded_F35FE6E84B36E7912B5397B1CD02FC96(class 
 
 void UMachineResourceElement_C::OnLoadResource()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnLoadResource");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,13 +145,11 @@ void UMachineResourceElement_C::OnLoadResource()
 
 void UMachineResourceElement_C::OnUnloadResource()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MachineResourceElement_C", "OnUnloadResource");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MachineResourceElement_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

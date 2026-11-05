@@ -14,18 +14,15 @@
 #include "WBP_GadgetCustom_Sub_TypeBox_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::Construct()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeBox(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_TypeBox_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeBox", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_TypeBox Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Type
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::GetCurrentItemDisplayIndex(int32* OutDisplayIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "GetCurrentItemDisplayIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_GetCurrentItemDisplayIndex Parms{};
 
@@ -79,10 +72,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::GetCurrentItemDisplayIndex(int32* OutDispl
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::GetGedgetCategory(EGadgetCategory* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "GetGedgetCategory");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_GetGedgetCategory Parms{};
 
@@ -100,10 +91,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::GetGedgetCategory(EGadgetCategory* Output_
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::GetMode(EMachineSelectMode::EMachineSelectMode* OutMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "GetMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_GetMode Parms{};
 
@@ -119,10 +108,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::GetMode(EMachineSelectMode::EMachineSelect
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::LeftScrollAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "LeftScrollAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -133,10 +120,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::LeftScrollAnimFinished()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::LeftScrollAnimStarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "LeftScrollAnimStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +132,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::LeftScrollAnimStarted()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::OnFinishedScrollAnimationBP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "OnFinishedScrollAnimationBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +144,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::OnFinishedScrollAnimationBP()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +156,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitialized()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitWidgetRefCategoryNg()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "OnInitWidgetRefCategoryNg");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +168,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitWidgetRefCategoryNg()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitWidgetReference()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "OnInitWidgetReference");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -205,10 +182,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::OnInitWidgetReference()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::OnScrollAnimFinishedEvent(class UUnionUILoopScrollBox* FinishedWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "OnScrollAnimFinishedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_OnScrollAnimFinishedEvent Parms{};
 
@@ -226,10 +201,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::OnScrollAnimFinishedEvent(class UUnionUILo
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::PlayScroll(bool bDownRight, bool bInImmediateReflection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "PlayScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_PlayScroll Parms{};
 
@@ -247,10 +220,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::PlayScroll(bool bDownRight, bool bInImmedi
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_PreConstruct Parms{};
 
@@ -265,10 +236,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::RightScrollAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "RightScrollAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +248,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::RightScrollAnimFinished()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::RightScrollAnimStarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "RightScrollAnimStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -295,34 +262,12 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::RightScrollAnimStarted()
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::SetFocusIndex(int32 InCategoryIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetFocusIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_SetFocusIndex Parms{};
 
 	Parms.InCategoryIndex = InCategoryIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C.SetLightVer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsLight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Sub_TypeBox_C::SetLightVer(bool IsLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetLightVer");
-
-	Params::WBP_GadgetCustom_Sub_TypeBox_C_SetLightVer Parms{};
-
-	Parms.IsLight = IsLight;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -335,10 +280,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::SetLightVer(bool IsLight)
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::SetMode(EMachineSelectMode::EMachineSelectMode InMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_SetMode Parms{};
 
@@ -355,10 +298,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::SetMode(EMachineSelectMode::EMachineSelect
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::SetPlayerControllerIndex(const int32 InPlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetPlayerControllerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_SetPlayerControllerIndex Parms{};
 
@@ -375,10 +316,8 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::SetPlayerControllerIndex(const int32 InPla
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::Setup(class UGadgetCustomWindow* InGadgetCustomWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TypeBox_C_Setup Parms{};
 
@@ -393,13 +332,11 @@ void UWBP_GadgetCustom_Sub_TypeBox_C::Setup(class UGadgetCustomWindow* InGadgetC
 
 void UWBP_GadgetCustom_Sub_TypeBox_C::SetupGadgetIconRef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TypeBox_C", "SetupGadgetIconRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

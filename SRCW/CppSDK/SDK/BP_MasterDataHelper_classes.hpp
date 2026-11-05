@@ -13,11 +13,10 @@
 #include "UnionSystem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MasterDataHelper.BP_MasterDataHelper_C
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x02E8 - 0x02E8)
 class UBP_MasterDataHelper_C final : public UMasterDataHelper
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_MasterDataHelper_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateCeremony.BPC_RaceSequenceStateCeremony_C
 // 0x0000 (0x0118 - 0x0118)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStateCeremony_C;
 
-}
-
+SDK_NAMESPACE_END

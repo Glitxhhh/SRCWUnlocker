@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_MonsterTruck_SmallCockpit.ABP_MonsterTruck_SmallCockpit_C.AnimBlueprintGeneratedConstantData
 // 0x075F (0x0760 - 0x0001)
@@ -100,5 +99,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MonsterTruck_SmallCockpit__FAnimBlueprintGeneratedMutableData;
 
-}
-
+SDK_NAMESPACE_END

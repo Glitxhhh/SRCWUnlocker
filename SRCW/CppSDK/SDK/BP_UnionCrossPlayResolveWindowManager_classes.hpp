@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UnionCrossPlayResolveWindowManager.BP_UnionCrossPlayResolveWindowManager_C
 // 0x0010 (0x0310 - 0x0300)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_UnionCrossPlayResolveWindowManager_C;
 
-}
-
+SDK_NAMESPACE_END

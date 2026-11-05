@@ -14,8 +14,7 @@
 #include "BP_ItemHomingPunchObject_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ItemHomingPunchObject.BP_ItemHomingPunchObject_C.ExecuteUbergraph_BP_ItemHomingPunchObject
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_ItemHomingPunchObject_C::ExecuteUbergraph_BP_ItemHomingPunchObject(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemHomingPunchObject_C", "ExecuteUbergraph_BP_ItemHomingPunchObject");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ItemHomingPunchObject_C", "ExecuteUbergraph_BP_ItemHomingPunchObject", FuncInfo);
 
 	Params::BP_ItemHomingPunchObject_C_ExecuteUbergraph_BP_ItemHomingPunchObject Parms{};
 
@@ -44,10 +41,8 @@ void ABP_ItemHomingPunchObject_C::ExecuteUbergraph_BP_ItemHomingPunchObject(int3
 
 void ABP_ItemHomingPunchObject_C::OnPlayDamegeSound(ESoundPan SoundPan)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemHomingPunchObject_C", "OnPlayDamegeSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemHomingPunchObject_C", FnName));
 
 	Params::BP_ItemHomingPunchObject_C_OnPlayDamegeSound Parms{};
 
@@ -56,5 +51,5 @@ void ABP_ItemHomingPunchObject_C::OnPlayDamegeSound(ESoundPan SoundPan)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

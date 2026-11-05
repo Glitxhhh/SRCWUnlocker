@@ -14,8 +14,7 @@
 #include "WBP_TimeTrial_Sub_Lap_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_Sub_Lap.WBP_TimeTrial_Sub_Lap_C.ExecuteUbergraph_WBP_TimeTrial_Sub_Lap
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TimeTrial_Sub_Lap_C::ExecuteUbergraph_WBP_TimeTrial_Sub_Lap(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Lap_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_Lap");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_Sub_Lap_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_Lap", FuncInfo);
 
 	Params::WBP_TimeTrial_Sub_Lap_C_ExecuteUbergraph_WBP_TimeTrial_Sub_Lap Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_TimeTrial_Sub_Lap_C::ExecuteUbergraph_WBP_TimeTrial_Sub_Lap(int32 Entr
 
 void UWBP_TimeTrial_Sub_Lap_C::SetLapNo(int32 LapNo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Lap_C", "SetLapNo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Lap_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_Lap_C_SetLapNo Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_TimeTrial_Sub_Lap_C::SetLapNo(int32 LapNo)
 
 void UWBP_TimeTrial_Sub_Lap_C::SetLapTime(const class FText& TimeText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Lap_C", "SetLapTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Lap_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_Lap_C_SetLapTime Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_TimeTrial_Sub_Lap_C::SetLapTime(const class FText& TimeText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

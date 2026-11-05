@@ -14,8 +14,7 @@
 #include "WBP_WorldMatchInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_WorldMatchInfo.WBP_WorldMatchInfo_C.ExecuteUbergraph_WBP_WorldMatchInfo
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_WorldMatchInfo_C::ExecuteUbergraph_WBP_WorldMatchInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMatchInfo_C", "ExecuteUbergraph_WBP_WorldMatchInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_WorldMatchInfo_C", "ExecuteUbergraph_WBP_WorldMatchInfo", FuncInfo);
 
 	Params::WBP_WorldMatchInfo_C_ExecuteUbergraph_WBP_WorldMatchInfo Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_WorldMatchInfo_C::ExecuteUbergraph_WBP_WorldMatchInfo(int32 EntryPoint
 
 void UWBP_WorldMatchInfo_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMatchInfo_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_WorldMatchInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_WorldMatchInfo_C::OnInitialized()
 
 void UWBP_WorldMatchInfo_C::SetTitle(const class FText& Title)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMatchInfo_C", "SetTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_WorldMatchInfo_C", FnName));
 
 	Params::WBP_WorldMatchInfo_C_SetTitle Parms{};
 
@@ -81,10 +74,8 @@ void UWBP_WorldMatchInfo_C::SetTitle(const class FText& Title)
 
 void UWBP_WorldMatchInfo_C::SetUpUserData(ERateRank Rank, int32 NowRate, int32 UpRate, double GageRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WorldMatchInfo_C", "SetUpUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_WorldMatchInfo_C", FnName));
 
 	Params::WBP_WorldMatchInfo_C_SetUpUserData Parms{};
 
@@ -96,5 +87,5 @@ void UWBP_WorldMatchInfo_C::SetUpUserData(ERateRank Rank, int32 NowRate, int32 U
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

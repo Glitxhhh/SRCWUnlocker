@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "EGadgetCustomizeSequenceMode_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "EMachineCustomizeSequenceMode_structs.hpp"
 #include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
-#include "EGadgetCustomizeSequenceMode_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_GarageData.ST_GarageData
 // 0x0058 (0x0058 - 0x0000)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_GarageData;
 
-}
-
+SDK_NAMESPACE_END

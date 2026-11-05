@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateDriverGetting.BPC_RaceSequenceStateDriverGetting_C
 // 0x0000 (0x0158 - 0x0158)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStateDriverGetting_C;
 
-}
-
+SDK_NAMESPACE_END

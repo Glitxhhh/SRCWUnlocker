@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemWarpRingCamera_Start.BP_ItemWarpRingCamera_Start_C
 // 0x0010 (0x03F0 - 0x03E0)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemWarpRingCamera_Start_C;
 
-}
-
+SDK_NAMESPACE_END

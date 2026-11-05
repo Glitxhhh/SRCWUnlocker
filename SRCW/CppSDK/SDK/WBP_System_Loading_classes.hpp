@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_Loading.WBP_System_Loading_C
 // 0x00B8 (0x03A0 - 0x02E8)
@@ -91,5 +90,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_Loading_C;
 
-}
-
+SDK_NAMESPACE_END

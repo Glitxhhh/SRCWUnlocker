@@ -14,8 +14,7 @@
 #include "BPC_PlayerProfile_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_PlayerProfile.BPC_PlayerProfile_C.ExecuteUbergraph_BPC_PlayerProfile
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_PlayerProfile_C::ExecuteUbergraph_BPC_PlayerProfile(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "ExecuteUbergraph_BPC_PlayerProfile");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_PlayerProfile_C", "ExecuteUbergraph_BPC_PlayerProfile", FuncInfo);
 
 	Params::BPC_PlayerProfile_C_ExecuteUbergraph_BPC_PlayerProfile Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_PlayerProfile_C::ExecuteUbergraph_BPC_PlayerProfile(int32 EntryPoint)
 
 void UBPC_PlayerProfile_C::OnDetailAnimEndEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnDetailAnimEndEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_PlayerProfile_C::OnDetailAnimEndEvent()
 
 void UBPC_PlayerProfile_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_PlayerProfile_C::OnInitState()
 
 void UBPC_PlayerProfile_C::OnPlayerProfileCameraMoveEndEvent(ELobbyCameraMoveType MoveType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnPlayerProfileCameraMoveEndEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	Params::BPC_PlayerProfile_C_OnPlayerProfileCameraMoveEndEvent Parms{};
 
@@ -90,10 +81,8 @@ void UBPC_PlayerProfile_C::OnPlayerProfileCameraMoveEndEvent(ELobbyCameraMoveTyp
 
 void UBPC_PlayerProfile_C::OnPressedCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnPressedCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UBPC_PlayerProfile_C::OnPressedCancel()
 
 void UBPC_PlayerProfile_C::OnPressedNextPlayer(bool bIsLeftInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnPressedNextPlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	Params::BPC_PlayerProfile_C_OnPressedNextPlayer Parms{};
 
@@ -124,10 +111,8 @@ void UBPC_PlayerProfile_C::OnPressedNextPlayer(bool bIsLeftInput)
 
 void UBPC_PlayerProfile_C::OnPressedNice()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "OnPressedNice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UBPC_PlayerProfile_C::OnPressedNice()
 
 void UBPC_PlayerProfile_C::SetNextMenuSequenceSubState(EMenuSequenceSubState InState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PlayerProfile_C", "SetNextMenuSequenceSubState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_PlayerProfile_C", FnName));
 
 	Params::BPC_PlayerProfile_C_SetNextMenuSequenceSubState Parms{};
 
@@ -152,5 +135,5 @@ void UBPC_PlayerProfile_C::SetNextMenuSequenceSubState(EMenuSequenceSubState InS
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

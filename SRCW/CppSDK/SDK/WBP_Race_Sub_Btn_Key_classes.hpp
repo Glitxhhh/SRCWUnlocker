@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Race_Sub_Btn_Key.WBP_Race_Sub_Btn_Key_C
 // 0x0058 (0x0338 - 0x02E0)
@@ -40,6 +39,8 @@ public:
 	void OnBrakeInput(float InValue);
 	void OnDriftPressed();
 	void OnDriftReleased();
+	void OnDuelUltimatePressed();
+	void OnDuelUltimateReleased();
 	void OnEmotePressed();
 	void OnEmoteReleased();
 	void OnHornPressed();
@@ -79,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Race_Sub_Btn_Key_C;
 
-}
-
+SDK_NAMESPACE_END

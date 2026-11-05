@@ -14,15 +14,14 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_CommonSceneAnimationUtility.BPFL_CommonSceneAnimationUtility_C
 // 0x0000 (0x0028 - 0x0028)
 class UBPFL_CommonSceneAnimationUtility_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* Anim, double* Time, bool* bSkipFacialBlend);
+	static void GetSceneDriverAnimationAsset(EDriverId In_DriverId, EDriverPose In_Pose, class UDataTable* DataTable, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* anim, double* Time, bool* bSkipFacialBlend);
 	static void LoadSceneDriverAnimationAssets(TArray<class ASceneDriver*>& In_SceneDrivers, class UDataTable* DataTable, class UObject* __WorldContext, TArray<class UObject*>* LoadAssets);
 
 public:
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_CommonSceneAnimationUtility_C;
 
-}
-
+SDK_NAMESPACE_END

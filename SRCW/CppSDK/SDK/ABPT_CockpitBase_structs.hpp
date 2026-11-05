@@ -14,8 +14,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABPT_CockpitBase.ABPT_CockpitBase_C.AnimBlueprintGeneratedConstantData
 // 0x1E47 (0x1E48 - 0x0001)
@@ -251,5 +250,4 @@ public:
 };
 DUMPER7_ASSERTS_ABPT_CockpitBase__FAnimBlueprintGeneratedMutableData;
 
-}
-
+SDK_NAMESPACE_END

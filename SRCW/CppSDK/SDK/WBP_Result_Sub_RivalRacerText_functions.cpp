@@ -14,8 +14,7 @@
 #include "WBP_Result_Sub_RivalRacerText_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RivalRacerText.WBP_Result_Sub_RivalRacerText_C.ExecuteUbergraph_WBP_Result_Sub_RivalRacerText
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Result_Sub_RivalRacerText_C::ExecuteUbergraph_WBP_Result_Sub_RivalRacerText(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RivalRacerText_C", "ExecuteUbergraph_WBP_Result_Sub_RivalRacerText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RivalRacerText_C", "ExecuteUbergraph_WBP_Result_Sub_RivalRacerText", FuncInfo);
 
 	Params::WBP_Result_Sub_RivalRacerText_C_ExecuteUbergraph_WBP_Result_Sub_RivalRacerText Parms{};
 
@@ -42,13 +39,11 @@ void UWBP_Result_Sub_RivalRacerText_C::ExecuteUbergraph_WBP_Result_Sub_RivalRace
 
 void UWBP_Result_Sub_RivalRacerText_C::PlayAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RivalRacerText_C", "PlayAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RivalRacerText_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

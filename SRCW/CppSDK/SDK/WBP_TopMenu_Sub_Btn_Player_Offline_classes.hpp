@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu_Sub_Btn_Player_Offline.WBP_TopMenu_Sub_Btn_Player_Offline_C
 // 0x0060 (0x0538 - 0x04D8)
@@ -79,5 +78,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopMenu_Sub_Btn_Player_Offline_C;
 
-}
-
+SDK_NAMESPACE_END

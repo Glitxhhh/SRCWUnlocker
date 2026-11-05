@@ -14,8 +14,7 @@
 #include "OnlineSubsystemOculus_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function OnlineSubsystemOculus.OculusCreateSessionCallbackProxy.CreateSession
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -185,5 +184,5 @@ class UOculusUpdateSessionCallbackProxy* UOculusUpdateSessionCallbackProxy::SetS
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

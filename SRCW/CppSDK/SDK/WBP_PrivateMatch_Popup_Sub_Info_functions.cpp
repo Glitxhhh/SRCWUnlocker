@@ -14,18 +14,15 @@
 #include "WBP_PrivateMatch_Popup_Sub_Info_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_PrivateMatch_Popup_Sub_Info.WBP_PrivateMatch_Popup_Sub_Info_C.CompletedGoAnimationFinish
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::CompletedGoAnimationFinish()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "CompletedGoAnimationFinish");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::CompletedGoAnimationFinish()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::CompletedInAnimationFinish()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "CompletedInAnimationFinish");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::CompletedInAnimationFinish()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::ExecuteUbergraph_WBP_PrivateMatch_Popup_Sub_Info(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "ExecuteUbergraph_WBP_PrivateMatch_Popup_Sub_Info");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_PrivateMatch_Popup_Sub_Info_C", "ExecuteUbergraph_WBP_PrivateMatch_Popup_Sub_Info", FuncInfo);
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_ExecuteUbergraph_WBP_PrivateMatch_Popup_Sub_Info Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::ExecuteUbergraph_WBP_PrivateMatch_Popup
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::Finished_2E4D3FE94B39AA8AFFF431A81AFD1BD6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "Finished_2E4D3FE94B39AA8AFFF431A81AFD1BD6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::Finished_2E4D3FE94B39AA8AFFF431A81AFD1B
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::FinishUpload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "FinishUpload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::FinishUpload()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::FinishWaitUpload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "FinishWaitUpload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,10 +102,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::FinishWaitUpload()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::GetActiveWidgetButton(int32 ButtonIndex, class UUnionUIButtonBase** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "GetActiveWidgetButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_GetActiveWidgetButton Parms{};
 
@@ -138,10 +123,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::GetActiveWidgetButton(int32 ButtonIndex
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::GetActiveWidgetButtons(TArray<class UUnionUIButtonBase*>* Buttons)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "GetActiveWidgetButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_GetActiveWidgetButtons Parms{};
 
@@ -161,10 +144,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::GetActiveWidgetButtons(TArray<class UUn
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::GetButton(int32 SwitcherIndex, int32 ButtonIndex, class UUnionUIButtonBase** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "GetButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_GetButton Parms{};
 
@@ -185,10 +166,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::GetButton(int32 SwitcherIndex, int32 Bu
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::InitialActiveWidget(int32 Selection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "InitialActiveWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_InitialActiveWidget Parms{};
 
@@ -203,10 +182,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::InitialActiveWidget(int32 Selection)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -217,10 +194,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::OnAnimationInFinished()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +206,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayInAnimation()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -245,10 +218,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayOutAnimation()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayWaitingIconGoAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "PlayWaitingIconGoAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -259,10 +230,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayWaitingIconGoAnimation()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayWaitingIconInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "PlayWaitingIconInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -275,14 +244,32 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PlayWaitingIconInAnimation()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PrivateMatch_Popup_Sub_Info.WBP_PrivateMatch_Popup_Sub_Info_C.Set Navigation Buttons
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SwitcherIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsAllStop                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PrivateMatch_Popup_Sub_Info_C::Set_Navigation_Buttons(int32 SwitcherIndex, bool bIsAllStop)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
+
+	Params::WBP_PrivateMatch_Popup_Sub_Info_C_Set_Navigation_Buttons Parms{};
+
+	Parms.SwitcherIndex = SwitcherIndex;
+	Parms.bIsAllStop = bIsAllStop;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -296,10 +283,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetActiveWidgetButtonText(TArray<class FText>& Array, TArray<class UPrivateMatchButton*>& Buttons)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetActiveWidgetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetActiveWidgetButtonText Parms{};
 
@@ -318,18 +303,18 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetActiveWidgetButtonText(TArray<class 
 // Parameters:
 // int32                                   SwitcherIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    GrayOut                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex)
+void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, int32 ButtonIndex, bool GrayOut)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetButtonGrayOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetButtonGrayOut Parms{};
 
 	Parms.SwitcherIndex = SwitcherIndex;
 	Parms.ButtonIndex = ButtonIndex;
+	Parms.GrayOut = GrayOut;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -343,10 +328,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonGrayOut(int32 SwitcherIndex, i
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonIcon(const int32 IconIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetButtonIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetButtonIcon Parms{};
 
@@ -364,10 +347,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonIcon(const int32 IconIndex, in
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonsText(const TArray<class FText>& InTextArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetButtonsText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetButtonsText Parms{};
 
@@ -382,10 +363,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetButtonsText(const TArray<class FText
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetInitFocusButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetInitFocusButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -398,10 +377,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetInitFocusButton()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetLoadingText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetLoadingText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetLoadingText Parms{};
 
@@ -418,10 +395,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetLoadingText(const class FText& InTex
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetOpenShowMenuType(EPrivateMatchShowMenuType InMenuType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetOpenShowMenuType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetOpenShowMenuType Parms{};
 
@@ -438,10 +413,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetOpenShowMenuType(EPrivateMatchShowMe
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetParentPopupWidget(class UPrivateMatchPopup* PrivateMatchPopup)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetParentPopupWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetParentPopupWidget Parms{};
 
@@ -458,10 +431,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetParentPopupWidget(class UPrivateMatc
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetupCompletedInfo(bool bJoin_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetupCompletedInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetupCompletedInfo Parms{};
 
@@ -479,10 +450,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetupCompletedInfo(bool bJoin_0)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetUploadCount(int32 UploadCount, int32 MaxCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetUploadCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetUploadCount Parms{};
 
@@ -500,10 +469,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetUploadCount(int32 UploadCount, int32
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetUploadPercentage(double InRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetUploadPercentage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetUploadPercentage Parms{};
 
@@ -520,10 +487,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetUploadPercentage(double InRate)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetupWaitingInfo(bool bJoin_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetupWaitingInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetupWaitingInfo Parms{};
 
@@ -540,10 +505,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetupWaitingInfo(bool bJoin_0)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::SetWidgetSwitcherIndex(int32 SwitcherIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "SetWidgetSwitcherIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_SetWidgetSwitcherIndex Parms{};
 
@@ -560,10 +523,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::SetWidgetSwitcherIndex(int32 SwitcherIn
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::StartGhostUploadAll(int32 MaxCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "StartGhostUploadAll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	Params::WBP_PrivateMatch_Popup_Sub_Info_C_StartGhostUploadAll Parms{};
 
@@ -578,10 +539,8 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::StartGhostUploadAll(int32 MaxCount)
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::StartGhostUploadSingle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "StartGhostUploadSingle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -592,13 +551,11 @@ void UWBP_PrivateMatch_Popup_Sub_Info_C::StartGhostUploadSingle()
 
 void UWBP_PrivateMatch_Popup_Sub_Info_C::WaitingIconGoAnimFinish()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PrivateMatch_Popup_Sub_Info_C", "WaitingIconGoAnimFinish");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PrivateMatch_Popup_Sub_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

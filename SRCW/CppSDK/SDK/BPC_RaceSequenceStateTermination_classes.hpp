@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C
 // 0x0030 (0x0148 - 0x0118)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStateTermination_C;
 
-}
-
+SDK_NAMESPACE_END

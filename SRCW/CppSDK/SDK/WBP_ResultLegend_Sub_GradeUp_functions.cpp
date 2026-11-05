@@ -14,8 +14,7 @@
 #include "WBP_ResultLegend_Sub_GradeUp_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultLegend_Sub_GradeUp.WBP_ResultLegend_Sub_GradeUp_C.ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultLegend_Sub_GradeUp_C::ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultLegend_Sub_GradeUp_C", "ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp", FuncInfo);
 
 	Params::WBP_ResultLegend_Sub_GradeUp_C_ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::ExecuteUbergraph_WBP_ResultLegend_Sub_Grad
 
 void UWBP_ResultLegend_Sub_GradeUp_C::Finished_02E151A84AF6D58D88C88A8D99674BC9()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "Finished_02E151A84AF6D58D88C88A8D99674BC9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::Finished_02E151A84AF6D58D88C88A8D99674BC9(
 
 void UWBP_ResultLegend_Sub_GradeUp_C::Finished_478B1D094E6F692047109494848FBFC4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "Finished_478B1D094E6F692047109494848FBFC4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::Finished_478B1D094E6F692047109494848FBFC4(
 
 void UWBP_ResultLegend_Sub_GradeUp_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::PlayInAnimation()
 
 void UWBP_ResultLegend_Sub_GradeUp_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::PlayOutAnimation()
 
 void UWBP_ResultLegend_Sub_GradeUp_C::PlayRankUpSound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "PlayRankUpSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::PlayRankUpSound()
 
 void UWBP_ResultLegend_Sub_GradeUp_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_GradeUp()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_GradeUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -129,10 +114,8 @@ void UWBP_ResultLegend_Sub_GradeUp_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_
 
 void UWBP_ResultLegend_Sub_GradeUp_C::SetupRankUpInfo(int32 PrevRank, int32 LatestRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_GradeUp_C", "SetupRankUpInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_GradeUp_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_GradeUp_C_SetupRankUpInfo Parms{};
 
@@ -142,5 +125,5 @@ void UWBP_ResultLegend_Sub_GradeUp_C::SetupRankUpInfo(int32 PrevRank, int32 Late
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,11 +11,26 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "MovieSceneTracks_parameters.hpp"
+#include "Engine_parameters.hpp"
 #include "MovieScene_structs.hpp"
+#include "MovieScene_parameters.hpp"
 
 
-namespace SDK::Params
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
+
+// Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
+// 0x0060 (0x0060 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneTransformOrigin_BP_GetTransformOrigin
+#define DUMPER7_PARAM_DEFINED_MovieSceneTransformOrigin_BP_GetTransformOrigin
+struct MovieSceneTransformOrigin_BP_GetTransformOrigin final
 {
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MovieSceneTransformOrigin_BP_GetTransformOrigin;
 
 // Function LevelSequence.LevelSequence.CopyMetaData
 // 0x0010 (0x0010 - 0x0000)
@@ -55,6 +70,47 @@ public:
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LevelSequence_FindMetaDataByClass;
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_AddAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_AddAssetUserDataOfClass
+struct Interface_AssetUserData_AddAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_AddAssetUserDataOfClass;
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_GetAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_GetAssetUserDataOfClass
+struct Interface_AssetUserData_GetAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAssetUserData*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_GetAssetUserDataOfClass;
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_HasAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_HasAssetUserDataOfClass
+struct Interface_AssetUserData_HasAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_HasAssetUserDataOfClass;
 
 // Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
 // 0x0020 (0x0020 - 0x0000)
@@ -341,5 +397,56 @@ public:
 };
 DUMPER7_ASSERTS_LevelSequenceMediaController_GetSequence;
 
-}
+// Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime
+// 0x001C (0x001C - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnRequestCurrentTime
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnRequestCurrentTime
+struct MovieSceneCustomClockSource_OnRequestCurrentTime final
+{
+public:
+	struct FQualifiedFrameTime                    InCurrentTime;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InPlayRate;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameTime                             ReturnValue;                                       // 0x0014(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnRequestCurrentTime;
 
+// Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStartPlaying
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStartPlaying
+struct MovieSceneCustomClockSource_OnStartPlaying final
+{
+public:
+	struct FQualifiedFrameTime                    InStartTime;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnStartPlaying;
+
+// Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStopPlaying
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStopPlaying
+struct MovieSceneCustomClockSource_OnStopPlaying final
+{
+public:
+	struct FQualifiedFrameTime                    InStopTime;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnStopPlaying;
+
+// Function MovieScene.MovieSceneCustomClockSource.OnTick
+// 0x0008 (0x0008 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnTick
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnTick
+struct MovieSceneCustomClockSource_OnTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InPlayRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnTick;
+
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

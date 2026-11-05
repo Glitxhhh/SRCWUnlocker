@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ChallengeNotice_Window.WBP_ChallengeNotice_Window_C
 // 0x0010 (0x02F0 - 0x02E0)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ChallengeNotice_Window_C;
 
-}
-
+SDK_NAMESPACE_END

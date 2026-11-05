@@ -14,8 +14,7 @@
 #include "WBP_ResultLegend_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultLegend.WBP_ResultLegend_C.ExecuteUbergraph_WBP_ResultLegend
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultLegend_C::ExecuteUbergraph_WBP_ResultLegend(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "ExecuteUbergraph_WBP_ResultLegend");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultLegend_C", "ExecuteUbergraph_WBP_ResultLegend", FuncInfo);
 
 	Params::WBP_ResultLegend_C_ExecuteUbergraph_WBP_ResultLegend Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_ResultLegend_C::ExecuteUbergraph_WBP_ResultLegend(int32 EntryPoint)
 
 void UWBP_ResultLegend_C::FinishUpdateRateEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "FinishUpdateRateEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_ResultLegend_C::FinishUpdateRateEvent()
 
 void UWBP_ResultLegend_C::InAnimationFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "InAnimationFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_ResultLegend_C::InAnimationFinishEvent()
 
 void UWBP_ResultLegend_C::OutFinishAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "OutFinishAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_ResultLegend_C::OutFinishAnimationEvent()
 
 void UWBP_ResultLegend_C::PlayCountDownAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "PlayCountDownAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_ResultLegend_C::PlayCountDownAnimation()
 
 void UWBP_ResultLegend_C::PlayCountUpAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "PlayCountUpAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_ResultLegend_C::PlayCountUpAnimation()
 
 void UWBP_ResultLegend_C::PlayCountUpNUMAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "PlayCountUpNUMAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_ResultLegend_C::PlayCountUpNUMAnimation()
 
 void UWBP_ResultLegend_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +123,8 @@ void UWBP_ResultLegend_C::PlayInAnimation()
 
 void UWBP_ResultLegend_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,10 +137,8 @@ void UWBP_ResultLegend_C::PlayOutAnimation()
 
 void UWBP_ResultLegend_C::SetAdjustValue(int32 AdjustValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetAdjustValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetAdjustValue Parms{};
 
@@ -176,10 +155,8 @@ void UWBP_ResultLegend_C::SetAdjustValue(int32 AdjustValue)
 
 void UWBP_ResultLegend_C::SetCurrentGaugeValue(float CurrentValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetCurrentGaugeValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetCurrentGaugeValue Parms{};
 
@@ -196,10 +173,8 @@ void UWBP_ResultLegend_C::SetCurrentGaugeValue(float CurrentValue)
 
 void UWBP_ResultLegend_C::SetCurrentRateValue(int32 CurrentRateValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetCurrentRateValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetCurrentRateValue Parms{};
 
@@ -219,10 +194,8 @@ void UWBP_ResultLegend_C::SetCurrentRateValue(int32 CurrentRateValue)
 
 void UWBP_ResultLegend_C::SetGaugeCurrentAndNextGradeIcon(ELegendCompeRateGrade PrevGradeIcon, ELegendCompeRateGrade CurrentGrade, ELegendCompeRateGrade NextGrade, bool LowestLimitGrade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetGaugeCurrentAndNextGradeIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetGaugeCurrentAndNextGradeIcon Parms{};
 
@@ -242,10 +215,8 @@ void UWBP_ResultLegend_C::SetGaugeCurrentAndNextGradeIcon(ELegendCompeRateGrade 
 
 void UWBP_ResultLegend_C::SetResultIcon(int32 IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetResultIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetResultIcon Parms{};
 
@@ -262,10 +233,8 @@ void UWBP_ResultLegend_C::SetResultIcon(int32 IconIndex)
 
 void UWBP_ResultLegend_C::SetTargetGaugeValue(float TargetValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetTargetGaugeValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetTargetGaugeValue Parms{};
 
@@ -282,10 +251,8 @@ void UWBP_ResultLegend_C::SetTargetGaugeValue(float TargetValue)
 
 void UWBP_ResultLegend_C::SetupChanceUpRatio(int32 ChanceUpRatio)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetupChanceUpRatio");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetupChanceUpRatio Parms{};
 
@@ -303,10 +270,8 @@ void UWBP_ResultLegend_C::SetupChanceUpRatio(int32 ChanceUpRatio)
 
 void UWBP_ResultLegend_C::SetupLimitValue(int32 CurrentRankLimit, int32 NextRankLimit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "SetupLimitValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	Params::WBP_ResultLegend_C_SetupLimitValue Parms{};
 
@@ -322,13 +287,11 @@ void UWBP_ResultLegend_C::SetupLimitValue(int32 CurrentRankLimit, int32 NextRank
 
 void UWBP_ResultLegend_C::StartAdjustingGaugeEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_C", "StartAdjustingGaugeEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

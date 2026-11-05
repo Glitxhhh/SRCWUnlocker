@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_Btn_Player_Offline.WBP_TopMenu_Sub_Btn_Player_Offline_C.ChangeSelectColor
 // 0x0001 (0x0001 - 0x0000)
@@ -189,5 +189,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TopMenu_Sub_Btn_Player_Offline_C_PreConstruct;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

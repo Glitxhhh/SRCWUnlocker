@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_RecoveryRing_Exit.BP_RecoveryRing_Exit_C.ExecuteUbergraph_BP_RecoveryRing_Exit
 // 0x0004 (0x0004 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_RecoveryRing_Exit_C_ExecuteUbergraph_BP_RecoveryRing_Exit;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

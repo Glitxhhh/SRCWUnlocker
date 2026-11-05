@@ -14,8 +14,7 @@
 #include "WBP_Friend_FairPlayPointWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_FairPlayPointWindow.WBP_Friend_FairPlayPointWindow_C.ExecuteUbergraph_WBP_Friend_FairPlayPointWindow
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_FairPlayPointWindow_C::ExecuteUbergraph_WBP_Friend_FairPlayPointWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_FairPlayPointWindow_C", "ExecuteUbergraph_WBP_Friend_FairPlayPointWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_FairPlayPointWindow_C", "ExecuteUbergraph_WBP_Friend_FairPlayPointWindow", FuncInfo);
 
 	Params::WBP_Friend_FairPlayPointWindow_C_ExecuteUbergraph_WBP_Friend_FairPlayPointWindow Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_Friend_FairPlayPointWindow_C::ExecuteUbergraph_WBP_Friend_FairPlayPoin
 
 void UWBP_Friend_FairPlayPointWindow_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_FairPlayPointWindow_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_FairPlayPointWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +55,8 @@ void UWBP_Friend_FairPlayPointWindow_C::OnBackKeyPressed()
 
 struct FEventReply UWBP_Friend_FairPlayPointWindow_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_FairPlayPointWindow_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_FairPlayPointWindow_C", FnName));
 
 	Params::WBP_Friend_FairPlayPointWindow_C_OnFocusReceived Parms{};
 
@@ -85,10 +78,8 @@ struct FEventReply UWBP_Friend_FairPlayPointWindow_C::OnFocusReceived(const stru
 
 void UWBP_Friend_FairPlayPointWindow_C::Setup(int32 InFairPlayPoint, bool bInBan, const class FString& InPenaltyEndTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_FairPlayPointWindow_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_FairPlayPointWindow_C", FnName));
 
 	Params::WBP_Friend_FairPlayPointWindow_C_Setup Parms{};
 
@@ -99,5 +90,5 @@ void UWBP_Friend_FairPlayPointWindow_C::Setup(int32 InFairPlayPoint, bool bInBan
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

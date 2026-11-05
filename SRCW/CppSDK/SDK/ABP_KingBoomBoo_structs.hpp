@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_KingBoomBoo.ABP_KingBoomBoo_C.AnimBlueprintGeneratedConstantData
 // 0x056F (0x0570 - 0x0001)
@@ -73,5 +72,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_KingBoomBoo__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

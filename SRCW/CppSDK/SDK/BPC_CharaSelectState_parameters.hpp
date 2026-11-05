@@ -14,8 +14,8 @@
 #include "UnionLib_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_CharaSelectState.BPC_CharaSelectState_C.ExecuteUbergraph_BPC_CharaSelectState
 // 0x0038 (0x0038 - 0x0000)
@@ -38,5 +38,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_CharaSelectState_C_ExecuteUbergraph_BPC_CharaSelectState;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

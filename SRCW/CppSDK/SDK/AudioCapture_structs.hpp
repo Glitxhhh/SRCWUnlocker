@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct AudioCapture.AudioInputDeviceInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FAudioCaptureDeviceInfo;
 
-}
-
+SDK_NAMESPACE_END

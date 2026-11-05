@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FX_SummonRing.BP_FX_SummonRing_C.ExecuteUbergraph_BP_FX_SummonRing
 // 0x0004 (0x0004 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_FX_SummonRing_C_ExecuteUbergraph_BP_FX_SummonRing;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

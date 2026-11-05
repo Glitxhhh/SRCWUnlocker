@@ -17,8 +17,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SlateRHIRenderer.SlateFXSubsystem
 // 0x00A0 (0x00D0 - 0x0030)
@@ -119,5 +118,4 @@ public:
 };
 DUMPER7_ASSERTS_USlateRHIRendererSettings;
 
-}
-
+SDK_NAMESPACE_END

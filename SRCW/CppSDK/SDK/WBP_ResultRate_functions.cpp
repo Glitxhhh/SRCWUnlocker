@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate.WBP_ResultRate_C.ExecuteUbergraph_WBP_ResultRate
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_C::ExecuteUbergraph_WBP_ResultRate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "ExecuteUbergraph_WBP_ResultRate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_C", "ExecuteUbergraph_WBP_ResultRate", FuncInfo);
 
 	Params::WBP_ResultRate_C_ExecuteUbergraph_WBP_ResultRate Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_ResultRate_C::ExecuteUbergraph_WBP_ResultRate(int32 EntryPoint)
 
 void UWBP_ResultRate_C::Finished_177244A04DFC44CECD5AE6BB5A0E8ECE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "Finished_177244A04DFC44CECD5AE6BB5A0E8ECE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_ResultRate_C::Finished_177244A04DFC44CECD5AE6BB5A0E8ECE()
 
 void UWBP_ResultRate_C::Finished_5FA4F69C407DB8CCA6F4208DEC9CF07A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "Finished_5FA4F69C407DB8CCA6F4208DEC9CF07A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_ResultRate_C::Finished_5FA4F69C407DB8CCA6F4208DEC9CF07A()
 
 void UWBP_ResultRate_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_ResultRate_C::PlayInAnimation()
 
 void UWBP_ResultRate_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +90,8 @@ void UWBP_ResultRate_C::PlayOutAnimation()
 
 void UWBP_ResultRate_C::PlayRateRankBandAnimation(ERateRank StartRank, ERateRank EndRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "PlayRateRankBandAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_PlayRateRankBandAnimation Parms{};
 
@@ -122,10 +109,8 @@ void UWBP_ResultRate_C::PlayRateRankBandAnimation(ERateRank StartRank, ERateRank
 
 void UWBP_ResultRate_C::SetCurrentGaugeValue(float CurrentValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetCurrentGaugeValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetCurrentGaugeValue Parms{};
 
@@ -142,10 +127,8 @@ void UWBP_ResultRate_C::SetCurrentGaugeValue(float CurrentValue)
 
 void UWBP_ResultRate_C::SetCurrentRateValue(int32 CurrentRateValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetCurrentRateValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetCurrentRateValue Parms{};
 
@@ -162,10 +145,8 @@ void UWBP_ResultRate_C::SetCurrentRateValue(int32 CurrentRateValue)
 
 void UWBP_ResultRate_C::SetNextRewardIcon(ERateRank CurrentRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetNextRewardIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetNextRewardIcon Parms{};
 
@@ -182,10 +163,8 @@ void UWBP_ResultRate_C::SetNextRewardIcon(ERateRank CurrentRank)
 
 void UWBP_ResultRate_C::SetOpenTipsWindow(bool InOpenWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetOpenTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetOpenTipsWindow Parms{};
 
@@ -202,10 +181,8 @@ void UWBP_ResultRate_C::SetOpenTipsWindow(bool InOpenWindow)
 
 void UWBP_ResultRate_C::SetResultIcon(int32 IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetResultIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetResultIcon Parms{};
 
@@ -222,10 +199,8 @@ void UWBP_ResultRate_C::SetResultIcon(int32 IconIndex)
 
 void UWBP_ResultRate_C::SetupChanceUpRatio(int32 ChanceUpRatio)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetupChanceUpRatio");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetupChanceUpRatio Parms{};
 
@@ -243,10 +218,8 @@ void UWBP_ResultRate_C::SetupChanceUpRatio(int32 ChanceUpRatio)
 
 void UWBP_ResultRate_C::SetupLimitValue(int32 CurrentRankLimit, int32 NextRankLimit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_C", "SetupLimitValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_C", FnName));
 
 	Params::WBP_ResultRate_C_SetupLimitValue Parms{};
 
@@ -256,5 +229,5 @@ void UWBP_ResultRate_C::SetupLimitValue(int32 CurrentRankLimit, int32 NextRankLi
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

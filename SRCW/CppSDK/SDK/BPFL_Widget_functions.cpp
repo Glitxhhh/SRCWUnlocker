@@ -14,8 +14,7 @@
 #include "BPFL_Widget_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_Widget.BPFL_Widget_C.ChangeInputRegistrationOnVisibilityChanged
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void UBPFL_Widget_C::ChangeInputRegistrationOnVisibilityChanged(class UWidget* Target, ESlateVisibility Visibility, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_Widget_C", "ChangeInputRegistrationOnVisibilityChanged");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_Widget_C", "ChangeInputRegistrationOnVisibilityChanged", FuncInfo);
 
 	Params::BPFL_Widget_C_ChangeInputRegistrationOnVisibilityChanged Parms{};
 
@@ -41,6 +38,32 @@ void UBPFL_Widget_C::ChangeInputRegistrationOnVisibilityChanged(class UWidget* T
 }
 
 
+// Function BPFL_Widget.BPFL_Widget_C.CreateWidgetFromSoftClass
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSoftClassPtr<class UClass>             SoftClass                                              (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class APlayerController*                OwningPlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget**                     UserWidget                                             (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_Widget_C::CreateWidgetFromSoftClass(TSoftClassPtr<class UClass> SoftClass, class APlayerController* OwningPlayer, class UObject* __WorldContext, class UUserWidget** UserWidget)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_Widget_C", "CreateWidgetFromSoftClass", FuncInfo);
+
+	Params::BPFL_Widget_C_CreateWidgetFromSoftClass Parms{};
+
+	Parms.SoftClass = SoftClass;
+	Parms.OwningPlayer = OwningPlayer;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (UserWidget != nullptr)
+		*UserWidget = Parms.UserWidget;
+}
+
+
 // Function BPFL_Widget.BPFL_Widget_C.ReplacementPlatformIconTexture 
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -49,10 +72,8 @@ void UBPFL_Widget_C::ChangeInputRegistrationOnVisibilityChanged(class UWidget* T
 
 void UBPFL_Widget_C::ReplacementPlatformIconTexture_(class UImage* InImage, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_Widget_C", "ReplacementPlatformIconTexture ");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_Widget_C", "ReplacementPlatformIconTexture ", FuncInfo);
 
 	Params::BPFL_Widget_C_ReplacementPlatformIconTexture_ Parms{};
 
@@ -62,5 +83,5 @@ void UBPFL_Widget_C::ReplacementPlatformIconTexture_(class UImage* InImage, clas
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

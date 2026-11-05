@@ -14,8 +14,7 @@
 #include "WBP_TopInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopInfo.WBP_TopInfo_C.CheckInputAllow
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopInfo_C::CheckInputAllow(bool* bAllow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "CheckInputAllow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_CheckInputAllow Parms{};
 
@@ -45,16 +42,109 @@ void UWBP_TopInfo_C::CheckInputAllow(bool* bAllow)
 
 void UWBP_TopInfo_C::ExecuteUbergraph_WBP_TopInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "ExecuteUbergraph_WBP_TopInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopInfo_C", "ExecuteUbergraph_WBP_TopInfo", FuncInfo);
 
 	Params::WBP_TopInfo_C_ExecuteUbergraph_WBP_TopInfo Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategory
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategory(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategory Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryL
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryL(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryL Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryLScroll
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryLScroll(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryLScroll Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryR
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryR(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryR Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
+}
+
+
+// Function WBP_TopInfo.WBP_TopInfo_C.GetTopInfoSubCategoryRScroll
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_Sub_Category_C**     WidgetObject                                           (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopInfo_C::GetTopInfoSubCategoryRScroll(class UWBP_TopInfo_Sub_Category_C** WidgetObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
+
+	Params::WBP_TopInfo_C_GetTopInfoSubCategoryRScroll Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WidgetObject != nullptr)
+		*WidgetObject = Parms.WidgetObject;
 }
 
 
@@ -65,10 +155,8 @@ void UWBP_TopInfo_C::ExecuteUbergraph_WBP_TopInfo(int32 EntryPoint)
 
 void UWBP_TopInfo_C::GetValidPageNum(int32* Num)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "GetValidPageNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_GetValidPageNum Parms{};
 
@@ -84,10 +172,8 @@ void UWBP_TopInfo_C::GetValidPageNum(int32* Num)
 
 void UWBP_TopInfo_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +186,8 @@ void UWBP_TopInfo_C::OnAcceptKeyPressed()
 
 void UWBP_TopInfo_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -118,10 +202,8 @@ void UWBP_TopInfo_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControlle
 
 void UWBP_TopInfo_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +216,8 @@ void UWBP_TopInfo_C::OnAcceptKeyReleased()
 
 void UWBP_TopInfo_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -152,10 +232,8 @@ void UWBP_TopInfo_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControll
 
 void UWBP_TopInfo_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +246,8 @@ void UWBP_TopInfo_C::OnBackKeyPressed()
 
 void UWBP_TopInfo_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -186,10 +262,8 @@ void UWBP_TopInfo_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerI
 
 void UWBP_TopInfo_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,10 +276,8 @@ void UWBP_TopInfo_C::OnBackKeyReleased()
 
 void UWBP_TopInfo_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -220,10 +292,8 @@ void UWBP_TopInfo_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerController
 
 void UWBP_TopInfo_C::OnClicked_Back()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnClicked_Back");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -234,10 +304,8 @@ void UWBP_TopInfo_C::OnClicked_Back()
 
 void UWBP_TopInfo_C::OnClicked_ButtonEnter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnClicked_ButtonEnter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -248,10 +316,8 @@ void UWBP_TopInfo_C::OnClicked_ButtonEnter()
 
 void UWBP_TopInfo_C::OnClicked_LeftArrow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnClicked_LeftArrow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +328,8 @@ void UWBP_TopInfo_C::OnClicked_LeftArrow()
 
 void UWBP_TopInfo_C::OnClicked_RightArrow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnClicked_RightArrow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,10 +340,8 @@ void UWBP_TopInfo_C::OnClicked_RightArrow()
 
 void UWBP_TopInfo_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -292,10 +354,8 @@ void UWBP_TopInfo_C::OnDownKeyPressed()
 
 void UWBP_TopInfo_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -310,10 +370,8 @@ void UWBP_TopInfo_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerI
 
 void UWBP_TopInfo_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -326,10 +384,8 @@ void UWBP_TopInfo_C::OnDownKeyReleased()
 
 void UWBP_TopInfo_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -344,10 +400,8 @@ void UWBP_TopInfo_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerController
 
 void UWBP_TopInfo_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,10 +414,8 @@ void UWBP_TopInfo_C::OnFaceButtonLeftPressed()
 
 void UWBP_TopInfo_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -378,10 +430,8 @@ void UWBP_TopInfo_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerCont
 
 void UWBP_TopInfo_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -394,10 +444,8 @@ void UWBP_TopInfo_C::OnFaceButtonLeftReleased()
 
 void UWBP_TopInfo_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -412,10 +460,8 @@ void UWBP_TopInfo_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerCon
 
 void UWBP_TopInfo_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -428,10 +474,8 @@ void UWBP_TopInfo_C::OnFaceButtonTopPressed()
 
 void UWBP_TopInfo_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -446,10 +490,8 @@ void UWBP_TopInfo_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerContr
 
 void UWBP_TopInfo_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -462,10 +504,8 @@ void UWBP_TopInfo_C::OnFaceButtonTopReleased()
 
 void UWBP_TopInfo_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -480,10 +520,8 @@ void UWBP_TopInfo_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerCont
 
 void UWBP_TopInfo_C::OnFinished_InAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFinished_InAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -494,10 +532,8 @@ void UWBP_TopInfo_C::OnFinished_InAnim()
 
 void UWBP_TopInfo_C::OnFinished_OutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnFinished_OutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -508,10 +544,8 @@ void UWBP_TopInfo_C::OnFinished_OutAnim()
 
 void UWBP_TopInfo_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -522,10 +556,8 @@ void UWBP_TopInfo_C::OnInitialized()
 
 void UWBP_TopInfo_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -538,10 +570,8 @@ void UWBP_TopInfo_C::OnLeftKeyPressed()
 
 void UWBP_TopInfo_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -556,10 +586,8 @@ void UWBP_TopInfo_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerI
 
 void UWBP_TopInfo_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -572,10 +600,8 @@ void UWBP_TopInfo_C::OnLeftKeyReleased()
 
 void UWBP_TopInfo_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -590,10 +616,8 @@ void UWBP_TopInfo_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerController
 
 void UWBP_TopInfo_C::OnLeftMoveInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftMoveInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -604,10 +628,8 @@ void UWBP_TopInfo_C::OnLeftMoveInput()
 
 void UWBP_TopInfo_C::OnLeftScrollEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftScrollEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -618,10 +640,8 @@ void UWBP_TopInfo_C::OnLeftScrollEnd()
 
 void UWBP_TopInfo_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -634,10 +654,8 @@ void UWBP_TopInfo_C::OnLeftShoulderPressed()
 
 void UWBP_TopInfo_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -652,10 +670,8 @@ void UWBP_TopInfo_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_TopInfo_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -668,10 +684,8 @@ void UWBP_TopInfo_C::OnLeftShoulderReleased()
 
 void UWBP_TopInfo_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -688,10 +702,8 @@ void UWBP_TopInfo_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_TopInfo_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftStickAxis Parms{};
 
@@ -709,10 +721,8 @@ void UWBP_TopInfo_C::OnLeftStickAxis(const struct FVector2D& Value)
 
 void UWBP_TopInfo_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -728,10 +738,8 @@ void UWBP_TopInfo_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, 
 
 void UWBP_TopInfo_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -744,10 +752,8 @@ void UWBP_TopInfo_C::OnLeftStickButtonPressed()
 
 void UWBP_TopInfo_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -762,10 +768,8 @@ void UWBP_TopInfo_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerCon
 
 void UWBP_TopInfo_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -778,10 +782,8 @@ void UWBP_TopInfo_C::OnLeftStickButtonReleased()
 
 void UWBP_TopInfo_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -796,10 +798,8 @@ void UWBP_TopInfo_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerCo
 
 void UWBP_TopInfo_C::OnMouse_AcceptInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnMouse_AcceptInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -810,10 +810,8 @@ void UWBP_TopInfo_C::OnMouse_AcceptInput()
 
 void UWBP_TopInfo_C::OnMouse_BackInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnMouse_BackInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -824,10 +822,8 @@ void UWBP_TopInfo_C::OnMouse_BackInput()
 
 void UWBP_TopInfo_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -840,10 +836,8 @@ void UWBP_TopInfo_C::OnRightKeyPressed()
 
 void UWBP_TopInfo_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -858,10 +852,8 @@ void UWBP_TopInfo_C::OnRightKeyPressedWithPlayerId(const int32& PlayerController
 
 void UWBP_TopInfo_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -874,10 +866,8 @@ void UWBP_TopInfo_C::OnRightKeyReleased()
 
 void UWBP_TopInfo_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -892,10 +882,8 @@ void UWBP_TopInfo_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControlle
 
 void UWBP_TopInfo_C::OnRightMoveInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightMoveInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -906,10 +894,8 @@ void UWBP_TopInfo_C::OnRightMoveInput()
 
 void UWBP_TopInfo_C::OnRightScrollEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightScrollEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -920,10 +906,8 @@ void UWBP_TopInfo_C::OnRightScrollEnd()
 
 void UWBP_TopInfo_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -936,10 +920,8 @@ void UWBP_TopInfo_C::OnRightShoulderPressed()
 
 void UWBP_TopInfo_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -954,10 +936,8 @@ void UWBP_TopInfo_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerContr
 
 void UWBP_TopInfo_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -970,10 +950,8 @@ void UWBP_TopInfo_C::OnRightShoulderReleased()
 
 void UWBP_TopInfo_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -990,10 +968,8 @@ void UWBP_TopInfo_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerCont
 
 void UWBP_TopInfo_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightStickAxis Parms{};
 
@@ -1011,10 +987,8 @@ void UWBP_TopInfo_C::OnRightStickAxis(const struct FVector2D& Value)
 
 void UWBP_TopInfo_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -1030,10 +1004,8 @@ void UWBP_TopInfo_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value,
 
 void UWBP_TopInfo_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1046,10 +1018,8 @@ void UWBP_TopInfo_C::OnRightStickButtonPressed()
 
 void UWBP_TopInfo_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -1064,10 +1034,8 @@ void UWBP_TopInfo_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerCo
 
 void UWBP_TopInfo_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1080,10 +1048,8 @@ void UWBP_TopInfo_C::OnRightStickButtonReleased()
 
 void UWBP_TopInfo_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -1098,10 +1064,8 @@ void UWBP_TopInfo_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerC
 
 void UWBP_TopInfo_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1114,10 +1078,8 @@ void UWBP_TopInfo_C::OnSpecialPressed()
 
 void UWBP_TopInfo_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -1132,10 +1094,8 @@ void UWBP_TopInfo_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerI
 
 void UWBP_TopInfo_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1148,10 +1108,8 @@ void UWBP_TopInfo_C::OnSpecialReleased()
 
 void UWBP_TopInfo_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -1166,10 +1124,8 @@ void UWBP_TopInfo_C::OnSpecialReleasedWithPlayerId(const int32& PlayerController
 
 void UWBP_TopInfo_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1182,10 +1138,8 @@ void UWBP_TopInfo_C::OnUpKeyPressed()
 
 void UWBP_TopInfo_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -1200,10 +1154,8 @@ void UWBP_TopInfo_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerInd
 
 void UWBP_TopInfo_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1216,10 +1168,8 @@ void UWBP_TopInfo_C::OnUpKeyReleased()
 
 void UWBP_TopInfo_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1234,10 +1184,8 @@ void UWBP_TopInfo_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIn
 
 void UWBP_TopInfo_C::PlayInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "PlayInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1250,10 +1198,8 @@ void UWBP_TopInfo_C::PlayInAnim()
 
 void UWBP_TopInfo_C::Setup_Current_Page(ETopInfoWidgetPageCategory ReturnPage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "Setup Current Page");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_Setup_Current_Page Parms{};
 
@@ -1268,10 +1214,8 @@ void UWBP_TopInfo_C::Setup_Current_Page(ETopInfoWidgetPageCategory ReturnPage)
 
 void UWBP_TopInfo_C::SetupBonusInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupBonusInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1288,10 +1232,8 @@ void UWBP_TopInfo_C::SetupBonusInfo()
 
 void UWBP_TopInfo_C::SetupCollaboInfo(const class FText& Title, const class FText& DateTimeText, const struct FDateTime& StartTime, class UTexture2D* Texture, bool IsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupCollaboInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SetupCollaboInfo Parms{};
 
@@ -1317,10 +1259,8 @@ void UWBP_TopInfo_C::SetupCollaboInfo(const class FText& Title, const class FTex
 
 void UWBP_TopInfo_C::SetupDLCInfo(const class FText& Title, const class FText& DateTimeText, const struct FDateTime& StartTime, class UTexture2D* TextureBG, bool IsOnline, bool IsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupDLCInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SetupDLCInfo Parms{};
 
@@ -1342,10 +1282,8 @@ void UWBP_TopInfo_C::SetupDLCInfo(const class FText& Title, const class FText& D
 
 void UWBP_TopInfo_C::SetupEmarjencyInfo(bool IsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupEmarjencyInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SetupEmarjencyInfo Parms{};
 
@@ -1356,30 +1294,24 @@ void UWBP_TopInfo_C::SetupEmarjencyInfo(bool IsNew)
 
 
 // Function WBP_TopInfo.WBP_TopInfo_C.SetupFestaInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       TextureBG                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFestaInfoDispData&              InfoDispData                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    IsNew                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TopInfo_C::SetupFestaInfo(const class FText& Title, const struct FDateTime& StartTime, const struct FDateTime& endTime, class UTexture2D* TextureBG, bool IsNew)
+void UWBP_TopInfo_C::SetupFestaInfo(struct FFestaInfoDispData& InfoDispData, bool IsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupFestaInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SetupFestaInfo Parms{};
 
-	Parms.Title = std::move(Title);
-	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
-	Parms.TextureBG = TextureBG;
+	Parms.InfoDispData = std::move(InfoDispData);
 	Parms.IsNew = IsNew;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InfoDispData = std::move(Parms.InfoDispData);
 }
 
 
@@ -1387,21 +1319,19 @@ void UWBP_TopInfo_C::SetupFestaInfo(const class FText& Title, const struct FDate
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsNew                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FLegendCompeInfoDispData&  DispData                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const struct FDateTime& endTime, bool IsNew, const struct FLegendCompeInfoDispData& DispData)
+void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const struct FDateTime& EndTime, bool IsNew, const struct FLegendCompeInfoDispData& DispData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupLegendInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SetupLegendInfo Parms{};
 
 	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
+	Parms.EndTime = std::move(EndTime);
 	Parms.IsNew = IsNew;
 	Parms.DispData = std::move(DispData);
 
@@ -1414,10 +1344,8 @@ void UWBP_TopInfo_C::SetupLegendInfo(const struct FDateTime& StartTime, const st
 
 void UWBP_TopInfo_C::SetupWorldMatchInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SetupWorldMatchInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1430,10 +1358,8 @@ void UWBP_TopInfo_C::SetupWorldMatchInfo()
 
 void UWBP_TopInfo_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_SilentFocusReady Parms{};
 
@@ -1448,10 +1374,8 @@ void UWBP_TopInfo_C::SilentFocusReady(bool bOnce)
 
 void UWBP_TopInfo_C::StartLeftScroll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "StartLeftScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1462,10 +1386,8 @@ void UWBP_TopInfo_C::StartLeftScroll()
 
 void UWBP_TopInfo_C::StartRightScroll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "StartRightScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1476,10 +1398,8 @@ void UWBP_TopInfo_C::StartRightScroll()
 
 void UWBP_TopInfo_C::UpdateArrawVisible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "UpdateArrawVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1493,10 +1413,8 @@ void UWBP_TopInfo_C::UpdateArrawVisible()
 
 void UWBP_TopInfo_C::UpdatePageDisplay(bool IsCenterCategory_L, bool IsCenterCategory_R)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_C", "UpdatePageDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_C", FnName));
 
 	Params::WBP_TopInfo_C_UpdatePageDisplay Parms{};
 
@@ -1506,5 +1424,5 @@ void UWBP_TopInfo_C::UpdatePageDisplay(bool IsCenterCategory_L, bool IsCenterCat
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

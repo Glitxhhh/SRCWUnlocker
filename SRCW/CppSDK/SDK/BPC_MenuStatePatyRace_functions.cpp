@@ -14,8 +14,7 @@
 #include "BPC_MenuStatePatyRace_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MenuStatePatyRace.BPC_MenuStatePatyRace_C.ExecuteUbergraph_BPC_MenuStatePatyRace
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_MenuStatePatyRace_C::ExecuteUbergraph_BPC_MenuStatePatyRace(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStatePatyRace_C", "ExecuteUbergraph_BPC_MenuStatePatyRace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MenuStatePatyRace_C", "ExecuteUbergraph_BPC_MenuStatePatyRace", FuncInfo);
 
 	Params::BPC_MenuStatePatyRace_C_ExecuteUbergraph_BPC_MenuStatePatyRace Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_MenuStatePatyRace_C::ExecuteUbergraph_BPC_MenuStatePatyRace(int32 Entr
 
 void UBPC_MenuStatePatyRace_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStatePatyRace_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStatePatyRace_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_MenuStatePatyRace_C::OnExitState()
 
 void UBPC_MenuStatePatyRace_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStatePatyRace_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStatePatyRace_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_MenuStatePatyRace_C::OnInitState()
 
 void UBPC_MenuStatePatyRace_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MenuStatePatyRace_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MenuStatePatyRace_C", FnName));
 
 	Params::BPC_MenuStatePatyRace_C_OnUpdateState Parms{};
 
@@ -84,5 +75,5 @@ void UBPC_MenuStatePatyRace_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ConsoleVariablesEditorRuntime.ConsoleVariablesEditorAssetSaveData
 // 0x0028 (0x0028 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FConsoleVariablesEditorAssetSaveData;
 
-}
-
+SDK_NAMESPACE_END

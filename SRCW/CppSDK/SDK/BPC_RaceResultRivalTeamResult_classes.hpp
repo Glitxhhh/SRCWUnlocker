@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceResultRivalTeamResult.BPC_RaceResultRivalTeamResult_C
 // 0x0000 (0x0150 - 0x0150)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceResultRivalTeamResult_C;
 
-}
-
+SDK_NAMESPACE_END

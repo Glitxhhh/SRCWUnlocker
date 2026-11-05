@@ -14,18 +14,15 @@
 #include "WBP_FooterShortCut_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterShortCut.WBP_FooterShortCut_C.BndEvt__WBP_FooterShortCut_MouseInteraction_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_FooterShortCut_C::BndEvt__WBP_FooterShortCut_MouseInteraction_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterShortCut_C", "BndEvt__WBP_FooterShortCut_MouseInteraction_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterShortCut_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FooterShortCut_C::BndEvt__WBP_FooterShortCut_MouseInteraction_K2Node_C
 
 void UWBP_FooterShortCut_C::ExecuteUbergraph_WBP_FooterShortCut(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterShortCut_C", "ExecuteUbergraph_WBP_FooterShortCut");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterShortCut_C", "ExecuteUbergraph_WBP_FooterShortCut", FuncInfo);
 
 	Params::WBP_FooterShortCut_C_ExecuteUbergraph_WBP_FooterShortCut Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_FooterShortCut_C::ExecuteUbergraph_WBP_FooterShortCut(int32 EntryPoint
 
 void UWBP_FooterShortCut_C::SetTextMainType(EFooterMainTextType InType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterShortCut_C", "SetTextMainType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterShortCut_C", FnName));
 
 	Params::WBP_FooterShortCut_C_SetTextMainType Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_FooterShortCut_C::SetTextMainType(EFooterMainTextType InType)
 
 void UWBP_FooterShortCut_C::SetTextSubType(EFooterSubTextType InType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterShortCut_C", "SetTextSubType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterShortCut_C", FnName));
 
 	Params::WBP_FooterShortCut_C_SetTextSubType Parms{};
 
@@ -90,5 +81,5 @@ void UWBP_FooterShortCut_C::SetTextSubType(EFooterSubTextType InType)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

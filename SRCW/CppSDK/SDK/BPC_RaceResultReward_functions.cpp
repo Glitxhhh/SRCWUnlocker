@@ -14,18 +14,45 @@
 #include "BPC_RaceResultReward_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function BPC_RaceResultReward.BPC_RaceResultReward_C.ExecuteUbergraph_BPC_RaceResultReward
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceResultReward_C::ExecuteUbergraph_BPC_RaceResultReward(int32 EntryPoint)
 {
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceResultReward_C", "ExecuteUbergraph_BPC_RaceResultReward", FuncInfo);
+
+	Params::BPC_RaceResultReward_C_ExecuteUbergraph_BPC_RaceResultReward Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function BPC_RaceResultReward.BPC_RaceResultReward_C.OnExitState
 // (Event, Public, BlueprintEvent)
 
 void UBPC_RaceResultReward_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultReward_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultReward_C", "OnExitState");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceResultReward.BPC_RaceResultReward_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_RaceResultReward_C::OnInitState()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultReward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +65,8 @@ void UBPC_RaceResultReward_C::OnExitState()
 
 void UBPC_RaceResultReward_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultReward_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultReward_C", FnName));
 
 	Params::BPC_RaceResultReward_C_OnUpdateState Parms{};
 
@@ -51,38 +76,4 @@ void UBPC_RaceResultReward_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_RaceResultReward.BPC_RaceResultReward_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_RaceResultReward_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultReward_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_RaceResultReward.BPC_RaceResultReward_C.ExecuteUbergraph_BPC_RaceResultReward
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceResultReward_C::ExecuteUbergraph_BPC_RaceResultReward(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultReward_C", "ExecuteUbergraph_BPC_RaceResultReward");
-
-	Params::BPC_RaceResultReward_C_ExecuteUbergraph_BPC_RaceResultReward Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "AnimGraphRuntime_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNode
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -267,10 +266,8 @@ void UBlendSpaceLibrary::SnapToPosition(const struct FBlendSpaceReference& Blend
 
 bool ISequencerAnimationOverride::AllowsCinematicOverride() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SequencerAnimationOverride", "AllowsCinematicOverride");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SequencerAnimationOverride", FnName));
 
 	Params::SequencerAnimationOverride_AllowsCinematicOverride Parms{};
 
@@ -292,10 +289,8 @@ bool ISequencerAnimationOverride::AllowsCinematicOverride() const
 
 TArray<class FName> ISequencerAnimationOverride::GetSequencerAnimSlotNames() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SequencerAnimationOverride", "GetSequencerAnimSlotNames");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SequencerAnimationOverride", FnName));
 
 	Params::SequencerAnimationOverride_GetSequencerAnimSlotNames Parms{};
 
@@ -3414,5 +3409,5 @@ struct FSkeletalControlReference USkeletalControlLibrary::SetAlpha(const struct 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

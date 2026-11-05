@@ -14,8 +14,7 @@
 #include "BP_ItemVioletVoidObject_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ItemVioletVoidObject.BP_ItemVioletVoidObject_C.ExecuteUbergraph_BP_ItemVioletVoidObject
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_ItemVioletVoidObject_C::ExecuteUbergraph_BP_ItemVioletVoidObject(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "ExecuteUbergraph_BP_ItemVioletVoidObject");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ItemVioletVoidObject_C", "ExecuteUbergraph_BP_ItemVioletVoidObject", FuncInfo);
 
 	Params::BP_ItemVioletVoidObject_C_ExecuteUbergraph_BP_ItemVioletVoidObject Parms{};
 
@@ -46,10 +43,8 @@ void ABP_ItemVioletVoidObject_C::ExecuteUbergraph_BP_ItemVioletVoidObject(int32 
 
 void ABP_ItemVioletVoidObject_C::GetAnimePlayRate(double PlayTime, double BaseFrame, double* PlayRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "GetAnimePlayRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	Params::BP_ItemVioletVoidObject_C_GetAnimePlayRate Parms{};
 
@@ -70,10 +65,8 @@ void ABP_ItemVioletVoidObject_C::GetAnimePlayRate(double PlayTime, double BaseFr
 
 bool ABP_ItemVioletVoidObject_C::IsMeshAnimEating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "IsMeshAnimEating");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	Params::BP_ItemVioletVoidObject_C_IsMeshAnimEating Parms{};
 
@@ -90,10 +83,8 @@ bool ABP_ItemVioletVoidObject_C::IsMeshAnimEating()
 
 bool ABP_ItemVioletVoidObject_C::IsMeshAnimInSleep()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "IsMeshAnimInSleep");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	Params::BP_ItemVioletVoidObject_C_IsMeshAnimInSleep Parms{};
 
@@ -110,10 +101,8 @@ bool ABP_ItemVioletVoidObject_C::IsMeshAnimInSleep()
 
 void ABP_ItemVioletVoidObject_C::PlaySE2DEvent(class FName SEName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "PlaySE2DEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	Params::BP_ItemVioletVoidObject_C_PlaySE2DEvent Parms{};
 
@@ -128,10 +117,8 @@ void ABP_ItemVioletVoidObject_C::PlaySE2DEvent(class FName SEName)
 
 void ABP_ItemVioletVoidObject_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +131,8 @@ void ABP_ItemVioletVoidObject_C::ReceiveBeginPlay()
 
 void ABP_ItemVioletVoidObject_C::RequestMeshAnimAppearance(bool bAppearance)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemVioletVoidObject_C", "RequestMeshAnimAppearance");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemVioletVoidObject_C", FnName));
 
 	Params::BP_ItemVioletVoidObject_C_RequestMeshAnimAppearance Parms{};
 
@@ -156,5 +141,5 @@ void ABP_ItemVioletVoidObject_C::RequestMeshAnimAppearance(bool bAppearance)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

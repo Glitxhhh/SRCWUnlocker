@@ -14,18 +14,15 @@
 #include "WBP_Popup_Window_Hint_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C.BindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Popup_Window_Hint_C::BindAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "BindAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Popup_Window_Hint_C::BindAnimationEvent()
 
 void UWBP_Popup_Window_Hint_C::ChangeInputTypeIF(EAppControllerInputType InNewControllerInputType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "ChangeInputTypeIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_ChangeInputTypeIF Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_Popup_Window_Hint_C::ChangeInputTypeIF(EAppControllerInputType InNewCo
 
 void UWBP_Popup_Window_Hint_C::CloseWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "CloseWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_Popup_Window_Hint_C::CloseWindow()
 
 void UWBP_Popup_Window_Hint_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_Popup_Window_Hint_C::Construct()
 
 void UWBP_Popup_Window_Hint_C::DelayInputEnable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "DelayInputEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_Popup_Window_Hint_C::DelayInputEnable()
 
 void UWBP_Popup_Window_Hint_C::ExecuteUbergraph_WBP_Popup_Window_Hint(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "ExecuteUbergraph_WBP_Popup_Window_Hint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Window_Hint_C", "ExecuteUbergraph_WBP_Popup_Window_Hint", FuncInfo);
 
 	Params::WBP_Popup_Window_Hint_C_ExecuteUbergraph_WBP_Popup_Window_Hint Parms{};
 
@@ -118,10 +105,8 @@ void UWBP_Popup_Window_Hint_C::ExecuteUbergraph_WBP_Popup_Window_Hint(int32 Entr
 
 void UWBP_Popup_Window_Hint_C::Finished_4C6E859C40AEF81A6EFEC8815F6EBDF6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "Finished_4C6E859C40AEF81A6EFEC8815F6EBDF6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +119,8 @@ void UWBP_Popup_Window_Hint_C::Finished_4C6E859C40AEF81A6EFEC8815F6EBDF6()
 
 EHintId UWBP_Popup_Window_Hint_C::GetHintId()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "GetHintId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_GetHintId Parms{};
 
@@ -154,10 +137,8 @@ EHintId UWBP_Popup_Window_Hint_C::GetHintId()
 
 void UWBP_Popup_Window_Hint_C::IsMultiPage(bool* bOutIsMultiPage)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "IsMultiPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_IsMultiPage Parms{};
 
@@ -175,10 +156,8 @@ void UWBP_Popup_Window_Hint_C::IsMultiPage(bool* bOutIsMultiPage)
 
 void UWBP_Popup_Window_Hint_C::LoadImageWidgetTexture(const TArray<TSoftObjectPtr<class UTexture2D>>& InImageWidgetTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "LoadImageWidgetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_LoadImageWidgetTexture Parms{};
 
@@ -193,10 +172,8 @@ void UWBP_Popup_Window_Hint_C::LoadImageWidgetTexture(const TArray<TSoftObjectPt
 
 void UWBP_Popup_Window_Hint_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +184,8 @@ void UWBP_Popup_Window_Hint_C::OnAcceptKeyPressed()
 
 void UWBP_Popup_Window_Hint_C::OnInAnimationFinishedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnInAnimationFinishedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +196,8 @@ void UWBP_Popup_Window_Hint_C::OnInAnimationFinishedEvent()
 
 void UWBP_Popup_Window_Hint_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,10 +210,8 @@ void UWBP_Popup_Window_Hint_C::OnLeftShoulderPressed()
 
 void UWBP_Popup_Window_Hint_C::OnLoaded_6A2FCA554B5EA4E54410B982C2471768(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnLoaded_6A2FCA554B5EA4E54410B982C2471768");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_OnLoaded_6A2FCA554B5EA4E54410B982C2471768 Parms{};
 
@@ -255,10 +226,8 @@ void UWBP_Popup_Window_Hint_C::OnLoaded_6A2FCA554B5EA4E54410B982C2471768(class U
 
 void UWBP_Popup_Window_Hint_C::OnOutAnimationFinishedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnOutAnimationFinishedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -269,10 +238,8 @@ void UWBP_Popup_Window_Hint_C::OnOutAnimationFinishedEvent()
 
 void UWBP_Popup_Window_Hint_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -283,10 +250,8 @@ void UWBP_Popup_Window_Hint_C::OnRightShoulderPressed()
 
 void UWBP_Popup_Window_Hint_C::OpenWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OpenWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -297,10 +262,8 @@ void UWBP_Popup_Window_Hint_C::OpenWindow()
 
 void UWBP_Popup_Window_Hint_C::OpenWindowWithoutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "OpenWindowWithoutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -313,10 +276,8 @@ void UWBP_Popup_Window_Hint_C::OpenWindowWithoutAnimation()
 
 void UWBP_Popup_Window_Hint_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_PreConstruct Parms{};
 
@@ -333,10 +294,8 @@ void UWBP_Popup_Window_Hint_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Popup_Window_Hint_C::SetAutoEnableSubMenu(bool Enable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetAutoEnableSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetAutoEnableSubMenu Parms{};
 
@@ -353,10 +312,8 @@ void UWBP_Popup_Window_Hint_C::SetAutoEnableSubMenu(bool Enable)
 
 void UWBP_Popup_Window_Hint_C::SetBackgroundVisible(const bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetBackgroundVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetBackgroundVisible Parms{};
 
@@ -373,10 +330,8 @@ void UWBP_Popup_Window_Hint_C::SetBackgroundVisible(const bool bInVisible)
 
 void UWBP_Popup_Window_Hint_C::SetCharacterVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetCharacterVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetCharacterVisible Parms{};
 
@@ -394,10 +349,8 @@ void UWBP_Popup_Window_Hint_C::SetCharacterVisible(bool bInVisible)
 
 void UWBP_Popup_Window_Hint_C::SetCharacterVisibleByParameter(EHintCategory InCategory, int32 InTipsIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetCharacterVisibleByParameter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetCharacterVisibleByParameter Parms{};
 
@@ -413,10 +366,8 @@ void UWBP_Popup_Window_Hint_C::SetCharacterVisibleByParameter(EHintCategory InCa
 
 void UWBP_Popup_Window_Hint_C::SetEmptyDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetEmptyDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -429,10 +380,8 @@ void UWBP_Popup_Window_Hint_C::SetEmptyDisplay()
 
 void UWBP_Popup_Window_Hint_C::SetExplanationText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetExplanationText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetExplanationText Parms{};
 
@@ -450,10 +399,8 @@ void UWBP_Popup_Window_Hint_C::SetExplanationText(const class FText& InText)
 
 void UWBP_Popup_Window_Hint_C::SetFooterParam(EUIButtonIconType InUIButtonIconType, int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetFooterParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetFooterParam Parms{};
 
@@ -471,10 +418,8 @@ void UWBP_Popup_Window_Hint_C::SetFooterParam(EUIButtonIconType InUIButtonIconTy
 
 void UWBP_Popup_Window_Hint_C::SetFooterVisible(const bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetFooterVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetFooterVisible Parms{};
 
@@ -491,10 +436,8 @@ void UWBP_Popup_Window_Hint_C::SetFooterVisible(const bool bInVisible)
 
 void UWBP_Popup_Window_Hint_C::SetImageTexture(const TSoftObjectPtr<class UTexture2D>& InImageTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetImageTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetImageTexture Parms{};
 
@@ -512,10 +455,8 @@ void UWBP_Popup_Window_Hint_C::SetImageTexture(const TSoftObjectPtr<class UTextu
 
 void UWBP_Popup_Window_Hint_C::SetImageWidget(const TSoftClassPtr<class UClass>& InImageWidget, float InAnimationInterval)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetImageWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetImageWidget Parms{};
 
@@ -531,10 +472,8 @@ void UWBP_Popup_Window_Hint_C::SetImageWidget(const TSoftClassPtr<class UClass>&
 
 void UWBP_Popup_Window_Hint_C::SetImageWidgetObjectTexture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetImageWidgetObjectTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -548,10 +487,8 @@ void UWBP_Popup_Window_Hint_C::SetImageWidgetObjectTexture()
 
 void UWBP_Popup_Window_Hint_C::SetLRArrowVisible(bool bInLVisible, bool bInRVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetLRArrowVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetLRArrowVisible Parms{};
 
@@ -569,10 +506,8 @@ void UWBP_Popup_Window_Hint_C::SetLRArrowVisible(bool bInLVisible, bool bInRVisi
 
 void UWBP_Popup_Window_Hint_C::SetNextPageIndex(int32 InChangeValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetNextPageIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetNextPageIndex Parms{};
 
@@ -590,10 +525,8 @@ void UWBP_Popup_Window_Hint_C::SetNextPageIndex(int32 InChangeValue)
 
 void UWBP_Popup_Window_Hint_C::SetPageDisplay(int32 InPageNum, int32 InCurrentPageIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetPageDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetPageDisplay Parms{};
 
@@ -611,10 +544,8 @@ void UWBP_Popup_Window_Hint_C::SetPageDisplay(int32 InPageNum, int32 InCurrentPa
 
 void UWBP_Popup_Window_Hint_C::SetPageExplanationText(const TArray<class FText>& InTextArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetPageExplanationText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetPageExplanationText Parms{};
 
@@ -631,10 +562,8 @@ void UWBP_Popup_Window_Hint_C::SetPageExplanationText(const TArray<class FText>&
 
 void UWBP_Popup_Window_Hint_C::SetPageImageTexture(const TArray<TSoftObjectPtr<class UTexture2D>>& InImageTextureArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetPageImageTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetPageImageTexture Parms{};
 
@@ -653,10 +582,8 @@ void UWBP_Popup_Window_Hint_C::SetPageImageTexture(const TArray<TSoftObjectPtr<c
 
 void UWBP_Popup_Window_Hint_C::SetPageImageTextureAndWidget(const TArray<TSoftObjectPtr<class UTexture2D>>& InImageTexture, const TArray<TSoftClassPtr<class UClass>>& InImageWidget, const TArray<double>& InImageWidgetAnimationInterval)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetPageImageTextureAndWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetPageImageTextureAndWidget Parms{};
 
@@ -677,10 +604,8 @@ void UWBP_Popup_Window_Hint_C::SetPageImageTextureAndWidget(const TArray<TSoftOb
 
 void UWBP_Popup_Window_Hint_C::SetPageImageWidget(const TArray<TSoftObjectPtr<class UTexture2D>>& InImageTexture, const TArray<TSoftClassPtr<class UClass>>& InImageWidgetArray, const TArray<double>& InAnimationInterval)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetPageImageWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetPageImageWidget Parms{};
 
@@ -697,10 +622,8 @@ void UWBP_Popup_Window_Hint_C::SetPageImageWidget(const TArray<TSoftObjectPtr<cl
 
 void UWBP_Popup_Window_Hint_C::SetScrollBoxParam()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetScrollBoxParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -711,10 +634,8 @@ void UWBP_Popup_Window_Hint_C::SetScrollBoxParam()
 
 void UWBP_Popup_Window_Hint_C::SetTestTextParam()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetTestTextParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -727,10 +648,8 @@ void UWBP_Popup_Window_Hint_C::SetTestTextParam()
 
 void UWBP_Popup_Window_Hint_C::SetTitleText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "SetTitleText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_SetTitleText Parms{};
 
@@ -748,10 +667,8 @@ void UWBP_Popup_Window_Hint_C::SetTitleText(const class FText& InText)
 
 void UWBP_Popup_Window_Hint_C::Setup(EHintId InHintId, bool bInDecisionClose)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_Setup Parms{};
 
@@ -762,15 +679,13 @@ void UWBP_Popup_Window_Hint_C::Setup(EHintId InHintId, bool bInDecisionClose)
 }
 
 
-// Function WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C.UnBindAnimationEvent
+// Function WBP_Popup_Window_Hint.WBP_Popup_Window_Hint_C.UnbindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Popup_Window_Hint_C::UnBindAnimationEvent()
+void UWBP_Popup_Window_Hint_C::UnbindAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UnBindAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -783,10 +698,8 @@ void UWBP_Popup_Window_Hint_C::UnBindAnimationEvent()
 
 void UWBP_Popup_Window_Hint_C::UpdateDisplay(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UpdateDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_UpdateDisplay Parms{};
 
@@ -803,10 +716,8 @@ void UWBP_Popup_Window_Hint_C::UpdateDisplay(EHintId InHintId)
 
 void UWBP_Popup_Window_Hint_C::UpdateFooter(bool bInIsTips)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UpdateFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_UpdateFooter Parms{};
 
@@ -821,10 +732,8 @@ void UWBP_Popup_Window_Hint_C::UpdateFooter(bool bInIsTips)
 
 void UWBP_Popup_Window_Hint_C::UpdateInputType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "UpdateInputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -837,10 +746,8 @@ void UWBP_Popup_Window_Hint_C::UpdateInputType()
 
 EMainMenuRegistPriority UWBP_Popup_Window_Hint_C::GetRegistPriority() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Hint_C", "GetRegistPriority");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Hint_C", FnName));
 
 	Params::WBP_Popup_Window_Hint_C_GetRegistPriority Parms{};
 
@@ -849,5 +756,5 @@ EMainMenuRegistPriority UWBP_Popup_Window_Hint_C::GetRegistPriority() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

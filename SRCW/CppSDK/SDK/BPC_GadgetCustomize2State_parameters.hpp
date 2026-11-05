@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_GadgetCustomize2State.BPC_GadgetCustomize2State_C.ExecuteUbergraph_BPC_GadgetCustomize2State
 // 0x0080 (0x0080 - 0x0000)
@@ -113,5 +113,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_GadgetCustomize2State_C_IsSelectedPlateDataChanged;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

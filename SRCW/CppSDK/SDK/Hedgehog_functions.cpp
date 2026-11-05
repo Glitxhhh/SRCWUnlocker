@@ -14,8 +14,7 @@
 #include "Hedgehog_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Hedgehog.HHEasing.BackEaseIn
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -1008,5 +1007,5 @@ struct FVector UHHMathUtility::Vector3RotateTowards(const struct FVector& Curren
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

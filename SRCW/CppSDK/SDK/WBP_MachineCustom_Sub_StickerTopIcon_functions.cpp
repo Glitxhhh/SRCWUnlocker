@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_StickerTopIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerTopIcon.WBP_MachineCustom_Sub_StickerTopIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::Construct()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_StickerTopIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_StickerTopIcon_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTopIcon Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::ExecuteUbergraph_WBP_MachineCustom
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnDownKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +103,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnFaceButtonTopPressed()
 
 struct FEventReply UWBP_MachineCustom_Sub_StickerTopIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTopIcon_C_OnFocusReceived Parms{};
 
@@ -137,10 +122,8 @@ struct FEventReply UWBP_MachineCustom_Sub_StickerTopIcon_C::OnFocusReceived(cons
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +134,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnLeftKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,10 +146,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnRightKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +160,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::OnUpKeyPressed()
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::SetIsIconEmpty(bool IsEmpty)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "SetIsIconEmpty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTopIcon_C_SetIsIconEmpty Parms{};
 
@@ -201,10 +178,8 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::SetIsIconEmpty(bool IsEmpty)
 
 void UWBP_MachineCustom_Sub_StickerTopIcon_C::SetMaterialName(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTopIcon_C", "SetMaterialName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTopIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTopIcon_C_SetMaterialName Parms{};
 
@@ -213,5 +188,5 @@ void UWBP_MachineCustom_Sub_StickerTopIcon_C::SetMaterialName(const class FText&
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

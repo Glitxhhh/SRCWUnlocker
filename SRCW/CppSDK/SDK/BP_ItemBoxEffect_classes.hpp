@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBoxEffect.BP_ItemBoxEffect_C
 // 0x0000 (0x0428 - 0x0428)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemBoxEffect_C;
 
-}
-
+SDK_NAMESPACE_END

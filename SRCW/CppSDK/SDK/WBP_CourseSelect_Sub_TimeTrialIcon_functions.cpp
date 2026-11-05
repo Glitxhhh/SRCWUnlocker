@@ -14,8 +14,7 @@
 #include "WBP_CourseSelect_Sub_TimeTrialIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_TimeTrialIcon.WBP_CourseSelect_Sub_TimeTrialIcon_C.ExecuteUbergraph_WBP_CourseSelect_Sub_TimeTrialIcon
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CourseSelect_Sub_TimeTrialIcon_C::ExecuteUbergraph_WBP_CourseSelect_Sub_TimeTrialIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_TimeTrialIcon_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_TimeTrialIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_TimeTrialIcon_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_TimeTrialIcon", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_TimeTrialIcon_C_ExecuteUbergraph_WBP_CourseSelect_Sub_TimeTrialIcon Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_CourseSelect_Sub_TimeTrialIcon_C::ExecuteUbergraph_WBP_CourseSelect_Su
 
 void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_TimeTrialIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_TimeTrialIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnBackKeyPressed()
 
 void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_TimeTrialIcon_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_TimeTrialIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnLeftShoulderPressed()
 
 void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_TimeTrialIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_TimeTrialIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_CourseSelect_Sub_TimeTrialIcon_C::OnRightShoulderPressed()
 
 void UWBP_CourseSelect_Sub_TimeTrialIcon_C::SetLockButton(bool Lock_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_TimeTrialIcon_C", "SetLockButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_TimeTrialIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_TimeTrialIcon_C_SetLockButton Parms{};
 
@@ -98,5 +87,5 @@ void UWBP_CourseSelect_Sub_TimeTrialIcon_C::SetLockButton(bool Lock_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

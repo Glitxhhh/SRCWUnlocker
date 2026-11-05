@@ -14,18 +14,15 @@
 #include "WBP_GadgetInfo_Sub_Category_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetInfo_Sub_Category.WBP_GadgetInfo_Sub_Category_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_GadgetInfo_Sub_Category_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_Sub_Category_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GadgetInfo_Sub_Category_C::Construct()
 
 void UWBP_GadgetInfo_Sub_Category_C::ExecuteUbergraph_WBP_GadgetInfo_Sub_Category(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "ExecuteUbergraph_WBP_GadgetInfo_Sub_Category");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetInfo_Sub_Category_C", "ExecuteUbergraph_WBP_GadgetInfo_Sub_Category", FuncInfo);
 
 	Params::WBP_GadgetInfo_Sub_Category_C_ExecuteUbergraph_WBP_GadgetInfo_Sub_Category Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_GadgetInfo_Sub_Category_C::ExecuteUbergraph_WBP_GadgetInfo_Sub_Categor
 
 void UWBP_GadgetInfo_Sub_Category_C::IsListOver(bool* IsOver)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "IsListOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_Sub_Category_C", FnName));
 
 	Params::WBP_GadgetInfo_Sub_Category_C_IsListOver Parms{};
 
@@ -79,10 +72,8 @@ void UWBP_GadgetInfo_Sub_Category_C::IsListOver(bool* IsOver)
 
 void UWBP_GadgetInfo_Sub_Category_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_Sub_Category_C", FnName));
 
 	Params::WBP_GadgetInfo_Sub_Category_C_PreConstruct Parms{};
 
@@ -99,10 +90,8 @@ void UWBP_GadgetInfo_Sub_Category_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GadgetInfo_Sub_Category_C::SetIconList(TArray<int32>& GadgetIds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "SetIconList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_Sub_Category_C", FnName));
 
 	Params::WBP_GadgetInfo_Sub_Category_C_SetIconList Parms{};
 
@@ -121,10 +110,8 @@ void UWBP_GadgetInfo_Sub_Category_C::SetIconList(TArray<int32>& GadgetIds)
 
 void UWBP_GadgetInfo_Sub_Category_C::SetModeStyle(EEventInfomationType EventInfomation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_Sub_Category_C", "SetModeStyle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_Sub_Category_C", FnName));
 
 	Params::WBP_GadgetInfo_Sub_Category_C_SetModeStyle Parms{};
 
@@ -133,5 +120,5 @@ void UWBP_GadgetInfo_Sub_Category_C::SetModeStyle(EEventInfomationType EventInfo
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

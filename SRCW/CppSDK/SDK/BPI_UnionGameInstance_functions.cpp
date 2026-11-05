@@ -14,8 +14,7 @@
 #include "BPI_UnionGameInstance_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_UnionGameInstance.BPI_UnionGameInstance_C.GetVCSRevisionNumIF
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 void IBPI_UnionGameInstance_C::GetVCSRevisionNumIF(int32* RevisionNum) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_UnionGameInstance_C", "GetVCSRevisionNumIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_UnionGameInstance_C", FnName));
 
 	Params::BPI_UnionGameInstance_C_GetVCSRevisionNumIF Parms{};
 
@@ -45,10 +42,8 @@ void IBPI_UnionGameInstance_C::GetVCSRevisionNumIF(int32* RevisionNum) const
 
 void IBPI_UnionGameInstance_C::GetVCSRevisionStrIF(class FString* VCSStr) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_UnionGameInstance_C", "GetVCSRevisionStrIF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_UnionGameInstance_C", FnName));
 
 	Params::BPI_UnionGameInstance_C_GetVCSRevisionStrIF Parms{};
 
@@ -58,5 +53,5 @@ void IBPI_UnionGameInstance_C::GetVCSRevisionStrIF(class FString* VCSStr) const
 		*VCSStr = std::move(Parms.VCSStr);
 }
 
-}
 
+SDK_NAMESPACE_END

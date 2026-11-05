@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Result_Sub_BonusCountIcon.WBP_Result_Sub_BonusCountIcon_C
 // 0x0028 (0x0308 - 0x02E0)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Result_Sub_BonusCountIcon_C;
 
-}
-
+SDK_NAMESPACE_END

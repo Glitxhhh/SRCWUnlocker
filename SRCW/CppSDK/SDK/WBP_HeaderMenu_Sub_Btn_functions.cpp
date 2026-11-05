@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_Sub_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_Btn.WBP_HeaderMenu_Sub_Btn_C.BndEvt__WBP_HeaderMenu_Sub_Btn_MouseInteractionBtn_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_HeaderMenu_Sub_Btn_C::BndEvt__WBP_HeaderMenu_Sub_Btn_MouseInteractionBtn_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "BndEvt__WBP_HeaderMenu_Sub_Btn_MouseInteractionBtn_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::BndEvt__WBP_HeaderMenu_Sub_Btn_MouseInteractionB
 
 void UWBP_HeaderMenu_Sub_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::Construct()
 
 void UWBP_HeaderMenu_Sub_Btn_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_Sub_Btn_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_Btn", FuncInfo);
 
 	Params::WBP_HeaderMenu_Sub_Btn_C_ExecuteUbergraph_WBP_HeaderMenu_Sub_Btn Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_Btn(int32 En
 
 void UWBP_HeaderMenu_Sub_Btn_C::SetButtonTypeEmote()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "SetButtonTypeEmote");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::SetButtonTypeEmote()
 
 void UWBP_HeaderMenu_Sub_Btn_C::SetButtonTypeJukeBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "SetButtonTypeJukeBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::SetButtonTypeJukeBox()
 
 void UWBP_HeaderMenu_Sub_Btn_C::SetIconControllerBtn(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "SetIconControllerBtn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Btn_C_SetIconControllerBtn Parms{};
 
@@ -121,10 +108,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::SetIconControllerBtn(int32 Index_0)
 
 void UWBP_HeaderMenu_Sub_Btn_C::SetLeftIcon(EUIButtonIconType Type, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "SetLeftIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Btn_C_SetLeftIcon Parms{};
 
@@ -142,10 +127,8 @@ void UWBP_HeaderMenu_Sub_Btn_C::SetLeftIcon(EUIButtonIconType Type, int32 Index_
 
 void UWBP_HeaderMenu_Sub_Btn_C::SetRightIcon(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "SetRightIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Btn_C_SetRightIcon Parms{};
 
@@ -160,13 +143,11 @@ void UWBP_HeaderMenu_Sub_Btn_C::SetRightIcon(int32 Index_0)
 
 void UWBP_HeaderMenu_Sub_Btn_C::Update_Animation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Btn_C", "Update Animation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

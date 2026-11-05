@@ -14,8 +14,7 @@
 #include "WBP_Friend_PlayerStatusIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_PlayerStatusIcon.WBP_Friend_PlayerStatusIcon_C.ExecuteUbergraph_WBP_Friend_PlayerStatusIcon
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_PlayerStatusIcon_C::ExecuteUbergraph_WBP_Friend_PlayerStatusIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerStatusIcon_C", "ExecuteUbergraph_WBP_Friend_PlayerStatusIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_PlayerStatusIcon_C", "ExecuteUbergraph_WBP_Friend_PlayerStatusIcon", FuncInfo);
 
 	Params::WBP_Friend_PlayerStatusIcon_C_ExecuteUbergraph_WBP_Friend_PlayerStatusIcon Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Friend_PlayerStatusIcon_C::ExecuteUbergraph_WBP_Friend_PlayerStatusIco
 
 void UWBP_Friend_PlayerStatusIcon_C::SetIconType(int32 InIconType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerStatusIcon_C", "SetIconType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerStatusIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerStatusIcon_C_SetIconType Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_Friend_PlayerStatusIcon_C::SetIconType(int32 InIconType)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

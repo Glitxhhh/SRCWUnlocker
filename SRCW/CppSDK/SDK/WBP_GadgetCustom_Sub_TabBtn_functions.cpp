@@ -14,18 +14,15 @@
 #include "WBP_GadgetCustom_Sub_TabBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.BndEvt__WBP_GadgetCustom_Sub_TabBtn_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::BndEvt__WBP_GadgetCustom_Sub_TabBtn_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "BndEvt__WBP_GadgetCustom_Sub_TabBtn_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::BndEvt__WBP_GadgetCustom_Sub_TabBtn_MouseIn
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_TabBtn_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBtn", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBtn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_TabBt
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,52 +63,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnAcceptKeyPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnBackKeyPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstFestaIconImage
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstFestaIconImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstFestaIconImage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstMouseInteractionButton
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstMouseInteractionButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstMouseInteractionButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_TabBtn.WBP_GadgetCustom_Sub_TabBtn_C.OnConstNameText
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstNameText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnConstNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +75,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnConstNameText()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -144,10 +91,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnDownKeyPressed()
 
 struct FEventReply UWBP_GadgetCustom_Sub_TabBtn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_OnFocusReceived Parms{};
 
@@ -168,10 +113,8 @@ struct FEventReply UWBP_GadgetCustom_Sub_TabBtn_C::OnFocusReceived(const struct 
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnFocusReceivedInternal(const struct FGeometry& InGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_OnFocusReceivedInternal Parms{};
 
@@ -187,10 +130,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnFocusReceivedInternal(const struct FGeome
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,10 +142,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnLeftKeyPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -215,10 +154,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnLeftShoulderPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -229,10 +166,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnRightKeyPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -243,10 +178,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnRightShoulderPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -259,10 +192,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::OnUpKeyPressed()
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::SetActive(const bool InIsActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "SetActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_SetActive Parms{};
 
@@ -279,10 +210,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::SetActive(const bool InIsActive)
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::SetRentalPlate(bool InUseRentalPlate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "SetRentalPlate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_SetRentalPlate Parms{};
 
@@ -299,10 +228,8 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::SetRentalPlate(bool InUseRentalPlate)
 
 void UWBP_GadgetCustom_Sub_TabBtn_C::SetShape(int32 InShapeIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_TabBtn_C", "SetShape");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_TabBtn_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_TabBtn_C_SetShape Parms{};
 
@@ -311,5 +238,5 @@ void UWBP_GadgetCustom_Sub_TabBtn_C::SetShape(int32 InShapeIndex)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

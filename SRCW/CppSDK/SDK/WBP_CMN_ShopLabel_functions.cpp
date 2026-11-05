@@ -14,8 +14,7 @@
 #include "WBP_CMN_ShopLabel_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_ShopLabel.WBP_CMN_ShopLabel_C.OnSetPrice
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_ShopLabel_C::OnSetPrice(int32 InPrice)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ShopLabel_C", "OnSetPrice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ShopLabel_C", FnName));
 
 	Params::WBP_CMN_ShopLabel_C_OnSetPrice Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_ShopLabel_C::OnSetPrice(int32 InPrice)
 
 void UWBP_CMN_ShopLabel_C::OnSetPriceColor(const struct FSlateColor& InColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ShopLabel_C", "OnSetPriceColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ShopLabel_C", FnName));
 
 	Params::WBP_CMN_ShopLabel_C_OnSetPriceColor Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_CMN_ShopLabel_C::OnSetPriceColor(const struct FSlateColor& InColor)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

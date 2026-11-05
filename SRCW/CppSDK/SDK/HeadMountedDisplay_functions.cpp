@@ -14,8 +14,7 @@
 #include "HeadMountedDisplay_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function HeadMountedDisplay.HandKeypointConversion.Conv_HandKeypointToInt32
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
@@ -114,10 +113,8 @@ float UMotionControllerComponent::GetParameterValue(class FName InName, bool* bV
 
 void UMotionControllerComponent::OnMotionControllerUpdated()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MotionControllerComponent", "OnMotionControllerUpdated");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"MotionControllerComponent", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -334,5 +331,5 @@ bool UMotionControllerComponent::IsTracked() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

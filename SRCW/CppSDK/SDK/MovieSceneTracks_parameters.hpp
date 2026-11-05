@@ -17,16 +17,19 @@
 #include "MovieSceneTracks_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
 // 0x0060 (0x0060 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneTransformOrigin_BP_GetTransformOrigin
+#define DUMPER7_PARAM_DEFINED_MovieSceneTransformOrigin_BP_GetTransformOrigin
 struct MovieSceneTransformOrigin_BP_GetTransformOrigin final
 {
 public:
 	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_MovieSceneTransformOrigin_BP_GetTransformOrigin;
 
 // Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
@@ -642,5 +645,5 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneSkeletalAnimationTrack_GetSwapRootBone;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_MenuSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MenuSequence.BP_MenuSequence_C.ExecuteUbergraph_BP_MenuSequence
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_MenuSequence_C::ExecuteUbergraph_BP_MenuSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "ExecuteUbergraph_BP_MenuSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MenuSequence_C", "ExecuteUbergraph_BP_MenuSequence", FuncInfo);
 
 	Params::BP_MenuSequence_C_ExecuteUbergraph_BP_MenuSequence Parms{};
 
@@ -44,10 +41,8 @@ void ABP_MenuSequence_C::ExecuteUbergraph_BP_MenuSequence(int32 EntryPoint)
 
 class UObject* ABP_MenuSequence_C::GetFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "GetFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	Params::BP_MenuSequence_C_GetFooter Parms{};
 
@@ -62,10 +57,8 @@ class UObject* ABP_MenuSequence_C::GetFooter()
 
 void ABP_MenuSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void ABP_MenuSequence_C::OnFinalize()
 
 void ABP_MenuSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void ABP_MenuSequence_C::OnInitialize()
 
 void ABP_MenuSequence_C::OnInviteConfirmWindowInEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnInviteConfirmWindowInEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void ABP_MenuSequence_C::OnInviteConfirmWindowInEvent()
 
 void ABP_MenuSequence_C::OnInviteConfirmWindowOutEvent(bool bResultYes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnInviteConfirmWindowOutEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	Params::BP_MenuSequence_C_OnInviteConfirmWindowOutEvent Parms{};
 
@@ -126,10 +113,8 @@ void ABP_MenuSequence_C::OnInviteConfirmWindowOutEvent(bool bResultYes)
 
 void ABP_MenuSequence_C::OnReceiveInviteWindowCallback(bool ResultIsYes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnReceiveInviteWindowCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	Params::BP_MenuSequence_C_OnReceiveInviteWindowCallback Parms{};
 
@@ -146,10 +131,8 @@ void ABP_MenuSequence_C::OnReceiveInviteWindowCallback(bool ResultIsYes)
 
 void ABP_MenuSequence_C::OnUpdate(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "OnUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	Params::BP_MenuSequence_C_OnUpdate Parms{};
 
@@ -164,13 +147,11 @@ void ABP_MenuSequence_C::OnUpdate(float InDeltaTime)
 
 void ABP_MenuSequence_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuSequence_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_MachineSelect_Sub_TypeBox_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_TypeBox.WBP_MachineSelect_Sub_TypeBox_C.BndEvt__WBP_MachineSelect_Sub_TypeBox_UnionScroll_K2Node_ComponentBoundEvent_0_ScrollAnimationEvent__DelegateSignature
 // (BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineSelect_Sub_TypeBox_C::BndEvt__WBP_MachineSelect_Sub_TypeBox_UnionScroll_K2Node_ComponentBoundEvent_0_ScrollAnimationEvent__DelegateSignature(class UUnionUILoopScrollBox* FinishedWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "BndEvt__WBP_MachineSelect_Sub_TypeBox_UnionScroll_K2Node_ComponentBoundEvent_0_ScrollAnimationEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_BndEvt__WBP_MachineSelect_Sub_TypeBox_UnionScroll_K2Node_ComponentBoundEvent_0_ScrollAnimationEvent__DelegateSignature Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::BndEvt__WBP_MachineSelect_Sub_TypeBox_Uni
 
 void UWBP_MachineSelect_Sub_TypeBox_C::CancelBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "CancelBack");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::CancelBack()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::Close()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::Construct()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::ExecuteUbergraph_WBP_MachineSelect_Sub_TypeBox(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_TypeBox");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_TypeBox_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_TypeBox", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_ExecuteUbergraph_WBP_MachineSelect_Sub_TypeBox Parms{};
 
@@ -104,10 +93,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::ExecuteUbergraph_WBP_MachineSelect_Sub_Ty
 
 void UWBP_MachineSelect_Sub_TypeBox_C::OnFinishedScrollAnimationBP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "OnFinishedScrollAnimationBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +107,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::OnFinishedScrollAnimationBP()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::OnScrollAnimFinishedEvent(class UUnionUILoopScrollBox* FinishedWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "OnScrollAnimFinishedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_OnScrollAnimFinishedEvent Parms{};
 
@@ -141,10 +126,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::OnScrollAnimFinishedEvent(class UUnionUIL
 
 void UWBP_MachineSelect_Sub_TypeBox_C::PlayScroll(bool bDownRight, bool bInImmediateReflection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "PlayScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_PlayScroll Parms{};
 
@@ -162,10 +145,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::PlayScroll(bool bDownRight, bool bInImmed
 
 void UWBP_MachineSelect_Sub_TypeBox_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_PreConstruct Parms{};
 
@@ -182,10 +163,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetCursorVisible(bool NewVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetCursorVisible Parms{};
 
@@ -203,10 +182,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetCursorVisible(bool NewVisible)
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetElementTexture(const int32& InIndex, class UTexture2D* InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetElementTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetElementTexture Parms{};
 
@@ -224,10 +201,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetElementTexture(const int32& InIndex, c
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetFocusIndex(int32 InSelectMachineIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetFocusIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetFocusIndex Parms{};
 
@@ -246,10 +221,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetFocusIndex(int32 InSelectMachineIndex)
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetIconScale(int32 Index_0, double Scale, double Ytransrate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetIconScale");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetIconScale Parms{};
 
@@ -269,10 +242,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetIconScale(int32 Index_0, double Scale,
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineID(int32 Index_0, EMachineId MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetMachineID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetMachineID Parms{};
 
@@ -290,10 +261,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineID(int32 Index_0, EMachineId Ma
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineType(ECarStatusType machineType_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetMachineType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetMachineType Parms{};
 
@@ -310,10 +279,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineType(ECarStatusType machineType
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineTypeColorWidth(int32 Width)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetMachineTypeColorWidth");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetMachineTypeColorWidth Parms{};
 
@@ -330,10 +297,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetMachineTypeColorWidth(int32 Width)
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetMode(EMachineSelectMode::EMachineSelectMode InMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetMode Parms{};
 
@@ -350,10 +315,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetMode(EMachineSelectMode::EMachineSelec
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetPlayerControllerIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetPlayerControllerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetPlayerControllerIndex Parms{};
 
@@ -368,10 +331,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetPlayerControllerIndex(int32 Index_0)
 
 void UWBP_MachineSelect_Sub_TypeBox_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -386,10 +347,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::Setup()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::SetupButton(class UWBP_MachineSelect_Sub_MachineBtn_C* InButton, int32 InIndex, EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "SetupButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_SetupButton Parms{};
 
@@ -406,10 +365,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::SetupButton(class UWBP_MachineSelect_Sub_
 
 void UWBP_MachineSelect_Sub_TypeBox_C::StopScroll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "StopScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -420,10 +377,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::StopScroll()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconScale()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "UpdateIconScale");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -438,10 +393,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconScale()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconSizeAndYTransrate(class UDataTable* DataTable, int32 Index_0, bool bYTransrateAdjust)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "UpdateIconSizeAndYTransrate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_UpdateIconSizeAndYTransrate Parms{};
 
@@ -458,10 +411,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconSizeAndYTransrate(class UDataTa
 
 void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconTextures()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "UpdateIconTextures");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -472,10 +423,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::UpdateIconTextures()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::UpdateMachineIds()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "UpdateMachineIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -490,10 +439,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::UpdateMachineIds()
 
 void UWBP_MachineSelect_Sub_TypeBox_C::CalcTmpElementMax(int32 InCount, int32 InAlreadyCount, int32* OutTmpElementMax) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "CalcTmpElementMax");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_CalcTmpElementMax Parms{};
 
@@ -516,10 +463,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::CalcTmpElementMax(int32 InCount, int32 In
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetCenter(class UObject** Output, int32* Index_0, EMachineId* MachineId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetCenter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetCenter Parms{};
 
@@ -543,10 +488,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetCenter(class UObject** Output, int32* 
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetCurrentItemDisplayIndex(int32* OutDisplayIndex) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetCurrentItemDisplayIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetCurrentItemDisplayIndex Parms{};
 
@@ -566,10 +509,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetCurrentItemDisplayIndex(int32* OutDisp
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetIconTexture(EMachineId InMachineID, class UTexture2D** OutIconTexture, bool* bOutIsFound) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetIconTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetIconTexture Parms{};
 
@@ -593,10 +534,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetIconTexture(EMachineId InMachineID, cl
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineId(int32 InMachineIndex, EMachineId* OutMachineId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineId Parms{};
 
@@ -616,10 +555,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineId(int32 InMachineIndex, EMachi
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdCurrent(EMachineId* MachineId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineIdCurrent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineIdCurrent Parms{};
 
@@ -633,19 +570,17 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdCurrent(EMachineId* MachineId
 // Function WBP_MachineSelect_Sub_TypeBox.WBP_MachineSelect_Sub_TypeBox_C.GetMachineIdNext
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                                    isNext                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsNext                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId*                             MachineId                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool isNext, EMachineId* MachineId) const
+void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool IsNext, EMachineId* MachineId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineIdNext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineIdNext Parms{};
 
-	Parms.isNext = isNext;
+	Parms.IsNext = IsNext;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -661,10 +596,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIdNext(bool isNext, EMachineId*
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIds(TArray<EMachineId>* MachineIds_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineIds Parms{};
 
@@ -682,10 +615,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineIds(TArray<EMachineId>* Machine
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineNum(int32* OutMachineNum) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineNum Parms{};
 
@@ -703,10 +634,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineNum(int32* OutMachineNum) const
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineType(ECarStatusType* Machine_Type) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMachineType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMachineType Parms{};
 
@@ -724,10 +653,8 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMachineType(ECarStatusType* Machine_Ty
 
 void UWBP_MachineSelect_Sub_TypeBox_C::GetMode(EMachineSelectMode::EMachineSelectMode* OutMode) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeBox_C", "GetMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeBox_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeBox_C_GetMode Parms{};
 
@@ -737,5 +664,5 @@ void UWBP_MachineSelect_Sub_TypeBox_C::GetMode(EMachineSelectMode::EMachineSelec
 		*OutMode = Parms.OutMode;
 }
 
-}
 
+SDK_NAMESPACE_END

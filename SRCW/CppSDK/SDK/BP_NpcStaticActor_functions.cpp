@@ -14,8 +14,7 @@
 #include "BP_NpcStaticActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_NpcStaticActor.BP_NpcStaticActor_C.DamageSpinStart
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_NpcStaticActor_C::DamageSpinStart(float Direction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticActor_C", "DamageSpinStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticActor_C", FnName));
 
 	Params::BP_NpcStaticActor_C_DamageSpinStart Parms{};
 
@@ -44,10 +41,8 @@ void ABP_NpcStaticActor_C::DamageSpinStart(float Direction)
 
 void ABP_NpcStaticActor_C::ExecuteUbergraph_BP_NpcStaticActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticActor_C", "ExecuteUbergraph_BP_NpcStaticActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_NpcStaticActor_C", "ExecuteUbergraph_BP_NpcStaticActor", FuncInfo);
 
 	Params::BP_NpcStaticActor_C_ExecuteUbergraph_BP_NpcStaticActor Parms{};
 
@@ -64,10 +59,8 @@ void ABP_NpcStaticActor_C::ExecuteUbergraph_BP_NpcStaticActor(int32 EntryPoint)
 
 void ABP_NpcStaticActor_C::StartSpinAgain(ETimelineDirection Direction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticActor_C", "StartSpinAgain");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticActor_C", FnName));
 
 	Params::BP_NpcStaticActor_C_StartSpinAgain Parms{};
 
@@ -82,10 +75,8 @@ void ABP_NpcStaticActor_C::StartSpinAgain(ETimelineDirection Direction)
 
 void ABP_NpcStaticActor_C::Timeline_Damage_Spin__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticActor_C", "Timeline Damage Spin__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -96,13 +87,11 @@ void ABP_NpcStaticActor_C::Timeline_Damage_Spin__FinishedFunc()
 
 void ABP_NpcStaticActor_C::Timeline_Damage_Spin__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticActor_C", "Timeline Damage Spin__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

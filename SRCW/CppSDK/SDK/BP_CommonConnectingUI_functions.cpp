@@ -14,8 +14,7 @@
 #include "BP_CommonConnectingUI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_CommonConnectingUI.BP_CommonConnectingUI_C.Display
 // (Event, Protected, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_CommonConnectingUI_C::Display(class UUserWidget* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CommonConnectingUI_C", "Display");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CommonConnectingUI_C", FnName));
 
 	Params::BP_CommonConnectingUI_C_Display Parms{};
 
@@ -44,10 +41,8 @@ void ABP_CommonConnectingUI_C::Display(class UUserWidget* Widget)
 
 void ABP_CommonConnectingUI_C::ExecuteUbergraph_BP_CommonConnectingUI(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CommonConnectingUI_C", "ExecuteUbergraph_BP_CommonConnectingUI");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_CommonConnectingUI_C", "ExecuteUbergraph_BP_CommonConnectingUI", FuncInfo);
 
 	Params::BP_CommonConnectingUI_C_ExecuteUbergraph_BP_CommonConnectingUI Parms{};
 
@@ -62,13 +57,11 @@ void ABP_CommonConnectingUI_C::ExecuteUbergraph_BP_CommonConnectingUI(int32 Entr
 
 void ABP_CommonConnectingUI_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CommonConnectingUI_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_CommonConnectingUI_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

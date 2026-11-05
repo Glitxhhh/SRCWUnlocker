@@ -14,8 +14,7 @@
 #include "Engine_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Engine.BlueprintTypeConversions.ConvertArrayType
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams)
@@ -605,6 +604,90 @@ TSet<int32> UBlueprintTypeConversions::ConvertSetType(const TSet<int32>& InSet)
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IInterface_AssetUserData::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "AddAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* IInterface_AssetUserData::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "GetAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IInterface_AssetUserData::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "HasAssetUserDataOfClass");
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.ActorComponent.Activate
 // (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -751,10 +834,8 @@ void UActorComponent::OnRep_IsActive()
 
 void UActorComponent::ReceiveAsyncPhysicsTick(float DeltaSeconds, float SimSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ActorComponent", "ReceiveAsyncPhysicsTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ActorComponent", FnName));
 
 	Params::ActorComponent_ReceiveAsyncPhysicsTick Parms{};
 
@@ -770,10 +851,8 @@ void UActorComponent::ReceiveAsyncPhysicsTick(float DeltaSeconds, float SimSecon
 
 void UActorComponent::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ActorComponent", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ActorComponent", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -786,10 +865,8 @@ void UActorComponent::ReceiveBeginPlay()
 
 void UActorComponent::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ActorComponent", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ActorComponent", FnName));
 
 	Params::ActorComponent_ReceiveEndPlay Parms{};
 
@@ -806,10 +883,8 @@ void UActorComponent::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 void UActorComponent::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ActorComponent", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ActorComponent", FnName));
 
 	Params::ActorComponent_ReceiveTick Parms{};
 
@@ -1243,6 +1318,84 @@ bool UActorComponent::IsComponentTickEnabled() const
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorComponent::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UActorComponent::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorComponent::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.StreamableRenderAsset.SetForceMipLevelsToBeResident
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1378,6 +1531,84 @@ bool UTexture::ComputeTextureSourceChannelMinMax(struct FLinearColor* OutColorMi
 
 	if (OutColorMax != nullptr)
 		*OutColorMax = std::move(Parms.OutColorMax);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UTexture::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UTexture::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UTexture::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -2144,10 +2375,8 @@ void AActor::K2_DetachFromActor(EDetachmentRule LocationRule, EDetachmentRule Ro
 
 void AActor::K2_OnBecomeViewTarget(class APlayerController* PC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "K2_OnBecomeViewTarget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_K2_OnBecomeViewTarget Parms{};
 
@@ -2164,10 +2393,8 @@ void AActor::K2_OnBecomeViewTarget(class APlayerController* PC)
 
 void AActor::K2_OnEndViewTarget(class APlayerController* PC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "K2_OnEndViewTarget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_K2_OnEndViewTarget Parms{};
 
@@ -2182,10 +2409,8 @@ void AActor::K2_OnEndViewTarget(class APlayerController* PC)
 
 void AActor::K2_OnReset()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "K2_OnReset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2622,10 +2847,8 @@ void AActor::PrestreamTextures(float Seconds, bool bEnableStreaming, int32 Cinem
 
 void AActor::ReceiveActorBeginCursorOver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorBeginCursorOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2638,10 +2861,8 @@ void AActor::ReceiveActorBeginCursorOver()
 
 void AActor::ReceiveActorBeginOverlap(class AActor* OtherActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorBeginOverlap");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorBeginOverlap Parms{};
 
@@ -2656,10 +2877,8 @@ void AActor::ReceiveActorBeginOverlap(class AActor* OtherActor)
 
 void AActor::ReceiveActorEndCursorOver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorEndCursorOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2672,10 +2891,8 @@ void AActor::ReceiveActorEndCursorOver()
 
 void AActor::ReceiveActorEndOverlap(class AActor* OtherActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorEndOverlap");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorEndOverlap Parms{};
 
@@ -2692,10 +2909,8 @@ void AActor::ReceiveActorEndOverlap(class AActor* OtherActor)
 
 void AActor::ReceiveActorOnClicked(const struct FKey& ButtonPressed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnClicked Parms{};
 
@@ -2712,10 +2927,8 @@ void AActor::ReceiveActorOnClicked(const struct FKey& ButtonPressed)
 
 void AActor::ReceiveActorOnInputTouchBegin(const ETouchIndex FingerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnInputTouchBegin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnInputTouchBegin Parms{};
 
@@ -2732,10 +2945,8 @@ void AActor::ReceiveActorOnInputTouchBegin(const ETouchIndex FingerIndex)
 
 void AActor::ReceiveActorOnInputTouchEnd(const ETouchIndex FingerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnInputTouchEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnInputTouchEnd Parms{};
 
@@ -2752,10 +2963,8 @@ void AActor::ReceiveActorOnInputTouchEnd(const ETouchIndex FingerIndex)
 
 void AActor::ReceiveActorOnInputTouchEnter(const ETouchIndex FingerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnInputTouchEnter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnInputTouchEnter Parms{};
 
@@ -2772,10 +2981,8 @@ void AActor::ReceiveActorOnInputTouchEnter(const ETouchIndex FingerIndex)
 
 void AActor::ReceiveActorOnInputTouchLeave(const ETouchIndex FingerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnInputTouchLeave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnInputTouchLeave Parms{};
 
@@ -2792,10 +2999,8 @@ void AActor::ReceiveActorOnInputTouchLeave(const ETouchIndex FingerIndex)
 
 void AActor::ReceiveActorOnReleased(const struct FKey& ButtonReleased)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveActorOnReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveActorOnReleased Parms{};
 
@@ -2815,10 +3020,8 @@ void AActor::ReceiveActorOnReleased(const struct FKey& ButtonReleased)
 
 void AActor::ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveAnyDamage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveAnyDamage Parms{};
 
@@ -2839,10 +3042,8 @@ void AActor::ReceiveAnyDamage(float Damage, const class UDamageType* DamageType,
 
 void AActor::ReceiveAsyncPhysicsTick(float DeltaSeconds, float SimSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveAsyncPhysicsTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveAsyncPhysicsTick Parms{};
 
@@ -2858,10 +3059,8 @@ void AActor::ReceiveAsyncPhysicsTick(float DeltaSeconds, float SimSeconds)
 
 void AActor::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2872,10 +3071,8 @@ void AActor::ReceiveBeginPlay()
 
 void AActor::ReceiveDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveDestroyed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2888,10 +3085,8 @@ void AActor::ReceiveDestroyed()
 
 void AActor::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveEndPlay Parms{};
 
@@ -2915,10 +3110,8 @@ void AActor::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 void AActor::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveHit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveHit Parms{};
 
@@ -2951,10 +3144,8 @@ void AActor::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, 
 
 void AActor::ReceivePointDamage(float Damage, const class UDamageType* DamageType, const struct FVector& HitLocation, const struct FVector& HitNormal, class UPrimitiveComponent* HitComponent, class FName BoneName, const struct FVector& ShotFromDirection, class AController* InstigatedBy, class AActor* DamageCauser, const struct FHitResult& HitInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceivePointDamage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceivePointDamage Parms{};
 
@@ -2985,10 +3176,8 @@ void AActor::ReceivePointDamage(float Damage, const class UDamageType* DamageTyp
 
 void AActor::ReceiveRadialDamage(float DamageReceived, const class UDamageType* DamageType, const struct FVector& Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveRadialDamage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveRadialDamage Parms{};
 
@@ -3010,10 +3199,8 @@ void AActor::ReceiveRadialDamage(float DamageReceived, const class UDamageType* 
 
 void AActor::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	Params::Actor_ReceiveTick Parms{};
 
@@ -3497,10 +3684,8 @@ void AActor::TearOff()
 
 void AActor::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Actor", "UserConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Actor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -5051,10 +5236,8 @@ int32 ACameraActor::GetAutoActivatePlayerIndex() const
 
 float UAnimNotifyState::GetDefaultTriggerWeightThreshold() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState", "GetDefaultTriggerWeightThreshold");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState", FnName));
 
 	Params::AnimNotifyState_GetDefaultTriggerWeightThreshold Parms{};
 
@@ -5076,10 +5259,8 @@ float UAnimNotifyState::GetDefaultTriggerWeightThreshold() const
 
 class FString UAnimNotifyState::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState", "GetNotifyName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState", FnName));
 
 	Params::AnimNotifyState_GetNotifyName Parms{};
 
@@ -5105,10 +5286,8 @@ class FString UAnimNotifyState::GetNotifyName() const
 
 bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState", "Received_NotifyBegin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState", FnName));
 
 	Params::AnimNotifyState_Received_NotifyBegin Parms{};
 
@@ -5133,10 +5312,8 @@ bool UAnimNotifyState::Received_NotifyBegin(class USkeletalMeshComponent* MeshCo
 
 bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState", "Received_NotifyEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState", FnName));
 
 	Params::AnimNotifyState_Received_NotifyEnd Parms{};
 
@@ -5161,10 +5338,8 @@ bool UAnimNotifyState::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp
 
 bool UAnimNotifyState::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState", "Received_NotifyTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState", FnName));
 
 	Params::AnimNotifyState_Received_NotifyTick Parms{};
 
@@ -12585,10 +12760,8 @@ void USkinnedMeshComponent::TransformToBoneSpace(class FName BoneName, const str
 
 void UCheatManagerExtension::AddedToCheatManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheatManagerExtension", "AddedToCheatManager");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CheatManagerExtension", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -12604,10 +12777,8 @@ void UCheatManagerExtension::AddedToCheatManager()
 
 void UCheatManagerExtension::RemovedFromCheatManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheatManagerExtension", "RemovedFromCheatManager");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CheatManagerExtension", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -12648,10 +12819,8 @@ class APlayerController* UCheatManagerExtension::GetPlayerController() const
 
 void UAnimInstance::BlueprintBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -12662,10 +12831,8 @@ void UAnimInstance::BlueprintBeginPlay()
 
 void UAnimInstance::BlueprintInitializeAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintInitializeAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -12676,10 +12843,8 @@ void UAnimInstance::BlueprintInitializeAnimation()
 
 void UAnimInstance::BlueprintLinkedAnimationLayersInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintLinkedAnimationLayersInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -12690,10 +12855,8 @@ void UAnimInstance::BlueprintLinkedAnimationLayersInitialized()
 
 void UAnimInstance::BlueprintPostEvaluateAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintPostEvaluateAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -12706,10 +12869,8 @@ void UAnimInstance::BlueprintPostEvaluateAnimation()
 
 void UAnimInstance::BlueprintThreadSafeUpdateAnimation(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintThreadSafeUpdateAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	Params::AnimInstance_BlueprintThreadSafeUpdateAnimation Parms{};
 
@@ -12726,10 +12887,8 @@ void UAnimInstance::BlueprintThreadSafeUpdateAnimation(float DeltaTime)
 
 void UAnimInstance::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimInstance", "BlueprintUpdateAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimInstance", FnName));
 
 	Params::AnimInstance_BlueprintUpdateAnimation Parms{};
 
@@ -16042,6 +16201,84 @@ void AWorldSettings::OnRep_WorldGravityZ()
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AWorldSettings::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* AWorldSettings::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AWorldSettings::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.InstancedStaticMeshComponent.AddInstance
 // (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -16721,10 +16958,8 @@ void UInputDeviceProperty::ApplyDeviceProperty(const struct FPlatformUserId& Use
 
 void UInputDeviceProperty::EvaluateDeviceProperty(const struct FPlatformUserId& PlatformUser, const struct FInputDeviceId& DeviceID, const float DeltaTime, const float Duration)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputDeviceProperty", "EvaluateDeviceProperty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InputDeviceProperty", FnName));
 
 	Params::InputDeviceProperty_EvaluateDeviceProperty Parms{};
 
@@ -16751,10 +16986,8 @@ void UInputDeviceProperty::EvaluateDeviceProperty(const struct FPlatformUserId& 
 
 void UInputDeviceProperty::ResetDeviceProperty(const struct FPlatformUserId& PlatformUser, const struct FInputDeviceId& DeviceID, bool bForceReset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InputDeviceProperty", "ResetDeviceProperty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InputDeviceProperty", FnName));
 
 	Params::InputDeviceProperty_ResetDeviceProperty Parms{};
 
@@ -16898,10 +17131,8 @@ void AController::Possess(class APawn* InPawn)
 
 void AController::ReceiveInstigatedAnyDamage(float Damage, const class UDamageType* DamageType, class AActor* DamagedActor, class AActor* DamageCauser)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Controller", "ReceiveInstigatedAnyDamage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Controller", FnName));
 
 	Params::Controller_ReceiveInstigatedAnyDamage Parms{};
 
@@ -16921,10 +17152,8 @@ void AController::ReceiveInstigatedAnyDamage(float Damage, const class UDamageTy
 
 void AController::ReceivePossess(class APawn* PossessedPawn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Controller", "ReceivePossess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Controller", FnName));
 
 	Params::Controller_ReceivePossess Parms{};
 
@@ -16941,10 +17170,8 @@ void AController::ReceivePossess(class APawn* PossessedPawn)
 
 void AController::ReceiveUnPossess(class APawn* UnpossessedPawn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Controller", "ReceiveUnPossess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Controller", FnName));
 
 	Params::Controller_ReceiveUnPossess Parms{};
 
@@ -21688,10 +21915,8 @@ bool APlayerController::WasInputKeyJustReleased(const struct FKey& Key) const
 
 void ADebugCameraController::ReceiveOnActivate(class APlayerController* OriginalPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DebugCameraController", "ReceiveOnActivate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DebugCameraController", FnName));
 
 	Params::DebugCameraController_ReceiveOnActivate Parms{};
 
@@ -21711,10 +21936,8 @@ void ADebugCameraController::ReceiveOnActivate(class APlayerController* Original
 
 void ADebugCameraController::ReceiveOnActorSelected(class AActor* NewSelectedActor, const struct FVector& SelectHitLocation, const struct FVector& SelectHitNormal, const struct FHitResult& Hit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DebugCameraController", "ReceiveOnActorSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DebugCameraController", FnName));
 
 	Params::DebugCameraController_ReceiveOnActorSelected Parms{};
 
@@ -21734,10 +21957,8 @@ void ADebugCameraController::ReceiveOnActorSelected(class AActor* NewSelectedAct
 
 void ADebugCameraController::ReceiveOnDeactivate(class APlayerController* RestoredPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DebugCameraController", "ReceiveOnDeactivate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DebugCameraController", FnName));
 
 	Params::DebugCameraController_ReceiveOnDeactivate Parms{};
 
@@ -21844,10 +22065,8 @@ class AActor* ADebugCameraController::GetSelectedActor() const
 
 class UParticleSystem* UAnimNotifyState_Trail::OverridePSTemplate(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyState_Trail", "OverridePSTemplate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotifyState_Trail", FnName));
 
 	Params::AnimNotifyState_Trail_OverridePSTemplate Parms{};
 
@@ -22066,6 +22285,84 @@ class UPhysicalMaterialMask* UMaterialInterface::GetPhysicalMaterialMask() const
 		Func = Class->GetFunction("MaterialInterface", "GetPhysicalMaterialMask");
 
 	Params::MaterialInterface_GetPhysicalMaterialMask Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMaterialInterface::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UMaterialInterface::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMaterialInterface::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -22951,6 +23248,84 @@ bool USoundBase::IsAttenuationSettingsEditable() const
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USoundBase::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* USoundBase::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USoundBase::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.MaterialBillboardComponent.AddElement
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -23336,10 +23711,8 @@ void APlayerState::OnRep_UniqueId()
 
 void APlayerState::ReceiveCopyProperties(class APlayerState* NewPlayerState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerState", "ReceiveCopyProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerState", FnName));
 
 	Params::PlayerState_ReceiveCopyProperties Parms{};
 
@@ -23356,10 +23729,8 @@ void APlayerState::ReceiveCopyProperties(class APlayerState* NewPlayerState)
 
 void APlayerState::ReceiveOverrideWith(class APlayerState* OldPlayerState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerState", "ReceiveOverrideWith");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerState", FnName));
 
 	Params::PlayerState_ReceiveOverrideWith Parms{};
 
@@ -25151,10 +25522,8 @@ class FText UKismetTextLibrary::TextTrimTrailing(const class FText& InText)
 
 float UAnimNotify::GetDefaultTriggerWeightThreshold() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify", "GetDefaultTriggerWeightThreshold");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotify", FnName));
 
 	Params::AnimNotify_GetDefaultTriggerWeightThreshold Parms{};
 
@@ -25176,10 +25545,8 @@ float UAnimNotify::GetDefaultTriggerWeightThreshold() const
 
 class FString UAnimNotify::GetNotifyName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify", "GetNotifyName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotify", FnName));
 
 	Params::AnimNotify_GetNotifyName Parms{};
 
@@ -25204,10 +25571,8 @@ class FString UAnimNotify::GetNotifyName() const
 
 bool UAnimNotify::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify", "Received_Notify");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimNotify", FnName));
 
 	Params::AnimNotify_Received_Notify Parms{};
 
@@ -29364,6 +29729,84 @@ float UAnimationAsset::GetPlayLength() const
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimationAsset::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UAnimationAsset::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimationAsset::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.CurveSourceInterface.GetBindingName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
@@ -29371,10 +29814,8 @@ float UAnimationAsset::GetPlayLength() const
 
 class FName ICurveSourceInterface::GetBindingName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurveSourceInterface", "GetBindingName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"CurveSourceInterface", FnName));
 
 	Params::CurveSourceInterface_GetBindingName Parms{};
 
@@ -29396,10 +29837,8 @@ class FName ICurveSourceInterface::GetBindingName() const
 
 void ICurveSourceInterface::GetCurves(TArray<struct FNamedCurveValue>* OutValues) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurveSourceInterface", "GetCurves");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"CurveSourceInterface", FnName));
 
 	Params::CurveSourceInterface_GetCurves Parms{};
 
@@ -29423,10 +29862,8 @@ void ICurveSourceInterface::GetCurves(TArray<struct FNamedCurveValue>* OutValues
 
 float ICurveSourceInterface::GetCurveValue(class FName CurveName) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CurveSourceInterface", "GetCurveValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"CurveSourceInterface", FnName));
 
 	Params::CurveSourceInterface_GetCurveValue Parms{};
 
@@ -30805,10 +31242,8 @@ TArray<struct FVector> URawAnimSequenceTrackExtensions::GetScaleKeys(const struc
 
 class FText IAudioPanelWidgetInterface::GetEditorName()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("AudioPanelWidgetInterface", "GetEditorName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"AudioPanelWidgetInterface", FnName));
 
 	Params::AudioPanelWidgetInterface_GetEditorName Parms{};
 
@@ -30825,10 +31260,8 @@ class FText IAudioPanelWidgetInterface::GetEditorName()
 
 class FName IAudioPanelWidgetInterface::GetIconBrushName()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("AudioPanelWidgetInterface", "GetIconBrushName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"AudioPanelWidgetInterface", FnName));
 
 	Params::AudioPanelWidgetInterface_GetIconBrushName Parms{};
 
@@ -30940,90 +31373,6 @@ bool UCurveLinearColorAtlas::GetCurvePosition(class UCurveLinearColor* InCurve, 
 
 	if (Position != nullptr)
 		*Position = Parms.Position;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IInterface_AssetUserData::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "AddAssetUserDataOfClass");
-
-	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
-
-	Parms.InUserDataClass = InUserDataClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAssetUserData* IInterface_AssetUserData::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "GetAssetUserDataOfClass");
-
-	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
-
-	Parms.InUserDataClass = InUserDataClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IInterface_AssetUserData::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Interface_AssetUserData", "HasAssetUserDataOfClass");
-
-	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
-
-	Parms.InUserDataClass = InUserDataClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -53276,6 +53625,84 @@ int32 UKismetMathLibrary::Xor_IntInt(int32 A, int32 B)
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UStreamableSparseVolumeTexture::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UStreamableSparseVolumeTexture::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UStreamableSparseVolumeTexture::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.ChaosBlueprintLibrary.GetEventRelayFromContext
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -53329,6 +53756,147 @@ void UStereoLayerShapeEquirect::SetEquirectProps(const struct FEquirectProps& In
 }
 
 
+// Function Engine.LevelInstanceInterface.LoadLevelInstance
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void ILevelInstanceInterface::LoadLevelInstance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "LoadLevelInstance");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.LevelInstanceInterface.SetWorldAsset
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSoftObjectPtr<class UWorld>            WorldAsset                                             (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ILevelInstanceInterface::SetWorldAsset(TSoftObjectPtr<class UWorld> WorldAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "SetWorldAsset");
+
+	Params::LevelInstanceInterface_SetWorldAsset Parms{};
+
+	Parms.WorldAsset = WorldAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.UnloadLevelInstance
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void ILevelInstanceInterface::UnloadLevelInstance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "UnloadLevelInstance");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.LevelInstanceInterface.GetLoadedLevel
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevel* ILevelInstanceInterface::GetLoadedLevel() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "GetLoadedLevel");
+
+	Params::LevelInstanceInterface_GetLoadedLevel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.GetWorldAsset
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TSoftObjectPtr<class UWorld>      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const TSoftObjectPtr<class UWorld> ILevelInstanceInterface::GetWorldAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "GetWorldAsset");
+
+	Params::LevelInstanceInterface_GetWorldAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.IsLoaded
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ILevelInstanceInterface::IsLoaded() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "IsLoaded");
+
+	Params::LevelInstanceInterface_IsLoaded Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.LevelInstance.OnRep_LevelInstanceSpawnGuid
 // (Final, RequiredAPI, Native, Public)
 
@@ -53345,6 +53913,135 @@ void ALevelInstance::OnRep_LevelInstanceSpawnGuid()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.LevelInstanceInterface.LoadLevelInstance
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void ALevelInstance::LoadLevelInstance()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.LevelInstanceInterface.SetWorldAsset
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSoftObjectPtr<class UWorld>            WorldAsset                                             (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ALevelInstance::SetWorldAsset(TSoftObjectPtr<class UWorld> WorldAsset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	Params::LevelInstanceInterface_SetWorldAsset Parms{};
+
+	Parms.WorldAsset = WorldAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.UnloadLevelInstance
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void ALevelInstance::UnloadLevelInstance()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.LevelInstanceInterface.GetLoadedLevel
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevel* ALevelInstance::GetLoadedLevel() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	Params::LevelInstanceInterface_GetLoadedLevel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.GetWorldAsset
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TSoftObjectPtr<class UWorld>      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const TSoftObjectPtr<class UWorld> ALevelInstance::GetWorldAsset() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	Params::LevelInstanceInterface_GetWorldAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.LevelInstanceInterface.IsLoaded
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ALevelInstance::IsLoaded() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelInstanceInterface", FnName));
+
+	Params::LevelInstanceInterface_IsLoaded Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -55255,6 +55952,102 @@ bool AEmitter::IsActive() const
 }
 
 
+// Function Engine.CameraLensEffectInterface.GetParticleComponents
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UFXSystemComponent*>       ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UFXSystemComponent*> ICameraLensEffectInterface::GetParticleComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("CameraLensEffectInterface", "GetParticleComponents");
+
+	Params::CameraLensEffectInterface_GetParticleComponents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.CameraLensEffectInterface.GetPrimaryParticleComponent
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFXSystemComponent*               ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFXSystemComponent* ICameraLensEffectInterface::GetPrimaryParticleComponent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("CameraLensEffectInterface", "GetPrimaryParticleComponent");
+
+	Params::CameraLensEffectInterface_GetPrimaryParticleComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.CameraLensEffectInterface.GetParticleComponents
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UFXSystemComponent*>       ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+TArray<class UFXSystemComponent*> AEmitterCameraLensEffectBase::GetParticleComponents() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CameraLensEffectInterface", FnName));
+
+	Params::CameraLensEffectInterface_GetParticleComponents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.CameraLensEffectInterface.GetPrimaryParticleComponent
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UFXSystemComponent*               ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UFXSystemComponent* AEmitterCameraLensEffectBase::GetPrimaryParticleComponent() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CameraLensEffectInterface", FnName));
+
+	Params::CameraLensEffectInterface_GetPrimaryParticleComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Predefined Function
 // Gets a pointer to a valid UObject of type UEngine
 
@@ -56017,10 +56810,8 @@ bool UExporter::RunAssetExportTasks(const TArray<class UAssetExportTask*>& Expor
 
 bool UExporter::ScriptRunAssetExportTask(class UAssetExportTask* Task)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Exporter", "ScriptRunAssetExportTask");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Exporter", FnName));
 
 	Params::Exporter_ScriptRunAssetExportTask Parms{};
 
@@ -63241,6 +64032,262 @@ struct FTransform UPhysicalAnimationComponent::GetBodyTargetTransform(class FNam
 }
 
 
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FAssetData> USMInstanceElementAssetDataInterface::GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAllReferencedAssetDatas Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FAssetData USMInstanceElementAssetDataInterface::GetAssetData(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAssetData Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::AllowSelectionModifiers(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_AllowSelectionModifiers Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanDeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::CanDeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanDeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanSelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::CanSelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanSelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.DeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::DeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_DeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.GetSelectionElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InCurrentSelection                                     (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const ETypedElementSelectionMethod      InSelectionMethod                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle USMInstanceElementSelectionInterface::GetSelectionElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InCurrentSelection, const ETypedElementSelectionMethod InSelectionMethod)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_GetSelectionElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InCurrentSelection = std::move(InCurrentSelection);
+	Parms.InSelectionMethod = InSelectionMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.IsElementSelected
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementIsSelectedOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::IsElementSelected(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementIsSelectedOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_IsElementSelected Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.SelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USMInstanceElementSelectionInterface::SelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_SelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.AutoDestroySubsystem.OnActorEndPlay
 // (Final, Native, Private)
 // Parameters:
@@ -63942,10 +64989,8 @@ bool USpringArmComponent::IsCollisionFixApplied() const
 
 bool AGameModeBase::CanSpectate(class APlayerController* Viewer, class APlayerState* ViewTarget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "CanSpectate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_CanSpectate Parms{};
 
@@ -64000,10 +65045,8 @@ void AGameModeBase::ChangeName(class AController* Controller, const class FStrin
 
 class AActor* AGameModeBase::ChoosePlayerStart(class AController* Player)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "ChoosePlayerStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_ChoosePlayerStart Parms{};
 
@@ -64029,10 +65072,8 @@ class AActor* AGameModeBase::ChoosePlayerStart(class AController* Player)
 
 class AActor* AGameModeBase::FindPlayerStart(class AController* Player, const class FString& IncomingName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "FindPlayerStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_FindPlayerStart Parms{};
 
@@ -64058,10 +65099,8 @@ class AActor* AGameModeBase::FindPlayerStart(class AController* Player, const cl
 
 class UClass* AGameModeBase::GetDefaultPawnClassForController(class AController* InController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "GetDefaultPawnClassForController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_GetDefaultPawnClassForController Parms{};
 
@@ -64135,10 +65174,8 @@ int32 AGameModeBase::GetNumSpectators()
 
 void AGameModeBase::HandleStartingNewPlayer(class APlayerController* NewPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "HandleStartingNewPlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_HandleStartingNewPlayer Parms{};
 
@@ -64160,10 +65197,8 @@ void AGameModeBase::HandleStartingNewPlayer(class APlayerController* NewPlayer)
 
 void AGameModeBase::InitializeHUDForPlayer(class APlayerController* NewPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "InitializeHUDForPlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_InitializeHUDForPlayer Parms{};
 
@@ -64186,10 +65221,8 @@ void AGameModeBase::InitializeHUDForPlayer(class APlayerController* NewPlayer)
 
 void AGameModeBase::InitStartSpot(class AActor* StartSpot, class AController* NewPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "InitStartSpot");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_InitStartSpot Parms{};
 
@@ -64244,10 +65277,8 @@ class AActor* AGameModeBase::K2_FindPlayerStart(class AController* Player, const
 
 void AGameModeBase::K2_OnChangeName(class AController* Other, const class FString& NewName, bool bNameChange)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "K2_OnChangeName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_K2_OnChangeName Parms{};
 
@@ -64266,10 +65297,8 @@ void AGameModeBase::K2_OnChangeName(class AController* Other, const class FStrin
 
 void AGameModeBase::K2_OnLogout(class AController* ExitingController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "K2_OnLogout");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_K2_OnLogout Parms{};
 
@@ -64286,10 +65315,8 @@ void AGameModeBase::K2_OnLogout(class AController* ExitingController)
 
 void AGameModeBase::K2_OnRestartPlayer(class AController* NewPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "K2_OnRestartPlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_K2_OnRestartPlayer Parms{};
 
@@ -64307,10 +65334,8 @@ void AGameModeBase::K2_OnRestartPlayer(class AController* NewPlayer)
 
 void AGameModeBase::K2_OnSwapPlayerControllers(class APlayerController* OldPC, class APlayerController* NewPC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "K2_OnSwapPlayerControllers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_K2_OnSwapPlayerControllers Parms{};
 
@@ -64328,10 +65353,8 @@ void AGameModeBase::K2_OnSwapPlayerControllers(class APlayerController* OldPC, c
 
 void AGameModeBase::K2_PostLogin(class APlayerController* NewPlayer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "K2_PostLogin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_K2_PostLogin Parms{};
 
@@ -64349,10 +65372,8 @@ void AGameModeBase::K2_PostLogin(class APlayerController* NewPlayer)
 
 bool AGameModeBase::PlayerCanRestart(class APlayerController* Player)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "PlayerCanRestart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_PlayerCanRestart Parms{};
 
@@ -64494,10 +65515,8 @@ void AGameModeBase::ReturnToMainMenuHost()
 
 bool AGameModeBase::ShouldReset(class AActor* ActorToReset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "ShouldReset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_ShouldReset Parms{};
 
@@ -64523,10 +65542,8 @@ bool AGameModeBase::ShouldReset(class AActor* ActorToReset)
 
 class APawn* AGameModeBase::SpawnDefaultPawnAtTransform(class AController* NewPlayer, const struct FTransform& SpawnTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "SpawnDefaultPawnAtTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_SpawnDefaultPawnAtTransform Parms{};
 
@@ -64553,10 +65570,8 @@ class APawn* AGameModeBase::SpawnDefaultPawnAtTransform(class AController* NewPl
 
 class APawn* AGameModeBase::SpawnDefaultPawnFor(class AController* NewPlayer, class AActor* StartSpot)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "SpawnDefaultPawnFor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_SpawnDefaultPawnFor Parms{};
 
@@ -64651,10 +65666,8 @@ bool AGameModeBase::HasMatchStarted() const
 
 bool AGameModeBase::MustSpectate(class APlayerController* NewPlayerController) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameModeBase", "MustSpectate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameModeBase", FnName));
 
 	Params::GameModeBase_MustSpectate Parms{};
 
@@ -64716,10 +65729,8 @@ void AGameMode::EndMatch()
 
 void AGameMode::K2_OnSetMatchState(class FName NewState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameMode", "K2_OnSetMatchState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameMode", FnName));
 
 	Params::GameMode_K2_OnSetMatchState Parms{};
 
@@ -64736,10 +65747,8 @@ void AGameMode::K2_OnSetMatchState(class FName NewState)
 
 bool AGameMode::ReadyToEndMatch()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameMode", "ReadyToEndMatch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameMode", FnName));
 
 	Params::GameMode_ReadyToEndMatch Parms{};
 
@@ -64761,10 +65770,8 @@ bool AGameMode::ReadyToEndMatch()
 
 bool AGameMode::ReadyToStartMatch()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameMode", "ReadyToStartMatch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameMode", FnName));
 
 	Params::GameMode_ReadyToStartMatch Parms{};
 
@@ -65235,6 +66242,1357 @@ void AGameState::OnRep_MatchState()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetChildElements
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FScriptTypedElementHandle>*OutElementHandles                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UActorElementHierarchyInterface::GetChildElements(const struct FScriptTypedElementHandle& InElementHandle, TArray<struct FScriptTypedElementHandle>* OutElementHandles, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetChildElements Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutElementHandles != nullptr)
+		*OutElementHandles = std::move(Parms.OutElementHandles);
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetParentElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UActorElementHierarchyInterface::GetParentElement(const struct FScriptTypedElementHandle& InElementHandle, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetParentElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanDeleteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanDeleteElement");
+
+	Params::TypedElementWorldInterface_CanDeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanDuplicateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanDuplicateElement");
+
+	Params::TypedElementWorldInterface_CanDuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanEditElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanEditElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanEditElement");
+
+	Params::TypedElementWorldInterface_CanEditElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanMoveElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const ETypedElementWorldType            InWorldType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanMoveElement(const struct FScriptTypedElementHandle& InElementHandle, const ETypedElementWorldType InWorldType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanMoveElement");
+
+	Params::TypedElementWorldInterface_CanMoveElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorldType = InWorldType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanPromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanPromoteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanPromoteElement");
+
+	Params::TypedElementWorldInterface_CanPromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanScaleElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::CanScaleElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanScaleElement");
+
+	Params::TypedElementWorldInterface_CanScaleElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTypedElementSelectionSet*        InSelectionSet                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTypedElementDeletionOptions&InDeletionOptions                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::DeleteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, class UTypedElementSelectionSet* InSelectionSet, const struct FTypedElementDeletionOptions& InDeletionOptions)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "DeleteElement");
+
+	Params::TypedElementWorldInterface_DeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InSelectionSet = InSelectionSet;
+	Parms.InDeletionOptions = std::move(InDeletionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InLocationOffset                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle ITypedElementWorldInterface::DuplicateElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, const struct FVector& InLocationOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "DuplicateElement");
+
+	Params::TypedElementWorldInterface_DuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InLocationOffset = std::move(InLocationOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetBounds
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FBoxSphereBounds*                OutBounds                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::GetBounds(const struct FScriptTypedElementHandle& InElementHandle, struct FBoxSphereBounds* OutBounds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetBounds");
+
+	Params::TypedElementWorldInterface_GetBounds Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutBounds != nullptr)
+		*OutBounds = std::move(Parms.OutBounds);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerLevel
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevel* ITypedElementWorldInterface::GetOwnerLevel(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetOwnerLevel");
+
+	Params::TypedElementWorldInterface_GetOwnerLevel Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerWorld
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWorld* ITypedElementWorldInterface::GetOwnerWorld(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetOwnerWorld");
+
+	Params::TypedElementWorldInterface_GetOwnerWorld Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FVector*                         OutPivotOffset                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::GetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, struct FVector* OutPivotOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetPivotOffset");
+
+	Params::TypedElementWorldInterface_GetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutPivotOffset != nullptr)
+		*OutPivotOffset = std::move(Parms.OutPivotOffset);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::GetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetRelativeTransform");
+
+	Params::TypedElementWorldInterface_GetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::GetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetWorldTransform");
+
+	Params::TypedElementWorldInterface_GetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.IsTemplateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::IsTemplateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "IsTemplateElement");
+
+	Params::TypedElementWorldInterface_IsTemplateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementEnded
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ITypedElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementEnded");
+
+	Params::TypedElementWorldInterface_NotifyMovementEnded Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementOngoing
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ITypedElementWorldInterface::NotifyMovementOngoing(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementOngoing");
+
+	Params::TypedElementWorldInterface_NotifyMovementOngoing Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementStarted
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ITypedElementWorldInterface::NotifyMovementStarted(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementStarted");
+
+	Params::TypedElementWorldInterface_NotifyMovementStarted Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.PromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           OverrideWorld                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle ITypedElementWorldInterface::PromoteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* OverrideWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "PromoteElement");
+
+	Params::TypedElementWorldInterface_PromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.OverrideWorld = OverrideWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVector&                   InPivotOffset                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::SetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, const struct FVector& InPivotOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetPivotOffset");
+
+	Params::TypedElementWorldInterface_SetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InPivotOffset = std::move(InPivotOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::SetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetRelativeTransform");
+
+	Params::TypedElementWorldInterface_SetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ITypedElementWorldInterface::SetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetWorldTransform");
+
+	Params::TypedElementWorldInterface_SetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanDeleteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanDeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanDuplicateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanDuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanEditElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanEditElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanEditElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanMoveElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const ETypedElementWorldType            InWorldType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanMoveElement(const struct FScriptTypedElementHandle& InElementHandle, const ETypedElementWorldType InWorldType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanMoveElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorldType = InWorldType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanPromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanPromoteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanPromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanScaleElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::CanScaleElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanScaleElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTypedElementSelectionSet*        InSelectionSet                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTypedElementDeletionOptions&InDeletionOptions                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::DeleteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, class UTypedElementSelectionSet* InSelectionSet, const struct FTypedElementDeletionOptions& InDeletionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_DeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InSelectionSet = InSelectionSet;
+	Parms.InDeletionOptions = std::move(InDeletionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InLocationOffset                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UComponentElementWorldInterface::DuplicateElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, const struct FVector& InLocationOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_DuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InLocationOffset = std::move(InLocationOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetBounds
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FBoxSphereBounds*                OutBounds                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::GetBounds(const struct FScriptTypedElementHandle& InElementHandle, struct FBoxSphereBounds* OutBounds)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetBounds Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutBounds != nullptr)
+		*OutBounds = std::move(Parms.OutBounds);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerLevel
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevel* UComponentElementWorldInterface::GetOwnerLevel(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetOwnerLevel Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerWorld
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWorld* UComponentElementWorldInterface::GetOwnerWorld(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetOwnerWorld Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FVector*                         OutPivotOffset                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::GetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, struct FVector* OutPivotOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutPivotOffset != nullptr)
+		*OutPivotOffset = std::move(Parms.OutPivotOffset);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::GetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::GetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.IsTemplateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::IsTemplateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_IsTemplateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementEnded
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UComponentElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementEnded Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementOngoing
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UComponentElementWorldInterface::NotifyMovementOngoing(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementOngoing Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementStarted
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UComponentElementWorldInterface::NotifyMovementStarted(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementStarted Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.PromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           OverrideWorld                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UComponentElementWorldInterface::PromoteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* OverrideWorld)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_PromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.OverrideWorld = OverrideWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVector&                   InPivotOffset                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::SetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, const struct FVector& InPivotOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InPivotOffset = std::move(InPivotOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::SetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementWorldInterface::SetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FAssetData> UObjectElementAssetDataInterface::GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAllReferencedAssetDatas Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FAssetData UObjectElementAssetDataInterface::GetAssetData(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAssetData Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -67636,10 +69994,8 @@ void UVectorFieldComponent::SetIntensity(float NewIntensity)
 
 void ALevelScriptActor::LevelReset()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LevelScriptActor", "LevelReset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelScriptActor", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -67714,10 +70070,8 @@ void ALevelScriptActor::SetCinematicMode(bool bCinematicMode, bool bHidePlayer, 
 
 void ALevelScriptActor::WorldOriginLocationChanged(const struct FIntVector& OldOriginLocation, const struct FIntVector& NewOriginLocation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LevelScriptActor", "WorldOriginLocationChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LevelScriptActor", FnName));
 
 	Params::LevelScriptActor_WorldOriginLocationChanged Parms{};
 
@@ -68805,10 +71159,8 @@ void UPostProcessComponent::AddOrUpdateBlendable(TScriptInterface<class IBlendab
 
 void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CameraModifier", "BlueprintModifyCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CameraModifier", FnName));
 
 	Params::CameraModifier_BlueprintModifyCamera Parms{};
 
@@ -68839,10 +71191,8 @@ void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVecto
 
 void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CameraModifier", "BlueprintModifyPostProcess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CameraModifier", FnName));
 
 	Params::CameraModifier_BlueprintModifyPostProcess Parms{};
 
@@ -69075,10 +71425,8 @@ void UCanvasRenderTarget2D::GetSize(int32* Width, int32* Height)
 
 void UCanvasRenderTarget2D::ReceiveUpdate(class UCanvas* Canvas, int32 Width, int32 Height)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CanvasRenderTarget2D", "ReceiveUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CanvasRenderTarget2D", FnName));
 
 	Params::CanvasRenderTarget2D_ReceiveUpdate Parms{};
 
@@ -69730,10 +72078,8 @@ void AHUD::PreviousDebugTarget()
 
 void AHUD::ReceiveDrawHUD(int32 SizeX, int32 SizeY)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD", "ReceiveDrawHUD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HUD", FnName));
 
 	Params::HUD_ReceiveDrawHUD Parms{};
 
@@ -69751,10 +72097,8 @@ void AHUD::ReceiveDrawHUD(int32 SizeX, int32 SizeY)
 
 void AHUD::ReceiveHitBoxBeginCursorOver(const class FName BoxName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD", "ReceiveHitBoxBeginCursorOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HUD", FnName));
 
 	Params::HUD_ReceiveHitBoxBeginCursorOver Parms{};
 
@@ -69771,10 +72115,8 @@ void AHUD::ReceiveHitBoxBeginCursorOver(const class FName BoxName)
 
 void AHUD::ReceiveHitBoxClick(const class FName BoxName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD", "ReceiveHitBoxClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HUD", FnName));
 
 	Params::HUD_ReceiveHitBoxClick Parms{};
 
@@ -69791,10 +72133,8 @@ void AHUD::ReceiveHitBoxClick(const class FName BoxName)
 
 void AHUD::ReceiveHitBoxEndCursorOver(const class FName BoxName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD", "ReceiveHitBoxEndCursorOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HUD", FnName));
 
 	Params::HUD_ReceiveHitBoxEndCursorOver Parms{};
 
@@ -69811,10 +72151,8 @@ void AHUD::ReceiveHitBoxEndCursorOver(const class FName BoxName)
 
 void AHUD::ReceiveHitBoxRelease(const class FName BoxName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HUD", "ReceiveHitBoxRelease");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HUD", FnName));
 
 	Params::HUD_ReceiveHitBoxRelease Parms{};
 
@@ -71425,6 +73763,393 @@ TArray<class FName> UEditorFlagCollector::GetFlagNames()
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetAnimationSequence
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UAnimSequence*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAnimSequence* UAnimDataModel::GetAnimationSequence() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetAnimationSequence Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneAnimationTracks
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<struct FBoneAnimationTrack>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<struct FBoneAnimationTrack> UAnimDataModel::GetBoneAnimationTracks() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneAnimationTracks Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneTrackByIndex
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBoneAnimationTrack        ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FBoneAnimationTrack UAnimDataModel::GetBoneTrackByIndex(int32 TrackIndex) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneTrackByIndex Parms{};
+
+	Parms.TrackIndex = TrackIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneTrackByName
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             TrackName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FBoneAnimationTrack        ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FBoneAnimationTrack UAnimDataModel::GetBoneTrackByName(class FName TrackName) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneTrackByName Parms{};
+
+	Parms.TrackName = TrackName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneTrackIndex
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FBoneAnimationTrack&       Track                                                  (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetBoneTrackIndex(const struct FBoneAnimationTrack& Track) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneTrackIndex Parms{};
+
+	Parms.Track = std::move(Track);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneTrackIndexByName
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             TrackName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetBoneTrackIndexByName(class FName TrackName) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneTrackIndexByName Parms{};
+
+	Parms.TrackName = TrackName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetBoneTrackNames
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>*                    OutNames                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAnimDataModel::GetBoneTrackNames(TArray<class FName>* OutNames) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetBoneTrackNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutNames != nullptr)
+		*OutNames = std::move(Parms.OutNames);
+}
+
+
+// Function Engine.AnimationDataModel.GetFrameRate
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FFrameRate                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameRate UAnimDataModel::GetFrameRate() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetFrameRate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetNumberOfFloatCurves
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetNumberOfFloatCurves() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetNumberOfFloatCurves Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetNumberOfFrames
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetNumberOfFrames() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetNumberOfFrames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetNumberOfKeys
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetNumberOfKeys() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetNumberOfKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetNumberOfTransformCurves
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetNumberOfTransformCurves() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetNumberOfTransformCurves Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetNumBoneTracks
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UAnimDataModel::GetNumBoneTracks() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetNumBoneTracks Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.GetPlayLength
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UAnimDataModel::GetPlayLength() const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_GetPlayLength Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.IsValidBoneTrackIndex
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimDataModel::IsValidBoneTrackIndex(int32 TrackIndex) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_IsValidBoneTrackIndex Parms{};
+
+	Parms.TrackIndex = TrackIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.AnimationDataModel.IsValidBoneTrackName
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName&                      TrackName                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimDataModel::IsValidBoneTrackName(const class FName& TrackName) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationDataModel", FnName));
+
+	Params::AnimationDataModel_IsValidBoneTrackName Parms{};
+
+	Parms.TrackName = TrackName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -74039,10 +76764,8 @@ class UCameraModifier* APlayerCameraManager::AddNewCameraModifier(TSubclassOf<cl
 
 bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "BlueprintUpdateCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	Params::PlayerCameraManager_BlueprintUpdateCamera Parms{};
 
@@ -74115,10 +76838,8 @@ class UCameraModifier* APlayerCameraManager::FindCameraModifierByClass(TSubclass
 
 void APlayerCameraManager::OnPhotographyMultiPartCaptureEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "OnPhotographyMultiPartCaptureEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -74134,10 +76855,8 @@ void APlayerCameraManager::OnPhotographyMultiPartCaptureEnd()
 
 void APlayerCameraManager::OnPhotographyMultiPartCaptureStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "OnPhotographyMultiPartCaptureStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -74153,10 +76872,8 @@ void APlayerCameraManager::OnPhotographyMultiPartCaptureStart()
 
 void APlayerCameraManager::OnPhotographySessionEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "OnPhotographySessionEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -74172,10 +76889,8 @@ void APlayerCameraManager::OnPhotographySessionEnd()
 
 void APlayerCameraManager::OnPhotographySessionStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "OnPhotographySessionStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -74196,10 +76911,8 @@ void APlayerCameraManager::OnPhotographySessionStart()
 
 void APlayerCameraManager::PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerCameraManager", "PhotographyCameraModify");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"PlayerCameraManager", FnName));
 
 	Params::PlayerCameraManager_PhotographyCameraModify Parms{};
 
@@ -75149,10 +77862,8 @@ class UVOIPTalker* UVOIPTalker::CreateTalkerForPlayer(class APlayerState* Owning
 
 void UVOIPTalker::BPOnTalkingBegin(class UAudioComponent* AudioComponent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VOIPTalker", "BPOnTalkingBegin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"VOIPTalker", FnName));
 
 	Params::VOIPTalker_BPOnTalkingBegin Parms{};
 
@@ -75172,10 +77883,8 @@ void UVOIPTalker::BPOnTalkingBegin(class UAudioComponent* AudioComponent)
 
 void UVOIPTalker::BPOnTalkingEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VOIPTalker", "BPOnTalkingEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"VOIPTalker", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -75890,10 +78599,8 @@ void USkyLightComponent::SetVolumetricScatteringIntensity(float NewIntensity)
 
 TSubclassOf<class USoundEffectPreset> ISoundEffectPresetWidgetInterface::GetClass()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SoundEffectPresetWidgetInterface", "GetClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SoundEffectPresetWidgetInterface", FnName));
 
 	Params::SoundEffectPresetWidgetInterface_GetClass Parms{};
 
@@ -75910,10 +78617,8 @@ TSubclassOf<class USoundEffectPreset> ISoundEffectPresetWidgetInterface::GetClas
 
 void ISoundEffectPresetWidgetInterface::OnConstructed(class USoundEffectPreset* Preset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SoundEffectPresetWidgetInterface", "OnConstructed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SoundEffectPresetWidgetInterface", FnName));
 
 	Params::SoundEffectPresetWidgetInterface_OnConstructed Parms{};
 
@@ -75931,10 +78636,8 @@ void ISoundEffectPresetWidgetInterface::OnConstructed(class USoundEffectPreset* 
 
 void ISoundEffectPresetWidgetInterface::OnPropertyChanged(class USoundEffectPreset* Preset, class FName PropertyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SoundEffectPresetWidgetInterface", "OnPropertyChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SoundEffectPresetWidgetInterface", FnName));
 
 	Params::SoundEffectPresetWidgetInterface_OnPropertyChanged Parms{};
 
@@ -75952,10 +78655,8 @@ void ISoundEffectPresetWidgetInterface::OnPropertyChanged(class USoundEffectPres
 
 void ISoundSubmixWidgetInterface::OnConstructed(class USoundSubmixBase* SoundSubmix)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("SoundSubmixWidgetInterface", "OnConstructed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"SoundSubmixWidgetInterface", FnName));
 
 	Params::SoundSubmixWidgetInterface_OnConstructed Parms{};
 
@@ -77899,6 +80600,84 @@ void UWindDirectionalSourceComponent::SetWindType(EWindSourceType InNewType)
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevel::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* ULevel::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ULevel::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.AnimMontage.CreateSlotAnimationAsDynamicMontage_WithBlendSettings
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -78347,6 +81126,84 @@ class UBlendProfile* USkeleton::GetBlendProfile(const class FName& InProfileName
 	Params::Skeleton_GetBlendProfile Parms{};
 
 	Parms.InProfileName = InProfileName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USkeleton::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* USkeleton::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USkeleton::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -78954,10 +81811,8 @@ void AAudioVolume::SetSubmixSendSettings(const TArray<struct FAudioVolumeSubmixS
 
 void IActorSoundParameterInterface::GetActorSoundParams(TArray<struct FAudioParameter>* Params_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("ActorSoundParameterInterface", "GetActorSoundParams");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"ActorSoundParameterInterface", FnName));
 
 	Params::ActorSoundParameterInterface_GetActorSoundParams Parms{};
 
@@ -79674,56 +82529,6 @@ void UBlueprintSetLibrary::SetSetPropertyByName(class UObject* Object, class FNa
 }
 
 
-// Function Engine.CameraLensEffectInterface.GetParticleComponents
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UFXSystemComponent*>       ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-TArray<class UFXSystemComponent*> ICameraLensEffectInterface::GetParticleComponents() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CameraLensEffectInterface", "GetParticleComponents");
-
-	Params::CameraLensEffectInterface_GetParticleComponents Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.CameraLensEffectInterface.GetPrimaryParticleComponent
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UFXSystemComponent*               ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UFXSystemComponent* ICameraLensEffectInterface::GetPrimaryParticleComponent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("CameraLensEffectInterface", "GetPrimaryParticleComponent");
-
-	Params::CameraLensEffectInterface_GetPrimaryParticleComponent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function Engine.CameraLensEffectInterfaceClassSupportLibrary.GetInterfaceClass
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -80276,10 +83081,8 @@ void APawn::PawnMakeNoise(float Loudness, const struct FVector& NoiseLocation, b
 
 void APawn::ReceiveControllerChanged(class AController* OldController, class AController* NewController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Pawn", "ReceiveControllerChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Pawn", FnName));
 
 	Params::Pawn_ReceiveControllerChanged Parms{};
 
@@ -80297,10 +83100,8 @@ void APawn::ReceiveControllerChanged(class AController* OldController, class ACo
 
 void APawn::ReceivePossessed(class AController* NewController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Pawn", "ReceivePossessed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Pawn", FnName));
 
 	Params::Pawn_ReceivePossessed Parms{};
 
@@ -80315,10 +83116,8 @@ void APawn::ReceivePossessed(class AController* NewController)
 
 void APawn::ReceiveRestarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Pawn", "ReceiveRestarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Pawn", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80331,10 +83130,8 @@ void APawn::ReceiveRestarted()
 
 void APawn::ReceiveUnpossessed(class AController* OldController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Pawn", "ReceiveUnpossessed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Pawn", FnName));
 
 	Params::Pawn_ReceiveUnpossessed Parms{};
 
@@ -81167,10 +83964,8 @@ void ACharacter::Jump()
 
 void ACharacter::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "K2_OnEndCrouch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_K2_OnEndCrouch Parms{};
 
@@ -81191,10 +83986,8 @@ void ACharacter::K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAd
 
 void ACharacter::K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "K2_OnMovementModeChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_K2_OnMovementModeChanged Parms{};
 
@@ -81215,10 +84008,8 @@ void ACharacter::K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovem
 
 void ACharacter::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "K2_OnStartCrouch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_K2_OnStartCrouch Parms{};
 
@@ -81236,10 +84027,8 @@ void ACharacter::K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeight
 
 void ACharacter::K2_UpdateCustomMovement(float DeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "K2_UpdateCustomMovement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_K2_UpdateCustomMovement Parms{};
 
@@ -81283,10 +84072,8 @@ void ACharacter::LaunchCharacter(const struct FVector& LaunchVelocity, bool bXYO
 
 void ACharacter::OnJumped()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "OnJumped");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -81304,10 +84091,8 @@ void ACharacter::OnJumped()
 
 void ACharacter::OnLanded(const struct FHitResult& Hit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "OnLanded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_OnLanded Parms{};
 
@@ -81326,10 +84111,8 @@ void ACharacter::OnLanded(const struct FHitResult& Hit)
 
 void ACharacter::OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "OnLaunched");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_OnLaunched Parms{};
 
@@ -81427,10 +84210,8 @@ void ACharacter::OnRep_RootMotion()
 
 void ACharacter::OnWalkingOffLedge(const struct FVector& PreviousFloorImpactNormal, const struct FVector& PreviousFloorContactNormal, const struct FVector& PreviousLocation, float TimeDelta)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "OnWalkingOffLedge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_OnWalkingOffLedge Parms{};
 
@@ -81906,10 +84687,8 @@ bool ACharacter::CanJump() const
 
 bool ACharacter::CanJumpInternal() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Character", "CanJumpInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Character", FnName));
 
 	Params::Character_CanJumpInternal Parms{};
 
@@ -82883,10 +85662,8 @@ void UCheatManager::PlayersOnly()
 
 void UCheatManager::ReceiveEndPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheatManager", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CheatManager", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -82897,10 +85674,8 @@ void UCheatManager::ReceiveEndPlay()
 
 void UCheatManager::ReceiveInitCheatManager()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CheatManager", "ReceiveInitCheatManager");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"CheatManager", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -83674,13 +86449,13 @@ void UAudioComponent::Play(float StartTime)
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UQuartzClockHandle*&              InClockHandle                                          (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FQuartzQuantizationBoundary&     InQuantizationBoundary                                 (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)>&InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InStartTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InFadeInDuration                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   InFadeVolumeLevel                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EAudioFaderCurve                        InFadeCurve                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAudioComponent::PlayQuantized(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle, struct FQuartzQuantizationBoundary& InQuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& InDelegate, float InStartTime, float InFadeInDuration, float InFadeVolumeLevel, EAudioFaderCurve InFadeCurve)
+void UAudioComponent::PlayQuantized(const class UObject* WorldContextObject, class UQuartzClockHandle*& InClockHandle, struct FQuartzQuantizationBoundary& InQuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)>& InDelegate, float InStartTime, float InFadeInDuration, float InFadeVolumeLevel, EAudioFaderCurve InFadeCurve)
 {
 	static class UFunction* Func = nullptr;
 
@@ -84423,6 +87198,244 @@ bool UAudioComponent::IsVirtualized() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.ResetParameters
+// (Native, Public, BlueprintCallable)
+
+void UAudioComponent::ResetParameters()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetBoolArrayParameter
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<bool>&                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetBoolArrayParameter(class FName InName, const TArray<bool>& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetBoolArrayParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetFloatArrayParameter
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<float>&                    InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetFloatArrayParameter(class FName InName, const TArray<float>& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetFloatArrayParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetIntArrayParameter
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetIntArrayParameter(class FName InName, const TArray<int32>& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetIntArrayParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetObjectArrayParameter
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UObject*>&           InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetObjectArrayParameter(class FName InName, const TArray<class UObject*>& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetObjectArrayParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetObjectParameter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          InValue                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetObjectParameter(class FName InName, class UObject* InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetObjectParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetParameters_Blueprint
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FAudioParameter>&   InParameters                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetParameters_Blueprint(const TArray<struct FAudioParameter>& InParameters)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetParameters_Blueprint Parms{};
+
+	Parms.InParameters = std::move(InParameters);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetStringArrayParameter
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetStringArrayParameter(class FName InName, const TArray<class FString>& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetStringArrayParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetStringParameter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetStringParameter(class FName InName, const class FString& InValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetStringParameter Parms{};
+
+	Parms.InName = InName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioExtensions.AudioParameterControllerInterface.SetTriggerParameter
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InName                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioComponent::SetTriggerParameter(class FName InName)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AudioParameterControllerInterface", FnName));
+
+	Params::AudioParameterControllerInterface_SetTriggerParameter Parms{};
+
+	Parms.InName = InName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -92267,6 +95280,1226 @@ void ADefaultPawn::TurnAtRate(float Rate)
 }
 
 
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAllReferencedAssetDatas
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FAssetData>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FAssetData> UActorElementAssetDataInterface::GetAllReferencedAssetDatas(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAllReferencedAssetDatas Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementAssetDataInterface.GetAssetData
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FAssetData UActorElementAssetDataInterface::GetAssetData(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementAssetDataInterface", FnName));
+
+	Params::TypedElementAssetDataInterface_GetAssetData Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObject
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UActorElementObjectInterface::GetObject(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObject Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObjectClass
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UActorElementObjectInterface::GetObjectClass(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObjectClass Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::AllowSelectionModifiers(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_AllowSelectionModifiers Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanDeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::CanDeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanDeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanSelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::CanSelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanSelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.DeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::DeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_DeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.GetSelectionElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InCurrentSelection                                     (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const ETypedElementSelectionMethod      InSelectionMethod                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UActorElementSelectionInterface::GetSelectionElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InCurrentSelection, const ETypedElementSelectionMethod InSelectionMethod)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_GetSelectionElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InCurrentSelection = std::move(InCurrentSelection);
+	Parms.InSelectionMethod = InSelectionMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.IsElementSelected
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementIsSelectedOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::IsElementSelected(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementIsSelectedOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_IsElementSelected Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.SelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementSelectionInterface::SelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_SelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanDeleteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanDeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanDuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanDuplicateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanDuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanEditElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanEditElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanEditElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanMoveElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const ETypedElementWorldType            InWorldType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanMoveElement(const struct FScriptTypedElementHandle& InElementHandle, const ETypedElementWorldType InWorldType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanMoveElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorldType = InWorldType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanPromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanPromoteElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanPromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.CanScaleElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::CanScaleElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_CanScaleElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DeleteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTypedElementSelectionSet*        InSelectionSet                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTypedElementDeletionOptions&InDeletionOptions                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::DeleteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, class UTypedElementSelectionSet* InSelectionSet, const struct FTypedElementDeletionOptions& InDeletionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_DeleteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InSelectionSet = InSelectionSet;
+	Parms.InDeletionOptions = std::move(InDeletionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.DuplicateElement
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InLocationOffset                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UActorElementWorldInterface::DuplicateElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, const struct FVector& InLocationOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_DuplicateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InWorld = InWorld;
+	Parms.InLocationOffset = std::move(InLocationOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetBounds
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FBoxSphereBounds*                OutBounds                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::GetBounds(const struct FScriptTypedElementHandle& InElementHandle, struct FBoxSphereBounds* OutBounds)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetBounds Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutBounds != nullptr)
+		*OutBounds = std::move(Parms.OutBounds);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerLevel
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULevel* UActorElementWorldInterface::GetOwnerLevel(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetOwnerLevel Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetOwnerWorld
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWorld* UActorElementWorldInterface::GetOwnerWorld(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetOwnerWorld Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FVector*                         OutPivotOffset                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::GetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, struct FVector* OutPivotOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutPivotOffset != nullptr)
+		*OutPivotOffset = std::move(Parms.OutPivotOffset);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::GetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.GetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::GetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_GetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.IsTemplateElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::IsTemplateElement(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_IsTemplateElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementEnded
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UActorElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementEnded Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementOngoing
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UActorElementWorldInterface::NotifyMovementOngoing(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementOngoing Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.NotifyMovementStarted
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UActorElementWorldInterface::NotifyMovementStarted(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_NotifyMovementStarted Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Engine.TypedElementWorldInterface.PromoteElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UWorld*                           OverrideWorld                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UActorElementWorldInterface::PromoteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* OverrideWorld)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_PromoteElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.OverrideWorld = OverrideWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetPivotOffset
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVector&                   InPivotOffset                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::SetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, const struct FVector& InPivotOffset)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetPivotOffset Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InPivotOffset = std::move(InPivotOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetRelativeTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::SetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetRelativeTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.TypedElementWorldInterface.SetWorldTransform
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UActorElementWorldInterface::SetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
+
+	Params::TypedElementWorldInterface_SetWorldTransform Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetChildElements
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FScriptTypedElementHandle>*OutElementHandles                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UComponentElementHierarchyInterface::GetChildElements(const struct FScriptTypedElementHandle& InElementHandle, TArray<struct FScriptTypedElementHandle>* OutElementHandles, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetChildElements Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutElementHandles != nullptr)
+		*OutElementHandles = std::move(Parms.OutElementHandles);
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetParentElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UComponentElementHierarchyInterface::GetParentElement(const struct FScriptTypedElementHandle& InElementHandle, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetParentElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObject
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UComponentElementObjectInterface::GetObject(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObject Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObjectClass
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UComponentElementObjectInterface::GetObjectClass(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObjectClass Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::AllowSelectionModifiers(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_AllowSelectionModifiers Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanDeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::CanDeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanDeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanSelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::CanSelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanSelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.DeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::DeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_DeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.GetSelectionElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InCurrentSelection                                     (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const ETypedElementSelectionMethod      InSelectionMethod                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UComponentElementSelectionInterface::GetSelectionElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InCurrentSelection, const ETypedElementSelectionMethod InSelectionMethod)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_GetSelectionElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InCurrentSelection = std::move(InCurrentSelection);
+	Parms.InSelectionMethod = InSelectionMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.IsElementSelected
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementIsSelectedOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::IsElementSelected(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementIsSelectedOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_IsElementSelected Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.SelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UComponentElementSelectionInterface::SelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_SelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.TypedElementCommonActions.CopyNormalizedElements
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -92649,18 +96882,385 @@ TArray<struct FScriptTypedElementHandle> UTypedElementCommonActions::PasteNormal
 }
 
 
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObject
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UObjectElementObjectInterface::GetObject(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObject Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementObjectInterface.GetObjectClass
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UObjectElementObjectInterface::GetObjectClass(const struct FScriptTypedElementHandle& InElementHandle)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementObjectInterface", FnName));
+
+	Params::TypedElementObjectInterface_GetObjectClass Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::AllowSelectionModifiers(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_AllowSelectionModifiers Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanDeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::CanDeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanDeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.CanSelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::CanSelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_CanSelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.DeselectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::DeselectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_DeselectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.GetSelectionElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InCurrentSelection                                     (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const ETypedElementSelectionMethod      InSelectionMethod                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle UObjectElementSelectionInterface::GetSelectionElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InCurrentSelection, const ETypedElementSelectionMethod InSelectionMethod)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_GetSelectionElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InCurrentSelection = std::move(InCurrentSelection);
+	Parms.InSelectionMethod = InSelectionMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.IsElementSelected
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (ConstParm, Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementIsSelectedOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::IsElementSelected(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementIsSelectedOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_IsElementSelected Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementSelectionInterface.SelectElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FScriptTypedElementListProxy&InSelectionSet                                         (Parm, NativeAccessSpecifierPublic)
+// const struct FTypedElementSelectionOptions&InSelectionOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UObjectElementSelectionInterface::SelectElement(const struct FScriptTypedElementHandle& InElementHandle, const struct FScriptTypedElementListProxy& InSelectionSet, const struct FTypedElementSelectionOptions& InSelectionOptions)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementSelectionInterface", FnName));
+
+	Params::TypedElementSelectionInterface_SelectElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.InSelectionSet = std::move(InSelectionSet);
+	Parms.InSelectionOptions = std::move(InSelectionOptions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetChildElements
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FScriptTypedElementHandle>*OutElementHandles                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USMInstanceElementHierarchyInterface::GetChildElements(const struct FScriptTypedElementHandle& InElementHandle, TArray<struct FScriptTypedElementHandle>* OutElementHandles, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetChildElements Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutElementHandles != nullptr)
+		*OutElementHandles = std::move(Parms.OutElementHandles);
+}
+
+
+// Function TypedElementRuntime.TypedElementHierarchyInterface.GetParentElement
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const bool                              bAllowCreate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FScriptTypedElementHandle USMInstanceElementHierarchyInterface::GetParentElement(const struct FScriptTypedElementHandle& InElementHandle, const bool bAllowCreate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementHierarchyInterface", FnName));
+
+	Params::TypedElementHierarchyInterface_GetParentElement Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.bAllowCreate = bAllowCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomData
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<float>&                    CustomDataFloats                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bMarkRenderStateDirty                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USMInstanceElementPrimitiveCustomDataInterface::SetCustomData(const struct FScriptTypedElementHandle& InElementHandle, const TArray<float>& CustomDataFloats, bool bMarkRenderStateDirty)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementPrimitiveCustomDataInterface", FnName));
+
+	Params::TypedElementPrimitiveCustomDataInterface_SetCustomData Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.CustomDataFloats = std::move(CustomDataFloats);
+	Parms.bMarkRenderStateDirty = bMarkRenderStateDirty;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomDataValue
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   CustomDataIndex                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CustomDataValue                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bMarkRenderStateDirty                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USMInstanceElementPrimitiveCustomDataInterface::SetCustomDataValue(const struct FScriptTypedElementHandle& InElementHandle, int32 CustomDataIndex, float CustomDataValue, bool bMarkRenderStateDirty)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementPrimitiveCustomDataInterface", FnName));
+
+	Params::TypedElementPrimitiveCustomDataInterface_SetCustomDataValue Parms{};
+
+	Parms.InElementHandle = std::move(InElementHandle);
+	Parms.CustomDataIndex = CustomDataIndex;
+	Parms.CustomDataValue = CustomDataValue;
+	Parms.bMarkRenderStateDirty = bMarkRenderStateDirty;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Engine.TypedElementWorldInterface.CanDeleteElement
 // (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanDeleteElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::CanDeleteElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanDeleteElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanDeleteElement Parms{};
 
@@ -92669,7 +97269,7 @@ bool ITypedElementWorldInterface::CanDeleteElement(const struct FScriptTypedElem
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92683,12 +97283,10 @@ bool ITypedElementWorldInterface::CanDeleteElement(const struct FScriptTypedElem
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanDuplicateElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::CanDuplicateElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanDuplicateElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanDuplicateElement Parms{};
 
@@ -92697,7 +97295,7 @@ bool ITypedElementWorldInterface::CanDuplicateElement(const struct FScriptTypedE
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92711,12 +97309,10 @@ bool ITypedElementWorldInterface::CanDuplicateElement(const struct FScriptTypedE
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanEditElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::CanEditElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanEditElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanEditElement Parms{};
 
@@ -92725,7 +97321,7 @@ bool ITypedElementWorldInterface::CanEditElement(const struct FScriptTypedElemen
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92740,12 +97336,10 @@ bool ITypedElementWorldInterface::CanEditElement(const struct FScriptTypedElemen
 // const ETypedElementWorldType            InWorldType                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanMoveElement(const struct FScriptTypedElementHandle& InElementHandle, const ETypedElementWorldType InWorldType)
+bool USMInstanceElementWorldInterface::CanMoveElement(const struct FScriptTypedElementHandle& InElementHandle, const ETypedElementWorldType InWorldType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanMoveElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanMoveElement Parms{};
 
@@ -92755,7 +97349,7 @@ bool ITypedElementWorldInterface::CanMoveElement(const struct FScriptTypedElemen
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92769,12 +97363,10 @@ bool ITypedElementWorldInterface::CanMoveElement(const struct FScriptTypedElemen
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanPromoteElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::CanPromoteElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanPromoteElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanPromoteElement Parms{};
 
@@ -92783,7 +97375,7 @@ bool ITypedElementWorldInterface::CanPromoteElement(const struct FScriptTypedEle
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92797,12 +97389,10 @@ bool ITypedElementWorldInterface::CanPromoteElement(const struct FScriptTypedEle
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::CanScaleElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::CanScaleElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "CanScaleElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_CanScaleElement Parms{};
 
@@ -92811,7 +97401,7 @@ bool ITypedElementWorldInterface::CanScaleElement(const struct FScriptTypedEleme
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92828,12 +97418,10 @@ bool ITypedElementWorldInterface::CanScaleElement(const struct FScriptTypedEleme
 // const struct FTypedElementDeletionOptions&InDeletionOptions                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::DeleteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, class UTypedElementSelectionSet* InSelectionSet, const struct FTypedElementDeletionOptions& InDeletionOptions)
+bool USMInstanceElementWorldInterface::DeleteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, class UTypedElementSelectionSet* InSelectionSet, const struct FTypedElementDeletionOptions& InDeletionOptions)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "DeleteElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_DeleteElement Parms{};
 
@@ -92845,7 +97433,7 @@ bool ITypedElementWorldInterface::DeleteElement(const struct FScriptTypedElement
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92861,12 +97449,10 @@ bool ITypedElementWorldInterface::DeleteElement(const struct FScriptTypedElement
 // const struct FVector&                   InLocationOffset                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-struct FScriptTypedElementHandle ITypedElementWorldInterface::DuplicateElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, const struct FVector& InLocationOffset)
+struct FScriptTypedElementHandle USMInstanceElementWorldInterface::DuplicateElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* InWorld, const struct FVector& InLocationOffset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "DuplicateElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_DuplicateElement Parms{};
 
@@ -92877,7 +97463,7 @@ struct FScriptTypedElementHandle ITypedElementWorldInterface::DuplicateElement(c
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92892,12 +97478,10 @@ struct FScriptTypedElementHandle ITypedElementWorldInterface::DuplicateElement(c
 // struct FBoxSphereBounds*                OutBounds                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::GetBounds(const struct FScriptTypedElementHandle& InElementHandle, struct FBoxSphereBounds* OutBounds)
+bool USMInstanceElementWorldInterface::GetBounds(const struct FScriptTypedElementHandle& InElementHandle, struct FBoxSphereBounds* OutBounds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetBounds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetBounds Parms{};
 
@@ -92906,7 +97490,7 @@ bool ITypedElementWorldInterface::GetBounds(const struct FScriptTypedElementHand
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92923,12 +97507,10 @@ bool ITypedElementWorldInterface::GetBounds(const struct FScriptTypedElementHand
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class ULevel* ITypedElementWorldInterface::GetOwnerLevel(const struct FScriptTypedElementHandle& InElementHandle)
+class ULevel* USMInstanceElementWorldInterface::GetOwnerLevel(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetOwnerLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetOwnerLevel Parms{};
 
@@ -92937,7 +97519,7 @@ class ULevel* ITypedElementWorldInterface::GetOwnerLevel(const struct FScriptTyp
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92951,12 +97533,10 @@ class ULevel* ITypedElementWorldInterface::GetOwnerLevel(const struct FScriptTyp
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UWorld*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWorld* ITypedElementWorldInterface::GetOwnerWorld(const struct FScriptTypedElementHandle& InElementHandle)
+class UWorld* USMInstanceElementWorldInterface::GetOwnerWorld(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetOwnerWorld");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetOwnerWorld Parms{};
 
@@ -92965,7 +97545,7 @@ class UWorld* ITypedElementWorldInterface::GetOwnerWorld(const struct FScriptTyp
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -92980,12 +97560,10 @@ class UWorld* ITypedElementWorldInterface::GetOwnerWorld(const struct FScriptTyp
 // struct FVector*                         OutPivotOffset                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::GetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, struct FVector* OutPivotOffset)
+bool USMInstanceElementWorldInterface::GetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, struct FVector* OutPivotOffset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetPivotOffset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetPivotOffset Parms{};
 
@@ -92994,7 +97572,7 @@ bool ITypedElementWorldInterface::GetPivotOffset(const struct FScriptTypedElemen
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93012,12 +97590,10 @@ bool ITypedElementWorldInterface::GetPivotOffset(const struct FScriptTypedElemen
 // struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::GetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+bool USMInstanceElementWorldInterface::GetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetRelativeTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetRelativeTransform Parms{};
 
@@ -93026,7 +97602,7 @@ bool ITypedElementWorldInterface::GetRelativeTransform(const struct FScriptTyped
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93044,12 +97620,10 @@ bool ITypedElementWorldInterface::GetRelativeTransform(const struct FScriptTyped
 // struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::GetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
+bool USMInstanceElementWorldInterface::GetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, struct FTransform* OutTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "GetWorldTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_GetWorldTransform Parms{};
 
@@ -93058,7 +97632,7 @@ bool ITypedElementWorldInterface::GetWorldTransform(const struct FScriptTypedEle
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93075,12 +97649,10 @@ bool ITypedElementWorldInterface::GetWorldTransform(const struct FScriptTypedEle
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::IsTemplateElement(const struct FScriptTypedElementHandle& InElementHandle)
+bool USMInstanceElementWorldInterface::IsTemplateElement(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "IsTemplateElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_IsTemplateElement Parms{};
 
@@ -93089,7 +97661,7 @@ bool ITypedElementWorldInterface::IsTemplateElement(const struct FScriptTypedEle
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93102,12 +97674,10 @@ bool ITypedElementWorldInterface::IsTemplateElement(const struct FScriptTypedEle
 // Parameters:
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void ITypedElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedElementHandle& InElementHandle)
+void USMInstanceElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementEnded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_NotifyMovementEnded Parms{};
 
@@ -93116,7 +97686,7 @@ void ITypedElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedE
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -93127,12 +97697,10 @@ void ITypedElementWorldInterface::NotifyMovementEnded(const struct FScriptTypedE
 // Parameters:
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void ITypedElementWorldInterface::NotifyMovementOngoing(const struct FScriptTypedElementHandle& InElementHandle)
+void USMInstanceElementWorldInterface::NotifyMovementOngoing(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementOngoing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_NotifyMovementOngoing Parms{};
 
@@ -93141,7 +97709,7 @@ void ITypedElementWorldInterface::NotifyMovementOngoing(const struct FScriptType
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -93152,12 +97720,10 @@ void ITypedElementWorldInterface::NotifyMovementOngoing(const struct FScriptType
 // Parameters:
 // const struct FScriptTypedElementHandle& InElementHandle                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void ITypedElementWorldInterface::NotifyMovementStarted(const struct FScriptTypedElementHandle& InElementHandle)
+void USMInstanceElementWorldInterface::NotifyMovementStarted(const struct FScriptTypedElementHandle& InElementHandle)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "NotifyMovementStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_NotifyMovementStarted Parms{};
 
@@ -93166,7 +97732,7 @@ void ITypedElementWorldInterface::NotifyMovementStarted(const struct FScriptType
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -93179,12 +97745,10 @@ void ITypedElementWorldInterface::NotifyMovementStarted(const struct FScriptType
 // class UWorld*                           OverrideWorld                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FScriptTypedElementHandle        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
-struct FScriptTypedElementHandle ITypedElementWorldInterface::PromoteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* OverrideWorld)
+struct FScriptTypedElementHandle USMInstanceElementWorldInterface::PromoteElement(const struct FScriptTypedElementHandle& InElementHandle, class UWorld* OverrideWorld)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "PromoteElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_PromoteElement Parms{};
 
@@ -93194,7 +97758,7 @@ struct FScriptTypedElementHandle ITypedElementWorldInterface::PromoteElement(con
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93209,12 +97773,10 @@ struct FScriptTypedElementHandle ITypedElementWorldInterface::PromoteElement(con
 // const struct FVector&                   InPivotOffset                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::SetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, const struct FVector& InPivotOffset)
+bool USMInstanceElementWorldInterface::SetPivotOffset(const struct FScriptTypedElementHandle& InElementHandle, const struct FVector& InPivotOffset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetPivotOffset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_SetPivotOffset Parms{};
 
@@ -93224,7 +97786,7 @@ bool ITypedElementWorldInterface::SetPivotOffset(const struct FScriptTypedElemen
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93239,12 +97801,10 @@ bool ITypedElementWorldInterface::SetPivotOffset(const struct FScriptTypedElemen
 // const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::SetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+bool USMInstanceElementWorldInterface::SetRelativeTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetRelativeTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_SetRelativeTransform Parms{};
 
@@ -93254,7 +97814,7 @@ bool ITypedElementWorldInterface::SetRelativeTransform(const struct FScriptTyped
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93269,12 +97829,10 @@ bool ITypedElementWorldInterface::SetRelativeTransform(const struct FScriptTyped
 // const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool ITypedElementWorldInterface::SetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
+bool USMInstanceElementWorldInterface::SetWorldTransform(const struct FScriptTypedElementHandle& InElementHandle, const struct FTransform& InTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("TypedElementWorldInterface", "SetWorldTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"TypedElementWorldInterface", FnName));
 
 	Params::TypedElementWorldInterface_SetWorldTransform Parms{};
 
@@ -93284,7 +97842,7 @@ bool ITypedElementWorldInterface::SetWorldTransform(const struct FScriptTypedEle
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -93591,10 +98149,8 @@ bool ULocalPlayerSaveGame::AsyncSaveGameToSlotForLocalPlayer()
 
 void ULocalPlayerSaveGame::OnPostLoad()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalPlayerSaveGame", "OnPostLoad");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LocalPlayerSaveGame", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93607,10 +98163,8 @@ void ULocalPlayerSaveGame::OnPostLoad()
 
 void ULocalPlayerSaveGame::OnPostSave(bool bSuccess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalPlayerSaveGame", "OnPostSave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LocalPlayerSaveGame", FnName));
 
 	Params::LocalPlayerSaveGame_OnPostSave Parms{};
 
@@ -93625,10 +98179,8 @@ void ULocalPlayerSaveGame::OnPostSave(bool bSuccess)
 
 void ULocalPlayerSaveGame::OnPreSave()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalPlayerSaveGame", "OnPreSave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LocalPlayerSaveGame", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93639,10 +98191,8 @@ void ULocalPlayerSaveGame::OnPreSave()
 
 void ULocalPlayerSaveGame::OnResetToDefault()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalPlayerSaveGame", "OnResetToDefault");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LocalPlayerSaveGame", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94025,10 +98575,8 @@ void UGameInstance::DebugRemovePlayer(int32 ControllerId)
 
 void UGameInstance::HandleNetworkError(ENetworkFailure FailureType, bool bIsServer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameInstance", "HandleNetworkError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameInstance", FnName));
 
 	Params::GameInstance_HandleNetworkError Parms{};
 
@@ -94046,10 +98594,8 @@ void UGameInstance::HandleNetworkError(ENetworkFailure FailureType, bool bIsServ
 
 void UGameInstance::HandleTravelError(ETravelFailure FailureType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameInstance", "HandleTravelError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameInstance", FnName));
 
 	Params::GameInstance_HandleTravelError Parms{};
 
@@ -94064,10 +98610,8 @@ void UGameInstance::HandleTravelError(ETravelFailure FailureType)
 
 void UGameInstance::ReceiveInit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameInstance", "ReceiveInit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94078,10 +98622,8 @@ void UGameInstance::ReceiveInit()
 
 void UGameInstance::ReceiveShutdown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameInstance", "ReceiveShutdown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"GameInstance", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115901,147 +120443,6 @@ float UImportanceSamplingLibrary::RandomSobolFloat(int32 Index_0, int32 Dimensio
 }
 
 
-// Function Engine.LevelInstanceInterface.LoadLevelInstance
-// (RequiredAPI, Native, Public, BlueprintCallable)
-
-void ILevelInstanceInterface::LoadLevelInstance()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "LoadLevelInstance");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Engine.LevelInstanceInterface.SetWorldAsset
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// TSoftObjectPtr<class UWorld>            WorldAsset                                             (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ILevelInstanceInterface::SetWorldAsset(TSoftObjectPtr<class UWorld> WorldAsset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "SetWorldAsset");
-
-	Params::LevelInstanceInterface_SetWorldAsset Parms{};
-
-	Parms.WorldAsset = WorldAsset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.LevelInstanceInterface.UnloadLevelInstance
-// (RequiredAPI, Native, Public, BlueprintCallable)
-
-void ILevelInstanceInterface::UnloadLevelInstance()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "UnloadLevelInstance");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Engine.LevelInstanceInterface.GetLoadedLevel
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class ULevel*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULevel* ILevelInstanceInterface::GetLoadedLevel() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "GetLoadedLevel");
-
-	Params::LevelInstanceInterface_GetLoadedLevel Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.LevelInstanceInterface.GetWorldAsset
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TSoftObjectPtr<class UWorld>      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const TSoftObjectPtr<class UWorld> ILevelInstanceInterface::GetWorldAsset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "GetWorldAsset");
-
-	Params::LevelInstanceInterface_GetWorldAsset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Engine.LevelInstanceInterface.IsLoaded
-// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ILevelInstanceInterface::IsLoaded() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("LevelInstanceInterface", "IsLoaded");
-
-	Params::LevelInstanceInterface_IsLoaded Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function Engine.LightWeightInstanceBlueprintFunctionLibrary.ConvertActorToLightWeightInstance
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -120028,6 +124429,84 @@ int32 USkeletalMesh::NumSockets() const
 }
 
 
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USkeletalMesh::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* USkeletalMesh::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USkeletalMesh::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Engine.WorldPartitionBlueprintLibrary.GetActorDescs
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -121381,6 +125860,84 @@ const TArray<struct FStaticMaterial> UStaticMesh::GetStaticMaterials() const
 		Func = Class->GetFunction("StaticMesh", "GetStaticMaterials");
 
 	Params::StaticMesh_GetStaticMaterials Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UStaticMesh::AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_AddAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAssetUserData*                   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAssetUserData* UStaticMesh::GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_GetAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAssetUserData>       InUserDataClass                                        (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UStaticMesh::HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"Interface_AssetUserData", FnName));
+
+	Params::Interface_AssetUserData_HasAssetUserDataOfClass Parms{};
+
+	Parms.InUserDataClass = InUserDataClass;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -123428,10 +127985,8 @@ const TSet<class FName> UDataLayerSubsystem::GetLoadedDataLayerNames() const
 
 void IWorldPartitionDestructibleInHLODInterface::SetHLODDestructionTag(const struct FWorldPartitionHLODDestructionTag& InDestructionTag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("WorldPartitionDestructibleInHLODInterface", "SetHLODDestructionTag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"WorldPartitionDestructibleInHLODInterface", FnName));
 
 	Params::WorldPartitionDestructibleInHLODInterface_SetHLODDestructionTag Parms{};
 
@@ -123453,10 +128008,8 @@ void IWorldPartitionDestructibleInHLODInterface::SetHLODDestructionTag(const str
 
 struct FWorldPartitionHLODDestructionTag IWorldPartitionDestructibleInHLODInterface::GetHLODDestructionTag() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("WorldPartitionDestructibleInHLODInterface", "GetHLODDestructionTag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"WorldPartitionDestructibleInHLODInterface", FnName));
 
 	Params::WorldPartitionDestructibleInHLODInterface_GetHLODDestructionTag Parms{};
 
@@ -123560,5 +128113,5 @@ void UWorldPartitionRuntimeLevelStreamingCell::OnLevelShown()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

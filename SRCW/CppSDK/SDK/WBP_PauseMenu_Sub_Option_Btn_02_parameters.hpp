@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_PauseMenu_Sub_Option_Btn_02.WBP_PauseMenu_Sub_Option_Btn_02_C.ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_02
 // 0x00B0 (0x00B0 - 0x0000)
@@ -70,5 +70,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_PauseMenu_Sub_Option_Btn_02_C_SetToggle;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

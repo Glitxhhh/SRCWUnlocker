@@ -14,18 +14,15 @@
 #include "BP_RaceStandings_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceStandings.BP_RaceStandings_C.Destroy
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_RaceStandings_C::Destroy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "Destroy");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_RaceStandings_C::Destroy()
 
 void ABP_RaceStandings_C::ExecuteUbergraph_BP_RaceStandings(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ExecuteUbergraph_BP_RaceStandings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceStandings_C", "ExecuteUbergraph_BP_RaceStandings", FuncInfo);
 
 	Params::BP_RaceStandings_C_ExecuteUbergraph_BP_RaceStandings Parms{};
 
@@ -58,10 +53,8 @@ void ABP_RaceStandings_C::ExecuteUbergraph_BP_RaceStandings(int32 EntryPoint)
 
 void ABP_RaceStandings_C::GetTargetWidget(class UClass** WidgetBlueprint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "GetTargetWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	Params::BP_RaceStandings_C_GetTargetWidget Parms{};
 
@@ -79,10 +72,8 @@ void ABP_RaceStandings_C::GetTargetWidget(class UClass** WidgetBlueprint)
 
 void ABP_RaceStandings_C::GetWidgetCache(class UUserWidget** RusultWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "GetWidgetCache");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	Params::BP_RaceStandings_C_GetWidgetCache Parms{};
 
@@ -98,10 +89,8 @@ void ABP_RaceStandings_C::GetWidgetCache(class UUserWidget** RusultWidget)
 
 void ABP_RaceStandings_C::OnEndAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "OnEndAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +101,8 @@ void ABP_RaceStandings_C::OnEndAnimation()
 
 void ABP_RaceStandings_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void ABP_RaceStandings_C::ReceiveBeginPlay()
 
 void ABP_RaceStandings_C::SetResultRankingHide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "SetResultRankingHide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void ABP_RaceStandings_C::SetResultRankingHide()
 
 void ABP_RaceStandings_C::ShowLoadInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ShowLoadInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +137,8 @@ void ABP_RaceStandings_C::ShowLoadInfo()
 
 void ABP_RaceStandings_C::ShowLoadInfo2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ShowLoadInfo2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +149,8 @@ void ABP_RaceStandings_C::ShowLoadInfo2()
 
 void ABP_RaceStandings_C::ShowRaceResult()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ShowRaceResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -184,10 +163,8 @@ void ABP_RaceStandings_C::ShowRaceResult()
 
 void ABP_RaceStandings_C::UseTotalStandings(bool* Use)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "UseTotalStandings");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	Params::BP_RaceStandings_C_UseTotalStandings Parms{};
 
@@ -203,13 +180,11 @@ void ABP_RaceStandings_C::UseTotalStandings(bool* Use)
 
 void ABP_RaceStandings_C::ViewEndLoadInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceStandings_C", "ViewEndLoadInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceStandings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

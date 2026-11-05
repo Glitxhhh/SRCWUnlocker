@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemCyanLaserCamera_Moving.BP_ItemCyanLaserCamera_Moving_C
 // 0x0010 (0x0420 - 0x0410)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemCyanLaserCamera_Moving_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FootcutWarpRingPerformance.BP_FootcutWarpRingPerformance_C
 // 0x0000 (0x0460 - 0x0460)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_FootcutWarpRingPerformance_C;
 
-}
-
+SDK_NAMESPACE_END

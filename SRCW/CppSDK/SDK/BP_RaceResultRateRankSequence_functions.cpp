@@ -14,18 +14,15 @@
 #include "BP_RaceResultRateRankSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceResultRateRankSequence.BP_RaceResultRateRankSequence_C.CreateRankUpRewardGetDisplay
 // (Event, Protected, BlueprintEvent)
 
 void ABP_RaceResultRateRankSequence_C::CreateRankUpRewardGetDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "CreateRankUpRewardGetDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_RaceResultRateRankSequence_C::CreateRankUpRewardGetDisplay()
 
 void ABP_RaceResultRateRankSequence_C::CreateRankupWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "CreateRankupWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void ABP_RaceResultRateRankSequence_C::CreateRankupWidget()
 
 void ABP_RaceResultRateRankSequence_C::CreateResultRateWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "CreateResultRateWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void ABP_RaceResultRateRankSequence_C::CreateResultRateWidget()
 
 void ABP_RaceResultRateRankSequence_C::CreateRewardDialogAndSaveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "CreateRewardDialogAndSaveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +71,8 @@ void ABP_RaceResultRateRankSequence_C::CreateRewardDialogAndSaveObject()
 
 void ABP_RaceResultRateRankSequence_C::ExecuteUbergraph_BP_RaceResultRateRankSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "ExecuteUbergraph_BP_RaceResultRateRankSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceResultRateRankSequence_C", "ExecuteUbergraph_BP_RaceResultRateRankSequence", FuncInfo);
 
 	Params::BP_RaceResultRateRankSequence_C_ExecuteUbergraph_BP_RaceResultRateRankSequence Parms{};
 
@@ -98,10 +87,8 @@ void ABP_RaceResultRateRankSequence_C::ExecuteUbergraph_BP_RaceResultRateRankSeq
 
 void ABP_RaceResultRateRankSequence_C::LoadResultRateWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "LoadResultRateWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void ABP_RaceResultRateRankSequence_C::LoadResultRateWidget()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateEndDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateEndDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateEndDisplay()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +123,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateExit()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateGetRankReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateGetRankReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +135,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateGetRankReward()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateIdle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateIdle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +147,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateIdle()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateRankDown()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateRankDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +159,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateRankDown()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateRankUp()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateRankUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +171,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateRankUp()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateStartDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateStartDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -210,12 +183,28 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateStartDisplay()
 
 void ABP_RaceResultRateRankSequence_C::OnInitStateUpdateRate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnInitStateUpdateRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_RaceResultRateRankSequence.BP_RaceResultRateRankSequence_C.OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSubclassOf<class UObject>              Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+void ABP_RaceResultRateRankSequence_C::OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A(TSubclassOf<class UObject> Loaded)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
+
+	Params::BP_RaceResultRateRankSequence_C_OnLoaded_51BE2A1A474F78A38D0684BD7DF13E4A Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -226,10 +215,8 @@ void ABP_RaceResultRateRankSequence_C::OnInitStateUpdateRate()
 
 void ABP_RaceResultRateRankSequence_C::OnLoaded_8253A9344CCF796B76F6C29F92EDA292(TSubclassOf<class UObject> Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnLoaded_8253A9344CCF796B76F6C29F92EDA292");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	Params::BP_RaceResultRateRankSequence_C_OnLoaded_8253A9344CCF796B76F6C29F92EDA292 Parms{};
 
@@ -246,10 +233,8 @@ void ABP_RaceResultRateRankSequence_C::OnLoaded_8253A9344CCF796B76F6C29F92EDA292
 
 void ABP_RaceResultRateRankSequence_C::OnLoaded_954DBACF48FD86B2267102BA58197816(TSubclassOf<class UObject> Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultRateRankSequence_C", "OnLoaded_954DBACF48FD86B2267102BA58197816");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultRateRankSequence_C", FnName));
 
 	Params::BP_RaceResultRateRankSequence_C_OnLoaded_954DBACF48FD86B2267102BA58197816 Parms{};
 
@@ -258,5 +243,5 @@ void ABP_RaceResultRateRankSequence_C::OnLoaded_954DBACF48FD86B2267102BA58197816
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

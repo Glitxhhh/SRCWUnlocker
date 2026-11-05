@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPFL_DodonpaEventUtilityLibrary.BPFL_DodonpaEventUtilityLibrary_C.Call Dodonpa Event
 // 0x0160 (0x0160 - 0x0000)
@@ -139,5 +139,5 @@ public:
 };
 DUMPER7_ASSERTS_BPFL_DodonpaEventUtilityLibrary_C_IsEventComplete;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "ABP_Knuckles_Driver_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_Knuckles_Driver.ABP_Knuckles_Driver_C.GetLinkedAnimClass
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_Knuckles_Driver_C::GetLinkedAnimClass(class UClass** Out_AnimInstance)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Knuckles_Driver_C", "GetLinkedAnimClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_Knuckles_Driver_C", FnName));
 
 	Params::ABP_Knuckles_Driver_C_GetLinkedAnimClass Parms{};
 
@@ -37,5 +34,5 @@ void UABP_Knuckles_Driver_C::GetLinkedAnimClass(class UClass** Out_AnimInstance)
 		*Out_AnimInstance = Parms.Out_AnimInstance;
 }
 
-}
 
+SDK_NAMESPACE_END

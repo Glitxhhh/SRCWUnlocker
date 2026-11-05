@@ -14,8 +14,7 @@
 #include "WBP_TimeTrial_TimeDifference_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_TimeDifference.WBP_TimeTrial_TimeDifference_C.ExecuteUbergraph_WBP_TimeTrial_TimeDifference
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TimeTrial_TimeDifference_C::ExecuteUbergraph_WBP_TimeTrial_TimeDifference(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_TimeDifference_C", "ExecuteUbergraph_WBP_TimeTrial_TimeDifference");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_TimeDifference_C", "ExecuteUbergraph_WBP_TimeTrial_TimeDifference", FuncInfo);
 
 	Params::WBP_TimeTrial_TimeDifference_C_ExecuteUbergraph_WBP_TimeTrial_TimeDifference Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_TimeTrial_TimeDifference_C::ExecuteUbergraph_WBP_TimeTrial_TimeDiffere
 
 void UWBP_TimeTrial_TimeDifference_C::SetDifferenceTime(const class FText& TimeText, bool bIsUpTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_TimeDifference_C", "SetDifferenceTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_TimeDifference_C", FnName));
 
 	Params::WBP_TimeTrial_TimeDifference_C_SetDifferenceTime Parms{};
 
@@ -64,13 +59,11 @@ void UWBP_TimeTrial_TimeDifference_C::SetDifferenceTime(const class FText& TimeT
 
 void UWBP_TimeTrial_TimeDifference_C::SetSameTime()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_TimeDifference_C", "SetSameTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_TimeDifference_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

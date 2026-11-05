@@ -14,41 +14,24 @@
 #include "WBP_CMN_ScrollSnapPoint_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
-// Function WBP_CMN_ScrollSnapPoint.WBP_CMN_ScrollSnapPoint_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_CMN_ScrollSnapPoint_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ScrollSnapPoint_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CMN_ScrollSnapPoint.WBP_CMN_ScrollSnapPoint_C.ExecuteUbergraph_WBP_CMN_ScrollSnapPoint
-// (Final, UbergraphFunction)
+// Function WBP_CMN_ScrollSnapPoint.WBP_CMN_ScrollSnapPoint_C.Resize
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InNewSize                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CMN_ScrollSnapPoint_C::ExecuteUbergraph_WBP_CMN_ScrollSnapPoint(int32 EntryPoint)
+void UWBP_CMN_ScrollSnapPoint_C::Resize(const int32 InNewSize)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ScrollSnapPoint_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ScrollSnapPoint_C", "ExecuteUbergraph_WBP_CMN_ScrollSnapPoint");
+	Params::WBP_CMN_ScrollSnapPoint_C_Resize Parms{};
 
-	Params::WBP_CMN_ScrollSnapPoint_C_ExecuteUbergraph_WBP_CMN_ScrollSnapPoint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.InNewSize = InNewSize;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

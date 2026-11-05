@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "ST_ColorPresetSelectPageData_structs.hpp"
 #include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "ST_ColorPresetSelectPageData_structs.hpp"
 #include "ST_ColorPresetSelectPageItemData_structs.hpp"
 #include "UnionLib_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_MachineState.BPC_MachineState_C.BindCharaMachineSelectWindow
 // 0x0008 (0x0008 - 0x0000)
@@ -49,7 +49,7 @@ public:
 DUMPER7_ASSERTS_BPC_MachineState_C_BindMachineTypeSelectWindow;
 
 // Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_ColorDecisionButtonFocusEvent
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct BPC_MachineState_C_CharaMachineSelect_ColorDecisionButtonFocusEvent final
 {
 public:
@@ -64,8 +64,10 @@ public:
 	class ABP_MenuRacerPreview_C*                 K2Node_DynamicCast_AsBP_Menu_Racer_Preview;        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x0040(0x0078)()
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x003A(0x000A)(NoDestructor)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x0048(0x0078)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_CharaMachineSelect_ColorDecisionButtonFocusEvent;
 
@@ -100,7 +102,7 @@ public:
 DUMPER7_ASSERTS_BPC_MachineState_C_CharaMachineSelect_OnMachineColorCancelEvent;
 
 // Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorDecisionEvent
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct BPC_MachineState_C_CharaMachineSelect_OnMachineColorDecisionEvent final
 {
 public:
@@ -109,37 +111,43 @@ public:
 	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue_1;       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x0008(0x0078)()
-	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue_2;       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData_1; // 0x0088(0x0078)()
-	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0100(0x0078)()
-	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue;  // 0x0178(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0180(0x0028)()
+	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue;  // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0088(0x0078)()
+	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x0100(0x0038)()
+	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue_2;       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData_1; // 0x0140(0x0078)()
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_CharaMachineSelect_OnMachineColorDecisionEvent;
 
 // Function BPC_MachineState.BPC_MachineState_C.CharaMachineSelect_OnMachineColorFocusEvent
-// 0x0208 (0x0208 - 0x0000)
+// 0x0228 (0x0228 - 0x0000)
 struct BPC_MachineState_C_CharaMachineSelect_OnMachineColorFocusEvent final
 {
 public:
 	struct FST_ColorPresetSelectPageItemData      ColorPreset;                                       // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	int32                                         PlayerIndex;                                       // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ButtonIndex;                                       // 0x005C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AMenuRacerBase*                         CallFunc_GetMenuRacer_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSpecifiedMachineCustomConditionResult CallFunc_GetSpecifiedMachineCustomConditionResult_ReturnValue; // 0x0060(0x000A)(NoDestructor)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue;  // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_MenuRacerPreview_C*                 K2Node_DynamicCast_AsBP_Menu_Racer_Preview;        // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MachineSelect_Sub_ColorWindow_C*   K2Node_DynamicCast_AsWBP_Machine_Select_Sub_Color_Window; // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_MachineSelect_Sub_ColorWindow_C*   K2Node_DynamicCast_AsWBP_Machine_Select_Sub_Color_Window; // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x0098(0x0078)()
-	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0110(0x0078)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUserMachineCustomizeData              CallFunc_SetAllMachineColorsAsPreset_ReturnValue;  // 0x0190(0x0078)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue_1; // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MachineSelect_Sub_ColorWindow_C*   K2Node_DynamicCast_AsWBP_Machine_Select_Sub_Color_Window_1; // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AMenuRacerBase*                         CallFunc_GetMenuRacer_ReturnValue;                 // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_MenuRacerPreview_C*                 K2Node_DynamicCast_AsBP_Menu_Racer_Preview;        // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUserMachineCustomizeData              CallFunc_Get_Customize_Data_OutCustomizeData;      // 0x00C0(0x0078)()
+	struct FUserMachineCustomizeData              K2Node_SetFieldsInStruct_StructOut;                // 0x0138(0x0078)()
+	struct FUserMachineCustomizeData              CallFunc_SetAllMachineColorsAsPreset_ReturnValue;  // 0x01B0(0x0078)()
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_CharaMachineSelect_OnMachineColorFocusEvent;
 
@@ -164,15 +172,15 @@ struct BPC_MachineState_C_CharaMachineSelect_OnMachinePartsCancelEvent final
 {
 public:
 	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMachineSelectControlState                    Temp_byte_Variable;                                // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineSelectControlState                    Temp_byte_Variable_1;                              // 0x0005(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharaMachineSelectBase*                CallFunc_GetCharaMachineSubWindow_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EMachineSelectControlState                    Temp_byte_Variable;                                // 0x0010(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsAllPlayerSelected_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineSelectControlState                    Temp_byte_Variable_1;                              // 0x0013(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineSelectControlState                    CallFunc_Array_Get_Item;                           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineSelectControlState                    CallFunc_Array_Get_Item;                           // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_CharaMachineSelect_OnMachinePartsCancelEvent;
 
@@ -234,62 +242,62 @@ public:
 DUMPER7_ASSERTS_BPC_MachineState_C_DecideMachine;
 
 // Function BPC_MachineState.BPC_MachineState_C.ExecuteUbergraph_BPC_MachineState
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct BPC_MachineState_C_ExecuteUbergraph_BPC_MachineState final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex_0, UNION::EMachineSelectMode Mode)> K2Node_CreateDelegate_OutputDelegate; // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, UNION::EMachineSelectMode Mode)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_7;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_CustomEvent_InColorWindow_1;                // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_8;            // 0x0090(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FST_ColorPresetSelectPageItemData& ItemData, int32 InPlayerIndex)> K2Node_CreateDelegate_OutputDelegate_9; // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FST_ColorPresetSelectPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_10; // 0x00B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_CustomEvent_InColorWindow;                  // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMachineTypeScrollControl*              K2Node_Event_InMachineTypeSelectWindow_1;          // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)> K2Node_CreateDelegate_OutputDelegate_11; // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UUnionUIButtonBase* Button)> K2Node_CreateDelegate_OutputDelegate_12;       // 0x00E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_4;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)> K2Node_CreateDelegate_OutputDelegate_5; // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex_0, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 PlayerIndex_0, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)> K2Node_CreateDelegate_OutputDelegate_7; // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UUnionUIButtonBase* Button)> K2Node_CreateDelegate_OutputDelegate_8;        // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_9;            // 0x0094(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_CustomEvent_InColorWindow_1;                // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(int32 InPlayerIndex)>          K2Node_CreateDelegate_OutputDelegate_10;           // 0x00B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FST_ColorPresetSelectPageItemData& ItemData, int32 InPlayerIndex)> K2Node_CreateDelegate_OutputDelegate_11; // 0x00C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FST_ColorPresetSelectPageItemData& ItemData, int32 InPlayerIndex, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate_12; // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_CustomEvent_InColorWindow;                  // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMachineTypeScrollControl*              K2Node_Event_InMachineTypeSelectWindow_1;          // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 SelectedPlayerControllerIndex)> K2Node_CreateDelegate_OutputDelegate_13;    // 0x00F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)> K2Node_CreateDelegate_OutputDelegate_14; // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCharaMachineSelectBase*                K2Node_Event_InWindow_1;                           // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UCharaMachineSelectBase*                K2Node_Event_InWindow;                             // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UMachineTypeScrollControl*              K2Node_Event_InMachineTypeSelectWindow;            // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EHintId                                       CallFunc_GetHintId_ReturnValue;                    // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMachineTypeScrollControl*              CallFunc_GetMachineTypeSelectWindow_ReturnValue;   // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_InPlayerIndex;                  // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECarStatusType                                CallFunc_GetSelectedMachineType_ReturnValue;       // 0x0145(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsAllPlayerSelected_ReturnValue;          // 0x0146(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_147[0x1];                                      // 0x0147(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0148(0x0004)()
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_1;                  // 0x014C(0x0004)()
-	int32                                         Temp_int_Variable;                                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USaveDataManageSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UpdateRemainTime_Result;                  // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)> K2Node_CreateDelegate_OutputDelegate_15; // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EHintId                                       CallFunc_GetHintId_ReturnValue;                    // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMachineTypeScrollControl*              CallFunc_GetMachineTypeSelectWindow_ReturnValue;   // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_InPlayerIndex;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECarStatusType                                CallFunc_GetSelectedMachineType_ReturnValue;       // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAllPlayerSelected_ReturnValue;          // 0x0156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_157[0x1];                                      // 0x0157(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0158(0x0004)()
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue_1;                  // 0x015C(0x0004)()
+	int32                                         Temp_int_Variable;                                 // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSelectedPlayerCount_ReturnValue;       // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMachineSelectControlState                    Temp_byte_Variable;                                // 0x0170(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UpdateRemainTime_Result;                  // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMachineSelectControlState                    Temp_byte_Variable;                                // 0x017A(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17B[0x5];                                      // 0x017B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharaMachineSelectSequence*            CallFunc_GetSequence_ReturnValue;                  // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_CharaMachineSequence_C*             K2Node_DynamicCast_AsBP_Chara_Machine_Sequence;    // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_UpdateRemainTime_InDeltaTime_ImplicitCast; // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USaveDataManageSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_UpdateRemainTime_InDeltaTime_ImplicitCast; // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_ExecuteUbergraph_BPC_MachineState;
 
@@ -319,7 +327,7 @@ public:
 DUMPER7_ASSERTS_BPC_MachineState_C_OnMachineTypeCancelCallback;
 
 // Function BPC_MachineState.BPC_MachineState_C.OnMachineTypeDecideCallback
-// 0x0168 (0x0168 - 0x0000)
+// 0x0178 (0x0178 - 0x0000)
 struct BPC_MachineState_C_OnMachineTypeDecideCallback final
 {
 public:
@@ -343,18 +351,18 @@ public:
 	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue;         // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSimpleCustomMachineId_ReturnValue;      // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_AB[0x5];                                       // 0x00AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x00B0(0x0028)()
-	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue_1;       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x00E0(0x0078)()
-	EOutputExecsPin_SuccessFailed                 CallFunc_SetSelectedMachineID_OutExecsPin;         // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOutputExecsPin_SuccessFailed                 CallFunc_SetSelectedMachineType_OutExecsPin;       // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x015C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15D[0x3];                                      // 0x015D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0160(0x0004)()
+	struct FGadgetPlateUIData                     CallFunc_GetSelectedGadgetPlateUIData_OutGadgetPlateUIData; // 0x00B0(0x0038)()
+	EMachineId                                    CallFunc_GetSelectedMachineId_ReturnValue_1;       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUserMachineCustomizeData              CallFunc_GetMachineCustomizeDataById_OutUserMachineCustomizeData; // 0x00F0(0x0078)()
+	EOutputExecsPin_SuccessFailed                 CallFunc_SetSelectedMachineID_OutExecsPin;         // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOutputExecsPin_SuccessFailed                 CallFunc_SetSelectedMachineType_OutExecsPin;       // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsReadHint_ReturnValue;                   // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoundHandle                           CallFunc_SoundPlay_ReturnValue;                    // 0x0170(0x0004)()
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_OnMachineTypeDecideCallback;
 
@@ -509,38 +517,37 @@ public:
 DUMPER7_ASSERTS_BPC_MachineState_C_UnbindMachineTypeSelectWindow;
 
 // Function BPC_MachineState.BPC_MachineState_C.UpdateNavigationSimpleCustomizeColor
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BPC_MachineState_C_UpdateNavigationSimpleCustomizeColor final
 {
 public:
 	int32                                         ButtonIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PlayerIndex;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_MachineSelect_Sub_ColorWindow_C*   K2Node_DynamicCast_AsWBP_Machine_Select_Sub_Color_Window; // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_DynamicCast_AsWBP_Machine_Custom_Sub_Preset_Paint; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C*> CallFunc_GetPage_OutList;             // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C* CallFunc_Array_Get_Item;                      // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUnionUIGridNavigationBuilder*          CallFunc_GetNavigation_GridNavigationBuilder;      // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UUnionUIButtonBase*>             CallFunc_GetButtonsByColumnIndex_OutButtons;       // 0x0070(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonBase*                     CallFunc_Array_Get_Item_1;                         // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonBase*                     CallFunc_Array_Get_Item_2;                         // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UUnionUIButtonBase*>             Buttons;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	class UMachineColorSelectWindow*              CallFunc_GetMachineColorSelectWindow_ReturnValue;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_MachineSelect_Sub_ColorWindow_C*   K2Node_DynamicCast_AsWBP_Machine_Select_Sub_Color_Window; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MachineCustom_Sub_PresetPaint_C*   K2Node_DynamicCast_AsWBP_Machine_Custom_Sub_Preset_Paint; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C*> CallFunc_GetPage_OutList;             // 0x0048(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_MachinrCustom_Sub_Paint_PresetWindow_C* CallFunc_Array_Get_Item;                      // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBase*                     CallFunc_Array_Get_Item_1;                         // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIGridNavigationBuilder*          CallFunc_GetNavigation_GridNavigationBuilder;      // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UUnionUIButtonBase*>             CallFunc_GetButtonsByColumnIndex_OutButtons;       // 0x0078(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUnionUIButtonBase*                     CallFunc_Array_Get_Item_2;                         // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_UpdateNavigationSimpleCustomizeColor;
 
@@ -560,5 +567,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_MachineState_C_UpdateRemainTime;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

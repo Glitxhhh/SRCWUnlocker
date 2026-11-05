@@ -14,8 +14,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_PlayerPlate_Small.WBP_Friend_Sub_PlayerPlate_Small_C
 // 0x0020 (0x04A0 - 0x0480)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_Sub_PlayerPlate_Small_C;
 
-}
-
+SDK_NAMESPACE_END

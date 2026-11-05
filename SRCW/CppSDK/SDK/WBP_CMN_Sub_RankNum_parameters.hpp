@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_CMN_Sub_RankNum.WBP_CMN_Sub_RankNum_C.ExecuteUbergraph_WBP_CMN_Sub_RankNum
 // 0x00E0 (0x00E0 - 0x0000)
@@ -90,5 +90,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_Sub_RankNum_C_SetNum;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

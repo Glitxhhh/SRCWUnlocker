@@ -14,8 +14,7 @@
 #include "WBP_CMN_TextBalloon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_TextBalloon.WBP_CMN_TextBalloon_C.SetPositionOffset
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_TextBalloon_C::SetPositionOffset(const struct FVector2D& Translation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_TextBalloon_C", "SetPositionOffset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_TextBalloon_C", FnName));
 
 	Params::WBP_CMN_TextBalloon_C_SetPositionOffset Parms{};
 
@@ -36,5 +33,5 @@ void UWBP_CMN_TextBalloon_C::SetPositionOffset(const struct FVector2D& Translati
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu.WBP_HeaderMenu_C.AddToViewportHeader
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_HeaderMenu_C::AddToViewportHeader()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "AddToViewportHeader");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_HeaderMenu_C::AddToViewportHeader()
 
 void UWBP_HeaderMenu_C::BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Btn_02_R_K2Node_ComponentBoundEvent_0_OnStampMouseClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Btn_02_R_K2Node_ComponentBoundEvent_0_OnStampMouseClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -54,10 +49,8 @@ void UWBP_HeaderMenu_C::BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Btn_02_R_K2Nod
 
 void UWBP_HeaderMenu_C::BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Rule_TimeTable_K2Node_ComponentBoundEvent_1_OnUISceneEvent__DelegateSignature(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Rule_TimeTable_K2Node_ComponentBoundEvent_1_OnUISceneEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Rule_TimeTable_K2Node_ComponentBoundEvent_1_OnUISceneEvent__DelegateSignature Parms{};
 
@@ -74,10 +67,8 @@ void UWBP_HeaderMenu_C::BndEvt__WBP_HeaderMenu_WBP_HeaderMenu_Sub_Rule_TimeTable
 
 void UWBP_HeaderMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,10 +79,8 @@ void UWBP_HeaderMenu_C::Construct()
 
 void UWBP_HeaderMenu_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_HeaderMenu_C::Destruct()
 
 void UWBP_HeaderMenu_C::ExecuteUbergraph_WBP_HeaderMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "ExecuteUbergraph_WBP_HeaderMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_C", "ExecuteUbergraph_WBP_HeaderMenu", FuncInfo);
 
 	Params::WBP_HeaderMenu_C_ExecuteUbergraph_WBP_HeaderMenu Parms{};
 
@@ -122,10 +109,8 @@ void UWBP_HeaderMenu_C::ExecuteUbergraph_WBP_HeaderMenu(int32 EntryPoint)
 
 void UWBP_HeaderMenu_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void UWBP_HeaderMenu_C::OnInitialize()
 
 void UWBP_HeaderMenu_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "OnVisibilityChangedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_OnVisibilityChangedEvent Parms{};
 
@@ -158,10 +141,8 @@ void UWBP_HeaderMenu_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
 
 void UWBP_HeaderMenu_C::PlayButtonAnimationIdle(int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "PlayButtonAnimationIdle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_PlayButtonAnimationIdle Parms{};
 
@@ -178,10 +159,8 @@ void UWBP_HeaderMenu_C::PlayButtonAnimationIdle(int32 ButtonIndex)
 
 void UWBP_HeaderMenu_C::PlayButtonAnimationWait(int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "PlayButtonAnimationWait");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_PlayButtonAnimationWait Parms{};
 
@@ -196,10 +175,8 @@ void UWBP_HeaderMenu_C::PlayButtonAnimationWait(int32 ButtonIndex)
 
 void UWBP_HeaderMenu_C::PlayForceHeaderNoticeOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "PlayForceHeaderNoticeOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -212,10 +189,8 @@ void UWBP_HeaderMenu_C::PlayForceHeaderNoticeOutAnim()
 
 void UWBP_HeaderMenu_C::Set_Header_User_Win_Counts(int32 InWinCounts)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "Set Header User Win Counts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_Set_Header_User_Win_Counts Parms{};
 
@@ -232,10 +207,8 @@ void UWBP_HeaderMenu_C::Set_Header_User_Win_Counts(int32 InWinCounts)
 
 void UWBP_HeaderMenu_C::SetChallengeNotice(TArray<struct FChallengeStruct>& InParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetChallengeNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_SetChallengeNotice Parms{};
 
@@ -244,6 +217,44 @@ void UWBP_HeaderMenu_C::SetChallengeNotice(TArray<struct FChallengeStruct>& InPa
 	UObject::ProcessEvent(Func, &Parms);
 
 	InParam = std::move(Parms.InParam);
+}
+
+
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetHeaderDuelCompeRateIconData
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const int32                             InRoundPoint                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetHeaderDuelCompeRateIconData(const int32 InRoundPoint)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
+
+	Params::WBP_HeaderMenu_C_SetHeaderDuelCompeRateIconData Parms{};
+
+	Parms.InRoundPoint = InRoundPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetHeaderLegendCompeRateIconData
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// ELegendCompeRateGrade                   LegendGrade                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLegendRate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetHeaderLegendCompeRateIconData(ELegendCompeRateGrade LegendGrade, int32 InLegendRate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
+
+	Params::WBP_HeaderMenu_C_SetHeaderLegendCompeRateIconData Parms{};
+
+	Parms.LegendGrade = LegendGrade;
+	Parms.InLegendRate = InLegendRate;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -262,10 +273,8 @@ void UWBP_HeaderMenu_C::SetChallengeNotice(TArray<struct FChallengeStruct>& InPa
 
 void UWBP_HeaderMenu_C::SetHeaderUserData(const class FText& InUserName, int32 InHonorId, ECrossplayPlatform InPlatformId, int32 InWinCounts, ERateRank InRateRank, float InRankPercent, bool IsShowingLegendCompeIcon, ELegendCompeRateGrade LegendGrade, int32 InLegendRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetHeaderUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_SetHeaderUserData Parms{};
 
@@ -291,10 +300,8 @@ void UWBP_HeaderMenu_C::SetHeaderUserData(const class FText& InUserName, int32 I
 
 void UWBP_HeaderMenu_C::SetNiceNotice(const class FText& SendUserName, EAppSupportedPlatform SendUserPlatform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetNiceNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_SetNiceNotice Parms{};
 
@@ -313,10 +320,8 @@ void UWBP_HeaderMenu_C::SetNiceNotice(const class FText& SendUserName, EAppSuppo
 
 void UWBP_HeaderMenu_C::SetOnlineGameMode(EOnlineGameMode InOnlineGameMode, bool bIsMulti)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetOnlineGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_SetOnlineGameMode Parms{};
 
@@ -332,10 +337,8 @@ void UWBP_HeaderMenu_C::SetOnlineGameMode(EOnlineGameMode InOnlineGameMode, bool
 
 void UWBP_HeaderMenu_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -349,15 +352,31 @@ void UWBP_HeaderMenu_C::Setup()
 
 void UWBP_HeaderMenu_C::SetVisibleLR(bool bIsLButton, ESlateVisibility Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "SetVisibleLR");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_SetVisibleLR Parms{};
 
 	Parms.bIsLButton = bIsLButton;
 	Parms.Visibility_0 = Visibility_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu.WBP_HeaderMenu_C.SetWinStreakWidgetVisibility
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_C::SetWinStreakWidgetVisibility(bool IsVisible_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
+
+	Params::WBP_HeaderMenu_C_SetWinStreakWidgetVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -370,10 +389,8 @@ void UWBP_HeaderMenu_C::SetVisibleLR(bool bIsLButton, ESlateVisibility Visibilit
 
 void UWBP_HeaderMenu_C::UpdateFestaWinCounts(int32 InWinCounts)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "UpdateFestaWinCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_UpdateFestaWinCounts Parms{};
 
@@ -391,10 +408,8 @@ void UWBP_HeaderMenu_C::UpdateFestaWinCounts(int32 InWinCounts)
 
 void UWBP_HeaderMenu_C::UpdateHeaderUserData(const class FText& InUserName, int32 InHonorId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "UpdateHeaderUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	Params::WBP_HeaderMenu_C_UpdateHeaderUserData Parms{};
 
@@ -410,10 +425,8 @@ void UWBP_HeaderMenu_C::UpdateHeaderUserData(const class FText& InUserName, int3
 
 void UWBP_HeaderMenu_C::UpdateHonorTitle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "UpdateHonorTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -424,13 +437,11 @@ void UWBP_HeaderMenu_C::UpdateHonorTitle()
 
 void UWBP_HeaderMenu_C::UpdateVisibilityNewsBtn_NewIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_C", "UpdateVisibilityNewsBtn_NewIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

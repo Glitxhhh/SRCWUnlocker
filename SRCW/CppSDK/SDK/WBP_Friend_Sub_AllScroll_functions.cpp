@@ -14,8 +14,7 @@
 #include "WBP_Friend_Sub_AllScroll_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_Sub_AllScroll.WBP_Friend_Sub_AllScroll_C.AddListItemWidgetByListItemIndex
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_Sub_AllScroll_C::AddListItemWidgetByListItemIndex(int32 InListItemIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "AddListItemWidgetByListItemIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_AddListItemWidgetByListItemIndex Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_Friend_Sub_AllScroll_C::AddListItemWidgetByListItemIndex(int32 InListI
 
 void UWBP_Friend_Sub_AllScroll_C::ChangePfFriendPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "ChangePfFriendPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_Friend_Sub_AllScroll_C::ChangePfFriendPage()
 
 void UWBP_Friend_Sub_AllScroll_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,10 +67,8 @@ void UWBP_Friend_Sub_AllScroll_C::Construct()
 
 void UWBP_Friend_Sub_AllScroll_C::ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "ExecuteAfterConfirmWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_ExecuteAfterConfirmWidget Parms{};
 
@@ -96,10 +87,8 @@ void UWBP_Friend_Sub_AllScroll_C::ExecuteAfterConfirmWidget(EFriendListCommandTy
 
 void UWBP_Friend_Sub_AllScroll_C::ExecuteUbergraph_WBP_Friend_Sub_AllScroll(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "ExecuteUbergraph_WBP_Friend_Sub_AllScroll");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_Sub_AllScroll_C", "ExecuteUbergraph_WBP_Friend_Sub_AllScroll", FuncInfo);
 
 	Params::WBP_Friend_Sub_AllScroll_C_ExecuteUbergraph_WBP_Friend_Sub_AllScroll Parms{};
 
@@ -116,10 +105,8 @@ void UWBP_Friend_Sub_AllScroll_C::ExecuteUbergraph_WBP_Friend_Sub_AllScroll(int3
 
 void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "FocusListItemWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_FocusListItemWidget Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget(bool bInPlayFocusSound)
 
 void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget_OnlineSetting(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "FocusListItemWidget_OnlineSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_FocusListItemWidget_OnlineSetting Parms{};
 
@@ -156,10 +141,8 @@ void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget_OnlineSetting(bool bInPlay
 
 void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget_PlayerInfo(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "FocusListItemWidget_PlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_FocusListItemWidget_PlayerInfo Parms{};
 
@@ -176,10 +159,8 @@ void UWBP_Friend_Sub_AllScroll_C::FocusListItemWidget_PlayerInfo(bool bInPlayFoc
 
 void UWBP_Friend_Sub_AllScroll_C::GenerateSubMenu(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "GenerateSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_GenerateSubMenu Parms{};
 
@@ -196,10 +177,8 @@ void UWBP_Friend_Sub_AllScroll_C::GenerateSubMenu(class UUnionUIButtonBase* Butt
 
 class UScrollBox* UWBP_Friend_Sub_AllScroll_C::GetScrollBoxWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "GetScrollBoxWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_GetScrollBoxWidget Parms{};
 
@@ -214,10 +193,8 @@ class UScrollBox* UWBP_Friend_Sub_AllScroll_C::GetScrollBoxWidget()
 
 void UWBP_Friend_Sub_AllScroll_C::InitializeSelectListIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "InitializeSelectListIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +208,8 @@ void UWBP_Friend_Sub_AllScroll_C::InitializeSelectListIndex()
 
 void UWBP_Friend_Sub_AllScroll_C::JumpToEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "JumpToEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_JumpToEvent Parms{};
 
@@ -254,10 +229,8 @@ void UWBP_Friend_Sub_AllScroll_C::JumpToEvent(class UUnionUIButtonBase* Button, 
 
 struct FEventReply UWBP_Friend_Sub_AllScroll_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_OnFocusReceived Parms{};
 
@@ -277,10 +250,8 @@ struct FEventReply UWBP_Friend_Sub_AllScroll_C::OnFocusReceived(const struct FGe
 
 void UWBP_Friend_Sub_AllScroll_C::OnListItemCancelDown(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "OnListItemCancelDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_OnListItemCancelDown Parms{};
 
@@ -297,10 +268,8 @@ void UWBP_Friend_Sub_AllScroll_C::OnListItemCancelDown(class UUnionUIButtonBase*
 
 void UWBP_Friend_Sub_AllScroll_C::OnListItemDecisionDown(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "OnListItemDecisionDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_OnListItemDecisionDown Parms{};
 
@@ -317,10 +286,8 @@ void UWBP_Friend_Sub_AllScroll_C::OnListItemDecisionDown(class UUnionUIButtonBas
 
 void UWBP_Friend_Sub_AllScroll_C::OnOnlineSettingItemDecisionDown(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "OnOnlineSettingItemDecisionDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_OnOnlineSettingItemDecisionDown Parms{};
 
@@ -335,10 +302,8 @@ void UWBP_Friend_Sub_AllScroll_C::OnOnlineSettingItemDecisionDown(class UUnionUI
 
 void UWBP_Friend_Sub_AllScroll_C::OnRacerInfoEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "OnRacerInfoEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -349,10 +314,8 @@ void UWBP_Friend_Sub_AllScroll_C::OnRacerInfoEnd()
 
 void UWBP_Friend_Sub_AllScroll_C::ResetContentsWidgetFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "ResetContentsWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -365,10 +328,8 @@ void UWBP_Friend_Sub_AllScroll_C::ResetContentsWidgetFocus()
 
 void UWBP_Friend_Sub_AllScroll_C::SetButtonControlEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetButtonControlEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetButtonControlEnable Parms{};
 
@@ -386,10 +347,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetButtonControlEnable(bool bInEnable)
 
 void UWBP_Friend_Sub_AllScroll_C::SetListItemWidgetButtonChangeableState(int32 InListItemIndex, bool bEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetListItemWidgetButtonChangeableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetListItemWidgetButtonChangeableState Parms{};
 
@@ -407,10 +366,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetListItemWidgetButtonChangeableState(int32 I
 
 void UWBP_Friend_Sub_AllScroll_C::SetListItemWidgetInteractableState(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetListItemWidgetInteractableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetListItemWidgetInteractableState Parms{};
 
@@ -427,10 +384,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetListItemWidgetInteractableState(bool bInEna
 
 void UWBP_Friend_Sub_AllScroll_C::SetScrollBoxVisibility(ESlateVisibility Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetScrollBoxVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetScrollBoxVisibility Parms{};
 
@@ -445,10 +400,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetScrollBoxVisibility(ESlateVisibility Param)
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -459,10 +412,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget()
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_OnlineSetting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidget_OnlineSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -476,10 +427,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_OnlineSetting()
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_OnlineSetting_Single(class UWBP_Window_Sub_TxtOption_C* InItemListWidget, const struct FFriendListOnlineSettingData& InListOnlineSettingInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidget_OnlineSetting_Single");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetupListItemWidget_OnlineSetting_Single Parms{};
 
@@ -495,10 +444,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_OnlineSetting_Single(class
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_PlayerInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidget_PlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -509,10 +456,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidget_PlayerInfo()
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidgetPFPlayerInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidgetPFPlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -527,10 +472,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidgetPFPlayerInfo()
 
 void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetupListItemWidgetSingle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetupListItemWidgetSingle Parms{};
 
@@ -550,10 +493,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetupListItemWidgetSingle(class UWBP_Friend_Su
 
 void UWBP_Friend_Sub_AllScroll_C::SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_SetWidgetFocus Parms{};
 
@@ -572,10 +513,8 @@ void UWBP_Friend_Sub_AllScroll_C::SetWidgetFocus(class APlayerController* Player
 
 void UWBP_Friend_Sub_AllScroll_C::UpdateOnlineSettingItemDisplay(int32 ItemIndex, bool bInSetting)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_AllScroll_C", "UpdateOnlineSettingItemDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_AllScroll_C", FnName));
 
 	Params::WBP_Friend_Sub_AllScroll_C_UpdateOnlineSettingItemDisplay Parms{};
 
@@ -585,5 +524,5 @@ void UWBP_Friend_Sub_AllScroll_C::UpdateOnlineSettingItemDisplay(int32 ItemIndex
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

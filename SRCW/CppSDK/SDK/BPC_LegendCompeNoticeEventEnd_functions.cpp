@@ -14,18 +14,15 @@
 #include "BPC_LegendCompeNoticeEventEnd_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.CreateRewardParamArray
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_LegendCompeNoticeEventEnd_C::CreateRewardParamArray()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "CreateRewardParamArray");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,38 @@ void UBPC_LegendCompeNoticeEventEnd_C::CreateRewardParamArray()
 
 void UBPC_LegendCompeNoticeEventEnd_C::EventEndInfoWidget_Close()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "EventEndInfoWidget Close");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LegendCompeNoticeEventEnd_C::ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd(int32 EntryPoint)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_LegendCompeNoticeEventEnd_C", "ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd", FuncInfo);
+
+	Params::BPC_LegendCompeNoticeEventEnd_C_ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.FinishNoticeEventEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LegendCompeNoticeEventEnd_C::FinishNoticeEventEnd()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +78,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::EventEndInfoWidget_Close()
 
 void UBPC_LegendCompeNoticeEventEnd_C::GetBPC_PreNotice(class AActor* OwnerSequence_0, class UBPC_PreNotice_C** BPC_PreNotice)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "GetBPC_PreNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	Params::BPC_LegendCompeNoticeEventEnd_C_GetBPC_PreNotice Parms{};
 
@@ -76,10 +99,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::GetBPC_PreNotice(class AActor* OwnerSeque
 
 void UBPC_LegendCompeNoticeEventEnd_C::GetFestaIdValue(int32* festaId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "GetFestaIdValue");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	Params::BPC_LegendCompeNoticeEventEnd_C_GetFestaIdValue Parms{};
 
@@ -90,69 +111,13 @@ void UBPC_LegendCompeNoticeEventEnd_C::GetFestaIdValue(int32* festaId)
 }
 
 
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.Set Footer Visibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LegendCompeNoticeEventEnd_C::Set_Footer_Visibility(bool IsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "Set Footer Visibility");
-
-	Params::BPC_LegendCompeNoticeEventEnd_C_Set_Footer_Visibility Parms{};
-
-	Parms.IsVisible = IsVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.OnFinishedFade
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LegendCompeNoticeEventEnd_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnFinishedFade");
-
-	Params::BPC_LegendCompeNoticeEventEnd_C_OnFinishedFade Parms{};
-
-	Parms.FadeDirection = FadeDirection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.NoReward
 // (BlueprintCallable, BlueprintEvent)
 
 void UBPC_LegendCompeNoticeEventEnd_C::NoReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "NoReward");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.StartClaimRankingRewards
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LegendCompeNoticeEventEnd_C::StartClaimRankingRewards()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "StartClaimRankingRewards");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -163,10 +128,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::StartClaimRankingRewards()
 
 void UBPC_LegendCompeNoticeEventEnd_C::OnClosed_EventEndWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnClosed_EventEndWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +140,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::OnClosed_EventEndWidget()
 
 void UBPC_LegendCompeNoticeEventEnd_C::OnClosed_ItemGet()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnClosed_ItemGet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -191,12 +152,28 @@ void UBPC_LegendCompeNoticeEventEnd_C::OnClosed_ItemGet()
 
 void UBPC_LegendCompeNoticeEventEnd_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.OnFinishedFade
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LegendCompeNoticeEventEnd_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
+
+	Params::BPC_LegendCompeNoticeEventEnd_C_OnFinishedFade Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -205,38 +182,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::OnExitState()
 
 void UBPC_LegendCompeNoticeEventEnd_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.FinishNoticeEventEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LegendCompeNoticeEventEnd_C::FinishNoticeEventEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "FinishNoticeEventEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.ShowDonpaTicketDiff
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LegendCompeNoticeEventEnd_C::ShowDonpaTicketDiff()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "ShowDonpaTicketDiff");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +196,8 @@ void UBPC_LegendCompeNoticeEventEnd_C::ShowDonpaTicketDiff()
 
 void UBPC_LegendCompeNoticeEventEnd_C::OnSaveComplete(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "OnSaveComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
 	Params::BPC_LegendCompeNoticeEventEnd_C_OnSaveComplete Parms{};
 
@@ -262,24 +207,46 @@ void UBPC_LegendCompeNoticeEventEnd_C::OnSaveComplete(ESaveDataStatus Status)
 }
 
 
-// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.Set Footer Visibility
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LegendCompeNoticeEventEnd_C::ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd(int32 EntryPoint)
+void UBPC_LegendCompeNoticeEventEnd_C::Set_Footer_Visibility(bool IsVisible)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LegendCompeNoticeEventEnd_C", "ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd");
+	Params::BPC_LegendCompeNoticeEventEnd_C_Set_Footer_Visibility Parms{};
 
-	Params::BPC_LegendCompeNoticeEventEnd_C_ExecuteUbergraph_BPC_LegendCompeNoticeEventEnd Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsVisible = IsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.ShowDonpaTicketDiff
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LegendCompeNoticeEventEnd_C::ShowDonpaTicketDiff()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BPC_LegendCompeNoticeEventEnd.BPC_LegendCompeNoticeEventEnd_C.StartClaimRankingRewards
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LegendCompeNoticeEventEnd_C::StartClaimRankingRewards()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LegendCompeNoticeEventEnd_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+SDK_NAMESPACE_END

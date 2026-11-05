@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "UnionRun_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Race_HUD_Sub_RSR_5rings_Simple.WBP_Race_HUD_Sub_RSR_5rings_Simple_C
 // 0x0088 (0x0380 - 0x02F8)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Race_HUD_Sub_RSR_5rings_Simple_C;
 
-}
-
+SDK_NAMESPACE_END

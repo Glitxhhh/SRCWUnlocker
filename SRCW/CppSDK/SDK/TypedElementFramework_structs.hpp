@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum TypedElementFramework.FTypedElementAlertColumnType
 // NumValues: 0x0003
@@ -36,14 +35,23 @@ enum class ESCCModification : uint32
 	ESCCModification_MAX                     = 4,
 };
 
-// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FTypedElementWidgetConstructor final
+// ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct SDK_ALIGN(0x01) FTypedElementDataStorageColumn
+{
+};
+#pragma pack(pop)
+DUMPER7_ASSERTS_FTypedElementDataStorageColumn;
+
+// ScriptStruct TypedElementFramework.ObjectOverrideColumn
+// 0x0001 (0x0001 - 0x0000)
+struct FObjectOverrideColumn final : public FTypedElementDataStorageColumn
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTypedElementWidgetConstructor;
+DUMPER7_ASSERTS_FObjectOverrideColumn;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -53,42 +61,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FScriptTypedElementHandle;
-
-// ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct alignas(0x01) FTypedElementDataStorageColumn
-{
-};
-#pragma pack(pop)
-DUMPER7_ASSERTS_FTypedElementDataStorageColumn;
-
-// ScriptStruct TypedElementFramework.TypedElementParentColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FTypedElementParentColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementParentColumn;
-
-// ScriptStruct TypedElementFramework.TypedElementChildAlertColumn
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FTypedElementChildAlertColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
-
-// ScriptStruct TypedElementFramework.TypedElementU32IntValueCacheColumn
-// 0x0004 (0x0004 - 0x0000)
-struct FTypedElementU32IntValueCacheColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint32                                        Value;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTypedElementU32IntValueCacheColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementAlertColumn
 // 0x0020 (0x0020 - 0x0000)
@@ -101,6 +73,15 @@ public:
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementAlertColumn;
+
+// ScriptStruct TypedElementFramework.TypedElementChildAlertColumn
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FTypedElementChildAlertColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementUObjectColumn
 // 0x0008 (0x0008 - 0x0000)
@@ -128,6 +109,24 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementDataStorageTag;
+
+// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FTypedElementWidgetConstructor final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementWidgetConstructor;
+
+// ScriptStruct TypedElementFramework.TypedElementParentColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FTypedElementParentColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementParentColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementUnresolvedParentColumn
 // 0x0008 (0x0008 - 0x0000)
@@ -194,15 +193,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTypedElementRowReferenceColumn;
-
-// ScriptStruct TypedElementFramework.ObjectOverrideColumn
-// 0x0001 (0x0001 - 0x0000)
-struct FObjectOverrideColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FObjectOverrideColumn;
 
 // ScriptStruct TypedElementFramework.TypedElementPackageUnresolvedReference
 // 0x0018 (0x0018 - 0x0000)
@@ -481,6 +471,15 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementScriptStructTypeInfoColumn;
 
+// ScriptStruct TypedElementFramework.TypedElementU32IntValueCacheColumn
+// 0x0004 (0x0004 - 0x0000)
+struct FTypedElementU32IntValueCacheColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint32                                        Value;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTypedElementU32IntValueCacheColumn;
+
 // ScriptStruct TypedElementFramework.TypedElementI32IntValueCacheColumn
 // 0x0004 (0x0004 - 0x0000)
 struct FTypedElementI32IntValueCacheColumn final : public FTypedElementDataStorageColumn
@@ -526,5 +525,4 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementViewportColorColumn;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum KawaiiPhysics.EPlanarConstraint
 // NumValues: 0x0005
@@ -70,7 +69,7 @@ enum class EXPBDComplianceType : uint8
 // ScriptStruct KawaiiPhysics.CollisionLimitBase
 // 0x0090 (0x0090 - 0x0000)
 #pragma pack(push, 0x1)
-struct alignas(0x10) FCollisionLimitBase
+struct SDK_ALIGN(0x10) FCollisionLimitBase
 {
 public:
 	struct FBoneReference                         DrivingBone;                                       // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
@@ -321,5 +320,4 @@ public:
 };
 DUMPER7_ASSERTS_FPlanarLimitData;
 
-}
-
+SDK_NAMESPACE_END

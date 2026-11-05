@@ -14,8 +14,7 @@
 #include "WBP_MachineSelect_Sub_TypeWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_0_OnUnionButtonDirectionEvent__DelegateSignature
 // (BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_0_OnUnionButtonDirectionEvent__DelegateSignature(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_0_OnUnionButtonDirectionEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_0_OnUnionButtonDirectionEvent__DelegateSignature Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_1_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_1_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_1_OnUnionButtonEvent__DelegateSignature Parms{};
 
@@ -66,12 +61,28 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_2_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_2_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_2_OnUnionButtonEvent__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MachineSelect_Sub_TypeWindow.WBP_MachineSelect_Sub_TypeWindow_C.BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UUnionUIButtonBase*               Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
+
+	Params::WBP_MachineSelect_Sub_TypeWindow_C_BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -84,10 +95,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_7_OnTakePicture__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_MLC_Up_Button_K2Node_ComponentBoundEvent_7_OnTakePicture__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +107,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_Decide_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_Decide_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +119,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollBottom_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollBottom_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +131,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollLeft_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollLeft_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +143,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollRight_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollRight_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +155,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollTop_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_UnionUIButton_ScrollTop_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +167,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWindow_WBP_MachineSelect_Sub_Ready_K2Node_ComponentBoundEvent_0_Event_AnimFinishedOut__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "BndEvt__WBP_MachineSelect_Sub_TypeWindow_WBP_MachineSelect_Sub_Ready_K2Node_ComponentBoundEvent_0_Event_AnimFinishedOut__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +179,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::BndEvt__WBP_MachineSelect_Sub_TypeWind
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +191,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::Construct()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::CreateCrossButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "CreateCrossButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -212,10 +205,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::CreateCrossButton()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_TypeWindow_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_ExecuteUbergraph_WBP_MachineSelect_Sub_TypeWindow Parms{};
 
@@ -236,10 +227,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::ExecuteUbergraph_WBP_MachineSelect_Sub
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::GetBoxInfo(int32 InIndex, int32* IndexOnBox, ECarStatusType* machineType, int32* CenterElementTypeIndex, EMachineId* MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetBoxInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetBoxInfo Parms{};
 
@@ -266,10 +255,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::GetBoxInfo(int32 InIndex, int32* Index
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::OnCancelBack()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnCancelBack");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +269,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::OnCancelBack()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::OnDirectionLeftRight(bool IsRight)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnDirectionLeftRight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_OnDirectionLeftRight Parms{};
 
@@ -300,10 +285,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::OnDirectionLeftRight(bool IsRight)
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::OnFinishedScrollAnimationBP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnFinishedScrollAnimationBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -317,10 +300,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::OnFinishedScrollAnimationBP()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::OnFocusLastSelected(ECarStatusType InMachineType, EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnFocusLastSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_OnFocusLastSelected Parms{};
 
@@ -340,10 +321,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::OnFocusLastSelected(ECarStatusType InM
 
 struct FEventReply UWBP_MachineSelect_Sub_TypeWindow_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_OnFocusReceived Parms{};
 
@@ -363,10 +342,8 @@ struct FEventReply UWBP_MachineSelect_Sub_TypeWindow_C::OnFocusReceived(const st
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::OnTypeHorizontalScrollAnimationFinished(class UUnionUIAnimScrollControl* FinishedWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "OnTypeHorizontalScrollAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_OnTypeHorizontalScrollAnimationFinished Parms{};
 
@@ -381,10 +358,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::OnTypeHorizontalScrollAnimationFinishe
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySECancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "PlaySECancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -395,10 +370,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySECancel()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySEError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "PlaySEError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -409,10 +382,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySEError()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySESelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "PlaySESelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -425,10 +396,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::PlaySESelect()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::PlayUISceneAnimation(EUnionUISceneAnimation InAnimation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "PlayUISceneAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_PlayUISceneAnimation Parms{};
 
@@ -445,10 +414,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::PlayUISceneAnimation(EUnionUISceneAnim
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_PreConstruct Parms{};
 
@@ -465,10 +432,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetCenterCursorVisible(bool NewVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetCenterCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_SetCenterCursorVisible Parms{};
 
@@ -483,10 +448,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetCenterCursorVisible(bool NewVisible
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetCrossButtonPlayerIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetCrossButtonPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -497,10 +460,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetCrossButtonPlayerIndex()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetElement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -511,10 +472,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetElement()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetElementPlayerIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetElementPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -527,10 +486,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetElementPlayerIndex()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetEnableInputButton(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetEnableInputButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_SetEnableInputButton Parms{};
 
@@ -545,10 +502,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetEnableInputButton(bool IsEnable)
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetupElement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetupElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -561,10 +516,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetupElement()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetupHeader(ECarStatusType InMachineType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetupHeader");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_SetupHeader Parms{};
 
@@ -579,10 +532,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetupHeader(ECarStatusType InMachineTy
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetupPresentElement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetupPresentElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -595,10 +546,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetupPresentElement()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::SetVisibleCrossButton(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "SetVisibleCrossButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_SetVisibleCrossButton Parms{};
 
@@ -613,10 +562,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::SetVisibleCrossButton(bool IsVisible_0
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateIconTextures()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "UpdateIconTextures");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -627,10 +574,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateIconTextures()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateMachineTypeColorWidth()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "UpdateMachineTypeColorWidth");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -641,10 +586,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateMachineTypeColorWidth()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateScrollPointBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "UpdateScrollPointBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -655,10 +598,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::UpdateScrollPointBox()
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::WidgetAnimationEvt_Window_M1M4_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "WidgetAnimationEvt_Window_M1M4_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -669,10 +610,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::WidgetAnimationEvt_Window_M1M4_In_K2No
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::WidgetAnimationEvt_Window_M2_In_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "WidgetAnimationEvt_Window_M2_In_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -685,10 +624,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::WidgetAnimationEvt_Window_M2_In_K2Node
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::GetCenterTypeBox(class UWBP_MachineSelect_Sub_TypeBox_C** TypeBox) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetCenterTypeBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetCenterTypeBox Parms{};
 
@@ -706,10 +643,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::GetCenterTypeBox(class UWBP_MachineSel
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::GetOtherCenterTypeBox(class UWBP_MachineSelect_Sub_TypeBox_C** OutElement) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetOtherCenterTypeBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetOtherCenterTypeBox Parms{};
 
@@ -729,10 +664,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::GetOtherCenterTypeBox(class UWBP_Machi
 
 void UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectableMachineIndex(ECarStatusType InMachineType, EMachineId InMachineID, int32* OutMachineIndex) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetSelectableMachineIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetSelectableMachineIndex Parms{};
 
@@ -753,10 +686,8 @@ void UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectableMachineIndex(ECarStatusTy
 
 EMachineId UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectMachineID() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetSelectMachineID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetSelectMachineID Parms{};
 
@@ -773,10 +704,8 @@ EMachineId UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectMachineID() const
 
 ECarStatusType UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectMachineType() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "GetSelectMachineType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_GetSelectMachineType Parms{};
 
@@ -793,10 +722,8 @@ ECarStatusType UWBP_MachineSelect_Sub_TypeWindow_C::GetSelectMachineType() const
 
 bool UWBP_MachineSelect_Sub_TypeWindow_C::IsCharaMachineSelectMode() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "IsCharaMachineSelectMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_IsCharaMachineSelectMode Parms{};
 
@@ -813,10 +740,8 @@ bool UWBP_MachineSelect_Sub_TypeWindow_C::IsCharaMachineSelectMode() const
 
 bool UWBP_MachineSelect_Sub_TypeWindow_C::IsGarageMode() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_TypeWindow_C", "IsGarageMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_TypeWindow_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_TypeWindow_C_IsGarageMode Parms{};
 
@@ -825,5 +750,5 @@ bool UWBP_MachineSelect_Sub_TypeWindow_C::IsGarageMode() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

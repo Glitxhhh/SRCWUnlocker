@@ -14,8 +14,8 @@
 #include "ST_StickerPresetPageItemData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_Sticker_PresetWindow.WBP_MachineCustom_Sub_Sticker_PresetWindow_C.BuildNavigation
 // 0x0108 (0x0108 - 0x0000)
@@ -343,5 +343,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_Sticker_PresetWindow_C_GetItems;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

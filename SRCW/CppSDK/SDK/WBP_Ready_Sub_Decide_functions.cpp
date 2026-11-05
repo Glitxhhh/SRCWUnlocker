@@ -14,18 +14,15 @@
 #include "WBP_Ready_Sub_Decide_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Ready_Sub_Decide.WBP_Ready_Sub_Decide_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Ready_Sub_Decide_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Decide_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Decide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Ready_Sub_Decide_C::Construct()
 
 void UWBP_Ready_Sub_Decide_C::DecideAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Decide_C", "DecideAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Decide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_Ready_Sub_Decide_C::DecideAnimation()
 
 void UWBP_Ready_Sub_Decide_C::ExecuteUbergraph_WBP_Ready_Sub_Decide(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Decide_C", "ExecuteUbergraph_WBP_Ready_Sub_Decide");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Ready_Sub_Decide_C", "ExecuteUbergraph_WBP_Ready_Sub_Decide", FuncInfo);
 
 	Params::WBP_Ready_Sub_Decide_C_ExecuteUbergraph_WBP_Ready_Sub_Decide Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_Ready_Sub_Decide_C::ExecuteUbergraph_WBP_Ready_Sub_Decide(int32 EntryP
 
 void UWBP_Ready_Sub_Decide_C::OnDecideAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Decide_C", "OnDecideAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Decide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UWBP_Ready_Sub_Decide_C::OnDecideAnimationFinished()
 
 void UWBP_Ready_Sub_Decide_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Decide_C", "OnVisibilityChangedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Decide_C", FnName));
 
 	Params::WBP_Ready_Sub_Decide_C_OnVisibilityChangedEvent Parms{};
 
@@ -98,5 +87,5 @@ void UWBP_Ready_Sub_Decide_C::OnVisibilityChangedEvent(ESlateVisibility InVisibi
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

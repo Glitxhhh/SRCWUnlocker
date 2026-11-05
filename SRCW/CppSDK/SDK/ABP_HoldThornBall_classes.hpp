@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_HoldThornBall.ABP_HoldThornBall_C
 // 0x0000 (0x1130 - 0x1130)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_HoldThornBall_C;
 
-}
-
+SDK_NAMESPACE_END

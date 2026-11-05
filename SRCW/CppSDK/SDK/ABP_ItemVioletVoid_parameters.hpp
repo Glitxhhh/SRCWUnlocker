@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function ABP_ItemVioletVoid.ABP_ItemVioletVoid_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -34,5 +34,5 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemVioletVoid_C_ExecuteUbergraph_ABP_ItemVioletVoid;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

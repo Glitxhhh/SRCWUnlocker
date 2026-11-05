@@ -14,8 +14,7 @@
 #include "WBP_CMN_ItemIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_ItemIcon.WBP_CMN_ItemIcon_C.ExecuteUbergraph_WBP_CMN_ItemIcon
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_ItemIcon_C::ExecuteUbergraph_WBP_CMN_ItemIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "ExecuteUbergraph_WBP_CMN_ItemIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_ItemIcon_C", "ExecuteUbergraph_WBP_CMN_ItemIcon", FuncInfo);
 
 	Params::WBP_CMN_ItemIcon_C_ExecuteUbergraph_WBP_CMN_ItemIcon Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_ItemIcon_C::ExecuteUbergraph_WBP_CMN_ItemIcon(int32 EntryPoint)
 
 void UWBP_CMN_ItemIcon_C::SetGadgetTexture(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "SetGadgetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
 
 	Params::WBP_CMN_ItemIcon_C_SetGadgetTexture Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_CMN_ItemIcon_C::SetGadgetTexture(class UTexture2D* Texture)
 
 void UWBP_CMN_ItemIcon_C::SetHonorTitleImage(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "SetHonorTitleImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
 
 	Params::WBP_CMN_ItemIcon_C_SetHonorTitleImage Parms{};
 
@@ -84,10 +77,8 @@ void UWBP_CMN_ItemIcon_C::SetHonorTitleImage(class UTexture2D* Texture)
 
 void UWBP_CMN_ItemIcon_C::SetHornImage(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "SetHornImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
 
 	Params::WBP_CMN_ItemIcon_C_SetHornImage Parms{};
 
@@ -104,10 +95,8 @@ void UWBP_CMN_ItemIcon_C::SetHornImage(class UTexture2D* Texture)
 
 void UWBP_CMN_ItemIcon_C::SetStickerImage(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "SetStickerImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
 
 	Params::WBP_CMN_ItemIcon_C_SetStickerImage Parms{};
 
@@ -125,10 +114,8 @@ void UWBP_CMN_ItemIcon_C::SetStickerImage(class UTexture2D* Texture)
 
 class UWidget* UWBP_CMN_ItemIcon_C::GetWidget(ERewardType InRewardType) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ItemIcon_C", "GetWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
 
 	Params::WBP_CMN_ItemIcon_C_GetWidget Parms{};
 
@@ -139,5 +126,26 @@ class UWidget* UWBP_CMN_ItemIcon_C::GetWidget(ERewardType InRewardType) const
 	return Parms.ReturnValue;
 }
 
+
+// Function WBP_CMN_ItemIcon.WBP_CMN_ItemIcon_C.GetWidgetForRivalDuel
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// ERewardType                             InRewardType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWBP_CMN_ItemIcon_C::GetWidgetForRivalDuel(ERewardType InRewardType) const
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ItemIcon_C", FnName));
+
+	Params::WBP_CMN_ItemIcon_C_GetWidgetForRivalDuel Parms{};
+
+	Parms.InRewardType = InRewardType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
+
+SDK_NAMESPACE_END

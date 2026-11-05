@@ -14,8 +14,7 @@
 #include "WBP_GadgetCustom_Top_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Top.WBP_GadgetCustom_Top_C.ExecuteUbergraph_WBP_GadgetCustom_Top
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_GadgetCustom_Top_C::ExecuteUbergraph_WBP_GadgetCustom_Top(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "ExecuteUbergraph_WBP_GadgetCustom_Top");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Top_C", "ExecuteUbergraph_WBP_GadgetCustom_Top", FuncInfo);
 
 	Params::WBP_GadgetCustom_Top_C_ExecuteUbergraph_WBP_GadgetCustom_Top Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_GadgetCustom_Top_C::ExecuteUbergraph_WBP_GadgetCustom_Top(int32 EntryP
 
 void UWBP_GadgetCustom_Top_C::SetPlateWindowZorderHigherThanSelectWindow(int32 InPlayerControllerIndex, bool bPlateWindowHigher)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "SetPlateWindowZorderHigherThanSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_SetPlateWindowZorderHigherThanSelectWindow Parms{};
 
@@ -67,10 +62,8 @@ void UWBP_GadgetCustom_Top_C::SetPlateWindowZorderHigherThanSelectWindow(int32 I
 
 void UWBP_GadgetCustom_Top_C::Setup(const struct FGadgetCustomizeWindowData& InWindowData, const bool bInFestaSpecialRule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_Setup Parms{};
 
@@ -88,10 +81,8 @@ void UWBP_GadgetCustom_Top_C::Setup(const struct FGadgetCustomizeWindowData& InW
 
 void UWBP_GadgetCustom_Top_C::GetCharaNameBoxes(TArray<class UUnionRichTextBlock*>* OutCharaNameBoxes) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetCharaNameBoxes");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetCharaNameBoxes Parms{};
 
@@ -109,10 +100,8 @@ void UWBP_GadgetCustom_Top_C::GetCharaNameBoxes(TArray<class UUnionRichTextBlock
 
 void UWBP_GadgetCustom_Top_C::GetDetailWindows(TArray<class UGadgetDetailWindow*>* OutDetailWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetDetailWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetDetailWindows Parms{};
 
@@ -130,10 +119,8 @@ void UWBP_GadgetCustom_Top_C::GetDetailWindows(TArray<class UGadgetDetailWindow*
 
 void UWBP_GadgetCustom_Top_C::GetGadgetCustomWindows(TArray<class UGadgetCustomWindow*>* OutGadgetCustomWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetGadgetCustomWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetGadgetCustomWindows Parms{};
 
@@ -151,10 +138,8 @@ void UWBP_GadgetCustom_Top_C::GetGadgetCustomWindows(TArray<class UGadgetCustomW
 
 void UWBP_GadgetCustom_Top_C::GetmachineParameterWindows(TArray<class UCharaMachineParamWindow*>* OutMachineParameterWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetmachineParameterWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetmachineParameterWindows Parms{};
 
@@ -172,10 +157,8 @@ void UWBP_GadgetCustom_Top_C::GetmachineParameterWindows(TArray<class UCharaMach
 
 void UWBP_GadgetCustom_Top_C::GetPlateWindows(TArray<class UGadgetPlateWindow*>* OutPlateWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetPlateWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetPlateWindows Parms{};
 
@@ -193,10 +176,8 @@ void UWBP_GadgetCustom_Top_C::GetPlateWindows(TArray<class UGadgetPlateWindow*>*
 
 class UCommonCountNumberWidget* UWBP_GadgetCustom_Top_C::GetTicketBox() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Top_C", "GetTicketBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Top_C", FnName));
 
 	Params::WBP_GadgetCustom_Top_C_GetTicketBox Parms{};
 
@@ -205,5 +186,5 @@ class UCommonCountNumberWidget* UWBP_GadgetCustom_Top_C::GetTicketBox() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

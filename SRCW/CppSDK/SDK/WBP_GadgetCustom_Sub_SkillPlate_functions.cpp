@@ -14,8 +14,7 @@
 #include "WBP_GadgetCustom_Sub_SkillPlate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_SkillPlate.WBP_GadgetCustom_Sub_SkillPlate_C.ChangeGlobalInvalidation
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_GadgetCustom_Sub_SkillPlate_C::ChangeGlobalInvalidation(const int32 InValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_SkillPlate_C", "ChangeGlobalInvalidation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_SkillPlate_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_SkillPlate_C_ChangeGlobalInvalidation Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_GadgetCustom_Sub_SkillPlate_C::ChangeGlobalInvalidation(const int32 In
 
 void UWBP_GadgetCustom_Sub_SkillPlate_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_SkillPlate_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_SkillPlate_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_SkillPlate_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_SkillPlate Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_GadgetCustom_Sub_SkillPlate_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_S
 
 void UWBP_GadgetCustom_Sub_SkillPlate_C::OnNativeConstInitWidgetRef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_SkillPlate_C", "OnNativeConstInitWidgetRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_SkillPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_GadgetCustom_Sub_SkillPlate_C::OnNativeConstInitWidgetRef()
 
 void UWBP_GadgetCustom_Sub_SkillPlate_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_SkillPlate_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_SkillPlate_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_SkillPlate_C_PreConstruct Parms{};
 
@@ -96,13 +87,11 @@ void UWBP_GadgetCustom_Sub_SkillPlate_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GadgetCustom_Sub_SkillPlate_C::UpdateDecorator()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_SkillPlate_C", "UpdateDecorator");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_SkillPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

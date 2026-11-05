@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum OpenColorIO.EOpenColorIOViewTransformDirection
 // NumValues: 0x0003
@@ -70,5 +69,4 @@ public:
 };
 DUMPER7_ASSERTS_FOpenColorIODisplayConfiguration;
 
-}
-
+SDK_NAMESPACE_END

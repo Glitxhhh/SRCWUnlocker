@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_HoldMagnet.ABP_HoldMagnet_C.AnimBlueprintGeneratedConstantData
 // 0x0000 (0x0D30 - 0x0D30)
@@ -23,5 +22,4 @@ struct ABP_HoldMagnet::FAnimBlueprintGeneratedConstantData final : public ABPT_H
 };
 DUMPER7_ASSERTS_ABP_HoldMagnet__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

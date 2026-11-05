@@ -14,18 +14,15 @@
 #include "BPC_RaceSequenceStateSendRaceStart_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateSendRaceStart.BPC_RaceSequenceStateSendRaceStart_C.BindRecvLobbyAttributeEvent
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceSequenceStateSendRaceStart_C::BindRecvLobbyAttributeEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "BindRecvLobbyAttributeEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::BindRecvLobbyAttributeEvent()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::CalllNextState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "CalllNextState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::CalllNextState()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::CheckGuestRaceId()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "CheckGuestRaceId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::CheckGuestRaceId()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::CheckResCode(int32 InResCode, bool OutError, const class FString& LogOutputInfo, bool* bEnableChangeNextState, EResponseCodeAbstract* ResCodeAbstract, int32* OutResCode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "CheckResCode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_CheckResCode Parms{};
 
@@ -103,10 +94,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::CheckResCode(int32 InResCode, bool O
 
 void UBPC_RaceSequenceStateSendRaceStart_C::ConvertStickerData(const struct FUserStickerData& UserStickerData, struct FCommon_MachineStickerData* Common_MachineStickerData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "ConvertStickerData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_ConvertStickerData Parms{};
 
@@ -126,10 +115,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::ConvertStickerData(const struct FUse
 
 void UBPC_RaceSequenceStateSendRaceStart_C::ExecuteUbergraph_BPC_RaceSequenceStateSendRaceStart(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "ExecuteUbergraph_BPC_RaceSequenceStateSendRaceStart");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateSendRaceStart_C", "ExecuteUbergraph_BPC_RaceSequenceStateSendRaceStart", FuncInfo);
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_ExecuteUbergraph_BPC_RaceSequenceStateSendRaceStart Parms{};
 
@@ -149,10 +136,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::ExecuteUbergraph_BPC_RaceSequenceSta
 
 void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveFestaStart_Event(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "FinishedSendStartSaveFestaStart_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_FinishedSendStartSaveFestaStart_Event Parms{};
 
@@ -175,10 +160,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveFestaStart_Even
 
 void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveLegendCompeStart(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "FinishedSendStartSaveLegendCompeStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_FinishedSendStartSaveLegendCompeStart Parms{};
 
@@ -201,10 +184,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveLegendCompeStar
 
 void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveRankMatchStart_Event(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "FinishedSendStartSaveRankMatchStart_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_FinishedSendStartSaveRankMatchStart_Event Parms{};
 
@@ -226,10 +207,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::FinishedSendStartSaveRankMatchStart_
 
 void UBPC_RaceSequenceStateSendRaceStart_C::GetBonusChanceData(bool* IsValid, int32* BonusChanceType_0, int32* BonusChanceParam_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "GetBonusChanceData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_GetBonusChanceData Parms{};
 
@@ -251,10 +230,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetBonusChanceData(bool* IsValid, in
 
 void UBPC_RaceSequenceStateSendRaceStart_C::GetLobbyContextParam()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "GetLobbyContextParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,17 +241,15 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetLobbyContextParam()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32*                                  characterId                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  courseId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  CourseId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FCommon_MachineData*             MachineData                                            (Parm, OutParm)
 // struct FCommon_GadgetData*              GadgetData                                             (Parm, OutParm, NoDestructor)
 // struct FCommon_DegreeData*              DegreeData                                             (Parm, OutParm, NoDestructor)
 
-void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* characterId, int32* courseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData)
+void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* characterId, int32* CourseId, struct FCommon_MachineData* MachineData, struct FCommon_GadgetData* GadgetData, struct FCommon_DegreeData* DegreeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "GetStartSaveRequestParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_GetStartSaveRequestParam Parms{};
 
@@ -283,8 +258,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* char
 	if (characterId != nullptr)
 		*characterId = Parms.characterId;
 
-	if (courseId != nullptr)
-		*courseId = Parms.courseId;
+	if (CourseId != nullptr)
+		*CourseId = Parms.CourseId;
 
 	if (MachineData != nullptr)
 		*MachineData = std::move(Parms.MachineData);
@@ -305,10 +280,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::GetStartSaveRequestParam(int32* char
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OccurServerError(EResponseCodeAbstract ResponseCode, int32 Code)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OccurServerError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_OccurServerError Parms{};
 
@@ -324,10 +297,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OccurServerError(EResponseCodeAbstra
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +309,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnExitState()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -354,10 +323,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnInitState()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnRecvEntryRaceId(const class FString& InEntryRaceId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnRecvEntryRaceId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_OnRecvEntryRaceId Parms{};
 
@@ -377,10 +344,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnRecvEntryRaceId(const class FStrin
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveFestaStartCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnSendStartSaveFestaStartCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_OnSendStartSaveFestaStartCallback Parms{};
 
@@ -403,10 +368,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveFestaStartCallback(co
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveLegendCompeStartCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnSendStartSaveLegendCompeStartCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_OnSendStartSaveLegendCompeStartCallback Parms{};
 
@@ -429,10 +392,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveLegendCompeStartCallb
 
 void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveRankMatchStartCallback(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "OnSendStartSaveRankMatchStartCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	Params::BPC_RaceSequenceStateSendRaceStart_C_OnSendStartSaveRankMatchStartCallback Parms{};
 
@@ -450,10 +411,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::OnSendStartSaveRankMatchStartCallbac
 
 void UBPC_RaceSequenceStateSendRaceStart_C::StartPlatformGameMatch()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "StartPlatformGameMatch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -464,10 +423,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::StartPlatformGameMatch()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::SyncEntryRaceId()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "SyncEntryRaceId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -478,10 +435,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::SyncEntryRaceId()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::SyncEntryRaceIdForFesta()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "SyncEntryRaceIdForFesta");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -492,10 +447,8 @@ void UBPC_RaceSequenceStateSendRaceStart_C::SyncEntryRaceIdForFesta()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::TryCommonNextState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "TryCommonNextState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -506,13 +459,11 @@ void UBPC_RaceSequenceStateSendRaceStart_C::TryCommonNextState()
 
 void UBPC_RaceSequenceStateSendRaceStart_C::TryFestaNextState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateSendRaceStart_C", "TryFestaNextState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateSendRaceStart_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

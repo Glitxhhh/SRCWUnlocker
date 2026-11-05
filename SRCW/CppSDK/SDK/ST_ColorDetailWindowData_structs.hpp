@@ -12,12 +12,11 @@
 
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "ST_ColorDetailWindowSurfaceItemData_structs.hpp"
-#include "EColorDetailWindowMode_structs.hpp"
 #include "ST_PullDownMenuData_structs.hpp"
+#include "EColorDetailWindowMode_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_ColorDetailWindowData.ST_ColorDetailWindowData
 // 0x0038 (0x0038 - 0x0000)
@@ -33,5 +32,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_ColorDetailWindowData;
 
-}
-
+SDK_NAMESPACE_END

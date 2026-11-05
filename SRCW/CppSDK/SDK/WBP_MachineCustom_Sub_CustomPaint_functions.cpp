@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_CustomPaint_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint.WBP_MachineCustom_Sub_CustomPaint_C.BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_4_OnUnionButtonEvent__DelegateSignature
 // (BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_4_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_4_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_4_OnUnionButtonEvent__DelegateSignature Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_9_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_9_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_CMN_SubMenu_Btn_K2Node_ComponentBoundEvent_9_OnUnionButtonEvent__DelegateSignature Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_0_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_0_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_0_OnUnionButtonEvent__DelegateSignature Parms{};
 
@@ -84,10 +77,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Glow_K2Node_ComponentBoundEvent_3_OnUnionButtonEvent__DelegateSignature Parms{};
 
@@ -104,10 +95,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_1_OnFocus__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_1_OnFocus__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_1_OnFocus__DelegateSignature Parms{};
 
@@ -124,10 +113,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_5_OnDecision__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_5_OnDecision__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Body_K2Node_ComponentBoundEvent_5_OnDecision__DelegateSignature Parms{};
 
@@ -144,10 +131,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_7_OnDecision__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_7_OnDecision__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_7_OnDecision__DelegateSignature Parms{};
 
@@ -164,10 +149,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_8_OnFocus__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_8_OnFocus__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Cockpit_K2Node_ComponentBoundEvent_8_OnFocus__DelegateSignature Parms{};
 
@@ -184,10 +167,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_2_OnFocus__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_2_OnFocus__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_2_OnFocus__DelegateSignature Parms{};
 
@@ -204,10 +185,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_6_OnDecision__DelegateSignature(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_6_OnDecision__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_BndEvt__WBP_MachineCustom_Sub_CustomPaint_WBP_MachineCustom_Sub_CustomPaint_Liquid_Wheel_K2Node_ComponentBoundEvent_6_OnDecision__DelegateSignature Parms{};
 
@@ -226,10 +205,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::BndEvt__WBP_MachineCustom_Sub_CustomP
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::Cancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "Cancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_Cancel Parms{};
 
@@ -246,10 +223,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::Cancel(class UUnionUIButtonBase* Butt
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +237,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::Construct()
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::Decision(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "Decision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_Decision Parms{};
 
@@ -282,10 +255,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::Decision(class UUnionUIButtonBase* Bu
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CustomPaint_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint Parms{};
 
@@ -302,10 +273,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::ExecuteUbergraph_WBP_MachineCustom_Su
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::Focus(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "Focus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_Focus Parms{};
 
@@ -320,10 +289,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::Focus(class UUnionUIButtonBase* InBut
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySECancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "PlaySECancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -334,10 +301,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySECancel()
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySEDecision()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "PlaySEDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +313,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySEDecision()
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySEFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "PlaySEFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,10 +329,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::PlaySEFocus()
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::SetInitialFocus(class APlayerController* InPlayerController, EMachineColorAreaUIId InColorAreaId, bool bInDefault)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "SetInitialFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_SetInitialFocus Parms{};
 
@@ -389,10 +350,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::SetInitialFocus(class APlayerControll
 
 void UWBP_MachineCustom_Sub_CustomPaint_C::Setup(class APlayerController* InPlayerController, const struct FMachineColorAreaSettingUIData& InUIData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_C_Setup Parms{};
 
@@ -402,5 +361,5 @@ void UWBP_MachineCustom_Sub_CustomPaint_C::Setup(class APlayerController* InPlay
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

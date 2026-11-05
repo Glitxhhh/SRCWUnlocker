@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceResultGhostSave.BPC_RaceResultGhostSave_C
 // 0x0000 (0x0110 - 0x0110)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceResultGhostSave_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_GadgetIcon_Cost01_Icon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetIcon_Cost01_Icon.WBP_GadgetIcon_Cost01_Icon_C.ExecuteUbergraph_WBP_GadgetIcon_Cost01_Icon
 // (Final, UbergraphFunction)
@@ -24,88 +23,12 @@ namespace SDK
 
 void UWBP_GadgetIcon_Cost01_Icon_C::ExecuteUbergraph_WBP_GadgetIcon_Cost01_Icon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "ExecuteUbergraph_WBP_GadgetIcon_Cost01_Icon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetIcon_Cost01_Icon_C", "ExecuteUbergraph_WBP_GadgetIcon_Cost01_Icon", FuncInfo);
 
 	Params::WBP_GadgetIcon_Cost01_Icon_C_ExecuteUbergraph_WBP_GadgetIcon_Cost01_Icon Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetIcon_Cost01_Icon.WBP_GadgetIcon_Cost01_Icon_C.OnInitWidgetRef
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetIcon_Cost01_Icon_C::OnInitWidgetRef()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "OnInitWidgetRef");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetIcon_Cost01_Icon.WBP_GadgetIcon_Cost01_Icon_C.SetBaseVisible
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bInIsVisible                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetIcon_Cost01_Icon_C::SetBaseVisible(bool bInIsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "SetBaseVisible");
-
-	Params::WBP_GadgetIcon_Cost01_Icon_C_SetBaseVisible Parms{};
-
-	Parms.bInIsVisible = bInIsVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetIcon_Cost01_Icon.WBP_GadgetIcon_Cost01_Icon_C.SetCost
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InCost                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetIcon_Cost01_Icon_C::SetCost(int32 InCost)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "SetCost");
-
-	Params::WBP_GadgetIcon_Cost01_Icon_C_SetCost Parms{};
-
-	Parms.InCost = InCost;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetIcon_Cost01_Icon.WBP_GadgetIcon_Cost01_Icon_C.SetCostVisible
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bInIsVisible                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetIcon_Cost01_Icon_C::SetCostVisible(bool bInIsVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "SetCostVisible");
-
-	Params::WBP_GadgetIcon_Cost01_Icon_C_SetCostVisible Parms{};
-
-	Parms.bInIsVisible = bInIsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -118,10 +41,8 @@ void UWBP_GadgetIcon_Cost01_Icon_C::SetCostVisible(bool bInIsVisible)
 
 void UWBP_GadgetIcon_Cost01_Icon_C::SetTexture(class UTexture2D* InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetIcon_Cost01_Icon_C", "SetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetIcon_Cost01_Icon_C", FnName));
 
 	Params::WBP_GadgetIcon_Cost01_Icon_C_SetTexture Parms{};
 
@@ -130,5 +51,5 @@ void UWBP_GadgetIcon_Cost01_Icon_C::SetTexture(class UTexture2D* InTexture)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_Friend_SmallWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_SmallWindow.WBP_Friend_SmallWindow_C.ExecuteUbergraph_WBP_Friend_SmallWindow
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_SmallWindow_C::ExecuteUbergraph_WBP_Friend_SmallWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "ExecuteUbergraph_WBP_Friend_SmallWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_SmallWindow_C", "ExecuteUbergraph_WBP_Friend_SmallWindow", FuncInfo);
 
 	Params::WBP_Friend_SmallWindow_C_ExecuteUbergraph_WBP_Friend_SmallWindow Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Friend_SmallWindow_C::ExecuteUbergraph_WBP_Friend_SmallWindow(int32 En
 
 void UWBP_Friend_SmallWindow_C::InitializeButtons(int32 InButtonNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "InitializeButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_InitializeButtons Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_Friend_SmallWindow_C::InitializeButtons(int32 InButtonNum)
 
 struct FEventReply UWBP_Friend_SmallWindow_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_OnFocusReceived Parms{};
 
@@ -87,10 +80,8 @@ struct FEventReply UWBP_Friend_SmallWindow_C::OnFocusReceived(const struct FGeom
 
 void UWBP_Friend_SmallWindow_C::Set_Button_Navigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "Set Button Navigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -103,10 +94,8 @@ void UWBP_Friend_SmallWindow_C::Set_Button_Navigation()
 
 void UWBP_Friend_SmallWindow_C::SetButtonSelectable(const TArray<bool>& bInSelectable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "SetButtonSelectable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_SetButtonSelectable Parms{};
 
@@ -121,10 +110,8 @@ void UWBP_Friend_SmallWindow_C::SetButtonSelectable(const TArray<bool>& bInSelec
 
 void UWBP_Friend_SmallWindow_C::SetButtonsPanel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "SetButtonsPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +124,8 @@ void UWBP_Friend_SmallWindow_C::SetButtonsPanel()
 
 void UWBP_Friend_SmallWindow_C::SetButtonText(const TArray<class FText>& InButtonText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_SetButtonText Parms{};
 
@@ -157,10 +142,8 @@ void UWBP_Friend_SmallWindow_C::SetButtonText(const TArray<class FText>& InButto
 
 void UWBP_Friend_SmallWindow_C::SetFocusButtonIndex(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "SetFocusButtonIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_SetFocusButtonIndex Parms{};
 
@@ -178,10 +161,8 @@ void UWBP_Friend_SmallWindow_C::SetFocusButtonIndex(int32 InButtonIndex)
 
 void UWBP_Friend_SmallWindow_C::Setup(const TArray<class FText>& InButtonText, const TArray<bool>& bInButtonSelectable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_C_Setup Parms{};
 
@@ -191,5 +172,5 @@ void UWBP_Friend_SmallWindow_C::Setup(const TArray<class FText>& InButtonText, c
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

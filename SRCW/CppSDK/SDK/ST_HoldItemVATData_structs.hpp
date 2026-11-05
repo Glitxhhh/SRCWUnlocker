@@ -13,8 +13,7 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_HoldItemVATData.ST_HoldItemVATData
 // 0x0060 (0x0060 - 0x0000)
@@ -38,5 +37,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_HoldItemVATData;
 
-}
-
+SDK_NAMESPACE_END

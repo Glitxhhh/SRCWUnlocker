@@ -13,15 +13,14 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemSlimeObject.BP_ItemSlimeObject_C
-// 0x0010 (0x06F0 - 0x06E0)
+// 0x0010 (0x0760 - 0x0750)
 class ABP_ItemSlimeObject_C final : public AItemSlimeObject
 {
 public:
-	class UUnionStaticMeshComponent*              Debug;                                             // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UUnionStaticMeshComponent*              Debug;                                             // 0x0750(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemSlimeObject_C;
 
-}
-
+SDK_NAMESPACE_END

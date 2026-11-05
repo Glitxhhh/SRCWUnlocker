@@ -14,8 +14,7 @@
 #include "SL_MachineIconCapture_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SL_MachineIconCapture.SL_MachineIconCapture_C.Capture
 // (Event, Public, BlueprintEvent)
@@ -27,10 +26,8 @@ namespace SDK
 
 void ASL_MachineIconCapture_C::Capture(EMachineId InMachineID, int32 InSizeX, int32 InSizeY, const class UDataTable* InCaptureDataTable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SL_MachineIconCapture_C", "Capture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"SL_MachineIconCapture_C", FnName));
 
 	Params::SL_MachineIconCapture_C_Capture Parms{};
 
@@ -53,10 +50,8 @@ void ASL_MachineIconCapture_C::Capture(EMachineId InMachineID, int32 InSizeX, in
 
 void ASL_MachineIconCapture_C::CreateRenderTexture(class UTextureRenderTarget2D* InRenderTexture, int32 InSizeX, int32 InSizeY, class UTextureRenderTarget2D** OutRenderTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SL_MachineIconCapture_C", "CreateRenderTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"SL_MachineIconCapture_C", FnName));
 
 	Params::SL_MachineIconCapture_C_CreateRenderTexture Parms{};
 
@@ -78,10 +73,8 @@ void ASL_MachineIconCapture_C::CreateRenderTexture(class UTextureRenderTarget2D*
 
 void ASL_MachineIconCapture_C::ExecuteUbergraph_SL_MachineIconCapture(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SL_MachineIconCapture_C", "ExecuteUbergraph_SL_MachineIconCapture");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "SL_MachineIconCapture_C", "ExecuteUbergraph_SL_MachineIconCapture", FuncInfo);
 
 	Params::SL_MachineIconCapture_C_ExecuteUbergraph_SL_MachineIconCapture Parms{};
 
@@ -96,13 +89,11 @@ void ASL_MachineIconCapture_C::ExecuteUbergraph_SL_MachineIconCapture(int32 Entr
 
 void ASL_MachineIconCapture_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SL_MachineIconCapture_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"SL_MachineIconCapture_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

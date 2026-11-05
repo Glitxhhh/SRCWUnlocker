@@ -14,8 +14,19 @@
 #include "WBP_DLCInfo_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_DLCInfo.WBP_DLCInfo_C.ReleaseResource
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_DLCInfo_C::ReleaseResource()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DLCInfo_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function WBP_DLCInfo.WBP_DLCInfo_C.SetSchedule
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +35,8 @@ namespace SDK
 
 void UWBP_DLCInfo_C::SetSchedule(const class FText& Schedule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DLCInfo_C", "SetSchedule");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DLCInfo_C", FnName));
 
 	Params::WBP_DLCInfo_C_SetSchedule Parms{};
 
@@ -44,10 +53,8 @@ void UWBP_DLCInfo_C::SetSchedule(const class FText& Schedule)
 
 void UWBP_DLCInfo_C::SetTextureBG(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DLCInfo_C", "SetTextureBG");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DLCInfo_C", FnName));
 
 	Params::WBP_DLCInfo_C_SetTextureBG Parms{};
 
@@ -64,10 +71,8 @@ void UWBP_DLCInfo_C::SetTextureBG(class UTexture2D* Texture)
 
 void UWBP_DLCInfo_C::SetTitle(const class FText& Title)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DLCInfo_C", "SetTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DLCInfo_C", FnName));
 
 	Params::WBP_DLCInfo_C_SetTitle Parms{};
 
@@ -76,5 +81,5 @@ void UWBP_DLCInfo_C::SetTitle(const class FText& Title)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

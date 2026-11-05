@@ -14,24 +14,21 @@
 #include "WBP_System_Loading_Simple_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Loading_Simple.WBP_System_Loading_Simple_C.UpdateLoadingPhase
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EndLoadingPhase                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EndLoadingPhase_UpdateLoadingPhase                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_System_Loading_Simple_C::UpdateLoadingPhase(int32 EndLoadingPhase)
+void UWBP_System_Loading_Simple_C::UpdateLoadingPhase(int32 EndLoadingPhase_UpdateLoadingPhase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "UpdateLoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	Params::WBP_System_Loading_Simple_C_UpdateLoadingPhase Parms{};
 
-	Parms.EndLoadingPhase = EndLoadingPhase;
+	Parms.EndLoadingPhase_UpdateLoadingPhase = EndLoadingPhase_UpdateLoadingPhase;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -42,10 +39,8 @@ void UWBP_System_Loading_Simple_C::UpdateLoadingPhase(int32 EndLoadingPhase)
 
 void UWBP_System_Loading_Simple_C::StartLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "StartLoading");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_System_Loading_Simple_C::StartLoading()
 
 void UWBP_System_Loading_Simple_C::Show()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "Show");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -68,18 +61,16 @@ void UWBP_System_Loading_Simple_C::Show()
 // Function WBP_System_Loading_Simple.WBP_System_Loading_Simple_C.SetLoadingProgress
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   LoadingProgress                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   LoadingProgress_SetLoadingProgress                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_System_Loading_Simple_C::SetLoadingProgress(float LoadingProgress)
+void UWBP_System_Loading_Simple_C::SetLoadingProgress(float LoadingProgress_SetLoadingProgress)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "SetLoadingProgress");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	Params::WBP_System_Loading_Simple_C_SetLoadingProgress Parms{};
 
-	Parms.LoadingProgress = LoadingProgress;
+	Parms.LoadingProgress_SetLoadingProgress = LoadingProgress_SetLoadingProgress;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,20 +79,18 @@ void UWBP_System_Loading_Simple_C::SetLoadingProgress(float LoadingProgress)
 // Function WBP_System_Loading_Simple.WBP_System_Loading_Simple_C.SetLoadingGaugeParam
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   LoadingPhaseNum                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bSetProgress                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LoadingPhaseNum_SetLoadingGaugeParam                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSetProgress_SetLoadingGaugeParam                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_System_Loading_Simple_C::SetLoadingGaugeParam(int32 LoadingPhaseNum, bool bSetProgress)
+void UWBP_System_Loading_Simple_C::SetLoadingGaugeParam(int32 LoadingPhaseNum_SetLoadingGaugeParam, bool bSetProgress_SetLoadingGaugeParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "SetLoadingGaugeParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	Params::WBP_System_Loading_Simple_C_SetLoadingGaugeParam Parms{};
 
-	Parms.LoadingPhaseNum = LoadingPhaseNum;
-	Parms.bSetProgress = bSetProgress;
+	Parms.LoadingPhaseNum_SetLoadingGaugeParam = LoadingPhaseNum_SetLoadingGaugeParam;
+	Parms.bSetProgress_SetLoadingGaugeParam = bSetProgress_SetLoadingGaugeParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -112,10 +101,8 @@ void UWBP_System_Loading_Simple_C::SetLoadingGaugeParam(int32 LoadingPhaseNum, b
 
 void UWBP_System_Loading_Simple_C::ProceedLoadingPhase()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "ProceedLoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UWBP_System_Loading_Simple_C::ProceedLoadingPhase()
 
 void UWBP_System_Loading_Simple_C::OnHideAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "OnHideAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UWBP_System_Loading_Simple_C::OnHideAnimationFinished()
 
 void UWBP_System_Loading_Simple_C::Hide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "Hide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,14 +135,12 @@ void UWBP_System_Loading_Simple_C::Hide()
 // Function WBP_System_Loading_Simple.WBP_System_Loading_Simple_C.GetLoadingDisplayType
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ELoadingDisplayType                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ELoadingDisplayType                     ReturnValue_GetLoadingDisplayType                      (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 ELoadingDisplayType UWBP_System_Loading_Simple_C::GetLoadingDisplayType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "GetLoadingDisplayType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	Params::WBP_System_Loading_Simple_C_GetLoadingDisplayType Parms{};
 
@@ -176,10 +157,8 @@ ELoadingDisplayType UWBP_System_Loading_Simple_C::GetLoadingDisplayType()
 
 void UWBP_System_Loading_Simple_C::ExecuteUbergraph_WBP_System_Loading_Simple(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "ExecuteUbergraph_WBP_System_Loading_Simple");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Loading_Simple_C", "ExecuteUbergraph_WBP_System_Loading_Simple", FuncInfo);
 
 	Params::WBP_System_Loading_Simple_C_ExecuteUbergraph_WBP_System_Loading_Simple Parms{};
 
@@ -194,13 +173,11 @@ void UWBP_System_Loading_Simple_C::ExecuteUbergraph_WBP_System_Loading_Simple(in
 
 void UWBP_System_Loading_Simple_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_Simple_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_Simple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

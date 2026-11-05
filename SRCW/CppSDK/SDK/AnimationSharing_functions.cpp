@@ -14,8 +14,7 @@
 #include "AnimationSharing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
 // (Native, Event, Public, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 class UEnum* UAnimationSharingStateProcessor::GetAnimationStateEnum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimationSharingStateProcessor", "GetAnimationStateEnum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationSharingStateProcessor", FnName));
 
 	Params::AnimationSharingStateProcessor_GetAnimationStateEnum Parms{};
 
@@ -53,10 +50,8 @@ class UEnum* UAnimationSharingStateProcessor::GetAnimationStateEnum()
 
 void UAnimationSharingStateProcessor::ProcessActorState(int32* OutState, class AActor* InActor, uint8 CurrentState, uint8 OnDemandState, bool* bShouldProcess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimationSharingStateProcessor", "ProcessActorState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"AnimationSharingStateProcessor", FnName));
 
 	Params::AnimationSharingStateProcessor_ProcessActorState Parms{};
 
@@ -214,5 +209,5 @@ void UAnimationSharingManager::RegisterActorWithSkeletonBP(class AActor* InActor
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

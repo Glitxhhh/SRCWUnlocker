@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct CustomMeshComponent.CustomMeshTriangle
 // 0x0048 (0x0048 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FCustomMeshTriangle;
 
-}
-
+SDK_NAMESPACE_END

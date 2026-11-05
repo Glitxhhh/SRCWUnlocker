@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ColorPicker_LiquidIcon.WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C.ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon
 // 0x0014 (0x0014 - 0x0000)
@@ -123,5 +123,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C_Setup;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

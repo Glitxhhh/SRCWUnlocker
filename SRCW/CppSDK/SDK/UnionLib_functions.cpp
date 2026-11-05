@@ -14,8 +14,7 @@
 #include "UnionLib_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UnionLib.AppScreenLogBPF.AppLogString
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -716,10 +715,8 @@ int32 AHierarchicalStateMachine::AddStateInfo(const struct FHierarchicalStateMac
 
 void AHierarchicalStateMachine::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachine", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachine", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -735,10 +732,8 @@ void AHierarchicalStateMachine::OnFinalize()
 
 void AHierarchicalStateMachine::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachine", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachine", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -756,10 +751,8 @@ void AHierarchicalStateMachine::OnInitialize()
 
 void AHierarchicalStateMachine::OnUpdate(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachine", "OnUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachine", FnName));
 
 	Params::HierarchicalStateMachine_OnUpdate Parms{};
 
@@ -1338,10 +1331,8 @@ void AHierarchicalStateMachineHolder::ActivateStateMachine()
 
 void AHierarchicalStateMachineHolder::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachineHolder", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachineHolder", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1432,10 +1423,8 @@ bool UHierarchicalStateMachineStateComponent::GetNeedInitFadeOut()
 
 void UHierarchicalStateMachineStateComponent::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachineStateComponent", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachineStateComponent", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1451,10 +1440,8 @@ void UHierarchicalStateMachineStateComponent::OnExitState()
 
 void UHierarchicalStateMachineStateComponent::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachineStateComponent", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachineStateComponent", FnName));
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1472,10 +1459,8 @@ void UHierarchicalStateMachineStateComponent::OnInitState()
 
 void UHierarchicalStateMachineStateComponent::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachineStateComponent", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachineStateComponent", FnName));
 
 	Params::HierarchicalStateMachineStateComponent_OnUpdateState Parms{};
 
@@ -1674,10 +1659,8 @@ float UHierarchicalStateMachineStateComponent::GetCurrentStateTime() const
 
 int32 UHierarchicalStateMachineStateComponent::GetDefaultState() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HierarchicalStateMachineStateComponent", "GetDefaultState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"HierarchicalStateMachineStateComponent", FnName));
 
 	Params::HierarchicalStateMachineStateComponent_GetDefaultState Parms{};
 
@@ -1893,5 +1876,5 @@ void UUnionDebugDrawLineSubsystem::SetDebugVisibleFlag(bool bVisible)
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

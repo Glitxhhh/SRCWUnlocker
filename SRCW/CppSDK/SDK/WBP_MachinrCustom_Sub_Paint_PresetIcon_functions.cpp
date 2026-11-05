@@ -14,18 +14,15 @@
 #include "WBP_MachinrCustom_Sub_Paint_PresetIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachinrCustom_Sub_Paint_PresetIcon.WBP_MachinrCustom_Sub_Paint_PresetIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Construct()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetIcon", FuncInfo);
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetIcon Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::ExecuteUbergraph_WBP_MachinrCust
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnAcceptKeyPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnBackKeyPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -102,10 +91,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnDownKeyPressed()
 
 struct FEventReply UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_OnFocusReceived Parms{};
 
@@ -123,10 +110,8 @@ struct FEventReply UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnFocusReceived(co
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +122,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnLeftKeyPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +134,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnLeftShoulderPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -165,10 +146,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnRightKeyPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +158,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnRightShoulderPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -195,10 +172,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::OnUpKeyPressed()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_PreConstruct Parms{};
 
@@ -213,10 +188,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Reset()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "Reset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -229,10 +202,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Reset()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonPattern(int32 InPatternIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetBalloonPattern");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetBalloonPattern Parms{};
 
@@ -249,10 +220,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonPattern(int32 InPatter
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonPosition(const struct FVector2D& InPosition)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetBalloonPosition");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetBalloonPosition Parms{};
 
@@ -269,10 +238,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonPosition(const struct 
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetBalloonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetBalloonText Parms{};
 
@@ -289,10 +256,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonText(const class FText
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetBalloonVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetBalloonVisible Parms{};
 
@@ -311,10 +276,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBalloonVisible(bool bInIsVisi
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBrushColors(const struct FLinearColor& InColor1, const struct FLinearColor& InColor2, const struct FLinearColor& InColor3)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetBrushColors");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetBrushColors Parms{};
 
@@ -333,10 +296,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetBrushColors(const struct FLin
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetCursorVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetCursorVisible Parms{};
 
@@ -353,10 +314,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetCursorVisible(bool bInIsVisib
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetEnableShoulder(bool bIsEnableShoulder_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetEnableShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetEnableShoulder Parms{};
 
@@ -375,10 +334,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetEnableShoulder(bool bIsEnable
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetPaletteColors(const struct FLinearColor& InColor1, const struct FLinearColor& InColor2, const struct FLinearColor& InColor3)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetPaletteColors");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetPaletteColors Parms{};
 
@@ -397,10 +354,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetPaletteColors(const struct FL
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetPlayerIndex(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetPlayerIndex Parms{};
 
@@ -417,10 +372,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetPlayerIndex(int32 InPlayerInd
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetSelectIconVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetSelectIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetSelectIconVisible Parms{};
 
@@ -437,10 +390,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetSelectIconVisible(bool bInIsV
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Setup(const struct FST_ColorPresetSelectPageItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_Setup Parms{};
 
@@ -457,10 +408,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::Setup(const struct FST_ColorPres
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupCharaIcon(const struct FST_ColorPresetSelectPageItemData& ST_ColorPresetSelectPageItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetupCharaIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetupCharaIcon Parms{};
 
@@ -477,10 +426,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupCharaIcon(const struct FST_
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupNewIcon(const struct FST_ColorPresetSelectPageItemData& ItemData_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetupNewIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetupNewIcon Parms{};
 
@@ -497,10 +444,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupNewIcon(const struct FST_Co
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupPresetIcon(const struct FST_ColorPresetSelectPageItemData& InItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetupPresetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetupPresetIcon Parms{};
 
@@ -517,10 +462,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetupPresetIcon(const struct FST
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetVisibleCharaIcon(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "SetVisibleCharaIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_SetVisibleCharaIcon Parms{};
 
@@ -537,10 +480,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::SetVisibleCharaIcon(bool IsVisib
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::ShowCursor(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "ShowCursor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_ShowCursor Parms{};
 
@@ -555,10 +496,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::ShowCursor(bool bInIsVisible)
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::UpdateBaseColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "UpdateBaseColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -571,10 +510,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::UpdateBaseColor()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetItemData(struct FST_ColorPresetSelectPageItemData* OutItemData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_GetItemData Parms{};
 
@@ -592,10 +529,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetItemData(struct FST_ColorPres
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetPlayerController(class APlayerController** PlayerController) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "GetPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_GetPlayerController Parms{};
 
@@ -613,10 +548,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetPlayerController(class APlaye
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetPlayerIndex(int32* PlayerIndex_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "GetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_GetPlayerIndex Parms{};
 
@@ -634,10 +567,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::GetPlayerIndex(int32* PlayerInde
 
 void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::IsEnableShoulder(bool* bIsEnableShoulder_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetIcon_C", "IsEnableShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetIcon_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetIcon_C_IsEnableShoulder Parms{};
 
@@ -647,5 +578,5 @@ void UWBP_MachinrCustom_Sub_Paint_PresetIcon_C::IsEnableShoulder(bool* bIsEnable
 		*bIsEnableShoulder_0 = Parms.bIsEnableShoulder_0;
 }
 
-}
 
+SDK_NAMESPACE_END

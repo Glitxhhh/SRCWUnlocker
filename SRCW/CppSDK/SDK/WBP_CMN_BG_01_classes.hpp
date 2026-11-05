@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_BG_01.WBP_CMN_BG_01_C
 // 0x0030 (0x0310 - 0x02E0)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_BG_01_C;
 
-}
-
+SDK_NAMESPACE_END

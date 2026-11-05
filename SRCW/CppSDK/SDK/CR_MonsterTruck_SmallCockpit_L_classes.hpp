@@ -14,8 +14,7 @@
 #include "ControlRig_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ControlRigBlueprintGeneratedClass CR_MonsterTruck_SmallCockpit_L.CR_MonsterTruck_SmallCockpit_L_C
 // 0x0068 (0x0B10 - 0x0AA8)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UCR_MonsterTruck_SmallCockpit_L_C;
 
-}
-
+SDK_NAMESPACE_END

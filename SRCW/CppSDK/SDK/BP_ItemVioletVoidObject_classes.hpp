@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemVioletVoidObject.BP_ItemVioletVoidObject_C
 // 0x0030 (0x0750 - 0x0720)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemVioletVoidObject_C;
 
-}
-
+SDK_NAMESPACE_END

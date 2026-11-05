@@ -16,8 +16,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Popup_Window_Text_Scroll.WBP_Popup_Window_Text_Scroll_C.ExecuteUbergraph_WBP_Popup_Window_Text_Scroll
 // 0x0388 (0x0388 - 0x0000)
@@ -755,5 +755,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Popup_Window_Text_Scroll_C_SilentFocusReady;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

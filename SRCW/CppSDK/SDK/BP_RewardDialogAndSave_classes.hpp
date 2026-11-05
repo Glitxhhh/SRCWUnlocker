@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RewardDialogAndSave.BP_RewardDialogAndSave_C
 // 0x0008 (0x0070 - 0x0068)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_RewardDialogAndSave_C;
 
-}
-
+SDK_NAMESPACE_END

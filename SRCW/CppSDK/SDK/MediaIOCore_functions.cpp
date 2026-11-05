@@ -14,8 +14,7 @@
 #include "MediaIOCore_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MediaIOCore.MediaCapture.CaptureActiveSceneViewport
 // (Final, Native, Public, BlueprintCallable)
@@ -281,5 +280,5 @@ bool UMediaOutput::Validate(class FString* OutFailureReason) const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

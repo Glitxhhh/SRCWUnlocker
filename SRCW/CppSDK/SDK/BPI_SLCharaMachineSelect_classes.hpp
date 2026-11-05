@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_SLCharaMachineSelect.BPI_SLCharaMachineSelect_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_SLCharaMachineSelect_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_SLCharaMachineSelect_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetCameraActor(class AActor** CameraActor);
 	void GetRacerTransform(int32 PlayerIndex, int32 PlayerCount, bool bCharaSelect, bool bOption, struct FTransform* Transform);
@@ -51,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_SLCharaMachineSelect_C;
 
-}
-
+SDK_NAMESPACE_END

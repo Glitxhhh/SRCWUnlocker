@@ -14,8 +14,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_HoldItemSTMData.ST_HoldItemSTMData
 // 0x00C0 (0x00C0 - 0x0000)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_HoldItemSTMData;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ResultRate.WBP_ResultRate_C.ExecuteUbergraph_WBP_ResultRate
 // 0x0088 (0x0088 - 0x0000)
@@ -130,5 +130,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ResultRate_C_SetupLimitValue;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

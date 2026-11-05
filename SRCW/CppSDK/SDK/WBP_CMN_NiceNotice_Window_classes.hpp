@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_NiceNotice_Window.WBP_CMN_NiceNotice_Window_C
 // 0x0088 (0x0460 - 0x03D8)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_NiceNotice_Window_C;
 
-}
-
+SDK_NAMESPACE_END

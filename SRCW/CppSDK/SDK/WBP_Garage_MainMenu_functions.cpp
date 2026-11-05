@@ -14,8 +14,7 @@
 #include "WBP_Garage_MainMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Garage_MainMenu.WBP_Garage_MainMenu_C.Button_OnDecisionAnimFinished
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Garage_MainMenu_C::Button_OnDecisionAnimFinished(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "Button_OnDecisionAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	Params::WBP_Garage_MainMenu_C_Button_OnDecisionAnimFinished Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_Garage_MainMenu_C::Button_OnDecisionAnimFinished(class UUnionUIButtonB
 
 void UWBP_Garage_MainMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_Garage_MainMenu_C::Construct()
 
 void UWBP_Garage_MainMenu_C::ExecuteUbergraph_WBP_Garage_MainMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "ExecuteUbergraph_WBP_Garage_MainMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Garage_MainMenu_C", "ExecuteUbergraph_WBP_Garage_MainMenu", FuncInfo);
 
 	Params::WBP_Garage_MainMenu_C_ExecuteUbergraph_WBP_Garage_MainMenu Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_Garage_MainMenu_C::ExecuteUbergraph_WBP_Garage_MainMenu(int32 EntryPoi
 
 void UWBP_Garage_MainMenu_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +85,8 @@ void UWBP_Garage_MainMenu_C::PlayInAnimation()
 
 void UWBP_Garage_MainMenu_C::Scene_OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "Scene_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	Params::WBP_Garage_MainMenu_C_Scene_OnCancel Parms{};
 
@@ -118,10 +107,8 @@ void UWBP_Garage_MainMenu_C::Scene_OnCancel(class UUnionUIButtonBase* Button, in
 
 void UWBP_Garage_MainMenu_C::Scene_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "Scene_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	Params::WBP_Garage_MainMenu_C_Scene_OnDecision Parms{};
 
@@ -142,10 +129,8 @@ void UWBP_Garage_MainMenu_C::Scene_OnDecision(class UUnionUIButtonBase* Button, 
 
 void UWBP_Garage_MainMenu_C::Scene_OnFocus(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "Scene_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	Params::WBP_Garage_MainMenu_C_Scene_OnFocus Parms{};
 
@@ -164,10 +149,8 @@ void UWBP_Garage_MainMenu_C::Scene_OnFocus(class UUnionUIButtonBase* Button, int
 
 void UWBP_Garage_MainMenu_C::SetInitialFocus(class APlayerController* InPlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "SetInitialFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	Params::WBP_Garage_MainMenu_C_SetInitialFocus Parms{};
 
@@ -182,13 +165,11 @@ void UWBP_Garage_MainMenu_C::SetInitialFocus(class APlayerController* InPlayerCo
 
 void UWBP_Garage_MainMenu_C::WidgetAnimationEvt_Garage_MainMenu_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Garage_MainMenu_C", "WidgetAnimationEvt_Garage_MainMenu_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Garage_MainMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

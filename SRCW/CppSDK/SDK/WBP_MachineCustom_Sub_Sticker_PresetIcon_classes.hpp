@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "EStickerPresetSelectPageItemType_structs.hpp"
-#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_Sticker_PresetIcon.WBP_MachineCustom_Sub_Sticker_PresetIcon_C
 // 0x0100 (0x0610 - 0x0510)
@@ -91,5 +90,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_Sticker_PresetIcon_C;
 
-}
-
+SDK_NAMESPACE_END

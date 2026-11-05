@@ -14,8 +14,7 @@
 #include "WBP_Result_RewardGetDisplay_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_RewardGetDisplay.WBP_Result_RewardGetDisplay_C.CreateRewardGetWindow
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Result_RewardGetDisplay_C::CreateRewardGetWindow(bool bInSetFocus)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "CreateRewardGetWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_RewardGetDisplay_C", FnName));
 
 	Params::WBP_Result_RewardGetDisplay_C_CreateRewardGetWindow Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Result_RewardGetDisplay_C::CreateRewardGetWindow(bool bInSetFocus)
 
 void UWBP_Result_RewardGetDisplay_C::ExecuteUbergraph_WBP_Result_RewardGetDisplay(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "ExecuteUbergraph_WBP_Result_RewardGetDisplay");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_RewardGetDisplay_C", "ExecuteUbergraph_WBP_Result_RewardGetDisplay", FuncInfo);
 
 	Params::WBP_Result_RewardGetDisplay_C_ExecuteUbergraph_WBP_Result_RewardGetDisplay Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_Result_RewardGetDisplay_C::ExecuteUbergraph_WBP_Result_RewardGetDispla
 
 void UWBP_Result_RewardGetDisplay_C::SetMachinePartsNewFlag()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "SetMachinePartsNewFlag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_RewardGetDisplay_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +73,8 @@ void UWBP_Result_RewardGetDisplay_C::SetMachinePartsNewFlag()
 
 void UWBP_Result_RewardGetDisplay_C::SetModeTitleText(const class FText& InRankUpTitleText, const class FText& InRewardGetTitleText, const class FText& InCompleteTitleText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "SetModeTitleText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_RewardGetDisplay_C", FnName));
 
 	Params::WBP_Result_RewardGetDisplay_C_SetModeTitleText Parms{};
 
@@ -102,10 +93,8 @@ void UWBP_Result_RewardGetDisplay_C::SetModeTitleText(const class FText& InRankU
 
 void UWBP_Result_RewardGetDisplay_C::SetupResultRankRewardGetWindow(bool bInSetFocus)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "SetupResultRankRewardGetWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_RewardGetDisplay_C", FnName));
 
 	Params::WBP_Result_RewardGetDisplay_C_SetupResultRankRewardGetWindow Parms{};
 
@@ -126,10 +115,8 @@ void UWBP_Result_RewardGetDisplay_C::SetupResultRankRewardGetWindow(bool bInSetF
 
 void UWBP_Result_RewardGetDisplay_C::SetWindowParamForResult(class URewardGetWindow* InRewardGetWindow, uint8 InRateRank, const TArray<struct FRewardGetWindowParam>& InRewardGetWindowParam, const bool bInWindowTimeClose, int32 InWindowZOrder)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_RewardGetDisplay_C", "SetWindowParamForResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_RewardGetDisplay_C", FnName));
 
 	Params::WBP_Result_RewardGetDisplay_C_SetWindowParamForResult Parms{};
 
@@ -142,5 +129,5 @@ void UWBP_Result_RewardGetDisplay_C::SetWindowParamForResult(class URewardGetWin
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

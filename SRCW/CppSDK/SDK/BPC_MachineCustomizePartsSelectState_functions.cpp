@@ -14,18 +14,55 @@
 #include "BPC_MachineCustomizePartsSelectState_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.ResetSticker
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUserMachineCustomizeData& InUpdateCustomizeData                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FUserMachineCustomizeData*       OutCustomizeData                                       (Parm, OutParm)
+
+void UBPC_MachineCustomizePartsSelectState_C::ResetSticker(const struct FUserMachineCustomizeData& InUpdateCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData)
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
+
+	Params::BPC_MachineCustomizePartsSelectState_C_ResetSticker Parms{};
+
+	Parms.InUpdateCustomizeData = std::move(InUpdateCustomizeData);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutCustomizeData != nullptr)
+		*OutCustomizeData = std::move(Parms.OutCustomizeData);
+}
+
+
+// Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.SetMachineCustomizeDataWithoutPartsId
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUserMachineCustomizeData& InCustomizeData_0                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBPC_MachineCustomizePartsSelectState_C::SetMachineCustomizeDataWithoutPartsId(const struct FUserMachineCustomizeData& InCustomizeData_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
+
+	Params::BPC_MachineCustomizePartsSelectState_C_SetMachineCustomizeDataWithoutPartsId Parms{};
+
+	Parms.InCustomizeData_0 = std::move(InCustomizeData_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.TipsWindow_CloseTipsWindow
 // (Private, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MachineCustomizePartsSelectState_C::TipsWindow_CloseTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "TipsWindow_CloseTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +75,8 @@ void UBPC_MachineCustomizePartsSelectState_C::TipsWindow_CloseTipsWindow()
 
 void UBPC_MachineCustomizePartsSelectState_C::OpenTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OpenTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_OpenTipsWindow Parms{};
 
@@ -54,19 +89,17 @@ void UBPC_MachineCustomizePartsSelectState_C::OpenTipsWindow(EHintId InHintId)
 // Function BPC_MachineCustomizePartsSelectState.BPC_MachineCustomizePartsSelectState_C.UpdateCustomizeData
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FUserMachineCustomizeData& InCustomizeData                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FUserMachineCustomizeData& InCustomizeData_0                                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FUserMachineCustomizeData*       OutCustomizeData                                       (Parm, OutParm)
 
-void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData, struct FUserMachineCustomizeData* OutCustomizeData)
+void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData_0, struct FUserMachineCustomizeData* OutCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "UpdateCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_UpdateCustomizeData Parms{};
 
-	Parms.InCustomizeData = std::move(InCustomizeData);
+	Parms.InCustomizeData_0 = std::move(InCustomizeData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -83,10 +116,8 @@ void UBPC_MachineCustomizePartsSelectState_C::UpdateCustomizeData(const struct F
 
 void UBPC_MachineCustomizePartsSelectState_C::OnPartsSelected(EMachinePartsType InPartsType, EMachineId InPartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OnPartsSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_OnPartsSelected Parms{};
 
@@ -105,10 +136,8 @@ void UBPC_MachineCustomizePartsSelectState_C::OnPartsSelected(EMachinePartsType 
 
 void UBPC_MachineCustomizePartsSelectState_C::OnPartsFocused(EMachinePartsType InPartsType, EMachineId InPartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OnPartsFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_OnPartsFocused Parms{};
 
@@ -124,10 +153,8 @@ void UBPC_MachineCustomizePartsSelectState_C::OnPartsFocused(EMachinePartsType I
 
 void UBPC_MachineCustomizePartsSelectState_C::SetCustomizeModelView()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "SetCustomizeModelView");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +165,8 @@ void UBPC_MachineCustomizePartsSelectState_C::SetCustomizeModelView()
 
 void UBPC_MachineCustomizePartsSelectState_C::OnExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OnExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +177,8 @@ void UBPC_MachineCustomizePartsSelectState_C::OnExit()
 
 void UBPC_MachineCustomizePartsSelectState_C::OnSetup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OnSetup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +189,8 @@ void UBPC_MachineCustomizePartsSelectState_C::OnSetup()
 
 void UBPC_MachineCustomizePartsSelectState_C::OnSetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "OnSetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +201,8 @@ void UBPC_MachineCustomizePartsSelectState_C::OnSetupPage()
 
 void UBPC_MachineCustomizePartsSelectState_C::SetProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "SetProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,10 +213,8 @@ void UBPC_MachineCustomizePartsSelectState_C::SetProperties()
 
 void UBPC_MachineCustomizePartsSelectState_C::BindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "BindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -208,10 +225,8 @@ void UBPC_MachineCustomizePartsSelectState_C::BindTab()
 
 void UBPC_MachineCustomizePartsSelectState_C::UnbindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "UnbindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -222,10 +237,8 @@ void UBPC_MachineCustomizePartsSelectState_C::UnbindTab()
 
 void UBPC_MachineCustomizePartsSelectState_C::StartOpenTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "StartOpenTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,10 +249,8 @@ void UBPC_MachineCustomizePartsSelectState_C::StartOpenTipsWindow()
 
 void UBPC_MachineCustomizePartsSelectState_C::ShowTips()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "ShowTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -252,10 +263,8 @@ void UBPC_MachineCustomizePartsSelectState_C::ShowTips()
 
 void UBPC_MachineCustomizePartsSelectState_C::ExecuteUbergraph_BPC_MachineCustomizePartsSelectState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizePartsSelectState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizePartsSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizePartsSelectState", FuncInfo);
 
 	Params::BPC_MachineCustomizePartsSelectState_C_ExecuteUbergraph_BPC_MachineCustomizePartsSelectState Parms{};
 
@@ -272,10 +281,8 @@ void UBPC_MachineCustomizePartsSelectState_C::ExecuteUbergraph_BPC_MachineCustom
 
 class AGarageCamera* UBPC_MachineCustomizePartsSelectState_C::GetCamera() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "GetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_GetCamera Parms{};
 
@@ -294,10 +301,8 @@ class AGarageCamera* UBPC_MachineCustomizePartsSelectState_C::GetCamera() const
 
 void UBPC_MachineCustomizePartsSelectState_C::GetCurrentPartsIds(EMachineId* OutFrontPartsId, EMachineId* OutRearPartsId, EMachineId* OutTirePartsId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "GetCurrentPartsIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_GetCurrentPartsIds Parms{};
 
@@ -321,10 +326,8 @@ void UBPC_MachineCustomizePartsSelectState_C::GetCurrentPartsIds(EMachineId* Out
 
 void UBPC_MachineCustomizePartsSelectState_C::IsOpenTabControlTipsWindow(bool* bEnableOpenWindow) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizePartsSelectState_C", "IsOpenTabControlTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizePartsSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizePartsSelectState_C_IsOpenTabControlTipsWindow Parms{};
 
@@ -334,5 +337,5 @@ void UBPC_MachineCustomizePartsSelectState_C::IsOpenTabControlTipsWindow(bool* b
 		*bEnableOpenWindow = Parms.bEnableOpenWindow;
 }
 
-}
 
+SDK_NAMESPACE_END

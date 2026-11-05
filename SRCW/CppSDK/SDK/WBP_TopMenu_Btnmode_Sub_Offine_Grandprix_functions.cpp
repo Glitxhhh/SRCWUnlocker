@@ -14,18 +14,15 @@
 #include "WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Btnmode_Sub_Offine_Grandprix.WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C::Construct()
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C::ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Grandprix(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Grandprix");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", "ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Grandprix", FuncInfo);
 
 	Params::WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C_ExecuteUbergraph_WBP_TopMenu_Btnmode_Sub_Offine_Grandprix Parms{};
 
@@ -56,13 +51,11 @@ void UWBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C::ExecuteUbergraph_WBP_TopMenu_B
 
 void UWBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C::Init()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", "Init");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Btnmode_Sub_Offine_Grandprix_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

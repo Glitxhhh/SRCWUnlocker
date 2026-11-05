@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBoxInstanceDomain0.BP_ItemBoxInstanceDomain0_C
 // 0x0000 (0x0480 - 0x0480)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemBoxInstanceDomain0_C;
 
-}
-
+SDK_NAMESPACE_END

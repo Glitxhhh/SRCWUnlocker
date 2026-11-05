@@ -14,8 +14,7 @@
 #include "BPC_RaceResultCeremony_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceResultCeremony.BPC_RaceResultCeremony_C.ExecuteUbergraph_BPC_RaceResultCeremony
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceResultCeremony_C::ExecuteUbergraph_BPC_RaceResultCeremony(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultCeremony_C", "ExecuteUbergraph_BPC_RaceResultCeremony");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceResultCeremony_C", "ExecuteUbergraph_BPC_RaceResultCeremony", FuncInfo);
 
 	Params::BPC_RaceResultCeremony_C_ExecuteUbergraph_BPC_RaceResultCeremony Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_RaceResultCeremony_C::ExecuteUbergraph_BPC_RaceResultCeremony(int32 En
 
 void UBPC_RaceResultCeremony_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultCeremony_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultCeremony_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_RaceResultCeremony_C::OnExitState()
 
 void UBPC_RaceResultCeremony_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultCeremony_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultCeremony_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_RaceResultCeremony_C::OnInitState()
 
 void UBPC_RaceResultCeremony_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultCeremony_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultCeremony_C", FnName));
 
 	Params::BPC_RaceResultCeremony_C_OnUpdateState Parms{};
 
@@ -84,5 +75,5 @@ void UBPC_RaceResultCeremony_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

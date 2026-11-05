@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function MovieScene.MovieSceneBoundObjectProxy.BP_GetBoundObjectForSequencer
 // 0x0010 (0x0010 - 0x0000)
@@ -59,6 +59,8 @@ DUMPER7_ASSERTS_MovieSceneEasingFunction_OnEvaluate;
 
 // Function MovieScene.MovieSceneCustomClockSource.OnRequestCurrentTime
 // 0x001C (0x001C - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnRequestCurrentTime
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnRequestCurrentTime
 struct MovieSceneCustomClockSource_OnRequestCurrentTime final
 {
 public:
@@ -66,34 +68,44 @@ public:
 	float                                         InPlayRate;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameTime                             ReturnValue;                                       // 0x0014(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnRequestCurrentTime;
 
 // Function MovieScene.MovieSceneCustomClockSource.OnStartPlaying
 // 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStartPlaying
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStartPlaying
 struct MovieSceneCustomClockSource_OnStartPlaying final
 {
 public:
 	struct FQualifiedFrameTime                    InStartTime;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnStartPlaying;
 
 // Function MovieScene.MovieSceneCustomClockSource.OnStopPlaying
 // 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStopPlaying
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnStopPlaying
 struct MovieSceneCustomClockSource_OnStopPlaying final
 {
 public:
 	struct FQualifiedFrameTime                    InStopTime;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnStopPlaying;
 
 // Function MovieScene.MovieSceneCustomClockSource.OnTick
 // 0x0008 (0x0008 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnTick
+#define DUMPER7_PARAM_DEFINED_MovieSceneCustomClockSource_OnTick
 struct MovieSceneCustomClockSource_OnTick final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InPlayRate;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+#endif
 DUMPER7_ASSERTS_MovieSceneCustomClockSource_OnTick;
 
 // Function MovieScene.BuiltInDynamicBindingResolverLibrary.ResolveToPlayerPawn
@@ -646,5 +658,5 @@ public:
 };
 DUMPER7_ASSERTS_MovieSceneSubSection_GetSequence;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

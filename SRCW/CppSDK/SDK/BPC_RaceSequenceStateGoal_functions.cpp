@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateGoal_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateGoal.BPC_RaceSequenceStateGoal_C.ExecuteUbergraph_BPC_RaceSequenceStateGoal
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateGoal_C::ExecuteUbergraph_BPC_RaceSequenceStateGoal(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGoal_C", "ExecuteUbergraph_BPC_RaceSequenceStateGoal");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateGoal_C", "ExecuteUbergraph_BPC_RaceSequenceStateGoal", FuncInfo);
 
 	Params::BPC_RaceSequenceStateGoal_C_ExecuteUbergraph_BPC_RaceSequenceStateGoal Parms{};
 
@@ -42,13 +39,11 @@ void UBPC_RaceSequenceStateGoal_C::ExecuteUbergraph_BPC_RaceSequenceStateGoal(in
 
 void UBPC_RaceSequenceStateGoal_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGoal_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGoal_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

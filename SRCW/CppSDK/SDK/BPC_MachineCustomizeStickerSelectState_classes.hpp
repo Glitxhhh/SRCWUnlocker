@@ -10,17 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
-#include "ST_StickerPresetPageData_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ST_StickerPresetPageItemData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ST_StickerPresetPageData_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeStickerSelectState.BPC_MachineCustomizeStickerSelectState_C
 // 0x0200 (0x0300 - 0x0100)
@@ -73,8 +72,9 @@ public:
 	void RewardDialog_Purchase_OnResult(EDialogResult Result);
 	void RewardDialog_Unlock_OnResult(EDialogResult Result);
 	void RightShoulderEvent(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
+	void SelectExtraSticker(class AUnionStickerBase* InStickerBase, int32 InStickerId, bool bIsRear, class UTexture* StickerTexture);
 	void SetActiveAuraEffect(bool IsActive_0);
-	void SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 stickerId);
+	void SetExtraSticker(bool IsExtra, bool IsRear, EExtraStickerPattern Pattern, int32 StickerId);
 	void SetFrontMaterial(class UTexture* Texture);
 	void SetRearMaterial(class UTexture* Texture);
 	void SetStickerColor(bool IsColorChangeable, class AUnionStickerBase* Sticker);
@@ -112,5 +112,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeStickerSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

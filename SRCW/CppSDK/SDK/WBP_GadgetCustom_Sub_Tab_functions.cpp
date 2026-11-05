@@ -14,8 +14,7 @@
 #include "WBP_GadgetCustom_Sub_Tab_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_GadgetCustom_Sub_Tab_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Sub_Tab_C", "ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab", FuncInfo);
 
 	Params::WBP_GadgetCustom_Sub_Tab_C_ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab Parms{};
 
@@ -37,29 +34,13 @@ void UWBP_GadgetCustom_Sub_Tab_C::ExecuteUbergraph_WBP_GadgetCustom_Sub_Tab(int3
 }
 
 
-// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.OnConstTabButtons
+// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.PreConstButtonText
 // (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_GadgetCustom_Sub_Tab_C::OnConstTabButtons()
+void UWBP_GadgetCustom_Sub_Tab_C::PreConstButtonText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "OnConstTabButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Sub_Tab.WBP_GadgetCustom_Sub_Tab_C.OnConstTexts
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Sub_Tab_C::OnConstTexts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "OnConstTexts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Tab_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +53,8 @@ void UWBP_GadgetCustom_Sub_Tab_C::OnConstTexts()
 
 void UWBP_GadgetCustom_Sub_Tab_C::SetPlayerIndex(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Tab_C_SetPlayerIndex Parms{};
 
@@ -93,10 +72,8 @@ void UWBP_GadgetCustom_Sub_Tab_C::SetPlayerIndex(int32 InPlayerIndex)
 
 void UWBP_GadgetCustom_Sub_Tab_C::SetupTabButtons(const int32 InTabNum, const bool InOpenRentalGadget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Sub_Tab_C", "SetupTabButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_GadgetCustom_Sub_Tab_C_SetupTabButtons Parms{};
 
@@ -106,5 +83,5 @@ void UWBP_GadgetCustom_Sub_Tab_C::SetupTabButtons(const int32 InTabNum, const bo
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

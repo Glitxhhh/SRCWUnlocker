@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_StartingLights.BP_StartingLights_C.ExecuteUbergraph_BP_StartingLights
 // 0x0770 (0x0770 - 0x0000)
@@ -259,5 +259,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_StartingLights_C_SwitchCountMaterial;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPI_SLCharaMachineSelect.BPI_SLCharaMachineSelect_C.GetCameraActor
 // 0x0008 (0x0008 - 0x0000)
@@ -49,5 +49,5 @@ public:
 };
 DUMPER7_ASSERTS_BPI_SLCharaMachineSelect_C_StartMoveCameraTransformAndParam;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

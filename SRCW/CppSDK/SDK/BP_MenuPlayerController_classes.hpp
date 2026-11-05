@@ -12,12 +12,11 @@
 
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
-#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuPlayerController.BP_MenuPlayerController_C
 // 0x0030 (0x0A60 - 0x0A30)
@@ -75,5 +74,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MenuPlayerController_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_FooterMenu_Sub_ControllerCross_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterMenu_Sub_ControllerCross.WBP_FooterMenu_Sub_ControllerCross_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::Construct()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerCross(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerCross");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterMenu_Sub_ControllerCross_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerCross", FuncInfo);
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerCross Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::ExecuteUbergraph_WBP_FooterMenu_Sub_
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -90,10 +81,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyPressedWithPlayerId(const
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -124,10 +111,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnAcceptKeyReleasedWithPlayerId(cons
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -158,10 +141,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyPressedWithPlayerId(const i
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +155,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -192,10 +171,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnBackKeyReleasedWithPlayerId(const 
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -208,10 +185,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -226,10 +201,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyPressedWithPlayerId(const i
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -242,10 +215,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -260,10 +231,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnDownKeyReleasedWithPlayerId(const 
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,10 +245,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -294,10 +261,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftPressedWithPlayerId(
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,10 +275,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -328,10 +291,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonLeftReleasedWithPlayerId
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -344,10 +305,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -362,10 +321,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopPressedWithPlayerId(c
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -378,10 +335,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -396,10 +351,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnFaceButtonTopReleasedWithPlayerId(
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -412,10 +365,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -430,10 +381,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyPressedWithPlayerId(const i
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -446,10 +395,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -464,10 +411,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftKeyReleasedWithPlayerId(const 
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -480,10 +425,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -498,10 +441,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderPressedWithPlayerId(co
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -514,10 +455,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -534,10 +473,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftShoulderReleasedWithPlayerId(c
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftStickAxis Parms{};
 
@@ -555,10 +492,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickAxis(const struct FVector
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -574,10 +509,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickAxisWithPlayerId(const st
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -590,10 +523,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -608,10 +539,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonPressedWithPlayerId
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -624,10 +553,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -642,10 +569,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnLeftStickButtonReleasedWithPlayerI
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -658,10 +583,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -676,10 +599,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyPressedWithPlayerId(const 
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -692,10 +613,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -710,10 +629,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightKeyReleasedWithPlayerId(const
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -726,10 +643,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -744,10 +659,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderPressedWithPlayerId(c
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -760,10 +673,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -780,10 +691,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightShoulderReleasedWithPlayerId(
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightStickAxis Parms{};
 
@@ -801,10 +710,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickAxis(const struct FVecto
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -820,10 +727,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickAxisWithPlayerId(const s
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -836,10 +741,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -854,10 +757,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonPressedWithPlayerI
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -870,10 +771,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -888,10 +787,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnRightStickButtonReleasedWithPlayer
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -904,10 +801,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -922,10 +817,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialPressedWithPlayerId(const i
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -938,10 +831,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -956,10 +847,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnSpecialReleasedWithPlayerId(const 
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -972,10 +861,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyPressed()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -990,10 +877,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyPressedWithPlayerId(const int
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1006,10 +891,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyReleased()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1026,10 +909,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnUpKeyReleasedWithPlayerId(const in
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::OnVisibilityChanged_イベント(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "OnVisibilityChanged_イベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_OnVisibilityChanged_イベント Parms{};
 
@@ -1046,10 +927,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::OnVisibilityChanged_イベント(ESl
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_PreConstruct Parms{};
 
@@ -1064,10 +943,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::PressButtonAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "PressButtonAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1080,10 +957,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::PressButtonAnimation()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::SetButtonImageIndex(int32 Param_Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "SetButtonImageIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_SetButtonImageIndex Parms{};
 
@@ -1098,10 +973,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::SetButtonImageIndex(int32 Param_Inde
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::SetPressAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "SetPressAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1114,10 +987,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::SetPressAnimation()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::SetText(const class FText& Text_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_SetText Parms{};
 
@@ -1134,10 +1005,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::SetText(const class FText& Text_0)
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerCross_C_SilentFocusReady Parms{};
 
@@ -1152,10 +1021,8 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::SilentFocusReady(bool bOnce)
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::UpdateButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "UpdateButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1166,13 +1033,11 @@ void UWBP_FooterMenu_Sub_ControllerCross_C::UpdateButton()
 
 void UWBP_FooterMenu_Sub_ControllerCross_C::UpdateText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerCross_C", "UpdateText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerCross_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_TopMenu_Sub_ShopInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_ShopInfo.WBP_TopMenu_Sub_ShopInfo_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_TopMenu_Sub_ShopInfo_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_ShopInfo_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_ShopInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_TopMenu_Sub_ShopInfo_C::Construct()
 
 void UWBP_TopMenu_Sub_ShopInfo_C::ExecuteUbergraph_WBP_TopMenu_Sub_ShopInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_ShopInfo_C", "ExecuteUbergraph_WBP_TopMenu_Sub_ShopInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Sub_ShopInfo_C", "ExecuteUbergraph_WBP_TopMenu_Sub_ShopInfo", FuncInfo);
 
 	Params::WBP_TopMenu_Sub_ShopInfo_C_ExecuteUbergraph_WBP_TopMenu_Sub_ShopInfo Parms{};
 
@@ -50,5 +45,5 @@ void UWBP_TopMenu_Sub_ShopInfo_C::ExecuteUbergraph_WBP_TopMenu_Sub_ShopInfo(int3
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

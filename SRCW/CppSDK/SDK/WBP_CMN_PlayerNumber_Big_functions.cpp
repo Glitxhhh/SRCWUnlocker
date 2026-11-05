@@ -14,21 +14,18 @@
 #include "WBP_CMN_PlayerNumber_Big_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PlayerNumber_Big.WBP_CMN_PlayerNumber_Big_C.SetPlayerNumberText
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CMN_PlayerNumber_Big_C::SetPlayerNumberText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerNumber_Big_C", "SetPlayerNumberText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerNumber_Big_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

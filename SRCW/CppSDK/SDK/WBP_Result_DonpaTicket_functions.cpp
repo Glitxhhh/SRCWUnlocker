@@ -14,8 +14,7 @@
 #include "WBP_Result_DonpaTicket_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.AddOpen
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_Result_DonpaTicket_C::AddOpen(int32 AddNum, bool bIsCountUp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "AddOpen");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_AddOpen Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_Result_DonpaTicket_C::AddOpen(int32 AddNum, bool bIsCountUp)
 
 void UWBP_Result_DonpaTicket_C::AddOpenForRival(int32 AddNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "AddOpenForRival");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_AddOpenForRival Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_Result_DonpaTicket_C::AddOpenForRival(int32 AddNum)
 
 void UWBP_Result_DonpaTicket_C::CalculateRivalDonpaTicket()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "CalculateRivalDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_Result_DonpaTicket_C::CalculateRivalDonpaTicket()
 
 void UWBP_Result_DonpaTicket_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_Result_DonpaTicket_C::Close()
 
 void UWBP_Result_DonpaTicket_C::CloseAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "CloseAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UWBP_Result_DonpaTicket_C::CloseAnimation()
 
 void UWBP_Result_DonpaTicket_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +107,8 @@ void UWBP_Result_DonpaTicket_C::Construct()
 
 void UWBP_Result_DonpaTicket_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -136,10 +121,8 @@ void UWBP_Result_DonpaTicket_C::Destruct()
 
 void UWBP_Result_DonpaTicket_C::ExecuteUbergraph_WBP_Result_DonpaTicket(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "ExecuteUbergraph_WBP_Result_DonpaTicket");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_DonpaTicket_C", "ExecuteUbergraph_WBP_Result_DonpaTicket", FuncInfo);
 
 	Params::WBP_Result_DonpaTicket_C_ExecuteUbergraph_WBP_Result_DonpaTicket Parms{};
 
@@ -154,10 +137,8 @@ void UWBP_Result_DonpaTicket_C::ExecuteUbergraph_WBP_Result_DonpaTicket(int32 En
 
 void UWBP_Result_DonpaTicket_C::Finished_12A3240A4E6E31B1AC0B098D850CEABC()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Finished_12A3240A4E6E31B1AC0B098D850CEABC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +149,8 @@ void UWBP_Result_DonpaTicket_C::Finished_12A3240A4E6E31B1AC0B098D850CEABC()
 
 void UWBP_Result_DonpaTicket_C::Finished_3AE9A873467218F0098981868CA7376C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Finished_3AE9A873467218F0098981868CA7376C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +161,8 @@ void UWBP_Result_DonpaTicket_C::Finished_3AE9A873467218F0098981868CA7376C()
 
 void UWBP_Result_DonpaTicket_C::Finished_B4AD38E8499BA0BDE52A1C863B3C94CA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Finished_B4AD38E8499BA0BDE52A1C863B3C94CA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,10 +175,8 @@ void UWBP_Result_DonpaTicket_C::Finished_B4AD38E8499BA0BDE52A1C863B3C94CA()
 
 void UWBP_Result_DonpaTicket_C::GetAddPoint(int32* AddPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "GetAddPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_GetAddPoint Parms{};
 
@@ -219,10 +194,8 @@ void UWBP_Result_DonpaTicket_C::GetAddPoint(int32* AddPoint)
 
 int32 UWBP_Result_DonpaTicket_C::GetAddTicketCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "GetAddTicketCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_GetAddTicketCount Parms{};
 
@@ -237,10 +210,32 @@ int32 UWBP_Result_DonpaTicket_C::GetAddTicketCount()
 
 void UWBP_Result_DonpaTicket_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnAcceptKeyPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.OnDuelMedalInAnimationFinish
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::OnDuelMedalInAnimationFinish()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.OnDuelMedalOutAnimationFinish
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::OnDuelMedalOutAnimationFinish()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +246,8 @@ void UWBP_Result_DonpaTicket_C::OnAcceptKeyPressed()
 
 void UWBP_Result_DonpaTicket_C::OnFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -265,10 +258,8 @@ void UWBP_Result_DonpaTicket_C::OnFullScreenMouseClick()
 
 void UWBP_Result_DonpaTicket_C::OnInEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnInEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +270,8 @@ void UWBP_Result_DonpaTicket_C::OnInEnd()
 
 void UWBP_Result_DonpaTicket_C::OnOutEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "OnOutEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -293,10 +282,8 @@ void UWBP_Result_DonpaTicket_C::OnOutEnd()
 
 void UWBP_Result_DonpaTicket_C::Open()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -307,10 +294,44 @@ void UWBP_Result_DonpaTicket_C::Open()
 
 void UWBP_Result_DonpaTicket_C::PlayAnimOnBPFromRivalLevel()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "PlayAnimOnBPFromRivalLevel");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.RescaleNumTextScaleBox
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::RescaleNumTextScaleBox()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SequenceEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SequenceEvent__ENTRYPOINTWBP_Result_DonpaTicket
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SequenceEvent__ENTRYPOINTWBP_Result_DonpaTicket()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -321,10 +342,8 @@ void UWBP_Result_DonpaTicket_C::PlayAnimOnBPFromRivalLevel()
 
 void UWBP_Result_DonpaTicket_C::SetAddDonpaTicket()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetAddDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -337,10 +356,8 @@ void UWBP_Result_DonpaTicket_C::SetAddDonpaTicket()
 
 void UWBP_Result_DonpaTicket_C::SetAddDonpaTicketForRival(int32 AddAmt)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetAddDonpaTicketForRival");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetAddDonpaTicketForRival Parms{};
 
@@ -358,35 +375,13 @@ void UWBP_Result_DonpaTicket_C::SetAddDonpaTicketForRival(int32 AddAmt)
 
 void UWBP_Result_DonpaTicket_C::SetAddDonpaTicketNum(int32 AddTicketNum, bool bIsTicketUpdate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetAddDonpaTicketNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetAddDonpaTicketNum Parms{};
 
 	Parms.AddTicketNum = AddTicketNum;
 	Parms.bIsTicketUpdate = bIsTicketUpdate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetChanceUpIconEnable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsEnable                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Result_DonpaTicket_C::SetChanceUpIconEnable(bool IsEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetChanceUpIconEnable");
-
-	Params::WBP_Result_DonpaTicket_C_SetChanceUpIconEnable Parms{};
-
-	Parms.IsEnable = IsEnable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -399,10 +394,8 @@ void UWBP_Result_DonpaTicket_C::SetChanceUpIconEnable(bool IsEnable)
 
 void UWBP_Result_DonpaTicket_C::SetForceCloseTime(float InTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetForceCloseTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetForceCloseTime Parms{};
 
@@ -419,10 +412,8 @@ void UWBP_Result_DonpaTicket_C::SetForceCloseTime(float InTime)
 
 void UWBP_Result_DonpaTicket_C::SetForceCloseTime_Imp(double Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetForceCloseTime_Imp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetForceCloseTime_Imp Parms{};
 
@@ -440,10 +431,8 @@ void UWBP_Result_DonpaTicket_C::SetForceCloseTime_Imp(double Time)
 
 void UWBP_Result_DonpaTicket_C::SetOpenDonpaTicket(int32 PrevNum, int32 CurNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetOpenDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetOpenDonpaTicket Parms{};
 
@@ -454,17 +443,41 @@ void UWBP_Result_DonpaTicket_C::SetOpenDonpaTicket(int32 PrevNum, int32 CurNum)
 }
 
 
-// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetupChanceUpParam
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetTicketChanceUpIconEnable
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsEnable                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Result_DonpaTicket_C::SetupChanceUpParam()
+void UWBP_Result_DonpaTicket_C::SetTicketChanceUpIconEnable(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetupChanceUpParam");
+	Params::WBP_Result_DonpaTicket_C_SetTicketChanceUpIconEnable Parms{};
 
-	UObject::ProcessEvent(Func, nullptr);
+	Parms.IsEnable = IsEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetUltimateShowdownPointUp
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EUltimateShowdownCalcType               calcType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   calcValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Result_DonpaTicket_C::SetUltimateShowdownPointUp(EUltimateShowdownCalcType calcType, int32 calcValue)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	Params::WBP_Result_DonpaTicket_C_SetUltimateShowdownPointUp Parms{};
+
+	Parms.calcType = calcType;
+	Parms.calcValue = calcValue;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -476,10 +489,8 @@ void UWBP_Result_DonpaTicket_C::SetupChanceUpParam()
 
 void UWBP_Result_DonpaTicket_C::SetupForOpenDonpaTicket(int32 PrevNum, int32 CurNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "SetupForOpenDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_SetupForOpenDonpaTicket Parms{};
 
@@ -487,6 +498,18 @@ void UWBP_Result_DonpaTicket_C::SetupForOpenDonpaTicket(int32 PrevNum, int32 Cur
 	Parms.CurNum = CurNum;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.SetupTicketChanceUpParam
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::SetupTicketChanceUpParam()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -498,10 +521,8 @@ void UWBP_Result_DonpaTicket_C::SetupForOpenDonpaTicket(int32 PrevNum, int32 Cur
 
 void UWBP_Result_DonpaTicket_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_DonpaTicket_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
 
 	Params::WBP_Result_DonpaTicket_C_Tick Parms{};
 
@@ -511,5 +532,17 @@ void UWBP_Result_DonpaTicket_C::Tick(const struct FGeometry& MyGeometry, float I
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function WBP_Result_DonpaTicket.WBP_Result_DonpaTicket_C.UpdateBonusAddMedalNum_AnimationEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Result_DonpaTicket_C::UpdateBonusAddMedalNum_AnimationEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_DonpaTicket_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

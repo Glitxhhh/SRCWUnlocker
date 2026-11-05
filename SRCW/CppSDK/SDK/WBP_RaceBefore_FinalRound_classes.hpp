@@ -15,8 +15,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_RaceBefore_FinalRound.WBP_RaceBefore_FinalRound_C
 // 0x00D0 (0x03B0 - 0x02E0)
@@ -79,5 +78,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_RaceBefore_FinalRound_C;
 
-}
-
+SDK_NAMESPACE_END

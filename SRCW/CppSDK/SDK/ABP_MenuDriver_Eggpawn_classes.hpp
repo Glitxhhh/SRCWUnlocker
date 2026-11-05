@@ -14,15 +14,15 @@
 #include "ABPT_MenuDriver_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_MenuDriver_Eggpawn.ABP_MenuDriver_Eggpawn_C
-// 0x0010 (0x1CD0 - 0x1CC0)
+// 0x0000 (0x37E0 - 0x37E0)
 class UABP_MenuDriver_Eggpawn_C final : public UABPT_MenuDriver_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_MenuDriver_Eggpawn_C;           // 0x1CC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_37D5[0x3];                                     // 0x37D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_ABP_MenuDriver_Eggpawn_C;           // 0x37D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void AnimNotify_CrownOff();
@@ -45,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_MenuDriver_Eggpawn_C;
 
-}
-
+SDK_NAMESPACE_END

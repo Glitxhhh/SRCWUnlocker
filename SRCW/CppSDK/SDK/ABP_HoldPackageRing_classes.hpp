@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_HoldPackageRing.ABP_HoldPackageRing_C
 // 0x0270 (0x0650 - 0x03E0)
@@ -59,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_HoldPackageRing_C;
 
-}
-
+SDK_NAMESPACE_END

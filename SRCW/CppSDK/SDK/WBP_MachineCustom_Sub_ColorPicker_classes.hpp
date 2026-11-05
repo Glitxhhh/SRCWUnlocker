@@ -10,18 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "ST_ColorDetailWindowColorItemData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ST_ColorDetailWindowData_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ST_ColorDetailWindowColorItemData_structs.hpp"
 #include "ST_PullDownMenuItemData_structs.hpp"
 #include "EColorDetailWindowMode_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_ColorPicker.WBP_MachineCustom_Sub_ColorPicker_C
 // 0x0200 (0x05D8 - 0x03D8)
@@ -101,5 +100,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_ColorPicker_C;
 
-}
-
+SDK_NAMESPACE_END

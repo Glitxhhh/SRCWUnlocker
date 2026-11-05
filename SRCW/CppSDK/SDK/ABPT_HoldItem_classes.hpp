@@ -10,19 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "ABPT_HoldItem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABPT_HoldItem.ABPT_HoldItem_C
 // 0x0D50 (0x1130 - 0x03E0)
 #pragma pack(push, 0x1)
-class alignas(0x10) UABPT_HoldItem_C : public UHoldItemAnimInstance
+class SDK_ALIGN(0x10) UABPT_HoldItem_C : public UHoldItemAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -146,5 +145,4 @@ public:
 #pragma pack(pop)
 DUMPER7_ASSERTS_UABPT_HoldItem_C;
 
-}
-
+SDK_NAMESPACE_END

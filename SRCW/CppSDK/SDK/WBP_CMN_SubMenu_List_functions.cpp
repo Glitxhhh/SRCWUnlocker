@@ -14,18 +14,15 @@
 #include "WBP_CMN_SubMenu_List_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_SubMenu_List.WBP_CMN_SubMenu_List_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_SubMenu_List_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_List_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_List_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_SubMenu_List_C::Construct()
 
 void UWBP_CMN_SubMenu_List_C::ExecuteUbergraph_WBP_CMN_SubMenu_List(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_List_C", "ExecuteUbergraph_WBP_CMN_SubMenu_List");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_SubMenu_List_C", "ExecuteUbergraph_WBP_CMN_SubMenu_List", FuncInfo);
 
 	Params::WBP_CMN_SubMenu_List_C_ExecuteUbergraph_WBP_CMN_SubMenu_List Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_CMN_SubMenu_List_C::ExecuteUbergraph_WBP_CMN_SubMenu_List(int32 EntryP
 
 void UWBP_CMN_SubMenu_List_C::GetButtons(TArray<class UCommonMenuSubMenuButton*>* Buttons_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_List_C", "GetButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_List_C", FnName));
 
 	Params::WBP_CMN_SubMenu_List_C_GetButtons Parms{};
 
@@ -77,10 +70,8 @@ void UWBP_CMN_SubMenu_List_C::GetButtons(TArray<class UCommonMenuSubMenuButton*>
 
 void UWBP_CMN_SubMenu_List_C::InitializeAnimButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_List_C", "InitializeAnimButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_List_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,13 +82,11 @@ void UWBP_CMN_SubMenu_List_C::InitializeAnimButtons()
 
 void UWBP_CMN_SubMenu_List_C::SetupSubMenuButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_List_C", "SetupSubMenuButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_List_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

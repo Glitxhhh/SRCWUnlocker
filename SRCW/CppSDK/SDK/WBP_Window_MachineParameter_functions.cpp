@@ -14,8 +14,7 @@
 #include "WBP_Window_MachineParameter_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Window_MachineParameter.WBP_Window_MachineParameter_C.ExecuteUbergraph_WBP_Window_MachineParameter
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Window_MachineParameter_C::ExecuteUbergraph_WBP_Window_MachineParameter(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "ExecuteUbergraph_WBP_Window_MachineParameter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Window_MachineParameter_C", "ExecuteUbergraph_WBP_Window_MachineParameter", FuncInfo);
 
 	Params::WBP_Window_MachineParameter_C_ExecuteUbergraph_WBP_Window_MachineParameter Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_Window_MachineParameter_C::ExecuteUbergraph_WBP_Window_MachineParamete
 
 void UWBP_Window_MachineParameter_C::OnPlayAnimIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "OnPlayAnimIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_Window_MachineParameter_C::OnPlayAnimIn()
 
 void UWBP_Window_MachineParameter_C::OnPlayAnimLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "OnPlayAnimLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_Window_MachineParameter_C::OnPlayAnimLoop()
 
 void UWBP_Window_MachineParameter_C::OnPlayAnimOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "OnPlayAnimOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_Window_MachineParameter_C::OnPlayAnimOut()
 
 void UWBP_Window_MachineParameter_C::OnPlaySE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "OnPlaySE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_Window_MachineParameter_C::OnPlaySE()
 
 void UWBP_Window_MachineParameter_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	Params::WBP_Window_MachineParameter_C_PreConstruct Parms{};
 
@@ -118,10 +105,8 @@ void UWBP_Window_MachineParameter_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Window_MachineParameter_C::WidgetAnimationEvt_Parameter_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "WidgetAnimationEvt_Parameter_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,13 +117,11 @@ void UWBP_Window_MachineParameter_C::WidgetAnimationEvt_Parameter_In_K2Node_Widg
 
 void UWBP_Window_MachineParameter_C::WidgetAnimationEvt_Parameter_Out_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Window_MachineParameter_C", "WidgetAnimationEvt_Parameter_Out_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Window_MachineParameter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

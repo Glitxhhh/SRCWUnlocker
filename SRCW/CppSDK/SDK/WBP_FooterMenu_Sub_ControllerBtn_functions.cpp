@@ -14,18 +14,15 @@
 #include "WBP_FooterMenu_Sub_ControllerBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterMenu_Sub_ControllerBtn.WBP_FooterMenu_Sub_ControllerBtn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_FooterMenu_Sub_ControllerBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FooterMenu_Sub_ControllerBtn_C::Construct()
 
 void UWBP_FooterMenu_Sub_ControllerBtn_C::ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerBtn_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterMenu_Sub_ControllerBtn_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerBtn", FuncInfo);
 
 	Params::WBP_FooterMenu_Sub_ControllerBtn_C_ExecuteUbergraph_WBP_FooterMenu_Sub_ControllerBtn Parms{};
 
@@ -60,10 +55,8 @@ void UWBP_FooterMenu_Sub_ControllerBtn_C::ExecuteUbergraph_WBP_FooterMenu_Sub_Co
 
 struct FEventReply UWBP_FooterMenu_Sub_ControllerBtn_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerBtn_C", "OnMouseButtonDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerBtn_C_OnMouseButtonDown Parms{};
 
@@ -83,10 +76,8 @@ struct FEventReply UWBP_FooterMenu_Sub_ControllerBtn_C::OnMouseButtonDown(const 
 
 void UWBP_FooterMenu_Sub_ControllerBtn_C::SetButtonImageIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_ControllerBtn_C", "SetButtonImageIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_ControllerBtn_C", FnName));
 
 	Params::WBP_FooterMenu_Sub_ControllerBtn_C_SetButtonImageIndex Parms{};
 
@@ -95,5 +86,5 @@ void UWBP_FooterMenu_Sub_ControllerBtn_C::SetButtonImageIndex(int32 Index_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

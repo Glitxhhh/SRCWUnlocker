@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct JsonUtilities.JsonObjectWrapper
 // 0x0020 (0x0020 - 0x0000)
@@ -24,5 +23,4 @@ public:
 };
 DUMPER7_ASSERTS_FJsonObjectWrapper;
 
-}
-
+SDK_NAMESPACE_END

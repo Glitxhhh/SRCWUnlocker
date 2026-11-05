@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn.WBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C
 // 0x0028 (0x0308 - 0x02E0)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C;
 
-}
-
+SDK_NAMESPACE_END

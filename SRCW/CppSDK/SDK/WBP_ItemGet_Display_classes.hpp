@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ItemGet_Display.WBP_ItemGet_Display_C
 // 0x0000 (0x0350 - 0x0350)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ItemGet_Display_C;
 
-}
-
+SDK_NAMESPACE_END

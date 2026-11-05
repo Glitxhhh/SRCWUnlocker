@@ -14,8 +14,7 @@
 #include "WBP_DonpaTicketApp_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_DonpaTicketApp.WBP_DonpaTicketApp_C.ExecuteUbergraph_WBP_DonpaTicketApp
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_DonpaTicketApp_C::ExecuteUbergraph_WBP_DonpaTicketApp(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_C", "ExecuteUbergraph_WBP_DonpaTicketApp");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_DonpaTicketApp_C", "ExecuteUbergraph_WBP_DonpaTicketApp", FuncInfo);
 
 	Params::WBP_DonpaTicketApp_C_ExecuteUbergraph_WBP_DonpaTicketApp Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_DonpaTicketApp_C::ExecuteUbergraph_WBP_DonpaTicketApp(int32 EntryPoint
 
 void UWBP_DonpaTicketApp_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_C", FnName));
 
 	Params::WBP_DonpaTicketApp_C_OnAnimationFinished Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_DonpaTicketApp_C::OnAnimationFinished(const class UWidgetAnimation* An
 
 void UWBP_DonpaTicketApp_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UWBP_DonpaTicketApp_C::PlayAnimationIn()
 
 void UWBP_DonpaTicketApp_C::PlayAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_C", "PlayAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,13 +81,11 @@ void UWBP_DonpaTicketApp_C::PlayAnimationLoop()
 
 void UWBP_DonpaTicketApp_C::PlayAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_C", "PlayAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

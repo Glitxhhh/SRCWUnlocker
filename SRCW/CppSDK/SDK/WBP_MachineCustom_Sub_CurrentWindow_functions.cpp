@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_CurrentWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CurrentWindow.WBP_MachineCustom_Sub_CurrentWindow_C.BndEvt__WBP_MachineCustom_Sub_CurrentWindow_WBP_FooterShortCut_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::BndEvt__WBP_MachineCustom_Sub_CurrentWindow_WBP_FooterShortCut_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "BndEvt__WBP_MachineCustom_Sub_CurrentWindow_WBP_FooterShortCut_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::BndEvt__WBP_MachineCustom_Sub_Curre
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::Construct()
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CurrentWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CurrentWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CurrentWindow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CurrentWindow", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CurrentWindow_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CurrentWindow Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::ExecuteUbergraph_WBP_MachineCustom_
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "PlayAnimIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimIn()
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "PlayAnimLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimLoop()
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "PlayAnimOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::PlayAnimOut()
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::WidgetAnimationEvt_Window_In_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "WidgetAnimationEvt_Window_In_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,13 +111,11 @@ void UWBP_MachineCustom_Sub_CurrentWindow_C::WidgetAnimationEvt_Window_In_K2Node
 
 void UWBP_MachineCustom_Sub_CurrentWindow_C::WidgetAnimationEvt_Window_Out_K2Node_WidgetAnimationEvent_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CurrentWindow_C", "WidgetAnimationEvt_Window_Out_K2Node_WidgetAnimationEvent_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CurrentWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

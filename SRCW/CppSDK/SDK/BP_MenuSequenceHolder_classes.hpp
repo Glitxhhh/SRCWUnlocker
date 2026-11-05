@@ -13,8 +13,7 @@
 #include "UnionLib_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuSequenceHolder.BP_MenuSequenceHolder_C
 // 0x0000 (0x02D8 - 0x02D8)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MenuSequenceHolder_C;
 
-}
-
+SDK_NAMESPACE_END

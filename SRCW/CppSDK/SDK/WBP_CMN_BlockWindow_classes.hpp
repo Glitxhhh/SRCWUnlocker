@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_BlockWindow.WBP_CMN_BlockWindow_C
 // 0x0068 (0x0570 - 0x0508)
@@ -128,5 +127,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_BlockWindow_C;
 
-}
-
+SDK_NAMESPACE_END

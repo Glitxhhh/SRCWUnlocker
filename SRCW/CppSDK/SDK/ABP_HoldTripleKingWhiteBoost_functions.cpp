@@ -14,8 +14,7 @@
 #include "ABP_HoldTripleKingWhiteBoost_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldTripleKingWhiteBoost.ABP_HoldTripleKingWhiteBoost_C.IsSkipInState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UABP_HoldTripleKingWhiteBoost_C::IsSkipInState(int32 In_RemainingUses, bool* Out_Valid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldTripleKingWhiteBoost_C", "IsSkipInState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldTripleKingWhiteBoost_C", FnName));
 
 	Params::ABP_HoldTripleKingWhiteBoost_C_IsSkipInState Parms{};
 
@@ -48,10 +45,8 @@ void UABP_HoldTripleKingWhiteBoost_C::IsSkipInState(int32 In_RemainingUses, bool
 
 void UABP_HoldTripleKingWhiteBoost_C::GetBlendTime(double* newParam) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldTripleKingWhiteBoost_C", "GetBlendTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldTripleKingWhiteBoost_C", FnName));
 
 	Params::ABP_HoldTripleKingWhiteBoost_C_GetBlendTime Parms{};
 
@@ -69,10 +64,8 @@ void UABP_HoldTripleKingWhiteBoost_C::GetBlendTime(double* newParam) const
 
 void UABP_HoldTripleKingWhiteBoost_C::IsValidOutState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldTripleKingWhiteBoost_C", "IsValidOutState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldTripleKingWhiteBoost_C", FnName));
 
 	Params::ABP_HoldTripleKingWhiteBoost_C_IsValidOutState Parms{};
 
@@ -82,5 +75,5 @@ void UABP_HoldTripleKingWhiteBoost_C::IsValidOutState(bool* Out_Valid) const
 		*Out_Valid = Parms.Out_Valid;
 }
 
-}
 
+SDK_NAMESPACE_END

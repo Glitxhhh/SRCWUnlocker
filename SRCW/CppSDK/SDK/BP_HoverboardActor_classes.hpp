@@ -13,11 +13,10 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_HoverboardActor.BP_HoverboardActor_C
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABP_HoverboardActor_C final : public AHoverboardInRaceActor
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_HoverboardActor_C;
 
-}
-
+SDK_NAMESPACE_END

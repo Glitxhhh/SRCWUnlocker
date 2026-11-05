@@ -14,8 +14,7 @@
 #include "BP_UnionCrossPlayResolveWindowManager_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_UnionCrossPlayResolveWindowManager.BP_UnionCrossPlayResolveWindowManager_C.ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_UnionCrossPlayResolveWindowManager_C::ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionCrossPlayResolveWindowManager_C", "ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_UnionCrossPlayResolveWindowManager_C", "ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager", FuncInfo);
 
 	Params::BP_UnionCrossPlayResolveWindowManager_C_ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager Parms{};
 
@@ -42,10 +39,8 @@ void ABP_UnionCrossPlayResolveWindowManager_C::ExecuteUbergraph_BP_UnionCrossPla
 
 void ABP_UnionCrossPlayResolveWindowManager_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionCrossPlayResolveWindowManager_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionCrossPlayResolveWindowManager_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void ABP_UnionCrossPlayResolveWindowManager_C::ReceiveBeginPlay()
 
 void ABP_UnionCrossPlayResolveWindowManager_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionCrossPlayResolveWindowManager_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionCrossPlayResolveWindowManager_C", FnName));
 
 	Params::BP_UnionCrossPlayResolveWindowManager_C_ReceiveTick Parms{};
 
@@ -70,5 +63,5 @@ void ABP_UnionCrossPlayResolveWindowManager_C::ReceiveTick(float DeltaSeconds)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

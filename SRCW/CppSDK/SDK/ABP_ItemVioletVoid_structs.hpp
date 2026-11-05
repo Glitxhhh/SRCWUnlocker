@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_ItemVioletVoid.ABP_ItemVioletVoid_C.AnimBlueprintGeneratedConstantData
 // 0x0407 (0x0408 - 0x0001)
@@ -74,5 +73,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemVioletVoid__FAnimBlueprintGeneratedMutableData;
 
-}
-
+SDK_NAMESPACE_END

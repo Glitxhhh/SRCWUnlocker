@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EColorDetailWindowMode.EColorDetailWindowMode
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EColorDetailWindowMode : uint8
 	EColorDetailWindowMode_MAX               = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function OpenColorIO.OpenColorIOBlueprintLibrary.ApplyColorSpaceTransform
 // 0x00B8 (0x00B8 - 0x0000)
@@ -98,5 +98,5 @@ public:
 };
 DUMPER7_ASSERTS_OpenColorIODisplayExtensionWrapper_GetOpenColorIOConfiguration;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

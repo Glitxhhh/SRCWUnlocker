@@ -17,8 +17,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class CriWareRuntime.Atom3dRegionHandle
 // 0x0008 (0x0030 - 0x0028)
@@ -74,7 +73,7 @@ DUMPER7_ASSERTS_UAtom3dRegion;
 // Class CriWareRuntime.Atom3dSourceBaseComponent
 // 0x00A0 (0x02D0 - 0x0230)
 #pragma pack(push, 0x1)
-class alignas(0x10) UAtom3dSourceBaseComponent : public USceneComponent
+class SDK_ALIGN(0x10) UAtom3dSourceBaseComponent : public USceneComponent
 {
 public:
 	float                                         DefaultOutputVolumeScale;                          // 0x0230(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -426,9 +425,12 @@ public:
 DUMPER7_ASSERTS_UAtomBusSampler;
 
 // Class CriWareRuntime.AtomCallback
-// 0x0000 (0x0000 - 0x0000)
-class IAtomCallback final
+// 0x0008 (0x0008 - 0x0000)
+class IAtomCallback
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -545,10 +547,9 @@ DUMPER7_ASSERTS_UAtomCategory;
 
 // Class CriWareRuntime.AtomComponent
 // 0x10C0 (0x12F0 - 0x0230)
-class UAtomComponent : public USceneComponent
+class UAtomComponent : public USceneComponent, public IAtomCallback
 {
 public:
-	uint8                                         Pad_230[0x8];                                      // 0x0230(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCue*                          Sound;                                             // 0x0238(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAtom3dRegion*                          Region;                                            // 0x0240(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bAutoDestroy : 1;                                  // 0x0248(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -1434,7 +1435,7 @@ public:
 	TMulticastInlineDelegate<void(const struct FManaEventPointInfo& EventPointInfo)> OnEventPoint;   // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(class FText Subtitle)> OnSubtitleChanged;                          // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(EManaComponentStatus Status, class UManaComponent* ManaComponent)> OnStatusChanged; // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UManaMovie* Movie, class UManaComponent* ManaComponent)> OnMovieChanged; // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UManaMovie* Movie_0, class UManaComponent* ManaComponent)> OnMovieChanged; // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 FrameNumber, class UManaComponent* ManaComponent)> OnSeekCompleted; // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 TrackNumber, class UManaComponent* ManaComponent)> OnTrackChanged; // 0x00F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 FrameNumber, class UManaComponent* ManaComponent)> OnFrameOnTime; // 0x0108(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -2185,5 +2186,4 @@ public:
 };
 DUMPER7_ASSERTS_USoundAtomCueSheet;
 
-}
-
+SDK_NAMESPACE_END

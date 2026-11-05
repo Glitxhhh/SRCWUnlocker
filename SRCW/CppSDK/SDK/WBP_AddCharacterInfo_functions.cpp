@@ -14,28 +14,7 @@
 #include "WBP_AddCharacterInfo_parameters.hpp"
 
 
-namespace SDK
-{
-
-// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.EditOpen
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDriverId                               characterId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_AddCharacterInfo_C::EditOpen(EDriverId characterId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "EditOpen");
-
-	Params::WBP_AddCharacterInfo_C_EditOpen Parms{};
-
-	Parms.characterId = characterId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
+SDK_NAMESPACE_START
 
 // Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.ExecuteUbergraph_WBP_AddCharacterInfo
 // (Final, UbergraphFunction, HasDefaults)
@@ -44,10 +23,8 @@ void UWBP_AddCharacterInfo_C::EditOpen(EDriverId characterId)
 
 void UWBP_AddCharacterInfo_C::ExecuteUbergraph_WBP_AddCharacterInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "ExecuteUbergraph_WBP_AddCharacterInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_AddCharacterInfo_C", "ExecuteUbergraph_WBP_AddCharacterInfo", FuncInfo);
 
 	Params::WBP_AddCharacterInfo_C_ExecuteUbergraph_WBP_AddCharacterInfo Parms{};
 
@@ -62,10 +39,8 @@ void UWBP_AddCharacterInfo_C::ExecuteUbergraph_WBP_AddCharacterInfo(int32 EntryP
 
 void UWBP_AddCharacterInfo_C::ForceClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "ForceClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +53,8 @@ void UWBP_AddCharacterInfo_C::ForceClose()
 
 void UWBP_AddCharacterInfo_C::GetCharacterInfos(TArray<class UWBP_AddCharacterInfo_Sub_Ring_C*>* Infos)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "GetCharacterInfos");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	Params::WBP_AddCharacterInfo_C_GetCharacterInfos Parms{};
 
@@ -97,10 +70,8 @@ void UWBP_AddCharacterInfo_C::GetCharacterInfos(TArray<class UWBP_AddCharacterIn
 
 void UWBP_AddCharacterInfo_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,30 +82,26 @@ void UWBP_AddCharacterInfo_C::OnInitialized()
 
 void UWBP_AddCharacterInfo_C::OnOpenAnimEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "OnOpenAnimEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.Open
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_AddCharacterInfo.WBP_AddCharacterInfo_C.OpenUnlockPresentation
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EDriverId                               characterId                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FUnlockPresentationItem&   CutsceneItemList                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWBP_AddCharacterInfo_C::Open(EDriverId characterId)
+void UWBP_AddCharacterInfo_C::OpenUnlockPresentation(const struct FUnlockPresentationItem& CutsceneItemList)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "Open");
+	Params::WBP_AddCharacterInfo_C_OpenUnlockPresentation Parms{};
 
-	Params::WBP_AddCharacterInfo_C_Open Parms{};
-
-	Parms.characterId = characterId;
+	Parms.CutsceneItemList = std::move(CutsceneItemList);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -147,10 +114,8 @@ void UWBP_AddCharacterInfo_C::Open(EDriverId characterId)
 
 void UWBP_AddCharacterInfo_C::SetLastCutTexture(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "SetLastCutTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	Params::WBP_AddCharacterInfo_C_SetLastCutTexture Parms{};
 
@@ -168,10 +133,8 @@ void UWBP_AddCharacterInfo_C::SetLastCutTexture(class UTexture2D* Texture)
 
 void UWBP_AddCharacterInfo_C::SetSubWidgetTexture(class UUserWidget* SubWidget, class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "SetSubWidgetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	Params::WBP_AddCharacterInfo_C_SetSubWidgetTexture Parms{};
 
@@ -191,10 +154,8 @@ void UWBP_AddCharacterInfo_C::SetSubWidgetTexture(class UUserWidget* SubWidget, 
 
 void UWBP_AddCharacterInfo_C::SetText(const class FText& TopText, const class FText& BottomText, const class FText& NameText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_C", FnName));
 
 	Params::WBP_AddCharacterInfo_C_SetText Parms{};
 
@@ -205,5 +166,5 @@ void UWBP_AddCharacterInfo_C::SetText(const class FText& TopText, const class FT
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

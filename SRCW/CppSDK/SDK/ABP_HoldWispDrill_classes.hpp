@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_HoldWispDrill.ABP_HoldWispDrill_C
 // 0x0000 (0x1130 - 0x1130)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_HoldWispDrill_C;
 
-}
-
+SDK_NAMESPACE_END

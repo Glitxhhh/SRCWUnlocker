@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_UnionGameInstance.BPI_UnionGameInstance_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_UnionGameInstance_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_UnionGameInstance_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetVCSRevisionNumIF(int32* RevisionNum) const;
 	void GetVCSRevisionStrIF(class FString* VCSStr) const;
@@ -49,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_UnionGameInstance_C;
 
-}
-
+SDK_NAMESPACE_END

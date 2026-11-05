@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPFL_MachineSelect.BPFL_MachineSelect_C.CalcMachineTypeByMachineId
 // 0x0048 (0x0048 - 0x0000)
@@ -371,5 +371,5 @@ public:
 };
 DUMPER7_ASSERTS_BPFL_MachineSelect_C_GetTypeIndexFromRom1stId;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

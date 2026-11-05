@@ -14,18 +14,15 @@
 #include "WBP_Online_PlayerName_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OtherCar_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OtherCar_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OtherCar_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseIntera
 
 void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OtherCar_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OtherCar_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseIntera
 
 void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OwnCar_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OwnCar_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseIntera
 
 void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OwnCar_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "BndEvt__WBP_Online_PlayerName_Btn_MouseInteraction_OwnCar_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +71,8 @@ void UWBP_Online_PlayerName_Btn_C::BndEvt__WBP_Online_PlayerName_Btn_MouseIntera
 
 void UWBP_Online_PlayerName_Btn_C::ChangeActiveWidget(int32 InActiveWidgetIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "ChangeActiveWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_ChangeActiveWidget Parms{};
 
@@ -98,10 +87,8 @@ void UWBP_Online_PlayerName_Btn_C::ChangeActiveWidget(int32 InActiveWidgetIndex)
 
 void UWBP_Online_PlayerName_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_Online_PlayerName_Btn_C::Construct()
 
 void UWBP_Online_PlayerName_Btn_C::ExecuteUbergraph_WBP_Online_PlayerName_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "ExecuteUbergraph_WBP_Online_PlayerName_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Online_PlayerName_Btn_C", "ExecuteUbergraph_WBP_Online_PlayerName_Btn", FuncInfo);
 
 	Params::WBP_Online_PlayerName_Btn_C_ExecuteUbergraph_WBP_Online_PlayerName_Btn Parms{};
 
@@ -132,10 +117,8 @@ void UWBP_Online_PlayerName_Btn_C::ExecuteUbergraph_WBP_Online_PlayerName_Btn(in
 
 void UWBP_Online_PlayerName_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +129,8 @@ void UWBP_Online_PlayerName_Btn_C::OnAcceptKeyPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +141,8 @@ void UWBP_Online_PlayerName_Btn_C::OnBackKeyPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +153,8 @@ void UWBP_Online_PlayerName_Btn_C::OnFaceButtonLeftPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,10 +165,8 @@ void UWBP_Online_PlayerName_Btn_C::OnFaceButtonTopPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -204,10 +179,8 @@ void UWBP_Online_PlayerName_Btn_C::OnFocusAnimStart()
 
 void UWBP_Online_PlayerName_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_OnFocusLost Parms{};
 
@@ -224,10 +197,8 @@ void UWBP_Online_PlayerName_Btn_C::OnFocusLost(const struct FFocusEvent& InFocus
 
 void UWBP_Online_PlayerName_Btn_C::OnFocusLostImpl(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFocusLostImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_OnFocusLostImpl Parms{};
 
@@ -246,10 +217,8 @@ void UWBP_Online_PlayerName_Btn_C::OnFocusLostImpl(const struct FFocusEvent& InF
 
 struct FEventReply UWBP_Online_PlayerName_Btn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_OnFocusReceived Parms{};
 
@@ -271,10 +240,8 @@ struct FEventReply UWBP_Online_PlayerName_Btn_C::OnFocusReceived(const struct FG
 
 struct FEventReply UWBP_Online_PlayerName_Btn_C::OnFocusReceivedImpl(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnFocusReceivedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_OnFocusReceivedImpl Parms{};
 
@@ -292,10 +259,8 @@ struct FEventReply UWBP_Online_PlayerName_Btn_C::OnFocusReceivedImpl(const struc
 
 void UWBP_Online_PlayerName_Btn_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -306,10 +271,8 @@ void UWBP_Online_PlayerName_Btn_C::OnInitialize()
 
 void UWBP_Online_PlayerName_Btn_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -320,10 +283,8 @@ void UWBP_Online_PlayerName_Btn_C::OnLeftStickButtonPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -334,10 +295,8 @@ void UWBP_Online_PlayerName_Btn_C::OnRightShoulderPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +307,8 @@ void UWBP_Online_PlayerName_Btn_C::OnRightStickButtonPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -362,10 +319,8 @@ void UWBP_Online_PlayerName_Btn_C::OnSpecialPressed()
 
 void UWBP_Online_PlayerName_Btn_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -376,10 +331,8 @@ void UWBP_Online_PlayerName_Btn_C::OnUnFocusAnimStart()
 
 void UWBP_Online_PlayerName_Btn_C::PlayAnimationActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "PlayAnimationActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -390,12 +343,30 @@ void UWBP_Online_PlayerName_Btn_C::PlayAnimationActive()
 
 void UWBP_Online_PlayerName_Btn_C::PlayAnimationSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "PlayAnimationSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetArabicVerticalOffset
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UUnionRichTextBlock*              UnionRichTextBlock                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetArabicVerticalOffset(const class FText& InText, class UUnionRichTextBlock* UnionRichTextBlock)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
+
+	Params::WBP_Online_PlayerName_Btn_C_SetArabicVerticalOffset Parms{};
+
+	Parms.InText = std::move(InText);
+	Parms.UnionRichTextBlock = UnionRichTextBlock;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -406,10 +377,8 @@ void UWBP_Online_PlayerName_Btn_C::PlayAnimationSelect()
 
 void UWBP_Online_PlayerName_Btn_C::SetBlockState(EBlockPlayerState InBlockType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetBlockState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetBlockState Parms{};
 
@@ -426,10 +395,8 @@ void UWBP_Online_PlayerName_Btn_C::SetBlockState(EBlockPlayerState InBlockType)
 
 void UWBP_Online_PlayerName_Btn_C::SetContext(const struct FPlayerNameContext& InContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetContext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetContext Parms{};
 
@@ -443,17 +410,17 @@ void UWBP_Online_PlayerName_Btn_C::SetContext(const struct FPlayerNameContext& I
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bIsRival                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsPoweredRival                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival)
+void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival, bool bIsPoweredRival)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetIsRival");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetIsRival Parms{};
 
 	Parms.bIsRival = bIsRival;
+	Parms.bIsPoweredRival = bIsPoweredRival;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -466,10 +433,8 @@ void UWBP_Online_PlayerName_Btn_C::SetIsRival(bool bIsRival)
 
 void UWBP_Online_PlayerName_Btn_C::SetNiceCount(const int32 InNiceCount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetNiceCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetNiceCount Parms{};
 
@@ -486,10 +451,8 @@ void UWBP_Online_PlayerName_Btn_C::SetNiceCount(const int32 InNiceCount)
 
 void UWBP_Online_PlayerName_Btn_C::SetPlatformIcon(const int32& InPlatformId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetPlatformIcon Parms{};
 
@@ -506,10 +469,8 @@ void UWBP_Online_PlayerName_Btn_C::SetPlatformIcon(const int32& InPlatformId)
 
 void UWBP_Online_PlayerName_Btn_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetText Parms{};
 
@@ -526,10 +487,8 @@ void UWBP_Online_PlayerName_Btn_C::SetText(const class FText& InText)
 
 void UWBP_Online_PlayerName_Btn_C::SetVisibilityOwnerIcon(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetVisibilityOwnerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetVisibilityOwnerIcon Parms{};
 
@@ -546,14 +505,48 @@ void UWBP_Online_PlayerName_Btn_C::SetVisibilityOwnerIcon(ESlateVisibility InVis
 
 void UWBP_Online_PlayerName_Btn_C::SetVisibilityPlatformIcon(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "SetVisibilityPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	Params::WBP_Online_PlayerName_Btn_C_SetVisibilityPlatformIcon Parms{};
 
 	Parms.InVisibility = InVisibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetWinCount
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InWinCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetWinCount(int32 InWinCount)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
+
+	Params::WBP_Online_PlayerName_Btn_C_SetWinCount Parms{};
+
+	Parms.InWinCount = InWinCount;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Online_PlayerName_Btn.WBP_Online_PlayerName_Btn_C.SetWinCountVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Online_PlayerName_Btn_C::SetWinCountVisibility(bool IsVisible_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
+
+	Params::WBP_Online_PlayerName_Btn_C_SetWinCountVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -564,13 +557,11 @@ void UWBP_Online_PlayerName_Btn_C::SetVisibilityPlatformIcon(ESlateVisibility In
 
 void UWBP_Online_PlayerName_Btn_C::UnbindAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Online_PlayerName_Btn_C", "UnbindAll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Online_PlayerName_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

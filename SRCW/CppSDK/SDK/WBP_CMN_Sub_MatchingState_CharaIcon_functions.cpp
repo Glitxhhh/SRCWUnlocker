@@ -14,18 +14,15 @@
 #include "WBP_CMN_Sub_MatchingState_CharaIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_MatchingState_CharaIcon.WBP_CMN_Sub_MatchingState_CharaIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_Sub_MatchingState_CharaIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_CharaIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_CharaIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_Sub_MatchingState_CharaIcon_C::Construct()
 
 void UWBP_CMN_Sub_MatchingState_CharaIcon_C::ExecuteUbergraph_WBP_CMN_Sub_MatchingState_CharaIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_CharaIcon_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState_CharaIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_MatchingState_CharaIcon_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState_CharaIcon", FuncInfo);
 
 	Params::WBP_CMN_Sub_MatchingState_CharaIcon_C_ExecuteUbergraph_WBP_CMN_Sub_MatchingState_CharaIcon Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_CMN_Sub_MatchingState_CharaIcon_C::ExecuteUbergraph_WBP_CMN_Sub_Matchi
 
 void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnLoaded_059828894949E7A9162E1F8DAA9DD74A(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_CharaIcon_C", "OnLoaded_059828894949E7A9162E1F8DAA9DD74A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_CharaIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_CharaIcon_C_OnLoaded_059828894949E7A9162E1F8DAA9DD74A Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnLoaded_059828894949E7A9162E1F8DAA
 
 void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnNGCharaIconEvent(bool bIsNGCharaIcon)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_CharaIcon_C", "OnNGCharaIconEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_CharaIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_CharaIcon_C_OnNGCharaIconEvent Parms{};
 
@@ -99,10 +90,8 @@ void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnNGCharaIconEvent(bool bIsNGCharaI
 
 void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnSetUpCharaIconEvent(EDriverId InDriverId, const TSoftObjectPtr<class UTexture2D>& InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_CharaIcon_C", "OnSetUpCharaIconEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_CharaIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_CharaIcon_C_OnSetUpCharaIconEvent Parms{};
 
@@ -112,5 +101,5 @@ void UWBP_CMN_Sub_MatchingState_CharaIcon_C::OnSetUpCharaIconEvent(EDriverId InD
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

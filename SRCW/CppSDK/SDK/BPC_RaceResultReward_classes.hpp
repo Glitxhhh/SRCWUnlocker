@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceResultReward.BPC_RaceResultReward_C
 // 0x0020 (0x0128 - 0x0108)
@@ -25,14 +24,14 @@ class UBPC_RaceResultReward_C final : public URaceResultSequenceStateReward
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class ABP_RaceResultSequence_C*               OwnerSeq;                                          // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWBP_FestaResult_PointReward_C*         FestaResultFlow;                                   // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUnionRaceUIFestaReward*                FestaResultFlow;                                   // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          NomalInited;                                       // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnExitState();
-	void OnUpdateState(float InDeltaTime);
-	void OnInitState();
 	void ExecuteUbergraph_BPC_RaceResultReward(int32 EntryPoint);
+	void OnExitState();
+	void OnInitState();
+	void OnUpdateState(float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceResultReward_C;
 
-}
-
+SDK_NAMESPACE_END

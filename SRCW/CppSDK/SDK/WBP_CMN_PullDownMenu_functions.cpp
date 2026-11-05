@@ -14,18 +14,15 @@
 #include "WBP_CMN_PullDownMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PullDownMenu.WBP_CMN_PullDownMenu_C.Close
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CMN_PullDownMenu_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_CMN_PullDownMenu_C::Close()
 
 void UWBP_CMN_PullDownMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_CMN_PullDownMenu_C::Construct()
 
 void UWBP_CMN_PullDownMenu_C::ExecuteUbergraph_WBP_CMN_PullDownMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "ExecuteUbergraph_WBP_CMN_PullDownMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_PullDownMenu_C", "ExecuteUbergraph_WBP_CMN_PullDownMenu", FuncInfo);
 
 	Params::WBP_CMN_PullDownMenu_C_ExecuteUbergraph_WBP_CMN_PullDownMenu Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_CMN_PullDownMenu_C::ExecuteUbergraph_WBP_CMN_PullDownMenu(int32 EntryP
 
 void UWBP_CMN_PullDownMenu_C::InpAxisEvt_MouseWheelAxis_K2Node_InputAxisEvent_0(float AxisValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "InpAxisEvt_MouseWheelAxis_K2Node_InputAxisEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_InpAxisEvt_MouseWheelAxis_K2Node_InputAxisEvent_0 Parms{};
 
@@ -93,10 +84,8 @@ void UWBP_CMN_PullDownMenu_C::InpAxisEvt_MouseWheelAxis_K2Node_InputAxisEvent_0(
 
 void UWBP_CMN_PullDownMenu_C::LoopIndex(int32 InIndex, int32* OutIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "LoopIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_LoopIndex Parms{};
 
@@ -114,10 +103,8 @@ void UWBP_CMN_PullDownMenu_C::LoopIndex(int32 InIndex, int32* OutIndex)
 
 void UWBP_CMN_PullDownMenu_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +115,8 @@ void UWBP_CMN_PullDownMenu_C::OnAcceptKeyPressed()
 
 void UWBP_CMN_PullDownMenu_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,10 +127,8 @@ void UWBP_CMN_PullDownMenu_C::OnBackKeyPressed()
 
 void UWBP_CMN_PullDownMenu_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +141,8 @@ void UWBP_CMN_PullDownMenu_C::OnDownKeyPressed()
 
 void UWBP_CMN_PullDownMenu_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_OnFocusLost Parms{};
 
@@ -180,10 +161,8 @@ void UWBP_CMN_PullDownMenu_C::OnFocusLost(const struct FFocusEvent& InFocusEvent
 
 struct FEventReply UWBP_CMN_PullDownMenu_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_OnFocusReceived Parms{};
 
@@ -204,10 +183,8 @@ struct FEventReply UWBP_CMN_PullDownMenu_C::OnFocusReceived(const struct FGeomet
 
 void UWBP_CMN_PullDownMenu_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_OnFocusReceivedInternal Parms{};
 
@@ -223,10 +200,8 @@ void UWBP_CMN_PullDownMenu_C::OnFocusReceivedInternal(const struct FGeometry& My
 
 void UWBP_CMN_PullDownMenu_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,10 +212,8 @@ void UWBP_CMN_PullDownMenu_C::OnLeftShoulderPressed()
 
 void UWBP_CMN_PullDownMenu_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +224,8 @@ void UWBP_CMN_PullDownMenu_C::OnRightShoulderPressed()
 
 void UWBP_CMN_PullDownMenu_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -265,10 +236,8 @@ void UWBP_CMN_PullDownMenu_C::OnUpKeyPressed()
 
 void UWBP_CMN_PullDownMenu_C::Open()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +248,8 @@ void UWBP_CMN_PullDownMenu_C::Open()
 
 void UWBP_CMN_PullDownMenu_C::Reset()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "Reset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -295,10 +262,8 @@ void UWBP_CMN_PullDownMenu_C::Reset()
 
 void UWBP_CMN_PullDownMenu_C::Setup(const struct FST_PullDownMenuData& InMenuData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	Params::WBP_CMN_PullDownMenu_C_Setup Parms{};
 
@@ -313,10 +278,8 @@ void UWBP_CMN_PullDownMenu_C::Setup(const struct FST_PullDownMenuData& InMenuDat
 
 void UWBP_CMN_PullDownMenu_C::UpdateItems()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "UpdateItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -327,10 +290,8 @@ void UWBP_CMN_PullDownMenu_C::UpdateItems()
 
 void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_Down_to_Up_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "WidgetAnimationEvt_PullDown_Down_to_Up_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -341,10 +302,8 @@ void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_Down_to_Up_K2Node_Widg
 
 void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_In_K2Node_WidgetAnimationEvent_3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "WidgetAnimationEvt_PullDown_In_K2Node_WidgetAnimationEvent_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -355,10 +314,8 @@ void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_In_K2Node_WidgetAnimat
 
 void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_Out_K2Node_WidgetAnimationEvent_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "WidgetAnimationEvt_PullDown_Out_K2Node_WidgetAnimationEvent_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -369,13 +326,11 @@ void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_Out_K2Node_WidgetAnima
 
 void UWBP_CMN_PullDownMenu_C::WidgetAnimationEvt_PullDown_Up_to_Down_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PullDownMenu_C", "WidgetAnimationEvt_PullDown_Up_to_Down_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PullDownMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

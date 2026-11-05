@@ -14,8 +14,7 @@
 #include "BP_ItemYellowDrillActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ItemYellowDrillActor.BP_ItemYellowDrillActor_C.ExecuteUbergraph_BP_ItemYellowDrillActor
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_ItemYellowDrillActor_C::ExecuteUbergraph_BP_ItemYellowDrillActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "ExecuteUbergraph_BP_ItemYellowDrillActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ItemYellowDrillActor_C", "ExecuteUbergraph_BP_ItemYellowDrillActor", FuncInfo);
 
 	Params::BP_ItemYellowDrillActor_C_ExecuteUbergraph_BP_ItemYellowDrillActor Parms{};
 
@@ -44,10 +41,8 @@ void ABP_ItemYellowDrillActor_C::ExecuteUbergraph_BP_ItemYellowDrillActor(int32 
 
 void ABP_ItemYellowDrillActor_C::OnCountDown(bool bIsPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "OnCountDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemYellowDrillActor_C", FnName));
 
 	Params::BP_ItemYellowDrillActor_C_OnCountDown Parms{};
 
@@ -62,10 +57,8 @@ void ABP_ItemYellowDrillActor_C::OnCountDown(bool bIsPlay)
 
 void ABP_ItemYellowDrillActor_C::OnEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "OnEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemYellowDrillActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void ABP_ItemYellowDrillActor_C::OnEnd()
 
 void ABP_ItemYellowDrillActor_C::OnStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "OnStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemYellowDrillActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void ABP_ItemYellowDrillActor_C::OnStart()
 
 void ABP_ItemYellowDrillActor_C::Timeline_CountDown__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "Timeline CountDown__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemYellowDrillActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,13 +93,11 @@ void ABP_ItemYellowDrillActor_C::Timeline_CountDown__FinishedFunc()
 
 void ABP_ItemYellowDrillActor_C::Timeline_CountDown__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemYellowDrillActor_C", "Timeline CountDown__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemYellowDrillActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

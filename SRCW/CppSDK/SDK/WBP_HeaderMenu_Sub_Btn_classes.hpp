@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_HeaderMenu_Sub_Btn.WBP_HeaderMenu_Sub_Btn_C
 // 0x0078 (0x04F8 - 0x0480)
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_HeaderMenu_Sub_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_ItemGet_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.BndEvt__WBP_ItemGet_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_ItemGet_Window_C::BndEvt__WBP_ItemGet_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "BndEvt__WBP_ItemGet_Window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_ItemGet_Window_C::BndEvt__WBP_ItemGet_Window_MouseInteraction_K2Node_C
 
 void UWBP_ItemGet_Window_C::BPFRewardUtil_OpenWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "BPFRewardUtil_OpenWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_ItemGet_Window_C::BPFRewardUtil_OpenWindow()
 
 void UWBP_ItemGet_Window_C::CloseWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "CloseWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_ItemGet_Window_C::CloseWindow()
 
 void UWBP_ItemGet_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UWBP_ItemGet_Window_C::Construct()
 
 void UWBP_ItemGet_Window_C::CreateItemCountWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "CreateItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +81,8 @@ void UWBP_ItemGet_Window_C::CreateItemCountWidget()
 
 void UWBP_ItemGet_Window_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +95,8 @@ void UWBP_ItemGet_Window_C::Destruct()
 
 void UWBP_ItemGet_Window_C::ExecuteUbergraph_WBP_ItemGet_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "ExecuteUbergraph_WBP_ItemGet_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ItemGet_Window_C", "ExecuteUbergraph_WBP_ItemGet_Window", FuncInfo);
 
 	Params::WBP_ItemGet_Window_C_ExecuteUbergraph_WBP_ItemGet_Window Parms{};
 
@@ -126,10 +111,8 @@ void UWBP_ItemGet_Window_C::ExecuteUbergraph_WBP_ItemGet_Window(int32 EntryPoint
 
 void UWBP_ItemGet_Window_C::FixTextureSize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "FixTextureSize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -145,10 +128,8 @@ void UWBP_ItemGet_Window_C::FixTextureSize()
 
 void UWBP_ItemGet_Window_C::Get_Character_Text(ERewardType InRewardType, EDriverId InDriverId, class FText* OutNameText, class FText* OutRewardTypeText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Get Character Text");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_Get_Character_Text Parms{};
 
@@ -174,10 +155,8 @@ void UWBP_ItemGet_Window_C::Get_Character_Text(ERewardType InRewardType, EDriver
 
 void UWBP_ItemGet_Window_C::Get_Machine_Parts_UI_Data(uint8 rewardType, EMachineId MachineId, struct FMachinePartsUIData* OutMachinePartsUIData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Get Machine Parts UI Data");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_Get_Machine_Parts_UI_Data Parms{};
 
@@ -199,10 +178,8 @@ void UWBP_ItemGet_Window_C::Get_Machine_Parts_UI_Data(uint8 rewardType, EMachine
 
 void UWBP_ItemGet_Window_C::GetDriverData(EDriverId InDriverId, struct FDriverData* OutDriverData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "GetDriverData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_GetDriverData Parms{};
 
@@ -215,6 +192,27 @@ void UWBP_ItemGet_Window_C::GetDriverData(EDriverId InDriverId, struct FDriverDa
 }
 
 
+// Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.GetDuelMedalItemNameText
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InDuelMedalNum                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UWBP_ItemGet_Window_C::GetDuelMedalItemNameText(const int32 InDuelMedalNum)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
+
+	Params::WBP_ItemGet_Window_C_GetDuelMedalItemNameText Parms{};
+
+	Parms.InDuelMedalNum = InDuelMedalNum;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.GetMachineTypeFromMachineId
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -224,10 +222,8 @@ void UWBP_ItemGet_Window_C::GetDriverData(EDriverId InDriverId, struct FDriverDa
 
 void UWBP_ItemGet_Window_C::GetMachineTypeFromMachineId(EMachineId InMachineID, bool* bOutIsEnable, ECarStatusType* OutCarStatusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "GetMachineTypeFromMachineId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_GetMachineTypeFromMachineId Parms{};
 
@@ -250,10 +246,8 @@ void UWBP_ItemGet_Window_C::GetMachineTypeFromMachineId(EMachineId InMachineID, 
 
 class UImage* UWBP_ItemGet_Window_C::GetMachineTypeIconImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "GetMachineTypeIconImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_GetMachineTypeIconImage Parms{};
 
@@ -268,10 +262,8 @@ class UImage* UWBP_ItemGet_Window_C::GetMachineTypeIconImage()
 
 void UWBP_ItemGet_Window_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +274,8 @@ void UWBP_ItemGet_Window_C::OnAcceptKeyPressed()
 
 void UWBP_ItemGet_Window_C::OnAnimationOutFinished_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnAnimationOutFinished_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +286,8 @@ void UWBP_ItemGet_Window_C::OnAnimationOutFinished_Event()
 
 void UWBP_ItemGet_Window_C::OnBaseInAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnBaseInAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,10 +298,8 @@ void UWBP_ItemGet_Window_C::OnBaseInAnimFinished()
 
 void UWBP_ItemGet_Window_C::OnBaseOutAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnBaseOutAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -324,10 +310,8 @@ void UWBP_ItemGet_Window_C::OnBaseOutAnimFinished()
 
 void UWBP_ItemGet_Window_C::OnForcePressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnForcePressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +322,8 @@ void UWBP_ItemGet_Window_C::OnForcePressed()
 
 void UWBP_ItemGet_Window_C::OnInfoInAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OnInfoInAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -352,10 +334,8 @@ void UWBP_ItemGet_Window_C::OnInfoInAnimFinished()
 
 void UWBP_ItemGet_Window_C::OpenWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OpenWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,10 +346,8 @@ void UWBP_ItemGet_Window_C::OpenWindow()
 
 void UWBP_ItemGet_Window_C::OutItemCountWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "OutItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -380,10 +358,8 @@ void UWBP_ItemGet_Window_C::OutItemCountWidget()
 
 void UWBP_ItemGet_Window_C::PlayGetSe()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "PlayGetSe");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -396,10 +372,8 @@ void UWBP_ItemGet_Window_C::PlayGetSe()
 
 void UWBP_ItemGet_Window_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_PreConstruct Parms{};
 
@@ -414,10 +388,8 @@ void UWBP_ItemGet_Window_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_ItemGet_Window_C::SequenceEvent__ENTRYPOINTWBP_ItemGet_Window()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SequenceEvent__ENTRYPOINTWBP_ItemGet_Window");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -432,10 +404,8 @@ void UWBP_ItemGet_Window_C::SequenceEvent__ENTRYPOINTWBP_ItemGet_Window()
 
 void UWBP_ItemGet_Window_C::Set_Gadget_Plate_Empty_from_Plate_Id(EGadgetPlateId InPlateId, bool InRunkUp, bool InLevelUp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Set Gadget Plate Empty from Plate Id");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_Set_Gadget_Plate_Empty_from_Plate_Id Parms{};
 
@@ -452,10 +422,8 @@ void UWBP_ItemGet_Window_C::Set_Gadget_Plate_Empty_from_Plate_Id(EGadgetPlateId 
 
 void UWBP_ItemGet_Window_C::SetAnimationDelegate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetAnimationDelegate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -470,10 +438,8 @@ void UWBP_ItemGet_Window_C::SetAnimationDelegate()
 
 void UWBP_ItemGet_Window_C::SetCharacterDisplay(ERewardType InRewardType, EDriverId InDriverId, TSoftObjectPtr<class UTexture2D> InIconTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetCharacterDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetCharacterDisplay Parms{};
 
@@ -493,10 +459,8 @@ void UWBP_ItemGet_Window_C::SetCharacterDisplay(ERewardType InRewardType, EDrive
 
 void UWBP_ItemGet_Window_C::SetCharacterIcon(EDriverId InDriverId, TSoftObjectPtr<class UTexture2D> InIconTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetCharacterIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetCharacterIcon Parms{};
 
@@ -515,10 +479,8 @@ void UWBP_ItemGet_Window_C::SetCharacterIcon(EDriverId InDriverId, TSoftObjectPt
 
 void UWBP_ItemGet_Window_C::SetDisplayParam(const TArray<struct FRewardGetWindowParam>& InDisplayParamArray, int32 InWindowZOrder)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetDisplayParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetDisplayParam Parms{};
 
@@ -536,10 +498,8 @@ void UWBP_ItemGet_Window_C::SetDisplayParam(const TArray<struct FRewardGetWindow
 
 void UWBP_ItemGet_Window_C::SetDonpaTicketDisplay(int32 Num)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetDonpaTicketDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetDonpaTicketDisplay Parms{};
 
@@ -554,10 +514,8 @@ void UWBP_ItemGet_Window_C::SetDonpaTicketDisplay(int32 Num)
 
 void UWBP_ItemGet_Window_C::SetEmptyDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetEmptyDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -572,10 +530,8 @@ void UWBP_ItemGet_Window_C::SetEmptyDisplay()
 
 void UWBP_ItemGet_Window_C::SetFixedGadgetDisplay(EGadgetId InGadgetId, int32 InNum, TSoftObjectPtr<class UTexture2D> Itemtexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetFixedGadgetDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetFixedGadgetDisplay Parms{};
 
@@ -592,10 +548,8 @@ void UWBP_ItemGet_Window_C::SetFixedGadgetDisplay(EGadgetId InGadgetId, int32 In
 
 void UWBP_ItemGet_Window_C::SetGadgetPlate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetGadgetPlate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -609,10 +563,8 @@ void UWBP_ItemGet_Window_C::SetGadgetPlate()
 
 void UWBP_ItemGet_Window_C::SetHornWidget(ERewardType rewardType, int32 rewardId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetHornWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetHornWidget Parms{};
 
@@ -633,10 +585,8 @@ void UWBP_ItemGet_Window_C::SetHornWidget(ERewardType rewardType, int32 rewardId
 
 void UWBP_ItemGet_Window_C::SetItemCountWidget(int32 InItemNum, int32 InItemGetNum, ERewardType InRewardType, class UTexture2D* InIconTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetItemCountWidget Parms{};
 
@@ -656,10 +606,8 @@ void UWBP_ItemGet_Window_C::SetItemCountWidget(int32 InItemNum, int32 InItemGetN
 
 void UWBP_ItemGet_Window_C::SetItemCountWidgetVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetItemCountWidgetVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetItemCountWidgetVisible Parms{};
 
@@ -679,10 +627,8 @@ void UWBP_ItemGet_Window_C::SetItemCountWidgetVisible(bool bInVisible)
 
 void UWBP_ItemGet_Window_C::SetItemIcon(ERewardType InRewardType, int32 InRewardId, TSoftObjectPtr<class UTexture2D> InIconTexture, class UImage* InImageWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetItemIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetItemIcon Parms{};
 
@@ -702,10 +648,8 @@ void UWBP_ItemGet_Window_C::SetItemIcon(ERewardType InRewardType, int32 InReward
 
 void UWBP_ItemGet_Window_C::SetItemIconActiveIndex(ERewardType InRewardType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetItemIconActiveIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetItemIconActiveIndex Parms{};
 
@@ -722,10 +666,8 @@ void UWBP_ItemGet_Window_C::SetItemIconActiveIndex(ERewardType InRewardType)
 
 void UWBP_ItemGet_Window_C::SetItemName(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetItemName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetItemName Parms{};
 
@@ -742,10 +684,8 @@ void UWBP_ItemGet_Window_C::SetItemName(const class FText& InText)
 
 void UWBP_ItemGet_Window_C::SetMachineDisplay(EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetMachineDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetMachineDisplay Parms{};
 
@@ -763,10 +703,8 @@ void UWBP_ItemGet_Window_C::SetMachineDisplay(EMachineId InMachineID)
 
 void UWBP_ItemGet_Window_C::SetMachineIcon(bool bInMachineEnable, bool bMatchSize)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetMachineIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetMachineIcon Parms{};
 
@@ -786,10 +724,8 @@ void UWBP_ItemGet_Window_C::SetMachineIcon(bool bInMachineEnable, bool bMatchSiz
 
 void UWBP_ItemGet_Window_C::SetMachinePartsDisplay(uint8 rewardType, EMachineId MachineId, TSoftObjectPtr<class UTexture2D> Itemtexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetMachinePartsDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetMachinePartsDisplay Parms{};
 
@@ -809,10 +745,8 @@ void UWBP_ItemGet_Window_C::SetMachinePartsDisplay(uint8 rewardType, EMachineId 
 
 void UWBP_ItemGet_Window_C::SetMachinePartsIcon(bool bInMachineEnable, bool bMatchSize)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetMachinePartsIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetMachinePartsIcon Parms{};
 
@@ -830,10 +764,8 @@ void UWBP_ItemGet_Window_C::SetMachinePartsIcon(bool bInMachineEnable, bool bMat
 
 void UWBP_ItemGet_Window_C::SetMachineTypeIconVisibility(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetMachineTypeIconVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetMachineTypeIconVisibility Parms{};
 
@@ -848,10 +780,8 @@ void UWBP_ItemGet_Window_C::SetMachineTypeIconVisibility(ESlateVisibility InVisi
 
 void UWBP_ItemGet_Window_C::SetRaceCountReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetRaceCountReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -866,10 +796,8 @@ void UWBP_ItemGet_Window_C::SetRaceCountReward()
 
 void UWBP_ItemGet_Window_C::SetReward(ERewardType rewardType, int32 rewardId, class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetReward Parms{};
 
@@ -888,10 +816,8 @@ void UWBP_ItemGet_Window_C::SetReward(ERewardType rewardType, int32 rewardId, cl
 
 void UWBP_ItemGet_Window_C::SetRewardTypeText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetRewardTypeText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetRewardTypeText Parms{};
 
@@ -908,10 +834,8 @@ void UWBP_ItemGet_Window_C::SetRewardTypeText(const class FText& InText)
 
 void UWBP_ItemGet_Window_C::SetRivalRewardEffectVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetRivalRewardEffectVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetRivalRewardEffectVisible Parms{};
 
@@ -924,19 +848,17 @@ void UWBP_ItemGet_Window_C::SetRivalRewardEffectVisible(bool bInVisible)
 // Function WBP_ItemGet_Window.WBP_ItemGet_Window_C.SetStickerWidget
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   stickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   StickerId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TSoftObjectPtr<class UTexture2D>        InIconTexture                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_ItemGet_Window_C::SetStickerWidget(int32 stickerId, TSoftObjectPtr<class UTexture2D> InIconTexture)
+void UWBP_ItemGet_Window_C::SetStickerWidget(int32 StickerId, TSoftObjectPtr<class UTexture2D> InIconTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetStickerWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetStickerWidget Parms{};
 
-	Parms.stickerId = stickerId;
+	Parms.StickerId = StickerId;
 	Parms.InIconTexture = InIconTexture;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -948,10 +870,8 @@ void UWBP_ItemGet_Window_C::SetStickerWidget(int32 stickerId, TSoftObjectPtr<cla
 
 void UWBP_ItemGet_Window_C::SetTimeTrialCompleteReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetTimeTrialCompleteReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -965,10 +885,8 @@ void UWBP_ItemGet_Window_C::SetTimeTrialCompleteReward()
 
 void UWBP_ItemGet_Window_C::SetTitleWidget(ERewardType rewardType, int32 rewardId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "SetTitleWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_SetTitleWidget Parms{};
 
@@ -984,10 +902,8 @@ void UWBP_ItemGet_Window_C::SetTitleWidget(ERewardType rewardType, int32 rewardI
 
 void UWBP_ItemGet_Window_C::StartNextDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "StartNextDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1001,10 +917,8 @@ void UWBP_ItemGet_Window_C::StartNextDisplay()
 
 void UWBP_ItemGet_Window_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_Tick Parms{};
 
@@ -1020,10 +934,8 @@ void UWBP_ItemGet_Window_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 void UWBP_ItemGet_Window_C::UpdateDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "UpdateDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1036,10 +948,8 @@ void UWBP_ItemGet_Window_C::UpdateDisplay()
 
 void UWBP_ItemGet_Window_C::UpdateDisplayImpliment(const struct FRewardGetWindowParam& RewardGetWindowParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "UpdateDisplayImpliment");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	Params::WBP_ItemGet_Window_C_UpdateDisplayImpliment Parms{};
 
@@ -1054,13 +964,11 @@ void UWBP_ItemGet_Window_C::UpdateDisplayImpliment(const struct FRewardGetWindow
 
 void UWBP_ItemGet_Window_C::UpdateTitleFontSize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemGet_Window_C", "UpdateTitleFontSize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ItemGet_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

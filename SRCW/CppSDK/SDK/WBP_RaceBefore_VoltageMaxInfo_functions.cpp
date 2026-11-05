@@ -14,18 +14,15 @@
 #include "WBP_RaceBefore_VoltageMaxInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::Construct()
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_RaceBefore_VoltageMaxInfo_C", "ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo", FuncInfo);
 
 	Params::WBP_RaceBefore_VoltageMaxInfo_C_ExecuteUbergraph_WBP_RaceBefore_VoltageMaxInfo Parms{};
 
@@ -56,10 +51,32 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::ExecuteUbergraph_WBP_RaceBefore_VoltageMa
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::OnOutAnimFinished()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "OnOutAnimFinished");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetUpChanceUpImage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_VoltageMaxInfo_C::SetUpChanceUpImage()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_RaceBefore_VoltageMaxInfo.WBP_RaceBefore_VoltageMaxInfo_C.SetupDuelCompeChanceUpText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_RaceBefore_VoltageMaxInfo_C::SetupDuelCompeChanceUpText()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +87,8 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::OnOutAnimFinished()
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::SetupLegendCompeChanupText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "SetupLegendCompeChanupText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +99,8 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::SetupLegendCompeChanupText()
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::SetupRankMatchChanupText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "SetupRankMatchChanupText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +114,8 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::SetupRankMatchChanupText()
 
 void UWBP_RaceBefore_VoltageMaxInfo_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_VoltageMaxInfo_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_VoltageMaxInfo_C", FnName));
 
 	Params::WBP_RaceBefore_VoltageMaxInfo_C_Tick Parms{};
 
@@ -114,5 +125,5 @@ void UWBP_RaceBefore_VoltageMaxInfo_C::Tick(const struct FGeometry& MyGeometry, 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

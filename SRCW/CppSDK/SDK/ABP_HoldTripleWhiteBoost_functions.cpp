@@ -14,8 +14,7 @@
 #include "ABP_HoldTripleWhiteBoost_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldTripleWhiteBoost.ABP_HoldTripleWhiteBoost_C.GetBlendTime
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldTripleWhiteBoost_C::GetBlendTime(double* newParam) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldTripleWhiteBoost_C", "GetBlendTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldTripleWhiteBoost_C", FnName));
 
 	Params::ABP_HoldTripleWhiteBoost_C_GetBlendTime Parms{};
 
@@ -37,5 +34,5 @@ void UABP_HoldTripleWhiteBoost_C::GetBlendTime(double* newParam) const
 		*newParam = Parms.newParam;
 }
 
-}
 
+SDK_NAMESPACE_END

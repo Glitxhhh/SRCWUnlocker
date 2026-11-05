@@ -13,11 +13,10 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_CMN_Window.WBP_MachineCustom_CMN_Window_C
-// 0x0000 (0x0328 - 0x0328)
+// 0x0000 (0x0348 - 0x0348)
 class UWBP_MachineCustom_CMN_Window_C final : public UMachineCustomCommonWindow
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_CMN_Window_C;
 
-}
-
+SDK_NAMESPACE_END

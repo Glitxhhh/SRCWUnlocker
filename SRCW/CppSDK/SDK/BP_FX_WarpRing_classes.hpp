@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FX_WarpRing.BP_FX_WarpRing_C
 // 0x0010 (0x02A0 - 0x0290)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_FX_WarpRing_C;
 
-}
-
+SDK_NAMESPACE_END

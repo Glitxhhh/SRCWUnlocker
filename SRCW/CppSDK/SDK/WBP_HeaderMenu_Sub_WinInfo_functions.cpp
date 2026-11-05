@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_Sub_WinInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_WinInfo.WBP_HeaderMenu_Sub_WinInfo_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_HeaderMenu_Sub_WinInfo_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_WinInfo_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_WinInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,16 +35,26 @@ void UWBP_HeaderMenu_Sub_WinInfo_C::Construct()
 
 void UWBP_HeaderMenu_Sub_WinInfo_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_WinInfo_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_Sub_WinInfo_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo", FuncInfo);
 
 	Params::WBP_HeaderMenu_Sub_WinInfo_C_ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_WinInfo.WBP_HeaderMenu_Sub_WinInfo_C.PlayWinCountsInAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HeaderMenu_Sub_WinInfo_C::PlayWinCountsInAnimation()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_WinInfo_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -58,10 +65,8 @@ void UWBP_HeaderMenu_Sub_WinInfo_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_WinInfo(
 
 void UWBP_HeaderMenu_Sub_WinInfo_C::SetWinCounts(int32 InWinCounts)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_WinInfo_C", "SetWinCounts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_WinInfo_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_WinInfo_C_SetWinCounts Parms{};
 
@@ -70,5 +75,5 @@ void UWBP_HeaderMenu_Sub_WinInfo_C::SetWinCounts(int32 InWinCounts)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

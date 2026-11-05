@@ -14,8 +14,7 @@
 #include "BP_RecoveryRing_Exit_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RecoveryRing_Exit.BP_RecoveryRing_Exit_C.ExecuteUbergraph_BP_RecoveryRing_Exit
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_RecoveryRing_Exit_C::ExecuteUbergraph_BP_RecoveryRing_Exit(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RecoveryRing_Exit_C", "ExecuteUbergraph_BP_RecoveryRing_Exit");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RecoveryRing_Exit_C", "ExecuteUbergraph_BP_RecoveryRing_Exit", FuncInfo);
 
 	Params::BP_RecoveryRing_Exit_C_ExecuteUbergraph_BP_RecoveryRing_Exit Parms{};
 
@@ -42,10 +39,8 @@ void ABP_RecoveryRing_Exit_C::ExecuteUbergraph_BP_RecoveryRing_Exit(int32 EntryP
 
 void ABP_RecoveryRing_Exit_C::FinishAppearTimeline_BP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RecoveryRing_Exit_C", "FinishAppearTimeline_BP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RecoveryRing_Exit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,13 +51,11 @@ void ABP_RecoveryRing_Exit_C::FinishAppearTimeline_BP()
 
 void ABP_RecoveryRing_Exit_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RecoveryRing_Exit_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RecoveryRing_Exit_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

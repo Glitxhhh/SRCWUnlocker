@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_ColorPicker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ColorPicker.WBP_MachineCustom_Sub_ColorPicker_C.Bind
 // (Private, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::Bind()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "Bind");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +36,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::Bind()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ButtonsPanel0_OnDecision(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ButtonsPanel0_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_ButtonsPanel0_OnDecision Parms{};
 
@@ -61,10 +56,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ButtonsPanel0_OnDecision(class UUnion
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ButtonsPanel0_OnFocus(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ButtonsPanel0_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_ButtonsPanel0_OnFocus Parms{};
 
@@ -80,10 +73,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ButtonsPanel0_OnFocus(class UUnionUIB
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ClosePullDownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ClosePullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -94,10 +85,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ClosePullDownMenu()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +97,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::Construct()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::CreatePanel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "CreatePanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::CreatePanel()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_ColorPicker_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_ExecuteUbergraph_WBP_MachineCustom_Sub_ColorPicker Parms{};
 
@@ -142,10 +127,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ExecuteUbergraph_WBP_MachineCustom_Su
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::HidePullDownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "HidePullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,10 +139,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::HidePullDownMenu()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::OpenPullDownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "OpenPullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,10 +151,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::OpenPullDownMenu()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "PullDownMenu_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -184,10 +163,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnCancel()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "PullDownMenu_OnClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +177,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnClose()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnItemFocused(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "PullDownMenu_OnItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_PullDownMenu_OnItemFocused Parms{};
 
@@ -220,10 +195,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnItemFocused(const stru
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnItemSelected(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "PullDownMenu_OnItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_PullDownMenu_OnItemSelected Parms{};
 
@@ -238,10 +211,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::PullDownMenu_OnItemSelected(const str
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ResetPullDownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ResetPullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -256,10 +227,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ResetPullDownMenu()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::Scene_OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "Scene_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_Scene_OnCancel Parms{};
 
@@ -278,10 +247,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::Scene_OnCancel(class UUnionUIButtonBa
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetInitialFocus(class APlayerController* InPlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetInitialFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetInitialFocus Parms{};
 
@@ -298,10 +265,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetInitialFocus(class APlayerControll
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetIsPlaySound(bool bIsPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetIsPlaySound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetIsPlaySound Parms{};
 
@@ -318,10 +283,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetIsPlaySound(bool bIsPlay)
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::Setup(const struct FST_ColorDetailWindowData& InWindowData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_Setup Parms{};
 
@@ -338,10 +301,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::Setup(const struct FST_ColorDetailWin
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetupPullDownMenu(const struct FST_PullDownMenuData& InMenuData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetupPullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetupPullDownMenu Parms{};
 
@@ -358,10 +319,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetupPullDownMenu(const struct FST_Pu
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisibleCursor(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetVisibleCursor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetVisibleCursor Parms{};
 
@@ -378,10 +337,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisibleCursor(bool IsVisible_0)
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisibleOutOfContentButton(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetVisibleOutOfContentButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetVisibleOutOfContentButton Parms{};
 
@@ -398,10 +355,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisibleOutOfContentButton(bool IsV
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisiblePullDownMenu(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SetVisiblePullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SetVisiblePullDownMenu Parms{};
 
@@ -416,10 +371,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SetVisiblePullDownMenu(bool IsVisible
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::ShowPullDownMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "ShowPullDownMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -432,10 +385,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::ShowPullDownMenu()
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnDecision(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SurfaceButton_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SurfaceButton_OnDecision Parms{};
 
@@ -452,10 +403,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnDecision(class UUnion
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnFocus(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SurfaceButton_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SurfaceButton_OnFocus Parms{};
 
@@ -472,10 +421,8 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnFocus(class UUnionUIB
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnUnFocus(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "SurfaceButton_OnUnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_ColorPicker_C_SurfaceButton_OnUnFocus Parms{};
 
@@ -490,13 +437,11 @@ void UWBP_MachineCustom_Sub_ColorPicker_C::SurfaceButton_OnUnFocus(class UUnionU
 
 void UWBP_MachineCustom_Sub_ColorPicker_C::UpdateSurfaceButtonText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ColorPicker_C", "UpdateSurfaceButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ColorPicker_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

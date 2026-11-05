@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_HoldItemVAT.BP_HoldItemVAT_C
 // 0x0020 (0x03F8 - 0x03D8)
@@ -57,5 +56,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_HoldItemVAT_C;
 
-}
-
+SDK_NAMESPACE_END

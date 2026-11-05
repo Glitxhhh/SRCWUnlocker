@@ -14,18 +14,15 @@
 #include "WBP_TimeTrial_Sub_Result_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_Sub_Result.WBP_TimeTrial_Sub_Result_C.AnimationSEPlay
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_TimeTrial_Sub_Result_C::AnimationSEPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "AnimationSEPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_TimeTrial_Sub_Result_C::AnimationSEPlay()
 
 void UWBP_TimeTrial_Sub_Result_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_TimeTrial_Sub_Result_C::Construct()
 
 void UWBP_TimeTrial_Sub_Result_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_TimeTrial_Sub_Result_C::Destruct()
 
 void UWBP_TimeTrial_Sub_Result_C::ExecuteUbergraph_WBP_TimeTrial_Sub_Result(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_Result");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_Sub_Result_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_Result", FuncInfo);
 
 	Params::WBP_TimeTrial_Sub_Result_C_ExecuteUbergraph_WBP_TimeTrial_Sub_Result Parms{};
 
@@ -84,10 +75,8 @@ void UWBP_TimeTrial_Sub_Result_C::ExecuteUbergraph_WBP_TimeTrial_Sub_Result(int3
 
 void UWBP_TimeTrial_Sub_Result_C::Finished_1146A30A4206D37831ADEA9CD38945AF()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Finished_1146A30A4206D37831ADEA9CD38945AF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_TimeTrial_Sub_Result_C::Finished_1146A30A4206D37831ADEA9CD38945AF()
 
 void UWBP_TimeTrial_Sub_Result_C::Finished_5F2516BC4648B96ECC32A396CB3CBD52()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Finished_5F2516BC4648B96ECC32A396CB3CBD52");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_TimeTrial_Sub_Result_C::Finished_5F2516BC4648B96ECC32A396CB3CBD52()
 
 void UWBP_TimeTrial_Sub_Result_C::Finished_6385D5B74A4CB561C1F6A39E2D82B072()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Finished_6385D5B74A4CB561C1F6A39E2D82B072");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_TimeTrial_Sub_Result_C::Finished_6385D5B74A4CB561C1F6A39E2D82B072()
 
 void UWBP_TimeTrial_Sub_Result_C::Finished_F17DA2B64E39F66B6F1146AFC1B331FF()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "Finished_F17DA2B64E39F66B6F1146AFC1B331FF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -143,10 +126,8 @@ void UWBP_TimeTrial_Sub_Result_C::Finished_F17DA2B64E39F66B6F1146AFC1B331FF()
 
 void UWBP_TimeTrial_Sub_Result_C::GetTextRank(ETimeTrialClearRankId InRank, class FText* RankText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "GetTextRank");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_Result_C_GetTextRank Parms{};
 
@@ -164,10 +145,8 @@ void UWBP_TimeTrial_Sub_Result_C::GetTextRank(ETimeTrialClearRankId InRank, clas
 
 void UWBP_TimeTrial_Sub_Result_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,10 +157,8 @@ void UWBP_TimeTrial_Sub_Result_C::OnAcceptKeyPressed()
 
 void UWBP_TimeTrial_Sub_Result_C::OnFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "OnFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,10 +171,8 @@ void UWBP_TimeTrial_Sub_Result_C::OnFullScreenMouseClick()
 
 void UWBP_TimeTrial_Sub_Result_C::OnLoaded_CA088C7945633BF8179E10AB5B1C85B0(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "OnLoaded_CA088C7945633BF8179E10AB5B1C85B0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_Result_C_OnLoaded_CA088C7945633BF8179E10AB5B1C85B0 Parms{};
 
@@ -212,10 +187,8 @@ void UWBP_TimeTrial_Sub_Result_C::OnLoaded_CA088C7945633BF8179E10AB5B1C85B0(clas
 
 void UWBP_TimeTrial_Sub_Result_C::PlayTimeTrialInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "PlayTimeTrialInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -226,10 +199,8 @@ void UWBP_TimeTrial_Sub_Result_C::PlayTimeTrialInAnim()
 
 void UWBP_TimeTrial_Sub_Result_C::SequenceEvent__ENTRYPOINTWBP_TimeTrial_Sub_Result()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "SequenceEvent__ENTRYPOINTWBP_TimeTrial_Sub_Result");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +211,8 @@ void UWBP_TimeTrial_Sub_Result_C::SequenceEvent__ENTRYPOINTWBP_TimeTrial_Sub_Res
 
 void UWBP_TimeTrial_Sub_Result_C::SetData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "SetData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,10 +223,8 @@ void UWBP_TimeTrial_Sub_Result_C::SetData()
 
 void UWBP_TimeTrial_Sub_Result_C::SetNowMedalCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "SetNowMedalCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -268,10 +235,8 @@ void UWBP_TimeTrial_Sub_Result_C::SetNowMedalCount()
 
 void UWBP_TimeTrial_Sub_Result_C::SetPrevMedalCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "SetPrevMedalCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +247,8 @@ void UWBP_TimeTrial_Sub_Result_C::SetPrevMedalCount()
 
 void UWBP_TimeTrial_Sub_Result_C::SetTimeTrialClearRank()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "SetTimeTrialClearRank");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,13 +259,11 @@ void UWBP_TimeTrial_Sub_Result_C::SetTimeTrialClearRank()
 
 void UWBP_TimeTrial_Sub_Result_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_Result_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_Result_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

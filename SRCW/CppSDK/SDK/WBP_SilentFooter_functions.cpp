@@ -14,18 +14,15 @@
 #include "WBP_SilentFooter_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_SilentFooter.WBP_SilentFooter_C.BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Nod
 
 void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Nod
 
 void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_SilentFooter_C::BndEvt__WBP_SilentFooter_MouseInteraction_Cancel_K2Nod
 
 void UWBP_SilentFooter_C::ExecuteUbergraph_WBP_SilentFooter(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "ExecuteUbergraph_WBP_SilentFooter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_SilentFooter_C", "ExecuteUbergraph_WBP_SilentFooter", FuncInfo);
 
 	Params::WBP_SilentFooter_C_ExecuteUbergraph_WBP_SilentFooter Parms{};
 
@@ -84,10 +75,8 @@ void UWBP_SilentFooter_C::ExecuteUbergraph_WBP_SilentFooter(int32 EntryPoint)
 
 void UWBP_SilentFooter_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_SilentFooter_C::OnAcceptKeyPressed()
 
 void UWBP_SilentFooter_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -118,10 +105,8 @@ void UWBP_SilentFooter_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerCont
 
 void UWBP_SilentFooter_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +119,8 @@ void UWBP_SilentFooter_C::OnAcceptKeyReleased()
 
 void UWBP_SilentFooter_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -152,10 +135,8 @@ void UWBP_SilentFooter_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerCon
 
 void UWBP_SilentFooter_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +149,8 @@ void UWBP_SilentFooter_C::OnBackKeyPressed()
 
 void UWBP_SilentFooter_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -186,10 +165,8 @@ void UWBP_SilentFooter_C::OnBackKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_SilentFooter_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,10 +179,8 @@ void UWBP_SilentFooter_C::OnBackKeyReleased()
 
 void UWBP_SilentFooter_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -220,10 +195,8 @@ void UWBP_SilentFooter_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_SilentFooter_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,10 +209,8 @@ void UWBP_SilentFooter_C::OnDownKeyPressed()
 
 void UWBP_SilentFooter_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -254,10 +225,8 @@ void UWBP_SilentFooter_C::OnDownKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_SilentFooter_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -270,10 +239,8 @@ void UWBP_SilentFooter_C::OnDownKeyReleased()
 
 void UWBP_SilentFooter_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -288,10 +255,8 @@ void UWBP_SilentFooter_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_SilentFooter_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -304,10 +269,8 @@ void UWBP_SilentFooter_C::OnFaceButtonLeftPressed()
 
 void UWBP_SilentFooter_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -322,10 +285,8 @@ void UWBP_SilentFooter_C::OnFaceButtonLeftPressedWithPlayerId(const int32& Playe
 
 void UWBP_SilentFooter_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +299,8 @@ void UWBP_SilentFooter_C::OnFaceButtonLeftReleased()
 
 void UWBP_SilentFooter_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -356,10 +315,8 @@ void UWBP_SilentFooter_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& Play
 
 void UWBP_SilentFooter_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -372,10 +329,8 @@ void UWBP_SilentFooter_C::OnFaceButtonTopPressed()
 
 void UWBP_SilentFooter_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -390,10 +345,8 @@ void UWBP_SilentFooter_C::OnFaceButtonTopPressedWithPlayerId(const int32& Player
 
 void UWBP_SilentFooter_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -406,10 +359,8 @@ void UWBP_SilentFooter_C::OnFaceButtonTopReleased()
 
 void UWBP_SilentFooter_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -426,10 +377,8 @@ void UWBP_SilentFooter_C::OnFaceButtonTopReleasedWithPlayerId(const int32& Playe
 
 void UWBP_SilentFooter_C::OnHovered(class UButton* HoveredObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnHovered");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnHovered Parms{};
 
@@ -444,10 +393,8 @@ void UWBP_SilentFooter_C::OnHovered(class UButton* HoveredObject)
 
 void UWBP_SilentFooter_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -458,10 +405,8 @@ void UWBP_SilentFooter_C::OnInitialized()
 
 void UWBP_SilentFooter_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -474,10 +419,8 @@ void UWBP_SilentFooter_C::OnLeftKeyPressed()
 
 void UWBP_SilentFooter_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -492,10 +435,8 @@ void UWBP_SilentFooter_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_SilentFooter_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -508,10 +449,8 @@ void UWBP_SilentFooter_C::OnLeftKeyReleased()
 
 void UWBP_SilentFooter_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -526,10 +465,8 @@ void UWBP_SilentFooter_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_SilentFooter_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -542,10 +479,8 @@ void UWBP_SilentFooter_C::OnLeftShoulderPressed()
 
 void UWBP_SilentFooter_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -560,10 +495,8 @@ void UWBP_SilentFooter_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerC
 
 void UWBP_SilentFooter_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -576,10 +509,8 @@ void UWBP_SilentFooter_C::OnLeftShoulderReleased()
 
 void UWBP_SilentFooter_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -596,10 +527,8 @@ void UWBP_SilentFooter_C::OnLeftShoulderReleasedWithPlayerId(const int32& Player
 
 void UWBP_SilentFooter_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftStickAxis Parms{};
 
@@ -617,10 +546,8 @@ void UWBP_SilentFooter_C::OnLeftStickAxis(const struct FVector2D& Value)
 
 void UWBP_SilentFooter_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -636,10 +563,8 @@ void UWBP_SilentFooter_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Va
 
 void UWBP_SilentFooter_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -652,10 +577,8 @@ void UWBP_SilentFooter_C::OnLeftStickButtonPressed()
 
 void UWBP_SilentFooter_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -670,10 +593,8 @@ void UWBP_SilentFooter_C::OnLeftStickButtonPressedWithPlayerId(const int32& Play
 
 void UWBP_SilentFooter_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -686,10 +607,8 @@ void UWBP_SilentFooter_C::OnLeftStickButtonReleased()
 
 void UWBP_SilentFooter_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -704,10 +623,8 @@ void UWBP_SilentFooter_C::OnLeftStickButtonReleasedWithPlayerId(const int32& Pla
 
 void UWBP_SilentFooter_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -720,10 +637,8 @@ void UWBP_SilentFooter_C::OnRightKeyPressed()
 
 void UWBP_SilentFooter_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -738,10 +653,8 @@ void UWBP_SilentFooter_C::OnRightKeyPressedWithPlayerId(const int32& PlayerContr
 
 void UWBP_SilentFooter_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -754,10 +667,8 @@ void UWBP_SilentFooter_C::OnRightKeyReleased()
 
 void UWBP_SilentFooter_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -772,10 +683,8 @@ void UWBP_SilentFooter_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerCont
 
 void UWBP_SilentFooter_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -788,10 +697,8 @@ void UWBP_SilentFooter_C::OnRightShoulderPressed()
 
 void UWBP_SilentFooter_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -806,10 +713,8 @@ void UWBP_SilentFooter_C::OnRightShoulderPressedWithPlayerId(const int32& Player
 
 void UWBP_SilentFooter_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -822,10 +727,8 @@ void UWBP_SilentFooter_C::OnRightShoulderReleased()
 
 void UWBP_SilentFooter_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -842,10 +745,8 @@ void UWBP_SilentFooter_C::OnRightShoulderReleasedWithPlayerId(const int32& Playe
 
 void UWBP_SilentFooter_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightStickAxis Parms{};
 
@@ -863,10 +764,8 @@ void UWBP_SilentFooter_C::OnRightStickAxis(const struct FVector2D& Value)
 
 void UWBP_SilentFooter_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -882,10 +781,8 @@ void UWBP_SilentFooter_C::OnRightStickAxisWithPlayerId(const struct FVector2D& V
 
 void UWBP_SilentFooter_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -898,10 +795,8 @@ void UWBP_SilentFooter_C::OnRightStickButtonPressed()
 
 void UWBP_SilentFooter_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -916,10 +811,8 @@ void UWBP_SilentFooter_C::OnRightStickButtonPressedWithPlayerId(const int32& Pla
 
 void UWBP_SilentFooter_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -932,10 +825,8 @@ void UWBP_SilentFooter_C::OnRightStickButtonReleased()
 
 void UWBP_SilentFooter_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -950,10 +841,8 @@ void UWBP_SilentFooter_C::OnRightStickButtonReleasedWithPlayerId(const int32& Pl
 
 void UWBP_SilentFooter_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -966,10 +855,8 @@ void UWBP_SilentFooter_C::OnSpecialPressed()
 
 void UWBP_SilentFooter_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -984,10 +871,8 @@ void UWBP_SilentFooter_C::OnSpecialPressedWithPlayerId(const int32& PlayerContro
 
 void UWBP_SilentFooter_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1000,10 +885,8 @@ void UWBP_SilentFooter_C::OnSpecialReleased()
 
 void UWBP_SilentFooter_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -1018,10 +901,8 @@ void UWBP_SilentFooter_C::OnSpecialReleasedWithPlayerId(const int32& PlayerContr
 
 void UWBP_SilentFooter_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1034,10 +915,8 @@ void UWBP_SilentFooter_C::OnUpKeyPressed()
 
 void UWBP_SilentFooter_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -1052,10 +931,8 @@ void UWBP_SilentFooter_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControll
 
 void UWBP_SilentFooter_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1068,10 +945,8 @@ void UWBP_SilentFooter_C::OnUpKeyReleased()
 
 void UWBP_SilentFooter_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1088,10 +963,8 @@ void UWBP_SilentFooter_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControl
 
 void UWBP_SilentFooter_C::SetIconGauge(float InGaugeParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "SetIconGauge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_SetIconGauge Parms{};
 
@@ -1108,10 +981,8 @@ void UWBP_SilentFooter_C::SetIconGauge(float InGaugeParam)
 
 void UWBP_SilentFooter_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_SetText Parms{};
 
@@ -1129,10 +1000,8 @@ void UWBP_SilentFooter_C::SetText(const class FText& InText)
 
 void UWBP_SilentFooter_C::SetupButtonIcon(EUIButtonIconType IconType, int32 IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "SetupButtonIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_SetupButtonIcon Parms{};
 
@@ -1150,10 +1019,8 @@ void UWBP_SilentFooter_C::SetupButtonIcon(EUIButtonIconType IconType, int32 Icon
 
 void UWBP_SilentFooter_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SilentFooter_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_SilentFooter_C", FnName));
 
 	Params::WBP_SilentFooter_C_SilentFocusReady Parms{};
 
@@ -1162,5 +1029,5 @@ void UWBP_SilentFooter_C::SilentFocusReady(bool bOnce)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

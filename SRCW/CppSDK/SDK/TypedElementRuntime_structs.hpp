@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum TypedElementRuntime.ETypedElementChildInclusionMethod
 // NumValues: 0x0004
@@ -32,17 +31,6 @@ enum class ETypedElementSelectionMethod : uint8
 	Secondary                                = 1,
 	ETypedElementSelectionMethod_MAX         = 2,
 };
-
-// ScriptStruct TypedElementRuntime.TypedElementSelectionNormalizationOptions
-// 0x000C (0x000C - 0x0000)
-struct alignas(0x04) FTypedElementSelectionNormalizationOptions final
-{
-public:
-	bool                                          bExpandGroups;                                     // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bFollowAttachment;                                 // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2[0xA];                                        // 0x0002(0x000A)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementSelectionNormalizationOptions;
 
 // ScriptStruct TypedElementRuntime.TypedElementSelectionOptions
 // 0x0010 (0x0010 - 0x0000)
@@ -69,6 +57,17 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementSelectionSetState;
 
+// ScriptStruct TypedElementRuntime.TypedElementSelectionNormalizationOptions
+// 0x000C (0x000C - 0x0000)
+struct alignas(0x04) FTypedElementSelectionNormalizationOptions final
+{
+public:
+	bool                                          bExpandGroups;                                     // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bFollowAttachment;                                 // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2[0xA];                                        // 0x0002(0x000A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTypedElementSelectionNormalizationOptions;
+
 // ScriptStruct TypedElementRuntime.TypedElementIsSelectedOptions
 // 0x000C (0x000C - 0x0000)
 struct alignas(0x04) FTypedElementIsSelectedOptions final
@@ -79,5 +78,4 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementIsSelectedOptions;
 
-}
-
+SDK_NAMESPACE_END

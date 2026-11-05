@@ -13,8 +13,7 @@
 #include "AudioExtensions_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class WinDualShock2.DualShock2ExternalEndpointSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -90,5 +89,4 @@ public:
 };
 DUMPER7_ASSERTS_UDualShock2SpatializationSettings;
 
-}
-
+SDK_NAMESPACE_END

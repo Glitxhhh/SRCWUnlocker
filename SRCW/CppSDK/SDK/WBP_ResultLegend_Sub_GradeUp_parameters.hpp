@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_ResultLegend_Sub_GradeUp.WBP_ResultLegend_Sub_GradeUp_C.ExecuteUbergraph_WBP_ResultLegend_Sub_GradeUp
 // 0x0088 (0x0088 - 0x0000)
@@ -60,5 +60,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_ResultLegend_Sub_GradeUp_C_SetupRankUpInfo;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

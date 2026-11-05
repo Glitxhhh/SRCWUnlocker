@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct Serialization.StructSerializerNumericTestStruct
 // 0x0030 (0x0030 - 0x0000)
@@ -238,5 +237,4 @@ public:
 };
 DUMPER7_ASSERTS_FStructSerializerTestStruct;
 
-}
-
+SDK_NAMESPACE_END

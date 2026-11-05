@@ -14,8 +14,7 @@
 #include "WBP_Tutorial_Controller_Key_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Tutorial_Controller_Key.WBP_Tutorial_Controller_Key_C.ExecuteUbergraph_WBP_Tutorial_Controller_Key
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Tutorial_Controller_Key_C::ExecuteUbergraph_WBP_Tutorial_Controller_Key(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "ExecuteUbergraph_WBP_Tutorial_Controller_Key");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Tutorial_Controller_Key_C", "ExecuteUbergraph_WBP_Tutorial_Controller_Key", FuncInfo);
 
 	Params::WBP_Tutorial_Controller_Key_C_ExecuteUbergraph_WBP_Tutorial_Controller_Key Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_Tutorial_Controller_Key_C::ExecuteUbergraph_WBP_Tutorial_Controller_Ke
 
 void UWBP_Tutorial_Controller_Key_C::GetKeyWidgets(ETutorialAction tutorialAction, TArray<class UWBP_Race_Sub_Btn_Key_C*>* KeyWidgets)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "GetKeyWidgets");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Key_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Key_C_GetKeyWidgets Parms{};
 
@@ -68,10 +63,8 @@ void UWBP_Tutorial_Controller_Key_C::GetKeyWidgets(ETutorialAction tutorialActio
 
 void UWBP_Tutorial_Controller_Key_C::SetHintAction(EHintId HintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "SetHintAction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Key_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Key_C_SetHintAction Parms{};
 
@@ -88,10 +81,8 @@ void UWBP_Tutorial_Controller_Key_C::SetHintAction(EHintId HintId)
 
 void UWBP_Tutorial_Controller_Key_C::SetTutorialAction(ETutorialAction tutorialAction)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "SetTutorialAction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Key_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Key_C_SetTutorialAction Parms{};
 
@@ -108,10 +99,8 @@ void UWBP_Tutorial_Controller_Key_C::SetTutorialAction(ETutorialAction tutorialA
 
 void UWBP_Tutorial_Controller_Key_C::UpdateHintIndex(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "UpdateHintIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Key_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Key_C_UpdateHintIndex Parms{};
 
@@ -128,10 +117,8 @@ void UWBP_Tutorial_Controller_Key_C::UpdateHintIndex(int32 InIndex)
 
 void UWBP_Tutorial_Controller_Key_C::UpdateTutorialIndex(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Tutorial_Controller_Key_C", "UpdateTutorialIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Tutorial_Controller_Key_C", FnName));
 
 	Params::WBP_Tutorial_Controller_Key_C_UpdateTutorialIndex Parms{};
 
@@ -140,5 +127,5 @@ void UWBP_Tutorial_Controller_Key_C::UpdateTutorialIndex(int32 InIndex)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

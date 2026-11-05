@@ -14,8 +14,7 @@
 #include "BP_FX_SummonRing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FX_SummonRing.BP_FX_SummonRing_C.ExecuteUbergraph_BP_FX_SummonRing
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_FX_SummonRing_C::ExecuteUbergraph_BP_FX_SummonRing(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FX_SummonRing_C", "ExecuteUbergraph_BP_FX_SummonRing");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_FX_SummonRing_C", "ExecuteUbergraph_BP_FX_SummonRing", FuncInfo);
 
 	Params::BP_FX_SummonRing_C_ExecuteUbergraph_BP_FX_SummonRing Parms{};
 
@@ -36,5 +33,5 @@ void ABP_FX_SummonRing_C::ExecuteUbergraph_BP_FX_SummonRing(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

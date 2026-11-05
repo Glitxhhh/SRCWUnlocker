@@ -13,11 +13,10 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemMagnetObject.BP_ItemMagnetObject_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0990 - 0x0990)
 class ABP_ItemMagnetObject_C final : public AItemMagnetObject
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemMagnetObject_C;
 
-}
-
+SDK_NAMESPACE_END

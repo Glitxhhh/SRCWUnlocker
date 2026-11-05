@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateLoadAssets_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.DevelopmentTimerLap
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateLoadAssets_C::DevelopmentTimerLap(const class FString& Tag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "DevelopmentTimerLap");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_DevelopmentTimerLap Parms{};
 
@@ -47,10 +44,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::DevelopmentTimerLap(const class FString
 
 void UBPC_RaceSequenceStateLoadAssets_C::SelectMaterialInstance(TSoftObjectPtr<class UMaterialInstance> A, TSoftObjectPtr<class UMaterialInstance> B, bool Select, TSoftObjectPtr<class UMaterialInstance>* Ret)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "SelectMaterialInstance");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_SelectMaterialInstance Parms{};
 
@@ -75,10 +70,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::SelectMaterialInstance(TSoftObjectPtr<c
 
 void UBPC_RaceSequenceStateLoadAssets_C::SelectTextureCube(TSoftObjectPtr<class UTextureCube> A, TSoftObjectPtr<class UTextureCube> B, bool Select, TSoftObjectPtr<class UTextureCube>* Ret)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "SelectTextureCube");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_SelectTextureCube Parms{};
 
@@ -93,19 +86,17 @@ void UBPC_RaceSequenceStateLoadAssets_C::SelectTextureCube(TSoftObjectPtr<class 
 }
 
 
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.RegisterObjectLevel
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.Register Object Level
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimaryStageDataAsset*           StageData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateLoadAssets_C::RegisterObjectLevel(class UPrimaryStageDataAsset* StageData)
+void UBPC_RaceSequenceStateLoadAssets_C::Register_Object_Level(class UPrimaryStageDataAsset* StageData)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "RegisterObjectLevel");
-
-	Params::BPC_RaceSequenceStateLoadAssets_C_RegisterObjectLevel Parms{};
+	Params::BPC_RaceSequenceStateLoadAssets_C_Register_Object_Level Parms{};
 
 	Parms.StageData = StageData;
 
@@ -118,10 +109,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::RegisterObjectLevel(class UPrimaryStage
 
 void UBPC_RaceSequenceStateLoadAssets_C::EndLoadTimeMeasurement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "EndLoadTimeMeasurement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +121,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::EndLoadTimeMeasurement()
 
 void UBPC_RaceSequenceStateLoadAssets_C::BeginLoadTimeMeasurement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "BeginLoadTimeMeasurement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +139,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::BeginLoadTimeMeasurement()
 
 void UBPC_RaceSequenceStateLoadAssets_C::PreCreateRaceSingle(EStageId StageId, class UUnionBtCollisionBinaryAsset* CollisionAsset, class UUnionNavigationBinaryDataAsset* NavigationAsset, class UUnionRunPathBinaryDataAsset* RuPathAsset, class UUnionComPathBinaryDataAsset* ComPathAsset)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "PreCreateRaceSingle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_PreCreateRaceSingle Parms{};
 
@@ -176,10 +161,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::PreCreateRaceSingle(EStageId StageId, c
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8E8E12334(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_1881E30949760AF8F517E1A8E8E12334");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_1881E30949760AF8F517E1A8E8E12334 Parms{};
 
@@ -196,10 +179,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8E8E123
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A65D832FE(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_85DA89AA4A74182281DE208A65D832FE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_85DA89AA4A74182281DE208A65D832FE Parms{};
 
@@ -216,10 +197,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A65D832
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E98127380E631900B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_DAE0F2D042E1EE8E98127380E631900B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_DAE0F2D042E1EE8E98127380E631900B Parms{};
 
@@ -236,10 +215,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E98127380E63190
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668ADCD4F307B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_F240FC9447C9A18C546668ADCD4F307B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F240FC9447C9A18C546668ADCD4F307B Parms{};
 
@@ -256,10 +233,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668ADCD4F30
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_35CC1E574E5588E39448ADBB4E57CA00(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_35CC1E574E5588E39448ADBB4E57CA00");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_35CC1E574E5588E39448ADBB4E57CA00 Parms{};
 
@@ -276,10 +251,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_35CC1E574E5588E39448ADBB4E57CA
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F53382BD4C684157B17F42A5912B4B19(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_F53382BD4C684157B17F42A5912B4B19");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F53382BD4C684157B17F42A5912B4B19 Parms{};
 
@@ -296,10 +269,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F53382BD4C684157B17F42A5912B4B
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A80588BBD2(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_1881E30949760AF8F517E1A80588BBD2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_1881E30949760AF8F517E1A80588BBD2 Parms{};
 
@@ -316,10 +287,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A80588BB
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A88B1AA18(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_85DA89AA4A74182281DE208A88B1AA18");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_85DA89AA4A74182281DE208A88B1AA18 Parms{};
 
@@ -336,10 +305,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A88B1AA
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E981273800B5808ED(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_DAE0F2D042E1EE8E981273800B5808ED");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_DAE0F2D042E1EE8E981273800B5808ED Parms{};
 
@@ -356,52 +323,10 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E981273800B5808
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668AD2026A89D(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_F240FC9447C9A18C546668AD2026A89D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F240FC9447C9A18C546668AD2026A89D Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_1881E30949760AF8F517E1A8502FCB2D
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8502FCB2D(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_1881E30949760AF8F517E1A8502FCB2D");
-
-	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_1881E30949760AF8F517E1A8502FCB2D Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_85DA89AA4A74182281DE208ADD16DAE7
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208ADD16DAE7(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_85DA89AA4A74182281DE208ADD16DAE7");
-
-	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_85DA89AA4A74182281DE208ADD16DAE7 Parms{};
 
 	Parms.Loaded = Loaded;
 
@@ -416,10 +341,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208ADD16DA
 
 void UBPC_RaceSequenceStateLoadAssets_C::Completed_0236B9464600658108D0BDBEFF5198A5(const TArray<class UObject*>& Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "Completed_0236B9464600658108D0BDBEFF5198A5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_Completed_0236B9464600658108D0BDBEFF5198A5 Parms{};
 
@@ -436,10 +359,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::Completed_0236B9464600658108D0BDBEFF519
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48DB7(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48DB7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48DB7 Parms{};
 
@@ -456,10 +377,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_74D1CC7A4F84EBED1C5CFC8D43B48D
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_FFB6617641135AD0D32A768FC1989049(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_FFB6617641135AD0D32A768FC1989049");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_FFB6617641135AD0D32A768FC1989049 Parms{};
 
@@ -476,10 +395,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_FFB6617641135AD0D32A768FC19890
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_7FB8D15543DD9CE9EC69B19710B777B9(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_7FB8D15543DD9CE9EC69B19710B777B9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_7FB8D15543DD9CE9EC69B19710B777B9 Parms{};
 
@@ -496,10 +413,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_7FB8D15543DD9CE9EC69B19710B777
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_26872E9640F7F23EF04A41B77864513E(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_26872E9640F7F23EF04A41B77864513E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_26872E9640F7F23EF04A41B77864513E Parms{};
 
@@ -516,10 +431,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_26872E9640F7F23EF04A41B7786451
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3E2(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3E2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3E2 Parms{};
 
@@ -536,10 +449,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_44A7D1534DFE4EE4FB91AD8375BFD3
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_31E9E3EE486E6EF4E8ECDC82813540EA(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_31E9E3EE486E6EF4E8ECDC82813540EA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_31E9E3EE486E6EF4E8ECDC82813540EA Parms{};
 
@@ -556,10 +467,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_31E9E3EE486E6EF4E8ECDC82813540
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_AC84F9DA4173DFEB8B103D821EDCE00B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_AC84F9DA4173DFEB8B103D821EDCE00B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_AC84F9DA4173DFEB8B103D821EDCE00B Parms{};
 
@@ -576,10 +485,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_AC84F9DA4173DFEB8B103D821EDCE0
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_7996DEF049A092A6E49671B674D70BB1(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_7996DEF049A092A6E49671B674D70BB1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_7996DEF049A092A6E49671B674D70BB1 Parms{};
 
@@ -596,10 +503,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_7996DEF049A092A6E49671B674D70B
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_E29ACA1D498FE0A77FA03FBA82F46999(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_E29ACA1D498FE0A77FA03FBA82F46999");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_E29ACA1D498FE0A77FA03FBA82F46999 Parms{};
 
@@ -616,10 +521,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_E29ACA1D498FE0A77FA03FBA82F469
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_53F9E91A46FA061383A2709D7D14B927(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_53F9E91A46FA061383A2709D7D14B927");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_53F9E91A46FA061383A2709D7D14B927 Parms{};
 
@@ -636,10 +539,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_53F9E91A46FA061383A2709D7D14B9
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_0226E8684E9F4CF1912DD2B08BCDD432(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_0226E8684E9F4CF1912DD2B08BCDD432");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_0226E8684E9F4CF1912DD2B08BCDD432 Parms{};
 
@@ -656,10 +557,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_0226E8684E9F4CF1912DD2B08BCDD4
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_44C233E04C497E898A6EE68EA5506F5A(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_44C233E04C497E898A6EE68EA5506F5A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_44C233E04C497E898A6EE68EA5506F5A Parms{};
 
@@ -676,10 +575,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_44C233E04C497E898A6EE68EA5506F
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_2099005542700D2022F146817F7CD551(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_2099005542700D2022F146817F7CD551");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_2099005542700D2022F146817F7CD551 Parms{};
 
@@ -689,19 +586,35 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_2099005542700D2022F146817F7CD5
 }
 
 
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_DAE0F2D042E1EE8E981273805EFF7812
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_1881E30949760AF8F517E1A8502FCB2D
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E981273805EFF7812(class UObject* Loaded)
+void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8502FCB2D(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_DAE0F2D042E1EE8E981273805EFF7812");
+	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_1881E30949760AF8F517E1A8502FCB2D Parms{};
 
-	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_DAE0F2D042E1EE8E981273805EFF7812 Parms{};
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_85DA89AA4A74182281DE208ADD16DAE7
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208ADD16DAE7(class UObject* Loaded)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
+
+	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_85DA89AA4A74182281DE208ADD16DAE7 Parms{};
 
 	Parms.Loaded = Loaded;
 
@@ -716,10 +629,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E981273805EFF78
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_697F5A3248F5E8F3196B0098EA6A45BF(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_697F5A3248F5E8F3196B0098EA6A45BF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_697F5A3248F5E8F3196B0098EA6A45BF Parms{};
 
@@ -736,10 +647,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_697F5A3248F5E8F3196B0098EA6A45
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_470FF1454207867BDDE76AB7420F01A4(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_470FF1454207867BDDE76AB7420F01A4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_470FF1454207867BDDE76AB7420F01A4 Parms{};
 
@@ -756,10 +665,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_470FF1454207867BDDE76AB7420F01
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_9FF53A5440DBF220AB61D1A2BE554E6B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_9FF53A5440DBF220AB61D1A2BE554E6B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_9FF53A5440DBF220AB61D1A2BE554E6B Parms{};
 
@@ -776,10 +683,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_9FF53A5440DBF220AB61D1A2BE554E
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B0F(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B0F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B0F Parms{};
 
@@ -789,41 +694,19 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_D6D8FBBE4351F56F8B516DAE7F6C1B
 }
 
 
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_F240FC9447C9A18C546668AD7581D862
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_DAE0F2D042E1EE8E981273805EFF7812
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668AD7581D862(class UObject* Loaded)
+void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E981273805EFF7812(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_F240FC9447C9A18C546668AD7581D862");
-
-	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F240FC9447C9A18C546668AD7581D862 Parms{};
+	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_DAE0F2D042E1EE8E981273805EFF7812 Parms{};
 
 	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.Completed_C44C0BCB4761CE1EEC04BEB933867411
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class UObject*>&           Loaded                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBPC_RaceSequenceStateLoadAssets_C::Completed_C44C0BCB4761CE1EEC04BEB933867411(const TArray<class UObject*>& Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "Completed_C44C0BCB4761CE1EEC04BEB933867411");
-
-	Params::BPC_RaceSequenceStateLoadAssets_C_Completed_C44C0BCB4761CE1EEC04BEB933867411 Parms{};
-
-	Parms.Loaded = std::move(Loaded);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -836,10 +719,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::Completed_C44C0BCB4761CE1EEC04BEB933867
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668AD9F028A2B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_F240FC9447C9A18C546668AD9F028A2B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F240FC9447C9A18C546668AD9F028A2B Parms{};
 
@@ -856,10 +737,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668AD9F028A
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E98127380B47C2A5B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_DAE0F2D042E1EE8E98127380B47C2A5B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_DAE0F2D042E1EE8E98127380B47C2A5B Parms{};
 
@@ -876,10 +755,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_DAE0F2D042E1EE8E98127380B47C2A
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A379588AE(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_85DA89AA4A74182281DE208A379588AE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_85DA89AA4A74182281DE208A379588AE Parms{};
 
@@ -896,12 +773,46 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_85DA89AA4A74182281DE208A379588
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8BAAC9964(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoaded_1881E30949760AF8F517E1A8BAAC9964");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_1881E30949760AF8F517E1A8BAAC9964 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.Completed_C44C0BCB4761CE1EEC04BEB933867411
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class UObject*>&           Loaded                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBPC_RaceSequenceStateLoadAssets_C::Completed_C44C0BCB4761CE1EEC04BEB933867411(const TArray<class UObject*>& Loaded)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
+
+	Params::BPC_RaceSequenceStateLoadAssets_C_Completed_C44C0BCB4761CE1EEC04BEB933867411 Parms{};
+
+	Parms.Loaded = std::move(Loaded);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateLoadAssets.BPC_RaceSequenceStateLoadAssets_C.OnLoaded_F240FC9447C9A18C546668AD7581D862
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_F240FC9447C9A18C546668AD7581D862(class UObject* Loaded)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
+
+	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoaded_F240FC9447C9A18C546668AD7581D862 Parms{};
 
 	Parms.Loaded = Loaded;
 
@@ -914,10 +825,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoaded_1881E30949760AF8F517E1A8BAAC99
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -930,10 +839,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnInitState()
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnLoadedStageAsset(int32 StageIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnLoadedStageAsset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_OnLoadedStageAsset Parms{};
 
@@ -948,10 +855,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnLoadedStageAsset(int32 StageIndex)
 
 void UBPC_RaceSequenceStateLoadAssets_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -964,10 +869,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::OnExitState()
 
 void UBPC_RaceSequenceStateLoadAssets_C::ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateLoadAssets_C", "ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets", FuncInfo);
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_ExecuteUbergraph_BPC_RaceSequenceStateLoadAssets Parms{};
 
@@ -985,10 +888,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::ExecuteUbergraph_BPC_RaceSequenceStateL
 
 void UBPC_RaceSequenceStateLoadAssets_C::GetGroupRuleData(EGroupRaceRule GroupRaceRule, struct FGroupRaceRuleData* GroupRaceRuleData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "GetGroupRuleData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_GetGroupRuleData Parms{};
 
@@ -1009,10 +910,8 @@ void UBPC_RaceSequenceStateLoadAssets_C::GetGroupRuleData(EGroupRaceRule GroupRa
 
 void UBPC_RaceSequenceStateLoadAssets_C::Get_Group_Rule_Data_Impl(EGroupRaceRule GroupRaceRule, struct FGroupRaceRuleData* GroupRaceRuleData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateLoadAssets_C", "Get Group Rule Data Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateLoadAssets_C", FnName));
 
 	Params::BPC_RaceSequenceStateLoadAssets_C_Get_Group_Rule_Data_Impl Parms{};
 
@@ -1024,5 +923,5 @@ void UBPC_RaceSequenceStateLoadAssets_C::Get_Group_Rule_Data_Impl(EGroupRaceRule
 		*GroupRaceRuleData = std::move(Parms.GroupRaceRuleData);
 }
 
-}
 
+SDK_NAMESPACE_END

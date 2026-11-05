@@ -14,8 +14,7 @@
 #include "WBP_Friend_NumberInput_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_NumberInput_Window.WBP_Friend_NumberInput_Window_C.BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
 // (HasOutParams, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_Friend_NumberInput_Window_C::BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_Friend_NumberInput_Window_C::BndEvt__WBP_Friend_NumberInput_Window_Edi
 
 void UWBP_Friend_NumberInput_Window_C::BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_BndEvt__WBP_Friend_NumberInput_Window_EditableTextBox_K2Node_ComponentBoundEvent_1_OnEditableTextBoxChangedEvent__DelegateSignature Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_Friend_NumberInput_Window_C::BndEvt__WBP_Friend_NumberInput_Window_Edi
 
 void UWBP_Friend_NumberInput_Window_C::ClearButtonNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "ClearButtonNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_Friend_NumberInput_Window_C::ClearButtonNavigation()
 
 void UWBP_Friend_NumberInput_Window_C::ClearTextBoxNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "ClearTextBoxNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_Friend_NumberInput_Window_C::ClearTextBoxNavigation()
 
 void UWBP_Friend_NumberInput_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -108,10 +97,8 @@ void UWBP_Friend_NumberInput_Window_C::Construct()
 
 void UWBP_Friend_NumberInput_Window_C::ExecuteUbergraph_WBP_Friend_NumberInput_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "ExecuteUbergraph_WBP_Friend_NumberInput_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_NumberInput_Window_C", "ExecuteUbergraph_WBP_Friend_NumberInput_Window", FuncInfo);
 
 	Params::WBP_Friend_NumberInput_Window_C_ExecuteUbergraph_WBP_Friend_NumberInput_Window Parms{};
 
@@ -129,10 +116,8 @@ void UWBP_Friend_NumberInput_Window_C::ExecuteUbergraph_WBP_Friend_NumberInput_W
 
 class UWidget* UWBP_Friend_NumberInput_Window_C::FocusToTextBoxEvent(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "FocusToTextBoxEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_FocusToTextBoxEvent Parms{};
 
@@ -149,10 +134,8 @@ class UWidget* UWBP_Friend_NumberInput_Window_C::FocusToTextBoxEvent(EUINavigati
 
 void UWBP_Friend_NumberInput_Window_C::InitializeButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "InitializeButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -163,10 +146,8 @@ void UWBP_Friend_NumberInput_Window_C::InitializeButtons()
 
 void UWBP_Friend_NumberInput_Window_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -177,10 +158,8 @@ void UWBP_Friend_NumberInput_Window_C::OnAnimationInFinished()
 
 void UWBP_Friend_NumberInput_Window_C::OnEnterKeyFromGamePad()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnEnterKeyFromGamePad");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -195,10 +174,8 @@ void UWBP_Friend_NumberInput_Window_C::OnEnterKeyFromGamePad()
 
 struct FEventReply UWBP_Friend_NumberInput_Window_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_OnFocusReceived Parms{};
 
@@ -216,10 +193,8 @@ struct FEventReply UWBP_Friend_NumberInput_Window_C::OnFocusReceived(const struc
 
 void UWBP_Friend_NumberInput_Window_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -234,10 +209,8 @@ void UWBP_Friend_NumberInput_Window_C::OnInitialized()
 
 struct FEventReply UWBP_Friend_NumberInput_Window_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnKeyDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_OnKeyDown Parms{};
 
@@ -257,10 +230,8 @@ struct FEventReply UWBP_Friend_NumberInput_Window_C::OnKeyDown(const struct FGeo
 
 void UWBP_Friend_NumberInput_Window_C::OnMouseHoverOnButtons(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnMouseHoverOnButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_OnMouseHoverOnButtons Parms{};
 
@@ -275,10 +246,8 @@ void UWBP_Friend_NumberInput_Window_C::OnMouseHoverOnButtons(class UUnionUIButto
 
 void UWBP_Friend_NumberInput_Window_C::OnMouseHoverOnTextBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnMouseHoverOnTextBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -289,10 +258,8 @@ void UWBP_Friend_NumberInput_Window_C::OnMouseHoverOnTextBox()
 
 void UWBP_Friend_NumberInput_Window_C::OnOutAnimFinished_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnOutAnimFinished_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -306,10 +273,8 @@ void UWBP_Friend_NumberInput_Window_C::OnOutAnimFinished_Impl()
 
 void UWBP_Friend_NumberInput_Window_C::OnPanelDecision_Impl(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnPanelDecision_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_OnPanelDecision_Impl Parms{};
 
@@ -327,10 +292,8 @@ void UWBP_Friend_NumberInput_Window_C::OnPanelDecision_Impl(class UUnionUIButton
 
 void UWBP_Friend_NumberInput_Window_C::OnSelectButtonDecision(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "OnSelectButtonDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_OnSelectButtonDecision Parms{};
 
@@ -345,10 +308,8 @@ void UWBP_Friend_NumberInput_Window_C::OnSelectButtonDecision(int32 InButtonInde
 
 void UWBP_Friend_NumberInput_Window_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -359,10 +320,8 @@ void UWBP_Friend_NumberInput_Window_C::PlayAnimationIn()
 
 void UWBP_Friend_NumberInput_Window_C::Set_Button_Navigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "Set Button Navigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -375,10 +334,8 @@ void UWBP_Friend_NumberInput_Window_C::Set_Button_Navigation()
 
 void UWBP_Friend_NumberInput_Window_C::SetButtonFocusSound(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetButtonFocusSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetButtonFocusSound Parms{};
 
@@ -395,10 +352,8 @@ void UWBP_Friend_NumberInput_Window_C::SetButtonFocusSound(bool bInEnable)
 
 void UWBP_Friend_NumberInput_Window_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetButtonFocusType Parms{};
 
@@ -415,10 +370,8 @@ void UWBP_Friend_NumberInput_Window_C::SetButtonFocusType(EButtonFocusType InBut
 
 void UWBP_Friend_NumberInput_Window_C::SetButtonText(const TArray<class FText>& InButtonText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetButtonText Parms{};
 
@@ -435,10 +388,8 @@ void UWBP_Friend_NumberInput_Window_C::SetButtonText(const TArray<class FText>& 
 
 void UWBP_Friend_NumberInput_Window_C::SetCursorVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetCursorVisible Parms{};
 
@@ -453,10 +404,8 @@ void UWBP_Friend_NumberInput_Window_C::SetCursorVisible(bool bInVisible)
 
 void UWBP_Friend_NumberInput_Window_C::SetFocusToTextBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetFocusToTextBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -469,10 +418,8 @@ void UWBP_Friend_NumberInput_Window_C::SetFocusToTextBox()
 
 void UWBP_Friend_NumberInput_Window_C::SetMessageText(const class FText& InMessageText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetMessageText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetMessageText Parms{};
 
@@ -487,10 +434,8 @@ void UWBP_Friend_NumberInput_Window_C::SetMessageText(const class FText& InMessa
 
 void UWBP_Friend_NumberInput_Window_C::SetTextBoxNavigation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetTextBoxNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -503,10 +448,8 @@ void UWBP_Friend_NumberInput_Window_C::SetTextBoxNavigation()
 
 void UWBP_Friend_NumberInput_Window_C::SetTitleText(const class FText& InTitleText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetTitleText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SetTitleText Parms{};
 
@@ -525,10 +468,8 @@ void UWBP_Friend_NumberInput_Window_C::SetTitleText(const class FText& InTitleTe
 
 void UWBP_Friend_NumberInput_Window_C::Setup(const class FText& InTitleText, const class FText& InMessageText, const TArray<class FText>& InButtonText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_Setup Parms{};
 
@@ -545,10 +486,8 @@ void UWBP_Friend_NumberInput_Window_C::Setup(const class FText& InTitleText, con
 
 void UWBP_Friend_NumberInput_Window_C::SetupButtonsPanelAndButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SetupButtonsPanelAndButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -561,10 +500,8 @@ void UWBP_Friend_NumberInput_Window_C::SetupButtonsPanelAndButton()
 
 void UWBP_Friend_NumberInput_Window_C::SoftwareKeyboardInputComplete_Impl(const class FString& InputNumber_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "SoftwareKeyboardInputComplete_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_SoftwareKeyboardInputComplete_Impl Parms{};
 
@@ -582,10 +519,8 @@ void UWBP_Friend_NumberInput_Window_C::SoftwareKeyboardInputComplete_Impl(const 
 
 class UWidget* UWBP_Friend_NumberInput_Window_C::TextBoxBtn01NavigationEvent(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "TextBoxBtn01NavigationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_TextBoxBtn01NavigationEvent Parms{};
 
@@ -605,10 +540,8 @@ class UWidget* UWBP_Friend_NumberInput_Window_C::TextBoxBtn01NavigationEvent(EUI
 
 class UWidget* UWBP_Friend_NumberInput_Window_C::TextBoxBtn02NavigationEvent(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "TextBoxBtn02NavigationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	Params::WBP_Friend_NumberInput_Window_C_TextBoxBtn02NavigationEvent Parms{};
 
@@ -625,13 +558,11 @@ class UWidget* UWBP_Friend_NumberInput_Window_C::TextBoxBtn02NavigationEvent(EUI
 
 void UWBP_Friend_NumberInput_Window_C::UpdateCursorVisible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_NumberInput_Window_C", "UpdateCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_NumberInput_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

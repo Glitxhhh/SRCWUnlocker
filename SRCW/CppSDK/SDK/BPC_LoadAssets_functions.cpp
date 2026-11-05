@@ -14,8 +14,7 @@
 #include "BPC_LoadAssets_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_LoadAssets.BPC_LoadAssets_C.ExecuteUbergraph_BPC_LoadAssets
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_LoadAssets_C::ExecuteUbergraph_BPC_LoadAssets(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LoadAssets_C", "ExecuteUbergraph_BPC_LoadAssets");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_LoadAssets_C", "ExecuteUbergraph_BPC_LoadAssets", FuncInfo);
 
 	Params::BPC_LoadAssets_C_ExecuteUbergraph_BPC_LoadAssets Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_LoadAssets_C::ExecuteUbergraph_BPC_LoadAssets(int32 EntryPoint)
 
 void UBPC_LoadAssets_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LoadAssets_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_LoadAssets_C::OnExitState()
 
 void UBPC_LoadAssets_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LoadAssets_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LoadAssets_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_LoadAssets_C::OnInitState()
 
 void UBPC_LoadAssets_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LoadAssets_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_LoadAssets_C", FnName));
 
 	Params::BPC_LoadAssets_C_OnUpdateState Parms{};
 
@@ -84,5 +75,5 @@ void UBPC_LoadAssets_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

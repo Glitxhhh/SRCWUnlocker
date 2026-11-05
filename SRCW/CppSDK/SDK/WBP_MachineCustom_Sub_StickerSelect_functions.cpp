@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_StickerSelect_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerSelect.WBP_MachineCustom_Sub_StickerSelect_C.AddPage
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::AddPage(const struct FST_StickerPresetPageData& InPageData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "AddPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_AddPage Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::AddPage(const struct FST_StickerPre
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::BndEvt__WBP_MachineCustom_Sub_StickerSelect_WBP_CMN_LR_Arrow_L_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "BndEvt__WBP_MachineCustom_Sub_StickerSelect_WBP_CMN_LR_Arrow_L_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::BndEvt__WBP_MachineCustom_Sub_Stick
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::BndEvt__WBP_MachineCustom_Sub_StickerSelect_WBP_CMN_LR_Arrow_R_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "BndEvt__WBP_MachineCustom_Sub_StickerSelect_WBP_CMN_LR_Arrow_R_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::BndEvt__WBP_MachineCustom_Sub_Stick
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Clear()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Clear");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Clear()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Construct()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::ExecuteUbergraph_WBP_MachineCustom_Sub_StickerSelect(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerSelect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_StickerSelect_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerSelect", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerSelect Parms{};
 
@@ -120,10 +107,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::ExecuteUbergraph_WBP_MachineCustom_
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnCancel(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Item_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_Item_OnCancel Parms{};
 
@@ -140,10 +125,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnCancel(class UUnionUIButtonB
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnDecision(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Item_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_Item_OnDecision Parms{};
 
@@ -160,10 +143,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnDecision(class UUnionUIButto
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnFocus(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Item_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_Item_OnFocus Parms{};
 
@@ -180,10 +161,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Item_OnFocus(class UUnionUIButtonBa
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::LeftShoulder(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "LeftShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_LeftShoulder Parms{};
 
@@ -202,10 +181,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::LeftShoulder(class UUnionUIButtonBa
 
 struct FEventReply UWBP_MachineCustom_Sub_StickerSelect_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_OnFocusReceived Parms{};
 
@@ -226,10 +203,8 @@ struct FEventReply UWBP_MachineCustom_Sub_StickerSelect_C::OnFocusReceived(const
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::OnFocusReceivedInternal(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "OnFocusReceivedInternal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_OnFocusReceivedInternal Parms{};
 
@@ -245,10 +220,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::OnFocusReceivedInternal(const struc
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Page_OnPurchaseAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Page_OnPurchaseAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,10 +237,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Page_OnPurchaseAnimFinished()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Page_OnSideNavigationCustom(EUnionUIControlDir Direction, class UUnionUIButtonBase* Button, int32 RowIndex, int32 ColumnIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Page_OnSideNavigationCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_Page_OnSideNavigationCustom Parms{};
 
@@ -285,10 +256,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Page_OnSideNavigationCustom(EUnionU
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::PlayAnimationLeftIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "PlayAnimationLeftIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -299,10 +268,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::PlayAnimationLeftIn()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::PlayAnimationRightIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "PlayAnimationRightIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -313,10 +280,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::PlayAnimationRightIn()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::PlayPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "PlayPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -327,10 +292,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::PlayPurchaseAnim()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::PlaySETab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "PlaySETab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -343,10 +306,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::PlaySETab()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::RightShoulder(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "RightShoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_RightShoulder Parms{};
 
@@ -363,10 +324,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::RightShoulder(class UUnionUIButtonB
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItem(int32 InItemIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetFocusToItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SetFocusToItem Parms{};
 
@@ -383,10 +342,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItem(int32 InItemIndex)
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItemInNextPage(int32 InRowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetFocusToItemInNextPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SetFocusToItemInNextPage Parms{};
 
@@ -403,10 +360,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItemInNextPage(int32 InRo
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItemInPrevPage(int32 InRowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetFocusToItemInPrevPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SetFocusToItemInPrevPage Parms{};
 
@@ -421,10 +376,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetFocusToItemInPrevPage(int32 InRo
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetIndices()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetIndices");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -437,10 +390,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetIndices()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetInitialFocus(class APlayerController* InPlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetInitialFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SetInitialFocus Parms{};
 
@@ -458,10 +409,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetInitialFocus(class APlayerContro
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetPageItems(int32 InPageDataIndex, int32 InPageIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetPageItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SetPageItems Parms{};
 
@@ -477,10 +426,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetPageItems(int32 InPageDataIndex,
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -491,10 +438,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::Setup()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -507,10 +452,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SetupPage()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SwitchPageToNext(int32 RowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SwitchPageToNext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SwitchPageToNext Parms{};
 
@@ -527,10 +470,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SwitchPageToNext(int32 RowIndex)
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::SwitchPageToPrev(int32 RowIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "SwitchPageToPrev");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_SwitchPageToPrev Parms{};
 
@@ -545,10 +486,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::SwitchPageToPrev(int32 RowIndex)
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::UpdateArrows()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "UpdateArrows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -559,10 +498,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::UpdateArrows()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::UpdatePageNumColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "UpdatePageNumColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -573,10 +510,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::UpdatePageNumColor()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::UpdateScrollPointBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "UpdateScrollPointBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -587,10 +522,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::UpdateScrollPointBox()
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::WidgetAnimationEvt_PresetWindow_Left_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "WidgetAnimationEvt_PresetWindow_Left_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -601,10 +534,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::WidgetAnimationEvt_PresetWindow_Lef
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::WidgetAnimationEvt_PresetWindow_Right_In_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "WidgetAnimationEvt_PresetWindow_Right_In_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -617,10 +548,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::WidgetAnimationEvt_PresetWindow_Rig
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::IsCanNextPage(bool* bCanNextPage_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "IsCanNextPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_IsCanNextPage Parms{};
 
@@ -638,10 +567,8 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::IsCanNextPage(bool* bCanNextPage_0)
 
 void UWBP_MachineCustom_Sub_StickerSelect_C::IsCanPrevPage(bool* bCanPrevPage_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerSelect_C", "IsCanPrevPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerSelect_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerSelect_C_IsCanPrevPage Parms{};
 
@@ -651,5 +578,5 @@ void UWBP_MachineCustom_Sub_StickerSelect_C::IsCanPrevPage(bool* bCanPrevPage_0)
 		*bCanPrevPage_0 = Parms.bCanPrevPage_0;
 }
 
-}
 
+SDK_NAMESPACE_END

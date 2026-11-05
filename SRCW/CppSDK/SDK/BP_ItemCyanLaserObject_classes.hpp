@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemCyanLaserObject.BP_ItemCyanLaserObject_C
 // 0x0000 (0x0850 - 0x0850)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemCyanLaserObject_C;
 
-}
-
+SDK_NAMESPACE_END

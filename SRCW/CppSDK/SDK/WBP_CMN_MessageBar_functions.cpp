@@ -14,8 +14,7 @@
 #include "WBP_CMN_MessageBar_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_MessageBar.WBP_CMN_MessageBar_C.ExecuteUbergraph_WBP_CMN_MessageBar
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_MessageBar_C::ExecuteUbergraph_WBP_CMN_MessageBar(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "ExecuteUbergraph_WBP_CMN_MessageBar");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_MessageBar_C", "ExecuteUbergraph_WBP_CMN_MessageBar", FuncInfo);
 
 	Params::WBP_CMN_MessageBar_C_ExecuteUbergraph_WBP_CMN_MessageBar Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_CMN_MessageBar_C::ExecuteUbergraph_WBP_CMN_MessageBar(int32 EntryPoint
 
 void UWBP_CMN_MessageBar_C::PlayInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "PlayInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_CMN_MessageBar_C::PlayInAnim()
 
 void UWBP_CMN_MessageBar_C::PlayOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "PlayOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_CMN_MessageBar_C::PlayOutAnim()
 
 void UWBP_CMN_MessageBar_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	Params::WBP_CMN_MessageBar_C_SetText Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_CMN_MessageBar_C::SetText(const class FText& InText)
 
 void UWBP_CMN_MessageBar_C::SetupDisableGadgetMessage(bool bEnableBlinkLoop)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "SetupDisableGadgetMessage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	Params::WBP_CMN_MessageBar_C_SetupDisableGadgetMessage Parms{};
 
@@ -112,10 +101,8 @@ void UWBP_CMN_MessageBar_C::SetupDisableGadgetMessage(bool bEnableBlinkLoop)
 
 void UWBP_CMN_MessageBar_C::SetWaitingTextVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "SetWaitingTextVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	Params::WBP_CMN_MessageBar_C_SetWaitingTextVisible Parms{};
 
@@ -132,10 +119,8 @@ void UWBP_CMN_MessageBar_C::SetWaitingTextVisible(bool bInIsVisible)
 
 void UWBP_CMN_MessageBar_C::SetWarningIconVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "SetWarningIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	Params::WBP_CMN_MessageBar_C_SetWarningIconVisible Parms{};
 
@@ -152,10 +137,8 @@ void UWBP_CMN_MessageBar_C::SetWarningIconVisible(bool bInIsVisible)
 
 void UWBP_CMN_MessageBar_C::SetWidgetSwitcherActiveWidgetIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "SetWidgetSwitcherActiveWidgetIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	Params::WBP_CMN_MessageBar_C_SetWidgetSwitcherActiveWidgetIndex Parms{};
 
@@ -170,10 +153,8 @@ void UWBP_CMN_MessageBar_C::SetWidgetSwitcherActiveWidgetIndex(int32 Index_0)
 
 void UWBP_CMN_MessageBar_C::StartWaitingText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "StartWaitingText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -184,10 +165,8 @@ void UWBP_CMN_MessageBar_C::StartWaitingText()
 
 void UWBP_CMN_MessageBar_C::WidgetAnimationEvt_Messege_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "WidgetAnimationEvt_Messege_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -198,13 +177,11 @@ void UWBP_CMN_MessageBar_C::WidgetAnimationEvt_Messege_In_K2Node_WidgetAnimation
 
 void UWBP_CMN_MessageBar_C::WidgetAnimationEvt_Messege_Out_K2Node_WidgetAnimationEvent_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MessageBar_C", "WidgetAnimationEvt_Messege_Out_K2Node_WidgetAnimationEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MessageBar_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

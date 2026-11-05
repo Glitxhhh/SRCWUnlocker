@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeStickerApplyState.BPC_MachineCustomizeStickerApplyState_C
 // 0x0040 (0x0140 - 0x0100)
@@ -45,10 +44,10 @@ public:
 	void OnExitState();
 	void StickerApply_OnDecision(class UObject* Objcet);
 	void ToStickerEdit();
-	void PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void StickerApply_OnCancel(class UObject* Objcet);
-	void OnInitState();
+	void PopupWindow_OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
 	void SetActiveAuraEffect(bool IsActive_0);
+	void OnInitState();
 	void ExecuteUbergraph_BPC_MachineCustomizeStickerApplyState(int32 EntryPoint);
 
 public:
@@ -67,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeStickerApplyState_C;
 
-}
-
+SDK_NAMESPACE_END

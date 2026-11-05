@@ -14,8 +14,7 @@
 #include "OnlineSubsystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class OnlineSubsystem.NamedInterfaces
 // 0x0038 (0x0060 - 0x0028)
@@ -43,9 +42,12 @@ public:
 DUMPER7_ASSERTS_UNamedInterfaces;
 
 // Class OnlineSubsystem.TurnBasedMatchInterface
-// 0x0000 (0x0000 - 0x0000)
-class ITurnBasedMatchInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ITurnBasedMatchInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void OnMatchEnded(const class FString& Match);
 	void OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive);
@@ -75,5 +77,4 @@ public:
 };
 DUMPER7_ASSERTS_ITurnBasedMatchInterface;
 
-}
-
+SDK_NAMESPACE_END

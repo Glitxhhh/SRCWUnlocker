@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateIntroduceCourse_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C.IsOpenGrandprixFinalTipsWindow
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::IsOpenGrandprixFinalTipsWindow(EHintId InHintId, bool* EnableOpenWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "IsOpenGrandprixFinalTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_IsOpenGrandprixFinalTipsWindow Parms{};
 
@@ -48,10 +45,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::IsOpenGrandprixFinalTipsWindow(EHi
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::CreateTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "CreateTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_CreateTipsWindow Parms{};
 
@@ -69,10 +64,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::CreateTipsWindow(EHintId InHintId)
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::DebugLoadLevelSequence(EStageId In_StageId, class ULevelSequence** Out_LevelSequence)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "DebugLoadLevelSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_DebugLoadLevelSequence Parms{};
 
@@ -94,10 +87,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::DebugLoadLevelSequence(EStageId In
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::CreateSequncePlayerByStageId(class ALevelSequenceActor** Out_Actor, class ULevelSequencePlayer** Out_Player, bool* Out_Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "CreateSequncePlayerByStageId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_CreateSequncePlayerByStageId Parms{};
 
@@ -121,10 +112,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::CreateSequncePlayerByStageId(class
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_68D7799743460276E4D57EAD7AE3E92C(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnLoaded_68D7799743460276E4D57EAD7AE3E92C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_68D7799743460276E4D57EAD7AE3E92C Parms{};
 
@@ -141,10 +130,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_68D7799743460276E4D57EAD7
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_07CB097840A0285D5C47FF9CB2FE2527(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnLoaded_07CB097840A0285D5C47FF9CB2FE2527");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnLoaded_07CB097840A0285D5C47FF9CB2FE2527 Parms{};
 
@@ -159,10 +146,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnLoaded_07CB097840A0285D5C47FF9CB
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundTextureLoad()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartFinalRoundTextureLoad");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +158,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundTextureLoad()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +172,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnInitState()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnUpdateState Parms{};
 
@@ -207,10 +188,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +200,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnExitState()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnChangeSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnChangeSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +212,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnChangeSequence()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnPlayEnd_イベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnPlayEnd_イベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +224,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnPlayEnd_イベント()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseView()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartCourseView");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -263,10 +236,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseView()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundScene()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartFinalRoundScene");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +250,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartFinalRoundScene()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnFinalRoundSceneSkip(const struct FKey& PressedKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFinalRoundSceneSkip");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFinalRoundSceneSkip Parms{};
 
@@ -297,10 +266,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnFinalRoundSceneSkip(const struct
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnAnimCompleted_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnAnimCompleted_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -311,10 +278,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnAnimCompleted_Event()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseInfoBasicRoundUI()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartCourseInfoBasicRoundUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,10 +290,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartCourseInfoBasicRoundUI()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnRemoved_イベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnRemoved_イベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -339,10 +302,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnRemoved_イベント()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::RemoveFinalRoundWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "RemoveFinalRoundWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -353,10 +314,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::RemoveFinalRoundWidget()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::TipsWindow_CloseEndDelegate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "TipsWindow_CloseEndDelegate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -369,10 +328,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::TipsWindow_CloseEndDelegate()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnFadeEnd(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFadeEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnFadeEnd Parms{};
 
@@ -387,10 +344,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnFadeEnd(EUnionUIFadeDirection Fa
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::StartShowTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "StartShowTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -401,10 +356,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::StartShowTipsWindow()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnEndLoadFinalRoundTexture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEndLoadFinalRoundTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -415,10 +368,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnEndLoadFinalRoundTexture()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseClickEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseClickEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -429,10 +380,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseClickEvent()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseSkipEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnFullScreenMouseSkipEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,10 +394,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnFullScreenMouseSkipEvent()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnKeyPressed_Event(const struct FKey& PressedKey)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnKeyPressed_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_OnKeyPressed_Event Parms{};
 
@@ -463,10 +410,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnKeyPressed_Event(const struct FK
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -477,10 +422,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "OnEnabledSkip2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateIntroduceCourse_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -493,10 +436,8 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::OnEnabledSkip2()
 
 void UBPC_RaceSequenceStateIntroduceCourse_C::ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateIntroduceCourse_C", "ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateIntroduceCourse_C", "ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse", FuncInfo);
 
 	Params::BPC_RaceSequenceStateIntroduceCourse_C_ExecuteUbergraph_BPC_RaceSequenceStateIntroduceCourse Parms{};
 
@@ -505,5 +446,5 @@ void UBPC_RaceSequenceStateIntroduceCourse_C::ExecuteUbergraph_BPC_RaceSequenceS
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

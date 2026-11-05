@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_CMN_SubMenu_List.WBP_CMN_SubMenu_List_C.ExecuteUbergraph_WBP_CMN_SubMenu_List
 // 0x0068 (0x0068 - 0x0000)
@@ -52,5 +52,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_SubMenu_List_C_GetButtons;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

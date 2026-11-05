@@ -14,18 +14,15 @@
 #include "BPC_MachineCustomizeAuraSelectState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeAuraSelectState.BPC_MachineCustomizeAuraSelectState_C.PlaySoundPossible
 // (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MachineCustomizeAuraSelectState_C::PlaySoundPossible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeAuraSelectState_C", "PlaySoundPossible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeAuraSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_MachineCustomizeAuraSelectState_C::PlaySoundPossible()
 
 void UBPC_MachineCustomizeAuraSelectState_C::PlaySoundImpossible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeAuraSelectState_C", "PlaySoundImpossible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeAuraSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UBPC_MachineCustomizeAuraSelectState_C::PlaySoundImpossible()
 
 class URewardDialog* UBPC_MachineCustomizeAuraSelectState_C::CreateRewardDialog()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeAuraSelectState_C", "CreateRewardDialog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeAuraSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeAuraSelectState_C_CreateRewardDialog Parms{};
 
@@ -72,10 +65,8 @@ class URewardDialog* UBPC_MachineCustomizeAuraSelectState_C::CreateRewardDialog(
 
 class AGarageCamera* UBPC_MachineCustomizeAuraSelectState_C::GetCamera() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeAuraSelectState_C", "GetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeAuraSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeAuraSelectState_C_GetCamera Parms{};
 
@@ -84,5 +75,5 @@ class AGarageCamera* UBPC_MachineCustomizeAuraSelectState_C::GetCamera() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

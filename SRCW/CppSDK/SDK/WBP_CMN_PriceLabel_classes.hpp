@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PriceLabel.WBP_CMN_PriceLabel_C
 // 0x0010 (0x02F0 - 0x02E0)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_PriceLabel_C;
 
-}
-
+SDK_NAMESPACE_END

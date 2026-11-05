@@ -14,8 +14,7 @@
 #include "WBP_CMN_SubMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_SubMenu.WBP_CMN_SubMenu_C.ExecuteUbergraph_WBP_CMN_SubMenu
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_SubMenu_C::ExecuteUbergraph_WBP_CMN_SubMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "ExecuteUbergraph_WBP_CMN_SubMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_SubMenu_C", "ExecuteUbergraph_WBP_CMN_SubMenu", FuncInfo);
 
 	Params::WBP_CMN_SubMenu_C_ExecuteUbergraph_WBP_CMN_SubMenu Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_CMN_SubMenu_C::ExecuteUbergraph_WBP_CMN_SubMenu(int32 EntryPoint)
 
 void UWBP_CMN_SubMenu_C::InitializeCommonMenuSubMenu(const TArray<ECommonMenuButtonType>& InButtonArr)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "InitializeCommonMenuSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_InitializeCommonMenuSubMenu Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_CMN_SubMenu_C::InitializeCommonMenuSubMenu(const TArray<ECommonMenuBut
 
 void UWBP_CMN_SubMenu_C::Judge_Sub_Menu_Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "Judge Sub Menu Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -79,10 +72,8 @@ void UWBP_CMN_SubMenu_C::Judge_Sub_Menu_Close()
 
 void UWBP_CMN_SubMenu_C::OnCancelButton(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "OnCancelButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_OnCancelButton Parms{};
 
@@ -101,10 +92,8 @@ void UWBP_CMN_SubMenu_C::OnCancelButton(class UUnionUIButtonBase* Button, int32 
 
 void UWBP_CMN_SubMenu_C::OnDecisionButton(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "OnDecisionButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_OnDecisionButton Parms{};
 
@@ -124,10 +113,8 @@ void UWBP_CMN_SubMenu_C::OnDecisionButton(class UUnionUIButtonBase* Button, int3
 
 void UWBP_CMN_SubMenu_C::OnDIrectionButton(class UUnionUIButtonBase* Button, int32 ButtonIndex, EUnionUIControlDir Dir)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "OnDIrectionButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_OnDIrectionButton Parms{};
 
@@ -148,10 +135,8 @@ void UWBP_CMN_SubMenu_C::OnDIrectionButton(class UUnionUIButtonBase* Button, int
 
 struct FEventReply UWBP_CMN_SubMenu_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_OnFocusReceived Parms{};
 
@@ -171,10 +156,8 @@ struct FEventReply UWBP_CMN_SubMenu_C::OnFocusReceived(const struct FGeometry& M
 
 void UWBP_CMN_SubMenu_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "OnVisibilityChangedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	Params::WBP_CMN_SubMenu_C_OnVisibilityChangedEvent Parms{};
 
@@ -189,10 +172,8 @@ void UWBP_CMN_SubMenu_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
 
 void UWBP_CMN_SubMenu_C::RefreshSubMenuZOrder()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "RefreshSubMenuZOrder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,13 +184,11 @@ void UWBP_CMN_SubMenu_C::RefreshSubMenuZOrder()
 
 void UWBP_CMN_SubMenu_C::SetupCommonMenuSubMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_C", "SetupCommonMenuSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

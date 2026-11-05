@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum UdpMessaging.EUdpMessageFormat
 // NumValues: 0x0006
@@ -35,5 +34,4 @@ public:
 };
 DUMPER7_ASSERTS_FUdpMockMessage;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_Sticker_PresetIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_Sticker_PresetIcon.WBP_MachineCustom_Sub_Sticker_PresetIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::Construct()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetIcon", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetIcon Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::ExecuteUbergraph_WBP_MachineCu
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +89,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnDownKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_OnFocusLost Parms{};
 
@@ -122,10 +109,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnFocusLost(const struct FFocu
 
 struct FEventReply UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_OnFocusReceived Parms{};
 
@@ -143,10 +128,8 @@ struct FEventReply UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnFocusReceived(
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,10 +140,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnLeftKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -171,10 +152,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnLeftShoulderPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -185,10 +164,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnRightKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -199,10 +176,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnRightShoulderPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -213,10 +188,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::OnUpKeyPressed()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::PlayPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "PlayPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -227,10 +200,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::PlayPurchaseAnim()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::ResetType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "ResetType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -243,10 +214,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::ResetType()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetBalloonPattern(int32 InPatternIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetBalloonPattern");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetBalloonPattern Parms{};
 
@@ -263,10 +232,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetBalloonPattern(int32 InPatt
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetBalloonText(const struct FST_StickerPresetPageItemData& InItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetBalloonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetBalloonText Parms{};
 
@@ -283,10 +250,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetBalloonText(const struct FS
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetButtonColor(EStickerPresetSelectPageItemType StickerType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetButtonColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetButtonColor Parms{};
 
@@ -303,10 +268,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetButtonColor(EStickerPresetS
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetExIconVisible(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetExIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetExIconVisible Parms{};
 
@@ -323,10 +286,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetExIconVisible(bool IsVisibl
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetLockVisible(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetLockVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetLockVisible Parms{};
 
@@ -343,10 +304,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetLockVisible(bool IsVisible_
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPlayerIndex(int32 PlayerIndex_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetPlayerIndex Parms{};
 
@@ -364,10 +323,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPlayerIndex(int32 PlayerInd
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPresetIcon(int32 InIndex, bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetPresetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetPresetIcon Parms{};
 
@@ -385,10 +342,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPresetIcon(int32 InIndex, b
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPresetIconTexture(const struct FST_StickerPresetPageItemData& InItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetPresetIconTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetPresetIconTexture Parms{};
 
@@ -405,10 +360,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetPresetIconTexture(const str
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetTicketVisible(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetTicketVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetTicketVisible Parms{};
 
@@ -425,10 +378,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetTicketVisible(bool IsVisibl
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetupType(const struct FST_StickerPresetPageItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "SetupType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_SetupType Parms{};
 
@@ -443,10 +394,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::SetupType(const struct FST_Sti
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::StopPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "StopPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -457,10 +406,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::StopPurchaseAnim()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::UpdateNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "UpdateNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -471,10 +418,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::UpdateNum()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::UpdateNumColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "UpdateNumColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -485,10 +430,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::UpdateNumColor()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::WidgetAnimationEvt_UnLock_Inout_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "WidgetAnimationEvt_UnLock_Inout_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -501,10 +444,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::WidgetAnimationEvt_UnLock_Inou
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetItemData(struct FST_StickerPresetPageItemData* ItemData_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_GetItemData Parms{};
 
@@ -522,10 +463,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetItemData(struct FST_Sticker
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetPlayerController(class APlayerController** PlayerController) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "GetPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_GetPlayerController Parms{};
 
@@ -543,10 +482,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetPlayerController(class APla
 
 void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetPlayerIndex(int32* PlayerIndex_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetIcon_C", "GetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetIcon_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetIcon_C_GetPlayerIndex Parms{};
 
@@ -556,5 +493,5 @@ void UWBP_MachineCustom_Sub_Sticker_PresetIcon_C::GetPlayerIndex(int32* PlayerIn
 		*PlayerIndex_0 = Parms.PlayerIndex_0;
 }
 
-}
 
+SDK_NAMESPACE_END

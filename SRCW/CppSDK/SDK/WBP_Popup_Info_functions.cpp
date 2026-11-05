@@ -14,18 +14,15 @@
 #include "WBP_Popup_Info_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Info.WBP_Popup_Info_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Popup_Info_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Popup_Info_C::Construct()
 
 void UWBP_Popup_Info_C::ExecuteUbergraph_WBP_Popup_Info(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "ExecuteUbergraph_WBP_Popup_Info");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Info_C", "ExecuteUbergraph_WBP_Popup_Info", FuncInfo);
 
 	Params::WBP_Popup_Info_C_ExecuteUbergraph_WBP_Popup_Info Parms{};
 
@@ -59,10 +54,8 @@ void UWBP_Popup_Info_C::ExecuteUbergraph_WBP_Popup_Info(int32 EntryPoint)
 
 void UWBP_Popup_Info_C::GetButton(int32 ButtonIndex, class UUnionUIButtonBase** Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "GetButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_GetButton Parms{};
 
@@ -82,10 +75,8 @@ void UWBP_Popup_Info_C::GetButton(int32 ButtonIndex, class UUnionUIButtonBase** 
 
 void UWBP_Popup_Info_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_PreConstruct Parms{};
 
@@ -102,10 +93,8 @@ void UWBP_Popup_Info_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Popup_Info_C::SetButtonText(const TArray<class FText>& InTextArray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SetButtonText Parms{};
 
@@ -122,10 +111,8 @@ void UWBP_Popup_Info_C::SetButtonText(const TArray<class FText>& InTextArray)
 
 void UWBP_Popup_Info_C::SetImageButtonSelectText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetImageButtonSelectText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SetImageButtonSelectText Parms{};
 
@@ -142,10 +129,8 @@ void UWBP_Popup_Info_C::SetImageButtonSelectText(const class FText& InText)
 
 void UWBP_Popup_Info_C::SetImageTexture(class UTexture2D* InTexture2D)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetImageTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SetImageTexture Parms{};
 
@@ -163,10 +148,8 @@ void UWBP_Popup_Info_C::SetImageTexture(class UTexture2D* InTexture2D)
 
 void UWBP_Popup_Info_C::SetMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 Btn02IconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetMainMenuButtonIconIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SetMainMenuButtonIconIndex Parms{};
 
@@ -184,10 +167,8 @@ void UWBP_Popup_Info_C::SetMainMenuButtonIconIndex(int32 Btn01IconIndex, int32 B
 
 void UWBP_Popup_Info_C::SetMessageText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SetMessageText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SetMessageText Parms{};
 
@@ -204,10 +185,8 @@ void UWBP_Popup_Info_C::SetMessageText(const class FText& InText)
 
 void UWBP_Popup_Info_C::SwitchInfoDisplay(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Info_C", "SwitchInfoDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Info_C", FnName));
 
 	Params::WBP_Popup_Info_C_SwitchInfoDisplay Parms{};
 
@@ -216,5 +195,5 @@ void UWBP_Popup_Info_C::SwitchInfoDisplay(int32 InIndex)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

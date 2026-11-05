@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_Sticker_PresetWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_Sticker_PresetWindow.WBP_MachineCustom_Sub_Sticker_PresetWindow_C.BuildNavigation
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::BuildNavigation(bool bInWrapLeftRight, bool IsSimpleCustom)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "BuildNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_BuildNavigation Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::BuildNavigation(bool bInWrap
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +55,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Construct()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetWindow", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_ExecuteUbergraph_WBP_MachineCustom_Sub_Sticker_PresetWindow Parms{};
 
@@ -83,10 +76,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::ExecuteUbergraph_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GridNavigationBuilder_OnSideNavigationCustom(EUnionUIControlDir InDirection, class UUnionUIButtonBase* InButton, int32 InRowIndex, int32 InColumnIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "GridNavigationBuilder_OnSideNavigationCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_GridNavigationBuilder_OnSideNavigationCustom Parms{};
 
@@ -104,10 +95,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GridNavigationBuilder_OnSide
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::HideBalloon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "HideBalloon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +109,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::HideBalloon()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_on_Left_Shoulder(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item on Left Shoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_Item_on_Left_Shoulder Parms{};
 
@@ -140,10 +127,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_on_Left_Shoulder(class 
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_on_Right_Shoulder(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item on Right Shoulder");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_Item_on_Right_Shoulder Parms{};
 
@@ -160,10 +145,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_on_Right_Shoulder(class
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnCancel(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_Item_OnCancel Parms{};
 
@@ -180,10 +163,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnCancel(class UUnionUI
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnDecision(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item_OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_Item_OnDecision Parms{};
 
@@ -200,10 +181,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnDecision(class UUnion
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnFocused(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item_OnFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_Item_OnFocused Parms{};
 
@@ -218,10 +197,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnFocused(class UUnionU
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnPurchaseAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "Item_OnPurchaseAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -234,10 +211,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::Item_OnPurchaseAnimFinished(
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::PlayPurchaseAnim(int32 InItemIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "PlayPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_PlayPurchaseAnim Parms{};
 
@@ -254,10 +229,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::PlayPurchaseAnim(int32 InIte
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetButtonsPanel(class UUnionUIButtonsPanel* InButtonsPanel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "SetButtonsPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_SetButtonsPanel Parms{};
 
@@ -274,10 +247,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetButtonsPanel(class UUnion
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetItems(TArray<struct FST_StickerPresetPageItemData>& InItemDataList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "SetItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_SetItems Parms{};
 
@@ -294,10 +265,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetItems(TArray<struct FST_S
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetupItems()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "SetupItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +277,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::SetupItems()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::StopPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "StopPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -322,10 +289,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::StopPurchaseAnim()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::UpdateNumColor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "UpdateNumColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,10 +303,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::UpdateNumColor()
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GetItemNumInRow(int32* Value) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "GetItemNumInRow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_GetItemNumInRow Parms{};
 
@@ -359,10 +322,8 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GetItemNumInRow(int32* Value
 
 void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GetItems(TArray<class UWBP_MachineCustom_Sub_Sticker_PresetIcon_C*>* Items) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Sticker_PresetWindow_C", "GetItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Sticker_PresetWindow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Sticker_PresetWindow_C_GetItems Parms{};
 
@@ -372,5 +333,5 @@ void UWBP_MachineCustom_Sub_Sticker_PresetWindow_C::GetItems(TArray<class UWBP_M
 		*Items = std::move(Parms.Items);
 }
 
-}
 
+SDK_NAMESPACE_END

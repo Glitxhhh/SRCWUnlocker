@@ -14,8 +14,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class BuildPatchServices.BuildPatchManifest
 // 0x00F8 (0x0120 - 0x0028)
@@ -54,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_UBuildPatchManifest;
 
-}
-
+SDK_NAMESPACE_END

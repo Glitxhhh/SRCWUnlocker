@@ -14,8 +14,7 @@
 #include "WBP_CMN_NiceNotice_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_NiceNotice_Window.WBP_CMN_NiceNotice_Window_C.AddChallengeClearNotice
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_NiceNotice_Window_C::AddChallengeClearNotice(TArray<struct FChallengeStruct>& InParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "AddChallengeClearNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_Window_C_AddChallengeClearNotice Parms{};
 
@@ -47,10 +44,8 @@ void UWBP_CMN_NiceNotice_Window_C::AddChallengeClearNotice(TArray<struct FChalle
 
 void UWBP_CMN_NiceNotice_Window_C::AddNiceNotice(const class FText& InName, ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "AddNiceNotice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_Window_C_AddNiceNotice Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_CMN_NiceNotice_Window_C::AddNiceNotice(const class FText& InName, ECro
 
 void UWBP_CMN_NiceNotice_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -82,10 +75,8 @@ void UWBP_CMN_NiceNotice_Window_C::Construct()
 
 void UWBP_CMN_NiceNotice_Window_C::ExecuteUbergraph_WBP_CMN_NiceNotice_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "ExecuteUbergraph_WBP_CMN_NiceNotice_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_NiceNotice_Window_C", "ExecuteUbergraph_WBP_CMN_NiceNotice_Window", FuncInfo);
 
 	Params::WBP_CMN_NiceNotice_Window_C_ExecuteUbergraph_WBP_CMN_NiceNotice_Window Parms{};
 
@@ -100,10 +91,8 @@ void UWBP_CMN_NiceNotice_Window_C::ExecuteUbergraph_WBP_CMN_NiceNotice_Window(in
 
 void UWBP_CMN_NiceNotice_Window_C::OnAddToViewport()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "OnAddToViewport");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +105,8 @@ void UWBP_CMN_NiceNotice_Window_C::OnAddToViewport()
 
 void UWBP_CMN_NiceNotice_Window_C::OnOutAnimEnd(class UWBP_CMN_NiceNotice_C* Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "OnOutAnimEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	Params::WBP_CMN_NiceNotice_Window_C_OnOutAnimEnd Parms{};
 
@@ -134,13 +121,11 @@ void UWBP_CMN_NiceNotice_Window_C::OnOutAnimEnd(class UWBP_CMN_NiceNotice_C* Wid
 
 void UWBP_CMN_NiceNotice_Window_C::PlayForceEndNoticeEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_NiceNotice_Window_C", "PlayForceEndNoticeEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_NiceNotice_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

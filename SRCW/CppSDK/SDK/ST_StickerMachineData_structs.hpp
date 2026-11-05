@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_StickerMachineData.ST_StickerMachineData
 // 0x0068 (0x0068 - 0x0000)
@@ -35,5 +34,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_StickerMachineData;
 
-}
-
+SDK_NAMESPACE_END

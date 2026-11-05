@@ -14,8 +14,7 @@
 #include "WBP_Popup_Window_Tutorial_Sub_Cover_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Window_Tutorial_Sub_Cover.WBP_Popup_Window_Tutorial_Sub_Cover_C.ExecuteUbergraph_WBP_Popup_Window_Tutorial_Sub_Cover
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Popup_Window_Tutorial_Sub_Cover_C::ExecuteUbergraph_WBP_Popup_Window_Tutorial_Sub_Cover(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_Sub_Cover_C", "ExecuteUbergraph_WBP_Popup_Window_Tutorial_Sub_Cover");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Window_Tutorial_Sub_Cover_C", "ExecuteUbergraph_WBP_Popup_Window_Tutorial_Sub_Cover", FuncInfo);
 
 	Params::WBP_Popup_Window_Tutorial_Sub_Cover_C_ExecuteUbergraph_WBP_Popup_Window_Tutorial_Sub_Cover Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Popup_Window_Tutorial_Sub_Cover_C::ExecuteUbergraph_WBP_Popup_Window_T
 
 void UWBP_Popup_Window_Tutorial_Sub_Cover_C::SetExplanation(const class FText& NewText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_Sub_Cover_C", "SetExplanation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_Sub_Cover_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_Sub_Cover_C_SetExplanation Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_Popup_Window_Tutorial_Sub_Cover_C::SetExplanation(const class FText& N
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

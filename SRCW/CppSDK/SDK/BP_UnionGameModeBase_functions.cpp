@@ -14,18 +14,15 @@
 #include "BP_UnionGameModeBase_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_UnionGameModeBase.BP_UnionGameModeBase_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
 void ABP_UnionGameModeBase_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameModeBase_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UnionGameModeBase_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_UnionGameModeBase_C::ReceiveBeginPlay()
 
 void ABP_UnionGameModeBase_C::ExecuteUbergraph_BP_UnionGameModeBase(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UnionGameModeBase_C", "ExecuteUbergraph_BP_UnionGameModeBase");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_UnionGameModeBase_C", "ExecuteUbergraph_BP_UnionGameModeBase", FuncInfo);
 
 	Params::BP_UnionGameModeBase_C_ExecuteUbergraph_BP_UnionGameModeBase Parms{};
 
@@ -50,5 +45,5 @@ void ABP_UnionGameModeBase_C::ExecuteUbergraph_BP_UnionGameModeBase(int32 EntryP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

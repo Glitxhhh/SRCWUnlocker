@@ -14,8 +14,7 @@
 #include "BPFL_MachineSelect_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_MachineSelect.BPFL_MachineSelect_C.CalcMachineTypeByMachineId
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void UBPFL_MachineSelect_C::CalcMachineTypeByMachineId(EMachineId MachineId, class UObject* __WorldContext, ECarStatusType* StatusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "CalcMachineTypeByMachineId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "CalcMachineTypeByMachineId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_CalcMachineTypeByMachineId Parms{};
 
@@ -52,10 +49,8 @@ void UBPFL_MachineSelect_C::CalcMachineTypeByMachineId(EMachineId MachineId, cla
 
 void UBPFL_MachineSelect_C::CalcMachineTypeByRom1stMachineId(ERom1stMachineId Rom1stMachineId, class UObject* __WorldContext, ECarStatusType* StatusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "CalcMachineTypeByRom1stMachineId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "CalcMachineTypeByRom1stMachineId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_CalcMachineTypeByRom1stMachineId Parms{};
 
@@ -79,10 +74,8 @@ void UBPFL_MachineSelect_C::CalcMachineTypeByRom1stMachineId(ERom1stMachineId Ro
 
 void UBPFL_MachineSelect_C::CanSelectCharaAndHover(const EDriverId& InCheckDriverId, class UObject* __WorldContext, bool* bCanUse, bool* bDontUsedHover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "CanSelectCharaAndHover");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "CanSelectCharaAndHover", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_CanSelectCharaAndHover Parms{};
 
@@ -110,10 +103,8 @@ void UBPFL_MachineSelect_C::CanSelectCharaAndHover(const EDriverId& InCheckDrive
 
 void UBPFL_MachineSelect_C::ConvertRom1stTypeIndexToMachineId(ECarStatusType machineType, int32 Index_0, int32 TypeCount, class UObject* __WorldContext, EMachineId* MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "ConvertRom1stTypeIndexToMachineId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "ConvertRom1stTypeIndexToMachineId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_ConvertRom1stTypeIndexToMachineId Parms{};
 
@@ -139,10 +130,8 @@ void UBPFL_MachineSelect_C::ConvertRom1stTypeIndexToMachineId(ECarStatusType mac
 
 void UBPFL_MachineSelect_C::ConvertTypeIndexToMachineId(ECarStatusType machineType, int32 Index_0, class UObject* __WorldContext, EMachineId* MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "ConvertTypeIndexToMachineId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "ConvertTypeIndexToMachineId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_ConvertTypeIndexToMachineId Parms{};
 
@@ -166,10 +155,8 @@ void UBPFL_MachineSelect_C::ConvertTypeIndexToMachineId(ECarStatusType machineTy
 
 void UBPFL_MachineSelect_C::GetRom1stMachineCountPerType(ECarStatusType StatusType, class UObject* __WorldContext, int32* Count)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "GetRom1stMachineCountPerType");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "GetRom1stMachineCountPerType", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_GetRom1stMachineCountPerType Parms{};
 
@@ -192,10 +179,8 @@ void UBPFL_MachineSelect_C::GetRom1stMachineCountPerType(ECarStatusType StatusTy
 
 void UBPFL_MachineSelect_C::GetRom1stMachineIdByMachineId(EMachineId InMachineID, class UObject* __WorldContext, int32* OnestMAchineIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "GetRom1stMachineIdByMachineId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "GetRom1stMachineIdByMachineId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_GetRom1stMachineIdByMachineId Parms{};
 
@@ -218,10 +203,8 @@ void UBPFL_MachineSelect_C::GetRom1stMachineIdByMachineId(EMachineId InMachineID
 
 void UBPFL_MachineSelect_C::GetRom1stMachineName(int32 Rom1stIndex, class UObject* __WorldContext, class FText* MachineNameText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "GetRom1stMachineName");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "GetRom1stMachineName", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_GetRom1stMachineName Parms{};
 
@@ -244,10 +227,8 @@ void UBPFL_MachineSelect_C::GetRom1stMachineName(int32 Rom1stIndex, class UObjec
 
 void UBPFL_MachineSelect_C::GetTypeIndexFromRom1stId(int32 Rom1stId, class UObject* __WorldContext, int32* TypeIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MachineSelect_C", "GetTypeIndexFromRom1stId");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_MachineSelect_C", "GetTypeIndexFromRom1stId", FuncInfo);
 
 	Params::BPFL_MachineSelect_C_GetTypeIndexFromRom1stId Parms{};
 
@@ -260,5 +241,5 @@ void UBPFL_MachineSelect_C::GetTypeIndexFromRom1stId(int32 Rom1stId, class UObje
 		*TypeIndex = Parms.TypeIndex;
 }
 
-}
 
+SDK_NAMESPACE_END

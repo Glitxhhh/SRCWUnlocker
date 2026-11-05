@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateDrive_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateDrive.BPC_RaceSequenceStateDrive_C.NoticeChangeRaceStateEvent
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateDrive_C::NoticeChangeRaceStateEvent(ERaceInfoStateType InNewState, ERaceInfoStateType InOldState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "NoticeChangeRaceStateEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateDrive_C", FnName));
 
 	Params::BPC_RaceSequenceStateDrive_C_NoticeChangeRaceStateEvent Parms{};
 
@@ -46,10 +43,8 @@ void UBPC_RaceSequenceStateDrive_C::NoticeChangeRaceStateEvent(ERaceInfoStateTyp
 
 void UBPC_RaceSequenceStateDrive_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateDrive_C", FnName));
 
 	Params::BPC_RaceSequenceStateDrive_C_OnUpdateState Parms{};
 
@@ -64,10 +59,8 @@ void UBPC_RaceSequenceStateDrive_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceSequenceStateDrive_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateDrive_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +73,8 @@ void UBPC_RaceSequenceStateDrive_C::OnInitState()
 
 void UBPC_RaceSequenceStateDrive_C::ExecuteUbergraph_BPC_RaceSequenceStateDrive(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateDrive_C", "ExecuteUbergraph_BPC_RaceSequenceStateDrive");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateDrive_C", "ExecuteUbergraph_BPC_RaceSequenceStateDrive", FuncInfo);
 
 	Params::BPC_RaceSequenceStateDrive_C_ExecuteUbergraph_BPC_RaceSequenceStateDrive Parms{};
 
@@ -92,5 +83,5 @@ void UBPC_RaceSequenceStateDrive_C::ExecuteUbergraph_BPC_RaceSequenceStateDrive(
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

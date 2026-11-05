@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CharaSelect_Sub_RivalWinIcon.WBP_CharaSelect_Sub_RivalWinIcon_C
 // 0x0060 (0x0360 - 0x0300)
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CharaSelect_Sub_RivalWinIcon_C;
 
-}
-
+SDK_NAMESPACE_END

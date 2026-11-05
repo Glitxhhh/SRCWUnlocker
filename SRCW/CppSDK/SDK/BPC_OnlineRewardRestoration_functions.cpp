@@ -14,8 +14,7 @@
 #include "BPC_OnlineRewardRestoration_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_OnlineRewardRestoration.BPC_OnlineRewardRestoration_C.ExecuteUbergraph_BPC_OnlineRewardRestoration
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_OnlineRewardRestoration_C::ExecuteUbergraph_BPC_OnlineRewardRestoration(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OnlineRewardRestoration_C", "ExecuteUbergraph_BPC_OnlineRewardRestoration");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_OnlineRewardRestoration_C", "ExecuteUbergraph_BPC_OnlineRewardRestoration", FuncInfo);
 
 	Params::BPC_OnlineRewardRestoration_C_ExecuteUbergraph_BPC_OnlineRewardRestoration Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_OnlineRewardRestoration_C::ExecuteUbergraph_BPC_OnlineRewardRestoratio
 
 void UBPC_OnlineRewardRestoration_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OnlineRewardRestoration_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_OnlineRewardRestoration_C", FnName));
 
 	Params::BPC_OnlineRewardRestoration_C_OnUpdateState Parms{};
 
@@ -56,5 +51,5 @@ void UBPC_OnlineRewardRestoration_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

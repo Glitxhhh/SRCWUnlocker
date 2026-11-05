@@ -14,18 +14,15 @@
 #include "WBP_CMN_MainMenu_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_MainMenu_Btn.WBP_CMN_MainMenu_Btn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_MainMenu_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_MainMenu_Btn_C::Construct()
 
 void UWBP_CMN_MainMenu_Btn_C::ExecuteUbergraph_WBP_CMN_MainMenu_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "ExecuteUbergraph_WBP_CMN_MainMenu_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_MainMenu_Btn_C", "ExecuteUbergraph_WBP_CMN_MainMenu_Btn", FuncInfo);
 
 	Params::WBP_CMN_MainMenu_Btn_C_ExecuteUbergraph_WBP_CMN_MainMenu_Btn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_CMN_MainMenu_Btn_C::ExecuteUbergraph_WBP_CMN_MainMenu_Btn(int32 EntryP
 
 void UWBP_CMN_MainMenu_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnAcceptKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnAcceptKeyReleased()
 
 void UWBP_CMN_MainMenu_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnBackKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnDownKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_OnFocusLost Parms{};
 
@@ -136,10 +121,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent
 
 struct FEventReply UWBP_CMN_MainMenu_Btn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_OnFocusReceived Parms{};
 
@@ -160,10 +143,8 @@ struct FEventReply UWBP_CMN_MainMenu_Btn_C::OnFocusReceived(const struct FGeomet
 
 void UWBP_CMN_MainMenu_Btn_C::OnFocusReceivedImpl(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnFocusReceivedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_OnFocusReceivedImpl Parms{};
 
@@ -179,10 +160,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnFocusReceivedImpl(const struct FGeometry& MyGeom
 
 void UWBP_CMN_MainMenu_Btn_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -193,10 +172,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnLeftKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -207,10 +184,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnLeftShoulderPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -221,10 +196,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnRightKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +208,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnRightShoulderPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +222,8 @@ void UWBP_CMN_MainMenu_Btn_C::OnUpKeyPressed()
 
 void UWBP_CMN_MainMenu_Btn_C::SetChangeVisibilityMouseInteraction(bool bIsActive)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "SetChangeVisibilityMouseInteraction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_SetChangeVisibilityMouseInteraction Parms{};
 
@@ -271,10 +240,8 @@ void UWBP_CMN_MainMenu_Btn_C::SetChangeVisibilityMouseInteraction(bool bIsActive
 
 void UWBP_CMN_MainMenu_Btn_C::SetEnableButton(bool bIsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "SetEnableButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_SetEnableButton Parms{};
 
@@ -291,10 +258,8 @@ void UWBP_CMN_MainMenu_Btn_C::SetEnableButton(bool bIsEnable)
 
 void UWBP_CMN_MainMenu_Btn_C::SetIconIndex(int32 InIconIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "SetIconIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_SetIconIndex Parms{};
 
@@ -311,10 +276,8 @@ void UWBP_CMN_MainMenu_Btn_C::SetIconIndex(int32 InIconIndex)
 
 void UWBP_CMN_MainMenu_Btn_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	Params::WBP_CMN_MainMenu_Btn_C_SetText Parms{};
 
@@ -329,13 +292,11 @@ void UWBP_CMN_MainMenu_Btn_C::SetText(const class FText& InText)
 
 void UWBP_CMN_MainMenu_Btn_C::WidgetAnimationEvt_Btn_Select_Out_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_MainMenu_Btn_C", "WidgetAnimationEvt_Btn_Select_Out_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_MainMenu_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

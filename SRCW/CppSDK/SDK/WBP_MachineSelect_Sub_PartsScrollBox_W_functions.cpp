@@ -14,18 +14,15 @@
 #include "WBP_MachineSelect_Sub_PartsScrollBox_W_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_PartsScrollBox_W.WBP_MachineSelect_Sub_PartsScrollBox_W_C.PlaySoundImpossible
 // (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_PartsScrollBox_W_C::PlaySoundImpossible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsScrollBox_W_C", "PlaySoundImpossible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsScrollBox_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,13 +33,11 @@ void UWBP_MachineSelect_Sub_PartsScrollBox_W_C::PlaySoundImpossible()
 
 void UWBP_MachineSelect_Sub_PartsScrollBox_W_C::PlaySoundPossible()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsScrollBox_W_C", "PlaySoundPossible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsScrollBox_W_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

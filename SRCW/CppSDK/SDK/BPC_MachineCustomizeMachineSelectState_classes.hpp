@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionLib_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeMachineSelectState.BPC_MachineCustomizeMachineSelectState_C
 // 0x0030 (0x0128 - 0x00F8)
@@ -54,6 +53,7 @@ public:
 	void UnbindPage();
 	void BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
 	void UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow);
+	void RemoveTipsWindow();
 	void ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState(int32 EntryPoint);
 
 	class AGarageCamera* GetCamera() const;
@@ -75,5 +75,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeMachineSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

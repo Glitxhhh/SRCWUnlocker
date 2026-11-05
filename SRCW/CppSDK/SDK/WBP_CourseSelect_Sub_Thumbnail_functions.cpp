@@ -14,8 +14,7 @@
 #include "WBP_CourseSelect_Sub_Thumbnail_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.CanUseStage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 bool UWBP_CourseSelect_Sub_Thumbnail_C::CanUseStage(EStageId StageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "CanUseStage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_CanUseStage Parms{};
 
@@ -45,10 +42,8 @@ bool UWBP_CourseSelect_Sub_Thumbnail_C::CanUseStage(EStageId StageId)
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -61,10 +56,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::Construct()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_Thumbnail_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_ExecuteUbergraph_WBP_CourseSelect_Sub_Thumbnail Parms{};
 
@@ -74,15 +67,37 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Th
 }
 
 
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.Finished_D56D3939498B3A43529FA3B2F2E7E2C8
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::Finished_D56D3939498B3A43529FA3B2F2E7E2C8()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.InitUnlockAnimation
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::InitUnlockAnimation()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnBackKeyPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -96,10 +111,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnBackKeyPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnChangeBrrush(class UObject* Object, const struct FFieldNotificationId& Field)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnChangeBrrush");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_OnChangeBrrush Parms{};
 
@@ -117,10 +130,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnChangeBrrush(class UObject* Object, co
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnDecidedEvent_Event(class UUnionUIButtonBaseCore* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnDecidedEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_OnDecidedEvent_Event Parms{};
 
@@ -135,10 +146,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnDecidedEvent_Event(class UUnionUIButto
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnDownKeyPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnFaceButtonTopPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnFaceButtonTopPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -149,10 +170,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnDownKeyPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnLeftKeyPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnLeftKeyReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnLeftKeyReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -163,10 +194,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnLeftKeyPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnRightKeyPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.OnRightKeyReleased
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::OnRightKeyReleased()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,10 +220,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnRightKeyPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnSelectedEvent_Event(class UUnionUIButtonBaseCore* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnSelectedEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_OnSelectedEvent_Event Parms{};
 
@@ -197,10 +236,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnSelectedEvent_Event(class UUnionUIButt
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnStoreShortcutPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnStoreShortcutPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -211,10 +248,20 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnStoreShortcutPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "OnUpKeyPressed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.PlayUnlockAnimation
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::PlayUnlockAnimation()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -227,10 +274,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::OnUpKeyPressed()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_PreConstruct Parms{};
 
@@ -245,12 +290,28 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::PreLaunchSetValidCourse()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "PreLaunchSetValidCourse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.Set Lock Icon Only
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsLocked                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::Set_Lock_Icon_Only(bool IsLocked)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_C_Set_Lock_Icon_Only Parms{};
+
+	Parms.IsLocked = IsLocked;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -261,10 +322,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::PreLaunchSetValidCourse()
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::Set_Time_Trial_Progrees(ETimeTrialClearRankId InTimeTrialClearRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "Set Time Trial Progrees");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_Set_Time_Trial_Progrees Parms{};
 
@@ -283,10 +342,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::Set_Time_Trial_Progrees(ETimeTrialClearR
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::SetCourseId(EStageId StageCourseId_0, TSoftObjectPtr<class UTexture2D> CourseThumbTexture, bool bTargetInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "SetCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetCourseId Parms{};
 
@@ -305,14 +362,34 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::SetCourseId(EStageId StageCourseId_0, TS
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::SetCourseNameText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "SetCourseNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetCourseNameText Parms{};
 
 	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_Thumbnail.WBP_CourseSelect_Sub_Thumbnail_C.SetDriverIcon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EDriverId                               DriverId_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>        DriverTexture                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    SetDriver                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_Thumbnail_C::SetDriverIcon(EDriverId DriverId_0, TSoftObjectPtr<class UTexture2D> DriverTexture, bool SetDriver)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetDriverIcon Parms{};
+
+	Parms.DriverId_0 = DriverId_0;
+	Parms.DriverTexture = DriverTexture;
+	Parms.SetDriver = SetDriver;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -325,10 +402,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::SetCourseNameText(const class FText& InT
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::SetGameModeId(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "SetGameModeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetGameModeId Parms{};
 
@@ -345,10 +420,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::SetGameModeId(EGameModeId InGameModeId)
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::SetValidCourse(bool bValid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "SetValidCourse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_SetValidCourse Parms{};
 
@@ -365,10 +438,8 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::SetValidCourse(bool bValid)
 
 void UWBP_CourseSelect_Sub_Thumbnail_C::UpdateDLCCover(bool IsDLC)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_Thumbnail_C", "UpdateDLCCover");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_Thumbnail_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_Thumbnail_C_UpdateDLCCover Parms{};
 
@@ -377,5 +448,5 @@ void UWBP_CourseSelect_Sub_Thumbnail_C::UpdateDLCCover(bool IsDLC)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "BPC_AppNet_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_AppNet.BPC_AppNet_C.BindOnReceiveInvite
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_AppNet_C::BindOnReceiveInvite()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "BindOnReceiveInvite");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_AppNet_C::BindOnReceiveInvite()
 
 void UBPC_AppNet_C::CallSendInvitationFailed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "CallSendInvitationFailed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void UBPC_AppNet_C::CallSendInvitationFailed()
 
 void UBPC_AppNet_C::CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJoinInfo, bool* bOutDisplay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "CheckInvitationNoticeDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_CheckInvitationNoticeDisplay Parms{};
 
@@ -69,15 +62,33 @@ void UBPC_AppNet_C::CheckInvitationNoticeDisplay(class ULobbyJoinInfo* InLobbyJo
 }
 
 
+// Function BPC_AppNet.BPC_AppNet_C.CREATEDELEGATE_PROXYFUNCTION_0
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLobbyInvitationNoticeInfo&LobbyInvitationNoticeInfo_0                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class ULobbyJoinInfo*                   LobbyInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_AppNet_C::CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyInvitationNoticeInfo& LobbyInvitationNoticeInfo_0, class ULobbyJoinInfo* LobbyInfo)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
+
+	Params::BPC_AppNet_C_CREATEDELEGATE_PROXYFUNCTION_0 Parms{};
+
+	Parms.LobbyInvitationNoticeInfo_0 = std::move(LobbyInvitationNoticeInfo_0);
+	Parms.LobbyInfo = LobbyInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPC_AppNet.BPC_AppNet_C.DisplayFinishEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UBPC_AppNet_C::DisplayFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "DisplayFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +101,8 @@ void UBPC_AppNet_C::DisplayFinishEvent()
 
 void UBPC_AppNet_C::ExecuteUbergraph_BPC_AppNet(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "ExecuteUbergraph_BPC_AppNet");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_AppNet_C", "ExecuteUbergraph_BPC_AppNet", FuncInfo);
 
 	Params::BPC_AppNet_C_ExecuteUbergraph_BPC_AppNet Parms{};
 
@@ -110,10 +119,8 @@ void UBPC_AppNet_C::ExecuteUbergraph_BPC_AppNet(int32 EntryPoint)
 
 void UBPC_AppNet_C::GetFriendMatchLobbyContext(class UFriendMatchLobbyContext** FriendMatchLobbyContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "GetFriendMatchLobbyContext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_GetFriendMatchLobbyContext Parms{};
 
@@ -131,10 +138,8 @@ void UBPC_AppNet_C::GetFriendMatchLobbyContext(class UFriendMatchLobbyContext** 
 
 void UBPC_AppNet_C::GetInvitationNoticeAttentionType(ELobbyInvitationNoticeAttentionType* OutAttentionType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "GetInvitationNoticeAttentionType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_GetInvitationNoticeAttentionType Parms{};
 
@@ -152,10 +157,8 @@ void UBPC_AppNet_C::GetInvitationNoticeAttentionType(ELobbyInvitationNoticeAtten
 
 void UBPC_AppNet_C::GetSqueadContext(class UBP_SquadContext_C** SquadContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "GetSqueadContext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_GetSqueadContext Parms{};
 
@@ -173,10 +176,8 @@ void UBPC_AppNet_C::GetSqueadContext(class UBP_SquadContext_C** SquadContext)
 
 void UBPC_AppNet_C::JoinFriendMatchLobby(bool* bInFriendMatchLobby)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "JoinFriendMatchLobby");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_JoinFriendMatchLobby Parms{};
 
@@ -192,10 +193,8 @@ void UBPC_AppNet_C::JoinFriendMatchLobby(bool* bInFriendMatchLobby)
 
 void UBPC_AppNet_C::OnAttentionCreateFinish()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnAttentionCreateFinish");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -206,10 +205,8 @@ void UBPC_AppNet_C::OnAttentionCreateFinish()
 
 void UBPC_AppNet_C::OnAttentionCreateStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnAttentionCreateStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,10 +217,8 @@ void UBPC_AppNet_C::OnAttentionCreateStart()
 
 void UBPC_AppNet_C::OnBindInvitationNoticeWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnBindInvitationNoticeWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -234,10 +229,8 @@ void UBPC_AppNet_C::OnBindInvitationNoticeWidget()
 
 void UBPC_AppNet_C::OnBindInvitationNoticeWidgetWhenNotAvailable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnBindInvitationNoticeWidgetWhenNotAvailable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -248,10 +241,8 @@ void UBPC_AppNet_C::OnBindInvitationNoticeWidgetWhenNotAvailable()
 
 void UBPC_AppNet_C::OnChangeSequenceType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnChangeSequenceType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,10 +255,8 @@ void UBPC_AppNet_C::OnChangeSequenceType()
 
 void UBPC_AppNet_C::OnCompleteCreateSession(bool bSuccess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCompleteCreateSession");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCompleteCreateSession Parms{};
 
@@ -284,10 +273,8 @@ void UBPC_AppNet_C::OnCompleteCreateSession(bool bSuccess)
 
 void UBPC_AppNet_C::OnCompleteCreateSquad(bool Successful)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCompleteCreateSquad");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCompleteCreateSquad Parms{};
 
@@ -305,10 +292,8 @@ void UBPC_AppNet_C::OnCompleteCreateSquad(bool Successful)
 
 void UBPC_AppNet_C::OnCompletedSendInvitation(bool bSuccessful, const struct FLobbyOperationResult& Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCompletedSendInvitation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCompletedSendInvitation Parms{};
 
@@ -328,10 +313,8 @@ void UBPC_AppNet_C::OnCompletedSendInvitation(bool bSuccessful, const struct FLo
 
 void UBPC_AppNet_C::OnCompleteGetUserSearch(bool bWasSuccessful, const TArray<struct FCommon_UserSearchData>& SearchDatas, EResponseCodeAbstract ResCodeAbstract)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCompleteGetUserSearch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCompleteGetUserSearch Parms{};
 
@@ -350,10 +333,8 @@ void UBPC_AppNet_C::OnCompleteGetUserSearch(bool bWasSuccessful, const TArray<st
 
 void UBPC_AppNet_C::OnCreatedPopupWindowEvent(EPopupWindowType CreatedWindowType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCreatedPopupWindowEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCreatedPopupWindowEvent Parms{};
 
@@ -368,10 +349,8 @@ void UBPC_AppNet_C::OnCreatedPopupWindowEvent(EPopupWindowType CreatedWindowType
 
 void UBPC_AppNet_C::OnCreateShortLobbyId()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCreateShortLobbyId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -384,10 +363,8 @@ void UBPC_AppNet_C::OnCreateShortLobbyId()
 
 void UBPC_AppNet_C::OnCreateShortLobbyIdComplete(const class FString& ShortLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnCreateShortLobbyIdComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnCreateShortLobbyIdComplete Parms{};
 
@@ -402,10 +379,8 @@ void UBPC_AppNet_C::OnCreateShortLobbyIdComplete(const class FString& ShortLobby
 
 void UBPC_AppNet_C::OnGamerCardErrorCreatedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnGamerCardErrorCreatedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -416,10 +391,8 @@ void UBPC_AppNet_C::OnGamerCardErrorCreatedEvent()
 
 void UBPC_AppNet_C::OnGamerCardErrorDestroyedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnGamerCardErrorDestroyedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -430,10 +403,8 @@ void UBPC_AppNet_C::OnGamerCardErrorDestroyedEvent()
 
 void UBPC_AppNet_C::OnGenerateLobbyInviteNoticeWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnGenerateLobbyInviteNoticeWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -449,10 +420,8 @@ void UBPC_AppNet_C::OnGenerateLobbyInviteNoticeWidget()
 
 void UBPC_AppNet_C::OnGetInviteUserData(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnGetInviteUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnGetInviteUserData Parms{};
 
@@ -470,10 +439,8 @@ void UBPC_AppNet_C::OnGetInviteUserData(const class FString& ApiName, const clas
 
 void UBPC_AppNet_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -486,10 +453,8 @@ void UBPC_AppNet_C::OnInitialize()
 
 void UBPC_AppNet_C::OnLobbyInvitationNoticeDecide(bool bAccept)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnLobbyInvitationNoticeDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnLobbyInvitationNoticeDecide Parms{};
 
@@ -504,10 +469,8 @@ void UBPC_AppNet_C::OnLobbyInvitationNoticeDecide(bool bAccept)
 
 void UBPC_AppNet_C::OnLobbyInvitationNoticeDisplayEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnLobbyInvitationNoticeDisplayEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -520,10 +483,8 @@ void UBPC_AppNet_C::OnLobbyInvitationNoticeDisplayEnd()
 
 void UBPC_AppNet_C::OnNoticeWidgetConfirmEnd(bool bResultYes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnNoticeWidgetConfirmEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnNoticeWidgetConfirmEnd Parms{};
 
@@ -538,10 +499,8 @@ void UBPC_AppNet_C::OnNoticeWidgetConfirmEnd(bool bResultYes)
 
 void UBPC_AppNet_C::OnNoticeWidgetConfirmStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnNoticeWidgetConfirmStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -555,10 +514,8 @@ void UBPC_AppNet_C::OnNoticeWidgetConfirmStart()
 
 void UBPC_AppNet_C::OnReceiveInviteCallback(const struct FUniqueNetIdRepl& UserId, class ULobbyJoinInfo* Invite)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnReceiveInviteCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnReceiveInviteCallback Parms{};
 
@@ -576,10 +533,8 @@ void UBPC_AppNet_C::OnReceiveInviteCallback(const struct FUniqueNetIdRepl& UserI
 
 void UBPC_AppNet_C::OnReceiveInviteWindowCallback(bool ResultIsYes)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnReceiveInviteWindowCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnReceiveInviteWindowCallback Parms{};
 
@@ -597,10 +552,8 @@ void UBPC_AppNet_C::OnReceiveInviteWindowCallback(bool ResultIsYes)
 
 void UBPC_AppNet_C::OnrejectInvitation(bool bSuccessful, const struct FLobbyOperationResult& Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnrejectInvitation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_OnrejectInvitation Parms{};
 
@@ -616,10 +569,8 @@ void UBPC_AppNet_C::OnrejectInvitation(bool bSuccessful, const struct FLobbyOper
 
 void UBPC_AppNet_C::OnUnbindInvitationNoticeWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "OnUnbindInvitationNoticeWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -630,10 +581,8 @@ void UBPC_AppNet_C::OnUnbindInvitationNoticeWidget()
 
 void UBPC_AppNet_C::RequestLobbyInviteUserData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "RequestLobbyInviteUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -644,10 +593,8 @@ void UBPC_AppNet_C::RequestLobbyInviteUserData()
 
 void UBPC_AppNet_C::SendInvitationNoPlatform()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SendInvitationNoPlatform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -658,10 +605,8 @@ void UBPC_AppNet_C::SendInvitationNoPlatform()
 
 void UBPC_AppNet_C::SendInvitationWithPlatform()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SendInvitationWithPlatform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -672,10 +617,8 @@ void UBPC_AppNet_C::SendInvitationWithPlatform()
 
 void UBPC_AppNet_C::SendInvite()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SendInvite");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -688,10 +631,8 @@ void UBPC_AppNet_C::SendInvite()
 
 void UBPC_AppNet_C::SetInviteUserId(const class FString& UserIdString)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SetInviteUserId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_SetInviteUserId Parms{};
 
@@ -706,10 +647,8 @@ void UBPC_AppNet_C::SetInviteUserId(const class FString& UserIdString)
 
 void UBPC_AppNet_C::SetLobbyInvitationNoticeInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SetLobbyInvitationNoticeInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -723,10 +662,8 @@ void UBPC_AppNet_C::SetLobbyInvitationNoticeInfo()
 
 void UBPC_AppNet_C::ShowLobbyInfoEvent(const struct FLobbyInvitationNoticeInfo& LobbyInvitationNoticeInfo_0, class ULobbyJoinInfo* LobbyInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "ShowLobbyInfoEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	Params::BPC_AppNet_C_ShowLobbyInfoEvent Parms{};
 
@@ -742,13 +679,11 @@ void UBPC_AppNet_C::ShowLobbyInfoEvent(const struct FLobbyInvitationNoticeInfo& 
 
 void UBPC_AppNet_C::SpawnProcessLobbyInvitationObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AppNet_C", "SpawnProcessLobbyInvitationObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_AppNet_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

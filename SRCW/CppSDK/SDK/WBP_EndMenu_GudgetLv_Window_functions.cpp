@@ -14,18 +14,15 @@
 #include "WBP_EndMenu_GudgetLv_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_EndMenu_GudgetLv_Window.WBP_EndMenu_GudgetLv_Window_C.BindFullScreenMouseClick
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_EndMenu_GudgetLv_Window_C::BindFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "BindFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::BindFullScreenMouseClick()
 
 void UWBP_EndMenu_GudgetLv_Window_C::ExecuteUbergraph_WBP_EndMenu_GudgetLv_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "ExecuteUbergraph_WBP_EndMenu_GudgetLv_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_EndMenu_GudgetLv_Window_C", "ExecuteUbergraph_WBP_EndMenu_GudgetLv_Window", FuncInfo);
 
 	Params::WBP_EndMenu_GudgetLv_Window_C_ExecuteUbergraph_WBP_EndMenu_GudgetLv_Window Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::ExecuteUbergraph_WBP_EndMenu_GudgetLv_Windo
 
 void UWBP_EndMenu_GudgetLv_Window_C::Finished_D9C901F64C87801986F7E0A71013780E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "Finished_D9C901F64C87801986F7E0A71013780E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::Finished_D9C901F64C87801986F7E0A71013780E()
 
 void UWBP_EndMenu_GudgetLv_Window_C::Finished_F3338B164A380015FC2E1B998F3B5C14()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "Finished_F3338B164A380015FC2E1B998F3B5C14");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::Finished_F3338B164A380015FC2E1B998F3B5C14()
 
 void UWBP_EndMenu_GudgetLv_Window_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::OnAcceptKeyPressed()
 
 void UWBP_EndMenu_GudgetLv_Window_C::OnForceKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "OnForceKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::OnForceKeyPressed()
 
 void UWBP_EndMenu_GudgetLv_Window_C::OnFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "OnFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::OnFullScreenMouseClick()
 
 void UWBP_EndMenu_GudgetLv_Window_C::PlayInAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "PlayInAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +123,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::PlayInAnim()
 
 void UWBP_EndMenu_GudgetLv_Window_C::PlayOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "PlayOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +139,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::PlayOutAnim()
 
 void UWBP_EndMenu_GudgetLv_Window_C::ResetGadgetRankGauge(float InGaugeBase, float InGaugeAddFixed, float InGaugeNext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "ResetGadgetRankGauge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	Params::WBP_EndMenu_GudgetLv_Window_C_ResetGadgetRankGauge Parms{};
 
@@ -182,10 +161,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::ResetGadgetRankGauge(float InGaugeBase, flo
 
 void UWBP_EndMenu_GudgetLv_Window_C::Set_Gadget_Plate_Empty_from_Plate_Id(EGadgetPlateId InTotalRaceCount, bool InRunkUp, bool InLevelUp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "Set Gadget Plate Empty from Plate Id");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	Params::WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Plate_Id Parms{};
 
@@ -206,10 +183,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::Set_Gadget_Plate_Empty_from_Plate_Id(EGadge
 
 void UWBP_EndMenu_GudgetLv_Window_C::Set_Gadget_Plate_Empty_from_Race_Count(int32 InTotalRaceCount, bool InRunkUp, bool InLevelUp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "Set Gadget Plate Empty from Race Count");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	Params::WBP_EndMenu_GudgetLv_Window_C_Set_Gadget_Plate_Empty_from_Race_Count Parms{};
 
@@ -226,10 +201,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::Set_Gadget_Plate_Empty_from_Race_Count(int3
 
 void UWBP_EndMenu_GudgetLv_Window_C::SetGadgetPlateLv()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "SetGadgetPlateLv");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +213,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::SetGadgetPlateLv()
 
 void UWBP_EndMenu_GudgetLv_Window_C::SetGadgetRaceCountReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "SetGadgetRaceCountReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -254,10 +225,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::SetGadgetRaceCountReward()
 
 void UWBP_EndMenu_GudgetLv_Window_C::SetupWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "SetupWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -271,10 +240,8 @@ void UWBP_EndMenu_GudgetLv_Window_C::SetupWidget()
 
 void UWBP_EndMenu_GudgetLv_Window_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	Params::WBP_EndMenu_GudgetLv_Window_C_Tick Parms{};
 
@@ -290,13 +257,11 @@ void UWBP_EndMenu_GudgetLv_Window_C::Tick(const struct FGeometry& MyGeometry, fl
 
 void UWBP_EndMenu_GudgetLv_Window_C::UnbindFullScreenMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EndMenu_GudgetLv_Window_C", "UnbindFullScreenMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EndMenu_GudgetLv_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

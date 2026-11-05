@@ -16,8 +16,7 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Window_Text_Scroll.WBP_Popup_Window_Text_Scroll_C
 // 0x00E0 (0x04D0 - 0x03F0)
@@ -165,5 +164,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_Window_Text_Scroll_C;
 
-}
-
+SDK_NAMESPACE_END

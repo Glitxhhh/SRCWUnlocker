@@ -14,18 +14,15 @@
 #include "WBP_MachineSelect_Sub_Btn_OK_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_Btn_OK.WBP_MachineSelect_Sub_Btn_OK_C.PlayAnimActiveToSelect
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_Btn_OK_C::PlayAnimActiveToSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Btn_OK_C", "PlayAnimActiveToSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Btn_OK_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,13 +33,11 @@ void UWBP_MachineSelect_Sub_Btn_OK_C::PlayAnimActiveToSelect()
 
 void UWBP_MachineSelect_Sub_Btn_OK_C::PlayAnimSelectToActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_Btn_OK_C", "PlayAnimSelectToActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_Btn_OK_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Turntable_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Turntable.BP_Turntable_C.ExecuteUbergraph_BP_Turntable
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_Turntable_C::ExecuteUbergraph_BP_Turntable(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Turntable_C", "ExecuteUbergraph_BP_Turntable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_Turntable_C", "ExecuteUbergraph_BP_Turntable", FuncInfo);
 
 	Params::BP_Turntable_C_ExecuteUbergraph_BP_Turntable Parms{};
 
@@ -42,13 +39,11 @@ void ABP_Turntable_C::ExecuteUbergraph_BP_Turntable(int32 EntryPoint)
 
 void ABP_Turntable_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Turntable_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_Turntable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

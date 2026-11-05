@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_CustomPaint_Glow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint_Glow.WBP_MachineCustom_Sub_CustomPaint_Glow_C.ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CustomPaint_Glow_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Glow_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::ExecuteUbergraph_WBP_MachineCust
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,10 +79,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnDownKeyPressed()
 
 struct FEventReply UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Glow_C_OnFocusReceived Parms{};
 
@@ -109,10 +98,8 @@ struct FEventReply UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnFocusReceived(co
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,10 +110,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnLeftKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +122,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnRightKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +136,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::OnUpKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::SetCursorVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Glow_C_SetCursorVisible Parms{};
 
@@ -174,10 +155,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::SetCursorVisible(bool bInIsVisib
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::Setup(class APlayerController* InPlayerController, const struct FMachineColorAreaUIData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Glow_C_Setup Parms{};
 
@@ -195,10 +174,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::Setup(class APlayerController* I
 
 void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::GetItemData(struct FMachineColorAreaUIData* OutUIData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Glow_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Glow_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Glow_C_GetItemData Parms{};
 
@@ -208,5 +185,5 @@ void UWBP_MachineCustom_Sub_CustomPaint_Glow_C::GetItemData(struct FMachineColor
 		*OutUIData = std::move(Parms.OutUIData);
 }
 
-}
 
+SDK_NAMESPACE_END

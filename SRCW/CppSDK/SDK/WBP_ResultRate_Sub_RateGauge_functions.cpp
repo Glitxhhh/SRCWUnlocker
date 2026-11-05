@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_Sub_RateGauge_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RateGauge.WBP_ResultRate_Sub_RateGauge_C.ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_Sub_RateGauge_C::ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_Sub_RateGauge_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge", FuncInfo);
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_ExecuteUbergraph_WBP_ResultRate_Sub_RateGauge Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::ExecuteUbergraph_WBP_ResultRate_Sub_RateGa
 
 void UWBP_ResultRate_Sub_RateGauge_C::Set_Now_Rate_Impl(double newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "Set Now Rate Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_Set_Now_Rate_Impl Parms{};
 
@@ -65,10 +60,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::Set_Now_Rate_Impl(double newParam)
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetChanceUpIconEnable(bool IsEnable, int32 RatioValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetChanceUpIconEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetChanceUpIconEnable Parms{};
 
@@ -87,10 +80,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetChanceUpIconEnable(bool IsEnable, int32
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentAndNextLimitRate(int32 CurrentLimitRate, int32 NextLimitRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetCurrentAndNextLimitRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetCurrentAndNextLimitRate Parms{};
 
@@ -108,10 +99,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentAndNextLimitRate(int32 CurrentLi
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentGaugeAmount(float GaugeAmount)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetCurrentGaugeAmount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetCurrentGaugeAmount Parms{};
 
@@ -128,10 +117,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentGaugeAmount(float GaugeAmount)
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentRate(int32 InRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetCurrentRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetCurrentRate Parms{};
 
@@ -148,10 +135,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentRate(int32 InRate)
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentRateIcon(ERateRank CurrentRateIcon)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetCurrentRateIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetCurrentRateIcon Parms{};
 
@@ -169,10 +154,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetCurrentRateIcon(ERateRank CurrentRateIc
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetNextRewardIcon(ERewardType rewardType, int32 rewardId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetNextRewardIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetNextRewardIcon Parms{};
 
@@ -193,10 +176,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetNextRewardIcon(ERewardType rewardType, 
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetRateBaseImpl(double RateUp_0, double RateDown_0, ERateRank RateRankUp, ERateRank RateRankDown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetRateBaseImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetRateBaseImpl Parms{};
 
@@ -217,10 +198,8 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetRateBaseImpl(double RateUp_0, double Ra
 
 void UWBP_ResultRate_Sub_RateGauge_C::SetUpChanceUpInfo(bool IsEnable, int32 InRatioValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RateGauge_C", "SetUpChanceUpInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RateGauge_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RateGauge_C_SetUpChanceUpInfo Parms{};
 
@@ -230,5 +209,5 @@ void UWBP_ResultRate_Sub_RateGauge_C::SetUpChanceUpInfo(bool IsEnable, int32 InR
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

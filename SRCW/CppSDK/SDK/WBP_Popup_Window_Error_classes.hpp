@@ -16,8 +16,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Window_Error.WBP_Popup_Window_Error_C
 // 0x00D8 (0x04C8 - 0x03F0)
@@ -174,5 +173,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_Window_Error_C;
 
-}
-
+SDK_NAMESPACE_END

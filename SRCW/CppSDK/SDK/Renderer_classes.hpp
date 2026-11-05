@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Renderer.SparseVolumeTextureViewerComponent
 // 0x0030 (0x0550 - 0x0520)
@@ -78,5 +77,4 @@ public:
 };
 DUMPER7_ASSERTS_ASparseVolumeTextureViewer;
 
-}
-
+SDK_NAMESPACE_END

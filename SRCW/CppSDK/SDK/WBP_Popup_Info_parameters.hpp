@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Popup_Info.WBP_Popup_Info_C.ExecuteUbergraph_WBP_Popup_Info
 // 0x00C0 (0x00C0 - 0x0000)
@@ -133,5 +133,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Popup_Info_C_SwitchInfoDisplay;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

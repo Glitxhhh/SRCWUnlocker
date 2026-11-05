@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_StickerTop_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerTop.WBP_MachineCustom_Sub_StickerTop_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_StickerTop_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::Construct()
 
 void UWBP_MachineCustom_Sub_StickerTop_C::ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTop(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTop");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_StickerTop_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTop", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_ExecuteUbergraph_WBP_MachineCustom_Sub_StickerTop Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::ExecuteUbergraph_WBP_MachineCustom_Sub
 
 void UWBP_MachineCustom_Sub_StickerTop_C::OnCancelEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnCancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnCancelEvent Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::OnCancelEvent(class UUnionUIButtonBase
 
 void UWBP_MachineCustom_Sub_StickerTop_C::OnDecisionEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnDecisionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnDecisionEvent Parms{};
 
@@ -99,10 +90,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::OnDecisionEvent(class UUnionUIButtonBa
 
 void UWBP_MachineCustom_Sub_StickerTop_C::OnDirectionEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnDirectionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnDirectionEvent Parms{};
 
@@ -120,10 +109,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::OnDirectionEvent(class UUnionUIButtonB
 
 void UWBP_MachineCustom_Sub_StickerTop_C::OnFaceButtonTopEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnFaceButtonTopEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnFaceButtonTopEvent Parms{};
 
@@ -140,10 +127,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::OnFaceButtonTopEvent(class UUnionUIBut
 
 void UWBP_MachineCustom_Sub_StickerTop_C::OnFocusedEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnFocusedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnFocusedEvent Parms{};
 
@@ -162,10 +147,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::OnFocusedEvent(class UUnionUIButtonBas
 
 struct FEventReply UWBP_MachineCustom_Sub_StickerTop_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_OnFocusReceived Parms{};
 
@@ -185,10 +168,8 @@ struct FEventReply UWBP_MachineCustom_Sub_StickerTop_C::OnFocusReceived(const st
 
 void UWBP_MachineCustom_Sub_StickerTop_C::SetButtonsPanel(class UUnionUIButtonsPanel* InButtonsPanel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "SetButtonsPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_SetButtonsPanel Parms{};
 
@@ -205,10 +186,8 @@ void UWBP_MachineCustom_Sub_StickerTop_C::SetButtonsPanel(class UUnionUIButtonsP
 
 void UWBP_MachineCustom_Sub_StickerTop_C::SetStickerImages(TArray<class AUnionStickerBase*>& Stickers)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_StickerTop_C", "SetStickerImages");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_StickerTop_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_StickerTop_C_SetStickerImages Parms{};
 
@@ -219,5 +198,5 @@ void UWBP_MachineCustom_Sub_StickerTop_C::SetStickerImages(TArray<class AUnionSt
 	Stickers = std::move(Parms.Stickers);
 }
 
-}
 
+SDK_NAMESPACE_END

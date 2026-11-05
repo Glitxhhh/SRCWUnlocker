@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PL_Race.PL_Race_C
 // 0x0000 (0x0298 - 0x0298)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_APL_Race_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GroupResult_Sub_TeamTable.WBP_GroupResult_Sub_TeamTable_C
 // 0x0148 (0x0440 - 0x02F8)
@@ -104,5 +103,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GroupResult_Sub_TeamTable_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "BPC_RaceSequenceStateTermination_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateTermination.BPC_RaceSequenceStateTermination_C.NextCeremony
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceSequenceStateTermination_C::NextCeremony()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "NextCeremony");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_RaceSequenceStateTermination_C::NextCeremony()
 
 void UBPC_RaceSequenceStateTermination_C::BindOnLoadingEndAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "BindOnLoadingEndAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UBPC_RaceSequenceStateTermination_C::BindOnLoadingEndAnimFinished()
 
 void UBPC_RaceSequenceStateTermination_C::SetSelectMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetSelectMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UBPC_RaceSequenceStateTermination_C::SetSelectMode()
 
 void UBPC_RaceSequenceStateTermination_C::SetGrandPrixNextRaceSetting()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "SetGrandPrixNextRaceSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UBPC_RaceSequenceStateTermination_C::SetGrandPrixNextRaceSetting()
 
 void UBPC_RaceSequenceStateTermination_C::ConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "ConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +81,8 @@ void UBPC_RaceSequenceStateTermination_C::ConstructionScript()
 
 void UBPC_RaceSequenceStateTermination_C::StartOpenLevelToMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartOpenLevelToMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +93,8 @@ void UBPC_RaceSequenceStateTermination_C::StartOpenLevelToMenu()
 
 void UBPC_RaceSequenceStateTermination_C::StartMatchRace()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMatchRace");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +105,8 @@ void UBPC_RaceSequenceStateTermination_C::StartMatchRace()
 
 void UBPC_RaceSequenceStateTermination_C::StartErrorHandling()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartErrorHandling");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +117,8 @@ void UBPC_RaceSequenceStateTermination_C::StartErrorHandling()
 
 void UBPC_RaceSequenceStateTermination_C::StartGrandPrix()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +129,8 @@ void UBPC_RaceSequenceStateTermination_C::StartGrandPrix()
 
 void UBPC_RaceSequenceStateTermination_C::StartTimeTrial()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartTimeTrial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +145,8 @@ void UBPC_RaceSequenceStateTermination_C::StartTimeTrial()
 
 void UBPC_RaceSequenceStateTermination_C::StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartMiddleLoading");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	Params::BPC_RaceSequenceStateTermination_C_StartMiddleLoading Parms{};
 
@@ -186,10 +163,8 @@ void UBPC_RaceSequenceStateTermination_C::StartMiddleLoading(int32 InLoadingPhas
 
 void UBPC_RaceSequenceStateTermination_C::StartParty()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "StartParty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -200,10 +175,8 @@ void UBPC_RaceSequenceStateTermination_C::StartParty()
 
 void UBPC_RaceSequenceStateTermination_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -214,10 +187,8 @@ void UBPC_RaceSequenceStateTermination_C::OnInitState()
 
 void UBPC_RaceSequenceStateTermination_C::OnRaceTermination()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "OnRaceTermination");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateTermination_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +201,8 @@ void UBPC_RaceSequenceStateTermination_C::OnRaceTermination()
 
 void UBPC_RaceSequenceStateTermination_C::ExecuteUbergraph_BPC_RaceSequenceStateTermination(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateTermination_C", "ExecuteUbergraph_BPC_RaceSequenceStateTermination");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateTermination_C", "ExecuteUbergraph_BPC_RaceSequenceStateTermination", FuncInfo);
 
 	Params::BPC_RaceSequenceStateTermination_C_ExecuteUbergraph_BPC_RaceSequenceStateTermination Parms{};
 
@@ -242,5 +211,5 @@ void UBPC_RaceSequenceStateTermination_C::ExecuteUbergraph_BPC_RaceSequenceState
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

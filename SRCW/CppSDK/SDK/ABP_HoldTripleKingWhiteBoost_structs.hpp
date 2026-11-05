@@ -13,8 +13,7 @@
 #include "ABPT_HoldItem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_HoldTripleKingWhiteBoost.ABP_HoldTripleKingWhiteBoost_C.AnimBlueprintGeneratedConstantData
 // 0x0000 (0x0D30 - 0x0D30)
@@ -23,5 +22,4 @@ struct ABP_HoldTripleKingWhiteBoost::FAnimBlueprintGeneratedConstantData final :
 };
 DUMPER7_ASSERTS_ABP_HoldTripleKingWhiteBoost__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

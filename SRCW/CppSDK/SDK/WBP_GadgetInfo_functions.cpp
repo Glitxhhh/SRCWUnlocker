@@ -14,8 +14,7 @@
 #include "WBP_GadgetInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetInfo.WBP_GadgetInfo_C.ExecuteUbergraph_WBP_GadgetInfo
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_GadgetInfo_C::ExecuteUbergraph_WBP_GadgetInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_C", "ExecuteUbergraph_WBP_GadgetInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetInfo_C", "ExecuteUbergraph_WBP_GadgetInfo", FuncInfo);
 
 	Params::WBP_GadgetInfo_C_ExecuteUbergraph_WBP_GadgetInfo Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_GadgetInfo_C::ExecuteUbergraph_WBP_GadgetInfo(int32 EntryPoint)
 
 void UWBP_GadgetInfo_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_C", FnName));
 
 	Params::WBP_GadgetInfo_C_PreConstruct Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_GadgetInfo_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GadgetInfo_C::SetDetailText(int32 textIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_C", "SetDetailText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_C", FnName));
 
 	Params::WBP_GadgetInfo_C_SetDetailText Parms{};
 
@@ -85,10 +78,8 @@ void UWBP_GadgetInfo_C::SetDetailText(int32 textIndex)
 
 void UWBP_GadgetInfo_C::SetGudgetInfo(EEventInfomationType EventInfomation, const TArray<int32>& GadgetIds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_C", "SetGudgetInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_C", FnName));
 
 	Params::WBP_GadgetInfo_C_SetGudgetInfo Parms{};
 
@@ -104,13 +95,11 @@ void UWBP_GadgetInfo_C::SetGudgetInfo(EEventInfomationType EventInfomation, cons
 
 void UWBP_GadgetInfo_C::UpdateFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetInfo_C", "UpdateFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

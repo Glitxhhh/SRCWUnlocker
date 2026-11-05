@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_FairPlayPointWindow.WBP_Friend_FairPlayPointWindow_C
 // 0x0050 (0x0398 - 0x0348)
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_FairPlayPointWindow_C;
 
-}
-
+SDK_NAMESPACE_END

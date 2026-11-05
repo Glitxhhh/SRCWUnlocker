@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BlueFlagMenuBG_3D.BP_BlueFlagMenuBG_3D_C
 // 0x00E0 (0x0370 - 0x0290)
@@ -128,5 +127,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_BlueFlagMenuBG_3D_C;
 
-}
-
+SDK_NAMESPACE_END

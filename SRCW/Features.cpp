@@ -354,8 +354,9 @@ bool RunUnlockPhase(int phase)
             auto* honorAsset = static_cast<SDK::UHonorTitleListDataAsset*>(Reflect::FindInstance("HonorTitleListDataAsset"));
             if (honorAsset) {
                 Reflect::CallInstance(honorAsset, "HonorTitleListDataAsset", "Update");
-                for (auto& pair : honorAsset->HonorTitleTableDataMap) {
-                    int32_t id = pair.Key();
+                std::vector<int32_t> titleIds;
+                if (!Reflect::ReadIntStructMapKeys(honorAsset, "HonorTitleTableDataMap", titleIds)) return true;
+                for (int32_t id : titleIds) {
                     if (ResolveEnabled(cfg.HonorTitleOverrides, id, cfg.HonorTitles)) {
                         Reflect::CallStaticInt32("AppSaveGameHelper", "UnlockHonorTitle", id);
                         unlocked++;
@@ -392,7 +393,34 @@ bool RunUnlockPhase(int phase)
         }
         return true; }
     case 2:  {
-        if (cfg.MachineCustomize) { Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn"); Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker"); std::cout << "[Phase 2] Machine customize\n"; }
+        if (cfg.MachineCustomize) {
+            const bool aura = Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllAura");
+            auto* auraCheat = Reflect::FindCDO("CheatAura");
+            const bool auraExtra = auraCheat && Reflect::CallInstance(auraCheat, "CheatAura", "UnlockAura");
+            std::cout << "[Phase 2] Additional aura unlock call=" << auraExtra << "\n";
+            const bool horn = Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllHorn");
+            const bool sticker = Reflect::CallStatic("MachineCustomizeUtilityLibrary", "StoreAllSticker");
+            std::cout << "[Phase 2] Bulk aura=" << aura << " horn=" << horn << " sticker=" << sticker << " (calls issued)\n";
+            std::vector<int32_t> stickerIds;
+            auto* content = Reflect::FindInstance("ContentDataAsset");
+            if (Reflect::ReadSeasonStickerIds(content, stickerIds)) {
+                int sent = 0;
+                for (int32_t id : stickerIds)
+                    if (Reflect::CallStaticInt32("MachineCustomizeUtilityLibrary", "GiveSticker", id)) ++sent;
+                std::cout << "[Phase 2] Season sticker unlock calls=" << sent << "\n";
+            } else std::cout << "[Phase 2] Season sticker lists unavailable or invalid; skipped\n";
+            int count = Reflect::GetEnumNum("EMachineHornType");
+            int none = Reflect::ResolveEnumValueByName("ELockType", "None");
+            int sent = 0;
+            if (count > 0 && count <= 256 && none >= 0 && none <= 255) {
+                for (int id = 0; id < count; ++id) {
+                    // Only touch horns already present in the save after StoreAllHorn.
+                    if (Reflect::CallStaticUInt8RetBool("MachineCustomizeUtilityLibrary", "HasCustomMachineHornInSaveDataMap", static_cast<uint8_t>(id)) &&
+                        Reflect::CallStaticUInt8UInt8("MachineCustomizeUtilityLibrary", "SetCustomMachineHornLockType", static_cast<uint8_t>(id), static_cast<uint8_t>(none))) ++sent;
+                }
+            }
+            std::cout << "[Phase 2] Horn unlock calls=" << sent << " (existing save entries)\n";
+        }
 
         // Gadgets: use the proven bulk call by default. Only switch to the per-ID
         // GiveGadget/LockGadget loop when the user has actually opted into per-item
@@ -451,8 +479,9 @@ bool RunUnlockPhase(int phase)
             auto* save = cfg.RemovalMode ? GetSaveGame() : nullptr;
             if (jukebox) {
                 Reflect::CallInstance(jukebox, "JukeboxDataAsset", "Update");
-                for (auto& pair : jukebox->AlbumDataMap) {
-                    int32_t id = pair.Key();
+                std::vector<int32_t> albumIds;
+                if (!Reflect::ReadIntStructMapKeys(jukebox, "AlbumDataMap", albumIds)) { albumIds.clear(); std::cout << "[Phase 5] Album map invalid; skipped\n"; }
+                for (int32_t id : albumIds) {
                     if (ResolveEnabled(cfg.AlbumOverrides, id, cfg.Music)) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetAlbumAvailable", id); albums++; }
                     else if (save) {
                         for (auto& cond : save->_UserJukeboxData.AlbumCondition) {
@@ -460,8 +489,9 @@ bool RunUnlockPhase(int phase)
                         }
                     }
                 }
-                for (auto& pair : jukebox->TrackDataMap) {
-                    int32_t id = pair.Key();
+                std::vector<int32_t> trackIds;
+                if (!Reflect::ReadIntStructMapKeys(jukebox, "TrackDataMap", trackIds)) { trackIds.clear(); std::cout << "[Phase 5] Track map invalid; skipped\n"; }
+                for (int32_t id : trackIds) {
                     if (ResolveEnabled(cfg.TrackOverrides, id, cfg.Music)) { Reflect::CallStaticInt32("AppSaveGameHelper", "SetTrackAvailable", id); tracks++; }
                     else if (save) {
                         for (auto& cond : save->_UserJukeboxData.TrackCondition) {
@@ -474,7 +504,14 @@ bool RunUnlockPhase(int phase)
                       << albumsRelocked << "/" << tracksRelocked << " albums/tracks relocked)\n";
         }
         return true; }
-    case 6:  { if (cfg.StagesDLC) { Reflect::CallStaticBool("UnionContentUtils", "RequestCheckContent", true); std::cout << "[Phase 6] DLC stages\n"; } return true; }
+    case 6: {
+        if (cfg.StagesDLC) {
+            const bool checked = Reflect::CallStaticBool("UnionContentUtils", "RequestCheckContent", true);
+            auto* duel = Reflect::FindCDO("CheatRivalDuel");
+            const bool duelCalled = duel && Reflect::CallInstance(duel, "CheatRivalDuel", "SetRivalDuelUnlockCourseStage");
+            std::cout << "[Phase 6] DLC check=" << checked << " rival-duel course call=" << duelCalled << "\n";
+        }
+        return true; }
     case 7:  {
         if (cfg.StagesGPOpen) {
             auto* gp = Reflect::FindCDO("CheatGrandPrix");
@@ -553,7 +590,9 @@ bool RunUnlockPhase(int phase)
         if (cfg.NF_HonorTitles) {
             int cleared = 0;
             auto* honorAsset = static_cast<SDK::UHonorTitleListDataAsset*>(Reflect::FindInstance("HonorTitleListDataAsset"));
-            if (honorAsset) for (auto& pair : honorAsset->HonorTitleTableDataMap) { Reflect::CallStaticInt32("AppSaveGameHelper", "ResetNewHonorTitle", pair.Key()); cleared++; }
+            std::vector<int32_t> titleIds;
+            if (!Reflect::ReadIntStructMapKeys(honorAsset, "HonorTitleTableDataMap", titleIds)) return true;
+            for (int32_t id : titleIds) { Reflect::CallStaticInt32("AppSaveGameHelper", "ResetNewHonorTitle", id); cleared++; }
             std::cout << "[Phase 15] Honor title new-flags (" << cleared << ")\n";
         }
         return true; }

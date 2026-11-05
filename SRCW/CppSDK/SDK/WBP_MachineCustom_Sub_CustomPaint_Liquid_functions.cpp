@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_CustomPaint_Liquid_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint_Liquid.WBP_MachineCustom_Sub_CustomPaint_Liquid_C.Decision
 // (Private, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Decision(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "Decision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_Decision Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Decision(class UUnionUIButtonB
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Focus(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "Focus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_Focus Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Focus(class UUnionUIButtonBase
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::SetCursorVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_SetCursorVisible Parms{};
 
@@ -85,10 +78,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::SetCursorVisible(bool bInIsVis
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Setup(class APlayerController* InPlayerController, const struct FMachineColorAreaUIDataGroup& InUIDataGroup)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_Setup Parms{};
 
@@ -106,10 +97,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::Setup(class APlayerController*
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::GetEnabledItems(TArray<class UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C*>* OutItems) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "GetEnabledItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_GetEnabledItems Parms{};
 
@@ -127,10 +116,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::GetEnabledItems(TArray<class U
 
 void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::GetItems(TArray<class UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C*>* OutItems) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_Liquid_C", "GetItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_Liquid_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_Liquid_C_GetItems Parms{};
 
@@ -140,5 +127,5 @@ void UWBP_MachineCustom_Sub_CustomPaint_Liquid_C::GetItems(TArray<class UWBP_Mac
 		*OutItems = std::move(Parms.OutItems);
 }
 
-}
 
+SDK_NAMESPACE_END

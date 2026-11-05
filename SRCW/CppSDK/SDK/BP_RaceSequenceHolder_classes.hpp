@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RaceSequenceHolder.BP_RaceSequenceHolder_C
 // 0x0038 (0x0320 - 0x02E8)
@@ -42,6 +41,11 @@ public:
 	void SetGrandPrixNextRaceSetting();
 	void SetSelectMode();
 	void StartErrorHandling();
+	void StartFinalize_GrandPrix();
+	void StartFinalize_MatchRace();
+	void StartFinalize_PartyRace();
+	void StartFinalize_RivalDuel();
+	void StartFinalize_TimeTrial();
 	void StartGrandPrix();
 	void StartMatchRace();
 	void StartMiddleLoading(int32 InLoadingPhaseNum, bool bInLoadingProgressMode, bool bInEndHide);
@@ -65,5 +69,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RaceSequenceHolder_C;
 
-}
-
+SDK_NAMESPACE_END

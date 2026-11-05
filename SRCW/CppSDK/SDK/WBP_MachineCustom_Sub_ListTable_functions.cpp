@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_ListTable_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_ListTable.WBP_MachineCustom_Sub_ListTable_C.ExecuteUbergraph_WBP_MachineCustom_Sub_ListTable
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_ListTable_C::ExecuteUbergraph_WBP_MachineCustom_Sub_ListTable(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ListTable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_ListTable_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_ListTable", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_ListTable_C_ExecuteUbergraph_WBP_MachineCustom_Sub_ListTable Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::ExecuteUbergraph_WBP_MachineCustom_Sub_
 
 void UWBP_MachineCustom_Sub_ListTable_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_ListTable_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_ListTable_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::OnLeftStickButtonPressed()
 
 void UWBP_MachineCustom_Sub_ListTable_C::PlayAnimationActiveLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "PlayAnimationActiveLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::PlayAnimationActiveLoop()
 
 void UWBP_MachineCustom_Sub_ListTable_C::PlayAnimationSelectLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "PlayAnimationSelectLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::PlayAnimationSelectLoop()
 
 void UWBP_MachineCustom_Sub_ListTable_C::PlaySECancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "PlaySECancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_MachineCustom_Sub_ListTable_C::PlaySECancel()
 
 void UWBP_MachineCustom_Sub_ListTable_C::PlaySEDecision()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "PlaySEDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,13 +123,11 @@ void UWBP_MachineCustom_Sub_ListTable_C::PlaySEDecision()
 
 void UWBP_MachineCustom_Sub_ListTable_C::PlaySEFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_ListTable_C", "PlaySEFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_ListTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

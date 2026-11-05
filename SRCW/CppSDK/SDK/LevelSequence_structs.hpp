@@ -15,8 +15,7 @@
 #include "MovieScene_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct LevelSequence.LevelSequenceBindingReference
 // 0x0040 (0x0040 - 0x0000)
@@ -152,5 +151,4 @@ public:
 };
 DUMPER7_ASSERTS_FLevelSequencePlayerSnapshot;
 
-}
-
+SDK_NAMESPACE_END

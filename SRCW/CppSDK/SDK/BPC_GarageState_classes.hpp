@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_GarageState.BPC_GarageState_C
 // 0x0018 (0x0140 - 0x0128)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_GarageState_C;
 
-}
-
+SDK_NAMESPACE_END

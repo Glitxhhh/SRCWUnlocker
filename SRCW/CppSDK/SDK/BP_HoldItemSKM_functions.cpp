@@ -14,8 +14,7 @@
 #include "BP_HoldItemSKM_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_HoldItemSKM.BP_HoldItemSKM_C.Create
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_HoldItemSKM_C::Create(const struct FHoldItemCreateParam& Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "Create");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_Create Parms{};
 
@@ -44,10 +41,8 @@ void ABP_HoldItemSKM_C::Create(const struct FHoldItemCreateParam& Param)
 
 void ABP_HoldItemSKM_C::CreateItem(const struct FHoldItemCreateParam& In_Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "CreateItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_CreateItem Parms{};
 
@@ -62,10 +57,8 @@ void ABP_HoldItemSKM_C::CreateItem(const struct FHoldItemCreateParam& In_Param)
 
 void ABP_HoldItemSKM_C::DestroyItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "DestroyItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void ABP_HoldItemSKM_C::DestroyItem()
 
 void ABP_HoldItemSKM_C::ExecuteUbergraph_BP_HoldItemSKM(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "ExecuteUbergraph_BP_HoldItemSKM");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_HoldItemSKM_C", "ExecuteUbergraph_BP_HoldItemSKM", FuncInfo);
 
 	Params::BP_HoldItemSKM_C_ExecuteUbergraph_BP_HoldItemSKM Parms{};
 
@@ -96,10 +87,8 @@ void ABP_HoldItemSKM_C::ExecuteUbergraph_BP_HoldItemSKM(int32 EntryPoint)
 
 void ABP_HoldItemSKM_C::PlayGetEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PlayGetEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +99,8 @@ void ABP_HoldItemSKM_C::PlayGetEffect()
 
 void ABP_HoldItemSKM_C::PlayLuckyItemEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PlayLuckyItemEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void ABP_HoldItemSKM_C::PlayLuckyItemEffect()
 
 void ABP_HoldItemSKM_C::PlayRareItemEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PlayRareItemEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void ABP_HoldItemSKM_C::PlayRareItemEffect()
 
 void ABP_HoldItemSKM_C::PlayUseEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PlayUseEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +137,8 @@ void ABP_HoldItemSKM_C::PlayUseEffect()
 
 void ABP_HoldItemSKM_C::PreCreate(const struct FHoldItemCreateParam& Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PreCreate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_PreCreate Parms{};
 
@@ -174,10 +155,8 @@ void ABP_HoldItemSKM_C::PreCreate(const struct FHoldItemCreateParam& Param)
 
 void ABP_HoldItemSKM_C::PreCreateItem(EItemId In_ItemId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "PreCreateItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_PreCreateItem Parms{};
 
@@ -192,10 +171,8 @@ void ABP_HoldItemSKM_C::PreCreateItem(EItemId In_ItemId)
 
 void ABP_HoldItemSKM_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -206,10 +183,8 @@ void ABP_HoldItemSKM_C::ReceiveBeginPlay()
 
 void ABP_HoldItemSKM_C::Reset()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "Reset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -224,10 +199,8 @@ void ABP_HoldItemSKM_C::Reset()
 
 void ABP_HoldItemSKM_C::SetLightChannels(bool Channel0, bool Channel1, bool Channel2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "SetLightChannels");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_SetLightChannels Parms{};
 
@@ -244,10 +217,8 @@ void ABP_HoldItemSKM_C::SetLightChannels(bool Channel0, bool Channel1, bool Chan
 
 void ABP_HoldItemSKM_C::Use()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "Use");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -258,10 +229,8 @@ void ABP_HoldItemSKM_C::Use()
 
 void ABP_HoldItemSKM_C::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "UserConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +243,8 @@ void ABP_HoldItemSKM_C::UserConstructionScript()
 
 class UMeshComponent* ABP_HoldItemSKM_C::GetMeshComponent() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSKM_C", "GetMeshComponent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSKM_C", FnName));
 
 	Params::BP_HoldItemSKM_C_GetMeshComponent Parms{};
 
@@ -286,5 +253,5 @@ class UMeshComponent* ABP_HoldItemSKM_C::GetMeshComponent() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

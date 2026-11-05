@@ -14,8 +14,7 @@
 #include "BPFL_ResultReward_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_ResultReward.BPFL_ResultReward_C.MakeOnlineResultRewardItemInfos
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -26,10 +25,8 @@ namespace SDK
 
 void UBPFL_ResultReward_C::MakeOnlineResultRewardItemInfos(TArray<struct FRewardRedStarRingData>& RSRList, class UObject* __WorldContext, TArray<struct FResultRewardItemInfo>* Output)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_ResultReward_C", "MakeOnlineResultRewardItemInfos");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_ResultReward_C", "MakeOnlineResultRewardItemInfos", FuncInfo);
 
 	Params::BPFL_ResultReward_C_MakeOnlineResultRewardItemInfos Parms{};
 
@@ -54,10 +51,8 @@ void UBPFL_ResultReward_C::MakeOnlineResultRewardItemInfos(TArray<struct FReward
 
 void UBPFL_ResultReward_C::MakeResultRewardItemInfos(TArray<struct FRewardRedStarRingData>& RSRList, class UObject* __WorldContext, TArray<struct FResultRewardItemInfo>* Output)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_ResultReward_C", "MakeResultRewardItemInfos");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_ResultReward_C", "MakeResultRewardItemInfos", FuncInfo);
 
 	Params::BPFL_ResultReward_C_MakeResultRewardItemInfos Parms{};
 
@@ -72,5 +67,5 @@ void UBPFL_ResultReward_C::MakeResultRewardItemInfos(TArray<struct FRewardRedSta
 		*Output = std::move(Parms.Output);
 }
 
-}
 
+SDK_NAMESPACE_END

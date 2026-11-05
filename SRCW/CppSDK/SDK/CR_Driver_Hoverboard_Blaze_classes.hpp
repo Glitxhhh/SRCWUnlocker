@@ -13,8 +13,7 @@
 #include "ControlRig_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // RigVMBlueprintGeneratedClass CR_Driver_Hoverboard_Blaze.CR_Driver_Hoverboard_Blaze_C
 // 0x0008 (0x0AB0 - 0x0AA8)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UCR_Driver_Hoverboard_Blaze_C;
 
-}
-
+SDK_NAMESPACE_END

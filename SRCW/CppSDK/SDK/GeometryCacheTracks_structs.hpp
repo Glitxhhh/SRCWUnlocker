@@ -14,8 +14,7 @@
 #include "MovieScene_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct GeometryCacheTracks.MovieSceneGeometryCacheParams
 // 0x0048 (0x0048 - 0x0000)
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneGeometryCacheSectionTemplate;
 
-}
-
+SDK_NAMESPACE_END

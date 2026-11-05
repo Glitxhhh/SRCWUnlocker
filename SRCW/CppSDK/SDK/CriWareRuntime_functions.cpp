@@ -14,8 +14,7 @@
 #include "CriWareRuntime_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function CriWareRuntime.Atom3dRegion.GetHandle
 // (Final, Native, Public, BlueprintCallable)
@@ -9811,5 +9810,5 @@ bool USoundAtomCueSheet::IsRawAcbDataAvailable() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

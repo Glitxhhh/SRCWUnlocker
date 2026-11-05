@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum SequencerScripting.ESequenceTimeUnit
 // NumValues: 0x0003
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FSequencerScriptingRange;
 
-}
-
+SDK_NAMESPACE_END

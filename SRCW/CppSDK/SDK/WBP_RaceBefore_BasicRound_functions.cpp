@@ -14,18 +14,15 @@
 #include "WBP_RaceBefore_BasicRound_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_RaceBefore_BasicRound.WBP_RaceBefore_BasicRound_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_RaceBefore_BasicRound_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_RaceBefore_BasicRound_C::Construct()
 
 void UWBP_RaceBefore_BasicRound_C::ExecuteUbergraph_WBP_RaceBefore_BasicRound(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "ExecuteUbergraph_WBP_RaceBefore_BasicRound");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_RaceBefore_BasicRound_C", "ExecuteUbergraph_WBP_RaceBefore_BasicRound", FuncInfo);
 
 	Params::WBP_RaceBefore_BasicRound_C_ExecuteUbergraph_WBP_RaceBefore_BasicRound Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_RaceBefore_BasicRound_C::ExecuteUbergraph_WBP_RaceBefore_BasicRound(in
 
 void UWBP_RaceBefore_BasicRound_C::FireAnimation(bool In)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "FireAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	Params::WBP_RaceBefore_BasicRound_C_FireAnimation Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_RaceBefore_BasicRound_C::FireAnimation(bool In)
 
 void UWBP_RaceBefore_BasicRound_C::OnOutAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "OnOutAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_RaceBefore_BasicRound_C::OnOutAnimFinished()
 
 void UWBP_RaceBefore_BasicRound_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	Params::WBP_RaceBefore_BasicRound_C_PreConstruct Parms{};
 
@@ -112,10 +101,8 @@ void UWBP_RaceBefore_BasicRound_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_RaceBefore_BasicRound_C::SetGrandPrix(EGrandPrixId newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "SetGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	Params::WBP_RaceBefore_BasicRound_C_SetGrandPrix Parms{};
 
@@ -133,10 +120,8 @@ void UWBP_RaceBefore_BasicRound_C::SetGrandPrix(EGrandPrixId newParam)
 
 void UWBP_RaceBefore_BasicRound_C::SetRoundAndStageName(const class FText& InRoundName, const class FText& InStageName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "SetRoundAndStageName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	Params::WBP_RaceBefore_BasicRound_C_SetRoundAndStageName Parms{};
 
@@ -154,10 +139,8 @@ void UWBP_RaceBefore_BasicRound_C::SetRoundAndStageName(const class FText& InRou
 
 void UWBP_RaceBefore_BasicRound_C::SetStageIconTexture(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RaceBefore_BasicRound_C", "SetStageIconTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_RaceBefore_BasicRound_C", FnName));
 
 	Params::WBP_RaceBefore_BasicRound_C_SetStageIconTexture Parms{};
 
@@ -166,5 +149,5 @@ void UWBP_RaceBefore_BasicRound_C::SetStageIconTexture(class UTexture2D* Texture
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

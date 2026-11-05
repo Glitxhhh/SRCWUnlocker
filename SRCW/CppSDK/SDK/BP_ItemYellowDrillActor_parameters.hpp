@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_ItemYellowDrillActor.BP_ItemYellowDrillActor_C.ExecuteUbergraph_BP_ItemYellowDrillActor
 // 0x0018 (0x0018 - 0x0000)
@@ -36,5 +36,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_ItemYellowDrillActor_C_OnCountDown;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

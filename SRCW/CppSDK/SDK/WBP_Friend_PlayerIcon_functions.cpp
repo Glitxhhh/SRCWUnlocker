@@ -14,8 +14,7 @@
 #include "WBP_Friend_PlayerIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_PlayerIcon.WBP_Friend_PlayerIcon_C.Check Release Response InputType
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_PlayerIcon_C::Check_Release_Response_InputType(bool* bOutReleaseResponseInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "Check Release Response InputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_Check_Release_Response_InputType Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_Friend_PlayerIcon_C::Check_Release_Response_InputType(bool* bOutReleas
 
 void UWBP_Friend_PlayerIcon_C::ExecuteUbergraph_WBP_Friend_PlayerIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "ExecuteUbergraph_WBP_Friend_PlayerIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_PlayerIcon_C", "ExecuteUbergraph_WBP_Friend_PlayerIcon", FuncInfo);
 
 	Params::WBP_Friend_PlayerIcon_C_ExecuteUbergraph_WBP_Friend_PlayerIcon Parms{};
 
@@ -63,10 +58,8 @@ void UWBP_Friend_PlayerIcon_C::ExecuteUbergraph_WBP_Friend_PlayerIcon(int32 Entr
 
 void UWBP_Friend_PlayerIcon_C::ForceFocusGateOpen()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "ForceFocusGateOpen");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -77,10 +70,8 @@ void UWBP_Friend_PlayerIcon_C::ForceFocusGateOpen()
 
 void UWBP_Friend_PlayerIcon_C::ForceUnfocusGateOpen()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "ForceUnfocusGateOpen");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +82,8 @@ void UWBP_Friend_PlayerIcon_C::ForceUnfocusGateOpen()
 
 void UWBP_Friend_PlayerIcon_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +94,8 @@ void UWBP_Friend_PlayerIcon_C::OnAcceptKeyPressed()
 
 void UWBP_Friend_PlayerIcon_C::OnAcceptKeyPressedImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnAcceptKeyPressedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +108,8 @@ void UWBP_Friend_PlayerIcon_C::OnAcceptKeyPressedImpl()
 
 void UWBP_Friend_PlayerIcon_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnAddedToFocusPath Parms{};
 
@@ -139,10 +124,8 @@ void UWBP_Friend_PlayerIcon_C::OnAddedToFocusPath(const struct FFocusEvent& InFo
 
 void UWBP_Friend_PlayerIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,10 +136,8 @@ void UWBP_Friend_PlayerIcon_C::OnBackKeyPressed()
 
 void UWBP_Friend_PlayerIcon_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -169,10 +150,8 @@ void UWBP_Friend_PlayerIcon_C::OnFocusAnimStart()
 
 void UWBP_Friend_PlayerIcon_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnFocusImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnFocusImpl Parms{};
 
@@ -189,10 +168,8 @@ void UWBP_Friend_PlayerIcon_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 
 void UWBP_Friend_PlayerIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnFocusLost Parms{};
 
@@ -211,10 +188,8 @@ void UWBP_Friend_PlayerIcon_C::OnFocusLost(const struct FFocusEvent& InFocusEven
 
 struct FEventReply UWBP_Friend_PlayerIcon_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnFocusReceived Parms{};
 
@@ -232,10 +207,8 @@ struct FEventReply UWBP_Friend_PlayerIcon_C::OnFocusReceived(const struct FGeome
 
 void UWBP_Friend_PlayerIcon_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -248,10 +221,8 @@ void UWBP_Friend_PlayerIcon_C::OnInitialized()
 
 void UWBP_Friend_PlayerIcon_C::OnLoaded_8D4F99AE4CC9B40CFE879E8D838B5BEB(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnLoaded_8D4F99AE4CC9B40CFE879E8D838B5BEB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnLoaded_8D4F99AE4CC9B40CFE879E8D838B5BEB Parms{};
 
@@ -268,10 +239,8 @@ void UWBP_Friend_PlayerIcon_C::OnLoaded_8D4F99AE4CC9B40CFE879E8D838B5BEB(class U
 
 void UWBP_Friend_PlayerIcon_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_OnRemovedFromFocusPath Parms{};
 
@@ -286,10 +255,8 @@ void UWBP_Friend_PlayerIcon_C::OnRemovedFromFocusPath(const struct FFocusEvent& 
 
 void UWBP_Friend_PlayerIcon_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -302,10 +269,8 @@ void UWBP_Friend_PlayerIcon_C::OnUnFocusAnimStart()
 
 void UWBP_Friend_PlayerIcon_C::SetButtonFocusType(EButtonFocusType InFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetButtonFocusType Parms{};
 
@@ -322,10 +287,8 @@ void UWBP_Friend_PlayerIcon_C::SetButtonFocusType(EButtonFocusType InFocusType)
 
 void UWBP_Friend_PlayerIcon_C::SetCursorVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetCursorVisible Parms{};
 
@@ -342,10 +305,8 @@ void UWBP_Friend_PlayerIcon_C::SetCursorVisible(bool bInVisible)
 
 void UWBP_Friend_PlayerIcon_C::SetIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetIconVisible Parms{};
 
@@ -362,10 +323,8 @@ void UWBP_Friend_PlayerIcon_C::SetIconVisible(bool bInVisible)
 
 void UWBP_Friend_PlayerIcon_C::SetMouseInteractionEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetMouseInteractionEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetMouseInteractionEnable Parms{};
 
@@ -382,10 +341,8 @@ void UWBP_Friend_PlayerIcon_C::SetMouseInteractionEnable(bool bInEnable)
 
 void UWBP_Friend_PlayerIcon_C::SetNowPlayingIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetNowPlayingIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetNowPlayingIconVisible Parms{};
 
@@ -403,10 +360,8 @@ void UWBP_Friend_PlayerIcon_C::SetNowPlayingIconVisible(bool bInVisible)
 
 void UWBP_Friend_PlayerIcon_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2D> InIconTexture, const struct FLinearColor& InIconBgColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetPlayerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetPlayerIcon Parms{};
 
@@ -424,10 +379,8 @@ void UWBP_Friend_PlayerIcon_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2D> In
 
 void UWBP_Friend_PlayerIcon_C::SetWidgetFocus(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_PlayerIcon_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_PlayerIcon_C", FnName));
 
 	Params::WBP_Friend_PlayerIcon_C_SetWidgetFocus Parms{};
 
@@ -436,5 +389,5 @@ void UWBP_Friend_PlayerIcon_C::SetWidgetFocus(bool bInPlayFocusSound)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

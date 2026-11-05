@@ -14,8 +14,7 @@
 #include "ConsoleVariablesEditorRuntime_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ConsoleVariablesEditorRuntime.ConsoleVariablesAsset.AddOrSetConsoleObjectSavedData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
@@ -336,5 +335,5 @@ class FString UConsoleVariablesAsset::GetVariableCollectionDescription() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

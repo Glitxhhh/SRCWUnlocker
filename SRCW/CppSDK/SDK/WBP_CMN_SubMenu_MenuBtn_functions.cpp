@@ -14,8 +14,7 @@
 #include "WBP_CMN_SubMenu_MenuBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_SubMenu_MenuBtn.WBP_CMN_SubMenu_MenuBtn_C.Check Button Selectable
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_CMN_SubMenu_MenuBtn_C::Check_Button_Selectable(ECommonMenuButtonType InMenuButtonType, bool* bOutSelectable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "Check Button Selectable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_Check_Button_Selectable Parms{};
 
@@ -48,10 +45,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::Check_Button_Selectable(ECommonMenuButtonType I
 
 void UWBP_CMN_SubMenu_MenuBtn_C::Check_Chara_Machine_New(bool* NewFlag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "Check Chara Machine New");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_Check_Chara_Machine_New Parms{};
 
@@ -69,10 +64,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::Check_Chara_Machine_New(bool* NewFlag)
 
 void UWBP_CMN_SubMenu_MenuBtn_C::ExecuteUbergraph_WBP_CMN_SubMenu_MenuBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "ExecuteUbergraph_WBP_CMN_SubMenu_MenuBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_SubMenu_MenuBtn_C", "ExecuteUbergraph_WBP_CMN_SubMenu_MenuBtn", FuncInfo);
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_ExecuteUbergraph_WBP_CMN_SubMenu_MenuBtn Parms{};
 
@@ -87,33 +80,10 @@ void UWBP_CMN_SubMenu_MenuBtn_C::ExecuteUbergraph_WBP_CMN_SubMenu_MenuBtn(int32 
 
 void UWBP_CMN_SubMenu_MenuBtn_C::InitializeNewIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "InitializeNewIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CMN_SubMenu_MenuBtn.WBP_CMN_SubMenu_MenuBtn_C.IsDisableGadgetEquipped
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   DisableListEquipped                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CMN_SubMenu_MenuBtn_C::IsDisableGadgetEquipped(bool* DisableListEquipped)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "IsDisableGadgetEquipped");
-
-	Params::WBP_CMN_SubMenu_MenuBtn_C_IsDisableGadgetEquipped Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DisableListEquipped != nullptr)
-		*DisableListEquipped = Parms.DisableListEquipped;
 }
 
 
@@ -124,10 +94,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::IsDisableGadgetEquipped(bool* DisableListEquipp
 
 void UWBP_CMN_SubMenu_MenuBtn_C::IsGadgetNew(bool* bIsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "IsGadgetNew");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_IsGadgetNew Parms{};
 
@@ -143,10 +111,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::IsGadgetNew(bool* bIsNew)
 
 void UWBP_CMN_SubMenu_MenuBtn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -157,10 +123,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::OnAcceptKeyPressed()
 
 void UWBP_CMN_SubMenu_MenuBtn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -173,10 +137,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::OnBackKeyPressed()
 
 void UWBP_CMN_SubMenu_MenuBtn_C::OnChangeSpIcon(bool bIsSpIconVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnChangeSpIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_OnChangeSpIcon Parms{};
 
@@ -193,10 +155,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::OnChangeSpIcon(bool bIsSpIconVisible)
 
 void UWBP_CMN_SubMenu_MenuBtn_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_OnFocusLost Parms{};
 
@@ -215,10 +175,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::OnFocusLost(const struct FFocusEvent& InFocusEv
 
 struct FEventReply UWBP_CMN_SubMenu_MenuBtn_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_OnFocusReceived Parms{};
 
@@ -236,10 +194,8 @@ struct FEventReply UWBP_CMN_SubMenu_MenuBtn_C::OnFocusReceived(const struct FGeo
 
 void UWBP_CMN_SubMenu_MenuBtn_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -252,10 +208,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::OnInitialize()
 
 void UWBP_CMN_SubMenu_MenuBtn_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_PreConstruct Parms{};
 
@@ -272,10 +226,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CMN_SubMenu_MenuBtn_C::SetEnableButton(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "SetEnableButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_SetEnableButton Parms{};
 
@@ -292,10 +244,8 @@ void UWBP_CMN_SubMenu_MenuBtn_C::SetEnableButton(bool IsEnable)
 
 void UWBP_CMN_SubMenu_MenuBtn_C::SetIcon(ECommonMenuButtonType Type)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_SubMenu_MenuBtn_C", "SetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_SubMenu_MenuBtn_C", FnName));
 
 	Params::WBP_CMN_SubMenu_MenuBtn_C_SetIcon Parms{};
 
@@ -304,5 +254,5 @@ void UWBP_CMN_SubMenu_MenuBtn_C::SetIcon(ECommonMenuButtonType Type)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

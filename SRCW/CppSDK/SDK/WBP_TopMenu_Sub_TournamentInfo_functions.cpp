@@ -14,18 +14,39 @@
 #include "WBP_TopMenu_Sub_TournamentInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.BndEvt__WBP_TopMenu_Sub_TournamentInfo_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_TopMenu_Sub_TournamentInfo_C::BndEvt__WBP_TopMenu_Sub_TournamentInfo_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_TournamentInfo_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "BndEvt__WBP_TopMenu_Sub_TournamentInfo_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::Construct()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_TournamentInfo_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::Destruct()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_TournamentInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,14 +59,30 @@ void UWBP_TopMenu_Sub_TournamentInfo_C::BndEvt__WBP_TopMenu_Sub_TournamentInfo_M
 
 void UWBP_TopMenu_Sub_TournamentInfo_C::ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopMenu_Sub_TournamentInfo_C", "ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo", FuncInfo);
 
 	Params::WBP_TopMenu_Sub_TournamentInfo_C_ExecuteUbergraph_WBP_TopMenu_Sub_TournamentInfo Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TopMenu_Sub_TournamentInfo.WBP_TopMenu_Sub_TournamentInfo_C.OnVisibilityChangedEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ESlateVisibility                        InVisibility                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TopMenu_Sub_TournamentInfo_C::OnVisibilityChangedEvent(ESlateVisibility InVisibility)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_TournamentInfo_C", FnName));
+
+	Params::WBP_TopMenu_Sub_TournamentInfo_C_OnVisibilityChangedEvent Parms{};
+
+	Parms.InVisibility = InVisibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -58,10 +95,8 @@ void UWBP_TopMenu_Sub_TournamentInfo_C::ExecuteUbergraph_WBP_TopMenu_Sub_Tournam
 
 void UWBP_TopMenu_Sub_TournamentInfo_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopMenu_Sub_TournamentInfo_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopMenu_Sub_TournamentInfo_C", FnName));
 
 	Params::WBP_TopMenu_Sub_TournamentInfo_C_PreConstruct Parms{};
 
@@ -70,5 +105,5 @@ void UWBP_TopMenu_Sub_TournamentInfo_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

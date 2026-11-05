@@ -14,8 +14,7 @@
 #include "WBP_MachinrCustom_Sub_Paint_PresetWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachinrCustom_Sub_Paint_PresetWindow.WBP_MachinrCustom_Sub_Paint_PresetWindow_C.BuildNavigation
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::BuildNavigation(bool bInWrapLeftRight, bool IsSimpleCustom)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "BuildNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_BuildNavigation Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::BuildNavigation(bool bInWrapLe
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +55,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Construct()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Decision(class UUnionUIButtonBase* InButton)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "Decision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_Decision Parms{};
 
@@ -80,10 +73,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Decision(class UUnionUIButtonB
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Event_OnFocused(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "Event_OnFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_Event_OnFocused Parms{};
 
@@ -103,10 +94,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Event_OnFocused(class UUnionUI
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Event_OnSideNavigationCustom(EUnionUIControlDir InDirection, class UUnionUIButtonBase* InButton, int32 InRowIndex, int32 InColumnIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "Event_OnSideNavigationCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_Event_OnSideNavigationCustom Parms{};
 
@@ -126,10 +115,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::Event_OnSideNavigationCustom(E
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetWindow", FuncInfo);
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_ExecuteUbergraph_WBP_MachinrCustom_Sub_Paint_PresetWindow Parms{};
 
@@ -144,10 +131,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::ExecuteUbergraph_WBP_MachinrCu
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::HideCursor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "HideCursor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +143,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::HideCursor()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::HideTextBalloon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "HideTextBalloon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +157,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::HideTextBalloon()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetButtonsPanel(class UUnionUIButtonsPanel* InButtonsPanel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "SetButtonsPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_SetButtonsPanel Parms{};
 
@@ -194,10 +175,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetButtonsPanel(class UUnionUI
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetItems(TArray<struct FST_ColorPresetSelectPageItemData>& InItemDataList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "SetItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_SetItems Parms{};
 
@@ -216,10 +195,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetItems(TArray<struct FST_Col
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetItemsPlayerIndex(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "SetItemsPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_SetItemsPlayerIndex Parms{};
 
@@ -234,10 +211,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetItemsPlayerIndex(int32 InPl
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetupItems()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "SetupItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +226,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::SetupItems()
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItem(int32 InIndex, class UWBP_MachinrCustom_Sub_Paint_PresetIcon_C** Output) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "GetItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetItem Parms{};
 
@@ -274,10 +247,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItem(int32 InIndex, class U
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItemNumInRow(int32* OutItemNumInRow) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "GetItemNumInRow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetItemNumInRow Parms{};
 
@@ -295,10 +266,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItemNumInRow(int32* OutItem
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItems(TArray<class UWBP_MachinrCustom_Sub_Paint_PresetIcon_C*>* list) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "GetItems");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetItems Parms{};
 
@@ -316,10 +285,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetItems(TArray<class UWBP_Mac
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetLastSelectedIndex(int32* LastSelectedIndex_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "GetLastSelectedIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetLastSelectedIndex Parms{};
 
@@ -337,10 +304,8 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetLastSelectedIndex(int32* La
 
 void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetNavigation(class UUnionUIGridNavigationBuilder** GridNavigationBuilder_0) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachinrCustom_Sub_Paint_PresetWindow_C", "GetNavigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachinrCustom_Sub_Paint_PresetWindow_C", FnName));
 
 	Params::WBP_MachinrCustom_Sub_Paint_PresetWindow_C_GetNavigation Parms{};
 
@@ -350,5 +315,5 @@ void UWBP_MachinrCustom_Sub_Paint_PresetWindow_C::GetNavigation(class UUnionUIGr
 		*GridNavigationBuilder_0 = Parms.GridNavigationBuilder_0;
 }
 
-}
 
+SDK_NAMESPACE_END

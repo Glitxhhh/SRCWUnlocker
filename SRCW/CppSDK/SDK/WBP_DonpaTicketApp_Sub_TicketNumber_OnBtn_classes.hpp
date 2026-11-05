@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn.WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C
 // 0x0028 (0x0308 - 0x02E0)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C;
 
-}
-
+SDK_NAMESPACE_END

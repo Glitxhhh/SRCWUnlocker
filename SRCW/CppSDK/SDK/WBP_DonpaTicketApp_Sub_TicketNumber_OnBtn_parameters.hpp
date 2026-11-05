@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn.WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C.ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn
 // 0x0030 (0x0030 - 0x0000)
@@ -37,5 +37,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C_SetTicketCount;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

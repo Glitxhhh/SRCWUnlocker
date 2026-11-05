@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
-#include "UnionUI_classes.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_ColorPicker_LiquidIcon.WBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C
 // 0x0050 (0x04D0 - 0x0480)
@@ -70,5 +69,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_ColorPicker_LiquidIcon_C;
 
-}
-
+SDK_NAMESPACE_END

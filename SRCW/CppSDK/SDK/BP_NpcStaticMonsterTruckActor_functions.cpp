@@ -14,8 +14,7 @@
 #include "BP_NpcStaticMonsterTruckActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_NpcStaticMonsterTruckActor.BP_NpcStaticMonsterTruckActor_C.ExecuteUbergraph_BP_NpcStaticMonsterTruckActor
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_NpcStaticMonsterTruckActor_C::ExecuteUbergraph_BP_NpcStaticMonsterTruckActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticMonsterTruckActor_C", "ExecuteUbergraph_BP_NpcStaticMonsterTruckActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_NpcStaticMonsterTruckActor_C", "ExecuteUbergraph_BP_NpcStaticMonsterTruckActor", FuncInfo);
 
 	Params::BP_NpcStaticMonsterTruckActor_C_ExecuteUbergraph_BP_NpcStaticMonsterTruckActor Parms{};
 
@@ -46,10 +43,8 @@ void ABP_NpcStaticMonsterTruckActor_C::ExecuteUbergraph_BP_NpcStaticMonsterTruck
 
 void ABP_NpcStaticMonsterTruckActor_C::OnCountDown(bool bIsPlay, const struct FLinearColor& Color, bool bWithDriver)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticMonsterTruckActor_C", "OnCountDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticMonsterTruckActor_C", FnName));
 
 	Params::BP_NpcStaticMonsterTruckActor_C_OnCountDown Parms{};
 
@@ -66,10 +61,8 @@ void ABP_NpcStaticMonsterTruckActor_C::OnCountDown(bool bIsPlay, const struct FL
 
 void ABP_NpcStaticMonsterTruckActor_C::Timeline_CountDown__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticMonsterTruckActor_C", "Timeline CountDown__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticMonsterTruckActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,13 +73,11 @@ void ABP_NpcStaticMonsterTruckActor_C::Timeline_CountDown__FinishedFunc()
 
 void ABP_NpcStaticMonsterTruckActor_C::Timeline_CountDown__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcStaticMonsterTruckActor_C", "Timeline CountDown__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_NpcStaticMonsterTruckActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

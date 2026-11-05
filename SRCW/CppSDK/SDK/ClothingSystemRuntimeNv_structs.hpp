@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum ClothingSystemRuntimeNv.EClothingWindMethodNv
 // NumValues: 0x0003
@@ -35,5 +34,4 @@ public:
 };
 DUMPER7_ASSERTS_FClothConstraintSetupNv;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass DELETE_WBP_PauseMenu_Sub_Option_Top_Btn.DELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C
 // 0x0058 (0x04D8 - 0x0480)
@@ -50,6 +49,8 @@ public:
 	void OnBrakeInput(float InValue);
 	void OnDriftPressed();
 	void OnDriftReleased();
+	void OnDuelUltimatePressed();
+	void OnDuelUltimateReleased();
 	void OnEmotePressed();
 	void OnEmoteReleased();
 	void OnFocus_Impl();
@@ -94,5 +95,4 @@ public:
 };
 DUMPER7_ASSERTS_UDELETE_WBP_PauseMenu_Sub_Option_Top_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BPC_SegaAccount_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_SegaAccount.BPC_SegaAccount_C.ExecuteUbergraph_BPC_SegaAccount
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_SegaAccount_C::ExecuteUbergraph_BPC_SegaAccount(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SegaAccount_C", "ExecuteUbergraph_BPC_SegaAccount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_SegaAccount_C", "ExecuteUbergraph_BPC_SegaAccount", FuncInfo);
 
 	Params::BPC_SegaAccount_C_ExecuteUbergraph_BPC_SegaAccount Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_SegaAccount_C::ExecuteUbergraph_BPC_SegaAccount(int32 EntryPoint)
 
 void UBPC_SegaAccount_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SegaAccount_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_SegaAccount_C", FnName));
 
 	Params::BPC_SegaAccount_C_OnUpdateState Parms{};
 
@@ -56,5 +51,5 @@ void UBPC_SegaAccount_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

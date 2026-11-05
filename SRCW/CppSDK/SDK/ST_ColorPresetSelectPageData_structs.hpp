@@ -14,8 +14,7 @@
 #include "ST_ColorPresetSelectPageItemData_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_ColorPresetSelectPageData.ST_ColorPresetSelectPageData
 // 0x0018 (0x0018 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_ColorPresetSelectPageData;
 
-}
-
+SDK_NAMESPACE_END

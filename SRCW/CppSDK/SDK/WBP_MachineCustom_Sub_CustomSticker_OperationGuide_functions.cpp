@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_CustomSticker_OperationGuide_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomSticker_OperationGuide.WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::Construct()
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuide(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuide");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuide", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuide Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::ExecuteUbergraph_WBP
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::PlayGuideIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "PlayGuideIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::PlayGuideIn()
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::PlayGuideOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "PlayGuideOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +82,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::PlayGuideOut()
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetButtonInfo(class UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C* GuideButton, const class FText& ButtonText, bool bIsRequirePlusButton, bool bIsSimultaneously, TArray<int32>& SwitchIndex, TArray<int32>& ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "SetButtonInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C_SetButtonInfo Parms{};
 
@@ -120,10 +109,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetButtonInfo(class 
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetGuideColor(class UWBP_MachineCustom_Sub_CustomSticker_OperationGuideBtn_C* Guide, const struct FLinearColor& Color)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "SetGuideColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C_SetGuideColor Parms{};
 
@@ -141,10 +128,8 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetGuideColor(class 
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetProhibitControll(bool IsFulldesign)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "SetProhibitControll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C_SetProhibitControll Parms{};
 
@@ -159,13 +144,11 @@ void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetProhibitControll(
 
 void UWBP_MachineCustom_Sub_CustomSticker_OperationGuide_C::SetupGuidelineButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", "SetupGuidelineButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

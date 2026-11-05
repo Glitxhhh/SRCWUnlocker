@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_FooterMenu_Sub_Key.WBP_FooterMenu_Sub_Key_C
 // 0x0018 (0x0320 - 0x0308)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_FooterMenu_Sub_Key_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,11 +13,10 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBlackBombLv3Object.BP_ItemBlackBombLv3Object_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x0A10 - 0x0A10)
 class ABP_ItemBlackBombLv3Object_C final : public AItemBlackBombLv3Object
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemBlackBombLv3Object_C;
 
-}
-
+SDK_NAMESPACE_END

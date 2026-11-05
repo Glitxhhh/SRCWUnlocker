@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemKingWhiteBoostObject.BP_ItemKingWhiteBoostObject_C
 // 0x0000 (0x0610 - 0x0610)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemKingWhiteBoostObject_C;
 
-}
-
+SDK_NAMESPACE_END

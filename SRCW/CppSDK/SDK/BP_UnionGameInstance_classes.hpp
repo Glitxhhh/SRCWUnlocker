@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "UnionSystem_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UnionGameInstance.BP_UnionGameInstance_C
 // 0x0040 (0x0220 - 0x01E0)
@@ -29,9 +28,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_UnionGameInstance(int32 EntryPoint);
-	void OnLoaded_C798D8744866C6A781E1E5B0E4C53C75(class UObject* Loaded);
 	void ReceiveInit();
-	void SetUpMilestone();
 
 	void GetVCSRevisionNumIF(int32* RevisionNum) const;
 	void GetVCSRevisionStrIF(class FString* VCSStr) const;
@@ -52,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_UnionGameInstance_C;
 
-}
-
+SDK_NAMESPACE_END

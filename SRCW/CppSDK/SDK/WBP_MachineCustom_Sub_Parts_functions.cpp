@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Sub_Parts_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_Parts.WBP_MachineCustom_Sub_Parts_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineCustom_Sub_Parts_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Parts_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Parts_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineCustom_Sub_Parts_C::Construct()
 
 void UWBP_MachineCustom_Sub_Parts_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Parts(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Parts_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Parts");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_Parts_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Parts", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_Parts_C_ExecuteUbergraph_WBP_MachineCustom_Sub_Parts Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_MachineCustom_Sub_Parts_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Part
 
 void UWBP_MachineCustom_Sub_Parts_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Parts_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Parts_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Parts_C_PreConstruct Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_MachineCustom_Sub_Parts_C::PreConstruct(bool IsDesignTime)
 
 class URewardDialog* UWBP_MachineCustom_Sub_Parts_C::OnCreateRewardDialog() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Parts_C", "OnCreateRewardDialog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Parts_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Parts_C_OnCreateRewardDialog Parms{};
 
@@ -90,5 +81,5 @@ class URewardDialog* UWBP_MachineCustom_Sub_Parts_C::OnCreateRewardDialog() cons
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

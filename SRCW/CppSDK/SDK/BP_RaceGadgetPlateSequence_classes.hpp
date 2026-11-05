@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "UnionRun_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RaceGadgetPlateSequence.BP_RaceGadgetPlateSequence_C
 // 0x0068 (0x03D0 - 0x0368)
@@ -76,5 +76,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RaceGadgetPlateSequence_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -12,12 +12,11 @@
 
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CourseSelect_Sub_StageBox_3piece.WBP_CourseSelect_Sub_StageBox_3piece_C
 // 0x0168 (0x0540 - 0x03D8)
@@ -74,5 +73,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CourseSelect_Sub_StageBox_3piece_C;
 
-}
-
+SDK_NAMESPACE_END

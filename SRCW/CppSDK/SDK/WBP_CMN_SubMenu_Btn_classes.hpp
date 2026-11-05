@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_SubMenu_Btn.WBP_CMN_SubMenu_Btn_C
 // 0x0010 (0x04F0 - 0x04E0)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_SubMenu_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

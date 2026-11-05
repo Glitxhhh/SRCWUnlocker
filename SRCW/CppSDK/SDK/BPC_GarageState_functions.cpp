@@ -14,8 +14,7 @@
 #include "BPC_GarageState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_GarageState.BPC_GarageState_C.ExecuteUbergraph_BPC_GarageState
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_GarageState_C::ExecuteUbergraph_BPC_GarageState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "ExecuteUbergraph_BPC_GarageState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_GarageState_C", "ExecuteUbergraph_BPC_GarageState", FuncInfo);
 
 	Params::BPC_GarageState_C_ExecuteUbergraph_BPC_GarageState Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_GarageState_C::ExecuteUbergraph_BPC_GarageState(int32 EntryPoint)
 
 void UBPC_GarageState_C::MatchingTimeOut(float InTimeOutTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "MatchingTimeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	Params::BPC_GarageState_C_MatchingTimeOut Parms{};
 
@@ -62,10 +57,8 @@ void UBPC_GarageState_C::MatchingTimeOut(float InTimeOutTime)
 
 void UBPC_GarageState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UBPC_GarageState_C::OnExitState()
 
 void UBPC_GarageState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UBPC_GarageState_C::OnInitState()
 
 void UBPC_GarageState_C::Sequence_OnBackEvent(bool bIsSelectedCustomizeDataChanged_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "Sequence_OnBackEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	Params::BPC_GarageState_C_Sequence_OnBackEvent Parms{};
 
@@ -112,10 +101,8 @@ void UBPC_GarageState_C::Sequence_OnBackEvent(bool bIsSelectedCustomizeDataChang
 
 void UBPC_GarageState_C::SetMessageBarVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "SetMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	Params::BPC_GarageState_C_SetMessageBarVisible Parms{};
 
@@ -132,10 +119,8 @@ void UBPC_GarageState_C::SetMessageBarVisible(bool bInIsVisible)
 
 bool UBPC_GarageState_C::IsSelectedCustomizeDataChanged() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageState_C", "IsSelectedCustomizeDataChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageState_C", FnName));
 
 	Params::BPC_GarageState_C_IsSelectedCustomizeDataChanged Parms{};
 
@@ -144,5 +129,5 @@ bool UBPC_GarageState_C::IsSelectedCustomizeDataChanged() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

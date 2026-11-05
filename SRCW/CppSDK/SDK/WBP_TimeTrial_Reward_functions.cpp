@@ -14,18 +14,15 @@
 #include "WBP_TimeTrial_Reward_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_Reward.WBP_TimeTrial_Reward_C.CloseReward
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_TimeTrial_Reward_C::CloseReward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "CloseReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_TimeTrial_Reward_C::CloseReward()
 
 void UWBP_TimeTrial_Reward_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_TimeTrial_Reward_C::Construct()
 
 void UWBP_TimeTrial_Reward_C::ExecuteUbergraph_WBP_TimeTrial_Reward(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "ExecuteUbergraph_WBP_TimeTrial_Reward");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_Reward_C", "ExecuteUbergraph_WBP_TimeTrial_Reward", FuncInfo);
 
 	Params::WBP_TimeTrial_Reward_C_ExecuteUbergraph_WBP_TimeTrial_Reward Parms{};
 
@@ -70,10 +63,8 @@ void UWBP_TimeTrial_Reward_C::ExecuteUbergraph_WBP_TimeTrial_Reward(int32 EntryP
 
 void UWBP_TimeTrial_Reward_C::Finished_389B05C8488384C035B81F9D586D8186()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "Finished_389B05C8488384C035B81F9D586D8186");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_TimeTrial_Reward_C::Finished_389B05C8488384C035B81F9D586D8186()
 
 void UWBP_TimeTrial_Reward_C::Finished_42EAE7E74DA59534DA7707BC49D68732()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "Finished_42EAE7E74DA59534DA7707BC49D68732");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_TimeTrial_Reward_C::Finished_42EAE7E74DA59534DA7707BC49D68732()
 
 void UWBP_TimeTrial_Reward_C::Finished_AA894A354B37BA861733F197727695A6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "Finished_AA894A354B37BA861733F197727695A6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_TimeTrial_Reward_C::Finished_AA894A354B37BA861733F197727695A6()
 
 void UWBP_TimeTrial_Reward_C::Finished_CC39BDB44CC1ABDB85271FAB5BA5550F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "Finished_CC39BDB44CC1ABDB85271FAB5BA5550F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,10 +113,8 @@ void UWBP_TimeTrial_Reward_C::Finished_CC39BDB44CC1ABDB85271FAB5BA5550F()
 
 void UWBP_TimeTrial_Reward_C::GetTicketNum(int32* Num)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "GetTicketNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_GetTicketNum Parms{};
 
@@ -142,27 +125,6 @@ void UWBP_TimeTrial_Reward_C::GetTicketNum(int32* Num)
 }
 
 
-// Function WBP_TimeTrial_Reward.WBP_TimeTrial_Reward_C.IsResultReward
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   bIsResultReward                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TimeTrial_Reward_C::IsResultReward(bool* bIsResultReward)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "IsResultReward");
-
-	Params::WBP_TimeTrial_Reward_C_IsResultReward Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bIsResultReward != nullptr)
-		*bIsResultReward = Parms.bIsResultReward;
-}
-
-
 // Function WBP_TimeTrial_Reward.WBP_TimeTrial_Reward_C.IsRewardDispComplete
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -170,10 +132,8 @@ void UWBP_TimeTrial_Reward_C::IsResultReward(bool* bIsResultReward)
 
 void UWBP_TimeTrial_Reward_C::IsRewardDispComplete(bool* bIsComplete)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "IsRewardDispComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_IsRewardDispComplete Parms{};
 
@@ -191,10 +151,8 @@ void UWBP_TimeTrial_Reward_C::IsRewardDispComplete(bool* bIsComplete)
 
 void UWBP_TimeTrial_Reward_C::IsVisibleRSR(bool* visisble)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "IsVisibleRSR");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_IsVisibleRSR Parms{};
 
@@ -213,10 +171,8 @@ void UWBP_TimeTrial_Reward_C::IsVisibleRSR(bool* visisble)
 
 void UWBP_TimeTrial_Reward_C::PlayOtherResultReward(const TArray<struct FHonorCommendationData>& HonorList, int32 Param_Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "PlayOtherResultReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_PlayOtherResultReward Parms{};
 
@@ -235,10 +191,8 @@ void UWBP_TimeTrial_Reward_C::PlayOtherResultReward(const TArray<struct FHonorCo
 
 void UWBP_TimeTrial_Reward_C::PlayOtherSE(class USoundAtomCue* SoundID, int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "PlayOtherSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_PlayOtherSE Parms{};
 
@@ -256,10 +210,8 @@ void UWBP_TimeTrial_Reward_C::PlayOtherSE(class USoundAtomCue* SoundID, int32 Pl
 
 void UWBP_TimeTrial_Reward_C::PlayPlayerSE(class USoundAtomCue* SoundID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "PlayPlayerSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_PlayPlayerSE Parms{};
 
@@ -274,10 +226,8 @@ void UWBP_TimeTrial_Reward_C::PlayPlayerSE(class USoundAtomCue* SoundID)
 
 void UWBP_TimeTrial_Reward_C::PlayResultRacerAward()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "PlayResultRacerAward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,10 +240,8 @@ void UWBP_TimeTrial_Reward_C::PlayResultRacerAward()
 
 void UWBP_TimeTrial_Reward_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_PreConstruct Parms{};
 
@@ -310,10 +258,8 @@ void UWBP_TimeTrial_Reward_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_TimeTrial_Reward_C::SetRank(ETimeTrialClearRankId InRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "SetRank");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_SetRank Parms{};
 
@@ -330,10 +276,8 @@ void UWBP_TimeTrial_Reward_C::SetRank(ETimeTrialClearRankId InRank)
 
 void UWBP_TimeTrial_Reward_C::SetRewardInfo(const TArray<struct FRewardRedStarRingData>& RSRList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "SetRewardInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_SetRewardInfo Parms{};
 
@@ -350,10 +294,8 @@ void UWBP_TimeTrial_Reward_C::SetRewardInfo(const TArray<struct FRewardRedStarRi
 
 void UWBP_TimeTrial_Reward_C::SkipAnimation(int32 Param_Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "SkipAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	Params::WBP_TimeTrial_Reward_C_SkipAnimation Parms{};
 
@@ -368,10 +310,8 @@ void UWBP_TimeTrial_Reward_C::SkipAnimation(int32 Param_Index_0)
 
 void UWBP_TimeTrial_Reward_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -382,13 +322,11 @@ void UWBP_TimeTrial_Reward_C::カスタムイベント()
 
 void UWBP_TimeTrial_Reward_C::カスタムイベント_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Reward_C", "カスタムイベント_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Reward_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

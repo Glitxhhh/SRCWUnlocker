@@ -14,8 +14,7 @@
 #include "ABP_Jet_Physics_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_Jet_Physics.ABP_Jet_Physics_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_Jet_Physics_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_Jet_Physics_C", FnName));
 
 	Params::ABP_Jet_Physics_C_AnimGraph Parms{};
 
@@ -45,10 +42,8 @@ void UABP_Jet_Physics_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_Jet_Physics_C::ExecuteUbergraph_ABP_Jet_Physics(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "ExecuteUbergraph_ABP_Jet_Physics");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "ExecuteUbergraph_ABP_Jet_Physics", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_ExecuteUbergraph_ABP_Jet_Physics Parms{};
 
@@ -66,10 +61,8 @@ void UABP_Jet_Physics_C::ExecuteUbergraph_ABP_Jet_Physics(int32 EntryPoint)
 
 void UABP_Jet_Physics_C::HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "HoverboardControlRogLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "HoverboardControlRogLayer", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_HoverboardControlRogLayer Parms{};
 
@@ -91,10 +84,8 @@ void UABP_Jet_Physics_C::HoverboardControlRogLayer(const struct FPoseLink& Hover
 
 void UABP_Jet_Physics_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "HoverboardItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "HoverboardItemHoldBlendLeft", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_HoverboardItemHoldBlendLeft Parms{};
 
@@ -117,10 +108,8 @@ void UABP_Jet_Physics_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& Bas
 
 void UABP_Jet_Physics_C::HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "HoverboardItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "HoverboardItemHoldBlendRight", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_HoverboardItemHoldBlendRight Parms{};
 
@@ -138,18 +127,20 @@ void UABP_Jet_Physics_C::HoverboardItemHoldBlendRight(const struct FPoseLink& Ba
 // (HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void UABP_Jet_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void UABP_Jet_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "KawaiiPhysicsLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "KawaiiPhysicsLayer", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -167,10 +158,8 @@ void UABP_Jet_Physics_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, stru
 
 void UABP_Jet_Physics_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "MachineItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "MachineItemHoldBlendLeft", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_MachineItemHoldBlendLeft Parms{};
 
@@ -193,10 +182,8 @@ void UABP_Jet_Physics_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePo
 
 void UABP_Jet_Physics_C::MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "MachineItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "MachineItemHoldBlendRight", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_MachineItemHoldBlendRight Parms{};
 
@@ -221,10 +208,8 @@ void UABP_Jet_Physics_C::MachineItemHoldBlendRight(const struct FPoseLink& BaseP
 
 void UABP_Jet_Physics_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Jet_Physics_C", "ScaleFaceLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_Jet_Physics_C", "ScaleFaceLayer", FuncInfo);
 
 	Params::ABP_Jet_Physics_C_ScaleFaceLayer Parms{};
 
@@ -239,5 +224,5 @@ void UABP_Jet_Physics_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, 
 		*ScaleFaceLayer_0 = std::move(Parms.ScaleFaceLayer_0);
 }
 
-}
 
+SDK_NAMESPACE_END

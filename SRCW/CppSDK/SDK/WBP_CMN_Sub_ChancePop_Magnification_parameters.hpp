@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_CMN_Sub_ChancePop_Magnification.WBP_CMN_Sub_ChancePop_Magnification_C.SetRatioText
 // 0x0010 (0x0010 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CMN_Sub_ChancePop_Magnification_C_SetRatioText;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_CourseSelect_Sub_RivalNext_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_RivalNext_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_RivalNext_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_RivalNext_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CourseSelect_Sub_RivalNext_C::Construct()
 
 void UWBP_CourseSelect_Sub_RivalNext_C::ExecuteUbergraph_WBP_CourseSelect_Sub_RivalNext(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_RivalNext_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_RivalNext");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_RivalNext_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_RivalNext", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_RivalNext_C_ExecuteUbergraph_WBP_CourseSelect_Sub_RivalNext Parms{};
 
@@ -58,14 +53,32 @@ void UWBP_CourseSelect_Sub_RivalNext_C::ExecuteUbergraph_WBP_CourseSelect_Sub_Ri
 
 void UWBP_CourseSelect_Sub_RivalNext_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_RivalNext_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_RivalNext_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_RivalNext_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_RivalNext.WBP_CourseSelect_Sub_RivalNext_C.SetControllerButtonIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SwitherIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_RivalNext_C::SetControllerButtonIndex(int32 SwitherIndex, int32 ButtonIndex_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_RivalNext_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_RivalNext_C_SetControllerButtonIndex Parms{};
+
+	Parms.SwitherIndex = SwitherIndex;
+	Parms.ButtonIndex_0 = ButtonIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -79,10 +92,8 @@ void UWBP_CourseSelect_Sub_RivalNext_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CourseSelect_Sub_RivalNext_C::UpdateDisplayLevel(int32 RivalLevel, int32 BaseRivalLevel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_RivalNext_C", "UpdateDisplayLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_RivalNext_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_RivalNext_C_UpdateDisplayLevel Parms{};
 
@@ -92,5 +103,5 @@ void UWBP_CourseSelect_Sub_RivalNext_C::UpdateDisplayLevel(int32 RivalLevel, int
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

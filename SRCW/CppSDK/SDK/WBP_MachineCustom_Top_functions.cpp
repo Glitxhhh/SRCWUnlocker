@@ -14,18 +14,15 @@
 #include "WBP_MachineCustom_Top_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Top.WBP_MachineCustom_Top_C.BndEvt__WBP_MachineCustom_Top_WBP_MachineCustom_Sub_CurrentWindow_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_MachineCustom_Top_C::BndEvt__WBP_MachineCustom_Top_WBP_MachineCustom_Sub_CurrentWindow_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "BndEvt__WBP_MachineCustom_Top_WBP_MachineCustom_Sub_CurrentWindow_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_MachineCustom_Top_C::BndEvt__WBP_MachineCustom_Top_WBP_MachineCustom_S
 
 void UWBP_MachineCustom_Top_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_MachineCustom_Top_C::Construct()
 
 void UWBP_MachineCustom_Top_C::ExecuteUbergraph_WBP_MachineCustom_Top(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "ExecuteUbergraph_WBP_MachineCustom_Top");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Top_C", "ExecuteUbergraph_WBP_MachineCustom_Top", FuncInfo);
 
 	Params::WBP_MachineCustom_Top_C_ExecuteUbergraph_WBP_MachineCustom_Top Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_MachineCustom_Top_C::ExecuteUbergraph_WBP_MachineCustom_Top(int32 Entr
 
 void UWBP_MachineCustom_Top_C::GetParamWindow(class UCharaMachineParamWindow** OutParamWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "GetParamWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_GetParamWindow Parms{};
 
@@ -91,10 +82,8 @@ void UWBP_MachineCustom_Top_C::GetParamWindow(class UCharaMachineParamWindow** O
 
 void UWBP_MachineCustom_Top_C::SetupDonpaTicket()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetupDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -107,10 +96,8 @@ void UWBP_MachineCustom_Top_C::SetupDonpaTicket()
 
 void UWBP_MachineCustom_Top_C::SetupMachineCustomizeTabWindow(bool IsShowDonpaTicket)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetupMachineCustomizeTabWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_SetupMachineCustomizeTabWindow Parms{};
 
@@ -125,10 +112,8 @@ void UWBP_MachineCustom_Top_C::SetupMachineCustomizeTabWindow(bool IsShowDonpaTi
 
 void UWBP_MachineCustom_Top_C::SetupMachineSelectWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetupMachineSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -139,10 +124,8 @@ void UWBP_MachineCustom_Top_C::SetupMachineSelectWindow()
 
 void UWBP_MachineCustom_Top_C::SetupOther()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetupOther");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,10 +138,8 @@ void UWBP_MachineCustom_Top_C::SetupOther()
 
 void UWBP_MachineCustom_Top_C::SetVisibleDonpaTicket(bool IsVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetVisibleDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_SetVisibleDonpaTicket Parms{};
 
@@ -175,10 +156,8 @@ void UWBP_MachineCustom_Top_C::SetVisibleDonpaTicket(bool IsVisible_0)
 
 void UWBP_MachineCustom_Top_C::SetWindowGroupVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SetWindowGroupVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_SetWindowGroupVisible Parms{};
 
@@ -195,10 +174,8 @@ void UWBP_MachineCustom_Top_C::SetWindowGroupVisible(bool bInIsVisible)
 
 void UWBP_MachineCustom_Top_C::SwitchWindow(EMachineCustomizeWindowId InWindowId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "SwitchWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_SwitchWindow Parms{};
 
@@ -213,10 +190,8 @@ void UWBP_MachineCustom_Top_C::SwitchWindow(EMachineCustomizeWindowId InWindowId
 
 void UWBP_MachineCustom_Top_C::UpdateDonpaTicket()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "UpdateDonpaTicket");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -229,10 +204,8 @@ void UWBP_MachineCustom_Top_C::UpdateDonpaTicket()
 
 class UMachineCustomCommonWindow* UWBP_MachineCustom_Top_C::GetMachineCustomCommonWindow() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Top_C", "GetMachineCustomCommonWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Top_C", FnName));
 
 	Params::WBP_MachineCustom_Top_C_GetMachineCustomCommonWindow Parms{};
 
@@ -241,5 +214,5 @@ class UMachineCustomCommonWindow* UWBP_MachineCustom_Top_C::GetMachineCustomComm
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum RedpointEOSAuth.EEOSUserInterface_SignInOrCreateAccount_Choice
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EEOSUserInterface_SignInOrCreateAccount_Choice : uint8
 	EEOSUserInterface_SignInOrCreateAccount_MAX = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

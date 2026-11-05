@@ -14,18 +14,15 @@
 #include "BPC_MachineCustomizeColorDetailState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeColorDetailState.BPC_MachineCustomizeColorDetailState_C.BindPage
 // (Event, Protected, BlueprintEvent)
 
 void UBPC_MachineCustomizeColorDetailState_C::BindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "BindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UBPC_MachineCustomizeColorDetailState_C::BindPage()
 
 void UBPC_MachineCustomizeColorDetailState_C::BindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "BindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UBPC_MachineCustomizeColorDetailState_C::BindTab()
 
 void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnColorItemFocused(const struct FST_ColorDetailWindowColorItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "ColorDetailWindow_OnColorItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_ColorDetailWindow_OnColorItemFocused Parms{};
 
@@ -72,10 +65,8 @@ void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnColorItemFocus
 
 void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnColorItemSelected(const struct FST_ColorDetailWindowColorItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "ColorDetailWindow_OnColorItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_ColorDetailWindow_OnColorItemSelected Parms{};
 
@@ -92,10 +83,8 @@ void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnColorItemSelec
 
 void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnSurfaceItemFocused(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "ColorDetailWindow_OnSurfaceItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_ColorDetailWindow_OnSurfaceItemFocused Parms{};
 
@@ -112,10 +101,8 @@ void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnSurfaceItemFoc
 
 void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnSurfaceItemSelected(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "ColorDetailWindow_OnSurfaceItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_ColorDetailWindow_OnSurfaceItemSelected Parms{};
 
@@ -132,10 +119,8 @@ void UBPC_MachineCustomizeColorDetailState_C::ColorDetailWindow_OnSurfaceItemSel
 
 void UBPC_MachineCustomizeColorDetailState_C::ExecuteUbergraph_BPC_MachineCustomizeColorDetailState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "ExecuteUbergraph_BPC_MachineCustomizeColorDetailState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizeColorDetailState_C", "ExecuteUbergraph_BPC_MachineCustomizeColorDetailState", FuncInfo);
 
 	Params::BPC_MachineCustomizeColorDetailState_C_ExecuteUbergraph_BPC_MachineCustomizeColorDetailState Parms{};
 
@@ -154,10 +139,8 @@ void UBPC_MachineCustomizeColorDetailState_C::ExecuteUbergraph_BPC_MachineCustom
 
 void UBPC_MachineCustomizeColorDetailState_C::GetColor(const struct FUserMachineCustomizeData& InCustomizeData, EMachineColorAreaUIId InColorAreaId, int32* OutColorId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "GetColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_GetColor Parms{};
 
@@ -180,10 +163,8 @@ void UBPC_MachineCustomizeColorDetailState_C::GetColor(const struct FUserMachine
 
 void UBPC_MachineCustomizeColorDetailState_C::GetSurface(const struct FUserMachineCustomizeData& InCustomizeData, EMachineColorAreaUIId InColorAreaId, int32* OutSurfaceId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "GetSurface");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_GetSurface Parms{};
 
@@ -202,10 +183,8 @@ void UBPC_MachineCustomizeColorDetailState_C::GetSurface(const struct FUserMachi
 
 void UBPC_MachineCustomizeColorDetailState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -216,10 +195,8 @@ void UBPC_MachineCustomizeColorDetailState_C::OnInitState()
 
 void UBPC_MachineCustomizeColorDetailState_C::OnSetupPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "OnSetupPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +207,8 @@ void UBPC_MachineCustomizeColorDetailState_C::OnSetupPage()
 
 void UBPC_MachineCustomizeColorDetailState_C::OnStateChanged()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "OnStateChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -249,10 +224,8 @@ void UBPC_MachineCustomizeColorDetailState_C::OnStateChanged()
 
 void UBPC_MachineCustomizeColorDetailState_C::SetColor(const struct FUserMachineCustomizeData& InCustomizeData, EMachineColorAreaUIId InColorAreaId, int32 InColorId, struct FUserMachineCustomizeData* OutCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "SetColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_SetColor Parms{};
 
@@ -272,10 +245,8 @@ void UBPC_MachineCustomizeColorDetailState_C::SetColor(const struct FUserMachine
 
 void UBPC_MachineCustomizeColorDetailState_C::SetProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "SetProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -291,10 +262,8 @@ void UBPC_MachineCustomizeColorDetailState_C::SetProperties()
 
 void UBPC_MachineCustomizeColorDetailState_C::SetSurface(const struct FUserMachineCustomizeData& InCustomizeData, EMachineColorAreaUIId InColorAreaId, int32 InSurfaceId, struct FUserMachineCustomizeData* OutCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "SetSurface");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	Params::BPC_MachineCustomizeColorDetailState_C_SetSurface Parms{};
 
@@ -314,10 +283,8 @@ void UBPC_MachineCustomizeColorDetailState_C::SetSurface(const struct FUserMachi
 
 void UBPC_MachineCustomizeColorDetailState_C::UnbindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "UnbindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -328,13 +295,11 @@ void UBPC_MachineCustomizeColorDetailState_C::UnbindPage()
 
 void UBPC_MachineCustomizeColorDetailState_C::UnbindTab()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeColorDetailState_C", "UnbindTab");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeColorDetailState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

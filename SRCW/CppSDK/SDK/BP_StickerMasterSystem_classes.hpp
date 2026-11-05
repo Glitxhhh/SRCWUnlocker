@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ST_StickerMachineData_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_StickerMasterSystem.BP_StickerMasterSystem_C
 // 0x01F0 (0x0480 - 0x0290)
@@ -176,5 +175,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_StickerMasterSystem_C;
 
-}
-
+SDK_NAMESPACE_END

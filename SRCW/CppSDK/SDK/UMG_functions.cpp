@@ -14,8 +14,7 @@
 #include "UMG_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UMG.Widget.ForceLayoutPrepass
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
@@ -1628,10 +1627,8 @@ bool UUserWidget::ChangeZOrder(const int32 InZOrder)
 
 void UUserWidget::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1642,10 +1639,8 @@ void UUserWidget::Construct()
 
 void UUserWidget::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1736,10 +1731,8 @@ void UUserWidget::ListenForInputAction(class FName ActionName, EInputEvent Event
 
 void UUserWidget::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnAddedToFocusPath Parms{};
 
@@ -1758,10 +1751,8 @@ void UUserWidget::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 
 struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnAnalogValueChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnAnalogValueChanged Parms{};
 
@@ -1781,10 +1772,8 @@ struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyG
 
 void UUserWidget::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnAnimationFinished Parms{};
 
@@ -1806,10 +1795,8 @@ void UUserWidget::OnAnimationFinished(const class UWidgetAnimation* Animation)
 
 void UUserWidget::OnAnimationStarted(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnAnimationStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnAnimationStarted Parms{};
 
@@ -1832,10 +1819,8 @@ void UUserWidget::OnAnimationStarted(const class UWidgetAnimation* Animation)
 
 void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDragCancelled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDragCancelled Parms{};
 
@@ -1855,10 +1840,8 @@ void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, clas
 
 void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDragDetected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDragDetected Parms{};
 
@@ -1881,10 +1864,8 @@ void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struc
 
 void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDragEnter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDragEnter Parms{};
 
@@ -1904,10 +1885,8 @@ void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct F
 
 void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDragLeave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDragLeave Parms{};
 
@@ -1928,10 +1907,8 @@ void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UD
 
 bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDragOver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDragOver Parms{};
 
@@ -1955,10 +1932,8 @@ bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FP
 
 bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnDrop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnDrop Parms{};
 
@@ -1979,10 +1954,8 @@ bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPoint
 
 void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnFocusLost Parms{};
 
@@ -2001,10 +1974,8 @@ void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 
 struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnFocusReceived Parms{};
 
@@ -2022,10 +1993,8 @@ struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeomet
 
 void UUserWidget::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2040,10 +2009,8 @@ void UUserWidget::OnInitialized()
 
 struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, const struct FCharacterEvent& InCharacterEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnKeyChar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnKeyChar Parms{};
 
@@ -2065,10 +2032,8 @@ struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, co
 
 struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnKeyDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnKeyDown Parms{};
 
@@ -2090,10 +2055,8 @@ struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, co
 
 struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnKeyUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnKeyUp Parms{};
 
@@ -2115,10 +2078,8 @@ struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, cons
 
 struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeometry, const struct FMotionEvent& InMotionEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMotionDetected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMotionDetected Parms{};
 
@@ -2140,10 +2101,8 @@ struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeome
 
 struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseButtonDoubleClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseButtonDoubleClick Parms{};
 
@@ -2165,10 +2124,8 @@ struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry&
 
 struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseButtonDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseButtonDown Parms{};
 
@@ -2190,10 +2147,8 @@ struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeom
 
 struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseButtonUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseButtonUp Parms{};
 
@@ -2211,10 +2166,8 @@ struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeomet
 
 void UUserWidget::OnMouseCaptureLost()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseCaptureLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2228,10 +2181,8 @@ void UUserWidget::OnMouseCaptureLost()
 
 void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseEnter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseEnter Parms{};
 
@@ -2249,10 +2200,8 @@ void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct 
 
 void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseLeave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseLeave Parms{};
 
@@ -2271,10 +2220,8 @@ void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 
 struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseMove");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseMove Parms{};
 
@@ -2296,10 +2243,8 @@ struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, 
 
 struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnMouseWheel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnMouseWheel Parms{};
 
@@ -2321,10 +2266,8 @@ struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnPreviewKeyDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnPreviewKeyDown Parms{};
 
@@ -2346,10 +2289,8 @@ struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeome
 
 struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnPreviewMouseButtonDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnPreviewMouseButtonDown Parms{};
 
@@ -2369,10 +2310,8 @@ struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry&
 
 void UUserWidget::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnRemovedFromFocusPath Parms{};
 
@@ -2391,10 +2330,8 @@ void UUserWidget::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 
 struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnTouchEnded");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnTouchEnded Parms{};
 
@@ -2416,10 +2353,8 @@ struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnTouchForceChanged(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnTouchForceChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnTouchForceChanged Parms{};
 
@@ -2441,10 +2376,8 @@ struct FEventReply UUserWidget::OnTouchForceChanged(const struct FGeometry& MyGe
 
 struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnTouchGesture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnTouchGesture Parms{};
 
@@ -2466,10 +2399,8 @@ struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometr
 
 struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnTouchMoved");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnTouchMoved Parms{};
 
@@ -2491,10 +2422,8 @@ struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnTouchStarted(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnTouchStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnTouchStarted Parms{};
 
@@ -2709,10 +2638,8 @@ void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 
 void UUserWidget::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_PreConstruct Parms{};
 
@@ -3487,10 +3414,8 @@ void UUserWidget::StopListeningForInputAction(class FName ActionName, EInputEven
 
 void UUserWidget::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_Tick Parms{};
 
@@ -3893,10 +3818,8 @@ bool UUserWidget::IsAnyAnimationPlaying() const
 
 bool UUserWidget::IsInteractable() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "IsInteractable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_IsInteractable Parms{};
 
@@ -3966,10 +3889,8 @@ bool UUserWidget::IsPlayingAnimation() const
 
 void UUserWidget::OnPaint(struct FPaintContext& Context) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserWidget", "OnPaint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserWidget", FnName));
 
 	Params::UserWidget_OnPaint Parms{};
 
@@ -8098,10 +8019,8 @@ bool UGameViewportSubsystem::IsWidgetAdded(const class UWidget* Widget) const
 
 void IUserListEntry::BP_OnEntryReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UserListEntry", "BP_OnEntryReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"UserListEntry", FnName));
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
@@ -8114,10 +8033,8 @@ void IUserListEntry::BP_OnEntryReleased()
 
 void IUserListEntry::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UserListEntry", "BP_OnItemExpansionChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"UserListEntry", FnName));
 
 	Params::UserListEntry_BP_OnItemExpansionChanged Parms{};
 
@@ -8134,10 +8051,8 @@ void IUserListEntry::BP_OnItemExpansionChanged(bool bIsExpanded)
 
 void IUserListEntry::BP_OnItemSelectionChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UserListEntry", "BP_OnItemSelectionChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"UserListEntry", FnName));
 
 	Params::UserListEntry_BP_OnItemSelectionChanged Parms{};
 
@@ -8238,10 +8153,8 @@ bool UUserListEntryLibrary::IsListItemSelected(TScriptInterface<class IUserListE
 
 void IUserObjectListEntry::OnListItemObjectSet(class UObject* ListItemObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UserObjectListEntry", "OnListItemObjectSet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"UserObjectListEntry", FnName));
 
 	Params::UserObjectListEntry_OnListItemObjectSet Parms{};
 
@@ -18920,10 +18833,8 @@ void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
 
 void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DragDropOperation", "DragCancelled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DragDropOperation", FnName));
 
 	Params::DragDropOperation_DragCancelled Parms{};
 
@@ -18945,10 +18856,8 @@ void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
 
 void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DragDropOperation", "Dragged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DragDropOperation", FnName));
 
 	Params::DragDropOperation_Dragged Parms{};
 
@@ -18970,10 +18879,8 @@ void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
 
 void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DragDropOperation", "Drop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"DragDropOperation", FnName));
 
 	Params::DragDropOperation_Drop Parms{};
 
@@ -20108,5 +20015,5 @@ class UWrapBoxSlot* UWidgetLayoutLibrary::SlotAsWrapBoxSlot(class UWidget* Widge
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

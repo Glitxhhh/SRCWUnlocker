@@ -14,8 +14,7 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_RaceBefore_Sub_BasicRoundInfo.WBP_RaceBefore_Sub_BasicRoundInfo_C
 // 0x0030 (0x0310 - 0x02E0)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_RaceBefore_Sub_BasicRoundInfo_C;
 
-}
-
+SDK_NAMESPACE_END

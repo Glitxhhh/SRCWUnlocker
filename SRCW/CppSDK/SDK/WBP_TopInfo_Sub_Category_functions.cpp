@@ -14,18 +14,15 @@
 #include "WBP_TopInfo_Sub_Category_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_TopInfo_Sub_Category_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_TopInfo_Sub_Category_C::Construct()
 
 void UWBP_TopInfo_Sub_Category_C::ExecuteUbergraph_WBP_TopInfo_Sub_Category(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "ExecuteUbergraph_WBP_TopInfo_Sub_Category");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TopInfo_Sub_Category_C", "ExecuteUbergraph_WBP_TopInfo_Sub_Category", FuncInfo);
 
 	Params::WBP_TopInfo_Sub_Category_C_ExecuteUbergraph_WBP_TopInfo_Sub_Category Parms{};
 
@@ -56,10 +51,20 @@ void UWBP_TopInfo_Sub_Category_C::ExecuteUbergraph_WBP_TopInfo_Sub_Category(int3
 
 void UWBP_TopInfo_Sub_Category_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "OnInitialized");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.ReleaseResource
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_TopInfo_Sub_Category_C::ReleaseResource()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +77,8 @@ void UWBP_TopInfo_Sub_Category_C::OnInitialized()
 
 void UWBP_TopInfo_Sub_Category_C::SetSwitcherIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetSwitcherIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_SetSwitcherIndex Parms{};
 
@@ -92,13 +95,12 @@ void UWBP_TopInfo_Sub_Category_C::SetSwitcherIndex(int32 Index_0)
 // TArray<int32>&                          DisableGadgetIdRankMatch                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>&                          DisableGadgetIdFesta                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>&                          DisableGadgetIdLegendCompe                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<int32>&                          DisableGadgetIdDuelCompe                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArray<int32>& DisableGadgetIdRankMatch, TArray<int32>& DisableGadgetIdFesta, TArray<int32>& DisableGadgetIdLegendCompe)
+void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArray<int32>& DisableGadgetIdRankMatch, TArray<int32>& DisableGadgetIdFesta, TArray<int32>& DisableGadgetIdLegendCompe, TArray<int32>& DisableGadgetIdDuelCompe)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "Setup Gudget Info");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_Setup_Gudget_Info Parms{};
 
@@ -106,12 +108,14 @@ void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArra
 	Parms.DisableGadgetIdRankMatch = std::move(DisableGadgetIdRankMatch);
 	Parms.DisableGadgetIdFesta = std::move(DisableGadgetIdFesta);
 	Parms.DisableGadgetIdLegendCompe = std::move(DisableGadgetIdLegendCompe);
+	Parms.DisableGadgetIdDuelCompe = std::move(DisableGadgetIdDuelCompe);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	DisableGadgetIdRankMatch = std::move(Parms.DisableGadgetIdRankMatch);
 	DisableGadgetIdFesta = std::move(Parms.DisableGadgetIdFesta);
 	DisableGadgetIdLegendCompe = std::move(Parms.DisableGadgetIdLegendCompe);
+	DisableGadgetIdDuelCompe = std::move(Parms.DisableGadgetIdDuelCompe);
 }
 
 
@@ -125,10 +129,8 @@ void UWBP_TopInfo_Sub_Category_C::Setup_Gudget_Info(int32 DetailTextIndex, TArra
 
 void UWBP_TopInfo_Sub_Category_C::SetupDLCInfo(const class FText& Title, const class FText& Schedule, class UTexture2D* Texture, bool IsButtonEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupDLCInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_SetupDLCInfo Parms{};
 
@@ -136,30 +138,6 @@ void UWBP_TopInfo_Sub_Category_C::SetupDLCInfo(const class FText& Title, const c
 	Parms.Schedule = std::move(Schedule);
 	Parms.Texture = Texture;
 	Parms.IsButtonEnable = IsButtonEnable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TopInfo_Sub_Category.WBP_TopInfo_Sub_Category_C.SetupFestaInfo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FText&                      Schedule                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UTexture2D*                       Texture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TopInfo_Sub_Category_C::SetupFestaInfo(const class FText& Title, const class FText& Schedule, class UTexture2D* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupFestaInfo");
-
-	Params::WBP_TopInfo_Sub_Category_C_SetupFestaInfo Parms{};
-
-	Parms.Title = std::move(Title);
-	Parms.Schedule = std::move(Schedule);
-	Parms.Texture = Texture;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -174,10 +152,8 @@ void UWBP_TopInfo_Sub_Category_C::SetupFestaInfo(const class FText& Title, const
 
 void UWBP_TopInfo_Sub_Category_C::SetupFreecontentInfo(const class FText& Title, const class FText& Schedule, class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupFreecontentInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_SetupFreecontentInfo Parms{};
 
@@ -196,10 +172,8 @@ void UWBP_TopInfo_Sub_Category_C::SetupFreecontentInfo(const class FText& Title,
 
 void UWBP_TopInfo_Sub_Category_C::SetupLegendInfo(const struct FLegendCompeInfoDispData& DispData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupLegendInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_SetupLegendInfo Parms{};
 
@@ -214,10 +188,8 @@ void UWBP_TopInfo_Sub_Category_C::SetupLegendInfo(const struct FLegendCompeInfoD
 
 void UWBP_TopInfo_Sub_Category_C::SetupWorldMatchInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "SetupWorldMatchInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -231,10 +203,8 @@ void UWBP_TopInfo_Sub_Category_C::SetupWorldMatchInfo()
 
 void UWBP_TopInfo_Sub_Category_C::UpdateButtonAnim(ETopInfoWidgetPageCategory Category, bool IsSelect)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "UpdateButtonAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_UpdateButtonAnim Parms{};
 
@@ -254,10 +224,8 @@ void UWBP_TopInfo_Sub_Category_C::UpdateButtonAnim(ETopInfoWidgetPageCategory Ca
 
 void UWBP_TopInfo_Sub_Category_C::UpdatePageDisplay(ETopInfoWidgetPageCategory PageCategory, bool ButtonFocus, bool IsNew)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_Category_C", "UpdatePageDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_Category_C", FnName));
 
 	Params::WBP_TopInfo_Sub_Category_C_UpdatePageDisplay Parms{};
 
@@ -268,5 +236,5 @@ void UWBP_TopInfo_Sub_Category_C::UpdatePageDisplay(ETopInfoWidgetPageCategory P
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

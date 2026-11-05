@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "CriWareRuntime_structs.hpp"
-#include "UNION_classes.hpp"
-#include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UnionSystem_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Window_Tutorial.WBP_Popup_Window_Tutorial_C
 // 0x00F8 (0x0440 - 0x0348)
@@ -113,5 +112,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_Window_Tutorial_C;
 
-}
-
+SDK_NAMESPACE_END

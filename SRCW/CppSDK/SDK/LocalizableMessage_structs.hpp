@@ -13,8 +13,7 @@
 #include "StructUtils_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct LocalizableMessage.LocalizableMessageParameterEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -73,5 +72,4 @@ public:
 };
 DUMPER7_ASSERTS_FLocalizableMessageParameterMessage;
 
-}
-
+SDK_NAMESPACE_END

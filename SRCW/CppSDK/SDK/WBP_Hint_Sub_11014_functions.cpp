@@ -14,8 +14,7 @@
 #include "WBP_Hint_Sub_11014_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Hint_Sub_11014.WBP_Hint_Sub_11014_C.ExecuteUbergraph_WBP_Hint_Sub_11014
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Hint_Sub_11014_C::ExecuteUbergraph_WBP_Hint_Sub_11014(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hint_Sub_11014_C", "ExecuteUbergraph_WBP_Hint_Sub_11014");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Hint_Sub_11014_C", "ExecuteUbergraph_WBP_Hint_Sub_11014", FuncInfo);
 
 	Params::WBP_Hint_Sub_11014_C_ExecuteUbergraph_WBP_Hint_Sub_11014 Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Hint_Sub_11014_C::ExecuteUbergraph_WBP_Hint_Sub_11014(int32 EntryPoint
 
 void UWBP_Hint_Sub_11014_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hint_Sub_11014_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Hint_Sub_11014_C", FnName));
 
 	Params::WBP_Hint_Sub_11014_C_PreConstruct Parms{};
 
@@ -56,5 +51,5 @@ void UWBP_Hint_Sub_11014_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "BPC_DodonpaEventState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.AttachDodonpaCamera
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_DodonpaEventState_C::AttachDodonpaCamera()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "AttachDodonpaCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UBPC_DodonpaEventState_C::AttachDodonpaCamera()
 
 void UBPC_DodonpaEventState_C::ExecuteUbergraph_BPC_DodonpaEventState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "ExecuteUbergraph_BPC_DodonpaEventState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_DodonpaEventState_C", "ExecuteUbergraph_BPC_DodonpaEventState", FuncInfo);
 
 	Params::BPC_DodonpaEventState_C_ExecuteUbergraph_BPC_DodonpaEventState Parms{};
 
@@ -56,10 +51,8 @@ void UBPC_DodonpaEventState_C::ExecuteUbergraph_BPC_DodonpaEventState(int32 Entr
 
 void UBPC_DodonpaEventState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_DodonpaEventState_C::OnExitState()
 
 void UBPC_DodonpaEventState_C::OnFinished_EventInFadeEnd(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnFinished_EventInFadeEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_OnFinished_EventInFadeEnd Parms{};
 
@@ -92,10 +83,8 @@ void UBPC_DodonpaEventState_C::OnFinished_EventInFadeEnd(EUnionUIFadeDirection F
 
 void UBPC_DodonpaEventState_C::OnFinished_EventInFadeStart(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnFinished_EventInFadeStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_OnFinished_EventInFadeStart Parms{};
 
@@ -112,10 +101,8 @@ void UBPC_DodonpaEventState_C::OnFinished_EventInFadeStart(EUnionUIFadeDirection
 
 void UBPC_DodonpaEventState_C::OnFinished_EventOutFadeStart(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnFinished_EventOutFadeStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_OnFinished_EventOutFadeStart Parms{};
 
@@ -130,10 +117,8 @@ void UBPC_DodonpaEventState_C::OnFinished_EventOutFadeStart(EUnionUIFadeDirectio
 
 void UBPC_DodonpaEventState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +131,8 @@ void UBPC_DodonpaEventState_C::OnInitState()
 
 void UBPC_DodonpaEventState_C::OnSaveComplete(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnSaveComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_OnSaveComplete Parms{};
 
@@ -166,10 +149,8 @@ void UBPC_DodonpaEventState_C::OnSaveComplete(ESaveDataStatus Status)
 
 void UBPC_DodonpaEventState_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_OnUpdateState Parms{};
 
@@ -179,15 +160,13 @@ void UBPC_DodonpaEventState_C::OnUpdateState(float InDeltaTime)
 }
 
 
-// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.Set DodonpaEventFooter
+// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.Set Dodonpa Event Footer
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_DodonpaEventState_C::Set_DodonpaEventFooter()
+void UBPC_DodonpaEventState_C::Set_Dodonpa_Event_Footer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "Set DodonpaEventFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,12 +181,32 @@ void UBPC_DodonpaEventState_C::Set_DodonpaEventFooter()
 
 void UBPC_DodonpaEventState_C::SetDodonpaEventStatus(class FName InCallEventName, EGrandPrixEventFlag InSaveDataFlagId, EMenuSequenceBGM InBGMId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "SetDodonpaEventStatus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	Params::BPC_DodonpaEventState_C_SetDodonpaEventStatus Parms{};
+
+	Parms.InCallEventName = InCallEventName;
+	Parms.InSaveDataFlagId = InSaveDataFlagId;
+	Parms.InBGMId = InBGMId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_DodonpaEventState.BPC_DodonpaEventState_C.SetDodonpaEventStatusSeason2
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCallEventName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAppendDialogueEventBitFlag             InSaveDataFlagId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMenuSequenceBGM                        InBGMId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_DodonpaEventState_C::SetDodonpaEventStatusSeason2(class FName InCallEventName, EAppendDialogueEventBitFlag InSaveDataFlagId, EMenuSequenceBGM InBGMId)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
+
+	Params::BPC_DodonpaEventState_C_SetDodonpaEventStatusSeason2 Parms{};
 
 	Parms.InCallEventName = InCallEventName;
 	Parms.InSaveDataFlagId = InSaveDataFlagId;
@@ -222,10 +221,8 @@ void UBPC_DodonpaEventState_C::SetDodonpaEventStatus(class FName InCallEventName
 
 void UBPC_DodonpaEventState_C::StartUpdate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "StartUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,13 +233,11 @@ void UBPC_DodonpaEventState_C::StartUpdate()
 
 void UBPC_DodonpaEventState_C::StopUpdate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DodonpaEventState_C", "StopUpdate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_DodonpaEventState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

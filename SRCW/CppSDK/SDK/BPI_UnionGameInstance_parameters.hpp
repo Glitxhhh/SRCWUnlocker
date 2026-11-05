@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPI_UnionGameInstance.BPI_UnionGameInstance_C.GetVCSRevisionNumIF
 // 0x0004 (0x0004 - 0x0000)
@@ -32,5 +32,5 @@ public:
 };
 DUMPER7_ASSERTS_BPI_UnionGameInstance_C_GetVCSRevisionStrIF;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_Sub_RankUp_Window_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RankUp_Window.WBP_ResultRate_Sub_RankUp_Window_C.ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Window
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_Sub_RankUp_Window_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Window", FuncInfo);
 
 	Params::WBP_ResultRate_Sub_RankUp_Window_C_ExecuteUbergraph_WBP_ResultRate_Sub_RankUp_Window Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::ExecuteUbergraph_WBP_ResultRate_Sub_Ra
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::Finished_308CC6E943A1662919706AB0D6941D3F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "Finished_308CC6E943A1662919706AB0D6941D3F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::Finished_308CC6E943A1662919706AB0D6941
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::PlayInAnimation()
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::PlayOutAnimation()
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::RateRankUpVoice()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "RateRankUpVoice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::RateRankUpVoice()
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankUp_Window()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "SequenceEvent__ENTRYPOINTWBP_ResultRate_Sub_RankUp_Window");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,10 +102,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::SequenceEvent__ENTRYPOINTWBP_ResultRat
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::Set_Rank_Move_Impl(ERateRank NowRank_in, ERateRank NextRank_in)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "Set Rank Move Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankUp_Window_C_Set_Rank_Move_Impl Parms{};
 
@@ -137,10 +122,8 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::Set_Rank_Move_Impl(ERateRank NowRank_i
 
 void UWBP_ResultRate_Sub_RankUp_Window_C::SetupRankUpInfo(int32 PrevRank, int32 LatestRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankUp_Window_C", "SetupRankUpInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankUp_Window_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankUp_Window_C_SetupRankUpInfo Parms{};
 
@@ -150,5 +133,5 @@ void UWBP_ResultRate_Sub_RankUp_Window_C::SetupRankUpInfo(int32 PrevRank, int32 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

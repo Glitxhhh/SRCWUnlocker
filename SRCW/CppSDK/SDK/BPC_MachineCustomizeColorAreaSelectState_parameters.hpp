@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_MachineCustomizeColorAreaSelectState.BPC_MachineCustomizeColorAreaSelectState_C.EventColorAreaSelectWindow_OnColorAreaSelected
 // 0x0040 (0x0040 - 0x0000)
@@ -46,12 +46,13 @@ public:
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorAreaSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeColorAreaSelectState;
 
 // Function BPC_MachineCustomizeColorAreaSelectState.BPC_MachineCustomizeColorAreaSelectState_C.HideFooter
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BPC_MachineCustomizeColorAreaSelectState_C_HideFooter final
 {
 public:
 	class UMenuWorldSubsystem*                    CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonMenuFooterMenu*                  CallFunc_GetFooter_ReturnValue;                    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorAreaSelectState_C_HideFooter;
 
@@ -151,5 +152,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_MachineCustomizeColorAreaSelectState_C_ShowPopupWindow;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

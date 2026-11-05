@@ -14,18 +14,15 @@
 #include "WBP_CMN_GadgetCount_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_GadgetCount.WBP_CMN_GadgetCount_C.BindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CMN_GadgetCount_C::BindAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "BindAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_CMN_GadgetCount_C::BindAnimationEvent()
 
 void UWBP_CMN_GadgetCount_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_CMN_GadgetCount_C::Construct()
 
 void UWBP_CMN_GadgetCount_C::ExecuteUbergraph_WBP_CMN_GadgetCount(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "ExecuteUbergraph_WBP_CMN_GadgetCount");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_GadgetCount_C", "ExecuteUbergraph_WBP_CMN_GadgetCount", FuncInfo);
 
 	Params::WBP_CMN_GadgetCount_C_ExecuteUbergraph_WBP_CMN_GadgetCount Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_CMN_GadgetCount_C::ExecuteUbergraph_WBP_CMN_GadgetCount(int32 EntryPoi
 
 class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "GetAnimationCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_GetAnimationCount Parms{};
 
@@ -92,10 +83,8 @@ class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationCount()
 
 class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "GetAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_GetAnimationIn Parms{};
 
@@ -112,10 +101,8 @@ class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationIn()
 
 class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "GetAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_GetAnimationLoop Parms{};
 
@@ -132,10 +119,8 @@ class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationLoop()
 
 class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "GetAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_GetAnimationOut Parms{};
 
@@ -150,10 +135,8 @@ class UWidgetAnimation* UWBP_CMN_GadgetCount_C::GetAnimationOut()
 
 void UWBP_CMN_GadgetCount_C::OnInAnimFinished_SelfEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "OnInAnimFinished_SelfEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -164,10 +147,8 @@ void UWBP_CMN_GadgetCount_C::OnInAnimFinished_SelfEvent()
 
 void UWBP_CMN_GadgetCount_C::PlayAnimationCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "PlayAnimationCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,10 +159,8 @@ void UWBP_CMN_GadgetCount_C::PlayAnimationCount()
 
 void UWBP_CMN_GadgetCount_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +171,8 @@ void UWBP_CMN_GadgetCount_C::PlayAnimationIn()
 
 void UWBP_CMN_GadgetCount_C::PlayAnimationLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "PlayAnimationLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -206,10 +183,8 @@ void UWBP_CMN_GadgetCount_C::PlayAnimationLoop()
 
 void UWBP_CMN_GadgetCount_C::PlayAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "PlayAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -222,10 +197,8 @@ void UWBP_CMN_GadgetCount_C::PlayAnimationOut()
 
 void UWBP_CMN_GadgetCount_C::SetIconTexture(const class UTexture2D* InIconTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "SetIconTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_SetIconTexture Parms{};
 
@@ -242,10 +215,8 @@ void UWBP_CMN_GadgetCount_C::SetIconTexture(const class UTexture2D* InIconTextur
 
 void UWBP_CMN_GadgetCount_C::SetIconType(ERewardType InRewardType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "SetIconType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_SetIconType Parms{};
 
@@ -260,10 +231,8 @@ void UWBP_CMN_GadgetCount_C::SetIconType(ERewardType InRewardType)
 
 void UWBP_CMN_GadgetCount_C::StopAnimationCount()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "StopAnimationCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +243,8 @@ void UWBP_CMN_GadgetCount_C::StopAnimationCount()
 
 void UWBP_CMN_GadgetCount_C::UnbindAllEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "UnbindAllEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,10 +257,8 @@ void UWBP_CMN_GadgetCount_C::UnbindAllEvent()
 
 void UWBP_CMN_GadgetCount_C::UpdateNumberDisplay(int32 InNumber)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCount_C", "UpdateNumberDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCount_C", FnName));
 
 	Params::WBP_CMN_GadgetCount_C_UpdateNumberDisplay Parms{};
 
@@ -302,5 +267,5 @@ void UWBP_CMN_GadgetCount_C::UpdateNumberDisplay(int32 InNumber)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

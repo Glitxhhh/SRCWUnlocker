@@ -14,8 +14,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_Line_Btn.WBP_CMN_Line_Btn_C
 // 0x0040 (0x04C0 - 0x0480)
@@ -65,5 +64,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_Line_Btn_C;
 
-}
-
+SDK_NAMESPACE_END

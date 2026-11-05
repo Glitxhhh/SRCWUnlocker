@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_RSR_5rings_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RSR_5rings.WBP_Result_Sub_RSR_5rings_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Result_Sub_RSR_5rings_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_RSR_5rings_C::Construct()
 
 void UWBP_Result_Sub_RSR_5rings_C::ExecuteUbergraph_WBP_Result_Sub_RSR_5rings(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "ExecuteUbergraph_WBP_Result_Sub_RSR_5rings");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RSR_5rings_C", "ExecuteUbergraph_WBP_Result_Sub_RSR_5rings", FuncInfo);
 
 	Params::WBP_Result_Sub_RSR_5rings_C_ExecuteUbergraph_WBP_Result_Sub_RSR_5rings Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Result_Sub_RSR_5rings_C::ExecuteUbergraph_WBP_Result_Sub_RSR_5rings(in
 
 void UWBP_Result_Sub_RSR_5rings_C::PlayAllGetAnimation(int32 PlayerIndex_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "PlayAllGetAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_PlayAllGetAnimation Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_Result_Sub_RSR_5rings_C::PlayAllGetAnimation(int32 PlayerIndex_0)
 
 void UWBP_Result_Sub_RSR_5rings_C::PlayRSRAnimation(int32 PlayerIndex_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "PlayRSRAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_PlayRSRAnimation Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_Result_Sub_RSR_5rings_C::PlayRSRAnimation(int32 PlayerIndex_0)
 
 void UWBP_Result_Sub_RSR_5rings_C::SetGrayColor(bool IsGray)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "SetGrayColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_SetGrayColor Parms{};
 
@@ -118,10 +107,8 @@ void UWBP_Result_Sub_RSR_5rings_C::SetGrayColor(bool IsGray)
 
 void UWBP_Result_Sub_RSR_5rings_C::SetOtherRSRBAnimation(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "SetOtherRSRBAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_SetOtherRSRBAnimation Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_Result_Sub_RSR_5rings_C::SetOtherRSRBAnimation(int32 Index_0)
 
 void UWBP_Result_Sub_RSR_5rings_C::SetRSRBAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "SetRSRBAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +137,8 @@ void UWBP_Result_Sub_RSR_5rings_C::SetRSRBAnimation()
 
 void UWBP_Result_Sub_RSR_5rings_C::SkipRSRAnimation(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "SkipRSRAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_SkipRSRAnimation Parms{};
 
@@ -170,10 +153,8 @@ void UWBP_Result_Sub_RSR_5rings_C::SkipRSRAnimation(int32 Index_0)
 
 void UWBP_Result_Sub_RSR_5rings_C::SkipRSRRings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "SkipRSRRings");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -187,10 +168,8 @@ void UWBP_Result_Sub_RSR_5rings_C::SkipRSRRings()
 
 void UWBP_Result_Sub_RSR_5rings_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	Params::WBP_Result_Sub_RSR_5rings_C_Tick Parms{};
 
@@ -206,10 +185,8 @@ void UWBP_Result_Sub_RSR_5rings_C::Tick(const struct FGeometry& MyGeometry, floa
 
 void UWBP_Result_Sub_RSR_5rings_C::WidgetAnimationEvt_Complete_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "WidgetAnimationEvt_Complete_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,13 +197,11 @@ void UWBP_Result_Sub_RSR_5rings_C::WidgetAnimationEvt_Complete_In_K2Node_WidgetA
 
 void UWBP_Result_Sub_RSR_5rings_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RSR_5rings_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RSR_5rings_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

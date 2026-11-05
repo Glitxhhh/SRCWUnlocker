@@ -12,10 +12,11 @@
 
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeEngine_structs.hpp"
+#include "Engine_parameters.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function InterchangeEngine.InterchangeFilePickerBase.ScriptedFilePickerForTranslatorAssetType
 // 0x0048 (0x0048 - 0x0000)
@@ -90,6 +91,47 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog;
+
+// Function Engine.Interface_AssetUserData.AddAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_AddAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_AddAssetUserDataOfClass
+struct Interface_AssetUserData_AddAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_AddAssetUserDataOfClass;
+
+// Function Engine.Interface_AssetUserData.GetAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_GetAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_GetAssetUserDataOfClass
+struct Interface_AssetUserData_GetAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAssetUserData*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_GetAssetUserDataOfClass;
+
+// Function Engine.Interface_AssetUserData.HasAssetUserDataOfClass
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_Interface_AssetUserData_HasAssetUserDataOfClass
+#define DUMPER7_PARAM_DEFINED_Interface_AssetUserData_HasAssetUserDataOfClass
+struct Interface_AssetUserData_HasAssetUserDataOfClass final
+{
+public:
+	TSubclassOf<class UAssetUserData>             InUserDataClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_Interface_AssetUserData_HasAssetUserDataOfClass;
 
 // Function InterchangeEngine.InterchangeAssetImportData.GetNodeContainer
 // 0x0008 (0x0008 - 0x0000)
@@ -307,5 +349,5 @@ public:
 };
 DUMPER7_ASSERTS_InterchangeManager_GetRegisteredFactoryClass;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "MovieSceneCapture_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -297,10 +296,8 @@ bool UMovieSceneCaptureEnvironment::IsCaptureInProgress()
 
 void UUserDefinedCaptureProtocol::OnBeginFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnBeginFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -311,10 +308,8 @@ void UUserDefinedCaptureProtocol::OnBeginFinalize()
 
 void UUserDefinedCaptureProtocol::OnCaptureFrame()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnCaptureFrame");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,10 +320,8 @@ void UUserDefinedCaptureProtocol::OnCaptureFrame()
 
 void UUserDefinedCaptureProtocol::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -339,10 +332,8 @@ void UUserDefinedCaptureProtocol::OnFinalize()
 
 void UUserDefinedCaptureProtocol::OnPauseCapture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnPauseCapture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -357,10 +348,8 @@ void UUserDefinedCaptureProtocol::OnPauseCapture()
 
 void UUserDefinedCaptureProtocol::OnPixelsReceived(const struct FCapturedPixels& Pixels, const struct FCapturedPixelsID& ID, const struct FFrameMetrics& FrameMetrics)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnPixelsReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	Params::UserDefinedCaptureProtocol_OnPixelsReceived Parms{};
 
@@ -377,10 +366,8 @@ void UUserDefinedCaptureProtocol::OnPixelsReceived(const struct FCapturedPixels&
 
 void UUserDefinedCaptureProtocol::OnPreTick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnPreTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -393,10 +380,8 @@ void UUserDefinedCaptureProtocol::OnPreTick()
 
 bool UUserDefinedCaptureProtocol::OnSetup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnSetup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	Params::UserDefinedCaptureProtocol_OnSetup Parms{};
 
@@ -416,10 +401,8 @@ bool UUserDefinedCaptureProtocol::OnSetup()
 
 void UUserDefinedCaptureProtocol::OnStartCapture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnStartCapture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -430,10 +413,8 @@ void UUserDefinedCaptureProtocol::OnStartCapture()
 
 void UUserDefinedCaptureProtocol::OnTick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -444,10 +425,8 @@ void UUserDefinedCaptureProtocol::OnTick()
 
 void UUserDefinedCaptureProtocol::OnWarmUp()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnWarmUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -584,10 +563,8 @@ struct FFrameMetrics UUserDefinedCaptureProtocol::GetCurrentFrameMetrics() const
 
 bool UUserDefinedCaptureProtocol::OnCanFinalize() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserDefinedCaptureProtocol", "OnCanFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"UserDefinedCaptureProtocol", FnName));
 
 	Params::UserDefinedCaptureProtocol_OnCanFinalize Parms{};
 
@@ -687,5 +664,5 @@ void UUserDefinedImageCaptureProtocol::WriteImageToDisk(const struct FCapturedPi
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

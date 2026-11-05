@@ -14,18 +14,15 @@
 #include "BP_MachineCustomizeSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MachineCustomizeSequence.BP_MachineCustomizeSequence_C.Deregister
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MachineCustomizeSequence_C::Deregister()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "Deregister");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_MachineCustomizeSequence_C::Deregister()
 
 void ABP_MachineCustomizeSequence_C::DispatchOnMachineSelectedEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "DispatchOnMachineSelectedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void ABP_MachineCustomizeSequence_C::DispatchOnMachineSelectedEvent()
 
 void ABP_MachineCustomizeSequence_C::DispatchOnShortcutCustomizeStartedEvent(EMachineId InMachineID, EMachinePartsType InMachinePartsType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "DispatchOnShortcutCustomizeStartedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_DispatchOnShortcutCustomizeStartedEvent Parms{};
 
@@ -74,10 +67,8 @@ void ABP_MachineCustomizeSequence_C::DispatchOnShortcutCustomizeStartedEvent(EMa
 
 void ABP_MachineCustomizeSequence_C::ExecuteUbergraph_BP_MachineCustomizeSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "ExecuteUbergraph_BP_MachineCustomizeSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MachineCustomizeSequence_C", "ExecuteUbergraph_BP_MachineCustomizeSequence", FuncInfo);
 
 	Params::BP_MachineCustomizeSequence_C_ExecuteUbergraph_BP_MachineCustomizeSequence Parms{};
 
@@ -92,10 +83,8 @@ void ABP_MachineCustomizeSequence_C::ExecuteUbergraph_BP_MachineCustomizeSequenc
 
 void ABP_MachineCustomizeSequence_C::Exit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "Exit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -113,10 +102,8 @@ void ABP_MachineCustomizeSequence_C::Exit()
 
 void ABP_MachineCustomizeSequence_C::GetMachineParams(const struct FUserMachineCustomizeData& InCustomizeData, double* OutSpeed, double* OutAccel, double* OutHandling, double* OutPower, double* OutDash)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetMachineParams");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetMachineParams Parms{};
 
@@ -146,10 +133,8 @@ void ABP_MachineCustomizeSequence_C::GetMachineParams(const struct FUserMachineC
 
 void ABP_MachineCustomizeSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,10 +145,8 @@ void ABP_MachineCustomizeSequence_C::OnFinalize()
 
 void ABP_MachineCustomizeSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -174,10 +157,8 @@ void ABP_MachineCustomizeSequence_C::OnInitialize()
 
 void ABP_MachineCustomizeSequence_C::Register()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "Register");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,10 +169,8 @@ void ABP_MachineCustomizeSequence_C::Register()
 
 void ABP_MachineCustomizeSequence_C::ResetMessageBar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "ResetMessageBar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -204,10 +183,8 @@ void ABP_MachineCustomizeSequence_C::ResetMessageBar()
 
 void ABP_MachineCustomizeSequence_C::SetCanControlParamWindow(bool bInCanControl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetCanControlParamWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_SetCanControlParamWindow Parms{};
 
@@ -224,10 +201,8 @@ void ABP_MachineCustomizeSequence_C::SetCanControlParamWindow(bool bInCanControl
 
 void ABP_MachineCustomizeSequence_C::SetCanControlTurntable(bool bInCanControl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetCanControlTurntable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_SetCanControlTurntable Parms{};
 
@@ -242,10 +217,8 @@ void ABP_MachineCustomizeSequence_C::SetCanControlTurntable(bool bInCanControl)
 
 void ABP_MachineCustomizeSequence_C::SetFocusToDummy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetFocusToDummy");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -258,10 +231,8 @@ void ABP_MachineCustomizeSequence_C::SetFocusToDummy()
 
 void ABP_MachineCustomizeSequence_C::SetGarageData(const struct FST_GarageData& InGarageData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetGarageData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_SetGarageData Parms{};
 
@@ -278,10 +249,8 @@ void ABP_MachineCustomizeSequence_C::SetGarageData(const struct FST_GarageData& 
 
 void ABP_MachineCustomizeSequence_C::SetHasExitedByShortcut(bool bInHasExited)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetHasExitedByShortcut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_SetHasExitedByShortcut Parms{};
 
@@ -298,10 +267,8 @@ void ABP_MachineCustomizeSequence_C::SetHasExitedByShortcut(bool bInHasExited)
 
 void ABP_MachineCustomizeSequence_C::SetMessageBarVisible(bool Is_Message_Bar_Visible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_SetMessageBarVisible Parms{};
 
@@ -318,10 +285,8 @@ void ABP_MachineCustomizeSequence_C::SetMessageBarVisible(bool Is_Message_Bar_Vi
 
 void ABP_MachineCustomizeSequence_C::Setup(const struct FST_GarageData& InGarageData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_Setup Parms{};
 
@@ -336,10 +301,8 @@ void ABP_MachineCustomizeSequence_C::Setup(const struct FST_GarageData& InGarage
 
 void ABP_MachineCustomizeSequence_C::SetupMessageBar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "SetupMessageBar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -353,10 +316,8 @@ void ABP_MachineCustomizeSequence_C::SetupMessageBar()
 
 void ABP_MachineCustomizeSequence_C::UpdateParamWindowByCustomizeData(const struct FUserMachineCustomizeData& InCurrentCustomizeData, const struct FUserMachineCustomizeData& InCandCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "UpdateParamWindowByCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_UpdateParamWindowByCustomizeData Parms{};
 
@@ -372,10 +333,8 @@ void ABP_MachineCustomizeSequence_C::UpdateParamWindowByCustomizeData(const stru
 
 void ABP_MachineCustomizeSequence_C::UpdateParamWindowBySelectedData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "UpdateParamWindowBySelectedData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -388,10 +347,8 @@ void ABP_MachineCustomizeSequence_C::UpdateParamWindowBySelectedData()
 
 void ABP_MachineCustomizeSequence_C::UpdateRacer(bool bInForcedSetting)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "UpdateRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_UpdateRacer Parms{};
 
@@ -408,10 +365,8 @@ void ABP_MachineCustomizeSequence_C::UpdateRacer(bool bInForcedSetting)
 
 class AAppPlayerController* ABP_MachineCustomizeSequence_C::GetAppPlayerController() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetAppPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetAppPlayerController Parms{};
 
@@ -428,10 +383,8 @@ class AAppPlayerController* ABP_MachineCustomizeSequence_C::GetAppPlayerControll
 
 void ABP_MachineCustomizeSequence_C::GetGarageData(struct FST_GarageData* OutGarageData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetGarageData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetGarageData Parms{};
 
@@ -449,10 +402,8 @@ void ABP_MachineCustomizeSequence_C::GetGarageData(struct FST_GarageData* OutGar
 
 class UMachineCustomTop* ABP_MachineCustomizeSequence_C::GetMachineCustomTop() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetMachineCustomTop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetMachineCustomTop Parms{};
 
@@ -470,14 +421,13 @@ class UMachineCustomTop* ABP_MachineCustomizeSequence_C::GetMachineCustomTop() c
 // EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const TArray<EGadgetId>&                InGadgetIds                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<EGadgetId>&                      InSpGadgetIds                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FRacerParamData*                 OutParamData                                           (Parm, OutParm, NoDestructor)
 
-void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, struct FRacerParamData* OutParamData) const
+void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, const TArray<EGadgetId>& InGadgetIds, TArray<EGadgetId>& InSpGadgetIds, struct FRacerParamData* OutParamData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetParamData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetParamData Parms{};
 
@@ -486,8 +436,11 @@ void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachine
 	Parms.InRearPartsId = InRearPartsId;
 	Parms.InTirePartsId = InTirePartsId;
 	Parms.InGadgetIds = std::move(InGadgetIds);
+	Parms.InSpGadgetIds = std::move(InSpGadgetIds);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	InSpGadgetIds = std::move(Parms.InSpGadgetIds);
 
 	if (OutParamData != nullptr)
 		*OutParamData = std::move(Parms.OutParamData);
@@ -501,10 +454,8 @@ void ABP_MachineCustomizeSequence_C::GetParamData(EDriverId InDriverId, EMachine
 
 class APlayerController* ABP_MachineCustomizeSequence_C::GetPlayerController() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetPlayerController Parms{};
 
@@ -521,10 +472,8 @@ class APlayerController* ABP_MachineCustomizeSequence_C::GetPlayerController() c
 
 class AMenuRacerBase* ABP_MachineCustomizeSequence_C::GetRacer() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MachineCustomizeSequence_C", "GetRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MachineCustomizeSequence_C", FnName));
 
 	Params::BP_MachineCustomizeSequence_C_GetRacer Parms{};
 
@@ -533,5 +482,5 @@ class AMenuRacerBase* ABP_MachineCustomizeSequence_C::GetRacer() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

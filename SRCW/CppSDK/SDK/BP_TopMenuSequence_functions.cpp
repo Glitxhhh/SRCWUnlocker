@@ -14,18 +14,27 @@
 #include "BP_TopMenuSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.AttachMainCamera
 // (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TopMenuSequence_C::AttachMainCamera()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "AttachMainCamera");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.AttachMainCameraToPlayer
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::AttachMainCameraToPlayer()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +47,8 @@ void ABP_TopMenuSequence_C::AttachMainCamera()
 
 void ABP_TopMenuSequence_C::BackFromNoticePopup(ETopMenuSequenceState ReturnState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "BackFromNoticePopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_BackFromNoticePopup Parms{};
 
@@ -58,10 +65,8 @@ void ABP_TopMenuSequence_C::BackFromNoticePopup(ETopMenuSequenceState ReturnStat
 
 void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_Etcetera_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "BndEvt__BP_TopMenuSequence_BPC_Etcetera_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_BndEvt__BP_TopMenuSequence_BPC_Etcetera_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature Parms{};
 
@@ -78,12 +83,28 @@ void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_Etcetera_K2Node_Compo
 
 void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature(EMenuSequenceSubState State)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_BndEvt__BP_TopMenuSequence_BPC_PlayMission_K2Node_ComponentBoundEvent_0_OnChangeStateDelegate__DelegateSignature Parms{};
 
 	Parms.State = State;
 
@@ -96,10 +117,8 @@ void ABP_TopMenuSequence_C::BndEvt__BP_TopMenuSequence_BPC_FriendList_K2Node_Com
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_Fever()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_Fever");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +129,8 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_Fever()
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_GadgetCustom()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_GadgetCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +141,8 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_GadgetCustom()
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_GrandPrixIntro()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_GrandPrixIntro");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +153,8 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_GrandPrixIntro()
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkCleard()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_RaceParkCleard");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +165,8 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkCleard()
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkCleard_BackToRacePark()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_RaceParkCleard_BackToRacePark");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +177,20 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkCleard_BackToRacePark()
 
 void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkIntro()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Call_DodonpaEvent_RaceParkIntro");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.Call_DodonpaEvent_RivalDuel
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::Call_DodonpaEvent_RivalDuel()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -179,20 +200,40 @@ void ABP_TopMenuSequence_C::Call_DodonpaEvent_RaceParkIntro()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGrandPrixEventFlag                     SaveDataFlagId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGrandPrixEventFlag                     SaveFlagId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMenuSequenceBGM                        BGM_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveDataFlagId, EMenuSequenceBGM BGM_ID)
+void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEventFlag SaveFlagId, EMenuSequenceBGM BGM_ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "CallDodonpaEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_CallDodonpaEvent Parms{};
 
 	Parms.EventName = EventName;
-	Parms.SaveDataFlagId = SaveDataFlagId;
+	Parms.SaveFlagId = SaveFlagId;
+	Parms.BGM_ID = BGM_ID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.CallDodonpaEventSeason2
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAppendDialogueEventBitFlag             SaveFlagId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMenuSequenceBGM                        BGM_ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::CallDodonpaEventSeason2(class FName EventName, EAppendDialogueEventBitFlag SaveFlagId, EMenuSequenceBGM BGM_ID)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_CallDodonpaEventSeason2 Parms{};
+
+	Parms.EventName = EventName;
+	Parms.SaveFlagId = SaveFlagId;
 	Parms.BGM_ID = BGM_ID;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -204,10 +245,8 @@ void ABP_TopMenuSequence_C::CallDodonpaEvent(class FName EventName, EGrandPrixEv
 
 void ABP_TopMenuSequence_C::CreateMenuRacer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "CreateMenuRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,10 +259,8 @@ void ABP_TopMenuSequence_C::CreateMenuRacer()
 
 void ABP_TopMenuSequence_C::CreateTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "CreateTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_CreateTipsWindow Parms{};
 
@@ -240,10 +277,8 @@ void ABP_TopMenuSequence_C::CreateTipsWindow(EHintId InHintId)
 
 void ABP_TopMenuSequence_C::DecisionStoreEvent(bool IsAccept)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "DecisionStoreEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_DecisionStoreEvent Parms{};
 
@@ -258,12 +293,28 @@ void ABP_TopMenuSequence_C::DecisionStoreEvent(bool IsAccept)
 
 void ABP_TopMenuSequence_C::DodonpaEventEnd_Fever_NextGarage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "DodonpaEventEnd_Fever_NextGarage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.ExchangeToGarage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::ExchangeToGarage(EMenuSequenceSubState State)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_ExchangeToGarage Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -274,10 +325,8 @@ void ABP_TopMenuSequence_C::DodonpaEventEnd_Fever_NextGarage()
 
 void ABP_TopMenuSequence_C::ExecuteUbergraph_BP_TopMenuSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "ExecuteUbergraph_BP_TopMenuSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_TopMenuSequence_C", "ExecuteUbergraph_BP_TopMenuSequence", FuncInfo);
 
 	Params::BP_TopMenuSequence_C_ExecuteUbergraph_BP_TopMenuSequence Parms{};
 
@@ -292,10 +341,8 @@ void ABP_TopMenuSequence_C::ExecuteUbergraph_BP_TopMenuSequence(int32 EntryPoint
 
 void ABP_TopMenuSequence_C::FadeOutCheck()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FadeOutCheck");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +355,8 @@ void ABP_TopMenuSequence_C::FadeOutCheck()
 
 void ABP_TopMenuSequence_C::FadeStraightToSelectPlayMode(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FadeStraightToSelectPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FadeStraightToSelectPlayMode Parms{};
 
@@ -326,10 +371,8 @@ void ABP_TopMenuSequence_C::FadeStraightToSelectPlayMode(EUnionUIFadeDirection F
 
 void ABP_TopMenuSequence_C::Finished_57F6DED141952D93143C6FBA818D757E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Finished_57F6DED141952D93143C6FBA818D757E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -342,12 +385,28 @@ void ABP_TopMenuSequence_C::Finished_57F6DED141952D93143C6FBA818D757E()
 
 void ABP_TopMenuSequence_C::FinishedFadeToCharaMachineSelect(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToCharaMachineSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FinishedFadeToCharaMachineSelect Parms{};
+
+	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.FinishedFadeToExchange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUnionUIFadeDirection                   FadeDirection                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::FinishedFadeToExchange(EUnionUIFadeDirection FadeDirection)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_FinishedFadeToExchange Parms{};
 
 	Parms.FadeDirection = FadeDirection;
 
@@ -362,10 +421,8 @@ void ABP_TopMenuSequence_C::FinishedFadeToCharaMachineSelect(EUnionUIFadeDirecti
 
 void ABP_TopMenuSequence_C::FinishedFadeToGadgetCustom(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToGadgetCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FinishedFadeToGadgetCustom Parms{};
 
@@ -382,10 +439,8 @@ void ABP_TopMenuSequence_C::FinishedFadeToGadgetCustom(EUnionUIFadeDirection Fad
 
 void ABP_TopMenuSequence_C::FinishedFadeToGarage(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToGarage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FinishedFadeToGarage Parms{};
 
@@ -403,10 +458,8 @@ void ABP_TopMenuSequence_C::FinishedFadeToGarage(EUnionUIFadeDirection FadeDirec
 
 void ABP_TopMenuSequence_C::FinishedFadeToGarageAndCharaMachineSelectCommonProcess(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishedFadeToGarageAndCharaMachineSelectCommonProcess");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FinishedFadeToGarageAndCharaMachineSelectCommonProcess Parms{};
 
@@ -424,10 +477,8 @@ void ABP_TopMenuSequence_C::FinishedFadeToGarageAndCharaMachineSelectCommonProce
 
 void ABP_TopMenuSequence_C::FinishiedFadeToSelectedGameMode(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "FinishiedFadeToSelectedGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_FinishiedFadeToSelectedGameMode Parms{};
 
@@ -444,10 +495,8 @@ void ABP_TopMenuSequence_C::FinishiedFadeToSelectedGameMode(EUnionUIFadeDirectio
 
 void ABP_TopMenuSequence_C::ForceTransitionPartyRace(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "ForceTransitionPartyRace");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_ForceTransitionPartyRace Parms{};
 
@@ -462,10 +511,8 @@ void ABP_TopMenuSequence_C::ForceTransitionPartyRace(EMenuSequenceSubState State
 
 void ABP_TopMenuSequence_C::GadgetCustom_DodonpaEvent_End()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "GadgetCustom_DodonpaEvent_End");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -478,10 +525,8 @@ void ABP_TopMenuSequence_C::GadgetCustom_DodonpaEvent_End()
 
 class UObject* ABP_TopMenuSequence_C::GetOwnerMenuSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "GetOwnerMenuSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_GetOwnerMenuSequence Parms{};
 
@@ -498,10 +543,8 @@ class UObject* ABP_TopMenuSequence_C::GetOwnerMenuSequence()
 
 void ABP_TopMenuSequence_C::GetPlayerName(class FString* playerName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "GetPlayerName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_GetPlayerName Parms{};
 
@@ -519,10 +562,8 @@ void ABP_TopMenuSequence_C::GetPlayerName(class FString* playerName)
 
 void ABP_TopMenuSequence_C::GetTipsHintId(EHintId* OutTipsHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "GetTipsHintId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_GetTipsHintId Parms{};
 
@@ -533,15 +574,49 @@ void ABP_TopMenuSequence_C::GetTipsHintId(EHintId* OutTipsHintId)
 }
 
 
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoExchange
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GotoExchange()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoOnlineFromFriendList
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TopMenuSequence_C::GotoOnlineFromFriendList()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "GotoOnlineFromFriendList");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GotoOnlineFromPlayMission
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GotoOnlineFromPlayMission()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.GoToPlayMission
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_TopMenuSequence_C::GoToPlayMission()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -552,10 +627,8 @@ void ABP_TopMenuSequence_C::GotoOnlineFromFriendList()
 
 void ABP_TopMenuSequence_C::InitBinds()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "InitBinds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -570,10 +643,8 @@ void ABP_TopMenuSequence_C::InitBinds()
 
 void ABP_TopMenuSequence_C::IsShowAddGadgetTips(EGadgetPlateId InGadgetPlateRank, EUnionRomVersion InVersionNum, bool* bOutShowTips)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "IsShowAddGadgetTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_IsShowAddGadgetTips Parms{};
 
@@ -594,10 +665,8 @@ void ABP_TopMenuSequence_C::IsShowAddGadgetTips(EGadgetPlateId InGadgetPlateRank
 
 void ABP_TopMenuSequence_C::IsTipsHint(bool* OutTipsFlag)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "IsTipsHint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_IsTipsHint Parms{};
 
@@ -613,10 +682,8 @@ void ABP_TopMenuSequence_C::IsTipsHint(bool* OutTipsFlag)
 
 void ABP_TopMenuSequence_C::LoggedinErrorWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "LoggedinErrorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -627,10 +694,8 @@ void ABP_TopMenuSequence_C::LoggedinErrorWindow()
 
 void ABP_TopMenuSequence_C::NextSelectPlayMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "NextSelectPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -643,10 +708,8 @@ void ABP_TopMenuSequence_C::NextSelectPlayMode()
 
 void ABP_TopMenuSequence_C::OnCancelCharaMachine(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelCharaMachine");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelCharaMachine Parms{};
 
@@ -663,14 +726,30 @@ void ABP_TopMenuSequence_C::OnCancelCharaMachine(EMenuSequenceSubState State)
 
 void ABP_TopMenuSequence_C::OnCancelCharaMachineFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelCharaMachineFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelCharaMachineFade Parms{};
 
 	Parms.FadeDirection = FadeDirection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.OnCancelExchange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMenuSequenceSubState                   State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::OnCancelExchange(EMenuSequenceSubState State)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_OnCancelExchange Parms{};
+
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -683,10 +762,8 @@ void ABP_TopMenuSequence_C::OnCancelCharaMachineFade(EUnionUIFadeDirection FadeD
 
 void ABP_TopMenuSequence_C::OnCancelGadgetCustomize(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelGadgetCustomize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelGadgetCustomize Parms{};
 
@@ -705,10 +782,8 @@ void ABP_TopMenuSequence_C::OnCancelGadgetCustomize(EMenuSequenceSubState State)
 
 void ABP_TopMenuSequence_C::OnCancelGameMode(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelGameMode Parms{};
 
@@ -727,10 +802,8 @@ void ABP_TopMenuSequence_C::OnCancelGameMode(class UUnionUIButtonBase* Button, i
 
 void ABP_TopMenuSequence_C::OnCancelGarage(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelGarage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelGarage Parms{};
 
@@ -748,10 +821,8 @@ void ABP_TopMenuSequence_C::OnCancelGarage(EMenuSequenceSubState State)
 
 void ABP_TopMenuSequence_C::OnCancelLobbyPlayerList(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelLobbyPlayerList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelLobbyPlayerList Parms{};
 
@@ -771,10 +842,8 @@ void ABP_TopMenuSequence_C::OnCancelLobbyPlayerList(class UUnionUIButtonBase* Bu
 
 void ABP_TopMenuSequence_C::OnCancelPlayerNum(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelPlayerNum Parms{};
 
@@ -795,10 +864,8 @@ void ABP_TopMenuSequence_C::OnCancelPlayerNum(class UUnionUIButtonBase* Button, 
 
 void ABP_TopMenuSequence_C::OnCancelPlayMode(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnCancelPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnCancelPlayMode Parms{};
 
@@ -817,10 +884,8 @@ void ABP_TopMenuSequence_C::OnCancelPlayMode(class UUnionUIButtonBase* Button, i
 
 void ABP_TopMenuSequence_C::OnChangedPlayerList(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnChangedPlayerList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnChangedPlayerList Parms{};
 
@@ -835,10 +900,8 @@ void ABP_TopMenuSequence_C::OnChangedPlayerList(int32 Index_0)
 
 void ABP_TopMenuSequence_C::OnDecisionCharaMachine()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionCharaMachine");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -851,10 +914,8 @@ void ABP_TopMenuSequence_C::OnDecisionCharaMachine()
 
 void ABP_TopMenuSequence_C::OnDecisionCharaMachineFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionCharaMachineFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionCharaMachineFade Parms{};
 
@@ -873,10 +934,8 @@ void ABP_TopMenuSequence_C::OnDecisionCharaMachineFade(EUnionUIFadeDirection Fad
 
 void ABP_TopMenuSequence_C::OnDecisionGameMode(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionGameMode Parms{};
 
@@ -893,10 +952,8 @@ void ABP_TopMenuSequence_C::OnDecisionGameMode(class UUnionUIButtonBase* Button,
 
 void ABP_TopMenuSequence_C::OnDecisionGameMode_DodonpaEvent_End()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionGameMode_DodonpaEvent_End");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -910,10 +967,8 @@ void ABP_TopMenuSequence_C::OnDecisionGameMode_DodonpaEvent_End()
 
 void ABP_TopMenuSequence_C::OnDecisionLobbyPlayerList(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionLobbyPlayerList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionLobbyPlayerList Parms{};
 
@@ -933,10 +988,8 @@ void ABP_TopMenuSequence_C::OnDecisionLobbyPlayerList(class UUnionUIButtonBase* 
 
 void ABP_TopMenuSequence_C::OnDecisionPlayerNum(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionPlayerNum Parms{};
 
@@ -957,10 +1010,8 @@ void ABP_TopMenuSequence_C::OnDecisionPlayerNum(class UUnionUIButtonBase* Button
 
 void ABP_TopMenuSequence_C::OnDecisionPlayMode(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionPlayMode Parms{};
 
@@ -980,10 +1031,8 @@ void ABP_TopMenuSequence_C::OnDecisionPlayMode(class UUnionUIButtonBase* Button,
 
 void ABP_TopMenuSequence_C::OnDecisionSubMenu(class UUnionUIButtonBase* Button, ECommonMenuButtonType ButtonType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDecisionSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDecisionSubMenu Parms{};
 
@@ -1001,10 +1050,8 @@ void ABP_TopMenuSequence_C::OnDecisionSubMenu(class UUnionUIButtonBase* Button, 
 
 void ABP_TopMenuSequence_C::OnDodonpaEventEnd_DecisionGameMode(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDodonpaEventEnd_DecisionGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDodonpaEventEnd_DecisionGameMode Parms{};
 
@@ -1021,10 +1068,8 @@ void ABP_TopMenuSequence_C::OnDodonpaEventEnd_DecisionGameMode(EMenuSequenceSubS
 
 void ABP_TopMenuSequence_C::OnDodonpaEventEnd_Fever(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDodonpaEventEnd_Fever");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDodonpaEventEnd_Fever Parms{};
 
@@ -1041,10 +1086,8 @@ void ABP_TopMenuSequence_C::OnDodonpaEventEnd_Fever(EMenuSequenceSubState State)
 
 void ABP_TopMenuSequence_C::OnDodonpaEventEnd_GadgetCustom(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnDodonpaEventEnd_GadgetCustom");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnDodonpaEventEnd_GadgetCustom Parms{};
 
@@ -1063,10 +1106,8 @@ void ABP_TopMenuSequence_C::OnDodonpaEventEnd_GadgetCustom(EMenuSequenceSubState
 
 void ABP_TopMenuSequence_C::OnErrorPopupWindowClose(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnErrorPopupWindowClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnErrorPopupWindowClose Parms{};
 
@@ -1083,10 +1124,8 @@ void ABP_TopMenuSequence_C::OnErrorPopupWindowClose(class UUnionUIButtonBase* Bu
 
 void ABP_TopMenuSequence_C::OnErrorWindowCloseToTitle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnErrorWindowCloseToTitle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1099,10 +1138,8 @@ void ABP_TopMenuSequence_C::OnErrorWindowCloseToTitle()
 
 void ABP_TopMenuSequence_C::OnExitPlayerProfileEvent(EMenuSequenceSubState State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnExitPlayerProfileEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnExitPlayerProfileEvent Parms{};
 
@@ -1117,10 +1154,8 @@ void ABP_TopMenuSequence_C::OnExitPlayerProfileEvent(EMenuSequenceSubState State
 
 void ABP_TopMenuSequence_C::OnExitStateSelectGameMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnExitStateSelectGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1131,10 +1166,8 @@ void ABP_TopMenuSequence_C::OnExitStateSelectGameMode()
 
 void ABP_TopMenuSequence_C::OnExitStateSelectPlayerNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnExitStateSelectPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1145,10 +1178,8 @@ void ABP_TopMenuSequence_C::OnExitStateSelectPlayerNum()
 
 void ABP_TopMenuSequence_C::OnExitStateSelectPlayMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnExitStateSelectPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1159,10 +1190,8 @@ void ABP_TopMenuSequence_C::OnExitStateSelectPlayMode()
 
 void ABP_TopMenuSequence_C::OnExitStateTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnExitStateTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1175,10 +1204,8 @@ void ABP_TopMenuSequence_C::OnExitStateTipsWindow()
 
 void ABP_TopMenuSequence_C::OnFaceButtonLeftPressedTopMenu(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFaceButtonLeftPressedTopMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnFaceButtonLeftPressedTopMenu Parms{};
 
@@ -1195,10 +1222,8 @@ void ABP_TopMenuSequence_C::OnFaceButtonLeftPressedTopMenu(class UObject* Object
 
 void ABP_TopMenuSequence_C::OnFaceButtonTopPressedTopMenu(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFaceButtonTopPressedTopMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnFaceButtonTopPressedTopMenu Parms{};
 
@@ -1215,10 +1240,8 @@ void ABP_TopMenuSequence_C::OnFaceButtonTopPressedTopMenu(class UObject* Object)
 
 void ABP_TopMenuSequence_C::OnFadeOutEnd_DodonpaEvent_Fever_EventEnd(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFadeOutEnd_DodonpaEvent_Fever_EventEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnFadeOutEnd_DodonpaEvent_Fever_EventEnd Parms{};
 
@@ -1233,10 +1256,8 @@ void ABP_TopMenuSequence_C::OnFadeOutEnd_DodonpaEvent_Fever_EventEnd(EUnionUIFad
 
 void ABP_TopMenuSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1249,10 +1270,8 @@ void ABP_TopMenuSequence_C::OnFinalize()
 
 void ABP_TopMenuSequence_C::OnFInishedPlayModeFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFInishedPlayModeFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnFInishedPlayModeFade Parms{};
 
@@ -1267,10 +1286,8 @@ void ABP_TopMenuSequence_C::OnFInishedPlayModeFade(EUnionUIFadeDirection FadeDir
 
 void ABP_TopMenuSequence_C::OnFinishNetworkErrorEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnFinishNetworkErrorEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1281,10 +1298,8 @@ void ABP_TopMenuSequence_C::OnFinishNetworkErrorEvent()
 
 void ABP_TopMenuSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1297,10 +1312,8 @@ void ABP_TopMenuSequence_C::OnInitialize()
 
 void ABP_TopMenuSequence_C::OninitializeFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OninitializeFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OninitializeFade Parms{};
 
@@ -1315,10 +1328,8 @@ void ABP_TopMenuSequence_C::OninitializeFade(EUnionUIFadeDirection FadeDirection
 
 void ABP_TopMenuSequence_C::OnInitStateExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1329,10 +1340,8 @@ void ABP_TopMenuSequence_C::OnInitStateExit()
 
 void ABP_TopMenuSequence_C::OnInitStateSelectGameMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateSelectGameMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1343,10 +1352,8 @@ void ABP_TopMenuSequence_C::OnInitStateSelectGameMode()
 
 void ABP_TopMenuSequence_C::OnInitStateSelectPlayerNum()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateSelectPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1357,10 +1364,8 @@ void ABP_TopMenuSequence_C::OnInitStateSelectPlayerNum()
 
 void ABP_TopMenuSequence_C::OnInitStateSelectPlayMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateSelectPlayMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1371,10 +1376,8 @@ void ABP_TopMenuSequence_C::OnInitStateSelectPlayMode()
 
 void ABP_TopMenuSequence_C::OnInitStateStore()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateStore");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1385,10 +1388,8 @@ void ABP_TopMenuSequence_C::OnInitStateStore()
 
 void ABP_TopMenuSequence_C::OnInitStateTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1399,10 +1400,8 @@ void ABP_TopMenuSequence_C::OnInitStateTipsWindow()
 
 void ABP_TopMenuSequence_C::OnInitStateTopMenuTop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnInitStateTopMenuTop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1415,10 +1414,8 @@ void ABP_TopMenuSequence_C::OnInitStateTopMenuTop()
 
 void ABP_TopMenuSequence_C::OnLeftStickButtonPressedTopMenu(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnLeftStickButtonPressedTopMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnLeftStickButtonPressedTopMenu Parms{};
 
@@ -1435,10 +1432,8 @@ void ABP_TopMenuSequence_C::OnLeftStickButtonPressedTopMenu(class UObject* Objec
 
 void ABP_TopMenuSequence_C::OnLoaded_F67FC50A4BBAE2D99FD85C924F046C5D(TSubclassOf<class UObject> Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnLoaded_F67FC50A4BBAE2D99FD85C924F046C5D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnLoaded_F67FC50A4BBAE2D99FD85C924F046C5D Parms{};
 
@@ -1453,10 +1448,8 @@ void ABP_TopMenuSequence_C::OnLoaded_F67FC50A4BBAE2D99FD85C924F046C5D(TSubclassO
 
 void ABP_TopMenuSequence_C::OnNewsMouseClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnNewsMouseClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1469,10 +1462,8 @@ void ABP_TopMenuSequence_C::OnNewsMouseClick()
 
 void ABP_TopMenuSequence_C::OnSpecialPressedTopMenu(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnSpecialPressedTopMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnSpecialPressedTopMenu Parms{};
 
@@ -1489,10 +1480,8 @@ void ABP_TopMenuSequence_C::OnSpecialPressedTopMenu(class UObject* Object)
 
 void ABP_TopMenuSequence_C::OnTipsSaveComplete(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnTipsSaveComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_OnTipsSaveComplete Parms{};
 
@@ -1507,10 +1496,8 @@ void ABP_TopMenuSequence_C::OnTipsSaveComplete(ESaveDataStatus Status)
 
 void ABP_TopMenuSequence_C::OnTipsWindowCloseEnd_Event()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnTipsWindowCloseEnd_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1521,10 +1508,8 @@ void ABP_TopMenuSequence_C::OnTipsWindowCloseEnd_Event()
 
 void ABP_TopMenuSequence_C::OnTopMenuTopTipsStateEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "OnTopMenuTopTipsStateEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1538,10 +1523,8 @@ void ABP_TopMenuSequence_C::OnTopMenuTopTipsStateEnd()
 
 void ABP_TopMenuSequence_C::PlayInAnimationManage(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "PlayInAnimationManage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_PlayInAnimationManage Parms{};
 
@@ -1557,10 +1540,8 @@ void ABP_TopMenuSequence_C::PlayInAnimationManage(ETopMenuSequenceState InState,
 
 void ABP_TopMenuSequence_C::PlayTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "PlayTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1571,10 +1552,8 @@ void ABP_TopMenuSequence_C::PlayTipsWindow()
 
 void ABP_TopMenuSequence_C::ReBindPlayerLists()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "ReBindPlayerLists");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1585,10 +1564,8 @@ void ABP_TopMenuSequence_C::ReBindPlayerLists()
 
 void ABP_TopMenuSequence_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1599,10 +1576,8 @@ void ABP_TopMenuSequence_C::ReceiveBeginPlay()
 
 void ABP_TopMenuSequence_C::RefreshMenuRacers()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "RefreshMenuRacers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1613,10 +1588,8 @@ void ABP_TopMenuSequence_C::RefreshMenuRacers()
 
 void ABP_TopMenuSequence_C::RemoveCommonSubMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "RemoveCommonSubMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1629,10 +1602,8 @@ void ABP_TopMenuSequence_C::RemoveCommonSubMenu()
 
 void ABP_TopMenuSequence_C::Set_FooterVisible_by_in_State(ETopMenuSequenceState In_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Set FooterVisible by in State");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_Set_FooterVisible_by_in_State Parms{};
 
@@ -1650,10 +1621,8 @@ void ABP_TopMenuSequence_C::Set_FooterVisible_by_in_State(ETopMenuSequenceState 
 
 void ABP_TopMenuSequence_C::Set_Next_Top_Menu_SequenceState_Function(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Set Next Top Menu SequenceState Function");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_Set_Next_Top_Menu_SequenceState_Function Parms{};
 
@@ -1671,10 +1640,8 @@ void ABP_TopMenuSequence_C::Set_Next_Top_Menu_SequenceState_Function(ETopMenuSeq
 
 void ABP_TopMenuSequence_C::Set_SubLevelVisible_by_in_State(ETopMenuSequenceState In_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Set SubLevelVisible by in State");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_Set_SubLevelVisible_by_in_State Parms{};
 
@@ -1694,10 +1661,8 @@ void ABP_TopMenuSequence_C::Set_SubLevelVisible_by_in_State(ETopMenuSequenceStat
 
 void ABP_TopMenuSequence_C::Set_Top_UIVisivility(ESlateVisibility Visibility, bool SetTopMenu, bool SetSubMenu, bool SetHeader)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Set Top UIVisivility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_Set_Top_UIVisivility Parms{};
 
@@ -1717,14 +1682,30 @@ void ABP_TopMenuSequence_C::Set_Top_UIVisivility(ESlateVisibility Visibility, bo
 
 void ABP_TopMenuSequence_C::Set_UIVisible_by_in_State(ETopMenuSequenceState In_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "Set UIVisible by in State");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_Set_UIVisible_by_in_State Parms{};
 
 	Parms.In_State = In_State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetGameModeId
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETopMenuGameMode                        Selection                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::SetGameModeId(ETopMenuGameMode Selection)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_SetGameModeId Parms{};
+
+	Parms.Selection = Selection;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1737,10 +1718,8 @@ void ABP_TopMenuSequence_C::Set_UIVisible_by_in_State(ETopMenuSequenceState In_S
 
 void ABP_TopMenuSequence_C::SetHintRequestIfUnread(EHintId InputPin)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetHintRequestIfUnread");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetHintRequestIfUnread Parms{};
 
@@ -1751,16 +1730,14 @@ void ABP_TopMenuSequence_C::SetHintRequestIfUnread(EHintId InputPin)
 
 
 // Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetklaxonEnableByInState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ETopMenuSequenceState                   In_State                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_TopMenuSequence_C::SetklaxonEnableByInState(ETopMenuSequenceState In_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetklaxonEnableByInState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetklaxonEnableByInState Parms{};
 
@@ -1777,10 +1754,8 @@ void ABP_TopMenuSequence_C::SetklaxonEnableByInState(ETopMenuSequenceState In_St
 
 void ABP_TopMenuSequence_C::SetMenuDirectionKeyEnable(bool bEnableDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetMenuDirectionKeyEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetMenuDirectionKeyEnable Parms{};
 
@@ -1798,10 +1773,8 @@ void ABP_TopMenuSequence_C::SetMenuDirectionKeyEnable(bool bEnableDirection)
 
 void ABP_TopMenuSequence_C::SetMenuRacerEffect(class UUnionUIButtonBase* Button, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetMenuRacerEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetMenuRacerEffect Parms{};
 
@@ -1819,10 +1792,8 @@ void ABP_TopMenuSequence_C::SetMenuRacerEffect(class UUnionUIButtonBase* Button,
 
 void ABP_TopMenuSequence_C::SetMenuRacerEffectAll(bool InEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetMenuRacerEffectAll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetMenuRacerEffectAll Parms{};
 
@@ -1839,10 +1810,8 @@ void ABP_TopMenuSequence_C::SetMenuRacerEffectAll(bool InEnable)
 
 void ABP_TopMenuSequence_C::SetMouseInteraction_by_in_State(ETopMenuSequenceState In_State)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetMouseInteraction by in State");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetMouseInteraction_by_in_State Parms{};
 
@@ -1860,10 +1829,8 @@ void ABP_TopMenuSequence_C::SetMouseInteraction_by_in_State(ETopMenuSequenceStat
 
 void ABP_TopMenuSequence_C::SetNextTopMenuSequenceState(ETopMenuSequenceState InState, ETopMenuSequenceState PrevState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetNextTopMenuSequenceState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetNextTopMenuSequenceState Parms{};
 
@@ -1881,14 +1848,36 @@ void ABP_TopMenuSequence_C::SetNextTopMenuSequenceState(ETopMenuSequenceState In
 
 void ABP_TopMenuSequence_C::SetStoreUIVisibility(ESlateVisibility Visibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetStoreUIVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetStoreUIVisibility Parms{};
 
 	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TopMenuSequence.BP_TopMenuSequence_C.SetTopMenuUIVisibility
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const ESlateVisibility                  InVisibility                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetTopMenu                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetSubMenu                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSetHeader                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TopMenuSequence_C::SetTopMenuUIVisibility(const ESlateVisibility InVisibility, bool bIsSetTopMenu, bool bIsSetSubMenu, bool bIsSetHeader)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
+
+	Params::BP_TopMenuSequence_C_SetTopMenuUIVisibility Parms{};
+
+	Parms.InVisibility = InVisibility;
+	Parms.bIsSetTopMenu = bIsSetTopMenu;
+	Parms.bIsSetSubMenu = bIsSetSubMenu;
+	Parms.bIsSetHeader = bIsSetHeader;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1899,10 +1888,8 @@ void ABP_TopMenuSequence_C::SetStoreUIVisibility(ESlateVisibility Visibility)
 
 void ABP_TopMenuSequence_C::SetupBaseWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetupBaseWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1915,10 +1902,8 @@ void ABP_TopMenuSequence_C::SetupBaseWidget()
 
 void ABP_TopMenuSequence_C::SetupSubLevel(class ULevelStreaming* SubLevel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "SetupSubLevel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	Params::BP_TopMenuSequence_C_SetupSubLevel Parms{};
 
@@ -1933,27 +1918,11 @@ void ABP_TopMenuSequence_C::SetupSubLevel(class ULevelStreaming* SubLevel)
 
 void ABP_TopMenuSequence_C::StreamingInstallErrorWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "StreamingInstallErrorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_TopMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_TopMenuSequence.BP_TopMenuSequence_C.UpdateTimeTable
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_TopMenuSequence_C::UpdateTimeTable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TopMenuSequence_C", "UpdateTimeTable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-}
-
+SDK_NAMESPACE_END

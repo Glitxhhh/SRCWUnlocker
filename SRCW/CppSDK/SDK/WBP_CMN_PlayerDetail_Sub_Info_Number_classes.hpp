@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_PlayerDetail_Sub_Info_Number.WBP_CMN_PlayerDetail_Sub_Info_Number_C
 // 0x00E8 (0x03C8 - 0x02E0)
@@ -77,5 +76,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_PlayerDetail_Sub_Info_Number_C;
 
-}
-
+SDK_NAMESPACE_END

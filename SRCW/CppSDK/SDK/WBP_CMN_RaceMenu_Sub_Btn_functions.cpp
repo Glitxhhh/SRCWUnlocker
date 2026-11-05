@@ -14,18 +14,15 @@
 #include "WBP_CMN_RaceMenu_Sub_Btn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_RaceMenu_Sub_Btn.WBP_CMN_RaceMenu_Sub_Btn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::Construct()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::ExecuteUbergraph_WBP_CMN_RaceMenu_Sub_Btn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "ExecuteUbergraph_WBP_CMN_RaceMenu_Sub_Btn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_RaceMenu_Sub_Btn_C", "ExecuteUbergraph_WBP_CMN_RaceMenu_Sub_Btn", FuncInfo);
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_ExecuteUbergraph_WBP_CMN_RaceMenu_Sub_Btn Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::ExecuteUbergraph_WBP_CMN_RaceMenu_Sub_Btn(int3
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::Finished_40BD929F4097DA16BEB9BA8D6C482ACA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "Finished_40BD929F4097DA16BEB9BA8D6C482ACA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::Finished_40BD929F4097DA16BEB9BA8D6C482ACA()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnAcceptKeyPressed()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnBackKeyPressed()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnContentSet()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnContentSet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnContentSet()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusAnimFinished()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,10 +125,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusAnimStart()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusBegin(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusBegin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_OnFocusBegin Parms{};
 
@@ -162,10 +143,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusBegin(const struct FFocusEvent& InFocus
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusEnd(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_OnFocusEnd Parms{};
 
@@ -180,10 +159,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusEnd(const struct FFocusEvent& InFocusEv
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -194,10 +171,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusLoop()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnFocusStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -208,10 +183,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnFocusStart()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -222,10 +195,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnRightStickButtonPressed()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,10 +207,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnSpecialPressed()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnUnFocusAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -250,10 +219,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusAnimFinished()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -264,10 +231,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusAnimStart()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusLoop()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnUnFocusLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -278,10 +243,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusLoop()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "OnUnFocusStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -292,10 +255,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::OnUnFocusStart()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::PlayOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "PlayOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -306,10 +267,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::PlayOutAnim()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::PlayUnFocusAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "PlayUnFocusAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -322,10 +281,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::PlayUnFocusAnimation()
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_PreConstruct Parms{};
 
@@ -340,10 +297,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -354,10 +309,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -368,10 +321,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -382,10 +333,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -396,10 +345,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -410,10 +357,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -424,10 +369,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -438,10 +381,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -452,10 +393,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_Btn_7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -468,10 +407,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SequenceEvent__ENTRYPOINTWBP_CMN_RaceMenu_Sub_
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetAccept(bool Is)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetAccept");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetAccept Parms{};
 
@@ -488,10 +425,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetAccept(bool Is)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetAcceptKeyIgnored(bool Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetAcceptKeyIgnored");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetAcceptKeyIgnored Parms{};
 
@@ -508,10 +443,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetAcceptKeyIgnored(bool Value)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetBtnColorIndex(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetBtnColorIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetBtnColorIndex Parms{};
 
@@ -528,10 +461,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetBtnColorIndex(int32 InIndex)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetBtnPictIndex(int32 InEndMenuBtnPictIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetBtnPictIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetBtnPictIndex Parms{};
 
@@ -548,10 +479,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetBtnPictIndex(int32 InEndMenuBtnPictIndex)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetButtonText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetButtonText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetButtonText Parms{};
 
@@ -568,10 +497,8 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetButtonText(const class FText& InText)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetNewIconVisible(bool bVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetNewIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	Params::WBP_CMN_RaceMenu_Sub_Btn_C_SetNewIconVisible Parms{};
 
@@ -586,13 +513,11 @@ void UWBP_CMN_RaceMenu_Sub_Btn_C::SetNewIconVisible(bool bVisible)
 
 void UWBP_CMN_RaceMenu_Sub_Btn_C::SetupLobbyInvitation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_RaceMenu_Sub_Btn_C", "SetupLobbyInvitation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_RaceMenu_Sub_Btn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

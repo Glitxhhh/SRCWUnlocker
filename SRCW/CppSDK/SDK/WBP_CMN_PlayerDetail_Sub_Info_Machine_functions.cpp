@@ -14,8 +14,7 @@
 #include "WBP_CMN_PlayerDetail_Sub_Info_Machine_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_PlayerDetail_Sub_Info_Machine.WBP_CMN_PlayerDetail_Sub_Info_Machine_C.ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Machine
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Machine(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Machine");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Machine", FuncInfo);
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_ExecuteUbergraph_WBP_CMN_PlayerDetail_Sub_Info_Machine Parms{};
 
@@ -44,46 +41,14 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::ExecuteUbergraph_WBP_CMN_PlayerDe
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::OnLoaded_63E3412942D2292B63AF1FBE0A3214A7(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "OnLoaded_63E3412942D2292B63AF1FBE0A3214A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Machine_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_OnLoaded_63E3412942D2292B63AF1FBE0A3214A7 Parms{};
 
 	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CMN_PlayerDetail_Sub_Info_Machine.WBP_CMN_PlayerDetail_Sub_Info_Machine_C.Set Racer Param
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EDriverId                               InDriverId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InFrontPartsId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InRearPartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachineId                              InTirePartsId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<EGadgetId>&                      InGadgetIds                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::Set_Racer_Param(EDriverId InDriverId, EMachineId InFrontPartsId, EMachineId InRearPartsId, EMachineId InTirePartsId, TArray<EGadgetId>& InGadgetIds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "Set Racer Param");
-
-	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_Set_Racer_Param Parms{};
-
-	Parms.InDriverId = InDriverId;
-	Parms.InFrontPartsId = InFrontPartsId;
-	Parms.InRearPartsId = InRearPartsId;
-	Parms.InTirePartsId = InTirePartsId;
-	Parms.InGadgetIds = std::move(InGadgetIds);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	InGadgetIds = std::move(Parms.InGadgetIds);
 }
 
 
@@ -94,10 +59,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::Set_Racer_Param(EDriverId InDrive
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetFrontPartsData(const struct FMachinePartsUIData& InUIData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "SetFrontPartsData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Machine_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_SetFrontPartsData Parms{};
 
@@ -116,10 +79,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetFrontPartsData(const struct FM
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetRacerData(TSoftObjectPtr<class UTexture2D> RacerTexture, const class FText& RacerName, EDriverType DriverType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "SetRacerData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Machine_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_SetRacerData Parms{};
 
@@ -139,10 +100,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetRacerData(TSoftObjectPtr<class
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetRearPartsData(const struct FMachinePartsUIData& InUIData, bool bIsHover)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "SetRearPartsData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Machine_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_SetRearPartsData Parms{};
 
@@ -160,10 +119,8 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetRearPartsData(const struct FMa
 
 void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetWheelPartsData(const struct FMachinePartsUIData& InUIData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_PlayerDetail_Sub_Info_Machine_C", "SetWheelPartsData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_PlayerDetail_Sub_Info_Machine_C", FnName));
 
 	Params::WBP_CMN_PlayerDetail_Sub_Info_Machine_C_SetWheelPartsData Parms{};
 
@@ -172,5 +129,5 @@ void UWBP_CMN_PlayerDetail_Sub_Info_Machine_C::SetWheelPartsData(const struct FM
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

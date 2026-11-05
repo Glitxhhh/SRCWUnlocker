@@ -14,8 +14,7 @@
 #include "BPC_JudgeEndingState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_JudgeEndingState.BPC_JudgeEndingState_C.ExecuteUbergraph_BPC_JudgeEndingState
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_JudgeEndingState_C::ExecuteUbergraph_BPC_JudgeEndingState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_JudgeEndingState_C", "ExecuteUbergraph_BPC_JudgeEndingState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_JudgeEndingState_C", "ExecuteUbergraph_BPC_JudgeEndingState", FuncInfo);
 
 	Params::BPC_JudgeEndingState_C_ExecuteUbergraph_BPC_JudgeEndingState Parms{};
 
@@ -42,13 +39,11 @@ void UBPC_JudgeEndingState_C::ExecuteUbergraph_BPC_JudgeEndingState(int32 EntryP
 
 void UBPC_JudgeEndingState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_JudgeEndingState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_JudgeEndingState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

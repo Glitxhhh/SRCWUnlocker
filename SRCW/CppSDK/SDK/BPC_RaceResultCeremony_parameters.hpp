@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_RaceResultCeremony.BPC_RaceResultCeremony_C.ExecuteUbergraph_BPC_RaceResultCeremony
 // 0x0018 (0x0018 - 0x0000)
@@ -37,5 +37,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_RaceResultCeremony_C_OnUpdateState;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

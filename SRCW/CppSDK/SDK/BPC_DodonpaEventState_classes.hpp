@@ -10,25 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_DodonpaEventState.BPC_DodonpaEventState_C
-// 0x0018 (0x0160 - 0x0148)
+// 0x0018 (0x0168 - 0x0150)
 class UBPC_DodonpaEventState_C final : public UDodonpaEventState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0148(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   CallEventName;                                     // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGrandPrixEventFlag                           Save_Data_Flag_Id;                                 // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMenuSequenceBGM                              BgmId;                                             // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FName                                   CallEventName;                                     // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMenuSequenceBGM                              BgmId;                                             // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AttachDodonpaCamera();
@@ -40,8 +38,9 @@ public:
 	void OnInitState();
 	void OnSaveComplete(ESaveDataStatus Status);
 	void OnUpdateState(float InDeltaTime);
-	void Set_DodonpaEventFooter();
+	void Set_Dodonpa_Event_Footer();
 	void SetDodonpaEventStatus(class FName InCallEventName, EGrandPrixEventFlag InSaveDataFlagId, EMenuSequenceBGM InBGMId);
+	void SetDodonpaEventStatusSeason2(class FName InCallEventName, EAppendDialogueEventBitFlag InSaveDataFlagId, EMenuSequenceBGM InBGMId);
 	void StartUpdate();
 	void StopUpdate();
 
@@ -61,5 +60,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_DodonpaEventState_C;
 
-}
-
+SDK_NAMESPACE_END

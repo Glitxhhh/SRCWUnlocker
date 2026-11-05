@@ -14,18 +14,15 @@
 #include "WBP_MachineSelect_Sub_CrossButton_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_CrossButton_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::Construct()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::ExecuteUbergraph_WBP_MachineSelect_Sub_CrossButton(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_CrossButton");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_CrossButton_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_CrossButton", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_ExecuteUbergraph_WBP_MachineSelect_Sub_CrossButton Parms{};
 
@@ -59,10 +54,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::ExecuteUbergraph_WBP_MachineSelect_Su
 
 class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationDown(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "NavigationDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_NavigationDown Parms{};
 
@@ -82,10 +75,8 @@ class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationDown(EUINavigatio
 
 class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationLeft(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "NavigationLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_NavigationLeft Parms{};
 
@@ -105,10 +96,8 @@ class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationLeft(EUINavigatio
 
 class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationRight(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "NavigationRight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_NavigationRight Parms{};
 
@@ -128,10 +117,8 @@ class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationRight(EUINavigati
 
 class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationUp(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "NavigationUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_NavigationUp Parms{};
 
@@ -148,10 +135,8 @@ class UWidget* UWBP_MachineSelect_Sub_CrossButton_C::NavigationUp(EUINavigation 
 
 void UWBP_MachineSelect_Sub_CrossButton_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -162,10 +147,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::OnAcceptKeyPressed()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,10 +161,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::OnBackKeyPressed()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::OnFocus_Impl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnFocus_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_OnFocus_Impl Parms{};
 
@@ -198,10 +179,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::OnFocus_Impl(class UUnionUIButtonBase
 
 void UWBP_MachineSelect_Sub_CrossButton_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_OnFocusLost Parms{};
 
@@ -220,10 +199,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::OnFocusLost(const struct FFocusEvent&
 
 struct FEventReply UWBP_MachineSelect_Sub_CrossButton_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_OnFocusReceived Parms{};
 
@@ -236,15 +213,25 @@ struct FEventReply UWBP_MachineSelect_Sub_CrossButton_C::OnFocusReceived(const s
 }
 
 
+// Function WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C.OnRightShoulderPressed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_MachineSelect_Sub_CrossButton_C::OnRightShoulderPressed()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C.OnSpecialPressed
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MachineSelect_Sub_CrossButton_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -255,10 +242,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::OnSpecialPressed()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::PlaySEError()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "PlaySEError");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -269,10 +254,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::PlaySEError()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::PlaySESelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "PlaySESelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -285,10 +268,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::PlaySESelect()
 
 void UWBP_MachineSelect_Sub_CrossButton_C::SetEnableInput(bool IsEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "SetEnableInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_SetEnableInput Parms{};
 
@@ -305,10 +286,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::SetEnableInput(bool IsEnable)
 
 void UWBP_MachineSelect_Sub_CrossButton_C::SetPlayerControllerIndex(const int32 InPlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "SetPlayerControllerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_SetPlayerControllerIndex Parms{};
 
@@ -325,10 +304,8 @@ void UWBP_MachineSelect_Sub_CrossButton_C::SetPlayerControllerIndex(const int32 
 
 void UWBP_MachineSelect_Sub_CrossButton_C::IsEnableInput(bool* Enable) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_CrossButton_C", "IsEnableInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_CrossButton_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_CrossButton_C_IsEnableInput Parms{};
 
@@ -338,5 +315,5 @@ void UWBP_MachineSelect_Sub_CrossButton_C::IsEnableInput(bool* Enable) const
 		*Enable = Parms.Enable;
 }
 
-}
 
+SDK_NAMESPACE_END

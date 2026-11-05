@@ -13,8 +13,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class BacktraceOnCrashpad.BacktraceOnCrashpadSettings
 // 0x0030 (0x0068 - 0x0038)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_UBacktraceOnCrashpadSettings;
 
-}
-
+SDK_NAMESPACE_END

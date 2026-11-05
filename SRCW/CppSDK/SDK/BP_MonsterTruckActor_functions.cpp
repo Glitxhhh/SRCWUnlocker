@@ -14,8 +14,7 @@
 #include "BP_MonsterTruckActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MonsterTruckActor.BP_MonsterTruckActor_C.ExecuteUbergraph_BP_MonsterTruckActor
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_MonsterTruckActor_C::ExecuteUbergraph_BP_MonsterTruckActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "ExecuteUbergraph_BP_MonsterTruckActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MonsterTruckActor_C", "ExecuteUbergraph_BP_MonsterTruckActor", FuncInfo);
 
 	Params::BP_MonsterTruckActor_C_ExecuteUbergraph_BP_MonsterTruckActor Parms{};
 
@@ -44,10 +41,8 @@ void ABP_MonsterTruckActor_C::ExecuteUbergraph_BP_MonsterTruckActor(int32 EntryP
 
 void ABP_MonsterTruckActor_C::LoadingCockpitAnimation(const EDriverSize InDriverSize)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "LoadingCockpitAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MonsterTruckActor_C", FnName));
 
 	Params::BP_MonsterTruckActor_C_LoadingCockpitAnimation Parms{};
 
@@ -64,10 +59,8 @@ void ABP_MonsterTruckActor_C::LoadingCockpitAnimation(const EDriverSize InDriver
 
 void ABP_MonsterTruckActor_C::LoadingCockpitMesh(const EDriverSize InDriverSize)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "LoadingCockpitMesh");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MonsterTruckActor_C", FnName));
 
 	Params::BP_MonsterTruckActor_C_LoadingCockpitMesh Parms{};
 
@@ -86,10 +79,8 @@ void ABP_MonsterTruckActor_C::LoadingCockpitMesh(const EDriverSize InDriverSize)
 
 void ABP_MonsterTruckActor_C::OnCountDown(bool bIsPlay, const struct FLinearColor& Color, bool bWithDriver)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "OnCountDown");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MonsterTruckActor_C", FnName));
 
 	Params::BP_MonsterTruckActor_C_OnCountDown Parms{};
 
@@ -106,10 +97,8 @@ void ABP_MonsterTruckActor_C::OnCountDown(bool bIsPlay, const struct FLinearColo
 
 void ABP_MonsterTruckActor_C::Timeline_CountDown__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "Timeline CountDown__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MonsterTruckActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,13 +109,11 @@ void ABP_MonsterTruckActor_C::Timeline_CountDown__FinishedFunc()
 
 void ABP_MonsterTruckActor_C::Timeline_CountDown__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MonsterTruckActor_C", "Timeline CountDown__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MonsterTruckActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

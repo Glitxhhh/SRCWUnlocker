@@ -14,8 +14,7 @@
 #include "BP_VehicleInRacePawn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_VehicleInRacePawn.BP_VehicleInRacePawn_C.ChangeVehicleSize
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_VehicleInRacePawn_C::ChangeVehicleSize(float SizeRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "ChangeVehicleSize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_ChangeVehicleSize Parms{};
 
@@ -44,10 +41,8 @@ void ABP_VehicleInRacePawn_C::ChangeVehicleSize(float SizeRate)
 
 void ABP_VehicleInRacePawn_C::ExecuteUbergraph_BP_VehicleInRacePawn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "ExecuteUbergraph_BP_VehicleInRacePawn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_VehicleInRacePawn_C", "ExecuteUbergraph_BP_VehicleInRacePawn", FuncInfo);
 
 	Params::BP_VehicleInRacePawn_C_ExecuteUbergraph_BP_VehicleInRacePawn Parms{};
 
@@ -64,10 +59,8 @@ void ABP_VehicleInRacePawn_C::ExecuteUbergraph_BP_VehicleInRacePawn(int32 EntryP
 
 void ABP_VehicleInRacePawn_C::OnBlinkEnd(bool bWithDriver)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnBlinkEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_OnBlinkEnd Parms{};
 
@@ -85,10 +78,8 @@ void ABP_VehicleInRacePawn_C::OnBlinkEnd(bool bWithDriver)
 
 void ABP_VehicleInRacePawn_C::OnBlinkStart(const struct FLinearColor& Color, bool bWithDriver)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnBlinkStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_OnBlinkStart Parms{};
 
@@ -104,10 +95,8 @@ void ABP_VehicleInRacePawn_C::OnBlinkStart(const struct FLinearColor& Color, boo
 
 void ABP_VehicleInRacePawn_C::OnDamage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnDamage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +110,8 @@ void ABP_VehicleInRacePawn_C::OnDamage()
 
 void ABP_VehicleInRacePawn_C::OnDamageSpin(class AVehicleBaseActor* TargetVehicle, bool bIsPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnDamageSpin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_OnDamageSpin Parms{};
 
@@ -142,10 +129,8 @@ void ABP_VehicleInRacePawn_C::OnDamageSpin(class AVehicleBaseActor* TargetVehicl
 
 void ABP_VehicleInRacePawn_C::OnDrift(int32 ChargeLevel)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnDrift");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_OnDrift Parms{};
 
@@ -162,10 +147,8 @@ void ABP_VehicleInRacePawn_C::OnDrift(int32 ChargeLevel)
 
 void ABP_VehicleInRacePawn_C::OnFadeOutInk(bool bIsPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnFadeOutInk");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_OnFadeOutInk Parms{};
 
@@ -180,10 +163,8 @@ void ABP_VehicleInRacePawn_C::OnFadeOutInk(bool bIsPlay)
 
 void ABP_VehicleInRacePawn_C::OnResultCamera()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "OnResultCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -201,10 +182,8 @@ void ABP_VehicleInRacePawn_C::OnResultCamera()
 
 void ABP_VehicleInRacePawn_C::SetHoldItem(EItemId ItemId, EItemThrowDirection ThrowType, int32 Value, bool bIsLocalPlayer, bool bUpdateThrowType, bool bGadgetLuckyItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "SetHoldItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_SetHoldItem Parms{};
 
@@ -228,10 +207,8 @@ void ABP_VehicleInRacePawn_C::SetHoldItem(EItemId ItemId, EItemThrowDirection Th
 
 void ABP_VehicleInRacePawn_C::SpawnDriverActor(EDriverId DriverId, bool bIsHoverboard, bool bUseRivalSkin)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "SpawnDriverActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	Params::BP_VehicleInRacePawn_C_SpawnDriverActor Parms{};
 
@@ -248,10 +225,8 @@ void ABP_VehicleInRacePawn_C::SpawnDriverActor(EDriverId DriverId, bool bIsHover
 
 void ABP_VehicleInRacePawn_C::Timeline_CountDown__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline CountDown__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -262,10 +237,8 @@ void ABP_VehicleInRacePawn_C::Timeline_CountDown__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_CountDown__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline CountDown__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,10 +249,8 @@ void ABP_VehicleInRacePawn_C::Timeline_CountDown__UpdateFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Damage_In_Intensity__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Damage In Intensity__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,10 +261,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Damage_In_Intensity__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Damage_In_Intensity__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Damage In Intensity__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -304,10 +273,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Damage_In_Intensity__UpdateFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Damage_Spin_In_Intensity__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Damage Spin In Intensity__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -318,10 +285,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Damage_Spin_In_Intensity__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Damage_Spin_In_Intensity__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Damage Spin In Intensity__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -332,10 +297,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Damage_Spin_In_Intensity__UpdateFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Drift_In_Intensity__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Drift In Intensity__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -346,10 +309,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Drift_In_Intensity__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Drift_In_Intensity__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Drift In Intensity__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -360,10 +321,8 @@ void ABP_VehicleInRacePawn_C::Timeline_Drift_In_Intensity__UpdateFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_FadeOut_Ink__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline FadeOut Ink__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -374,10 +333,8 @@ void ABP_VehicleInRacePawn_C::Timeline_FadeOut_Ink__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_FadeOut_Ink__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline FadeOut Ink__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -388,10 +345,8 @@ void ABP_VehicleInRacePawn_C::Timeline_FadeOut_Ink__UpdateFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Scale_Down__FinishedFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Scale Down__FinishedFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -402,13 +357,11 @@ void ABP_VehicleInRacePawn_C::Timeline_Scale_Down__FinishedFunc()
 
 void ABP_VehicleInRacePawn_C::Timeline_Scale_Down__UpdateFunc()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_VehicleInRacePawn_C", "Timeline Scale Down__UpdateFunc");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_VehicleInRacePawn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

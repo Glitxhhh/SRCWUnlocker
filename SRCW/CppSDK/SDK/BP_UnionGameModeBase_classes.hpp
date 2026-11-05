@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UnionGameModeBase.BP_UnionGameModeBase_C
 // 0x0010 (0x0338 - 0x0328)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_UnionGameModeBase_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "ABP_ItemDarkChao_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "ABP_ItemDarkChao_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_ItemDarkChao.ABP_ItemDarkChao_C
 // 0x08A0 (0x0C20 - 0x0380)
@@ -91,5 +90,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_ItemDarkChao_C;
 
-}
-
+SDK_NAMESPACE_END

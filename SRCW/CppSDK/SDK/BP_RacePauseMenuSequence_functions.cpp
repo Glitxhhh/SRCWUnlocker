@@ -14,8 +14,7 @@
 #include "BP_RacePauseMenuSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RacePauseMenuSequence.BP_RacePauseMenuSequence_C.ClickedOptionBtn
 // (Private, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void ABP_RacePauseMenuSequence_C::ClickedOptionBtn(class UWBP_PauseMenu_Sub_Option_Btn_03_C* InButton, int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ClickedOptionBtn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_ClickedOptionBtn Parms{};
 
@@ -44,10 +41,8 @@ void ABP_RacePauseMenuSequence_C::ClickedOptionBtn(class UWBP_PauseMenu_Sub_Opti
 
 void ABP_RacePauseMenuSequence_C::CloseInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "CloseInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -63,10 +58,8 @@ void ABP_RacePauseMenuSequence_C::CloseInput()
 
 void ABP_RacePauseMenuSequence_C::CreateConfirmationPopup(EPopupWindowType WindowType, EPopupWindowButtonType ButtonType, bool Attention, class UUnionUISceneBase** WindowWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "CreateConfirmationPopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_CreateConfirmationPopup Parms{};
 
@@ -86,10 +79,8 @@ void ABP_RacePauseMenuSequence_C::CreateConfirmationPopup(EPopupWindowType Windo
 
 void ABP_RacePauseMenuSequence_C::CreateGadgetPlateReadyActor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "CreateGadgetPlateReadyActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -100,10 +91,8 @@ void ABP_RacePauseMenuSequence_C::CreateGadgetPlateReadyActor()
 
 void ABP_RacePauseMenuSequence_C::CreateInputRecieveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "CreateInputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +105,8 @@ void ABP_RacePauseMenuSequence_C::CreateInputRecieveObject()
 
 void ABP_RacePauseMenuSequence_C::ExecuteUbergraph_BP_RacePauseMenuSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ExecuteUbergraph_BP_RacePauseMenuSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RacePauseMenuSequence_C", "ExecuteUbergraph_BP_RacePauseMenuSequence", FuncInfo);
 
 	Params::BP_RacePauseMenuSequence_C_ExecuteUbergraph_BP_RacePauseMenuSequence Parms{};
 
@@ -134,10 +121,8 @@ void ABP_RacePauseMenuSequence_C::ExecuteUbergraph_BP_RacePauseMenuSequence(int3
 
 void ABP_RacePauseMenuSequence_C::ForceCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ForceCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +136,8 @@ void ABP_RacePauseMenuSequence_C::ForceCancel()
 
 void ABP_RacePauseMenuSequence_C::OnBacjKeyPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnBacjKeyPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnBacjKeyPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -174,10 +157,8 @@ void ABP_RacePauseMenuSequence_C::OnBacjKeyPressedWithPlayerId_InputRecieveObjec
 
 void ABP_RacePauseMenuSequence_C::OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnCancel Parms{};
 
@@ -194,10 +175,8 @@ void ABP_RacePauseMenuSequence_C::OnCancel(class UUnionUIButtonBase* Button, int
 
 void ABP_RacePauseMenuSequence_C::OnCloseGadgetPlateReady()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnCloseGadgetPlateReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -212,10 +191,8 @@ void ABP_RacePauseMenuSequence_C::OnCloseGadgetPlateReady()
 
 void ABP_RacePauseMenuSequence_C::OnDecide(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnDecide Parms{};
 
@@ -236,10 +213,8 @@ void ABP_RacePauseMenuSequence_C::OnDecide(class UUnionUIButtonBase* Button, int
 
 void ABP_RacePauseMenuSequence_C::OnDecide_PopupWindow(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnDecide_PopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnDecide_PopupWindow Parms{};
 
@@ -258,10 +233,8 @@ void ABP_RacePauseMenuSequence_C::OnDecide_PopupWindow(class UUnionUIButtonBase*
 
 void ABP_RacePauseMenuSequence_C::OnExitFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnExitFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnExitFade Parms{};
 
@@ -276,10 +249,8 @@ void ABP_RacePauseMenuSequence_C::OnExitFade(EUnionUIFadeDirection FadeDirection
 
 void ABP_RacePauseMenuSequence_C::OnExitStateSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnExitStateSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -293,10 +264,8 @@ void ABP_RacePauseMenuSequence_C::OnExitStateSelect()
 
 void ABP_RacePauseMenuSequence_C::OnFaceButtonLeftPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnFaceButtonLeftPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnFaceButtonLeftPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -315,10 +284,8 @@ void ABP_RacePauseMenuSequence_C::OnFaceButtonLeftPressedWithPlayerId_InputRecie
 
 void ABP_RacePauseMenuSequence_C::OnFaceButtonTopPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnFaceButtonTopPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnFaceButtonTopPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -334,10 +301,8 @@ void ABP_RacePauseMenuSequence_C::OnFaceButtonTopPressedWithPlayerId_InputReciev
 
 void ABP_RacePauseMenuSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -348,10 +313,8 @@ void ABP_RacePauseMenuSequence_C::OnFinalize()
 
 void ABP_RacePauseMenuSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -362,10 +325,8 @@ void ABP_RacePauseMenuSequence_C::OnInitialize()
 
 void ABP_RacePauseMenuSequence_C::OnInitStateExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnInitStateExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -376,10 +337,8 @@ void ABP_RacePauseMenuSequence_C::OnInitStateExit()
 
 void ABP_RacePauseMenuSequence_C::OnInitStateIdle()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnInitStateIdle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -390,10 +349,8 @@ void ABP_RacePauseMenuSequence_C::OnInitStateIdle()
 
 void ABP_RacePauseMenuSequence_C::OnInitStateSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnInitStateSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -407,10 +364,8 @@ void ABP_RacePauseMenuSequence_C::OnInitStateSelect()
 
 void ABP_RacePauseMenuSequence_C::OnLeftShoulderPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnLeftShoulderPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnLeftShoulderPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -429,10 +384,8 @@ void ABP_RacePauseMenuSequence_C::OnLeftShoulderPressedWithPlayerId_InputRecieve
 
 void ABP_RacePauseMenuSequence_C::OnRightShoulderPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnRightShoulderPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnRightShoulderPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -450,10 +403,8 @@ void ABP_RacePauseMenuSequence_C::OnRightShoulderPressedWithPlayerId_InputReciev
 
 void ABP_RacePauseMenuSequence_C::OnSaveEnd(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnSaveEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnSaveEnd Parms{};
 
@@ -471,10 +422,8 @@ void ABP_RacePauseMenuSequence_C::OnSaveEnd(ESaveDataStatus Status)
 
 void ABP_RacePauseMenuSequence_C::OnSpecialPressedWithPlayerId_InputRecieveObject(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnSpecialPressedWithPlayerId_InputRecieveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnSpecialPressedWithPlayerId_InputRecieveObject Parms{};
 
@@ -492,10 +441,8 @@ void ABP_RacePauseMenuSequence_C::OnSpecialPressedWithPlayerId_InputRecieveObjec
 
 void ABP_RacePauseMenuSequence_C::OnUpdateStateSelect(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "OnUpdateStateSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	Params::BP_RacePauseMenuSequence_C_OnUpdateStateSelect Parms{};
 
@@ -510,10 +457,8 @@ void ABP_RacePauseMenuSequence_C::OnUpdateStateSelect(float InDeltaTime)
 
 void ABP_RacePauseMenuSequence_C::PopupWindow_Cancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "PopupWindow_Cancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -524,10 +469,8 @@ void ABP_RacePauseMenuSequence_C::PopupWindow_Cancel()
 
 void ABP_RacePauseMenuSequence_C::ReadyCancelEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ReadyCancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -538,10 +481,8 @@ void ABP_RacePauseMenuSequence_C::ReadyCancelEvent()
 
 void ABP_RacePauseMenuSequence_C::ReadyConfirmInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ReadyConfirmInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -552,10 +493,8 @@ void ABP_RacePauseMenuSequence_C::ReadyConfirmInitialize()
 
 void ABP_RacePauseMenuSequence_C::ReadyEndEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ReadyEndEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -566,10 +505,8 @@ void ABP_RacePauseMenuSequence_C::ReadyEndEvent()
 
 void ABP_RacePauseMenuSequence_C::ResetInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "ResetInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -580,13 +517,11 @@ void ABP_RacePauseMenuSequence_C::ResetInput()
 
 void ABP_RacePauseMenuSequence_C::Set_Silence_Sound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RacePauseMenuSequence_C", "Set Silence Sound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RacePauseMenuSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

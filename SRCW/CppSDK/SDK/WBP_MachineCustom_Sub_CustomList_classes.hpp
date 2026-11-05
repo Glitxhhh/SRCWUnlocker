@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_CustomList.WBP_MachineCustom_Sub_CustomList_C
 // 0x0000 (0x0400 - 0x0400)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_CustomList_C;
 
-}
-
+SDK_NAMESPACE_END

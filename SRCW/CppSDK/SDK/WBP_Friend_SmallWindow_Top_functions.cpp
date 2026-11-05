@@ -14,8 +14,7 @@
 #include "WBP_Friend_SmallWindow_Top_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_SmallWindow_Top.WBP_Friend_SmallWindow_Top_C.ExecuteUbergraph_WBP_Friend_SmallWindow_Top
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Friend_SmallWindow_Top_C::ExecuteUbergraph_WBP_Friend_SmallWindow_Top(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_Top_C", "ExecuteUbergraph_WBP_Friend_SmallWindow_Top");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_SmallWindow_Top_C", "ExecuteUbergraph_WBP_Friend_SmallWindow_Top", FuncInfo);
 
 	Params::WBP_Friend_SmallWindow_Top_C_ExecuteUbergraph_WBP_Friend_SmallWindow_Top Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_Friend_SmallWindow_Top_C::ExecuteUbergraph_WBP_Friend_SmallWindow_Top(
 
 class UUnionUISceneBase* UWBP_Friend_SmallWindow_Top_C::GetMainWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_Top_C", "GetMainWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_Top_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_Top_C_GetMainWidget Parms{};
 
@@ -64,10 +59,8 @@ class UUnionUISceneBase* UWBP_Friend_SmallWindow_Top_C::GetMainWidget()
 
 void UWBP_Friend_SmallWindow_Top_C::SetMainWidgetFocus(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_Top_C", "SetMainWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_Top_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_Top_C_SetMainWidgetFocus Parms{};
 
@@ -85,10 +78,8 @@ void UWBP_Friend_SmallWindow_Top_C::SetMainWidgetFocus(int32 InButtonIndex)
 
 void UWBP_Friend_SmallWindow_Top_C::SetupMainWidget(const TArray<class FText>& InButtonText, const TArray<bool>& InButtonSelectable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_SmallWindow_Top_C", "SetupMainWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_SmallWindow_Top_C", FnName));
 
 	Params::WBP_Friend_SmallWindow_Top_C_SetupMainWidget Parms{};
 
@@ -98,5 +89,5 @@ void UWBP_Friend_SmallWindow_Top_C::SetupMainWidget(const TArray<class FText>& I
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

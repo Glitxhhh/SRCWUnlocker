@@ -14,18 +14,15 @@
 #include "BPC_RaceResultGhostEnd_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceResultGhostEnd.BPC_RaceResultGhostEnd_C.Create Upload Select Window
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_RaceResultGhostEnd_C::Create_Upload_Select_Window()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "Create Upload Select Window");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UBPC_RaceResultGhostEnd_C::Create_Upload_Select_Window()
 
 void UBPC_RaceResultGhostEnd_C::CreateErrorWindow(const class FText& MessageText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "CreateErrorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	Params::BPC_RaceResultGhostEnd_C_CreateErrorWindow Parms{};
 
@@ -58,10 +53,8 @@ void UBPC_RaceResultGhostEnd_C::CreateErrorWindow(const class FText& MessageText
 
 void UBPC_RaceResultGhostEnd_C::ExecuteUbergraph_BPC_RaceResultGhostEnd(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "ExecuteUbergraph_BPC_RaceResultGhostEnd");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceResultGhostEnd_C", "ExecuteUbergraph_BPC_RaceResultGhostEnd", FuncInfo);
 
 	Params::BPC_RaceResultGhostEnd_C_ExecuteUbergraph_BPC_RaceResultGhostEnd Parms{};
 
@@ -76,10 +69,8 @@ void UBPC_RaceResultGhostEnd_C::ExecuteUbergraph_BPC_RaceResultGhostEnd(int32 En
 
 void UBPC_RaceResultGhostEnd_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UBPC_RaceResultGhostEnd_C::OnExitState()
 
 void UBPC_RaceResultGhostEnd_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UBPC_RaceResultGhostEnd_C::OnInitState()
 
 void UBPC_RaceResultGhostEnd_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	Params::BPC_RaceResultGhostEnd_C_OnUpdateState Parms{};
 
@@ -128,10 +115,8 @@ void UBPC_RaceResultGhostEnd_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceResultGhostEnd_C::TimeTrialErrorWindow_OnDecide(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "TimeTrialErrorWindow_OnDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	Params::BPC_RaceResultGhostEnd_C_TimeTrialErrorWindow_OnDecide Parms{};
 
@@ -148,10 +133,8 @@ void UBPC_RaceResultGhostEnd_C::TimeTrialErrorWindow_OnDecide(class UUnionUIButt
 
 void UBPC_RaceResultGhostEnd_C::TimeTrialUploadCheck()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "TimeTrialUploadCheck");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -162,10 +145,8 @@ void UBPC_RaceResultGhostEnd_C::TimeTrialUploadCheck()
 
 void UBPC_RaceResultGhostEnd_C::TimeTrialUploadFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "TimeTrialUploadFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +161,8 @@ void UBPC_RaceResultGhostEnd_C::TimeTrialUploadFinishEvent()
 
 void UBPC_RaceResultGhostEnd_C::TimeTrialUploadSelect_OnDecide(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceResultGhostEnd_C", "TimeTrialUploadSelect_OnDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceResultGhostEnd_C", FnName));
 
 	Params::BPC_RaceResultGhostEnd_C_TimeTrialUploadSelect_OnDecide Parms{};
 
@@ -194,5 +173,5 @@ void UBPC_RaceResultGhostEnd_C::TimeTrialUploadSelect_OnDecide(class UUnionUIBut
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

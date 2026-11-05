@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABPT_SimpleCockpitBase.ABPT_SimpleCockpitBase_C.AnimBlueprintGeneratedConstantData
 // 0x18F7 (0x18F8 - 0x0001)
@@ -216,5 +215,4 @@ public:
 };
 DUMPER7_ASSERTS_ABPT_SimpleCockpitBase__FAnimBlueprintGeneratedMutableData;
 
-}
-
+SDK_NAMESPACE_END

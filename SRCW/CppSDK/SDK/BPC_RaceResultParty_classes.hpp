@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceResultParty.BPC_RaceResultParty_C
 // 0x0018 (0x0120 - 0x0108)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceResultParty_C;
 
-}
-
+SDK_NAMESPACE_END

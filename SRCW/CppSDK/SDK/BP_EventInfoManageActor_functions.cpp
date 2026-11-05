@@ -14,8 +14,7 @@
 #include "BP_EventInfoManageActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_EventInfoManageActor.BP_EventInfoManageActor_C.ExecuteUbergraph_BP_EventInfoManageActor
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_EventInfoManageActor_C::ExecuteUbergraph_BP_EventInfoManageActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "ExecuteUbergraph_BP_EventInfoManageActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_EventInfoManageActor_C", "ExecuteUbergraph_BP_EventInfoManageActor", FuncInfo);
 
 	Params::BP_EventInfoManageActor_C_ExecuteUbergraph_BP_EventInfoManageActor Parms{};
 
@@ -42,10 +39,8 @@ void ABP_EventInfoManageActor_C::ExecuteUbergraph_BP_EventInfoManageActor(int32 
 
 void ABP_EventInfoManageActor_C::ForceClose()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "ForceClose");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EventInfoManageActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void ABP_EventInfoManageActor_C::ForceClose()
 
 void ABP_EventInfoManageActor_C::OnClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "OnClosed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EventInfoManageActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void ABP_EventInfoManageActor_C::OnClosed()
 
 void ABP_EventInfoManageActor_C::Open()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EventInfoManageActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void ABP_EventInfoManageActor_C::Open()
 
 void ABP_EventInfoManageActor_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EventInfoManageActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,13 +87,11 @@ void ABP_EventInfoManageActor_C::ReceiveBeginPlay()
 
 void ABP_EventInfoManageActor_C::ReceiveDestroyed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventInfoManageActor_C", "ReceiveDestroyed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EventInfoManageActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

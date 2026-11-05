@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_RacerDataForPreview.ST_RacerDataForPreview
 // 0x000D (0x000D - 0x0000)
@@ -38,5 +37,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_RacerDataForPreview;
 
-}
-
+SDK_NAMESPACE_END

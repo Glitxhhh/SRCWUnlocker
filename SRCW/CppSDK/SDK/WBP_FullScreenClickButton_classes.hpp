@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_FullScreenClickButton.WBP_FullScreenClickButton_C
 // 0x0040 (0x0320 - 0x02E0)
@@ -54,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_FullScreenClickButton_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "BP_EntryRacers_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_EntryRacers.BP_EntryRacers_C.BndEvt__BP_EntryAllRacers_SequencePlayer_K2Node_ComponentBoundEvent_0_OnMovieSceneSequencePlayerEvent__DelegateSignature
 // (BlueprintEvent)
 
 void ABP_EntryRacers_C::BndEvt__BP_EntryAllRacers_SequencePlayer_K2Node_ComponentBoundEvent_0_OnMovieSceneSequencePlayerEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "BndEvt__BP_EntryAllRacers_SequencePlayer_K2Node_ComponentBoundEvent_0_OnMovieSceneSequencePlayerEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +36,8 @@ void ABP_EntryRacers_C::BndEvt__BP_EntryAllRacers_SequencePlayer_K2Node_Componen
 
 void ABP_EntryRacers_C::CalcCameraOffset(const struct FTransform& In_Transform, struct FTransform* Out_Transform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "CalcCameraOffset");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	Params::BP_EntryRacers_C_CalcCameraOffset Parms{};
 
@@ -60,10 +55,8 @@ void ABP_EntryRacers_C::CalcCameraOffset(const struct FTransform& In_Transform, 
 
 void ABP_EntryRacers_C::Clear()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "Clear");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void ABP_EntryRacers_C::Clear()
 
 void ABP_EntryRacers_C::ExecuteUbergraph_BP_EntryRacers(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "ExecuteUbergraph_BP_EntryRacers");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_EntryRacers_C", "ExecuteUbergraph_BP_EntryRacers", FuncInfo);
 
 	Params::BP_EntryRacers_C_ExecuteUbergraph_BP_EntryRacers Parms{};
 
@@ -102,10 +93,8 @@ void ABP_EntryRacers_C::ExecuteUbergraph_BP_EntryRacers(int32 EntryPoint)
 
 void ABP_EntryRacers_C::Play(int32 In_RacerCount, TArray<class AActor*>& In_Actors, TArray<struct FTransform>& In_Transforms, const struct FTransform& In_BaseTransform, int32 In_MainRacerIndex, TArray<class ASceneDriver*>& In_SceneDrivers, EStageId In_StageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "Play");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	Params::BP_EntryRacers_C_Play Parms{};
 
@@ -130,10 +119,8 @@ void ABP_EntryRacers_C::Play(int32 In_RacerCount, TArray<class AActor*>& In_Acto
 
 void ABP_EntryRacers_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -146,10 +133,8 @@ void ABP_EntryRacers_C::ReceiveBeginPlay()
 
 void ABP_EntryRacers_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	Params::BP_EntryRacers_C_ReceiveTick Parms{};
 
@@ -164,10 +149,8 @@ void ABP_EntryRacers_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_EntryRacers_C::RemoveMCEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "RemoveMCEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,13 +161,11 @@ void ABP_EntryRacers_C::RemoveMCEvent()
 
 void ABP_EntryRacers_C::StartRuleWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EntryRacers_C", "StartRuleWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_EntryRacers_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

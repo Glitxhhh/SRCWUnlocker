@@ -15,8 +15,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RacePlayerController.BP_RacePlayerController_C
 // 0x0010 (0x0BA0 - 0x0B90)
@@ -78,5 +77,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RacePlayerController_C;
 
-}
-
+SDK_NAMESPACE_END

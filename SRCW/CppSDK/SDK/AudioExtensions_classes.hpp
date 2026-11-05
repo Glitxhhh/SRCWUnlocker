@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AudioExtensions.AudioPropertiesBindings
 // 0x0050 (0x0078 - 0x0028)
@@ -160,9 +159,12 @@ public:
 DUMPER7_ASSERTS_UAudioPropertySheetBaseAsset;
 
 // Class AudioExtensions.AudioParameterControllerInterface
-// 0x0000 (0x0000 - 0x0000)
-class IAudioParameterControllerInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IAudioParameterControllerInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void ResetParameters();
 	void SetBoolArrayParameter(class FName InName, const TArray<bool>& InValue);
@@ -392,5 +394,4 @@ public:
 };
 DUMPER7_ASSERTS_UWaveformTransformationChain;
 
-}
-
+SDK_NAMESPACE_END

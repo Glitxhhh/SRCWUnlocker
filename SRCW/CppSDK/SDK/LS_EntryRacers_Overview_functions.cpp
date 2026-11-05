@@ -14,8 +14,7 @@
 #include "LS_EntryRacers_Overview_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function LS_EntryRacers_Overview.LS_EntryRacers_Overview_DirectorBP_C.ExecuteUbergraph_LS_EntryRacers_Overview_DirectorBP
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ULS_EntryRacers_Overview_DirectorBP_C::ExecuteUbergraph_LS_EntryRacers_Overview_DirectorBP(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "ExecuteUbergraph_LS_EntryRacers_Overview_DirectorBP");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "LS_EntryRacers_Overview_DirectorBP_C", "ExecuteUbergraph_LS_EntryRacers_Overview_DirectorBP", FuncInfo);
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_ExecuteUbergraph_LS_EntryRacers_Overview_DirectorBP Parms{};
 
@@ -45,10 +42,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::ExecuteUbergraph_LS_EntryRacers_Over
 
 void ULS_EntryRacers_Overview_DirectorBP_C::OnEnterRacer(class AActor* In_RacerActor, int32 In_Index)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "OnEnterRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_OnEnterRacer Parms{};
 
@@ -66,10 +61,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::OnEnterRacer(class AActor* In_RacerA
 
 void ULS_EntryRacers_Overview_DirectorBP_C::OnPlayAnimation(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "OnPlayAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_OnPlayAnimation Parms{};
 
@@ -86,10 +79,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::OnPlayAnimation(class ABP_SceneDrive
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP Parms{};
 
@@ -106,10 +97,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_0(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_0 Parms{};
 
@@ -126,10 +115,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_1(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_1 Parms{};
 
@@ -146,10 +133,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_10(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_10");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_10 Parms{};
 
@@ -164,10 +149,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_11()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_11");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -180,10 +163,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_12(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_12");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_12 Parms{};
 
@@ -200,10 +181,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_13(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_13");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_13 Parms{};
 
@@ -220,10 +199,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_14(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_14");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_14 Parms{};
 
@@ -240,10 +217,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_15(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_15");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_15 Parms{};
 
@@ -260,10 +235,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_16(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_16");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_16 Parms{};
 
@@ -280,10 +253,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_17(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_17");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_17 Parms{};
 
@@ -300,10 +271,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_18(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_18");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_18 Parms{};
 
@@ -320,10 +289,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_19(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_19");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_19 Parms{};
 
@@ -340,10 +307,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_2(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_2 Parms{};
 
@@ -360,10 +325,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_20(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_20");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_20 Parms{};
 
@@ -380,10 +343,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_21(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_21");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_21 Parms{};
 
@@ -400,10 +361,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_22(class ABP_SceneDriver_C* BP_SceneDriver_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_22");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_22 Parms{};
 
@@ -420,10 +379,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_3(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_3 Parms{};
 
@@ -440,10 +397,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_4(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_4 Parms{};
 
@@ -460,10 +415,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_5(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_5 Parms{};
 
@@ -480,10 +433,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_6(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_6 Parms{};
 
@@ -500,10 +451,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_7(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_7 Parms{};
 
@@ -520,10 +469,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_8(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_8 Parms{};
 
@@ -540,10 +487,8 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 
 void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_9(class AActor* In_RacerActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_EntryRacers_Overview_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"LS_EntryRacers_Overview_DirectorBP_C", FnName));
 
 	Params::LS_EntryRacers_Overview_DirectorBP_C_SequenceEvent__ENTRYPOINTLS_EntryRacers_Overview_DirectorBP_9 Parms{};
 
@@ -552,5 +497,5 @@ void ULS_EntryRacers_Overview_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_EntryRac
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

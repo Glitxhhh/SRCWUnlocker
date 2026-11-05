@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ST_ColorDetailWindowData_structs.hpp"
 #include "EColorDetailWindowMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ST_ColorDetailWindowColorItemData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerColorPicker.WBP_MachineCustom_Sub_StickerColorPicker_C.ButtonsPanel_OnDecision
 // 0x0010 (0x0010 - 0x0000)
@@ -169,5 +169,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_StickerColorPicker_C_SurfaceButton_OnFocus;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

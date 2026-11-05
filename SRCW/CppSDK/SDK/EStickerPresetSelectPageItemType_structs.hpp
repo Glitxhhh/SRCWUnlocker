@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EStickerPresetSelectPageItemType.EStickerPresetSelectPageItemType
 // NumValues: 0x0006
@@ -26,5 +25,4 @@ enum class EStickerPresetSelectPageItemType : uint8
 	EStickerPresetSelectPageItemType_MAX     = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

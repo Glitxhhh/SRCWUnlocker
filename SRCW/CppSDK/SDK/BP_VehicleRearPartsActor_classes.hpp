@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_VehicleRearPartsActor.BP_VehicleRearPartsActor_C
 // 0x0000 (0x03D0 - 0x03D0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_VehicleRearPartsActor_C;
 
-}
-
+SDK_NAMESPACE_END

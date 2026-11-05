@@ -14,18 +14,15 @@
 #include "BP_GarageSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_GarageSequence.BP_GarageSequence_C.BindEvents
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_GarageSequence_C::BindEvents()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "BindEvents");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_GarageSequence_C::BindEvents()
 
 void ABP_GarageSequence_C::CustomEvent(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "CustomEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_CustomEvent Parms{};
 
@@ -58,10 +53,8 @@ void ABP_GarageSequence_C::CustomEvent(EUnionUIFadeDirection FadeDirection)
 
 void ABP_GarageSequence_C::ExecuteUbergraph_BP_GarageSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ExecuteUbergraph_BP_GarageSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_GarageSequence_C", "ExecuteUbergraph_BP_GarageSequence", FuncInfo);
 
 	Params::BP_GarageSequence_C_ExecuteUbergraph_BP_GarageSequence Parms{};
 
@@ -76,10 +69,8 @@ void ABP_GarageSequence_C::ExecuteUbergraph_BP_GarageSequence(int32 EntryPoint)
 
 void ABP_GarageSequence_C::Exit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "Exit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void ABP_GarageSequence_C::Exit()
 
 void ABP_GarageSequence_C::ExitMatchingTimeOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ExitMatchingTimeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void ABP_GarageSequence_C::ExitMatchingTimeOut()
 
 void ABP_GarageSequence_C::FinalizeMachineCustomizeByTimeOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "FinalizeMachineCustomizeByTimeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +107,8 @@ void ABP_GarageSequence_C::FinalizeMachineCustomizeByTimeOut()
 
 void ABP_GarageSequence_C::GetAppPlayerController(class AAppPlayerController** OutAppPlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetAppPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetAppPlayerController Parms{};
 
@@ -141,10 +126,8 @@ void ABP_GarageSequence_C::GetAppPlayerController(class AAppPlayerController** O
 
 class UObject* ABP_GarageSequence_C::GetFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetFooter Parms{};
 
@@ -161,10 +144,8 @@ class UObject* ABP_GarageSequence_C::GetFooter()
 
 void ABP_GarageSequence_C::GetGarageData(struct FST_GarageData* OutGarageData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetGarageData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetGarageData Parms{};
 
@@ -182,10 +163,8 @@ void ABP_GarageSequence_C::GetGarageData(struct FST_GarageData* OutGarageData)
 
 void ABP_GarageSequence_C::GetPlayerController(class APlayerController** OutPlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetPlayerController");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetPlayerController Parms{};
 
@@ -203,10 +182,8 @@ void ABP_GarageSequence_C::GetPlayerController(class APlayerController** OutPlay
 
 void ABP_GarageSequence_C::GetPlayerIndex(int32* OutPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetPlayerIndex Parms{};
 
@@ -224,10 +201,8 @@ void ABP_GarageSequence_C::GetPlayerIndex(int32* OutPlayerIndex)
 
 void ABP_GarageSequence_C::GetRacer(class ABP_MenuRacerPreview_C** OutRacer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetRacer Parms{};
 
@@ -245,10 +220,8 @@ void ABP_GarageSequence_C::GetRacer(class ABP_MenuRacerPreview_C** OutRacer)
 
 void ABP_GarageSequence_C::GetTurntable(class ABP_Turntable_C** OutTurntable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetTurntable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetTurntable Parms{};
 
@@ -264,10 +237,8 @@ void ABP_GarageSequence_C::GetTurntable(class ABP_Turntable_C** OutTurntable)
 
 void ABP_GarageSequence_C::HideFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "HideFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -280,10 +251,8 @@ void ABP_GarageSequence_C::HideFooter()
 
 void ABP_GarageSequence_C::InputReceiver_OnFaceButtonLeftPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "InputReceiver_OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_InputReceiver_OnFaceButtonLeftPressed Parms{};
 
@@ -301,10 +270,8 @@ void ABP_GarageSequence_C::InputReceiver_OnFaceButtonLeftPressed(class UObject* 
 
 void ABP_GarageSequence_C::InputReceiver_OnRightStickAxisEvent(class UObject* Object, const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "InputReceiver_OnRightStickAxisEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_InputReceiver_OnRightStickAxisEvent Parms{};
 
@@ -322,10 +289,8 @@ void ABP_GarageSequence_C::InputReceiver_OnRightStickAxisEvent(class UObject* Ob
 
 void ABP_GarageSequence_C::MachineCustomizeSequence_MachineSelected(EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "MachineCustomizeSequence_MachineSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_MachineCustomizeSequence_MachineSelected Parms{};
 
@@ -340,10 +305,8 @@ void ABP_GarageSequence_C::MachineCustomizeSequence_MachineSelected(EMachineId I
 
 void ABP_GarageSequence_C::MachineCustomizeSequence_OnExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "MachineCustomizeSequence_OnExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +319,8 @@ void ABP_GarageSequence_C::MachineCustomizeSequence_OnExit()
 
 void ABP_GarageSequence_C::MachineCustomizeSequence_OnParamWindowControlStateChanged(bool bInIsControllable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "MachineCustomizeSequence_OnParamWindowControlStateChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_MachineCustomizeSequence_OnParamWindowControlStateChanged Parms{};
 
@@ -376,10 +337,8 @@ void ABP_GarageSequence_C::MachineCustomizeSequence_OnParamWindowControlStateCha
 
 void ABP_GarageSequence_C::MachineCustomizeSequence_OnTurntableControlStateChanged(bool bInIsControllable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "MachineCustomizeSequence_OnTurntableControlStateChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_MachineCustomizeSequence_OnTurntableControlStateChanged Parms{};
 
@@ -396,10 +355,8 @@ void ABP_GarageSequence_C::MachineCustomizeSequence_OnTurntableControlStateChang
 
 void ABP_GarageSequence_C::MatchingTimeOut(float InTimeOutTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "MatchingTimeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_MatchingTimeOut Parms{};
 
@@ -414,10 +371,8 @@ void ABP_GarageSequence_C::MatchingTimeOut(float InTimeOutTime)
 
 void ABP_GarageSequence_C::oldReset_Message_Bar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "oldReset Message Bar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -428,10 +383,8 @@ void ABP_GarageSequence_C::oldReset_Message_Bar()
 
 void ABP_GarageSequence_C::oldSetup_Message_Bar()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "oldSetup Message Bar");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -442,10 +395,8 @@ void ABP_GarageSequence_C::oldSetup_Message_Bar()
 
 void ABP_GarageSequence_C::OnClickedParameter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "OnClickedParameter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -456,10 +407,8 @@ void ABP_GarageSequence_C::OnClickedParameter()
 
 void ABP_GarageSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -470,10 +419,8 @@ void ABP_GarageSequence_C::OnFinalize()
 
 void ABP_GarageSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -484,10 +431,8 @@ void ABP_GarageSequence_C::OnInitialize()
 
 void ABP_GarageSequence_C::OnTimeout()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "OnTimeout");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -498,10 +443,8 @@ void ABP_GarageSequence_C::OnTimeout()
 
 void ABP_GarageSequence_C::ResetCamera()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -512,10 +455,8 @@ void ABP_GarageSequence_C::ResetCamera()
 
 void ABP_GarageSequence_C::ResetDummyWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetDummyWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -526,10 +467,8 @@ void ABP_GarageSequence_C::ResetDummyWidget()
 
 void ABP_GarageSequence_C::ResetFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -540,10 +479,8 @@ void ABP_GarageSequence_C::ResetFooter()
 
 void ABP_GarageSequence_C::ResetInputReceiver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetInputReceiver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -554,10 +491,8 @@ void ABP_GarageSequence_C::ResetInputReceiver()
 
 void ABP_GarageSequence_C::ResetRootWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetRootWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -568,10 +503,8 @@ void ABP_GarageSequence_C::ResetRootWidget()
 
 void ABP_GarageSequence_C::ResetStickerMasterSystem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetStickerMasterSystem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -582,10 +515,8 @@ void ABP_GarageSequence_C::ResetStickerMasterSystem()
 
 void ABP_GarageSequence_C::ResetTurntable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "ResetTurntable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -598,10 +529,8 @@ void ABP_GarageSequence_C::ResetTurntable()
 
 void ABP_GarageSequence_C::SetCanControlParamWindow(bool bInCanControl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetCanControlParamWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_SetCanControlParamWindow Parms{};
 
@@ -618,10 +547,8 @@ void ABP_GarageSequence_C::SetCanControlParamWindow(bool bInCanControl)
 
 void ABP_GarageSequence_C::SetCanControlTurntable(bool bInCanControl)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetCanControlTurntable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_SetCanControlTurntable Parms{};
 
@@ -638,10 +565,8 @@ void ABP_GarageSequence_C::SetCanControlTurntable(bool bInCanControl)
 
 void ABP_GarageSequence_C::SetCurrentMachineID(EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetCurrentMachineID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_SetCurrentMachineID Parms{};
 
@@ -656,10 +581,8 @@ void ABP_GarageSequence_C::SetCurrentMachineID(EMachineId InMachineID)
 
 void ABP_GarageSequence_C::SetCurrentMachineIDs()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetCurrentMachineIDs");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -670,10 +593,8 @@ void ABP_GarageSequence_C::SetCurrentMachineIDs()
 
 void ABP_GarageSequence_C::SetCurrentSelectedCustomizeData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetCurrentSelectedCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -684,10 +605,8 @@ void ABP_GarageSequence_C::SetCurrentSelectedCustomizeData()
 
 void ABP_GarageSequence_C::SetFocusToDummy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetFocusToDummy");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -700,10 +619,8 @@ void ABP_GarageSequence_C::SetFocusToDummy()
 
 void ABP_GarageSequence_C::SetGarageData(const struct FST_GarageData& InGarageData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetGarageData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_SetGarageData Parms{};
 
@@ -718,10 +635,8 @@ void ABP_GarageSequence_C::SetGarageData(const struct FST_GarageData& InGarageDa
 
 void ABP_GarageSequence_C::SetPrevSelectedCustomizeData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetPrevSelectedCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -734,10 +649,8 @@ void ABP_GarageSequence_C::SetPrevSelectedCustomizeData()
 
 void ABP_GarageSequence_C::Setup(bool bIsMessageBarVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_Setup Parms{};
 
@@ -752,10 +665,8 @@ void ABP_GarageSequence_C::Setup(bool bIsMessageBarVisible_0)
 
 void ABP_GarageSequence_C::SetupCamera()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -766,10 +677,8 @@ void ABP_GarageSequence_C::SetupCamera()
 
 void ABP_GarageSequence_C::SetupDummyWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupDummyWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -780,10 +689,8 @@ void ABP_GarageSequence_C::SetupDummyWidget()
 
 void ABP_GarageSequence_C::SetupFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -794,10 +701,8 @@ void ABP_GarageSequence_C::SetupFooter()
 
 void ABP_GarageSequence_C::SetupInputReceiver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupInputReceiver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -808,10 +713,8 @@ void ABP_GarageSequence_C::SetupInputReceiver()
 
 void ABP_GarageSequence_C::SetupRacer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -822,10 +725,8 @@ void ABP_GarageSequence_C::SetupRacer()
 
 void ABP_GarageSequence_C::SetupRootWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupRootWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -836,10 +737,8 @@ void ABP_GarageSequence_C::SetupRootWidget()
 
 void ABP_GarageSequence_C::SetupStickerMasterSystem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupStickerMasterSystem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -850,10 +749,8 @@ void ABP_GarageSequence_C::SetupStickerMasterSystem()
 
 void ABP_GarageSequence_C::SetupTurntable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SetupTurntable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -864,10 +761,8 @@ void ABP_GarageSequence_C::SetupTurntable()
 
 void ABP_GarageSequence_C::SwitchParamWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "SwitchParamWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -878,10 +773,8 @@ void ABP_GarageSequence_C::SwitchParamWindow()
 
 void ABP_GarageSequence_C::UnbindEvents()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "UnbindEvents");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -894,10 +787,8 @@ void ABP_GarageSequence_C::UnbindEvents()
 
 void ABP_GarageSequence_C::GetCurrentMachineID(EMachineId* MachineId) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GarageSequence_C", "GetCurrentMachineID");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GarageSequence_C", FnName));
 
 	Params::BP_GarageSequence_C_GetCurrentMachineID Parms{};
 
@@ -907,5 +798,5 @@ void ABP_GarageSequence_C::GetCurrentMachineID(EMachineId* MachineId) const
 		*MachineId = Parms.MachineId;
 }
 
-}
 
+SDK_NAMESPACE_END

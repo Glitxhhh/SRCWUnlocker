@@ -13,15 +13,13 @@
 #include "ABPT_Driver_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_Normal_Driver.ABP_Normal_Driver_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x2D10 - 0x2D10)
+// 0x0000 (0x3100 - 0x3100)
 struct ABP_Normal_Driver::FAnimBlueprintGeneratedConstantData final : public ABPT_Driver::FAnimBlueprintGeneratedConstantData
 {
 };
 DUMPER7_ASSERTS_ABP_Normal_Driver__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

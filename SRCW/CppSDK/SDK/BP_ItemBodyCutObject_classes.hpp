@@ -13,11 +13,10 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemBodyCutObject.BP_ItemBodyCutObject_C
-// 0x0000 (0x0990 - 0x0990)
+// 0x0000 (0x09A0 - 0x09A0)
 class ABP_ItemBodyCutObject_C final : public AItemBodyCutObject
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemBodyCutObject_C;
 
-}
-
+SDK_NAMESPACE_END

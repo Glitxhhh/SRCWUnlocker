@@ -18,8 +18,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Landscape.LandscapeGizmoActor
 // 0x0000 (0x0290 - 0x0290)
@@ -89,9 +88,12 @@ public:
 DUMPER7_ASSERTS_UControlPointMeshComponent;
 
 // Class Landscape.LandscapeSplineInterface
-// 0x0000 (0x0000 - 0x0000)
-class ILandscapeSplineInterface final
+// 0x0008 (0x0008 - 0x0000)
+class ILandscapeSplineInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -119,10 +121,9 @@ DUMPER7_ASSERTS_ILandscapeSplineInterface;
 
 // Class Landscape.LandscapeProxy
 // 0x04D0 (0x0760 - 0x0290)
-class ALandscapeProxy : public APartitionActor
+class ALandscapeProxy : public APartitionActor, public ILandscapeSplineInterface
 {
 public:
-	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULandscapeSplinesComponent*             SplineComponent;                                   // 0x0298(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	struct FGuid                                  LandscapeGuid;                                     // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_2B0[0x10];                                     // 0x02B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
@@ -433,7 +434,7 @@ DUMPER7_ASSERTS_ULandscapeGrassType;
 // Class Landscape.LandscapeHeightfieldCollisionComponent
 // 0x0100 (0x0620 - 0x0520)
 #pragma pack(push, 0x1)
-class alignas(0x10) ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
+class SDK_ALIGN(0x10) ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
 {
 public:
 	TArray<class ULandscapeLayerInfoObject*>      ComponentLayerInfos;                               // 0x0518(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
@@ -1011,10 +1012,9 @@ DUMPER7_ASSERTS_ULandscapeNaniteComponent;
 
 // Class Landscape.LandscapeSplineActor
 // 0x0018 (0x02A8 - 0x0290)
-class ALandscapeSplineActor final : public AActor
+class ALandscapeSplineActor final : public AActor, public ILandscapeSplineInterface
 {
 public:
-	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  LandscapeGuid;                                     // 0x0298(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -1225,5 +1225,4 @@ public:
 };
 DUMPER7_ASSERTS_UMaterialExpressionLandscapeVisibilityMask;
 
-}
-
+SDK_NAMESPACE_END

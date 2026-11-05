@@ -13,15 +13,13 @@
 #include "ABPT_MenuDriver_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_MenuDriver_Storm.ABP_MenuDriver_Storm_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x0F20 - 0x0F20)
 struct ABP_MenuDriver_Storm::FAnimBlueprintGeneratedConstantData final : public ABPT_MenuDriver::FAnimBlueprintGeneratedConstantData
 {
 };
 DUMPER7_ASSERTS_ABP_MenuDriver_Storm__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

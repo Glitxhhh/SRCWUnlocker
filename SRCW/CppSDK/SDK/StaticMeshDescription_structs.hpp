@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct StaticMeshDescription.UVMapSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -29,5 +28,4 @@ public:
 };
 DUMPER7_ASSERTS_FUVMapSettings;
 
-}
-
+SDK_NAMESPACE_END

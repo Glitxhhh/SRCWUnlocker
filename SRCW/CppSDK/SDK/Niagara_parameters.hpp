@@ -13,10 +13,11 @@
 #include "CoreUObject_structs.hpp"
 #include "Niagara_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Engine_parameters.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Niagara.NiagaraDataChannelReader.InitAccess
 // 0x0030 (0x0030 - 0x0000)
@@ -2188,6 +2189,30 @@ public:
 };
 DUMPER7_ASSERTS_NiagaraFunctionLibrary_SpawnSystemAttachedWithParams;
 
+// Function Engine.CameraLensEffectInterface.GetParticleComponents
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_CameraLensEffectInterface_GetParticleComponents
+#define DUMPER7_PARAM_DEFINED_CameraLensEffectInterface_GetParticleComponents
+struct CameraLensEffectInterface_GetParticleComponents final
+{
+public:
+	TArray<class UFXSystemComponent*>             ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_CameraLensEffectInterface_GetParticleComponents;
+
+// Function Engine.CameraLensEffectInterface.GetPrimaryParticleComponent
+// 0x0008 (0x0008 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_CameraLensEffectInterface_GetPrimaryParticleComponent
+#define DUMPER7_PARAM_DEFINED_CameraLensEffectInterface_GetPrimaryParticleComponent
+struct CameraLensEffectInterface_GetPrimaryParticleComponent final
+{
+public:
+	class UFXSystemComponent*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_CameraLensEffectInterface_GetPrimaryParticleComponent;
+
 // Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
 // 0x0018 (0x0018 - 0x0000)
 struct NiagaraParameterCollectionInstance_GetBoolParameter final
@@ -2756,5 +2781,5 @@ public:
 };
 DUMPER7_ASSERTS_NiagaraSimCacheFunctionLibrary_CreateNiagaraSimCache;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

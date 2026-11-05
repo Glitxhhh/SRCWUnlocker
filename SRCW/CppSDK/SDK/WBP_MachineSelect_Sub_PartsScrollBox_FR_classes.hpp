@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_PartsScrollBox_FR.WBP_MachineSelect_Sub_PartsScrollBox_FR_C
 // 0x0008 (0x0398 - 0x0390)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineSelect_Sub_PartsScrollBox_FR_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MenuStateTitle.BPC_MenuStateTitle_C
 // 0x0018 (0x0150 - 0x0138)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MenuStateTitle_C;
 
-}
-
+SDK_NAMESPACE_END

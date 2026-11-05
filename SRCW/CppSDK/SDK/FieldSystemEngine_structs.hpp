@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct FieldSystemEngine.FieldObjectCommands
 // 0x0030 (0x0030 - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FFieldObjectCommands;
 
-}
-
+SDK_NAMESPACE_END

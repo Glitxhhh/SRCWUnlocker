@@ -13,8 +13,7 @@
 #include "Niagara_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class CriWareNiagara.NiagaraDataInterfaceAtomPlayer
 // 0x0038 (0x0070 - 0x0038)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UNiagaraDataInterfaceAtomPlayer;
 
-}
-
+SDK_NAMESPACE_END

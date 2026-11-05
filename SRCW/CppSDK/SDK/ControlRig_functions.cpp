@@ -14,8 +14,7 @@
 #include "ControlRig_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ControlRig.ControlRigShapeLibraryLink.SetShapeLibrary
 // (Final, Native, Public, BlueprintCallable)
@@ -6314,10 +6313,8 @@ void UControlRigComponent::Initialize()
 
 void UControlRigComponent::OnPostConstruction(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostConstruction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPostConstruction Parms{};
 
@@ -6339,10 +6336,8 @@ void UControlRigComponent::OnPostConstruction(class UControlRigComponent* Compon
 
 void UControlRigComponent::OnPostForwardsSolve(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostForwardsSolve");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPostForwardsSolve Parms{};
 
@@ -6364,10 +6359,8 @@ void UControlRigComponent::OnPostForwardsSolve(class UControlRigComponent* Compo
 
 void UControlRigComponent::OnPostInitialize(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPostInitialize Parms{};
 
@@ -6389,10 +6382,8 @@ void UControlRigComponent::OnPostInitialize(class UControlRigComponent* Componen
 
 void UControlRigComponent::OnPreConstruction(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreConstruction");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPreConstruction Parms{};
 
@@ -6414,10 +6405,8 @@ void UControlRigComponent::OnPreConstruction(class UControlRigComponent* Compone
 
 void UControlRigComponent::OnPreForwardsSolve(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreForwardsSolve");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPreForwardsSolve Parms{};
 
@@ -6439,10 +6428,8 @@ void UControlRigComponent::OnPreForwardsSolve(class UControlRigComponent* Compon
 
 void UControlRigComponent::OnPreInitialize(class UControlRigComponent* Component)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigComponent", FnName));
 
 	Params::ControlRigComponent_OnPreInitialize Parms{};
 
@@ -7017,10 +7004,8 @@ void AControlRigControlActor::ResetControlActor()
 
 void AControlRigShapeActor::OnEnabledChanged(bool bIsEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigShapeActor", "OnEnabledChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigShapeActor", FnName));
 
 	Params::ControlRigShapeActor_OnEnabledChanged Parms{};
 
@@ -7037,10 +7022,8 @@ void AControlRigShapeActor::OnEnabledChanged(bool bIsEnabled)
 
 void AControlRigShapeActor::OnHoveredChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigShapeActor", "OnHoveredChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigShapeActor", FnName));
 
 	Params::ControlRigShapeActor_OnHoveredChanged Parms{};
 
@@ -7057,10 +7040,8 @@ void AControlRigShapeActor::OnHoveredChanged(bool bIsSelected)
 
 void AControlRigShapeActor::OnManipulatingChanged(bool bIsManipulating)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigShapeActor", "OnManipulatingChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigShapeActor", FnName));
 
 	Params::ControlRigShapeActor_OnManipulatingChanged Parms{};
 
@@ -7077,10 +7058,8 @@ void AControlRigShapeActor::OnManipulatingChanged(bool bIsManipulating)
 
 void AControlRigShapeActor::OnSelectionChanged(bool bIsSelected)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigShapeActor", "OnSelectionChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigShapeActor", FnName));
 
 	Params::ControlRigShapeActor_OnSelectionChanged Parms{};
 
@@ -7097,10 +7076,8 @@ void AControlRigShapeActor::OnSelectionChanged(bool bIsSelected)
 
 void AControlRigShapeActor::OnTransformChanged(const struct FTransform& NewTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigShapeActor", "OnTransformChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ControlRigShapeActor", FnName));
 
 	Params::ControlRigShapeActor_OnTransformChanged Parms{};
 
@@ -9349,5 +9326,5 @@ TArray<struct FRigVMUserWorkflow> UControlRigTransformWorkflowOptions::ProvideWo
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

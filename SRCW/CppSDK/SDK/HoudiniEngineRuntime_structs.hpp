@@ -15,8 +15,7 @@
 #include "PhysicsCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum HoudiniEngineRuntime.EHoudiniStaticMeshMethod
 // NumValues: 0x0004
@@ -1140,5 +1139,4 @@ public:
 };
 DUMPER7_ASSERTS_FCategoryRules;
 
-}
-
+SDK_NAMESPACE_END

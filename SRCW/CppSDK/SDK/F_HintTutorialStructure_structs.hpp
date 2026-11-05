@@ -13,8 +13,7 @@
 #include "UNION_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct F_HintTutorialStructure.F_HintTutorialStructure
 // 0x0028 (0x0028 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FF_HintTutorialStructure;
 
-}
-
+SDK_NAMESPACE_END

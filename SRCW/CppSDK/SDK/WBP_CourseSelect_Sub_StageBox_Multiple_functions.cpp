@@ -14,18 +14,63 @@
 #include "WBP_CourseSelect_Sub_StageBox_Multiple_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_Sub_StageBox_Multiple_C::BP_OnEntryReleased()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_StageBox_Multiple_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_StageBox_Multiple_C::BP_OnItemSelectionChanged(bool bIsSelected)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +81,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::Construct()
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::DeactivateStageBox()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "DeactivateStageBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +95,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::DeactivateStageBox()
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_Multiple(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_Multiple");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_StageBox_Multiple_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_Multiple", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_ExecuteUbergraph_WBP_CourseSelect_Sub_StageBox_Multiple Parms{};
 
@@ -73,10 +114,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::ExecuteUbergraph_WBP_CourseSelec
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::GetEnableCourse(int32 Index_0, bool* bEnableCourse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "GetEnableCourse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_GetEnableCourse Parms{};
 
@@ -89,6 +128,24 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::GetEnableCourse(int32 Index_0, b
 }
 
 
+// Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.InitUnlockAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EStageId                                TargetStage                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_StageBox_Multiple_C::InitUnlockAnimation(EStageId TargetStage)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_InitUnlockAnimation Parms{};
+
+	Parms.TargetStage = TargetStage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.Next Panel Navigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -97,10 +154,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::GetEnableCourse(int32 Index_0, b
 
 class UWidget* UWBP_CourseSelect_Sub_StageBox_Multiple_C::Next_Panel_Navigation(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "Next Panel Navigation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_Next_Panel_Navigation Parms{};
 
@@ -119,10 +174,8 @@ class UWidget* UWBP_CourseSelect_Sub_StageBox_Multiple_C::Next_Panel_Navigation(
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnDecideCourseEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "OnDecideCourseEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_OnDecideCourseEvent Parms{};
 
@@ -141,10 +194,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnDecideCourseEvent(class UUnion
 
 struct FEventReply UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_OnFocusReceived Parms{};
 
@@ -157,6 +208,24 @@ struct FEventReply UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnFocusReceived(co
 }
 
 
+// Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_CourseSelect_Sub_StageBox_Multiple.WBP_CourseSelect_Sub_StageBox_Multiple_C.SetButtonsInteractableState
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -164,10 +233,8 @@ struct FEventReply UWBP_CourseSelect_Sub_StageBox_Multiple_C::OnFocusReceived(co
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetButtonsInteractableState(bool Interactable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetButtonsInteractableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetButtonsInteractableState Parms{};
 
@@ -187,10 +254,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetButtonsInteractableState(bool
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetCourseId(int32 InIndex, EStageId InCourseId, double OpenThreshold, bool ForceHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetCourseId Parms{};
 
@@ -211,10 +276,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetCourseId(int32 InIndex, EStag
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetCourseNameText(const class FText& CourseNameText, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetCourseNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetCourseNameText Parms{};
 
@@ -233,10 +296,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetCourseNameText(const class FT
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetDataTableData(const TMap<EStageId, double>& InCourseCompleteRate, const TMap<EStageId, class FText>& InValidStageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetDataTableData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetDataTableData Parms{};
 
@@ -254,10 +315,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetDataTableData(const TMap<ESta
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetFocusIndex(int32 FocusIndex_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetFocusIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetFocusIndex Parms{};
 
@@ -274,10 +333,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetFocusIndex(int32 FocusIndex_0
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetGameModeId(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetGameModeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetGameModeId Parms{};
 
@@ -294,10 +351,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetGameModeId(EGameModeId InGame
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetLastFocusedId(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetLastFocusedId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetLastFocusedId Parms{};
 
@@ -314,10 +369,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetLastFocusedId(int32 InButtonI
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetMedalView(const TArray<ETimeTrialClearRankId>& InTimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetMedalView");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetMedalView Parms{};
 
@@ -337,10 +390,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetMedalView(const TArray<ETimeT
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetTimeTrialData(TArray<EStageId>& InStageIds, TArray<bool>& InMedalAcquisitions, double OpenThreshold, bool bForceHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetTimeTrialData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetTimeTrialData Parms{};
 
@@ -364,10 +415,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetTimeTrialData(TArray<EStageId
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetupStageBoxButtonPanel(class UUnionUISceneBase* InParentPanel, int32 InPanelIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetupStageBoxButtonPanel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetupStageBoxButtonPanel Parms{};
 
@@ -385,10 +434,8 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetupStageBoxButtonPanel(class U
 
 void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetupTmb(const TMap<EStageId, TSoftObjectPtr<class UTexture2D>>& StageId_Tmb)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_StageBox_Multiple_C", "SetupTmb");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_StageBox_Multiple_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_StageBox_Multiple_C_SetupTmb Parms{};
 
@@ -397,5 +444,5 @@ void UWBP_CourseSelect_Sub_StageBox_Multiple_C::SetupTmb(const TMap<EStageId, TS
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MachineResourceElement.MachineResourceElement_C
 // 0x0050 (0x00B0 - 0x0060)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UMachineResourceElement_C;
 
-}
-
+SDK_NAMESPACE_END

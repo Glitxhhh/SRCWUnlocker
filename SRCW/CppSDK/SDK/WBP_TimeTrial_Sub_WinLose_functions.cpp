@@ -14,8 +14,7 @@
 #include "WBP_TimeTrial_Sub_WinLose_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_Sub_WinLose.WBP_TimeTrial_Sub_WinLose_C.ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TimeTrial_Sub_WinLose_C::ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_WinLose_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_Sub_WinLose_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose", FuncInfo);
 
 	Params::WBP_TimeTrial_Sub_WinLose_C_ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_TimeTrial_Sub_WinLose_C::ExecuteUbergraph_WBP_TimeTrial_Sub_WinLose(in
 
 void UWBP_TimeTrial_Sub_WinLose_C::SetLoseText(ETimeTrialWinLoseDispId WinLoseID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_WinLose_C", "SetLoseText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_WinLose_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_WinLose_C_SetLoseText Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_TimeTrial_Sub_WinLose_C::SetLoseText(ETimeTrialWinLoseDispId WinLoseID
 
 void UWBP_TimeTrial_Sub_WinLose_C::SetWinText(ETimeTrialWinLoseDispId WinLoseID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_WinLose_C", "SetWinText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_WinLose_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_WinLose_C_SetWinText Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_TimeTrial_Sub_WinLose_C::SetWinText(ETimeTrialWinLoseDispId WinLoseID)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

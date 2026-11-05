@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum InputCore.ETouchIndex
 // NumValues: 0x000D
@@ -93,5 +92,4 @@ public:
 };
 DUMPER7_ASSERTS_FKey;
 
-}
-
+SDK_NAMESPACE_END

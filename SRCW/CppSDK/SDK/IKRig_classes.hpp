@@ -17,8 +17,7 @@
 #include "PBIK_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class IKRig.RetargetOpBase
 // 0x0008 (0x0030 - 0x0028)
@@ -93,9 +92,12 @@ public:
 DUMPER7_ASSERTS_URetargetOpStack;
 
 // Class IKRig.IKGoalCreatorInterface
-// 0x0000 (0x0000 - 0x0000)
-class IIKGoalCreatorInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IIKGoalCreatorInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void AddIKGoals(TMap<class FName, struct FIKRigGoal>* OutGoals);
 
@@ -188,10 +190,10 @@ DUMPER7_ASSERTS_URootMotionGeneratorOp;
 
 // Class IKRig.IKRigComponent
 // 0x0018 (0x00B8 - 0x00A0)
-class UIKRigComponent final : public UActorComponent
+class UIKRigComponent final : public UActorComponent, public IIKGoalCreatorInterface
 {
 public:
-	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x10];                                      // 0x00A8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearAllGoals();
@@ -212,6 +214,9 @@ public:
 	{
 		return GetDefaultObjImpl<UIKRigComponent>();
 	}
+
+public:
+	void AddIKGoals(TMap<class FName, struct FIKRigGoal>* OutGoals);
 };
 DUMPER7_ASSERTS_UIKRigComponent;
 
@@ -401,10 +406,9 @@ DUMPER7_ASSERTS_UIKRigEffectorGoal;
 
 // Class IKRig.IKRigDefinition
 // 0x00D8 (0x0100 - 0x0028)
-class UIKRigDefinition final : public UObject
+class UIKRigDefinition final : public UObject, public IInterface_PreviewMeshProvider
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class USkeletalMesh>           PreviewSkeletalMesh;                               // 0x0030(0x0028)(Edit, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIKRigSkeleton                         Skeleton;                                          // 0x0058(0x0070)(NativeAccessSpecifierPrivate)
 	TArray<class UIKRigEffectorGoal*>             Goals;                                             // 0x00C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
@@ -814,5 +818,4 @@ public:
 };
 DUMPER7_ASSERTS_UIKRig_SetTransform;
 
-}
-
+SDK_NAMESPACE_END

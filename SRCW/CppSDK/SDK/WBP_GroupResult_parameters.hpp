@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
+#include "UnionRun_structs.hpp"
 #include "UnionSystem_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UnionRun_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_GroupResult.WBP_GroupResult_C.ExecuteUbergraph_WBP_GroupResult
 // 0x07B0 (0x07B0 - 0x0000)
@@ -403,5 +403,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_GroupResult_C_Tick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

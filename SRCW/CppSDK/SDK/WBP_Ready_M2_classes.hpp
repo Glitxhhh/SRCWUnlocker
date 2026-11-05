@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Ready_M2.WBP_Ready_M2_C
 // 0x00C8 (0x03C0 - 0x02F8)
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Ready_M2_C;
 
-}
-
+SDK_NAMESPACE_END

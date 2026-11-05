@@ -12,12 +12,11 @@
 
 #include "Engine_structs.hpp"
 #include "ST_ColorDetailWindowSurfaceItemData_structs.hpp"
-#include "UnionUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_ColorPicker_Texture.WBP_MachineCustom_Sub_ColorPicker_Texture_C
 // 0x00E0 (0x0560 - 0x0480)
@@ -88,5 +87,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_ColorPicker_Texture_C;
 
-}
-
+SDK_NAMESPACE_END

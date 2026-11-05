@@ -14,21 +14,18 @@
 #include "BP_KA_SkySphere_Actor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_KA_SkySphere_Actor.BP_KA_SkySphere_Actor_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_KA_SkySphere_Actor_C::UserConstructionScript()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KA_SkySphere_Actor_C", "UserConstructionScript");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_KA_SkySphere_Actor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_EventEndInfo_Sub_Details_Legend_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_EventEndInfo_Sub_Details_Legend.WBP_EventEndInfo_Sub_Details_Legend_C.Calc Next Point
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::Calc_Next_Point(int32 InBasePoint, int32* OutNextPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "Calc Next Point");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_Calc_Next_Point Parms{};
 
@@ -48,10 +45,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::Calc_Next_Point(int32 InBasePoint, 
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcDirectionProgressTimeSec(double DeltaTimeSec)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CalcDirectionProgressTimeSec");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_CalcDirectionProgressTimeSec Parms{};
 
@@ -68,10 +63,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcDirectionProgressTimeSec(double
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcDirectionStepNum(int32* OutStepNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CalcDirectionStepNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_CalcDirectionStepNum Parms{};
 
@@ -89,10 +82,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcDirectionStepNum(int32* OutStep
 
 int32 UWBP_EventEndInfo_Sub_Details_Legend_C::CalculatePointForAdditionAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CalculatePointForAdditionAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_CalculatePointForAdditionAnimation Parms{};
 
@@ -109,10 +100,8 @@ int32 UWBP_EventEndInfo_Sub_Details_Legend_C::CalculatePointForAdditionAnimation
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckEndPointUp(bool* ShouldEnd)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CheckEndPointUp");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_CheckEndPointUp Parms{};
 
@@ -128,10 +117,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckEndPointUp(bool* ShouldEnd)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckPointDisplayType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CheckPointDisplayType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,10 +129,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckPointDisplayType()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckRankingDisplayType()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CheckRankingDisplayType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +143,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CheckRankingDisplayType()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::ExecuteUbergraph_WBP_EventEndInfo_Sub_Details_Legend(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "ExecuteUbergraph_WBP_EventEndInfo_Sub_Details_Legend");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_EventEndInfo_Sub_Details_Legend_C", "ExecuteUbergraph_WBP_EventEndInfo_Sub_Details_Legend", FuncInfo);
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_ExecuteUbergraph_WBP_EventEndInfo_Sub_Details_Legend Parms{};
 
@@ -182,10 +165,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::ExecuteUbergraph_WBP_EventEndInfo_S
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::Get_Number_OfDight(int32 OriginalNumber, int32 Dight, class UImage* Image, class UImage* BackImage, ESlateVisibility VisibilityOnZero)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "Get Number OfDight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_Get_Number_OfDight Parms{};
 
@@ -204,10 +185,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::Get_Number_OfDight(int32 OriginalNu
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -218,10 +197,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::OnInitialized()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::PlayResultSound()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "PlayResultSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -232,10 +209,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::PlayResultSound()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::RankingAnimEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "RankingAnimEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -250,10 +225,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::RankingAnimEnd()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::Set_Fixed_Result_Disp_Data(ELegendCompeRateGrade OriginalGrade_0, EGameEventPhase EventPhase_0, bool IsPlayed_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "Set Fixed Result Disp Data");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_Set_Fixed_Result_Disp_Data Parms{};
 
@@ -272,10 +245,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::Set_Fixed_Result_Disp_Data(ELegendC
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::Set_Legend_Grade(ELegendCompeRateGrade Grade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "Set Legend Grade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_Set_Legend_Grade Parms{};
 
@@ -292,10 +263,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::Set_Legend_Grade(ELegendCompeRateGr
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetLegendCompeId(int32 LegendCompeId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetLegendCompeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_SetLegendCompeId Parms{};
 
@@ -312,10 +281,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetLegendCompeId(int32 LegendCompeI
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetPointDisplay(int32 PlayerPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetPointDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_SetPointDisplay Parms{};
 
@@ -332,10 +299,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetPointDisplay(int32 PlayerPoint)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetPointNumber(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetPointNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_SetPointNumber Parms{};
 
@@ -350,10 +315,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetPointNumber(int32 Point)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetQRTexture()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetQRTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -366,10 +329,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetQRTexture()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetRankingDisplay(int32 Ranking)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetRankingDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_SetRankingDisplay Parms{};
 
@@ -386,10 +347,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetRankingDisplay(int32 Ranking)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::SetTextureBG(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "SetTextureBG");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_SetTextureBG Parms{};
 
@@ -406,10 +365,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::SetTextureBG(class UTexture2D* Text
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::StartPointDisplay(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "StartPointDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_StartPointDisplay Parms{};
 
@@ -426,10 +383,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::StartPointDisplay(int32 Point)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::StartRankingDisplay(int32 Ranking)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "StartRankingDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_StartRankingDisplay Parms{};
 
@@ -447,10 +402,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::StartRankingDisplay(int32 Ranking)
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_Tick Parms{};
 
@@ -466,10 +419,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::Tick(const struct FGeometry& MyGeom
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::UpdateDisplayPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "UpdateDisplayPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -485,10 +436,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::UpdateDisplayPoint()
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcCurrentDirectionProgressStep(double CurrentTimeSec, double EndTimeSec, int32 DirectionStepNum, int32* CurrentStep) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "CalcCurrentDirectionProgressStep");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_CalcCurrentDirectionProgressStep Parms{};
 
@@ -513,10 +462,8 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::CalcCurrentDirectionProgressStep(do
 
 void UWBP_EventEndInfo_Sub_Details_Legend_C::IsGradeChanged(int32 CurrentRate, int32 PrevRate, bool* Changed, ELegendCompeRateGrade* CurrentGrade) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_Sub_Details_Legend_C", "IsGradeChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_Sub_Details_Legend_C", FnName));
 
 	Params::WBP_EventEndInfo_Sub_Details_Legend_C_IsGradeChanged Parms{};
 
@@ -532,5 +479,5 @@ void UWBP_EventEndInfo_Sub_Details_Legend_C::IsGradeChanged(int32 CurrentRate, i
 		*CurrentGrade = Parms.CurrentGrade;
 }
 
-}
 
+SDK_NAMESPACE_END

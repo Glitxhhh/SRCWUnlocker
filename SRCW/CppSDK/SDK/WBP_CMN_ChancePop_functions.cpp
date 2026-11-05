@@ -14,8 +14,7 @@
 #include "WBP_CMN_ChancePop_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_ChancePop.WBP_CMN_ChancePop_C.Set Chance Up Text
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_CMN_ChancePop_C::Set_Chance_Up_Text(const class FText& InChanceUpText, const class FText& InRatioText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_ChancePop_C", "Set Chance Up Text");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_ChancePop_C", FnName));
 
 	Params::WBP_CMN_ChancePop_C_Set_Chance_Up_Text Parms{};
 
@@ -38,5 +35,5 @@ void UWBP_CMN_ChancePop_C::Set_Chance_Up_Text(const class FText& InChanceUpText,
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

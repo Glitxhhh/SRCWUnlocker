@@ -13,11 +13,10 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemTimeBombObject.BP_ItemTimeBombObject_C
-// 0x0000 (0x0600 - 0x0600)
+// 0x0000 (0x0610 - 0x0610)
 class ABP_ItemTimeBombObject_C final : public AItemTimeBombObject
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemTimeBombObject_C;
 
-}
-
+SDK_NAMESPACE_END

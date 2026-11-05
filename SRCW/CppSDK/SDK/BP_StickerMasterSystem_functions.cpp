@@ -14,18 +14,15 @@
 #include "BP_StickerMasterSystem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_StickerMasterSystem.BP_StickerMasterSystem_C.BindInputReceiver
 // (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_StickerMasterSystem_C::BindInputReceiver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "BindInputReceiver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_StickerMasterSystem_C::BindInputReceiver()
 
 void ABP_StickerMasterSystem_C::CancelEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "CancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_CancelEvent Parms{};
 
@@ -56,10 +51,8 @@ void ABP_StickerMasterSystem_C::CancelEvent(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::CheckSimultaneous()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "CheckSimultaneous");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void ABP_StickerMasterSystem_C::CheckSimultaneous()
 
 void ABP_StickerMasterSystem_C::ClampStickerLeft()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ClampStickerLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void ABP_StickerMasterSystem_C::ClampStickerLeft()
 
 void ABP_StickerMasterSystem_C::ClampStickerRight()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ClampStickerRight");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void ABP_StickerMasterSystem_C::ClampStickerRight()
 
 void ABP_StickerMasterSystem_C::CollectMaterials()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "CollectMaterials");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void ABP_StickerMasterSystem_C::CollectMaterials()
 
 void ABP_StickerMasterSystem_C::Collision_Adjust()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "Collision Adjust");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +111,8 @@ void ABP_StickerMasterSystem_C::Collision_Adjust()
 
 void ABP_StickerMasterSystem_C::ColorPicker_OnCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorPicker_OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,10 +125,8 @@ void ABP_StickerMasterSystem_C::ColorPicker_OnCancel()
 
 void ABP_StickerMasterSystem_C::ColorPicker_OnColorItemFocused(const struct FST_ColorDetailWindowColorItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorPicker_OnColorItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ColorPicker_OnColorItemFocused Parms{};
 
@@ -162,10 +143,8 @@ void ABP_StickerMasterSystem_C::ColorPicker_OnColorItemFocused(const struct FST_
 
 void ABP_StickerMasterSystem_C::ColorPicker_OnColorItemSelected(const struct FST_ColorDetailWindowColorItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorPicker_OnColorItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ColorPicker_OnColorItemSelected Parms{};
 
@@ -182,10 +161,8 @@ void ABP_StickerMasterSystem_C::ColorPicker_OnColorItemSelected(const struct FST
 
 void ABP_StickerMasterSystem_C::ColorPicker_OnSurfaceItemFocused(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorPicker_OnSurfaceItemFocused");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ColorPicker_OnSurfaceItemFocused Parms{};
 
@@ -202,10 +179,8 @@ void ABP_StickerMasterSystem_C::ColorPicker_OnSurfaceItemFocused(const struct FS
 
 void ABP_StickerMasterSystem_C::ColorPicker_OnSurfaceItemSelected(const struct FST_PullDownMenuItemData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorPicker_OnSurfaceItemSelected");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ColorPicker_OnSurfaceItemSelected Parms{};
 
@@ -222,10 +197,8 @@ void ABP_StickerMasterSystem_C::ColorPicker_OnSurfaceItemSelected(const struct F
 
 void ABP_StickerMasterSystem_C::ColorWindowEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ColorWindowEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ColorWindowEvent Parms{};
 
@@ -242,10 +215,8 @@ void ABP_StickerMasterSystem_C::ColorWindowEvent(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::DecisionEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "DecisionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_DecisionEvent Parms{};
 
@@ -260,10 +231,8 @@ void ABP_StickerMasterSystem_C::DecisionEvent(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::DeregistInputRecevier()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "DeregistInputRecevier");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,10 +245,8 @@ void ABP_StickerMasterSystem_C::DeregistInputRecevier()
 
 void ABP_StickerMasterSystem_C::ExecuteUbergraph_BP_StickerMasterSystem(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ExecuteUbergraph_BP_StickerMasterSystem");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_StickerMasterSystem_C", "ExecuteUbergraph_BP_StickerMasterSystem", FuncInfo);
 
 	Params::BP_StickerMasterSystem_C_ExecuteUbergraph_BP_StickerMasterSystem Parms{};
 
@@ -294,10 +261,8 @@ void ABP_StickerMasterSystem_C::ExecuteUbergraph_BP_StickerMasterSystem(int32 En
 
 void ABP_StickerMasterSystem_C::Finalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "Finalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -310,10 +275,8 @@ void ABP_StickerMasterSystem_C::Finalize()
 
 void ABP_StickerMasterSystem_C::FlipUVEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "FlipUVEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_FlipUVEvent Parms{};
 
@@ -330,10 +293,8 @@ void ABP_StickerMasterSystem_C::FlipUVEvent(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::GetCustomizeData(struct FUserMachineCustomizeData* OutCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "GetCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_GetCustomizeData Parms{};
 
@@ -354,10 +315,8 @@ void ABP_StickerMasterSystem_C::GetCustomizeData(struct FUserMachineCustomizeDat
 
 void ABP_StickerMasterSystem_C::GetUVWH(double* OutU, double* OutV, double* OutW, double* OutH)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "GetUVWH");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_GetUVWH Parms{};
 
@@ -384,10 +343,8 @@ void ABP_StickerMasterSystem_C::GetUVWH(double* OutU, double* OutV, double* OutW
 
 void ABP_StickerMasterSystem_C::InitCamera(class ABP_GarageCamera_C* GarageCamera_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_InitCamera Parms{};
 
@@ -402,10 +359,8 @@ void ABP_StickerMasterSystem_C::InitCamera(class ABP_GarageCamera_C* GarageCamer
 
 void ABP_StickerMasterSystem_C::InitFrames()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitFrames");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -416,10 +371,8 @@ void ABP_StickerMasterSystem_C::InitFrames()
 
 void ABP_StickerMasterSystem_C::InitFrontParts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitFrontParts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -433,10 +386,8 @@ void ABP_StickerMasterSystem_C::InitFrontParts()
 
 void ABP_StickerMasterSystem_C::Initialize(class ABP_MachineCustomizeSequence_C* MCSequence_0, bool IsRear)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "Initialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_Initialize Parms{};
 
@@ -454,10 +405,8 @@ void ABP_StickerMasterSystem_C::Initialize(class ABP_MachineCustomizeSequence_C*
 
 void ABP_StickerMasterSystem_C::InitializeStickers(bool IsEditRear_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitializeStickers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_InitializeStickers Parms{};
 
@@ -472,10 +421,8 @@ void ABP_StickerMasterSystem_C::InitializeStickers(bool IsEditRear_0)
 
 void ABP_StickerMasterSystem_C::InitMachine()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitMachine");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -486,10 +433,8 @@ void ABP_StickerMasterSystem_C::InitMachine()
 
 void ABP_StickerMasterSystem_C::InitRearParts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitRearParts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -500,10 +445,8 @@ void ABP_StickerMasterSystem_C::InitRearParts()
 
 void ABP_StickerMasterSystem_C::InitRenderTargetMid()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitRenderTargetMid");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -514,10 +457,8 @@ void ABP_StickerMasterSystem_C::InitRenderTargetMid()
 
 void ABP_StickerMasterSystem_C::InitRenderTargetPlane()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitRenderTargetPlane");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -528,10 +469,8 @@ void ABP_StickerMasterSystem_C::InitRenderTargetPlane()
 
 void ABP_StickerMasterSystem_C::InitStickers()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitStickers");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -542,10 +481,8 @@ void ABP_StickerMasterSystem_C::InitStickers()
 
 void ABP_StickerMasterSystem_C::InitUvPreview()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitUvPreview");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -556,10 +493,8 @@ void ABP_StickerMasterSystem_C::InitUvPreview()
 
 void ABP_StickerMasterSystem_C::InitWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "InitWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -573,10 +508,8 @@ void ABP_StickerMasterSystem_C::InitWidget()
 
 void ABP_StickerMasterSystem_C::JudgeStickerMaxScaleHorizontal(double Scale, bool* IsMaxScale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "JudgeStickerMaxScaleHorizontal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_JudgeStickerMaxScaleHorizontal Parms{};
 
@@ -597,10 +530,8 @@ void ABP_StickerMasterSystem_C::JudgeStickerMaxScaleHorizontal(double Scale, boo
 
 void ABP_StickerMasterSystem_C::JudgeStickerMaxScaleVertical(double Scale, bool* IsMaxScale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "JudgeStickerMaxScaleVertical");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_JudgeStickerMaxScaleVertical Parms{};
 
@@ -621,10 +552,8 @@ void ABP_StickerMasterSystem_C::JudgeStickerMaxScaleVertical(double Scale, bool*
 
 void ABP_StickerMasterSystem_C::JudgeStickerMinScaleHorizontal(double Scale, bool* IsMinScale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "JudgeStickerMinScaleHorizontal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_JudgeStickerMinScaleHorizontal Parms{};
 
@@ -645,10 +574,8 @@ void ABP_StickerMasterSystem_C::JudgeStickerMinScaleHorizontal(double Scale, boo
 
 void ABP_StickerMasterSystem_C::JudgeStickerMinScaleVertical(double Scale, bool* IsMinScale)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "JudgeStickerMinScaleVertical");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_JudgeStickerMinScaleVertical Parms{};
 
@@ -668,10 +595,8 @@ void ABP_StickerMasterSystem_C::JudgeStickerMinScaleVertical(double Scale, bool*
 
 void ABP_StickerMasterSystem_C::LeftButtonPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "LeftButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_LeftButtonPressed Parms{};
 
@@ -688,10 +613,8 @@ void ABP_StickerMasterSystem_C::LeftButtonPressed(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::LeftButtonReleased(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "LeftButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_LeftButtonReleased Parms{};
 
@@ -706,10 +629,8 @@ void ABP_StickerMasterSystem_C::LeftButtonReleased(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::LoadStickerParts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "LoadStickerParts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -722,10 +643,8 @@ void ABP_StickerMasterSystem_C::LoadStickerParts()
 
 void ABP_StickerMasterSystem_C::OnLeftShoulderPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_OnLeftShoulderPressed Parms{};
 
@@ -742,10 +661,8 @@ void ABP_StickerMasterSystem_C::OnLeftShoulderPressed(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::OnLeftShoulderReleased(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_OnLeftShoulderReleased Parms{};
 
@@ -762,10 +679,8 @@ void ABP_StickerMasterSystem_C::OnLeftShoulderReleased(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::OnRightShoulderPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_OnRightShoulderPressed Parms{};
 
@@ -782,10 +697,8 @@ void ABP_StickerMasterSystem_C::OnRightShoulderPressed(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::OnRightShoulderReleased(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_OnRightShoulderReleased Parms{};
 
@@ -800,10 +713,8 @@ void ABP_StickerMasterSystem_C::OnRightShoulderReleased(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -816,10 +727,8 @@ void ABP_StickerMasterSystem_C::ReceiveBeginPlay()
 
 void ABP_StickerMasterSystem_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ReceiveEndPlay Parms{};
 
@@ -836,10 +745,8 @@ void ABP_StickerMasterSystem_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 void ABP_StickerMasterSystem_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_ReceiveTick Parms{};
 
@@ -854,10 +761,8 @@ void ABP_StickerMasterSystem_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_StickerMasterSystem_C::RegistInputReceiver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "RegistInputReceiver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -868,10 +773,8 @@ void ABP_StickerMasterSystem_C::RegistInputReceiver()
 
 void ABP_StickerMasterSystem_C::Reset_Input_Flag()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "Reset Input Flag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -882,10 +785,8 @@ void ABP_StickerMasterSystem_C::Reset_Input_Flag()
 
 void ABP_StickerMasterSystem_C::ResetControlledSticker()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ResetControlledSticker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -896,10 +797,8 @@ void ABP_StickerMasterSystem_C::ResetControlledSticker()
 
 void ABP_StickerMasterSystem_C::ResetInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ResetInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -910,10 +809,8 @@ void ABP_StickerMasterSystem_C::ResetInput()
 
 void ABP_StickerMasterSystem_C::ResetStickerSystem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "ResetStickerSystem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -926,10 +823,8 @@ void ABP_StickerMasterSystem_C::ResetStickerSystem()
 
 void ABP_StickerMasterSystem_C::RotateSticker(double InDeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "RotateSticker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_RotateSticker Parms{};
 
@@ -944,10 +839,8 @@ void ABP_StickerMasterSystem_C::RotateSticker(double InDeltaSeconds)
 
 void ABP_StickerMasterSystem_C::SaveStickerParts()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SaveStickerParts");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -960,10 +853,8 @@ void ABP_StickerMasterSystem_C::SaveStickerParts()
 
 void ABP_StickerMasterSystem_C::SetHoverDataList(class ABP_MenuRacerPreview_C* Racer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetHoverDataList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_SetHoverDataList Parms{};
 
@@ -980,10 +871,8 @@ void ABP_StickerMasterSystem_C::SetHoverDataList(class ABP_MenuRacerPreview_C* R
 
 void ABP_StickerMasterSystem_C::SetMachineDataList(class ABP_MenuRacerPreview_C* Racer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetMachineDataList");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_SetMachineDataList Parms{};
 
@@ -998,10 +887,8 @@ void ABP_StickerMasterSystem_C::SetMachineDataList(class ABP_MenuRacerPreview_C*
 
 void ABP_StickerMasterSystem_C::SetupColorPicker()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetupColorPicker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1012,10 +899,8 @@ void ABP_StickerMasterSystem_C::SetupColorPicker()
 
 void ABP_StickerMasterSystem_C::SetupInput()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetupInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1026,10 +911,8 @@ void ABP_StickerMasterSystem_C::SetupInput()
 
 void ABP_StickerMasterSystem_C::SetupStickerSystem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetupStickerSystem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1040,10 +923,8 @@ void ABP_StickerMasterSystem_C::SetupStickerSystem()
 
 void ABP_StickerMasterSystem_C::SetupSwitchStickerSlot()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SetupSwitchStickerSlot");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1056,10 +937,8 @@ void ABP_StickerMasterSystem_C::SetupSwitchStickerSlot()
 
 void ABP_StickerMasterSystem_C::SpecialEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "SpecialEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_SpecialEvent Parms{};
 
@@ -1077,10 +956,8 @@ void ABP_StickerMasterSystem_C::SpecialEvent(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::StickerMoveEvent(class UObject* Object, const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "StickerMoveEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_StickerMoveEvent Parms{};
 
@@ -1096,10 +973,8 @@ void ABP_StickerMasterSystem_C::StickerMoveEvent(class UObject* Object, const st
 
 void ABP_StickerMasterSystem_C::StopSE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "StopSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1112,10 +987,8 @@ void ABP_StickerMasterSystem_C::StopSE()
 
 void ABP_StickerMasterSystem_C::TopButtonPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "TopButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_TopButtonPressed Parms{};
 
@@ -1132,10 +1005,8 @@ void ABP_StickerMasterSystem_C::TopButtonPressed(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::TopButtonReleased(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "TopButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_TopButtonReleased Parms{};
 
@@ -1152,10 +1023,8 @@ void ABP_StickerMasterSystem_C::TopButtonReleased(class UObject* Object)
 
 void ABP_StickerMasterSystem_C::TranslateScaleSticker(double InDeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "TranslateScaleSticker");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_TranslateScaleSticker Parms{};
 
@@ -1173,10 +1042,8 @@ void ABP_StickerMasterSystem_C::TranslateScaleSticker(double InDeltaSeconds)
 
 void ABP_StickerMasterSystem_C::TurnStickerFrameVisible(class AUnionStickerBase* Sticker, bool IsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "TurnStickerFrameVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	Params::BP_StickerMasterSystem_C_TurnStickerFrameVisible Parms{};
 
@@ -1192,10 +1059,8 @@ void ABP_StickerMasterSystem_C::TurnStickerFrameVisible(class AUnionStickerBase*
 
 void ABP_StickerMasterSystem_C::UnbindInputReceiver()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "UnbindInputReceiver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1206,10 +1071,8 @@ void ABP_StickerMasterSystem_C::UnbindInputReceiver()
 
 void ABP_StickerMasterSystem_C::UpdateCalculateStickerScale()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "UpdateCalculateStickerScale");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1220,10 +1083,8 @@ void ABP_StickerMasterSystem_C::UpdateCalculateStickerScale()
 
 void ABP_StickerMasterSystem_C::UpdateRenderTarget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "UpdateRenderTarget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1234,13 +1095,11 @@ void ABP_StickerMasterSystem_C::UpdateRenderTarget()
 
 void ABP_StickerMasterSystem_C::UpdateWarningVisibility()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StickerMasterSystem_C", "UpdateWarningVisibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_StickerMasterSystem_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

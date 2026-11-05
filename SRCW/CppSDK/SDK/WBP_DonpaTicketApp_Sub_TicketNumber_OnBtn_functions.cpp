@@ -14,8 +14,7 @@
 #include "WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn.WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C.ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", "ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", "ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn", FuncInfo);
 
 	Params::WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C_ExecuteUbergraph_WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::ExecuteUbergraph_WBP_DonpaTic
 
 void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::SetRedText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", "SetRedText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,10 +54,8 @@ void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::SetRedText()
 
 void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::SetTicketCount(const class FText& Current, const class FText& After)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", "SetTicketCount");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C", FnName));
 
 	Params::WBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C_SetTicketCount Parms{};
 
@@ -72,5 +65,5 @@ void UWBP_DonpaTicketApp_Sub_TicketNumber_OnBtn_C::SetTicketCount(const class FT
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

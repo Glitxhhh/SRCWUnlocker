@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UnionSystem_structs.hpp"
 #include "UnionUI_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Friend_PlayerIcon.WBP_Friend_PlayerIcon_C.Check Release Response InputType
 // 0x0028 (0x0028 - 0x0000)
@@ -243,5 +243,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Friend_PlayerIcon_C_SetWidgetFocus;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

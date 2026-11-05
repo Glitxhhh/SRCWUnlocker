@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_ResultRate_Sub_RateGauge.WBP_ResultRate_Sub_RateGauge_C
 // 0x0120 (0x0410 - 0x02F0)
@@ -89,5 +88,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_ResultRate_Sub_RateGauge_C;
 
-}
-
+SDK_NAMESPACE_END

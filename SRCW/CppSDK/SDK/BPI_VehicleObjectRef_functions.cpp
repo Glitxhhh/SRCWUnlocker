@@ -14,8 +14,7 @@
 #include "BPI_VehicleObjectRef_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_VehicleObjectRef.BPI_VehicleObjectRef_C.GetRaceLapObjRef
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void IBPI_VehicleObjectRef_C::GetRaceLapObjRef(class UObject** OutRaceLapObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_VehicleObjectRef_C", "GetRaceLapObjRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_VehicleObjectRef_C", FnName));
 
 	Params::BPI_VehicleObjectRef_C_GetRaceLapObjRef Parms{};
 
@@ -45,10 +42,8 @@ void IBPI_VehicleObjectRef_C::GetRaceLapObjRef(class UObject** OutRaceLapObject)
 
 void IBPI_VehicleObjectRef_C::GetRaceUIObjRef(class UObject** RaceUI)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_VehicleObjectRef_C", "GetRaceUIObjRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_VehicleObjectRef_C", FnName));
 
 	Params::BPI_VehicleObjectRef_C_GetRaceUIObjRef Parms{};
 
@@ -66,10 +61,8 @@ void IBPI_VehicleObjectRef_C::GetRaceUIObjRef(class UObject** RaceUI)
 
 void IBPI_VehicleObjectRef_C::SetRaceLapObjRef(class UObject* InRaceRapObjectRef)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_VehicleObjectRef_C", "SetRaceLapObjRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_VehicleObjectRef_C", FnName));
 
 	Params::BPI_VehicleObjectRef_C_SetRaceLapObjRef Parms{};
 
@@ -86,10 +79,8 @@ void IBPI_VehicleObjectRef_C::SetRaceLapObjRef(class UObject* InRaceRapObjectRef
 
 void IBPI_VehicleObjectRef_C::SetRaceUIObjRef(class UObject* RaceUI)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_VehicleObjectRef_C", "SetRaceUIObjRef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_VehicleObjectRef_C", FnName));
 
 	Params::BPI_VehicleObjectRef_C_SetRaceUIObjRef Parms{};
 
@@ -98,5 +89,5 @@ void IBPI_VehicleObjectRef_C::SetRaceUIObjRef(class UObject* RaceUI)
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

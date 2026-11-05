@@ -14,8 +14,7 @@
 #include "ABP_ItemDarkChaoHero_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_ItemDarkChaoHero.ABP_ItemDarkChaoHero_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_ItemDarkChaoHero_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoHero_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoHero_C", FnName));
 
 	Params::ABP_ItemDarkChaoHero_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_ItemDarkChaoHero_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_ItemDarkChaoHero_C::AnimNotify_ItemDisable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoHero_C", "AnimNotify_ItemDisable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoHero_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_ItemDarkChaoHero_C::AnimNotify_ItemDisable()
 
 void UABP_ItemDarkChaoHero_C::AnimNotify_ItemEnable()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoHero_C", "AnimNotify_ItemEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoHero_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UABP_ItemDarkChaoHero_C::AnimNotify_ItemEnable()
 
 void UABP_ItemDarkChaoHero_C::ExecuteUbergraph_ABP_ItemDarkChaoHero(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoHero_C", "ExecuteUbergraph_ABP_ItemDarkChaoHero");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_ItemDarkChaoHero_C", "ExecuteUbergraph_ABP_ItemDarkChaoHero", FuncInfo);
 
 	Params::ABP_ItemDarkChaoHero_C_ExecuteUbergraph_ABP_ItemDarkChaoHero Parms{};
 
@@ -85,5 +76,5 @@ void UABP_ItemDarkChaoHero_C::ExecuteUbergraph_ABP_ItemDarkChaoHero(int32 EntryP
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

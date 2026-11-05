@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemVioletVoidAbsorbedObject.BP_ItemVioletVoidAbsorbedObject_C
 // 0x0000 (0x04D0 - 0x04D0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemVioletVoidAbsorbedObject_C;
 
-}
-
+SDK_NAMESPACE_END

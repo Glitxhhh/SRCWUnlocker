@@ -13,8 +13,7 @@
 #include "ABPT_Menu_CockpitBase_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_Menu_HND_SmallCockpit.ABP_Menu_HND_SmallCockpit_C
 // 0x0000 (0x0650 - 0x0650)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_Menu_HND_SmallCockpit_C;
 
-}
-
+SDK_NAMESPACE_END

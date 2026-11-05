@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Popup_Sub_Btn_Standard.WBP_Popup_Sub_Btn_Standard_C
 // 0x0088 (0x0510 - 0x0488)
@@ -82,5 +81,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Popup_Sub_Btn_Standard_C;
 
-}
-
+SDK_NAMESPACE_END

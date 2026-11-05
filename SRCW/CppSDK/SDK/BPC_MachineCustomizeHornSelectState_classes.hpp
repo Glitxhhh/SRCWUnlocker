@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeHornSelectState.BPC_MachineCustomizeHornSelectState_C
 // 0x0000 (0x0148 - 0x0148)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeHornSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

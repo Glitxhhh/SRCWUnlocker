@@ -14,18 +14,15 @@
 #include "BP_ReadySequenceActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.BackupSettings
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_ReadySequenceActor_C::BackupSettings()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "BackupSettings");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void ABP_ReadySequenceActor_C::BackupSettings()
 
 void ABP_ReadySequenceActor_C::BindInputEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "BindInputEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,10 +48,8 @@ void ABP_ReadySequenceActor_C::BindInputEvent()
 
 void ABP_ReadySequenceActor_C::CancelEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_CancelEvent Parms{};
 
@@ -74,10 +67,8 @@ void ABP_ReadySequenceActor_C::CancelEvent(class UObject* Object, const int32& P
 
 void ABP_ReadySequenceActor_C::CancelReady(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CancelReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_CancelReady Parms{};
 
@@ -95,10 +86,8 @@ void ABP_ReadySequenceActor_C::CancelReady(int32 PlayerIndex)
 
 void ABP_ReadySequenceActor_C::Check_Permission_Input(int32 PlayerIndex, bool* bISPermission)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "Check Permission Input");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_Check_Permission_Input Parms{};
 
@@ -119,10 +108,8 @@ void ABP_ReadySequenceActor_C::Check_Permission_Input(int32 PlayerIndex, bool* b
 
 void ABP_ReadySequenceActor_C::CheckInputEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CheckInputEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_CheckInputEvent Parms{};
 
@@ -133,19 +120,20 @@ void ABP_ReadySequenceActor_C::CheckInputEvent(class UObject* Object, const int3
 }
 
 
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.CheckTimeTrialDisableGadget
+// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.CheckSinglePlayDisableGadget
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// EGameModeId                             InGmaeModeId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   bIsValid                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ReadySequenceActor_C::CheckTimeTrialDisableGadget(bool* bIsValid)
+void ABP_ReadySequenceActor_C::CheckSinglePlayDisableGadget(EGameModeId InGmaeModeId, bool* bIsValid)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CheckTimeTrialDisableGadget");
+	Params::BP_ReadySequenceActor_C_CheckSinglePlayDisableGadget Parms{};
 
-	Params::BP_ReadySequenceActor_C_CheckTimeTrialDisableGadget Parms{};
+	Parms.InGmaeModeId = InGmaeModeId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -162,10 +150,8 @@ void ABP_ReadySequenceActor_C::CheckTimeTrialDisableGadget(bool* bIsValid)
 
 void ABP_ReadySequenceActor_C::CreateReadyWidget(bool Optimize, bool bLoadCharaTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "CreateReadyWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_CreateReadyWidget Parms{};
 
@@ -181,10 +167,8 @@ void ABP_ReadySequenceActor_C::CreateReadyWidget(bool Optimize, bool bLoadCharaT
 
 void ABP_ReadySequenceActor_C::DisableOptionChange()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "DisableOptionChange");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +181,8 @@ void ABP_ReadySequenceActor_C::DisableOptionChange()
 
 void ABP_ReadySequenceActor_C::ExecuteUbergraph_BP_ReadySequenceActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "ExecuteUbergraph_BP_ReadySequenceActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ReadySequenceActor_C", "ExecuteUbergraph_BP_ReadySequenceActor", FuncInfo);
 
 	Params::BP_ReadySequenceActor_C_ExecuteUbergraph_BP_ReadySequenceActor Parms{};
 
@@ -217,10 +199,8 @@ void ABP_ReadySequenceActor_C::ExecuteUbergraph_BP_ReadySequenceActor(int32 Entr
 
 void ABP_ReadySequenceActor_C::GadgetSetForMouse(int32 SlotIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "GadgetSetForMouse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_GadgetSetForMouse Parms{};
 
@@ -239,10 +219,8 @@ void ABP_ReadySequenceActor_C::GadgetSetForMouse(int32 SlotIndex)
 
 void ABP_ReadySequenceActor_C::GadgetSlide(int32 PlayerIndex, bool bIsRight, bool bIsNoSlide)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "GadgetSlide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_GadgetSlide Parms{};
 
@@ -259,10 +237,8 @@ void ABP_ReadySequenceActor_C::GadgetSlide(int32 PlayerIndex, bool bIsRight, boo
 
 void ABP_ReadySequenceActor_C::InEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "InEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -275,10 +251,8 @@ void ABP_ReadySequenceActor_C::InEvent()
 
 bool ABP_ReadySequenceActor_C::IsAllPlayerChecked()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "IsAllPlayerChecked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_IsAllPlayerChecked Parms{};
 
@@ -296,10 +270,8 @@ bool ABP_ReadySequenceActor_C::IsAllPlayerChecked()
 
 void ABP_ReadySequenceActor_C::IsDiffSettings(bool* AppDiff, bool* OptionDiff)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "IsDiffSettings");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_IsDiffSettings Parms{};
 
@@ -318,10 +290,8 @@ void ABP_ReadySequenceActor_C::IsDiffSettings(bool* AppDiff, bool* OptionDiff)
 
 void ABP_ReadySequenceActor_C::LastCheckEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LastCheckEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +305,8 @@ void ABP_ReadySequenceActor_C::LastCheckEvent()
 
 void ABP_ReadySequenceActor_C::LeftEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LeftEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_LeftEvent Parms{};
 
@@ -356,10 +324,8 @@ void ABP_ReadySequenceActor_C::LeftEvent(class UObject* Object, const int32& Pla
 
 void ABP_ReadySequenceActor_C::LoadCharaTexture_00(TSoftObjectPtr<class UTexture2D> TextureObj)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LoadCharaTexture_00");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_LoadCharaTexture_00 Parms{};
 
@@ -376,10 +342,8 @@ void ABP_ReadySequenceActor_C::LoadCharaTexture_00(TSoftObjectPtr<class UTexture
 
 void ABP_ReadySequenceActor_C::LoadCharaTexture_01(TSoftObjectPtr<class UTexture2D> TextureObj)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LoadCharaTexture_01");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_LoadCharaTexture_01 Parms{};
 
@@ -396,10 +360,8 @@ void ABP_ReadySequenceActor_C::LoadCharaTexture_01(TSoftObjectPtr<class UTexture
 
 void ABP_ReadySequenceActor_C::LoadCharaTexture_02(TSoftObjectPtr<class UTexture2D> TextureObj)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LoadCharaTexture_02");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_LoadCharaTexture_02 Parms{};
 
@@ -416,10 +378,8 @@ void ABP_ReadySequenceActor_C::LoadCharaTexture_02(TSoftObjectPtr<class UTexture
 
 void ABP_ReadySequenceActor_C::LoadCharaTexture_03(TSoftObjectPtr<class UTexture2D> TextureObj)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "LoadCharaTexture_03");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_LoadCharaTexture_03 Parms{};
 
@@ -434,10 +394,8 @@ void ABP_ReadySequenceActor_C::LoadCharaTexture_03(TSoftObjectPtr<class UTexture
 
 void ABP_ReadySequenceActor_C::MouseInputSetUpEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "MouseInputSetUpEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -452,10 +410,8 @@ void ABP_ReadySequenceActor_C::MouseInputSetUpEvent()
 
 void ABP_ReadySequenceActor_C::OnDecide_PopupWindow(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnDecide_PopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnDecide_PopupWindow Parms{};
 
@@ -472,10 +428,8 @@ void ABP_ReadySequenceActor_C::OnDecide_PopupWindow(class UUnionUIButtonBase* Bu
 
 void ABP_ReadySequenceActor_C::OnGoAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnGoAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -488,10 +442,8 @@ void ABP_ReadySequenceActor_C::OnGoAnimationFinished()
 
 void ABP_ReadySequenceActor_C::OnLoaded_120D4D5844F1C53050532AB4297571D6(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnLoaded_120D4D5844F1C53050532AB4297571D6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnLoaded_120D4D5844F1C53050532AB4297571D6 Parms{};
 
@@ -508,10 +460,8 @@ void ABP_ReadySequenceActor_C::OnLoaded_120D4D5844F1C53050532AB4297571D6(class U
 
 void ABP_ReadySequenceActor_C::OnLoaded_328D561845C8ED3620B5B5B4AF6AD4DC(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnLoaded_328D561845C8ED3620B5B5B4AF6AD4DC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnLoaded_328D561845C8ED3620B5B5B4AF6AD4DC Parms{};
 
@@ -528,10 +478,8 @@ void ABP_ReadySequenceActor_C::OnLoaded_328D561845C8ED3620B5B5B4AF6AD4DC(class U
 
 void ABP_ReadySequenceActor_C::OnLoaded_C7D8F95244BF69FFBD6F1E8A8F26D9CB(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnLoaded_C7D8F95244BF69FFBD6F1E8A8F26D9CB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnLoaded_C7D8F95244BF69FFBD6F1E8A8F26D9CB Parms{};
 
@@ -548,10 +496,8 @@ void ABP_ReadySequenceActor_C::OnLoaded_C7D8F95244BF69FFBD6F1E8A8F26D9CB(class U
 
 void ABP_ReadySequenceActor_C::OnLoaded_F89C5B884D3D3BA9426375B8B92F997B(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnLoaded_F89C5B884D3D3BA9426375B8B92F997B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnLoaded_F89C5B884D3D3BA9426375B8B92F997B Parms{};
 
@@ -569,10 +515,8 @@ void ABP_ReadySequenceActor_C::OnLoaded_F89C5B884D3D3BA9426375B8B92F997B(class U
 
 void ABP_ReadySequenceActor_C::OnSpecialPressedWithPlayerIdEvent_イベント(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OnSpecialPressedWithPlayerIdEvent_イベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OnSpecialPressedWithPlayerIdEvent_イベント Parms{};
 
@@ -591,10 +535,8 @@ void ABP_ReadySequenceActor_C::OnSpecialPressedWithPlayerIdEvent_イベント(cl
 
 void ABP_ReadySequenceActor_C::OptionChangeEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OptionChangeEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_OptionChangeEvent Parms{};
 
@@ -610,10 +552,8 @@ void ABP_ReadySequenceActor_C::OptionChangeEvent(class UObject* Object, const in
 
 void ABP_ReadySequenceActor_C::OptionClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OptionClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -624,10 +564,8 @@ void ABP_ReadySequenceActor_C::OptionClick()
 
 void ABP_ReadySequenceActor_C::OutEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "OutEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -638,10 +576,8 @@ void ABP_ReadySequenceActor_C::OutEvent()
 
 void ABP_ReadySequenceActor_C::PresetClickA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "PresetClickA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -652,10 +588,8 @@ void ABP_ReadySequenceActor_C::PresetClickA()
 
 void ABP_ReadySequenceActor_C::PresetClickB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "PresetClickB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -666,10 +600,8 @@ void ABP_ReadySequenceActor_C::PresetClickB()
 
 void ABP_ReadySequenceActor_C::PresetClickC()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "PresetClickC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -680,10 +612,8 @@ void ABP_ReadySequenceActor_C::PresetClickC()
 
 void ABP_ReadySequenceActor_C::PresetClickD()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "PresetClickD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -694,10 +624,8 @@ void ABP_ReadySequenceActor_C::PresetClickD()
 
 void ABP_ReadySequenceActor_C::PresetClickE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "PresetClickE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -708,10 +636,8 @@ void ABP_ReadySequenceActor_C::PresetClickE()
 
 void ABP_ReadySequenceActor_C::ReadyClick()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "ReadyClick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -722,10 +648,8 @@ void ABP_ReadySequenceActor_C::ReadyClick()
 
 void ABP_ReadySequenceActor_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -738,10 +662,8 @@ void ABP_ReadySequenceActor_C::ReceiveBeginPlay()
 
 void ABP_ReadySequenceActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_ReceiveEndPlay Parms{};
 
@@ -756,10 +678,8 @@ void ABP_ReadySequenceActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 void ABP_ReadySequenceActor_C::RegisterMenuEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "RegisterMenuEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -773,10 +693,8 @@ void ABP_ReadySequenceActor_C::RegisterMenuEvent()
 
 void ABP_ReadySequenceActor_C::RightEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "RightEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_RightEvent Parms{};
 
@@ -795,10 +713,8 @@ void ABP_ReadySequenceActor_C::RightEvent(class UObject* Object, const int32& Pl
 
 void ABP_ReadySequenceActor_C::SetInputTabVisible(int32 PlayerIndex, bool bIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetInputTabVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetInputTabVisible Parms{};
 
@@ -816,10 +732,8 @@ void ABP_ReadySequenceActor_C::SetInputTabVisible(int32 PlayerIndex, bool bIsVis
 
 void ABP_ReadySequenceActor_C::SetOption(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetOption");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetOption Parms{};
 
@@ -836,10 +750,8 @@ void ABP_ReadySequenceActor_C::SetOption(int32 PlayerIndex)
 
 void ABP_ReadySequenceActor_C::SetReadyFlag(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetReadyFlag");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetReadyFlag Parms{};
 
@@ -854,10 +766,8 @@ void ABP_ReadySequenceActor_C::SetReadyFlag(int32 PlayerIndex)
 
 void ABP_ReadySequenceActor_C::SetUpCharacterInformation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetUpCharacterInformation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -868,10 +778,8 @@ void ABP_ReadySequenceActor_C::SetUpCharacterInformation()
 
 void ABP_ReadySequenceActor_C::SetupCharaInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetupCharaInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -885,10 +793,8 @@ void ABP_ReadySequenceActor_C::SetupCharaInfo()
 
 void ABP_ReadySequenceActor_C::SetupCreateWidget(bool Optimize, bool bLoadCharaTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetupCreateWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetupCreateWidget Parms{};
 
@@ -906,10 +812,8 @@ void ABP_ReadySequenceActor_C::SetupCreateWidget(bool Optimize, bool bLoadCharaT
 
 void ABP_ReadySequenceActor_C::SetUpGadgetIconMouseInp_ut(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetUpGadgetIconMouseInp[ut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetUpGadgetIconMouseInp_ut Parms{};
 
@@ -924,10 +828,8 @@ void ABP_ReadySequenceActor_C::SetUpGadgetIconMouseInp_ut(ESlateVisibility InVis
 
 void ABP_ReadySequenceActor_C::SetupGadgetPlateWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetupGadgetPlateWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -938,34 +840,10 @@ void ABP_ReadySequenceActor_C::SetupGadgetPlateWindow()
 
 void ABP_ReadySequenceActor_C::SetUpOptionEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetUpOptionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.SetupParamWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsSlide                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReadySequenceActor_C::SetupParamWindow(int32 PlayerIndex, bool IsSlide)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetupParamWindow");
-
-	Params::BP_ReadySequenceActor_C_SetupParamWindow Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.IsSlide = IsSlide;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -977,10 +855,8 @@ void ABP_ReadySequenceActor_C::SetupParamWindow(int32 PlayerIndex, bool IsSlide)
 
 void ABP_ReadySequenceActor_C::SetUpParamWindowEvent(class UObject* Object, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetUpParamWindowEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetUpParamWindowEvent Parms{};
 
@@ -998,36 +874,12 @@ void ABP_ReadySequenceActor_C::SetUpParamWindowEvent(class UObject* Object, cons
 
 void ABP_ReadySequenceActor_C::SetUpPlayersParam(int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetUpPlayersParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	Params::BP_ReadySequenceActor_C_SetUpPlayersParam Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ReadySequenceActor.BP_ReadySequenceActor_C.SetVisibleCharaMachineParam
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   PlayerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ReadySequenceActor_C::SetVisibleCharaMachineParam(int32 PlayerIndex, bool Visible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "SetVisibleCharaMachineParam");
-
-	Params::BP_ReadySequenceActor_C_SetVisibleCharaMachineParam Parms{};
-
-	Parms.PlayerIndex = PlayerIndex;
-	Parms.Visible = Visible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1038,10 +890,8 @@ void ABP_ReadySequenceActor_C::SetVisibleCharaMachineParam(int32 PlayerIndex, bo
 
 void ABP_ReadySequenceActor_C::StartSetUpPlayersParam()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "StartSetUpPlayersParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1052,10 +902,8 @@ void ABP_ReadySequenceActor_C::StartSetUpPlayersParam()
 
 void ABP_ReadySequenceActor_C::TimeTrialWarningPopup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "TimeTrialWarningPopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1066,13 +914,11 @@ void ABP_ReadySequenceActor_C::TimeTrialWarningPopup()
 
 void ABP_ReadySequenceActor_C::UnbindInputEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ReadySequenceActor_C", "UnbindInputEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ReadySequenceActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

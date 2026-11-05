@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct AssetRegistry.TagAndValue
 // 0x0018 (0x0018 - 0x0000)
@@ -37,5 +36,4 @@ public:
 };
 DUMPER7_ASSERTS_FAssetRegistryDependencyOptions;
 
-}
-
+SDK_NAMESPACE_END

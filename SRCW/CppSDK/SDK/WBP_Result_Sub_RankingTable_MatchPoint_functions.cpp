@@ -14,18 +14,15 @@
 #include "WBP_Result_Sub_RankingTable_MatchPoint_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Result_Sub_RankingTable_MatchPoint.WBP_Result_Sub_RankingTable_MatchPoint_C.Close
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Result_Sub_RankingTable_MatchPoint_C::Close()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_MatchPoint_C", "Close");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_MatchPoint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Result_Sub_RankingTable_MatchPoint_C::Close()
 
 void UWBP_Result_Sub_RankingTable_MatchPoint_C::ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_MatchPoint_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Result_Sub_RankingTable_MatchPoint_C", "ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint", FuncInfo);
 
 	Params::WBP_Result_Sub_RankingTable_MatchPoint_C_ExecuteUbergraph_WBP_Result_Sub_RankingTable_MatchPoint Parms{};
 
@@ -56,13 +51,11 @@ void UWBP_Result_Sub_RankingTable_MatchPoint_C::ExecuteUbergraph_WBP_Result_Sub_
 
 void UWBP_Result_Sub_RankingTable_MatchPoint_C::Open()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Result_Sub_RankingTable_MatchPoint_C", "Open");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Result_Sub_RankingTable_MatchPoint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BPC_SaveAndLoadPlayLogState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_SaveAndLoadPlayLogState.BPC_SaveAndLoadPlayLogState_C.ExecuteUbergraph_BPC_SaveAndLoadPlayLogState
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_SaveAndLoadPlayLogState_C::ExecuteUbergraph_BPC_SaveAndLoadPlayLogState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SaveAndLoadPlayLogState_C", "ExecuteUbergraph_BPC_SaveAndLoadPlayLogState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_SaveAndLoadPlayLogState_C", "ExecuteUbergraph_BPC_SaveAndLoadPlayLogState", FuncInfo);
 
 	Params::BPC_SaveAndLoadPlayLogState_C_ExecuteUbergraph_BPC_SaveAndLoadPlayLogState Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_SaveAndLoadPlayLogState_C::ExecuteUbergraph_BPC_SaveAndLoadPlayLogStat
 
 void UBPC_SaveAndLoadPlayLogState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SaveAndLoadPlayLogState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_SaveAndLoadPlayLogState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_SaveAndLoadPlayLogState_C::OnExitState()
 
 void UBPC_SaveAndLoadPlayLogState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SaveAndLoadPlayLogState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_SaveAndLoadPlayLogState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_SaveAndLoadPlayLogState_C::OnInitState()
 
 void UBPC_SaveAndLoadPlayLogState_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_SaveAndLoadPlayLogState_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_SaveAndLoadPlayLogState_C", FnName));
 
 	Params::BPC_SaveAndLoadPlayLogState_C_OnUpdateState Parms{};
 
@@ -84,5 +75,5 @@ void UBPC_SaveAndLoadPlayLogState_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

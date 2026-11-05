@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateCreateRace_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.IsNextEntryRacerSequence
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 bool UBPC_RaceSequenceStateCreateRace_C::IsNextEntryRacerSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "IsNextEntryRacerSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
 
 	Params::BPC_RaceSequenceStateCreateRace_C_IsNextEntryRacerSequence Parms{};
 
@@ -42,10 +39,8 @@ bool UBPC_RaceSequenceStateCreateRace_C::IsNextEntryRacerSequence()
 
 void UBPC_RaceSequenceStateCreateRace_C::EndLoadTimeMeasurement()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "EndLoadTimeMeasurement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_RaceSequenceStateCreateRace_C::EndLoadTimeMeasurement()
 
 void UBPC_RaceSequenceStateCreateRace_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UBPC_RaceSequenceStateCreateRace_C::OnInitState()
 
 void UBPC_RaceSequenceStateCreateRace_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnFinishedFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
 
 	Params::BPC_RaceSequenceStateCreateRace_C_OnFinishedFade Parms{};
 
@@ -92,16 +83,38 @@ void UBPC_RaceSequenceStateCreateRace_C::OnFinishedFade(EUnionUIFadeDirection Fa
 
 void UBPC_RaceSequenceStateCreateRace_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
 
 	Params::BPC_RaceSequenceStateCreateRace_C_OnUpdateState Parms{};
 
 	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.OnFinishVSOutAnimation
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateCreateRace_C::OnFinishVSOutAnimation()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C.VSInAnimationFinishEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_RaceSequenceStateCreateRace_C::VSInAnimationFinishEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateCreateRace_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -112,10 +125,8 @@ void UBPC_RaceSequenceStateCreateRace_C::OnUpdateState(float InDeltaTime)
 
 void UBPC_RaceSequenceStateCreateRace_C::ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateCreateRace_C", "ExecuteUbergraph_BPC_RaceSequenceStateCreateRace");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateCreateRace_C", "ExecuteUbergraph_BPC_RaceSequenceStateCreateRace", FuncInfo);
 
 	Params::BPC_RaceSequenceStateCreateRace_C_ExecuteUbergraph_BPC_RaceSequenceStateCreateRace Parms{};
 
@@ -124,5 +135,5 @@ void UBPC_RaceSequenceStateCreateRace_C::ExecuteUbergraph_BPC_RaceSequenceStateC
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

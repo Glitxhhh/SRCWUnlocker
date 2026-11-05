@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_ItemOmochao.ABP_ItemOmochao_C.AnimBlueprintGeneratedConstantData
 // 0x0577 (0x0578 - 0x0001)
@@ -75,5 +74,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemOmochao__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_CMN_Nice_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Nice.WBP_CMN_Nice_C.BndEvt__WBP_CMN_Nice_MouseInteractionNice_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_CMN_Nice_C::BndEvt__WBP_CMN_Nice_MouseInteractionNice_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Nice_C", "BndEvt__WBP_CMN_Nice_MouseInteractionNice_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Nice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_CMN_Nice_C::BndEvt__WBP_CMN_Nice_MouseInteractionNice_K2Node_Component
 
 void UWBP_CMN_Nice_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Nice_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Nice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_CMN_Nice_C::Construct()
 
 void UWBP_CMN_Nice_C::ExecuteUbergraph_WBP_CMN_Nice(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Nice_C", "ExecuteUbergraph_WBP_CMN_Nice");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Nice_C", "ExecuteUbergraph_WBP_CMN_Nice", FuncInfo);
 
 	Params::WBP_CMN_Nice_C_ExecuteUbergraph_WBP_CMN_Nice Parms{};
 
@@ -70,13 +63,11 @@ void UWBP_CMN_Nice_C::ExecuteUbergraph_WBP_CMN_Nice(int32 EntryPoint)
 
 void UWBP_CMN_Nice_C::InitButtonImages()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Nice_C", "InitButtonImages");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Nice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

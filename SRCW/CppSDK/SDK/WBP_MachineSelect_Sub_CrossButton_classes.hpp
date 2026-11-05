@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineSelect_Sub_CrossButton.WBP_MachineSelect_Sub_CrossButton_C
 // 0x0038 (0x04C0 - 0x0488)
@@ -42,6 +41,7 @@ public:
 	void OnFocus_Impl(class UUnionUIButtonBase* Button);
 	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnRightShoulderPressed();
 	void OnSpecialPressed();
 	void PlaySEError();
 	void PlaySESelect();
@@ -66,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineSelect_Sub_CrossButton_C;
 
-}
-
+SDK_NAMESPACE_END

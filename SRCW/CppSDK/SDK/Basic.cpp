@@ -15,44 +15,43 @@
 #include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 uintptr_t InSDKUtils::GetImageBase()
 {
 	return reinterpret_cast<uintptr_t>(GetModuleHandle(0));
 }
 
-class UClass* BasicFilesImpleUtils::FindClassByName(const std::string& Name, bool bByFullName)
+class UClass* BasicFilesImplUtils::FindClassByName(const std::string& Name, bool bByFullName)
 {
 	return bByFullName ? UObject::FindClass(Name) : UObject::FindClassFast(Name);
 }
 
-class UClass* BasicFilesImpleUtils::FindClassByFullName(const std::string& Name)
+class UClass* BasicFilesImplUtils::FindClassByFullName(const std::string& Name)
 {
 	return UObject::FindClass(Name);
 }
 
-std::string BasicFilesImpleUtils::GetObjectName(class UClass* Class)
+std::string BasicFilesImplUtils::GetObjectName(class UClass* Class)
 {
 	return Class->GetName();
 }
 
-int32 BasicFilesImpleUtils::GetObjectIndex(class UClass* Class)
+int32 BasicFilesImplUtils::GetObjectIndex(class UClass* Class)
 {
 	return Class->Index;
 }
 
-uint64 BasicFilesImpleUtils::GetObjFNameAsUInt64(class UClass* Class)
+uint64 BasicFilesImplUtils::GetObjFNameAsUInt64(class UClass* Class)
 {
 	return *reinterpret_cast<uint64*>(&Class->Name);
 }
 
-class UObject* BasicFilesImpleUtils::GetObjectByIndex(int32 Index)
+class UObject* BasicFilesImplUtils::GetObjectByIndex(int32 Index)
 {
 	return UObject::GObjects->GetByIndex(Index);
 }
 
-UFunction* BasicFilesImpleUtils::FindFunctionByFName(const FName* Name)
+UFunction* BasicFilesImplUtils::FindFunctionByFName(const FName* Name)
 {
 	for (int i = 0; i < UObject::GObjects->Num(); ++i)
 	{
@@ -68,25 +67,84 @@ UFunction* BasicFilesImpleUtils::FindFunctionByFName(const FName* Name)
 	return nullptr;
 }
 
-FName BasicFilesImpleUtils::StringToName(const wchar_t* Name)
+UFunction* BasicFilesImplUtils::FindFunctionViaClass(UClass* SearchClass, const char* OuterClassName, const char* FuncName)
+{
+	return SearchClass->GetFunction(OuterClassName, FuncName);
+}
+
+uint64 BasicFilesImplUtils::GetObjectOuterFNameAsUInt64(UObject* Obj)
+{
+	if (!Obj || !Obj->Outer)
+		return 0;
+
+	return *reinterpret_cast<uint64*>(&Obj->Outer->Name);
+}
+
+FName BasicFilesImplUtils::StringToName(const wchar_t* Name)
 {
 	return UKismetStringLibrary::Conv_StringToName(FString(Name));
+}
+
+UObject* BasicFilesImplUtils::GetDefaultObjectImpl(UClass* Class)
+{
+	if (Class)
+		return Class->ClassDefaultObject;
+
+	return nullptr;
 }
 
 const FName& GetStaticName(const wchar_t* Name, FName& StaticName)
 {
 	if (StaticName.IsNone())
 	{
-		StaticName = BasicFilesImpleUtils::StringToName(Name);
+		StaticName = BasicFilesImplUtils::StringToName(Name);
 	}
 
 	return StaticName;
 }
 
+UFunction* GetStaticFunction(UClass* SearchClass, const char* OuterClassName, const char* FuncName, ReloadableFuncInfo& FuncInfo)
+{
+    static auto SetFuncInfo = [](class UFunction* Function, ReloadableFuncInfo& FuncInfoToSet) -> UFunction*
+    {
+        if (Function)
+        {
+            FuncInfoToSet.Index = Function->Index;
+            FuncInfoToSet.Name = Function->Name;
+            FuncInfoToSet.OuterName = Function->Outer ? Function->Outer->Name : FName();
+        }
+
+        return Function;
+    };
+
+    /* First initialisation. */
+    if (FuncInfo.Index == 0x0) [[unlikely]]
+        return SetFuncInfo(BasicFilesImplUtils::FindFunctionViaClass(SearchClass, OuterClassName, FuncName), FuncInfo);
+
+    UFunction* Function = static_cast<UFunction*>(UObject::GObjects->GetByIndex(FuncInfo.Index));
+
+    /* Reloading the function*/
+    if (!Function || Function->Name != FuncInfo.Name || !Function->Outer || Function->Outer->Name != FuncInfo.OuterName)
+        return SetFuncInfo(BasicFilesImplUtils::FindFunctionViaClass(SearchClass, OuterClassName, FuncName), FuncInfo);
+
+    return Function;
+}
+
+// Predefined Function
+
+bool FWeakObjectPtr::IsValid() const
+{
+	return ObjectIndex > 0;
+}
+
+
 // Predefined Function
 
 class UObject* FWeakObjectPtr::Get() const
 {
+	if (!IsValid())
+		return nullptr;
+
 	return UObject::GObjects->GetByIndex(ObjectIndex);
 }
 
@@ -131,5 +189,4 @@ bool FWeakObjectPtr::operator!=(const class UObject* Other) const
 }
 
 
-}
-
+SDK_NAMESPACE_END

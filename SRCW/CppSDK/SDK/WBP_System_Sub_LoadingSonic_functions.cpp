@@ -14,8 +14,7 @@
 #include "WBP_System_Sub_LoadingSonic_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Sub_LoadingSonic.WBP_System_Sub_LoadingSonic_C.ChangeSonicState
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_System_Sub_LoadingSonic_C::ChangeSonicState(uint8 SonicStateID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "ChangeSonicState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	Params::WBP_System_Sub_LoadingSonic_C_ChangeSonicState Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_System_Sub_LoadingSonic_C::ChangeSonicState(uint8 SonicStateID)
 
 void UWBP_System_Sub_LoadingSonic_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_System_Sub_LoadingSonic_C::Construct()
 
 void UWBP_System_Sub_LoadingSonic_C::ExecuteUbergraph_WBP_System_Sub_LoadingSonic(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "ExecuteUbergraph_WBP_System_Sub_LoadingSonic");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Sub_LoadingSonic_C", "ExecuteUbergraph_WBP_System_Sub_LoadingSonic", FuncInfo);
 
 	Params::WBP_System_Sub_LoadingSonic_C_ExecuteUbergraph_WBP_System_Sub_LoadingSonic Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_System_Sub_LoadingSonic_C::ExecuteUbergraph_WBP_System_Sub_LoadingSoni
 
 void UWBP_System_Sub_LoadingSonic_C::FireOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "FireOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_System_Sub_LoadingSonic_C::FireOutAnim()
 
 void UWBP_System_Sub_LoadingSonic_C::InvisibleText()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "InvisibleText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_System_Sub_LoadingSonic_C::InvisibleText()
 
 void UWBP_System_Sub_LoadingSonic_C::OnAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "OnAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,10 +105,8 @@ void UWBP_System_Sub_LoadingSonic_C::OnAnimFinished()
 
 void UWBP_System_Sub_LoadingSonic_C::PlayLoopAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "PlayLoopAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +117,8 @@ void UWBP_System_Sub_LoadingSonic_C::PlayLoopAnimation()
 
 void UWBP_System_Sub_LoadingSonic_C::PlayOutAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "PlayOutAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +131,8 @@ void UWBP_System_Sub_LoadingSonic_C::PlayOutAnim()
 
 void UWBP_System_Sub_LoadingSonic_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	Params::WBP_System_Sub_LoadingSonic_C_PreConstruct Parms{};
 
@@ -166,10 +147,8 @@ void UWBP_System_Sub_LoadingSonic_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_System_Sub_LoadingSonic_C::SequenceEvent__ENTRYPOINTWBP_System_Sub_LoadingSonic()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "SequenceEvent__ENTRYPOINTWBP_System_Sub_LoadingSonic");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +161,8 @@ void UWBP_System_Sub_LoadingSonic_C::SequenceEvent__ENTRYPOINTWBP_System_Sub_Loa
 
 void UWBP_System_Sub_LoadingSonic_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_LoadingSonic_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_LoadingSonic_C", FnName));
 
 	Params::WBP_System_Sub_LoadingSonic_C_SetText Parms{};
 
@@ -194,5 +171,5 @@ void UWBP_System_Sub_LoadingSonic_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

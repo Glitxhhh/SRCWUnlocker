@@ -13,15 +13,14 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemDarkChaoObject.BP_ItemDarkChaoObject_C
-// 0x0010 (0x0840 - 0x0830)
+// 0x0010 (0x0880 - 0x0870)
 class ABP_ItemDarkChaoObject_C final : public AItemDarkChaoObject
 {
 public:
-	class UUnionStaticMeshComponent*              Debug;                                             // 0x0830(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UUnionStaticMeshComponent*              Debug;                                             // 0x0870(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemDarkChaoObject_C;
 
-}
-
+SDK_NAMESPACE_END

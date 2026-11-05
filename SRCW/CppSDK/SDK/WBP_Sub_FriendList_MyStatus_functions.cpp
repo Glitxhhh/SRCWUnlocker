@@ -14,18 +14,15 @@
 #include "WBP_Sub_FriendList_MyStatus_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Sub_FriendList_MyStatus.WBP_Sub_FriendList_MyStatus_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Sub_FriendList_MyStatus_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Sub_FriendList_MyStatus_C::Construct()
 
 void UWBP_Sub_FriendList_MyStatus_C::ExecuteUbergraph_WBP_Sub_FriendList_MyStatus(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "ExecuteUbergraph_WBP_Sub_FriendList_MyStatus");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Sub_FriendList_MyStatus_C", "ExecuteUbergraph_WBP_Sub_FriendList_MyStatus", FuncInfo);
 
 	Params::WBP_Sub_FriendList_MyStatus_C_ExecuteUbergraph_WBP_Sub_FriendList_MyStatus Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Sub_FriendList_MyStatus_C::ExecuteUbergraph_WBP_Sub_FriendList_MyStatu
 
 void UWBP_Sub_FriendList_MyStatus_C::SetPlatformIcon(ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "SetPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	Params::WBP_Sub_FriendList_MyStatus_C_SetPlatformIcon Parms{};
 
@@ -79,10 +72,8 @@ void UWBP_Sub_FriendList_MyStatus_C::SetPlatformIcon(ECrossplayPlatform InPlatfo
 
 void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2D> InIconTexture, const struct FLinearColor& InBgColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "SetPlayerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	Params::WBP_Sub_FriendList_MyStatus_C_SetPlayerIcon Parms{};
 
@@ -100,10 +91,8 @@ void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIcon(TSoftObjectPtr<class UTexture
 
 void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "SetPlayerIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	Params::WBP_Sub_FriendList_MyStatus_C_SetPlayerIconVisible Parms{};
 
@@ -120,10 +109,8 @@ void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIconVisible(bool bInVisible)
 
 void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIdText(const class FString& InPlayerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "SetPlayerIdText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	Params::WBP_Sub_FriendList_MyStatus_C_SetPlayerIdText Parms{};
 
@@ -140,10 +127,8 @@ void UWBP_Sub_FriendList_MyStatus_C::SetPlayerIdText(const class FString& InPlay
 
 void UWBP_Sub_FriendList_MyStatus_C::SetPlayerNameText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Sub_FriendList_MyStatus_C", "SetPlayerNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Sub_FriendList_MyStatus_C", FnName));
 
 	Params::WBP_Sub_FriendList_MyStatus_C_SetPlayerNameText Parms{};
 
@@ -152,5 +137,5 @@ void UWBP_Sub_FriendList_MyStatus_C::SetPlayerNameText(const class FText& InText
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

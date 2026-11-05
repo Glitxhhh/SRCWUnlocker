@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_Sub_NewsBtn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_NewsBtn.WBP_HeaderMenu_Sub_NewsBtn_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::Construct()
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_NewsBtn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_NewsBtn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_Sub_NewsBtn_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_NewsBtn", FuncInfo);
 
 	Params::WBP_HeaderMenu_Sub_NewsBtn_C_ExecuteUbergraph_WBP_HeaderMenu_Sub_NewsBtn Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_NewsBtn(
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::FireButtonEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "FireButtonEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_NewsBtn_C_FireButtonEvent Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::FireButtonEvent(class UObject* Object)
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::OnMouseClickEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "OnMouseClickEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::OnMouseClickEvent()
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::PressButtonAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "PressButtonAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::PressButtonAnimation()
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::Set_Icon_Visibility(ESlateVisibility Visibility_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "Set Icon Visibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_NewsBtn_C_Set_Icon_Visibility Parms{};
 
@@ -126,10 +113,8 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::Set_Icon_Visibility(ESlateVisibility Visibil
 
 void UWBP_HeaderMenu_Sub_NewsBtn_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_NewsBtn_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_NewsBtn_C_SetText Parms{};
 
@@ -138,5 +123,25 @@ void UWBP_HeaderMenu_Sub_NewsBtn_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function WBP_HeaderMenu_Sub_NewsBtn.WBP_HeaderMenu_Sub_NewsBtn_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_NewsBtn_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_NewsBtn_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_NewsBtn_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+SDK_NAMESPACE_END

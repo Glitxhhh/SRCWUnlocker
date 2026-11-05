@@ -10,18 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "UnionRun_structs.hpp"
+#include "ABPT_SimpleCockpitBase_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "ControlRig_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "ABPT_SimpleCockpitBase_structs.hpp"
-#include "ControlRig_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "UnionRun_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABPT_SimpleCockpitBase.ABPT_SimpleCockpitBase_C
 // 0x2560 (0x2A30 - 0x04D0)
@@ -234,5 +233,4 @@ public:
 };
 DUMPER7_ASSERTS_UABPT_SimpleCockpitBase_C;
 
-}
-
+SDK_NAMESPACE_END

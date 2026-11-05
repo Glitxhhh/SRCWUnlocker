@@ -14,18 +14,15 @@
 #include "WBP_Ready_Sub_StandByText_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Ready_Sub_StandByText.WBP_Ready_Sub_StandByText_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Ready_Sub_StandByText_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_StandByText_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_StandByText_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_Ready_Sub_StandByText_C::Construct()
 
 void UWBP_Ready_Sub_StandByText_C::ExecuteUbergraph_WBP_Ready_Sub_StandByText(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_StandByText_C", "ExecuteUbergraph_WBP_Ready_Sub_StandByText");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Ready_Sub_StandByText_C", "ExecuteUbergraph_WBP_Ready_Sub_StandByText", FuncInfo);
 
 	Params::WBP_Ready_Sub_StandByText_C_ExecuteUbergraph_WBP_Ready_Sub_StandByText Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_Ready_Sub_StandByText_C::ExecuteUbergraph_WBP_Ready_Sub_StandByText(in
 
 void UWBP_Ready_Sub_StandByText_C::SetUp_Wave(const class FString& String_input)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_StandByText_C", "SetUp Wave");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_StandByText_C", FnName));
 
 	Params::WBP_Ready_Sub_StandByText_C_SetUp_Wave Parms{};
 
@@ -79,10 +72,8 @@ void UWBP_Ready_Sub_StandByText_C::SetUp_Wave(const class FString& String_input)
 
 void UWBP_Ready_Sub_StandByText_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_StandByText_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_StandByText_C", FnName));
 
 	Params::WBP_Ready_Sub_StandByText_C_Tick Parms{};
 
@@ -92,5 +83,5 @@ void UWBP_Ready_Sub_StandByText_C::Tick(const struct FGeometry& MyGeometry, floa
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

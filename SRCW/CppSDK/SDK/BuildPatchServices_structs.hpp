@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct BuildPatchServices.CustomFieldData
 // 0x0020 (0x0020 - 0x0000)
@@ -80,5 +79,4 @@ public:
 };
 DUMPER7_ASSERTS_FFileManifestData;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_System_Transition_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Transition.WBP_System_Transition_C.AutoReverseFade
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_System_Transition_C::AutoReverseFade()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "AutoReverseFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_System_Transition_C::AutoReverseFade()
 
 void UWBP_System_Transition_C::AutoStartLoopFade()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "AutoStartLoopFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_System_Transition_C::AutoStartLoopFade()
 
 void UWBP_System_Transition_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_System_Transition_C::Construct()
 
 void UWBP_System_Transition_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +71,8 @@ void UWBP_System_Transition_C::Destruct()
 
 void UWBP_System_Transition_C::ExecuteUbergraph_WBP_System_Transition(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "ExecuteUbergraph_WBP_System_Transition");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Transition_C", "ExecuteUbergraph_WBP_System_Transition", FuncInfo);
 
 	Params::WBP_System_Transition_C_ExecuteUbergraph_WBP_System_Transition Parms{};
 
@@ -98,10 +87,8 @@ void UWBP_System_Transition_C::ExecuteUbergraph_WBP_System_Transition(int32 Entr
 
 void UWBP_System_Transition_C::OnFadeIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "OnFadeIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +99,8 @@ void UWBP_System_Transition_C::OnFadeIn()
 
 void UWBP_System_Transition_C::OnFadeOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "OnFadeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -129,10 +114,8 @@ void UWBP_System_Transition_C::OnFadeOut()
 
 void UWBP_System_Transition_C::StartFade(EUnionUIFadeColor FadeColor, EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "StartFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	Params::WBP_System_Transition_C_StartFade Parms{};
 
@@ -150,10 +133,8 @@ void UWBP_System_Transition_C::StartFade(EUnionUIFadeColor FadeColor, EUnionUIFa
 
 void UWBP_System_Transition_C::StartLoopFade(EUnionUIFadeColor FadeColor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Transition_C", "StartLoopFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Transition_C", FnName));
 
 	Params::WBP_System_Transition_C_StartLoopFade Parms{};
 
@@ -162,5 +143,5 @@ void UWBP_System_Transition_C::StartLoopFade(EUnionUIFadeColor FadeColor)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

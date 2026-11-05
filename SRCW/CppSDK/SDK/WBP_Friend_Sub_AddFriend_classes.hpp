@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_AddFriend.WBP_Friend_Sub_AddFriend_C
 // 0x0058 (0x0548 - 0x04F0)
@@ -35,33 +34,33 @@ public:
 	class FText                                   OutNumberInputText;                                // 0x0538(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void AddListItemWidgetByListItemIndex(int32 InListItemIndex);
-	void CreateNumberInputWidget();
-	void DestroyNumberInputWidget();
-	void ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled);
-	void ExecuteUbergraph_WBP_Friend_Sub_AddFriend(int32 EntryPoint);
-	void FocusListItemWidget(bool bInPlayFocusSound);
-	void GenerateSubMenu(class UUnionUIButtonBase* Button);
 	class UFriendListNumberInputWidget* GetNumberInputWidget();
-	class UScrollBox* GetScrollBoxWidget();
-	void OnButtonDecisionEvent(class UUnionUIButtonBase* Button);
-	void OnDirectionEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void OnListItemCancelDown(class UUnionUIButtonBase* Button);
+	class UScrollBox* GetScrollBoxWidget();
 	void OnListItemDecisionDown(class UUnionUIButtonBase* Button);
+	void SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex);
+	void OnListItemCancelDown(class UUnionUIButtonBase* Button);
+	void FocusListItemWidget(bool bInPlayFocusSound);
+	void OnButtonDecisionEvent(class UUnionUIButtonBase* Button);
 	void OnNumberInputWidgetDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex);
-	void OnRacerInfoEnd();
+	void CreateNumberInputWidget();
 	void OnUserSearchSuccess(const TArray<struct FCommon_UserSearchData>& InUserSearchData);
-	void ResetContentsWidgetFocus();
+	void ExecuteAfterConfirmWidget(EFriendListCommandType CommandType, int32 InButtonIndex, bool bInCanceled);
+	void SetupListItemWidget();
+	void AddListItemWidgetByListItemIndex(int32 InListItemIndex);
 	void SetButtonControlEnable(bool bInEnable);
-	void SetButtonsPanel();
-	void SetListItemWidgetButtonChangeableState(int32 InListItemIndex, bool bEnable);
+	void SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound);
 	void SetListItemWidgetInteractableState(bool bInEnable);
+	void SetListItemWidgetButtonChangeableState(int32 InListItemIndex, bool bEnable);
+	void OnDirectionEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir);
+	void SetButtonsPanel();
+	void DestroyNumberInputWidget();
+	void ResetContentsWidgetFocus();
+	void OnRacerInfoEnd();
+	void GenerateSubMenu(class UUnionUIButtonBase* Button);
 	void SetScrollBoxVisibility(ESlateVisibility Param);
 	void SetupButton();
-	void SetupListItemWidget();
-	void SetupListItemWidgetSingle(class UWBP_Friend_Sub_PlayerPlate_Small_C* InItemListWidget, const struct FFriendListPlayerInfo& InListPlayerInfo, int32 InButtonIndex);
-	void SetWidgetFocus(class APlayerController* PlayerController, bool bInPlayFocusSound);
+	void ExecuteUbergraph_WBP_Friend_Sub_AddFriend(int32 EntryPoint);
 
 	bool CheckButtonWidgetExist() const;
 
@@ -81,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_Sub_AddFriend_C;
 
-}
-
+SDK_NAMESPACE_END

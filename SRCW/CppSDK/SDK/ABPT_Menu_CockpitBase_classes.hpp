@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABPT_Menu_CockpitBase.ABPT_Menu_CockpitBase_C
 // 0x0170 (0x0650 - 0x04E0)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_UABPT_Menu_CockpitBase_C;
 
-}
-
+SDK_NAMESPACE_END

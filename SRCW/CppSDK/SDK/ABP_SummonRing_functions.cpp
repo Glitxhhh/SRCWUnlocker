@@ -14,8 +14,7 @@
 #include "ABP_SummonRing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_SummonRing.ABP_SummonRing_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_SummonRing_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_SummonRing_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_SummonRing_C", FnName));
 
 	Params::ABP_SummonRing_C_AnimGraph Parms{};
 
@@ -45,10 +42,8 @@ void UABP_SummonRing_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_SummonRing_C::ExecuteUbergraph_ABP_SummonRing(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_SummonRing_C", "ExecuteUbergraph_ABP_SummonRing");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_SummonRing_C", "ExecuteUbergraph_ABP_SummonRing", FuncInfo);
 
 	Params::ABP_SummonRing_C_ExecuteUbergraph_ABP_SummonRing Parms{};
 
@@ -57,5 +52,5 @@ void UABP_SummonRing_C::ExecuteUbergraph_ABP_SummonRing(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

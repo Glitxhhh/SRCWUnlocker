@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeStickerSlotSelectState.BPC_MachineCustomizeStickerSlotSelectState_C
 // 0x0030 (0x0128 - 0x00F8)
@@ -69,5 +68,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeStickerSlotSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

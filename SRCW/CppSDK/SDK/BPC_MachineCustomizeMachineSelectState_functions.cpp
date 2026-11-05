@@ -14,8 +14,7 @@
 #include "BPC_MachineCustomizeMachineSelectState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineCustomizeMachineSelectState.BPC_MachineCustomizeMachineSelectState_C.SetRacerCustomizeData
 // (Private, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_MachineCustomizeMachineSelectState_C::SetRacerCustomizeData(const struct FUserMachineCustomizeData& InCustomizeData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "SetRacerCustomizeData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_SetRacerCustomizeData Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::SetRacerCustomizeData(const stru
 
 void UBPC_MachineCustomizeMachineSelectState_C::UpdateGarageData()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "UpdateGarageData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::UpdateGarageData()
 
 void UBPC_MachineCustomizeMachineSelectState_C::SetRacerHidden(bool IsHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "SetRacerHidden");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_SetRacerHidden Parms{};
 
@@ -78,10 +71,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::SetRacerHidden(bool IsHidden)
 
 void UBPC_MachineCustomizeMachineSelectState_C::UpdateRacer(EMachineId InMachineID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "UpdateRacer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_UpdateRacer Parms{};
 
@@ -96,10 +87,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::UpdateRacer(EMachineId InMachine
 
 void UBPC_MachineCustomizeMachineSelectState_C::OnSetup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "OnSetup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +99,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::OnSetup()
 
 void UBPC_MachineCustomizeMachineSelectState_C::SetProperties()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "SetProperties");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::SetProperties()
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventTipsWindow_CloseEndDelegate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventTipsWindow_CloseEndDelegate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventTipsWindow_CloseEndDelegate
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventMachineSelectWindow_TimerEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventMachineSelectWindow_TimerEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,10 +139,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventMachineSelectWindow_TimerEv
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachineTypeScrollEndEvent(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventPartsSelectWindow_OnMachineTypeScrollEndEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_EventPartsSelectWindow_OnMachineTypeScrollEndEvent Parms{};
 
@@ -178,10 +159,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachine
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachineTypeCancelEvent(int32 SelectedPlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventPartsSelectWindow_OnMachineTypeCancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_EventPartsSelectWindow_OnMachineTypeCancelEvent Parms{};
 
@@ -200,10 +179,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachine
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachineTypeDecideEvent(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventPartsSelectWindow_OnMachineTypeDecideEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_EventPartsSelectWindow_OnMachineTypeDecideEvent Parms{};
 
@@ -220,10 +197,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventPartsSelectWindow_OnMachine
 
 void UBPC_MachineCustomizeMachineSelectState_C::HideTipsWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "HideTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,10 +211,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::HideTipsWindow()
 
 void UBPC_MachineCustomizeMachineSelectState_C::ShowTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "ShowTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_ShowTipsWindow Parms{};
 
@@ -254,10 +227,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::ShowTipsWindow(EHintId InHintId)
 
 void UBPC_MachineCustomizeMachineSelectState_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -268,10 +239,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::カスタムイベント()
 
 void UBPC_MachineCustomizeMachineSelectState_C::EventShowTips()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "EventShowTips");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -282,10 +251,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::EventShowTips()
 
 void UBPC_MachineCustomizeMachineSelectState_C::BindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "BindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,10 +263,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::BindPage()
 
 void UBPC_MachineCustomizeMachineSelectState_C::UnbindPage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "UnbindPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -312,10 +277,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::UnbindPage()
 
 void UBPC_MachineCustomizeMachineSelectState_C::BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "BindMachineTypeSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_BindMachineTypeSelectWindow Parms{};
 
@@ -332,16 +295,26 @@ void UBPC_MachineCustomizeMachineSelectState_C::BindMachineTypeSelectWindow(clas
 
 void UBPC_MachineCustomizeMachineSelectState_C::UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "UnbindMachineTypeSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_UnbindMachineTypeSelectWindow Parms{};
 
 	Parms.InMachineTypeSelectWindow = InMachineTypeSelectWindow;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_MachineCustomizeMachineSelectState.BPC_MachineCustomizeMachineSelectState_C.RemoveTipsWindow
+// (Event, Protected, BlueprintEvent)
+
+void UBPC_MachineCustomizeMachineSelectState_C::RemoveTipsWindow()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -352,10 +325,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::UnbindMachineTypeSelectWindow(cl
 
 void UBPC_MachineCustomizeMachineSelectState_C::ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineCustomizeMachineSelectState_C", "ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState", FuncInfo);
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_ExecuteUbergraph_BPC_MachineCustomizeMachineSelectState Parms{};
 
@@ -372,10 +343,8 @@ void UBPC_MachineCustomizeMachineSelectState_C::ExecuteUbergraph_BPC_MachineCust
 
 class AGarageCamera* UBPC_MachineCustomizeMachineSelectState_C::GetCamera() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "GetCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_GetCamera Parms{};
 
@@ -392,10 +361,8 @@ class AGarageCamera* UBPC_MachineCustomizeMachineSelectState_C::GetCamera() cons
 
 void UBPC_MachineCustomizeMachineSelectState_C::IsOpenFirstGarageTipsWindow(bool* bEnableOpenWindow) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineCustomizeMachineSelectState_C", "IsOpenFirstGarageTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineCustomizeMachineSelectState_C", FnName));
 
 	Params::BPC_MachineCustomizeMachineSelectState_C_IsOpenFirstGarageTipsWindow Parms{};
 
@@ -405,5 +372,5 @@ void UBPC_MachineCustomizeMachineSelectState_C::IsOpenFirstGarageTipsWindow(bool
 		*bEnableOpenWindow = Parms.bEnableOpenWindow;
 }
 
-}
 
+SDK_NAMESPACE_END

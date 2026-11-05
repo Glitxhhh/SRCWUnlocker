@@ -14,18 +14,15 @@
 #include "WBP_PauseMenu_Sub_Option_Btn_03_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_PauseMenu_Sub_Option_Btn_03.WBP_PauseMenu_Sub_Option_Btn_03_C.BndEvt__WBP_PauseMenu_Sub_Option_Btn_03_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::BndEvt__WBP_PauseMenu_Sub_Option_Btn_03_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "BndEvt__WBP_PauseMenu_Sub_Option_Btn_03_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::BndEvt__WBP_PauseMenu_Sub_Option_Btn_03
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_03(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_03");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_PauseMenu_Sub_Option_Btn_03_C", "ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_03", FuncInfo);
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_03 Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::ExecuteUbergraph_WBP_PauseMenu_Sub_Opti
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::Initialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "Initialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,10 +66,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::Initialize()
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::PlayOnOffAnimation(bool bIsOn, bool SeEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "PlayOnOffAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_PlayOnOffAnimation Parms{};
 
@@ -95,10 +86,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::PlayOnOffAnimation(bool bIsOn, bool SeE
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::PlaySeOnOff(int32 PlayerCount, int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "PlaySeOnOff");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_PlaySeOnOff Parms{};
 
@@ -116,10 +105,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::PlaySeOnOff(int32 PlayerCount, int32 Pl
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetControlerButtonIndex(EControllerButtonTextureIndex In_Controller_Button_Index)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetControlerButtonIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetControlerButtonIndex Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetControlerButtonIndex(EControllerButt
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetIcon(double Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetIcon Parms{};
 
@@ -156,10 +141,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetIcon(double Index_0)
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetInputVisible(bool bIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetInputVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetInputVisible Parms{};
 
@@ -176,10 +159,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetInputVisible(bool bIsVisible)
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetIsGamePadButton(bool bIsGamePad)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetIsGamePadButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetIsGamePadButton Parms{};
 
@@ -196,10 +177,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetIsGamePadButton(bool bIsGamePad)
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetOnOffNoSE(bool IsOn)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetOnOffNoSE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetOnOffNoSE Parms{};
 
@@ -216,10 +195,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetOnOffNoSE(bool IsOn)
 
 void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_03_C", "SetText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_03_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_03_C_SetText Parms{};
 
@@ -228,5 +205,5 @@ void UWBP_PauseMenu_Sub_Option_Btn_03_C::SetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

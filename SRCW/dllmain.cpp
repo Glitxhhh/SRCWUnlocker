@@ -194,12 +194,12 @@ static DWORD WINAPI HeartbeatThread(LPVOID)
         K32GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc, sizeof(pmc));
         auto* cur = Reflect::CurrentCall.load();
         auto* last = Reflect::LastCall.load();
-        auto* gfn = GameLastFn.load();
+        // UObject pointers may be reclaimed by GC; the worker must not dereference them.
         std::cout << "[HB] phase=" << unlockPhase << (bUnlockDone ? " (done)" : "")
-                  << " inCall=" << (cur ? cur->GetName() : std::string("-"))
-                  << " lastCall=" << (last ? last->GetName() : std::string("-"))
+                  << " inCall=" << static_cast<const void*>(cur)
+                  << " lastCall=" << static_cast<const void*>(last)
                   << " ourCalls=" << Reflect::CallCount.load()
-                  << " gameEvents=" << GameEventCount.load() << " lastGameFn=" << (gfn ? gfn->GetName() : std::string("-"))
+                  << " gameEvents=" << GameEventCount.load() << " lastGameFn=" << static_cast<const void*>(GameLastFn.load())
                   << " mem=" << (pmc.WorkingSetSize >> 20) << "MB commit=" << (pmc.PrivateUsage >> 20) << "MB\n";
         if (finished) return 0;
     }

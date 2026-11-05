@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_Tab_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_Tab.WBP_MachineCustom_Sub_Tab_C.BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_01_K2Node_ComponentBoundEvent_0_OnEventMachineCustomTabButton__DelegateSignature
 // (BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_01_K2Node_ComponentBoundEvent_0_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_01_K2Node_ComponentBoundEvent_0_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_01_K2Node_ComponentBoundEvent_0_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_02_K2Node_ComponentBoundEvent_3_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_02_K2Node_ComponentBoundEvent_3_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_02_K2Node_ComponentBoundEvent_3_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_03_K2Node_ComponentBoundEvent_4_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_03_K2Node_ComponentBoundEvent_4_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_03_K2Node_ComponentBoundEvent_4_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -84,10 +77,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_04_K2Node_ComponentBoundEvent_5_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_04_K2Node_ComponentBoundEvent_5_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_04_K2Node_ComponentBoundEvent_5_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -104,10 +95,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_05_K2Node_ComponentBoundEvent_6_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_05_K2Node_ComponentBoundEvent_6_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_05_K2Node_ComponentBoundEvent_6_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -124,10 +113,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_06_K2Node_ComponentBoundEvent_7_OnEventMachineCustomTabButton__DelegateSignature(EMachineCustomizeTabID InTabID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_06_K2Node_ComponentBoundEvent_7_OnEventMachineCustomTabButton__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_BndEvt__WBP_MachineCustom_Sub_Tab_WBP_MachineCustom_Sub_Tab_06_K2Node_ComponentBoundEvent_7_OnEventMachineCustomTabButton__DelegateSignature Parms{};
 
@@ -142,10 +129,8 @@ void UWBP_MachineCustom_Sub_Tab_C::BndEvt__WBP_MachineCustom_Sub_Tab_WBP_Machine
 
 void UWBP_MachineCustom_Sub_Tab_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,10 +143,8 @@ void UWBP_MachineCustom_Sub_Tab_C::Construct()
 
 void UWBP_MachineCustom_Sub_Tab_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Tab(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Tab");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_Tab_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_Tab", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_Tab_C_ExecuteUbergraph_WBP_MachineCustom_Sub_Tab Parms{};
 
@@ -176,10 +159,8 @@ void UWBP_MachineCustom_Sub_Tab_C::ExecuteUbergraph_WBP_MachineCustom_Sub_Tab(in
 
 void UWBP_MachineCustom_Sub_Tab_C::PlaySE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "PlaySE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,10 +173,8 @@ void UWBP_MachineCustom_Sub_Tab_C::PlaySE()
 
 void UWBP_MachineCustom_Sub_Tab_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_PreConstruct Parms{};
 
@@ -212,10 +191,8 @@ void UWBP_MachineCustom_Sub_Tab_C::PreConstruct(bool IsDesignTime)
 
 TArray<class UWidget*> UWBP_MachineCustom_Sub_Tab_C::GetIcons() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_Tab_C", "GetIcons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_Tab_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_Tab_C_GetIcons Parms{};
 
@@ -224,5 +201,5 @@ TArray<class UWidget*> UWBP_MachineCustom_Sub_Tab_C::GetIcons() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

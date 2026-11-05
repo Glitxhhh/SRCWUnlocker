@@ -14,18 +14,15 @@
 #include "WBP_GroupResult_Sub_Table_Line_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GroupResult_Sub_Table_Line.WBP_GroupResult_Sub_Table_Line_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_GroupResult_Sub_Table_Line_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::Construct()
 
 void UWBP_GroupResult_Sub_Table_Line_C::ExecuteUbergraph_WBP_GroupResult_Sub_Table_Line(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "ExecuteUbergraph_WBP_GroupResult_Sub_Table_Line");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GroupResult_Sub_Table_Line_C", "ExecuteUbergraph_WBP_GroupResult_Sub_Table_Line", FuncInfo);
 
 	Params::WBP_GroupResult_Sub_Table_Line_C_ExecuteUbergraph_WBP_GroupResult_Sub_Table_Line Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::ExecuteUbergraph_WBP_GroupResult_Sub_Tab
 
 void UWBP_GroupResult_Sub_Table_Line_C::OpenFestaBonusAll()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "OpenFestaBonusAll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::OpenFestaBonusAll()
 
 void UWBP_GroupResult_Sub_Table_Line_C::OpenImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "OpenImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::OpenImpl()
 
 void UWBP_GroupResult_Sub_Table_Line_C::Set_Racer_Data_Impl(const struct FPartyResultRacer& RacerData, int32 Index_0, bool bIsTimeMode, double Time1st, bool bIsLoading)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "Set Racer Data Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	Params::WBP_GroupResult_Sub_Table_Line_C_Set_Racer_Data_Impl Parms{};
 
@@ -114,10 +103,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::Set_Racer_Data_Impl(const struct FPartyR
 
 void UWBP_GroupResult_Sub_Table_Line_C::SetFestaBonusPoint(const TArray<struct FFestaRacerResultInfo>& RacerList)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "SetFestaBonusPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	Params::WBP_GroupResult_Sub_Table_Line_C_SetFestaBonusPoint Parms{};
 
@@ -134,10 +121,8 @@ void UWBP_GroupResult_Sub_Table_Line_C::SetFestaBonusPoint(const TArray<struct F
 
 void UWBP_GroupResult_Sub_Table_Line_C::SetMVPAnim(int32 RacerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_Table_Line_C", "SetMVPAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_Table_Line_C", FnName));
 
 	Params::WBP_GroupResult_Sub_Table_Line_C_SetMVPAnim Parms{};
 
@@ -146,5 +131,5 @@ void UWBP_GroupResult_Sub_Table_Line_C::SetMVPAnim(int32 RacerIndex)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

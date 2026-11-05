@@ -13,8 +13,7 @@
 #include "UnionRun_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemTeamWarpRingObject.BP_ItemTeamWarpRingObject_C
 // 0x0000 (0x07C0 - 0x07C0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemTeamWarpRingObject_C;
 
-}
-
+SDK_NAMESPACE_END

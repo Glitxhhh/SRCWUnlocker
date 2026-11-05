@@ -11,14 +11,13 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_TopMenu.WBP_TopMenu_C
 // 0x0060 (0x04C0 - 0x0460)
@@ -60,6 +59,8 @@ public:
 	void SetupGameMode();
 	void SetupPlayerNum();
 	void SetupPlayMode(const TArray<ETopMenuPlayMode>& TopMenuPlayModeArr);
+	void SetVisibilityGameModeButtons(ESlateVisibility InVisibility);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void UnbindAllEvent();
 
 public:
@@ -78,5 +79,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_TopMenu_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "ST_StickerPresetPageData_structs.hpp"
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
-#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "UnionUI_structs.hpp"
+#include "UNION_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ST_StickerPresetPageItemData_structs.hpp"
+#include "ST_StickerPresetPageData_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_StickerSelect.WBP_MachineCustom_Sub_StickerSelect_C.AddPage
 // 0x0018 (0x0018 - 0x0000)
@@ -501,5 +501,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_StickerSelect_C_IsCanPrevPage;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

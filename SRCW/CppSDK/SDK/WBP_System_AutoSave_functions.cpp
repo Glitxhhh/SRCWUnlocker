@@ -14,18 +14,27 @@
 #include "WBP_System_AutoSave_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_AutoSave.WBP_System_AutoSave_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_System_AutoSave_C::Construct()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "Construct");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_System_AutoSave.WBP_System_AutoSave_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_System_AutoSave_C::Destruct()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +47,8 @@ void UWBP_System_AutoSave_C::Construct()
 
 void UWBP_System_AutoSave_C::ExecuteUbergraph_WBP_System_AutoSave(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "ExecuteUbergraph_WBP_System_AutoSave");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_AutoSave_C", "ExecuteUbergraph_WBP_System_AutoSave", FuncInfo);
 
 	Params::WBP_System_AutoSave_C_ExecuteUbergraph_WBP_System_AutoSave Parms{};
 
@@ -56,10 +63,8 @@ void UWBP_System_AutoSave_C::ExecuteUbergraph_WBP_System_AutoSave(int32 EntryPoi
 
 void UWBP_System_AutoSave_C::OnInAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "OnInAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +75,8 @@ void UWBP_System_AutoSave_C::OnInAnimFinished()
 
 void UWBP_System_AutoSave_C::OnOutAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "OnOutAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +89,8 @@ void UWBP_System_AutoSave_C::OnOutAnimFinished()
 
 void UWBP_System_AutoSave_C::OnSaveComplete(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "OnSaveComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	Params::WBP_System_AutoSave_C_OnSaveComplete Parms{};
 
@@ -106,10 +107,8 @@ void UWBP_System_AutoSave_C::OnSaveComplete(ESaveDataStatus Status)
 
 void UWBP_System_AutoSave_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	Params::WBP_System_AutoSave_C_PreConstruct Parms{};
 
@@ -124,13 +123,11 @@ void UWBP_System_AutoSave_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_System_AutoSave_C::StartAnimIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_AutoSave_C", "StartAnimIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_AutoSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

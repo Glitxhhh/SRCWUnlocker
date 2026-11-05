@@ -14,8 +14,7 @@
 #include "BPC_Etcetera_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_Etcetera.BPC_Etcetera_C.ExecuteUbergraph_BPC_Etcetera
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_Etcetera_C::ExecuteUbergraph_BPC_Etcetera(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_Etcetera_C", "ExecuteUbergraph_BPC_Etcetera");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_Etcetera_C", "ExecuteUbergraph_BPC_Etcetera", FuncInfo);
 
 	Params::BPC_Etcetera_C_ExecuteUbergraph_BPC_Etcetera Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_Etcetera_C::ExecuteUbergraph_BPC_Etcetera(int32 EntryPoint)
 
 void UBPC_Etcetera_C::OnBackEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_Etcetera_C", "OnBackEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_Etcetera_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UBPC_Etcetera_C::OnBackEvent()
 
 void UBPC_Etcetera_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_Etcetera_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_Etcetera_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UBPC_Etcetera_C::OnExitState()
 
 void UBPC_Etcetera_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_Etcetera_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_Etcetera_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,10 +77,8 @@ void UBPC_Etcetera_C::OnInitState()
 
 void UBPC_Etcetera_C::OnUpdateState(float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_Etcetera_C", "OnUpdateState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_Etcetera_C", FnName));
 
 	Params::BPC_Etcetera_C_OnUpdateState Parms{};
 
@@ -98,5 +87,5 @@ void UBPC_Etcetera_C::OnUpdateState(float InDeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

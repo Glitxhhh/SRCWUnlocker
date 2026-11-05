@@ -14,18 +14,15 @@
 #include "WBP_Friend_LobbyNotice_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.BindAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Friend_LobbyNotice_C::BindAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "BindAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Friend_LobbyNotice_C::BindAnimationEvent()
 
 void UWBP_Friend_LobbyNotice_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_Friend_LobbyNotice_C::Construct()
 
 void UWBP_Friend_LobbyNotice_C::ExecuteUbergraph_WBP_Friend_LobbyNotice(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "ExecuteUbergraph_WBP_Friend_LobbyNotice");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_LobbyNotice_C", "ExecuteUbergraph_WBP_Friend_LobbyNotice", FuncInfo);
 
 	Params::WBP_Friend_LobbyNotice_C_ExecuteUbergraph_WBP_Friend_LobbyNotice Parms{};
 
@@ -70,10 +63,20 @@ void UWBP_Friend_LobbyNotice_C::ExecuteUbergraph_WBP_Friend_LobbyNotice(int32 En
 
 void UWBP_Friend_LobbyNotice_C::Finished_A30B153F4C34604DA75029AB1A775F07()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "Finished_A30B153F4C34604DA75029AB1A775F07");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.FinishShowingNoticeEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_LobbyNotice_C::FinishShowingNoticeEvent()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +87,8 @@ void UWBP_Friend_LobbyNotice_C::Finished_A30B153F4C34604DA75029AB1A775F07()
 
 void UWBP_Friend_LobbyNotice_C::OnAnimationInFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnAnimationInFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +99,8 @@ void UWBP_Friend_LobbyNotice_C::OnAnimationInFinished()
 
 void UWBP_Friend_LobbyNotice_C::OnAnimationOutFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnAnimationOutFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -116,10 +115,8 @@ void UWBP_Friend_LobbyNotice_C::OnAnimationOutFinished()
 
 struct FEventReply UWBP_Friend_LobbyNotice_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_OnFocusReceived Parms{};
 
@@ -132,29 +129,13 @@ struct FEventReply UWBP_Friend_LobbyNotice_C::OnFocusReceived(const struct FGeom
 }
 
 
-// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.OnHoldInputEnd
-// (BlueprintEvent)
-
-void UWBP_Friend_LobbyNotice_C::OnHoldInputEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnHoldInputEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.OnInitialized
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Friend_LobbyNotice_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +148,8 @@ void UWBP_Friend_LobbyNotice_C::OnInitialized()
 
 void UWBP_Friend_LobbyNotice_C::OnSpecialPressedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnSpecialPressedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_OnSpecialPressedEvent Parms{};
 
@@ -187,10 +166,8 @@ void UWBP_Friend_LobbyNotice_C::OnSpecialPressedEvent(class UObject* Object)
 
 void UWBP_Friend_LobbyNotice_C::OnSpecialReleasedEvent(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "OnSpecialReleasedEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_OnSpecialReleasedEvent Parms{};
 
@@ -205,10 +182,8 @@ void UWBP_Friend_LobbyNotice_C::OnSpecialReleasedEvent(class UObject* Object)
 
 void UWBP_Friend_LobbyNotice_C::PlayAnimationIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "PlayAnimationIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -219,10 +194,8 @@ void UWBP_Friend_LobbyNotice_C::PlayAnimationIn()
 
 void UWBP_Friend_LobbyNotice_C::PlayAnimationOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "PlayAnimationOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -235,10 +208,8 @@ void UWBP_Friend_LobbyNotice_C::PlayAnimationOut()
 
 void UWBP_Friend_LobbyNotice_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_PreConstruct Parms{};
 
@@ -253,10 +224,20 @@ void UWBP_Friend_LobbyNotice_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_Friend_LobbyNotice_C::RegisterMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "RegisterMenuInputReceiveObject");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friend_LobbyNotice.WBP_Friend_LobbyNotice_C.SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Friend_LobbyNotice_C::SequenceEvent__ENTRYPOINTWBP_Friend_LobbyNotice()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -267,10 +248,8 @@ void UWBP_Friend_LobbyNotice_C::RegisterMenuInputReceiveObject()
 
 void UWBP_Friend_LobbyNotice_C::SetControlIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "SetControlIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -281,10 +260,8 @@ void UWBP_Friend_LobbyNotice_C::SetControlIcon()
 
 void UWBP_Friend_LobbyNotice_C::SetMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "SetMenuInputReceiveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -297,10 +274,8 @@ void UWBP_Friend_LobbyNotice_C::SetMenuInputReceiveObject()
 
 void UWBP_Friend_LobbyNotice_C::SetupNoticeSequenceType(ELobbyInvitationSequenceType SequenceType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "SetupNoticeSequenceType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_SetupNoticeSequenceType Parms{};
 
@@ -315,10 +290,8 @@ void UWBP_Friend_LobbyNotice_C::SetupNoticeSequenceType(ELobbyInvitationSequence
 
 void UWBP_Friend_LobbyNotice_C::UnregisterMenuInputReceiveObject()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "UnregisterMenuInputReceiveObject");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -331,10 +304,8 @@ void UWBP_Friend_LobbyNotice_C::UnregisterMenuInputReceiveObject()
 
 void UWBP_Friend_LobbyNotice_C::UpdateHoldInputCountDisplay(float CountValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "UpdateHoldInputCountDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_UpdateHoldInputCountDisplay Parms{};
 
@@ -351,10 +322,8 @@ void UWBP_Friend_LobbyNotice_C::UpdateHoldInputCountDisplay(float CountValue)
 
 void UWBP_Friend_LobbyNotice_C::UpdateLobbyInfoDisplay(const struct FLobbyInvitationNoticeInfo& InLobbyInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_LobbyNotice_C", "UpdateLobbyInfoDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_LobbyNotice_C", FnName));
 
 	Params::WBP_Friend_LobbyNotice_C_UpdateLobbyInfoDisplay Parms{};
 
@@ -363,5 +332,5 @@ void UWBP_Friend_LobbyNotice_C::UpdateLobbyInfoDisplay(const struct FLobbyInvita
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

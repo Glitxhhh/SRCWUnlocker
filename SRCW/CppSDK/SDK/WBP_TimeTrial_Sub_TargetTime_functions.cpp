@@ -14,8 +14,7 @@
 #include "WBP_TimeTrial_Sub_TargetTime_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_Sub_TargetTime.WBP_TimeTrial_Sub_TargetTime_C.ExecuteUbergraph_WBP_TimeTrial_Sub_TargetTime
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TimeTrial_Sub_TargetTime_C::ExecuteUbergraph_WBP_TimeTrial_Sub_TargetTime(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_TargetTime_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_TargetTime");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_Sub_TargetTime_C", "ExecuteUbergraph_WBP_TimeTrial_Sub_TargetTime", FuncInfo);
 
 	Params::WBP_TimeTrial_Sub_TargetTime_C_ExecuteUbergraph_WBP_TimeTrial_Sub_TargetTime Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_TimeTrial_Sub_TargetTime_C::ExecuteUbergraph_WBP_TimeTrial_Sub_TargetT
 
 void UWBP_TimeTrial_Sub_TargetTime_C::SetTotalLapTime(const class FText& TimeText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_TargetTime_C", "SetTotalLapTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_TargetTime_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_TargetTime_C_SetTotalLapTime Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_TimeTrial_Sub_TargetTime_C::SetTotalLapTime(const class FText& TimeTex
 
 void UWBP_TimeTrial_Sub_TargetTime_C::SetupReadyWindow(const class FText& InTimeText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_Sub_TargetTime_C", "SetupReadyWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_Sub_TargetTime_C", FnName));
 
 	Params::WBP_TimeTrial_Sub_TargetTime_C_SetupReadyWindow Parms{};
 
@@ -76,5 +69,5 @@ void UWBP_TimeTrial_Sub_TargetTime_C::SetupReadyWindow(const class FText& InTime
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

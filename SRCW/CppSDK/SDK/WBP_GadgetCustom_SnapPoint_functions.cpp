@@ -13,21 +13,18 @@
 #include "WBP_GadgetCustom_SnapPoint_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_SnapPoint.WBP_GadgetCustom_SnapPoint_C.OnInitSnapPointImage
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UWBP_GadgetCustom_SnapPoint_C::OnInitSnapPointImage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_SnapPoint_C", "OnInitSnapPointImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_SnapPoint_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

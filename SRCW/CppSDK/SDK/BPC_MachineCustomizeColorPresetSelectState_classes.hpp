@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeColorPresetSelectState.BPC_MachineCustomizeColorPresetSelectState_C
 // 0x0020 (0x0118 - 0x00F8)
@@ -59,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeColorPresetSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

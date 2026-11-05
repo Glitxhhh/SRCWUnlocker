@@ -17,8 +17,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Popup_Window_Tutorial.WBP_Popup_Window_Tutorial_C.CheckOkClosing
 // 0x000C (0x000C - 0x0000)
@@ -321,5 +321,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Popup_Window_Tutorial_C_UpdateInfoTxt;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

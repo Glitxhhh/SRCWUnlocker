@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_ControllerBtn.WBP_CMN_ControllerBtn_C
 // 0x0030 (0x0368 - 0x0338)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_ControllerBtn_C;
 
-}
-
+SDK_NAMESPACE_END

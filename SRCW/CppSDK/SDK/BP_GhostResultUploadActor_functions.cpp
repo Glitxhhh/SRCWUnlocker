@@ -14,18 +14,15 @@
 #include "BP_GhostResultUploadActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_GhostResultUploadActor.BP_GhostResultUploadActor_C.BindUploaderEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_GhostResultUploadActor_C::BindUploaderEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "BindUploaderEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_GhostResultUploadActor_C::BindUploaderEvent()
 
 void ABP_GhostResultUploadActor_C::Create_Network_Error_Window(EResponseCodeAbstract ResponseCode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "Create Network Error Window");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_Create_Network_Error_Window Parms{};
 
@@ -58,10 +53,8 @@ void ABP_GhostResultUploadActor_C::Create_Network_Error_Window(EResponseCodeAbst
 
 void ABP_GhostResultUploadActor_C::CreateErrorWindow(const class FText& MessageText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "CreateErrorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_CreateErrorWindow Parms{};
 
@@ -78,10 +71,8 @@ void ABP_GhostResultUploadActor_C::CreateErrorWindow(const class FText& MessageT
 
 void ABP_GhostResultUploadActor_C::ExecuteUbergraph_BP_GhostResultUploadActor(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "ExecuteUbergraph_BP_GhostResultUploadActor");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_GhostResultUploadActor_C", "ExecuteUbergraph_BP_GhostResultUploadActor", FuncInfo);
 
 	Params::BP_GhostResultUploadActor_C_ExecuteUbergraph_BP_GhostResultUploadActor Parms{};
 
@@ -98,10 +89,8 @@ void ABP_GhostResultUploadActor_C::ExecuteUbergraph_BP_GhostResultUploadActor(in
 
 void ABP_GhostResultUploadActor_C::OnCancelUpload(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "OnCancelUpload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_OnCancelUpload Parms{};
 
@@ -116,10 +105,8 @@ void ABP_GhostResultUploadActor_C::OnCancelUpload(class UObject* Object)
 
 void ABP_GhostResultUploadActor_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -132,10 +119,8 @@ void ABP_GhostResultUploadActor_C::ReceiveBeginPlay()
 
 void ABP_GhostResultUploadActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_ReceiveEndPlay Parms{};
 
@@ -152,10 +137,8 @@ void ABP_GhostResultUploadActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 void ABP_GhostResultUploadActor_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_ReceiveTick Parms{};
 
@@ -170,10 +153,8 @@ void ABP_GhostResultUploadActor_C::ReceiveTick(float DeltaSeconds)
 
 void ABP_GhostResultUploadActor_C::Setup_All_Upload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "Setup All Upload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -187,10 +168,8 @@ void ABP_GhostResultUploadActor_C::Setup_All_Upload()
 
 void ABP_GhostResultUploadActor_C::Setup_Single_Upload(ESpeedClassId InSpeedClassId, EStageId InStageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "Setup Single Upload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_Setup_Single_Upload Parms{};
 
@@ -206,10 +185,8 @@ void ABP_GhostResultUploadActor_C::Setup_Single_Upload(ESpeedClassId InSpeedClas
 
 void ABP_GhostResultUploadActor_C::StartCancelEntry()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "StartCancelEntry");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,10 +197,8 @@ void ABP_GhostResultUploadActor_C::StartCancelEntry()
 
 void ABP_GhostResultUploadActor_C::StartUpload()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "StartUpload");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -238,10 +213,8 @@ void ABP_GhostResultUploadActor_C::StartUpload()
 
 void ABP_GhostResultUploadActor_C::TimeTrialErrorWindow_OnDecide(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "TimeTrialErrorWindow_OnDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_TimeTrialErrorWindow_OnDecide Parms{};
 
@@ -258,10 +231,8 @@ void ABP_GhostResultUploadActor_C::TimeTrialErrorWindow_OnDecide(class UUnionUIB
 
 void ABP_GhostResultUploadActor_C::UnbindCancel()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "UnbindCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -272,10 +243,8 @@ void ABP_GhostResultUploadActor_C::UnbindCancel()
 
 void ABP_GhostResultUploadActor_C::UnbindUploaderEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "UnbindUploaderEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -289,10 +258,8 @@ void ABP_GhostResultUploadActor_C::UnbindUploaderEvent()
 
 void ABP_GhostResultUploadActor_C::UploadCompleteEvent(bool IsError, EUploadState UploadState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "UploadCompleteEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	Params::BP_GhostResultUploadActor_C_UploadCompleteEvent Parms{};
 
@@ -308,10 +275,8 @@ void ABP_GhostResultUploadActor_C::UploadCompleteEvent(bool IsError, EUploadStat
 
 void ABP_GhostResultUploadActor_C::UploadFinish()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "UploadFinish");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -322,13 +287,11 @@ void ABP_GhostResultUploadActor_C::UploadFinish()
 
 void ABP_GhostResultUploadActor_C::UploadFinishEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GhostResultUploadActor_C", "UploadFinishEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GhostResultUploadActor_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GadgetCustomize2Sequence.BP_GadgetCustomize2Sequence_C
-// 0x0070 (0x03E8 - 0x0378)
+// 0x0090 (0x0408 - 0x0378)
 class ABP_GadgetCustomize2Sequence_C final : public AGadgetCustomize2Sequence
 {
 public:
@@ -31,8 +30,8 @@ public:
 	bool                                          bIsMessageBarVisible;                              // 0x0395(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsDirty;                                          // 0x0396(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_397[0x1];                                      // 0x0397(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGadgetPlateUIData                     PrevSelectedGadgetPlateData;                       // 0x0398(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGadgetPlateUIData                     CurrentSelectedGadgetPlateData;                    // 0x03C0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGadgetPlateUIData                     PrevSelectedGadgetPlateData;                       // 0x0398(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGadgetPlateUIData                     CurrentSelectedGadgetPlateData;                    // 0x03D0(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_GadgetCustomize2Sequence(int32 EntryPoint);
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_GadgetCustomize2Sequence_C;
 
-}
-
+SDK_NAMESPACE_END

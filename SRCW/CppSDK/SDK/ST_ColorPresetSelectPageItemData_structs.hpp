@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "EColorPresetSelectPageItemType_structs.hpp"
-#include "UNION_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
+#include "EColorPresetSelectPageItemType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_ColorPresetSelectPageItemData.ST_ColorPresetSelectPageItemData
 // 0x0058 (0x0058 - 0x0000)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_ColorPresetSelectPageItemData;
 
-}
-
+SDK_NAMESPACE_END

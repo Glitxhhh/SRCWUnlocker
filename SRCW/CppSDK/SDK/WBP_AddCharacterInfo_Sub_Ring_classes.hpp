@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_AddCharacterInfo_Sub_Ring.WBP_AddCharacterInfo_Sub_Ring_C
 // 0x0068 (0x0348 - 0x02E0)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_AddCharacterInfo_Sub_Ring_C;
 
-}
-
+SDK_NAMESPACE_END

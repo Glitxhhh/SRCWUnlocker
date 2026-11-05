@@ -11,14 +11,13 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_LegendInfo_Tournament.WBP_LegendInfo_Tournament_C
 // 0x0198 (0x04A8 - 0x0310)
@@ -101,5 +100,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_LegendInfo_Tournament_C;
 
-}
-
+SDK_NAMESPACE_END

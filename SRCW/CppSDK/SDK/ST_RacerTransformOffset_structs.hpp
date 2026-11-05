@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_RacerTransformOffset.ST_RacerTransformOffset
 // 0x0070 (0x0070 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_RacerTransformOffset;
 
-}
-
+SDK_NAMESPACE_END

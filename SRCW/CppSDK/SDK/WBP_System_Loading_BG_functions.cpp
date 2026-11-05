@@ -14,18 +14,15 @@
 #include "WBP_System_Loading_BG_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Loading_BG.WBP_System_Loading_BG_C.AfterStatusObjectReady
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_System_Loading_BG_C::AfterStatusObjectReady()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "AfterStatusObjectReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_System_Loading_BG_C::AfterStatusObjectReady()
 
 void UWBP_System_Loading_BG_C::ChangeCourseImage(EStageId InCourseId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "ChangeCourseImage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_ChangeCourseImage Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_System_Loading_BG_C::ChangeCourseImage(EStageId InCourseId)
 
 void UWBP_System_Loading_BG_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,10 +65,8 @@ void UWBP_System_Loading_BG_C::Construct()
 
 void UWBP_System_Loading_BG_C::CreateHintPopupWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "CreateHintPopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_CreateHintPopupWindow Parms{};
 
@@ -90,10 +81,8 @@ void UWBP_System_Loading_BG_C::CreateHintPopupWindow(EHintId InHintId)
 
 void UWBP_System_Loading_BG_C::DelayShow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "DelayShow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_System_Loading_BG_C::DelayShow()
 
 void UWBP_System_Loading_BG_C::DestroyHintPopupWindow()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "DestroyHintPopupWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +107,8 @@ void UWBP_System_Loading_BG_C::DestroyHintPopupWindow()
 
 void UWBP_System_Loading_BG_C::ExecuteUbergraph_WBP_System_Loading_BG(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "ExecuteUbergraph_WBP_System_Loading_BG");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Loading_BG_C", "ExecuteUbergraph_WBP_System_Loading_BG", FuncInfo);
 
 	Params::WBP_System_Loading_BG_C_ExecuteUbergraph_WBP_System_Loading_BG Parms{};
 
@@ -140,10 +125,8 @@ void UWBP_System_Loading_BG_C::ExecuteUbergraph_WBP_System_Loading_BG(int32 Entr
 
 void UWBP_System_Loading_BG_C::Get_Display_TipsHint_Id(EHintId* OutHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "Get Display TipsHint Id");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_Get_Display_TipsHint_Id Parms{};
 
@@ -161,10 +144,8 @@ void UWBP_System_Loading_BG_C::Get_Display_TipsHint_Id(EHintId* OutHintId)
 
 void UWBP_System_Loading_BG_C::GetLoadingGaurgeWB(class UWBP_System_Loading_C** WBP_System_Loading_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "GetLoadingGaurgeWB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_GetLoadingGaurgeWB Parms{};
 
@@ -180,10 +161,8 @@ void UWBP_System_Loading_BG_C::GetLoadingGaurgeWB(class UWBP_System_Loading_C** 
 
 void UWBP_System_Loading_BG_C::Hide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "Hide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -196,10 +175,8 @@ void UWBP_System_Loading_BG_C::Hide()
 
 void UWBP_System_Loading_BG_C::OnFinishedFadeOut(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "OnFinishedFadeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_OnFinishedFadeOut Parms{};
 
@@ -214,10 +191,8 @@ void UWBP_System_Loading_BG_C::OnFinishedFadeOut(EUnionUIFadeDirection FadeDirec
 
 void UWBP_System_Loading_BG_C::OnHideAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "OnHideAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -228,10 +203,8 @@ void UWBP_System_Loading_BG_C::OnHideAnimationFinished()
 
 void UWBP_System_Loading_BG_C::OnHintPopupCloseEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "OnHintPopupCloseEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -244,10 +217,8 @@ void UWBP_System_Loading_BG_C::OnHintPopupCloseEnd()
 
 void UWBP_System_Loading_BG_C::OnLoaded_9D730D33489CFB97E01C0EAC778D0A17(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "OnLoaded_9D730D33489CFB97E01C0EAC778D0A17");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_OnLoaded_9D730D33489CFB97E01C0EAC778D0A17 Parms{};
 
@@ -264,10 +235,8 @@ void UWBP_System_Loading_BG_C::OnLoaded_9D730D33489CFB97E01C0EAC778D0A17(class U
 
 void UWBP_System_Loading_BG_C::OnLoaded_FDDD149A43E2111E1175FB87562812C9(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "OnLoaded_FDDD149A43E2111E1175FB87562812C9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_OnLoaded_FDDD149A43E2111E1175FB87562812C9 Parms{};
 
@@ -284,10 +253,8 @@ void UWBP_System_Loading_BG_C::OnLoaded_FDDD149A43E2111E1175FB87562812C9(class U
 
 void UWBP_System_Loading_BG_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_PreConstruct Parms{};
 
@@ -304,10 +271,8 @@ void UWBP_System_Loading_BG_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_System_Loading_BG_C::SetCharaIcons(TArray<class UObject*>& CharaIcons_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "SetCharaIcons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	Params::WBP_System_Loading_BG_C_SetCharaIcons Parms{};
 
@@ -324,10 +289,8 @@ void UWBP_System_Loading_BG_C::SetCharaIcons(TArray<class UObject*>& CharaIcons_
 
 void UWBP_System_Loading_BG_C::Show()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "Show");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -338,13 +301,11 @@ void UWBP_System_Loading_BG_C::Show()
 
 void UWBP_System_Loading_BG_C::StartLoading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_BG_C", "StartLoading");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_BG_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

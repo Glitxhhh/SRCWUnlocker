@@ -14,52 +14,15 @@
 #include "WBP_GadgetCustom_Window_parameters.hpp"
 
 
-namespace SDK
-{
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.ApplyGadgetCustomCategoryHeader
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::ApplyGadgetCustomCategoryHeader()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "ApplyGadgetCustomCategoryHeader");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.ApplyGadgetCustomScrollPrintBox
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const bool                              bInReSize                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::ApplyGadgetCustomScrollPrintBox(const bool bInReSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "ApplyGadgetCustomScrollPrintBox");
-
-	Params::WBP_GadgetCustom_Window_C_ApplyGadgetCustomScrollPrintBox Parms{};
-
-	Parms.bInReSize = bInReSize;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.BndEvt__WBP_GadgetCustom_Window_MouseInteraction_Decision_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteraction_Decision_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "BndEvt__WBP_GadgetCustom_Window_MouseInteraction_Decision_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +33,8 @@ void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteractio
 
 void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToDown_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToDown_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +45,8 @@ void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteractio
 
 void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToLeft_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToLeft_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +57,8 @@ void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteractio
 
 void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToRight_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToRight_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +69,8 @@ void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteractio
 
 void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToUp_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "BndEvt__WBP_GadgetCustom_Window_MouseInteraction_ToUp_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -131,10 +86,8 @@ void UWBP_GadgetCustom_Window_C::BndEvt__WBP_GadgetCustom_Window_MouseInteractio
 
 void UWBP_GadgetCustom_Window_C::CalcGadgetCategoryDistance(bool bRightDown, EGadgetCategory GadgetCategory, int32 Distance, EGadgetCategory* OutGadgetCategory)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "CalcGadgetCategoryDistance");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_CalcGadgetCategoryDistance Parms{};
 
@@ -156,10 +109,8 @@ void UWBP_GadgetCustom_Window_C::CalcGadgetCategoryDistance(bool bRightDown, EGa
 
 void UWBP_GadgetCustom_Window_C::CanPlayScrollAnim(bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "CanPlayScrollAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_CanPlayScrollAnim Parms{};
 
@@ -175,10 +126,8 @@ void UWBP_GadgetCustom_Window_C::CanPlayScrollAnim(bool* Result)
 
 void UWBP_GadgetCustom_Window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,10 +138,8 @@ void UWBP_GadgetCustom_Window_C::Construct()
 
 void UWBP_GadgetCustom_Window_C::DownScrollAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "DownScrollAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -203,10 +150,8 @@ void UWBP_GadgetCustom_Window_C::DownScrollAnimFinished()
 
 void UWBP_GadgetCustom_Window_C::DownScrollAnimStarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "DownScrollAnimStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -219,10 +164,8 @@ void UWBP_GadgetCustom_Window_C::DownScrollAnimStarted()
 
 void UWBP_GadgetCustom_Window_C::ExecuteUbergraph_WBP_GadgetCustom_Window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "ExecuteUbergraph_WBP_GadgetCustom_Window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCustom_Window_C", "ExecuteUbergraph_WBP_GadgetCustom_Window", FuncInfo);
 
 	Params::WBP_GadgetCustom_Window_C_ExecuteUbergraph_WBP_GadgetCustom_Window Parms{};
 
@@ -237,10 +180,8 @@ void UWBP_GadgetCustom_Window_C::ExecuteUbergraph_WBP_GadgetCustom_Window(int32 
 
 void UWBP_GadgetCustom_Window_C::FinishedPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "FinishedPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -252,15 +193,13 @@ void UWBP_GadgetCustom_Window_C::FinishedPurchaseAnim()
 // int32*                                  IndexOnBox                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetCategory*                        GadgetCategory                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  CenterElementTypeIndex                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId*                              gadgetId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId*                              GadgetID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState*                           SelectedGadgetState                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox, EGadgetCategory* GadgetCategory, int32* CenterElementTypeIndex, EGadgetId* gadgetId, EGadgetState* SelectedGadgetState)
+void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox, EGadgetCategory* GadgetCategory, int32* CenterElementTypeIndex, EGadgetId* GadgetID, EGadgetState* SelectedGadgetState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "GetCurrentCenterBoxGadgetInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_GetCurrentCenterBoxGadgetInfo Parms{};
 
@@ -275,8 +214,8 @@ void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox
 	if (CenterElementTypeIndex != nullptr)
 		*CenterElementTypeIndex = Parms.CenterElementTypeIndex;
 
-	if (gadgetId != nullptr)
-		*gadgetId = Parms.gadgetId;
+	if (GadgetID != nullptr)
+		*GadgetID = Parms.GadgetID;
 
 	if (SelectedGadgetState != nullptr)
 		*SelectedGadgetState = Parms.SelectedGadgetState;
@@ -293,10 +232,8 @@ void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxGadgetInfo(int32* IndexOnBox
 
 void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxInfo(int32* IndexOnBox, ECarStatusType* machineType, int32* CenterElementTypeIndex, EMachineId* MachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "GetCurrentCenterBoxInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_GetCurrentCenterBoxInfo Parms{};
 
@@ -323,15 +260,13 @@ void UWBP_GadgetCustom_Window_C::GetCurrentCenterBoxInfo(int32* IndexOnBox, ECar
 // int32*                                  IndexOnBox                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetCategory*                        OutGadgetCategory                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32*                                  CenterElementTypeIndex                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EGadgetId*                              gadgetId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGadgetId*                              GadgetID                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGadgetState*                           OutGadgetState                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* IndexOnBox, EGadgetCategory* OutGadgetCategory, int32* CenterElementTypeIndex, EGadgetId* gadgetId, EGadgetState* OutGadgetState)
+void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* IndexOnBox, EGadgetCategory* OutGadgetCategory, int32* CenterElementTypeIndex, EGadgetId* GadgetID, EGadgetState* OutGadgetState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "GetNextBoxGadgetInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_GetNextBoxGadgetInfo Parms{};
 
@@ -348,8 +283,8 @@ void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* Ind
 	if (CenterElementTypeIndex != nullptr)
 		*CenterElementTypeIndex = Parms.CenterElementTypeIndex;
 
-	if (gadgetId != nullptr)
-		*gadgetId = Parms.gadgetId;
+	if (GadgetID != nullptr)
+		*GadgetID = Parms.GadgetID;
 
 	if (OutGadgetState != nullptr)
 		*OutGadgetState = Parms.OutGadgetState;
@@ -363,10 +298,8 @@ void UWBP_GadgetCustom_Window_C::GetNextBoxGadgetInfo(bool DownRight, int32* Ind
 
 void UWBP_GadgetCustom_Window_C::GetOtherCenterElement(class UWBP_GadgetCustom_Sub_TypeBox_C** OutElement)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "GetOtherCenterElement");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_GetOtherCenterElement Parms{};
 
@@ -384,10 +317,8 @@ void UWBP_GadgetCustom_Window_C::GetOtherCenterElement(class UWBP_GadgetCustom_S
 
 void UWBP_GadgetCustom_Window_C::OnCancelByCross(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnCancelByCross");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_OnCancelByCross Parms{};
 
@@ -397,57 +328,13 @@ void UWBP_GadgetCustom_Window_C::OnCancelByCross(class UUnionUIButtonBase* Butto
 }
 
 
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstFocusCursor
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstFocusCursor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstFocusCursor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstGadgetCategoryHeader
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstGadgetCategoryHeader()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstGadgetCategoryHeader");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstGadgetCustomTypeBox
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnConstGadgetCustomTypeBox()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstGadgetCustomTypeBox");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnConstMouseInteractionButtons
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
 void UWBP_GadgetCustom_Window_C::OnConstMouseInteractionButtons()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnConstMouseInteractionButtons");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -461,10 +348,8 @@ void UWBP_GadgetCustom_Window_C::OnConstMouseInteractionButtons()
 
 void UWBP_GadgetCustom_Window_C::OnCrossButtonCursorEvent(class UUnionUIButtonBase* Button, EUnionUIControlDir Dir)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnCrossButtonCursorEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_OnCrossButtonCursorEvent Parms{};
 
@@ -482,10 +367,8 @@ void UWBP_GadgetCustom_Window_C::OnCrossButtonCursorEvent(class UUnionUIButtonBa
 
 void UWBP_GadgetCustom_Window_C::OnDecisionByCross(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnDecisionByCross");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_OnDecisionByCross Parms{};
 
@@ -504,10 +387,8 @@ void UWBP_GadgetCustom_Window_C::OnDecisionByCross(class UUnionUIButtonBase* But
 
 struct FEventReply UWBP_GadgetCustom_Window_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_OnFocusReceived Parms{};
 
@@ -525,24 +406,8 @@ struct FEventReply UWBP_GadgetCustom_Window_C::OnFocusReceived(const struct FGeo
 
 void UWBP_GadgetCustom_Window_C::OnInitReadyWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnInitReadyWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.OnInitRentalGadgetWidget
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GadgetCustom_Window_C::OnInitRentalGadgetWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnInitRentalGadgetWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -553,24 +418,20 @@ void UWBP_GadgetCustom_Window_C::OnInitRentalGadgetWidget()
 
 void UWBP_GadgetCustom_Window_C::OnPadFaceLeftCallback()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "OnPadFaceLeftCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.PlayPurchaseAnim
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_GadgetCustom_Window_C::PlayPurchaseAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "PlayPurchaseAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -583,10 +444,8 @@ void UWBP_GadgetCustom_Window_C::PlayPurchaseAnim()
 
 void UWBP_GadgetCustom_Window_C::PlayUISceneAnimation(const EUnionUISceneAnimation& InAnimation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "PlayUISceneAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_PlayUISceneAnimation Parms{};
 
@@ -603,34 +462,12 @@ void UWBP_GadgetCustom_Window_C::PlayUISceneAnimation(const EUnionUISceneAnimati
 
 void UWBP_GadgetCustom_Window_C::SetCenterControllable(bool bAble)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetCenterControllable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_SetCenterControllable Parms{};
 
 	Parms.bAble = bAble;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.SetCenterCursorVisible
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewVisible                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::SetCenterCursorVisible(bool NewVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetCenterCursorVisible");
-
-	Params::WBP_GadgetCustom_Window_C_SetCenterCursorVisible Parms{};
-
-	Parms.NewVisible = NewVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -643,10 +480,8 @@ void UWBP_GadgetCustom_Window_C::SetCenterCursorVisible(bool NewVisible)
 
 void UWBP_GadgetCustom_Window_C::SetCursorUpCanMove(const bool InEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetCursorUpCanMove");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_SetCursorUpCanMove Parms{};
 
@@ -663,10 +498,8 @@ void UWBP_GadgetCustom_Window_C::SetCursorUpCanMove(const bool InEnabled)
 
 void UWBP_GadgetCustom_Window_C::SetEnabledSlateGlobalInvalidation(const bool InEnabled)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetEnabledSlateGlobalInvalidation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_SetEnabledSlateGlobalInvalidation Parms{};
 
@@ -684,35 +517,13 @@ void UWBP_GadgetCustom_Window_C::SetEnabledSlateGlobalInvalidation(const bool In
 
 void UWBP_GadgetCustom_Window_C::SetFocusByPlayerIndex(class APlayerController* InPlayerController, int32 InSlotIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetFocusByPlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_SetFocusByPlayerIndex Parms{};
 
 	Parms.InPlayerController = InPlayerController;
 	Parms.InSlotIndex = InSlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.SetLightVer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsLight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_GadgetCustom_Window_C::SetLightVer(bool IsLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetLightVer");
-
-	Params::WBP_GadgetCustom_Window_C_SetLightVer Parms{};
-
-	Parms.IsLight = IsLight;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -725,10 +536,8 @@ void UWBP_GadgetCustom_Window_C::SetLightVer(bool IsLight)
 
 void UWBP_GadgetCustom_Window_C::SetPlayerControllerIndex(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "SetPlayerControllerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_SetPlayerControllerIndex Parms{};
 
@@ -745,10 +554,8 @@ void UWBP_GadgetCustom_Window_C::SetPlayerControllerIndex(int32 InPlayerIndex)
 
 void UWBP_GadgetCustom_Window_C::Setup(const struct FGadgetSelectWindowData& InWindowData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_Setup Parms{};
 
@@ -765,14 +572,30 @@ void UWBP_GadgetCustom_Window_C::Setup(const struct FGadgetSelectWindowData& InW
 
 void UWBP_GadgetCustom_Window_C::UpCrossButtonRegister(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "UpCrossButtonRegister");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	Params::WBP_GadgetCustom_Window_C_UpCrossButtonRegister Parms{};
 
 	Parms.InPlayerIndex = InPlayerIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GadgetCustom_Window.WBP_GadgetCustom_Window_C.UpdateDebugFilterText
+// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EGadgetCustomWindowFilterType     InFilterType                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_GadgetCustom_Window_C::UpdateDebugFilterText(const EGadgetCustomWindowFilterType InFilterType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
+
+	Params::WBP_GadgetCustom_Window_C_UpdateDebugFilterText Parms{};
+
+	Parms.InFilterType = InFilterType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -783,10 +606,8 @@ void UWBP_GadgetCustom_Window_C::UpCrossButtonRegister(int32 InPlayerIndex)
 
 void UWBP_GadgetCustom_Window_C::UpScrollAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "UpScrollAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -797,13 +618,11 @@ void UWBP_GadgetCustom_Window_C::UpScrollAnimFinished()
 
 void UWBP_GadgetCustom_Window_C::UpScrollAnimStarted()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCustom_Window_C", "UpScrollAnimStarted");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCustom_Window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

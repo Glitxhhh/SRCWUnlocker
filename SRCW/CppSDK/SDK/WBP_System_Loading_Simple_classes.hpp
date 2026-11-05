@@ -15,8 +15,7 @@
 #include "UnionUI_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_Loading_Simple.WBP_System_Loading_Simple_C
 // 0x0058 (0x0358 - 0x0300)
@@ -36,11 +35,11 @@ public:
 	class UWBP_System_Sub_LoadingSonic_C*         WBP_System_Sub_LoadingSonic;                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateLoadingPhase(int32 EndLoadingPhase);
+	void UpdateLoadingPhase(int32 EndLoadingPhase_UpdateLoadingPhase);
 	void StartLoading();
 	void Show();
-	void SetLoadingProgress(float LoadingProgress);
-	void SetLoadingGaugeParam(int32 LoadingPhaseNum, bool bSetProgress);
+	void SetLoadingProgress(float LoadingProgress_SetLoadingProgress);
+	void SetLoadingGaugeParam(int32 LoadingPhaseNum_SetLoadingGaugeParam, bool bSetProgress_SetLoadingGaugeParam);
 	void ProceedLoadingPhase();
 	void OnHideAnimationFinished();
 	void Hide();
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_Loading_Simple_C;
 
-}
-
+SDK_NAMESPACE_END

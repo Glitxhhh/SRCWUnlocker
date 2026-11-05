@@ -14,8 +14,7 @@
 #include "BP_MenuDriverPawn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.CreateDriver
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_MenuDriverPawn_C::CreateDriver(EDriverId ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "CreateDriver");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_CreateDriver Parms{};
 
@@ -44,10 +41,8 @@ void ABP_MenuDriverPawn_C::CreateDriver(EDriverId ID)
 
 void ABP_MenuDriverPawn_C::ExecuteUbergraph_BP_MenuDriverPawn(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "ExecuteUbergraph_BP_MenuDriverPawn");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MenuDriverPawn_C", "ExecuteUbergraph_BP_MenuDriverPawn", FuncInfo);
 
 	Params::BP_MenuDriverPawn_C_ExecuteUbergraph_BP_MenuDriverPawn Parms{};
 
@@ -64,10 +59,8 @@ void ABP_MenuDriverPawn_C::ExecuteUbergraph_BP_MenuDriverPawn(int32 EntryPoint)
 
 void ABP_MenuDriverPawn_C::LoadMasterDataAssets(EDriverId ID)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "LoadMasterDataAssets");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_LoadMasterDataAssets Parms{};
 
@@ -84,10 +77,8 @@ void ABP_MenuDriverPawn_C::LoadMasterDataAssets(EDriverId ID)
 
 void ABP_MenuDriverPawn_C::OnBlendOut_423A03694E2DDBCDB50531B12CDAB3A7(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnBlendOut_423A03694E2DDBCDB50531B12CDAB3A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnBlendOut_423A03694E2DDBCDB50531B12CDAB3A7 Parms{};
 
@@ -104,10 +95,8 @@ void ABP_MenuDriverPawn_C::OnBlendOut_423A03694E2DDBCDB50531B12CDAB3A7(class FNa
 
 void ABP_MenuDriverPawn_C::OnBlendOut_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnBlendOut_650D5ABC44CE98FE2AD3D39CE35BEAAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnBlendOut_650D5ABC44CE98FE2AD3D39CE35BEAAC Parms{};
 
@@ -124,10 +113,8 @@ void ABP_MenuDriverPawn_C::OnBlendOut_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FNa
 
 void ABP_MenuDriverPawn_C::OnCompleted_423A03694E2DDBCDB50531B12CDAB3A7(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnCompleted_423A03694E2DDBCDB50531B12CDAB3A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnCompleted_423A03694E2DDBCDB50531B12CDAB3A7 Parms{};
 
@@ -144,10 +131,8 @@ void ABP_MenuDriverPawn_C::OnCompleted_423A03694E2DDBCDB50531B12CDAB3A7(class FN
 
 void ABP_MenuDriverPawn_C::OnCompleted_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnCompleted_650D5ABC44CE98FE2AD3D39CE35BEAAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnCompleted_650D5ABC44CE98FE2AD3D39CE35BEAAC Parms{};
 
@@ -164,10 +149,8 @@ void ABP_MenuDriverPawn_C::OnCompleted_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FN
 
 void ABP_MenuDriverPawn_C::OnInterrupted_423A03694E2DDBCDB50531B12CDAB3A7(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnInterrupted_423A03694E2DDBCDB50531B12CDAB3A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnInterrupted_423A03694E2DDBCDB50531B12CDAB3A7 Parms{};
 
@@ -184,10 +167,8 @@ void ABP_MenuDriverPawn_C::OnInterrupted_423A03694E2DDBCDB50531B12CDAB3A7(class 
 
 void ABP_MenuDriverPawn_C::OnInterrupted_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnInterrupted_650D5ABC44CE98FE2AD3D39CE35BEAAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnInterrupted_650D5ABC44CE98FE2AD3D39CE35BEAAC Parms{};
 
@@ -204,10 +185,8 @@ void ABP_MenuDriverPawn_C::OnInterrupted_650D5ABC44CE98FE2AD3D39CE35BEAAC(class 
 
 void ABP_MenuDriverPawn_C::OnNotifyBegin_423A03694E2DDBCDB50531B12CDAB3A7(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnNotifyBegin_423A03694E2DDBCDB50531B12CDAB3A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnNotifyBegin_423A03694E2DDBCDB50531B12CDAB3A7 Parms{};
 
@@ -224,10 +203,8 @@ void ABP_MenuDriverPawn_C::OnNotifyBegin_423A03694E2DDBCDB50531B12CDAB3A7(class 
 
 void ABP_MenuDriverPawn_C::OnNotifyBegin_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnNotifyBegin_650D5ABC44CE98FE2AD3D39CE35BEAAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnNotifyBegin_650D5ABC44CE98FE2AD3D39CE35BEAAC Parms{};
 
@@ -244,10 +221,8 @@ void ABP_MenuDriverPawn_C::OnNotifyBegin_650D5ABC44CE98FE2AD3D39CE35BEAAC(class 
 
 void ABP_MenuDriverPawn_C::OnNotifyEnd_423A03694E2DDBCDB50531B12CDAB3A7(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnNotifyEnd_423A03694E2DDBCDB50531B12CDAB3A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnNotifyEnd_423A03694E2DDBCDB50531B12CDAB3A7 Parms{};
 
@@ -264,10 +239,8 @@ void ABP_MenuDriverPawn_C::OnNotifyEnd_423A03694E2DDBCDB50531B12CDAB3A7(class FN
 
 void ABP_MenuDriverPawn_C::OnNotifyEnd_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FName NotifyName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "OnNotifyEnd_650D5ABC44CE98FE2AD3D39CE35BEAAC");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_OnNotifyEnd_650D5ABC44CE98FE2AD3D39CE35BEAAC Parms{};
 
@@ -285,10 +258,8 @@ void ABP_MenuDriverPawn_C::OnNotifyEnd_650D5ABC44CE98FE2AD3D39CE35BEAAC(class FN
 
 void ABP_MenuDriverPawn_C::Play_Animation(EMenuDriverAnimationStateId StateId, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "Play Animation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_Play_Animation Parms{};
 
@@ -307,10 +278,8 @@ void ABP_MenuDriverPawn_C::Play_Animation(EMenuDriverAnimationStateId StateId, i
 
 void ABP_MenuDriverPawn_C::PlayFaceOverrideMontage(EMenuDriverAnimationStateId InStateId, int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "PlayFaceOverrideMontage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_PlayFaceOverrideMontage Parms{};
 
@@ -318,6 +287,18 @@ void ABP_MenuDriverPawn_C::PlayFaceOverrideMontage(EMenuDriverAnimationStateId I
 	Parms.InIndex = InIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MenuDriverPawn_C::ReceiveBeginPlay()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -330,10 +311,8 @@ void ABP_MenuDriverPawn_C::PlayFaceOverrideMontage(EMenuDriverAnimationStateId I
 
 void ABP_MenuDriverPawn_C::SetAnimationBoneSetting(bool UseBoneControl, const struct FRotator& NeckRotation, const struct FRotator& SpineRotation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetAnimationBoneSetting");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetAnimationBoneSetting Parms{};
 
@@ -352,10 +331,8 @@ void ABP_MenuDriverPawn_C::SetAnimationBoneSetting(bool UseBoneControl, const st
 
 void ABP_MenuDriverPawn_C::SetAnimationIsDriveIdleLowLoop(bool IsDriveIdleLowLoop)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetAnimationIsDriveIdleLowLoop");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetAnimationIsDriveIdleLowLoop Parms{};
 
@@ -372,10 +349,8 @@ void ABP_MenuDriverPawn_C::SetAnimationIsDriveIdleLowLoop(bool IsDriveIdleLowLoo
 
 void ABP_MenuDriverPawn_C::SetAnimClass(const class UClass* NewClass)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetAnimClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetAnimClass Parms{};
 
@@ -392,10 +367,8 @@ void ABP_MenuDriverPawn_C::SetAnimClass(const class UClass* NewClass)
 
 void ABP_MenuDriverPawn_C::SetEnableGFur(bool Condition)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetEnableGFur");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetEnableGFur Parms{};
 
@@ -414,10 +387,8 @@ void ABP_MenuDriverPawn_C::SetEnableGFur(bool Condition)
 
 void ABP_MenuDriverPawn_C::SetLightingChannels(bool Channel0, bool Channel1, bool Channel2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetLightingChannels");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetLightingChannels Parms{};
 
@@ -436,16 +407,35 @@ void ABP_MenuDriverPawn_C::SetLightingChannels(bool Channel0, bool Channel1, boo
 
 void ABP_MenuDriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "SetRideableStatusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_SetRideableStatusType Parms{};
 
 	Parms.StatusType = StatusType;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MenuDriverPawn.BP_MenuDriverPawn_C.SetSkeletalMeshLOD
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             InLOD                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_MenuDriverPawn_C::SetSkeletalMeshLOD(const int32 InLOD)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
+
+	Params::BP_MenuDriverPawn_C_SetSkeletalMeshLOD Parms{};
+
+	Parms.InLOD = InLOD;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -457,10 +447,8 @@ void ABP_MenuDriverPawn_C::SetRideableStatusType(ECarStatusType StatusType)
 
 void ABP_MenuDriverPawn_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const ESoundPan InSoundPan) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuDriverPawn_C", "PlayVoice");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuDriverPawn_C", FnName));
 
 	Params::BP_MenuDriverPawn_C_PlayVoice Parms{};
 
@@ -470,5 +458,5 @@ void ABP_MenuDriverPawn_C::PlayVoice(const EDriverVoiceId InDriverVoiceId, const
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

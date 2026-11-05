@@ -19,8 +19,8 @@
 #include "Slate_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UMG.Widget.ForceVolatile
 // 0x0001 (0x0001 - 0x0000)
@@ -7047,5 +7047,5 @@ public:
 };
 DUMPER7_ASSERTS_WidgetLayoutLibrary_SlotAsWrapBoxSlot;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

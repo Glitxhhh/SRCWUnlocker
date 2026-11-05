@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum mariaUploadPlugin.EMariaDevelopLogCategory
 // NumValues: 0x0007
@@ -223,5 +222,4 @@ public:
 };
 DUMPER7_ASSERTS_FMariaTwitchReward;
 
-}
-
+SDK_NAMESPACE_END

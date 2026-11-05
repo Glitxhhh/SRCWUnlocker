@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AudioMixer.EAudioDeviceChangedRole
 // NumValues: 0x0006
@@ -198,6 +197,15 @@ public:
 };
 DUMPER7_ASSERTS_FSubmixEffectEQBand;
 
+// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FSubmixEffectSubmixEQSettings final
+{
+public:
+	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSubmixEffectSubmixEQSettings;
+
 // ScriptStruct AudioMixer.AudioOutputDeviceInfo
 // 0x0048 (0x0048 - 0x0000)
 struct FAudioOutputDeviceInfo final
@@ -273,15 +281,6 @@ public:
 };
 DUMPER7_ASSERTS_FSubmixEffectDynamicsProcessorSettings;
 
-// ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FSubmixEffectSubmixEQSettings final
-{
-public:
-	TArray<struct FSubmixEffectEQBand>            EQBands;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSubmixEffectSubmixEQSettings;
-
 // ScriptStruct AudioMixer.SubmixEffectReverbSettings
 // 0x0040 (0x0040 - 0x0000)
 struct FSubmixEffectReverbSettings final
@@ -309,5 +308,4 @@ public:
 };
 DUMPER7_ASSERTS_FSubmixEffectReverbSettings;
 
-}
-
+SDK_NAMESPACE_END

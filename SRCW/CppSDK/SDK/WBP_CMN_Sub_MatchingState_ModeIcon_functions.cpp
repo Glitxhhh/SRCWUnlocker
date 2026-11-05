@@ -14,18 +14,15 @@
 #include "WBP_CMN_Sub_MatchingState_ModeIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_MatchingState_ModeIcon.WBP_CMN_Sub_MatchingState_ModeIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_Sub_MatchingState_ModeIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_ModeIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_ModeIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_Sub_MatchingState_ModeIcon_C::Construct()
 
 void UWBP_CMN_Sub_MatchingState_ModeIcon_C::ExecuteUbergraph_WBP_CMN_Sub_MatchingState_ModeIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_ModeIcon_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState_ModeIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_MatchingState_ModeIcon_C", "ExecuteUbergraph_WBP_CMN_Sub_MatchingState_ModeIcon", FuncInfo);
 
 	Params::WBP_CMN_Sub_MatchingState_ModeIcon_C_ExecuteUbergraph_WBP_CMN_Sub_MatchingState_ModeIcon Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_CMN_Sub_MatchingState_ModeIcon_C::ExecuteUbergraph_WBP_CMN_Sub_Matchin
 
 void UWBP_CMN_Sub_MatchingState_ModeIcon_C::PlayModeIconAnim(bool InAnim)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_ModeIcon_C", "PlayModeIconAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_ModeIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_ModeIcon_C_PlayModeIconAnim Parms{};
 
@@ -78,10 +71,8 @@ void UWBP_CMN_Sub_MatchingState_ModeIcon_C::PlayModeIconAnim(bool InAnim)
 
 void UWBP_CMN_Sub_MatchingState_ModeIcon_C::PlayOnlineModeIconAnim(bool bIsInAnim)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_ModeIcon_C", "PlayOnlineModeIconAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_ModeIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_ModeIcon_C_PlayOnlineModeIconAnim Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_CMN_Sub_MatchingState_ModeIcon_C::PlayOnlineModeIconAnim(bool bIsInAni
 
 void UWBP_CMN_Sub_MatchingState_ModeIcon_C::SetModeIcon(EOnlineGameMode InOnlineGameMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_MatchingState_ModeIcon_C", "SetModeIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_MatchingState_ModeIcon_C", FnName));
 
 	Params::WBP_CMN_Sub_MatchingState_ModeIcon_C_SetModeIcon Parms{};
 
@@ -110,5 +99,5 @@ void UWBP_CMN_Sub_MatchingState_ModeIcon_C::SetModeIcon(EOnlineGameMode InOnline
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

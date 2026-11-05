@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_CommonStageCameraUtility.BPFL_CommonStageCameraUtility_C
 // 0x0000 (0x0028 - 0x0028)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_CommonStageCameraUtility_C;
 
-}
-
+SDK_NAMESPACE_END

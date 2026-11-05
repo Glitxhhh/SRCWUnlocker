@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_MonsterTruckActor.BP_MonsterTruckActor_C.ExecuteUbergraph_BP_MonsterTruckActor
 // 0x0378 (0x0378 - 0x0000)
@@ -109,5 +109,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_MonsterTruckActor_C_OnCountDown;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

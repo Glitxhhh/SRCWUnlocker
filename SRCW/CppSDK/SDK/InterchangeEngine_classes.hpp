@@ -11,16 +11,15 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "InterchangeEngine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "InterchangeCore_structs.hpp"
 #include "InterchangeCore_classes.hpp"
-#include "InterchangeEngine_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class InterchangeEngine.InterchangeBlueprintPipelineBase
 // 0x0000 (0x00A8 - 0x00A8)
@@ -166,10 +165,9 @@ DUMPER7_ASSERTS_UInterchangePythonPipelineAsset;
 
 // Class InterchangeEngine.InterchangeSceneImportAsset
 // 0x0008 (0x0030 - 0x0028)
-class UInterchangeSceneImportAsset final : public UObject
+class UInterchangeSceneImportAsset final : public UObject, public IInterface_AssetUserData
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -184,6 +182,11 @@ public:
 	{
 		return GetDefaultObjImpl<UInterchangeSceneImportAsset>();
 	}
+
+public:
+	bool AddAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	class UAssetUserData* GetAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
+	bool HasAssetUserDataOfClass(TSubclassOf<class UAssetUserData> InUserDataClass);
 };
 DUMPER7_ASSERTS_UInterchangeSceneImportAsset;
 
@@ -338,5 +341,4 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeMeshUtilities;
 
-}
-
+SDK_NAMESPACE_END

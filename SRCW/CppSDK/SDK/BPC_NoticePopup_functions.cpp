@@ -14,8 +14,7 @@
 #include "BPC_NoticePopup_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_NoticePopup.BPC_NoticePopup_C.CheckFirstDisplayPage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_NoticePopup_C::CheckFirstDisplayPage(ETopInfoWidgetPageCategory* newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "CheckFirstDisplayPage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_CheckFirstDisplayPage Parms{};
 
@@ -45,16 +42,26 @@ void UBPC_NoticePopup_C::CheckFirstDisplayPage(ETopInfoWidgetPageCategory* newPa
 
 void UBPC_NoticePopup_C::DLCInfoClosed_CreateTopInfo(bool IsAccept)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "DLCInfoClosed_CreateTopInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_DLCInfoClosed_CreateTopInfo Parms{};
 
 	Parms.IsAccept = IsAccept;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_NoticePopup.BPC_NoticePopup_C.DuelInfoClosed_CreateTopInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_NoticePopup_C::DuelInfoClosed_CreateTopInfo()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -65,10 +72,8 @@ void UBPC_NoticePopup_C::DLCInfoClosed_CreateTopInfo(bool IsAccept)
 
 void UBPC_NoticePopup_C::ExecuteUbergraph_BPC_NoticePopup(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "ExecuteUbergraph_BPC_NoticePopup");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_NoticePopup_C", "ExecuteUbergraph_BPC_NoticePopup", FuncInfo);
 
 	Params::BPC_NoticePopup_C_ExecuteUbergraph_BPC_NoticePopup Parms{};
 
@@ -83,10 +88,8 @@ void UBPC_NoticePopup_C::ExecuteUbergraph_BPC_NoticePopup(int32 EntryPoint)
 
 void UBPC_NoticePopup_C::FestaInfoClosed_CreateTopInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "FestaInfoClosed_CreateTopInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -97,12 +100,33 @@ void UBPC_NoticePopup_C::FestaInfoClosed_CreateTopInfo()
 
 void UBPC_NoticePopup_C::ForceReleaseWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "ForceReleaseWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticePopup.BPC_NoticePopup_C.GetTopInfoWidget
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWBP_TopInfo_C**                  TopInfoWidget                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_NoticePopup_C::GetTopInfoWidget(class UWBP_TopInfo_C** TopInfoWidget, bool* IsValid)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
+
+	Params::BPC_NoticePopup_C_GetTopInfoWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TopInfoWidget != nullptr)
+		*TopInfoWidget = Parms.TopInfoWidget;
+
+	if (IsValid != nullptr)
+		*IsValid = Parms.IsValid;
 }
 
 
@@ -113,10 +137,8 @@ void UBPC_NoticePopup_C::ForceReleaseWidget()
 
 bool UBPC_NoticePopup_C::IsExistWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "IsExistWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_IsExistWidget Parms{};
 
@@ -133,10 +155,8 @@ bool UBPC_NoticePopup_C::IsExistWidget()
 
 void UBPC_NoticePopup_C::IsFestaForceStart(bool* IsDebugStart)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "IsFestaForceStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_IsFestaForceStart Parms{};
 
@@ -152,10 +172,8 @@ void UBPC_NoticePopup_C::IsFestaForceStart(bool* IsDebugStart)
 
 void UBPC_NoticePopup_C::LegendCompeInfoClosed_CreateTopInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "LegendCompeInfoClosed_CreateTopInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +184,8 @@ void UBPC_NoticePopup_C::LegendCompeInfoClosed_CreateTopInfo()
 
 void UBPC_NoticePopup_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +198,8 @@ void UBPC_NoticePopup_C::OnExitState()
 
 void UBPC_NoticePopup_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnFinishedFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_OnFinishedFade Parms{};
 
@@ -200,10 +214,8 @@ void UBPC_NoticePopup_C::OnFinishedFade(EUnionUIFadeDirection FadeDirection)
 
 void UBPC_NoticePopup_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -214,10 +226,8 @@ void UBPC_NoticePopup_C::OnInitState()
 
 void UBPC_NoticePopup_C::OnInitState_CreateTopInfoWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnInitState_CreateTopInfoWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +240,8 @@ void UBPC_NoticePopup_C::OnInitState_CreateTopInfoWidget()
 
 void UBPC_NoticePopup_C::OnQueryReadPlatformFriend(bool bWasSuccessful)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnQueryReadPlatformFriend");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_OnQueryReadPlatformFriend Parms{};
 
@@ -253,10 +261,8 @@ void UBPC_NoticePopup_C::OnQueryReadPlatformFriend(bool bWasSuccessful)
 
 void UBPC_NoticePopup_C::OnReceiveCheckFestaReward(const class FString& ApiName, const class FString& RequestData, const class FString& ResponseData, bool Error)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnReceiveCheckFestaReward");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_OnReceiveCheckFestaReward Parms{};
 
@@ -274,10 +280,8 @@ void UBPC_NoticePopup_C::OnReceiveCheckFestaReward(const class FString& ApiName,
 
 void UBPC_NoticePopup_C::OnReturnEventInfo_CreateTopInfoWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnReturnEventInfo_CreateTopInfoWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,10 +294,8 @@ void UBPC_NoticePopup_C::OnReturnEventInfo_CreateTopInfoWidget()
 
 void UBPC_NoticePopup_C::OnSaveEnd(ESaveDataStatus Status)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OnSaveEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_OnSaveEnd Parms{};
 
@@ -308,10 +310,8 @@ void UBPC_NoticePopup_C::OnSaveEnd(ESaveDataStatus Status)
 
 void UBPC_NoticePopup_C::OpenPFStore()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "OpenPFStore");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -322,10 +322,8 @@ void UBPC_NoticePopup_C::OpenPFStore()
 
 void UBPC_NoticePopup_C::ReleaseEventInfoManageActor()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "ReleaseEventInfoManageActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -336,10 +334,8 @@ void UBPC_NoticePopup_C::ReleaseEventInfoManageActor()
 
 void UBPC_NoticePopup_C::ReleaseTopInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "ReleaseTopInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -352,10 +348,8 @@ void UBPC_NoticePopup_C::ReleaseTopInfo()
 
 void UBPC_NoticePopup_C::Set_Footer_Visibility(bool IsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "Set Footer Visibility");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	Params::BPC_NoticePopup_C_Set_Footer_Visibility Parms{};
 
@@ -370,10 +364,20 @@ void UBPC_NoticePopup_C::Set_Footer_Visibility(bool IsVisible)
 
 void UBPC_NoticePopup_C::TopInfoClosed()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_NoticePopup.BPC_NoticePopup_C.TopInfoClosed_CreateDuelInfo
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_NoticePopup_C::TopInfoClosed_CreateDuelInfo()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -384,10 +388,8 @@ void UBPC_NoticePopup_C::TopInfoClosed()
 
 void UBPC_NoticePopup_C::TopInfoClosed_CreateFestaInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed_CreateFestaInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -398,10 +400,8 @@ void UBPC_NoticePopup_C::TopInfoClosed_CreateFestaInfo()
 
 void UBPC_NoticePopup_C::TopInfoClosed_CreateLegendCompeInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed_CreateLegendCompeInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -412,10 +412,8 @@ void UBPC_NoticePopup_C::TopInfoClosed_CreateLegendCompeInfo()
 
 void UBPC_NoticePopup_C::TopInfoClosed_CreateWorldMatchInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "TopInfoClosed_CreateWorldMatchInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -426,13 +424,11 @@ void UBPC_NoticePopup_C::TopInfoClosed_CreateWorldMatchInfo()
 
 void UBPC_NoticePopup_C::WorldMatchInfoClosed_CreateTopInfo()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_NoticePopup_C", "WorldMatchInfoClosed_CreateTopInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_NoticePopup_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

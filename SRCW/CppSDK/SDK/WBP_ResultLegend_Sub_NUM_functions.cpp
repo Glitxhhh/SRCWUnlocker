@@ -14,8 +14,7 @@
 #include "WBP_ResultLegend_Sub_NUM_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultLegend_Sub_NUM.WBP_ResultLegend_Sub_NUM_C.SetRateNumber
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultLegend_Sub_NUM_C::SetRateNumber(int32 InRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_NUM_C", "SetRateNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_NUM_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_NUM_C_SetRateNumber Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_ResultLegend_Sub_NUM_C::SetRateNumber(int32 InRate)
 
 void UWBP_ResultLegend_Sub_NUM_C::SetRateOnce(int32 InRate, class UImage* InRateGradeTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_NUM_C", "SetRateOnce");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_NUM_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_NUM_C_SetRateOnce Parms{};
 
@@ -66,10 +61,8 @@ void UWBP_ResultLegend_Sub_NUM_C::SetRateOnce(int32 InRate, class UImage* InRate
 
 void UWBP_ResultLegend_Sub_NUM_C::SetRateVisibilityForBackground(int32 InRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_NUM_C", "SetRateVisibilityForBackground");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_NUM_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_NUM_C_SetRateVisibilityForBackground Parms{};
 
@@ -78,5 +71,5 @@ void UWBP_ResultLegend_Sub_NUM_C::SetRateVisibilityForBackground(int32 InRate)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RecoveryRing_Exit.BP_RecoveryRing_Exit_C
 // 0x0008 (0x02E0 - 0x02D8)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RecoveryRing_Exit_C;
 
-}
-
+SDK_NAMESPACE_END

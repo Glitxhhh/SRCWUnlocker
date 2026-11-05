@@ -14,8 +14,7 @@
 #include "ABP_ItemDarkChaoPerformance_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_ItemDarkChaoPerformance.ABP_ItemDarkChaoPerformance_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_ItemDarkChaoPerformance_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoPerformance_C", FnName));
 
 	Params::ABP_ItemDarkChaoPerformance_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_ItemDarkChaoPerformance_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_ItemDarkChaoPerformance_C::AnimNotify_ReaveAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "AnimNotify_ReaveAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_ItemDarkChaoPerformance_C::AnimNotify_ReaveAnimation()
 
 void UABP_ItemDarkChaoPerformance_C::AnimNotify_ThrowStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "AnimNotify_ThrowStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_ItemDarkChaoPerformance_C::AnimNotify_ThrowStart()
 
 void UABP_ItemDarkChaoPerformance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ItemDarkChaoPerformance_AnimGraphNode_TransitionResult_04ACC9614B146A5DF3E0FE99F6F95ADD()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ItemDarkChaoPerformance_AnimGraphNode_TransitionResult_04ACC9614B146A5DF3E0FE99F6F95ADD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABP_ItemDarkChaoPerformance_C::EvaluateGraphExposedInputs_ExecuteUbergraph
 
 void UABP_ItemDarkChaoPerformance_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ItemDarkChaoPerformance_AnimGraphNode_TransitionResult_FA23C0794D8B4F515B839ABE8D6F316F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ItemDarkChaoPerformance_AnimGraphNode_TransitionResult_FA23C0794D8B4F515B839ABE8D6F316F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +90,8 @@ void UABP_ItemDarkChaoPerformance_C::EvaluateGraphExposedInputs_ExecuteUbergraph
 
 void UABP_ItemDarkChaoPerformance_C::ExecuteUbergraph_ABP_ItemDarkChaoPerformance(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemDarkChaoPerformance_C", "ExecuteUbergraph_ABP_ItemDarkChaoPerformance");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_ItemDarkChaoPerformance_C", "ExecuteUbergraph_ABP_ItemDarkChaoPerformance", FuncInfo);
 
 	Params::ABP_ItemDarkChaoPerformance_C_ExecuteUbergraph_ABP_ItemDarkChaoPerformance Parms{};
 
@@ -113,5 +100,5 @@ void UABP_ItemDarkChaoPerformance_C::ExecuteUbergraph_ABP_ItemDarkChaoPerformanc
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

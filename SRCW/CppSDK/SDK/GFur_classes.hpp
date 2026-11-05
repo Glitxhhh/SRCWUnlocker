@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "GFur_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "GFur_structs.hpp"
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class GFur.GFurComponent
 // 0x0240 (0x0790 - 0x0550)
@@ -106,5 +105,4 @@ public:
 };
 DUMPER7_ASSERTS_UFurSplines;
 
-}
-
+SDK_NAMESPACE_END

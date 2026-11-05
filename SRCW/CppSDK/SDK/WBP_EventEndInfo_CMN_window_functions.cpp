@@ -14,18 +14,27 @@
 #include "WBP_EventEndInfo_CMN_window_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.BndEvt__WBP_EventEndInfo_CMN_window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_EventEndInfo_CMN_window_C::BndEvt__WBP_EventEndInfo_CMN_window_MouseInteraction_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_EventEndInfo_CMN_window_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +47,8 @@ void UWBP_EventEndInfo_CMN_window_C::Construct()
 
 void UWBP_EventEndInfo_CMN_window_C::ExecuteUbergraph_WBP_EventEndInfo_CMN_window(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "ExecuteUbergraph_WBP_EventEndInfo_CMN_window");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_EventEndInfo_CMN_window_C", "ExecuteUbergraph_WBP_EventEndInfo_CMN_window", FuncInfo);
 
 	Params::WBP_EventEndInfo_CMN_window_C_ExecuteUbergraph_WBP_EventEndInfo_CMN_window Parms{};
 
@@ -56,10 +63,8 @@ void UWBP_EventEndInfo_CMN_window_C::ExecuteUbergraph_WBP_EventEndInfo_CMN_windo
 
 void UWBP_EventEndInfo_CMN_window_C::FinishedPointDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "FinishedPointDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +75,8 @@ void UWBP_EventEndInfo_CMN_window_C::FinishedPointDisplay()
 
 void UWBP_EventEndInfo_CMN_window_C::FinishedRankingDisplay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "FinishedRankingDisplay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,10 +90,8 @@ void UWBP_EventEndInfo_CMN_window_C::FinishedRankingDisplay()
 
 void UWBP_EventEndInfo_CMN_window_C::GetDateString(const struct FDateTime& DateTime, class FText* DateText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "GetDateString");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_GetDateString Parms{};
 
@@ -108,10 +109,8 @@ void UWBP_EventEndInfo_CMN_window_C::GetDateString(const struct FDateTime& DateT
 
 void UWBP_EventEndInfo_CMN_window_C::InAnimationEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "InAnimationEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -122,10 +121,8 @@ void UWBP_EventEndInfo_CMN_window_C::InAnimationEnd()
 
 void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +135,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnAcceptKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnAcceptKeyPressedWithPlayerId Parms{};
 
@@ -156,10 +151,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyPressedWithPlayerId(const int32&
 
 void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -172,10 +165,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnAcceptKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnAcceptKeyReleasedWithPlayerId Parms{};
 
@@ -190,10 +181,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnAcceptKeyReleasedWithPlayerId(const int32
 
 void UWBP_EventEndInfo_CMN_window_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -206,10 +195,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnBackKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnBackKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnBackKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnBackKeyPressedWithPlayerId Parms{};
 
@@ -224,10 +211,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnBackKeyPressedWithPlayerId(const int32& P
 
 void UWBP_EventEndInfo_CMN_window_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +225,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnBackKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnBackKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnBackKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnBackKeyReleasedWithPlayerId Parms{};
 
@@ -258,10 +241,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnBackKeyReleasedWithPlayerId(const int32& 
 
 void UWBP_EventEndInfo_CMN_window_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +255,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnDownKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnDownKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnDownKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnDownKeyPressedWithPlayerId Parms{};
 
@@ -292,10 +271,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnDownKeyPressedWithPlayerId(const int32& P
 
 void UWBP_EventEndInfo_CMN_window_C::OnDownKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnDownKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +285,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnDownKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnDownKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnDownKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnDownKeyReleasedWithPlayerId Parms{};
 
@@ -326,10 +301,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnDownKeyReleasedWithPlayerId(const int32& 
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -342,10 +315,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonLeftPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnFaceButtonLeftPressedWithPlayerId Parms{};
 
@@ -360,10 +331,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftPressedWithPlayerId(const i
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonLeftReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -376,10 +345,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonLeftReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnFaceButtonLeftReleasedWithPlayerId Parms{};
 
@@ -394,10 +361,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonLeftReleasedWithPlayerId(const 
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -410,10 +375,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonTopPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnFaceButtonTopPressedWithPlayerId Parms{};
 
@@ -428,10 +391,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopPressedWithPlayerId(const in
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonTopReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -444,10 +405,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnFaceButtonTopReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnFaceButtonTopReleasedWithPlayerId Parms{};
 
@@ -462,10 +421,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnFaceButtonTopReleasedWithPlayerId(const i
 
 void UWBP_EventEndInfo_CMN_window_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -476,10 +433,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnInitialized()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -492,10 +447,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftKeyPressedWithPlayerId Parms{};
 
@@ -510,10 +463,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyPressedWithPlayerId(const int32& P
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -526,10 +477,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftKeyReleasedWithPlayerId Parms{};
 
@@ -544,10 +493,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftKeyReleasedWithPlayerId(const int32& 
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -560,10 +507,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftShoulderPressedWithPlayerId Parms{};
 
@@ -578,10 +523,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderPressedWithPlayerId(const int
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -594,10 +537,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftShoulderReleasedWithPlayerId Parms{};
 
@@ -614,10 +555,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftShoulderReleasedWithPlayerId(const in
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftStickAxis Parms{};
 
@@ -635,10 +574,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickAxis(const struct FVector2D& Val
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftStickAxisWithPlayerId Parms{};
 
@@ -654,10 +591,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickAxisWithPlayerId(const struct FV
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -670,10 +605,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftStickButtonPressedWithPlayerId Parms{};
 
@@ -688,10 +621,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonPressedWithPlayerId(const 
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -704,10 +635,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnLeftStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnLeftStickButtonReleasedWithPlayerId Parms{};
 
@@ -722,10 +651,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnLeftStickButtonReleasedWithPlayerId(const
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -738,10 +665,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightKeyPressedWithPlayerId Parms{};
 
@@ -756,10 +681,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightKeyPressedWithPlayerId(const int32& 
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -772,10 +695,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightKeyReleasedWithPlayerId Parms{};
 
@@ -790,10 +711,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightKeyReleasedWithPlayerId(const int32&
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -806,10 +725,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightShoulderPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightShoulderPressedWithPlayerId Parms{};
 
@@ -824,10 +741,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderPressedWithPlayerId(const in
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightShoulderReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -840,10 +755,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightShoulderReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightShoulderReleasedWithPlayerId Parms{};
 
@@ -860,10 +773,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightShoulderReleasedWithPlayerId(const i
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickAxis(const struct FVector2D& Value)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickAxis");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightStickAxis Parms{};
 
@@ -881,10 +792,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickAxis(const struct FVector2D& Va
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickAxisWithPlayerId(const struct FVector2D& Value, const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickAxisWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightStickAxisWithPlayerId Parms{};
 
@@ -900,10 +809,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickAxisWithPlayerId(const struct F
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickButtonPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -916,10 +823,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickButtonPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightStickButtonPressedWithPlayerId Parms{};
 
@@ -934,10 +839,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonPressedWithPlayerId(const
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickButtonReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -950,10 +853,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnRightStickButtonReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnRightStickButtonReleasedWithPlayerId Parms{};
 
@@ -968,10 +869,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnRightStickButtonReleasedWithPlayerId(cons
 
 void UWBP_EventEndInfo_CMN_window_C::OnSpecialPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnSpecialPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -984,10 +883,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnSpecialPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnSpecialPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnSpecialPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnSpecialPressedWithPlayerId Parms{};
 
@@ -1002,10 +899,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnSpecialPressedWithPlayerId(const int32& P
 
 void UWBP_EventEndInfo_CMN_window_C::OnSpecialReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnSpecialReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1018,10 +913,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnSpecialReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnSpecialReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnSpecialReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnSpecialReleasedWithPlayerId Parms{};
 
@@ -1036,10 +929,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnSpecialReleasedWithPlayerId(const int32& 
 
 void UWBP_EventEndInfo_CMN_window_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1052,10 +943,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnUpKeyPressed()
 
 void UWBP_EventEndInfo_CMN_window_C::OnUpKeyPressedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnUpKeyPressedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnUpKeyPressedWithPlayerId Parms{};
 
@@ -1070,10 +959,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnUpKeyPressedWithPlayerId(const int32& Pla
 
 void UWBP_EventEndInfo_CMN_window_C::OnUpKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnUpKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1086,10 +973,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnUpKeyReleased()
 
 void UWBP_EventEndInfo_CMN_window_C::OnUpKeyReleasedWithPlayerId(const int32& PlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OnUpKeyReleasedWithPlayerId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_OnUpKeyReleasedWithPlayerId Parms{};
 
@@ -1104,10 +989,8 @@ void UWBP_EventEndInfo_CMN_window_C::OnUpKeyReleasedWithPlayerId(const int32& Pl
 
 void UWBP_EventEndInfo_CMN_window_C::OutAnimationEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "OutAnimationEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1120,14 +1003,30 @@ void UWBP_EventEndInfo_CMN_window_C::OutAnimationEnd()
 
 void UWBP_EventEndInfo_CMN_window_C::Set_Event_Name(const class FText& FestaName)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "Set Event Name");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_Set_Event_Name Parms{};
 
 	Parms.FestaName = std::move(FestaName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.SetFestaRankingType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFestaRankingType                       InRankingType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EventEndInfo_CMN_window_C::SetFestaRankingType(EFestaRankingType InRankingType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
+
+	Params::WBP_EventEndInfo_CMN_window_C_SetFestaRankingType Parms{};
+
+	Parms.InRankingType = InRankingType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1140,34 +1039,12 @@ void UWBP_EventEndInfo_CMN_window_C::Set_Event_Name(const class FText& FestaName
 
 void UWBP_EventEndInfo_CMN_window_C::SetRankingLabelText(const class FText& RankingLavelText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetRankingLabelText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_SetRankingLabelText Parms{};
 
 	Parms.RankingLavelText = std::move(RankingLavelText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_EventEndInfo_CMN_window.WBP_EventEndInfo_CMN_window_C.SetRankingTitleText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      TitleName                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_EventEndInfo_CMN_window_C::SetRankingTitleText(const class FText& TitleName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetRankingTitleText");
-
-	Params::WBP_EventEndInfo_CMN_window_C_SetRankingTitleText Parms{};
-
-	Parms.TitleName = std::move(TitleName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1181,10 +1058,8 @@ void UWBP_EventEndInfo_CMN_window_C::SetRankingTitleText(const class FText& Titl
 
 void UWBP_EventEndInfo_CMN_window_C::SetResult(int32 Ranking_0, int32 Point_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_SetResult Parms{};
 
@@ -1199,19 +1074,17 @@ void UWBP_EventEndInfo_CMN_window_C::SetResult(int32 Ranking_0, int32 Point_0)
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 endTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTime, const struct FDateTime& endTime)
+void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTime, const struct FDateTime& EndTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetSchedule");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_SetSchedule Parms{};
 
 	Parms.StartTime = std::move(StartTime);
-	Parms.endTime = std::move(endTime);
+	Parms.EndTime = std::move(EndTime);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1222,10 +1095,8 @@ void UWBP_EventEndInfo_CMN_window_C::SetSchedule(const struct FDateTime& StartTi
 
 void UWBP_EventEndInfo_CMN_window_C::SetSeasonNumber()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetSeasonNumber");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1238,10 +1109,8 @@ void UWBP_EventEndInfo_CMN_window_C::SetSeasonNumber()
 
 void UWBP_EventEndInfo_CMN_window_C::SetTextureBG(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SetTextureBG");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_SetTextureBG Parms{};
 
@@ -1258,10 +1127,8 @@ void UWBP_EventEndInfo_CMN_window_C::SetTextureBG(class UTexture2D* Texture)
 
 void UWBP_EventEndInfo_CMN_window_C::SilentFocusReady(bool bOnce)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EventEndInfo_CMN_window_C", "SilentFocusReady");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_EventEndInfo_CMN_window_C", FnName));
 
 	Params::WBP_EventEndInfo_CMN_window_C_SilentFocusReady Parms{};
 
@@ -1270,5 +1137,5 @@ void UWBP_EventEndInfo_CMN_window_C::SilentFocusReady(bool bOnce)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

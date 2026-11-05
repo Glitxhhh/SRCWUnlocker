@@ -14,8 +14,55 @@
 #include "WBP_CourseSelect_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindDefaultButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindDefaultButton()
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindFriendMatchButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindFriendMatchButton()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindGrandPrixButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindGrandPrixButton()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CourseSelect.WBP_CourseSelect_C.BindRivalDuelButton
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_CourseSelect_C::BindRivalDuelButton()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 
 // Function WBP_CourseSelect.WBP_CourseSelect_C.CalcRandomStageIndexBP
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -25,10 +72,8 @@ namespace SDK
 
 void UWBP_CourseSelect_C::CalcRandomStageIndexBP(EGrandPrixId GrandPrix, int32* Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "CalcRandomStageIndexBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_CalcRandomStageIndexBP Parms{};
 
@@ -46,10 +91,8 @@ void UWBP_CourseSelect_C::CalcRandomStageIndexBP(EGrandPrixId GrandPrix, int32* 
 
 void UWBP_CourseSelect_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,10 +103,8 @@ void UWBP_CourseSelect_C::Construct()
 
 void UWBP_CourseSelect_C::DebugOpenGrandPrix()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "DebugOpenGrandPrix");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,10 +115,8 @@ void UWBP_CourseSelect_C::DebugOpenGrandPrix()
 
 void UWBP_CourseSelect_C::DeselectSelectedEmblem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "DeselectSelectedEmblem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +130,8 @@ void UWBP_CourseSelect_C::DeselectSelectedEmblem()
 
 class UWidget* UWBP_CourseSelect_C::DoFlirstGPIconNavigationLeft(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "DoFlirstGPIconNavigationLeft");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_DoFlirstGPIconNavigationLeft Parms{};
 
@@ -111,10 +148,8 @@ class UWidget* UWBP_CourseSelect_C::DoFlirstGPIconNavigationLeft(EUINavigation N
 
 void UWBP_CourseSelect_C::DoRandomStageSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "DoRandomStageSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -127,10 +162,8 @@ void UWBP_CourseSelect_C::DoRandomStageSelect()
 
 void UWBP_CourseSelect_C::ExecuteUbergraph_WBP_CourseSelect(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "ExecuteUbergraph_WBP_CourseSelect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_C", "ExecuteUbergraph_WBP_CourseSelect", FuncInfo);
 
 	Params::WBP_CourseSelect_C_ExecuteUbergraph_WBP_CourseSelect Parms{};
 
@@ -145,10 +178,8 @@ void UWBP_CourseSelect_C::ExecuteUbergraph_WBP_CourseSelect(int32 EntryPoint)
 
 void UWBP_CourseSelect_C::FinalizeSubCommands()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "FinalizeSubCommands");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -159,10 +190,8 @@ void UWBP_CourseSelect_C::FinalizeSubCommands()
 
 void UWBP_CourseSelect_C::Focus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "Focus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -175,10 +204,8 @@ void UWBP_CourseSelect_C::Focus()
 
 void UWBP_CourseSelect_C::GetRandomGrandprixBP(EGrandPrixId* OutItem)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "GetRandomGrandprixBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_GetRandomGrandprixBP Parms{};
 
@@ -196,10 +223,8 @@ void UWBP_CourseSelect_C::GetRandomGrandprixBP(EGrandPrixId* OutItem)
 
 void UWBP_CourseSelect_C::Init(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "Init");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_Init Parms{};
 
@@ -214,10 +239,8 @@ void UWBP_CourseSelect_C::Init(EGameModeId InGameModeId)
 
 void UWBP_CourseSelect_C::InitStageDef()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "InitStageDef");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -228,10 +251,8 @@ void UWBP_CourseSelect_C::InitStageDef()
 
 void UWBP_CourseSelect_C::InitSubCommands()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "InitSubCommands");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -244,10 +265,8 @@ void UWBP_CourseSelect_C::InitSubCommands()
 
 bool UWBP_CourseSelect_C::IsTimeTrialEnabled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "IsTimeTrialEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_IsTimeTrialEnabled Parms{};
 
@@ -265,10 +284,8 @@ bool UWBP_CourseSelect_C::IsTimeTrialEnabled()
 
 void UWBP_CourseSelect_C::On3PieceStageIconFocusEvent_Event_0(EStageId StageId, int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "On3PieceStageIconFocusEvent_Event_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_On3PieceStageIconFocusEvent_Event_0 Parms{};
 
@@ -284,10 +301,8 @@ void UWBP_CourseSelect_C::On3PieceStageIconFocusEvent_Event_0(EStageId StageId, 
 
 void UWBP_CourseSelect_C::OnClassSelectButtonClicked()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnClassSelectButtonClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -300,10 +315,8 @@ void UWBP_CourseSelect_C::OnClassSelectButtonClicked()
 
 void UWBP_CourseSelect_C::OnDecisionStageId(EStageId SelectedStageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnDecisionStageId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnDecisionStageId Parms{};
 
@@ -318,10 +331,8 @@ void UWBP_CourseSelect_C::OnDecisionStageId(EStageId SelectedStageId)
 
 void UWBP_CourseSelect_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -334,10 +345,8 @@ void UWBP_CourseSelect_C::OnExitState()
 
 void UWBP_CourseSelect_C::OnFaceButtonLeftPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnFaceButtonLeftPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnFaceButtonLeftPressed Parms{};
 
@@ -354,10 +363,8 @@ void UWBP_CourseSelect_C::OnFaceButtonLeftPressed(class UObject* Object)
 
 void UWBP_CourseSelect_C::OnFaceButtonTopPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnFaceButtonTopPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnFaceButtonTopPressed Parms{};
 
@@ -374,10 +381,8 @@ void UWBP_CourseSelect_C::OnFaceButtonTopPressed(class UObject* Object)
 
 void UWBP_CourseSelect_C::OnGadgetCustomClicked(class UUnionUIButtonBaseCore* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGadgetCustomClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGadgetCustomClicked Parms{};
 
@@ -394,10 +399,8 @@ void UWBP_CourseSelect_C::OnGadgetCustomClicked(class UUnionUIButtonBaseCore* Bu
 
 void UWBP_CourseSelect_C::OnGPCancel(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGPCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGPCancel Parms{};
 
@@ -414,10 +417,8 @@ void UWBP_CourseSelect_C::OnGPCancel(class UUnionUIButtonBase* Button)
 
 void UWBP_CourseSelect_C::OnGPDecision_CourseSelect(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGPDecision_CourseSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGPDecision_CourseSelect Parms{};
 
@@ -434,10 +435,8 @@ void UWBP_CourseSelect_C::OnGPDecision_CourseSelect(class UUnionUIButtonBase* Bu
 
 void UWBP_CourseSelect_C::OnGPDecision_GrandprixSelect(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGPDecision_GrandprixSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGPDecision_GrandprixSelect Parms{};
 
@@ -454,10 +453,8 @@ void UWBP_CourseSelect_C::OnGPDecision_GrandprixSelect(class UUnionUIButtonBase*
 
 void UWBP_CourseSelect_C::OnGPDecision_TimeTrial(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGPDecision_TimeTrial");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGPDecision_TimeTrial Parms{};
 
@@ -474,10 +471,8 @@ void UWBP_CourseSelect_C::OnGPDecision_TimeTrial(class UUnionUIButtonBase* Butto
 
 void UWBP_CourseSelect_C::OnGPFocusEvent_Event(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnGPFocusEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnGPFocusEvent_Event Parms{};
 
@@ -492,10 +487,8 @@ void UWBP_CourseSelect_C::OnGPFocusEvent_Event(class UUnionUIButtonBase* Button)
 
 void UWBP_CourseSelect_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -508,10 +501,8 @@ void UWBP_CourseSelect_C::OnInitialized()
 
 void UWBP_CourseSelect_C::OnInitState(class AActor* OwnerSequence)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnInitState Parms{};
 
@@ -526,10 +517,8 @@ void UWBP_CourseSelect_C::OnInitState(class AActor* OwnerSequence)
 
 void UWBP_CourseSelect_C::OnInputChangedFromMouseBP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnInputChangedFromMouseBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -542,10 +531,8 @@ void UWBP_CourseSelect_C::OnInputChangedFromMouseBP()
 
 void UWBP_CourseSelect_C::OnLeftShoulderPressed(class UObject* Object)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnLeftShoulderPressed Parms{};
 
@@ -560,10 +547,8 @@ void UWBP_CourseSelect_C::OnLeftShoulderPressed(class UObject* Object)
 
 void UWBP_CourseSelect_C::OnReadyCanceled()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnReadyCanceled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -576,10 +561,8 @@ void UWBP_CourseSelect_C::OnReadyCanceled()
 
 void UWBP_CourseSelect_C::OnRightShoulderEvent_Event(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnRightShoulderEvent_Event");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnRightShoulderEvent_Event Parms{};
 
@@ -596,10 +579,8 @@ void UWBP_CourseSelect_C::OnRightShoulderEvent_Event(class UUnionUIButtonBase* B
 
 void UWBP_CourseSelect_C::OnRivalSelectClicked(class UUnionUIButtonBaseCore* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnRivalSelectClicked");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnRivalSelectClicked Parms{};
 
@@ -614,10 +595,8 @@ void UWBP_CourseSelect_C::OnRivalSelectClicked(class UUnionUIButtonBaseCore* But
 
 void UWBP_CourseSelect_C::OnStageCancelEvent_Event_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnStageCancelEvent_Event_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -631,10 +610,8 @@ void UWBP_CourseSelect_C::OnStageCancelEvent_Event_0()
 
 void UWBP_CourseSelect_C::OnStageIconFocusEvent_Event_0(int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnStageIconFocusEvent_Event_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnStageIconFocusEvent_Event_0 Parms{};
 
@@ -652,10 +629,8 @@ void UWBP_CourseSelect_C::OnStageIconFocusEvent_Event_0(int32 PanelIndex, int32 
 
 void UWBP_CourseSelect_C::OnStoreShortcutPressed(EStageId StageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "OnStoreShortcutPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_OnStoreShortcutPressed Parms{};
 
@@ -670,10 +645,8 @@ void UWBP_CourseSelect_C::OnStoreShortcutPressed(EStageId StageId)
 
 void UWBP_CourseSelect_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -686,10 +659,8 @@ void UWBP_CourseSelect_C::PlayInAnimation()
 
 void UWBP_CourseSelect_C::Set_Control_Button_Opacity(double Render_Opacity)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "Set Control Button Opacity");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_Set_Control_Button_Opacity Parms{};
 
@@ -706,10 +677,8 @@ void UWBP_CourseSelect_C::Set_Control_Button_Opacity(double Render_Opacity)
 
 void UWBP_CourseSelect_C::SetAndUpdateForceOpened(double OpenThreshold)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "SetAndUpdateForceOpened");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_SetAndUpdateForceOpened Parms{};
 
@@ -726,10 +695,8 @@ void UWBP_CourseSelect_C::SetAndUpdateForceOpened(double OpenThreshold)
 
 void UWBP_CourseSelect_C::SetEnableGPFocusSound(bool bEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "SetEnableGPFocusSound");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_SetEnableGPFocusSound Parms{};
 
@@ -746,10 +713,8 @@ void UWBP_CourseSelect_C::SetEnableGPFocusSound(bool bEnable)
 
 void UWBP_CourseSelect_C::SetFocusMenu(class APlayerController* PlayerController)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "SetFocusMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_SetFocusMenu Parms{};
 
@@ -764,10 +729,8 @@ void UWBP_CourseSelect_C::SetFocusMenu(class APlayerController* PlayerController
 
 void UWBP_CourseSelect_C::SetupTimeTrialButton()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "SetupTimeTrialButton");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -782,10 +745,8 @@ void UWBP_CourseSelect_C::SetupTimeTrialButton()
 
 void UWBP_CourseSelect_C::Update3Stage(EGrandPrixId GrandPrixId, double OpenThreshold, TArray<EStageId>* Output_Get)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "Update3Stage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_Update3Stage Parms{};
 
@@ -808,10 +769,8 @@ void UWBP_CourseSelect_C::Update3Stage(EGrandPrixId GrandPrixId, double OpenThre
 
 void UWBP_CourseSelect_C::UpdateButtonAnimationState(class UUnionUIButtonBase* CurrentSelectedButton, class UUnionUIButtonStandard* UpdateTargetButton, int32 UpdateTargetButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "UpdateButtonAnimationState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_UpdateButtonAnimationState Parms{};
 
@@ -830,10 +789,8 @@ void UWBP_CourseSelect_C::UpdateButtonAnimationState(class UUnionUIButtonBase* C
 
 void UWBP_CourseSelect_C::UpdateRivalSelectUI(class AGrandPrixSequence* GrandPrixSequence)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "UpdateRivalSelectUI");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	Params::WBP_CourseSelect_C_UpdateRivalSelectUI Parms{};
 
@@ -848,10 +805,8 @@ void UWBP_CourseSelect_C::UpdateRivalSelectUI(class AGrandPrixSequence* GrandPri
 
 void UWBP_CourseSelect_C::UpdateSpeedClass()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "UpdateSpeedClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -862,10 +817,8 @@ void UWBP_CourseSelect_C::UpdateSpeedClass()
 
 void UWBP_CourseSelect_C::UpdateStages()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "UpdateStages");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -876,13 +829,11 @@ void UWBP_CourseSelect_C::UpdateStages()
 
 void UWBP_CourseSelect_C::UpdateTrophy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_C", "UpdateTrophy");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

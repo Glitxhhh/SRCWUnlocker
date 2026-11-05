@@ -14,8 +14,7 @@
 #include "SubstanceCore_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SubstanceCore.SubstanceGraphInstance.CreateMaterial
 // (Final, Native, Public, BlueprintCallable)
@@ -1233,5 +1232,5 @@ void USubstanceUtility::SyncRendering(class USubstanceGraphInstance* InstancesTo
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

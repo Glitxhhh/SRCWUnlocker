@@ -14,8 +14,7 @@
 #include "WBP_AddCharacterInfo_Sub_Ring_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_AddCharacterInfo_Sub_Ring.WBP_AddCharacterInfo_Sub_Ring_C.EditTexture
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_AddCharacterInfo_Sub_Ring_C::EditTexture(class UTexture2D* Texture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_Sub_Ring_C", "EditTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_Sub_Ring_C", FnName));
 
 	Params::WBP_AddCharacterInfo_Sub_Ring_C_EditTexture Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_AddCharacterInfo_Sub_Ring_C::EditTexture(class UTexture2D* Texture)
 
 void UWBP_AddCharacterInfo_Sub_Ring_C::ExecuteUbergraph_WBP_AddCharacterInfo_Sub_Ring(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_Sub_Ring_C", "ExecuteUbergraph_WBP_AddCharacterInfo_Sub_Ring");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_AddCharacterInfo_Sub_Ring_C", "ExecuteUbergraph_WBP_AddCharacterInfo_Sub_Ring", FuncInfo);
 
 	Params::WBP_AddCharacterInfo_Sub_Ring_C_ExecuteUbergraph_WBP_AddCharacterInfo_Sub_Ring Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_AddCharacterInfo_Sub_Ring_C::ExecuteUbergraph_WBP_AddCharacterInfo_Sub
 
 void UWBP_AddCharacterInfo_Sub_Ring_C::SetTexture(const class UTexture2D*& InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_Sub_Ring_C", "SetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_Sub_Ring_C", FnName));
 
 	Params::WBP_AddCharacterInfo_Sub_Ring_C_SetTexture Parms{};
 
@@ -82,13 +75,11 @@ void UWBP_AddCharacterInfo_Sub_Ring_C::SetTexture(const class UTexture2D*& InTex
 
 void UWBP_AddCharacterInfo_Sub_Ring_C::Start_in_Animation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AddCharacterInfo_Sub_Ring_C", "Start in Animation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_AddCharacterInfo_Sub_Ring_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

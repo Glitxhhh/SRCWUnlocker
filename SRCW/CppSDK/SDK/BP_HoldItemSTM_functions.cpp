@@ -14,8 +14,7 @@
 #include "BP_HoldItemSTM_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_HoldItemSTM.BP_HoldItemSTM_C.Create
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_HoldItemSTM_C::Create(const struct FHoldItemCreateParam& Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "Create");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	Params::BP_HoldItemSTM_C_Create Parms{};
 
@@ -44,10 +41,8 @@ void ABP_HoldItemSTM_C::Create(const struct FHoldItemCreateParam& Param)
 
 void ABP_HoldItemSTM_C::CreateItem(const struct FHoldItemCreateParam& In_Param)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "CreateItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	Params::BP_HoldItemSTM_C_CreateItem Parms{};
 
@@ -62,10 +57,8 @@ void ABP_HoldItemSTM_C::CreateItem(const struct FHoldItemCreateParam& In_Param)
 
 void ABP_HoldItemSTM_C::Destroy()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "Destroy");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void ABP_HoldItemSTM_C::Destroy()
 
 void ABP_HoldItemSTM_C::DestroyItem()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "DestroyItem");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void ABP_HoldItemSTM_C::DestroyItem()
 
 void ABP_HoldItemSTM_C::ExecuteUbergraph_BP_HoldItemSTM(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "ExecuteUbergraph_BP_HoldItemSTM");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_HoldItemSTM_C", "ExecuteUbergraph_BP_HoldItemSTM", FuncInfo);
 
 	Params::BP_HoldItemSTM_C_ExecuteUbergraph_BP_HoldItemSTM Parms{};
 
@@ -110,10 +99,8 @@ void ABP_HoldItemSTM_C::ExecuteUbergraph_BP_HoldItemSTM(int32 EntryPoint)
 
 void ABP_HoldItemSTM_C::PlayGetEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "PlayGetEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void ABP_HoldItemSTM_C::PlayGetEffect()
 
 void ABP_HoldItemSTM_C::PlayLuckyItemEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "PlayLuckyItemEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void ABP_HoldItemSTM_C::PlayLuckyItemEffect()
 
 void ABP_HoldItemSTM_C::PlayRareItemEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "PlayRareItemEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +135,8 @@ void ABP_HoldItemSTM_C::PlayRareItemEffect()
 
 void ABP_HoldItemSTM_C::PlayUseEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "PlayUseEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,10 +147,8 @@ void ABP_HoldItemSTM_C::PlayUseEffect()
 
 void ABP_HoldItemSTM_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -184,10 +163,8 @@ void ABP_HoldItemSTM_C::ReceiveBeginPlay()
 
 void ABP_HoldItemSTM_C::SetLightChannels(bool Channel0, bool Channel1, bool Channel2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "SetLightChannels");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	Params::BP_HoldItemSTM_C_SetLightChannels Parms{};
 
@@ -204,10 +181,8 @@ void ABP_HoldItemSTM_C::SetLightChannels(bool Channel0, bool Channel1, bool Chan
 
 void ABP_HoldItemSTM_C::Use()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "Use");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -220,10 +195,8 @@ void ABP_HoldItemSTM_C::Use()
 
 class UMeshComponent* ABP_HoldItemSTM_C::GetMeshComponent() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HoldItemSTM_C", "GetMeshComponent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_HoldItemSTM_C", FnName));
 
 	Params::BP_HoldItemSTM_C_GetMeshComponent Parms{};
 
@@ -232,5 +205,5 @@ class UMeshComponent* ABP_HoldItemSTM_C::GetMeshComponent() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

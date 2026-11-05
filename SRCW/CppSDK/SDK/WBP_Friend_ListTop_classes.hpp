@@ -11,14 +11,13 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_ListTop.WBP_Friend_ListTop_C
 // 0x0050 (0x03E8 - 0x0398)
@@ -94,5 +93,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_ListTop_C;
 
-}
-
+SDK_NAMESPACE_END

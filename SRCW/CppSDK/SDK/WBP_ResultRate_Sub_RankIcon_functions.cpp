@@ -14,8 +14,7 @@
 #include "WBP_ResultRate_Sub_RankIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultRate_Sub_RankIcon.WBP_ResultRate_Sub_RankIcon_C.ExecuteUbergraph_WBP_ResultRate_Sub_RankIcon
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_ResultRate_Sub_RankIcon_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultRate_Sub_RankIcon_C", "ExecuteUbergraph_WBP_ResultRate_Sub_RankIcon", FuncInfo);
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_ExecuteUbergraph_WBP_ResultRate_Sub_RankIcon Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::ExecuteUbergraph_WBP_ResultRate_Sub_RankIco
 
 void UWBP_ResultRate_Sub_RankIcon_C::OnLoaded_C50783C54ECCC47D92BB0CA0355D1832(class UObject* Loaded)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "OnLoaded_C50783C54ECCC47D92BB0CA0355D1832");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_OnLoaded_C50783C54ECCC47D92BB0CA0355D1832 Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::OnLoaded_C50783C54ECCC47D92BB0CA0355D1832(c
 
 void UWBP_ResultRate_Sub_RankIcon_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_PreConstruct Parms{};
 
@@ -84,14 +77,32 @@ void UWBP_ResultRate_Sub_RankIcon_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_ResultRate_Sub_RankIcon_C::Set_Rank_SText_Impl(const class FText& Num)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "Set Rank SText Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_Set_Rank_SText_Impl Parms{};
 
 	Parms.Num = std::move(Num);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ResultRate_Sub_RankIcon.WBP_ResultRate_Sub_RankIcon_C.SetDuelCompePoint
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const EDuelCompeRank                    InDuelCompeRank                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const int32                             InRoundPoint                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ResultRate_Sub_RankIcon_C::SetDuelCompePoint(const EDuelCompeRank InDuelCompeRank, const int32 InRoundPoint)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
+
+	Params::WBP_ResultRate_Sub_RankIcon_C_SetDuelCompePoint Parms{};
+
+	Parms.InDuelCompeRank = InDuelCompeRank;
+	Parms.InRoundPoint = InRoundPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -104,10 +115,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::Set_Rank_SText_Impl(const class FText& Num)
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetLegendCompeGrade(ELegendCompeRateGrade gradeValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetLegendCompeGrade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_SetLegendCompeGrade Parms{};
 
@@ -122,10 +131,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetLegendCompeGrade(ELegendCompeRateGrade g
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetLegendNumHide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetLegendNumHide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +145,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetLegendNumHide()
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetRankImpl(ERateRank RateRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetRankImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_SetRankImpl Parms{};
 
@@ -158,10 +163,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetRankImpl(ERateRank RateRank)
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetRateRank(ERateRank InRateRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetRateRank");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_SetRateRank Parms{};
 
@@ -180,10 +183,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetRateRank(ERateRank InRateRank)
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetRateRankText(class URichTextBlock* BaseText, class URichTextBlock* Text, const ERateRank& RankRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetRateRankText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_SetRateRankText Parms{};
 
@@ -202,10 +203,8 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetRateRankText(class URichTextBlock* BaseT
 
 void UWBP_ResultRate_Sub_RankIcon_C::SetupRateRankText(ERateRank InRateRank)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultRate_Sub_RankIcon_C", "SetupRateRankText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultRate_Sub_RankIcon_C", FnName));
 
 	Params::WBP_ResultRate_Sub_RankIcon_C_SetupRateRankText Parms{};
 
@@ -214,5 +213,5 @@ void UWBP_ResultRate_Sub_RankIcon_C::SetupRateRankText(ERateRank InRateRank)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

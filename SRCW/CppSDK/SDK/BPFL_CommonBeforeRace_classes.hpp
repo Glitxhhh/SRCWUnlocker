@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
 #include "Engine_classes.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_CommonBeforeRace.BPFL_CommonBeforeRace_C
 // 0x0000 (0x0028 - 0x0028)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_CommonBeforeRace_C;
 
-}
-
+SDK_NAMESPACE_END

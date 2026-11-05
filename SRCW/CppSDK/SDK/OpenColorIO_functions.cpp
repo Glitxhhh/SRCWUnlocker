@@ -14,8 +14,7 @@
 #include "OpenColorIO_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function OpenColorIO.OpenColorIOBlueprintLibrary.ApplyColorSpaceTransform
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -252,5 +251,5 @@ struct FOpenColorIODisplayConfiguration UOpenColorIODisplayExtensionWrapper::Get
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

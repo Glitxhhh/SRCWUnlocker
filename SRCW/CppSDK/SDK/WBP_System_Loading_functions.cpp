@@ -14,8 +14,7 @@
 #include "WBP_System_Loading_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Loading.WBP_System_Loading_C.Check Last LoadingPhase
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_System_Loading_C::Check_Last_LoadingPhase(bool* OutLastPhase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "Check Last LoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_Check_Last_LoadingPhase Parms{};
 
@@ -45,10 +42,8 @@ void UWBP_System_Loading_C::Check_Last_LoadingPhase(bool* OutLastPhase)
 
 void UWBP_System_Loading_C::CheckLoadingEndAnimationPlay(bool* OutEndAnimationPlay)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "CheckLoadingEndAnimationPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_CheckLoadingEndAnimationPlay Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_System_Loading_C::CheckLoadingEndAnimationPlay(bool* OutEndAnimationPl
 
 void UWBP_System_Loading_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -80,10 +73,8 @@ void UWBP_System_Loading_C::Construct()
 
 void UWBP_System_Loading_C::ExecuteUbergraph_WBP_System_Loading(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "ExecuteUbergraph_WBP_System_Loading");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_System_Loading_C", "ExecuteUbergraph_WBP_System_Loading", FuncInfo);
 
 	Params::WBP_System_Loading_C_ExecuteUbergraph_WBP_System_Loading Parms{};
 
@@ -98,10 +89,8 @@ void UWBP_System_Loading_C::ExecuteUbergraph_WBP_System_Loading(int32 EntryPoint
 
 void UWBP_System_Loading_C::LoadingStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "LoadingStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +101,8 @@ void UWBP_System_Loading_C::LoadingStart()
 
 void UWBP_System_Loading_C::LoadingStartByLoadingPhase()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "LoadingStartByLoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UWBP_System_Loading_C::LoadingStartByLoadingPhase()
 
 void UWBP_System_Loading_C::OnOutAnimFinished_Impl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "OnOutAnimFinished_Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -140,10 +125,8 @@ void UWBP_System_Loading_C::OnOutAnimFinished_Impl()
 
 void UWBP_System_Loading_C::ProceedLoadingPhase()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "ProceedLoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -156,10 +139,8 @@ void UWBP_System_Loading_C::ProceedLoadingPhase()
 
 void UWBP_System_Loading_C::ReachedDelimiter(EUnionLoadingGaugeState InState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "ReachedDelimiter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_ReachedDelimiter Parms{};
 
@@ -174,10 +155,8 @@ void UWBP_System_Loading_C::ReachedDelimiter(EUnionLoadingGaugeState InState)
 
 void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SequenceEvent__ENTRYPOINTWBP_System_Loading");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -188,10 +167,8 @@ void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading()
 
 void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SequenceEvent__ENTRYPOINTWBP_System_Loading_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -202,10 +179,8 @@ void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_0()
 
 void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SequenceEvent__ENTRYPOINTWBP_System_Loading_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -216,10 +191,8 @@ void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_1()
 
 void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SequenceEvent__ENTRYPOINTWBP_System_Loading_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +203,8 @@ void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_2()
 
 void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SequenceEvent__ENTRYPOINTWBP_System_Loading_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -246,10 +217,8 @@ void UWBP_System_Loading_C::SequenceEvent__ENTRYPOINTWBP_System_Loading_3()
 
 void UWBP_System_Loading_C::SetLoadingPhaseAnimSpeedMin(double InAnimSpeed)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SetLoadingPhaseAnimSpeedMin");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_SetLoadingPhaseAnimSpeedMin Parms{};
 
@@ -266,10 +235,8 @@ void UWBP_System_Loading_C::SetLoadingPhaseAnimSpeedMin(double InAnimSpeed)
 
 void UWBP_System_Loading_C::SetLoadingPhaseNum(int32 LoadingPhaseNum_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SetLoadingPhaseNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_SetLoadingPhaseNum Parms{};
 
@@ -286,10 +253,8 @@ void UWBP_System_Loading_C::SetLoadingPhaseNum(int32 LoadingPhaseNum_0)
 
 void UWBP_System_Loading_C::SetLoadingProgress(double LoadingProgress)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SetLoadingProgress");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_SetLoadingProgress Parms{};
 
@@ -304,10 +269,8 @@ void UWBP_System_Loading_C::SetLoadingProgress(double LoadingProgress)
 
 void UWBP_System_Loading_C::SetLoadingProgressMode()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SetLoadingProgressMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -318,10 +281,8 @@ void UWBP_System_Loading_C::SetLoadingProgressMode()
 
 void UWBP_System_Loading_C::SkipNowState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "SkipNowState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +296,8 @@ void UWBP_System_Loading_C::SkipNowState()
 
 void UWBP_System_Loading_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_Tick Parms{};
 
@@ -354,10 +313,8 @@ void UWBP_System_Loading_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 void UWBP_System_Loading_C::UpdateAnimationSpeed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "UpdateAnimationSpeed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -368,10 +325,8 @@ void UWBP_System_Loading_C::UpdateAnimationSpeed()
 
 void UWBP_System_Loading_C::UpdateAnimRate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "UpdateAnimRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -384,10 +339,8 @@ void UWBP_System_Loading_C::UpdateAnimRate()
 
 void UWBP_System_Loading_C::UpdateLoadingGaugeTargetState(EUnionLoadingGaugeState InTargetState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "UpdateLoadingGaugeTargetState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_UpdateLoadingGaugeTargetState Parms{};
 
@@ -404,10 +357,8 @@ void UWBP_System_Loading_C::UpdateLoadingGaugeTargetState(EUnionLoadingGaugeStat
 
 void UWBP_System_Loading_C::UpdateLoadingPhase(int32 EndLoadingPhase)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Loading_C", "UpdateLoadingPhase");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Loading_C", FnName));
 
 	Params::WBP_System_Loading_C_UpdateLoadingPhase Parms{};
 
@@ -416,5 +367,5 @@ void UWBP_System_Loading_C::UpdateLoadingPhase(int32 EndLoadingPhase)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

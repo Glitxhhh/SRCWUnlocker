@@ -13,11 +13,10 @@
 #include "ABPT_MenuDriver_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_MenuDriver_Jet.ABP_MenuDriver_Jet_C
-// 0x0000 (0x1CC0 - 0x1CC0)
+// 0x0000 (0x37E0 - 0x37E0)
 class UABP_MenuDriver_Jet_C final : public UABPT_MenuDriver_C
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_MenuDriver_Jet_C;
 
-}
-
+SDK_NAMESPACE_END

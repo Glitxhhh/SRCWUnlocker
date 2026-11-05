@@ -14,8 +14,7 @@
 #include "BPC_MachineState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_MachineState.BPC_MachineState_C.BindCharaMachineSelectWindow
 // (Event, Protected, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_MachineState_C::BindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindCharaMachineSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_BindCharaMachineSelectWindow Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_MachineState_C::BindCharaMachineSelectWindow(class UCharaMachineSelect
 
 void UBPC_MachineState_C::BindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindColorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_BindColorWindow Parms{};
 
@@ -64,10 +59,8 @@ void UBPC_MachineState_C::BindColorWindow(class UWBP_MachineCustom_Sub_PresetPai
 
 void UBPC_MachineState_C::BindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "BindMachineTypeSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_BindMachineTypeSelectWindow Parms{};
 
@@ -84,10 +77,8 @@ void UBPC_MachineState_C::BindMachineTypeSelectWindow(class UMachineTypeScrollCo
 
 void UBPC_MachineState_C::CharaMachineSelect_ColorDecisionButtonFocusEvent(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_ColorDecisionButtonFocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_ColorDecisionButtonFocusEvent Parms{};
 
@@ -104,10 +95,8 @@ void UBPC_MachineState_C::CharaMachineSelect_ColorDecisionButtonFocusEvent(int32
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorCancelEvent(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorCancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorCancelEvent Parms{};
 
@@ -124,10 +113,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorCancelEvent(int32 InP
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorDecisionEvent(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorDecisionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorDecisionEvent Parms{};
 
@@ -146,10 +133,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorDecisionEvent(int32 I
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorFocusEvent(const struct FST_ColorPresetSelectPageItemData& ColorPreset, int32 PlayerIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorFocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorFocusEvent Parms{};
 
@@ -169,10 +154,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorFocusEvent(const stru
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorSelectEvent(const struct FST_ColorPresetSelectPageItemData& ColorPreset, int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineColorSelectEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineColorSelectEvent Parms{};
 
@@ -190,10 +173,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineColorSelectEvent(const str
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsCancelEvent(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsCancelEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsCancelEvent Parms{};
 
@@ -210,10 +191,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsCancelEvent(int32 InP
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsDecisionEvent(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsDecisionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsDecisionEvent Parms{};
 
@@ -233,10 +212,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsDecisionEvent(int32 I
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsFocusEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsFocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsFocusEvent Parms{};
 
@@ -259,10 +236,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsFocusEvent(int32 Play
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsSelectEvent(int32 PlayerIndex, EMachineId FrontPartsId, EMachineId RearPartsId, EMachineId TirePartsId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachinePartsSelectEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachinePartsSelectEvent Parms{};
 
@@ -283,10 +258,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachinePartsSelectEvent(int32 Pla
 
 void UBPC_MachineState_C::CharaMachineSelect_OnMachineSelectModeChanged(int32 PlayerIndex, UNION::EMachineSelectMode Mode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "CharaMachineSelect_OnMachineSelectModeChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_CharaMachineSelect_OnMachineSelectModeChanged Parms{};
 
@@ -304,10 +277,8 @@ void UBPC_MachineState_C::CharaMachineSelect_OnMachineSelectModeChanged(int32 Pl
 
 void UBPC_MachineState_C::DecideMachine(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "DecideMachine");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_DecideMachine Parms{};
 
@@ -324,10 +295,8 @@ void UBPC_MachineState_C::DecideMachine(int32 InPlayerIndex)
 
 void UBPC_MachineState_C::ExecuteUbergraph_BPC_MachineState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ExecuteUbergraph_BPC_MachineState");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_MachineState_C", "ExecuteUbergraph_BPC_MachineState", FuncInfo);
 
 	Params::BPC_MachineState_C_ExecuteUbergraph_BPC_MachineState Parms{};
 
@@ -342,10 +311,8 @@ void UBPC_MachineState_C::ExecuteUbergraph_BPC_MachineState(int32 EntryPoint)
 
 void UBPC_MachineState_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -356,10 +323,8 @@ void UBPC_MachineState_C::OnExitState()
 
 void UBPC_MachineState_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -372,10 +337,8 @@ void UBPC_MachineState_C::OnInitState()
 
 void UBPC_MachineState_C::OnMachineTypeCancelCallback(int32 SelectedPlayerControllerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnMachineTypeCancelCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_OnMachineTypeCancelCallback Parms{};
 
@@ -394,10 +357,8 @@ void UBPC_MachineState_C::OnMachineTypeCancelCallback(int32 SelectedPlayerContro
 
 void UBPC_MachineState_C::OnMachineTypeDecideCallback(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnMachineTypeDecideCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_OnMachineTypeDecideCallback Parms{};
 
@@ -416,10 +377,8 @@ void UBPC_MachineState_C::OnMachineTypeDecideCallback(int32 SelectedPlayerContro
 
 void UBPC_MachineState_C::OnMachineTypeFocusEvent(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnMachineTypeFocusEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_OnMachineTypeFocusEvent Parms{};
 
@@ -438,10 +397,8 @@ void UBPC_MachineState_C::OnMachineTypeFocusEvent(class UUnionUIButtonBase* Butt
 
 void UBPC_MachineState_C::OnMachineTypeScrollEndCallback(int32 SelectedPlayerControllerIndex, ECarStatusType SelectedMachineType, EMachineId SelectedBaseMachineId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "OnMachineTypeScrollEndCallback");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_OnMachineTypeScrollEndCallback Parms{};
 
@@ -460,10 +417,8 @@ void UBPC_MachineState_C::OnMachineTypeScrollEndCallback(int32 SelectedPlayerCon
 
 void UBPC_MachineState_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_ReceiveTick Parms{};
 
@@ -480,10 +435,8 @@ void UBPC_MachineState_C::ReceiveTick(float DeltaSeconds)
 
 void UBPC_MachineState_C::SetupMachineColorSelectWindow(int32 InPlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "SetupMachineColorSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_SetupMachineColorSelectWindow Parms{};
 
@@ -500,10 +453,8 @@ void UBPC_MachineState_C::SetupMachineColorSelectWindow(int32 InPlayerIndex)
 
 void UBPC_MachineState_C::ShouldShowSimpleCustomizeTipsWindow(bool* bOutShouldShow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ShouldShowSimpleCustomizeTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_ShouldShowSimpleCustomizeTipsWindow Parms{};
 
@@ -521,10 +472,8 @@ void UBPC_MachineState_C::ShouldShowSimpleCustomizeTipsWindow(bool* bOutShouldSh
 
 void UBPC_MachineState_C::ShowTipsWindow(EHintId InHintId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "ShowTipsWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_ShowTipsWindow Parms{};
 
@@ -539,10 +488,8 @@ void UBPC_MachineState_C::ShowTipsWindow(EHintId InHintId)
 
 void UBPC_MachineState_C::TipsWindow_CloseEndDelegate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "TipsWindow_CloseEndDelegate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -555,10 +502,8 @@ void UBPC_MachineState_C::TipsWindow_CloseEndDelegate()
 
 void UBPC_MachineState_C::UnbindCharaMachineSelectWindow(class UCharaMachineSelectBase* InWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindCharaMachineSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_UnbindCharaMachineSelectWindow Parms{};
 
@@ -575,10 +520,8 @@ void UBPC_MachineState_C::UnbindCharaMachineSelectWindow(class UCharaMachineSele
 
 void UBPC_MachineState_C::UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetPaint_C* InColorWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindColorWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_UnbindColorWindow Parms{};
 
@@ -595,10 +538,8 @@ void UBPC_MachineState_C::UnbindColorWindow(class UWBP_MachineCustom_Sub_PresetP
 
 void UBPC_MachineState_C::UnbindMachineTypeSelectWindow(class UMachineTypeScrollControl* InMachineTypeSelectWindow)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UnbindMachineTypeSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_UnbindMachineTypeSelectWindow Parms{};
 
@@ -616,10 +557,8 @@ void UBPC_MachineState_C::UnbindMachineTypeSelectWindow(class UMachineTypeScroll
 
 void UBPC_MachineState_C::UpdateNavigationSimpleCustomizeColor(int32 ButtonIndex, int32 PlayerIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UpdateNavigationSimpleCustomizeColor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_UpdateNavigationSimpleCustomizeColor Parms{};
 
@@ -639,10 +578,8 @@ void UBPC_MachineState_C::UpdateNavigationSimpleCustomizeColor(int32 ButtonIndex
 
 void UBPC_MachineState_C::UpdateRemainTime(int32 InPlayerIndex, double InDeltaTime, bool* Result)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_MachineState_C", "UpdateRemainTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_MachineState_C", FnName));
 
 	Params::BPC_MachineState_C_UpdateRemainTime Parms{};
 
@@ -655,5 +592,5 @@ void UBPC_MachineState_C::UpdateRemainTime(int32 InPlayerIndex, double InDeltaTi
 		*Result = Parms.Result;
 }
 
-}
 
+SDK_NAMESPACE_END

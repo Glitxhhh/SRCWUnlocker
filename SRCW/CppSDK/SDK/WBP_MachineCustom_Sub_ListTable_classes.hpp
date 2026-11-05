@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_ListTable.WBP_MachineCustom_Sub_ListTable_C
 // 0x0020 (0x0558 - 0x0538)
@@ -54,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_ListTable_C;
 
-}
-
+SDK_NAMESPACE_END

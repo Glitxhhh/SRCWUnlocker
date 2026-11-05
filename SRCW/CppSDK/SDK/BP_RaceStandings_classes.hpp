@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RaceStandings.BP_RaceStandings_C
 // 0x0028 (0x02C0 - 0x0298)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RaceStandings_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class RedpointEOSLicenseValidation.VerifyFreeEditionLicenseCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UVerifyFreeEditionLicenseCommandlet;
 
-}
-
+SDK_NAMESPACE_END

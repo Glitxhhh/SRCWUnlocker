@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum CoreOnline.ECoreOnlineDummy
 // NumValues: 0x0002
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_FUniqueNetIdWrapper;
 
-}
-
+SDK_NAMESPACE_END

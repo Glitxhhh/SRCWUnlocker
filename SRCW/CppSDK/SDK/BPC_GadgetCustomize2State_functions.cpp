@@ -14,8 +14,7 @@
 #include "BPC_GadgetCustomize2State_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_GadgetCustomize2State.BPC_GadgetCustomize2State_C.ExecuteUbergraph_BPC_GadgetCustomize2State
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_GadgetCustomize2State_C::ExecuteUbergraph_BPC_GadgetCustomize2State(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "ExecuteUbergraph_BPC_GadgetCustomize2State");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_GadgetCustomize2State_C", "ExecuteUbergraph_BPC_GadgetCustomize2State", FuncInfo);
 
 	Params::BPC_GadgetCustomize2State_C_ExecuteUbergraph_BPC_GadgetCustomize2State Parms{};
 
@@ -42,10 +39,8 @@ void UBPC_GadgetCustomize2State_C::ExecuteUbergraph_BPC_GadgetCustomize2State(in
 
 void UBPC_GadgetCustomize2State_C::Exit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "Exit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UBPC_GadgetCustomize2State_C::Exit()
 
 void UBPC_GadgetCustomize2State_C::Finished_SequenceStart_FadeOut(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "Finished_SequenceStart_FadeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_Finished_SequenceStart_FadeOut Parms{};
 
@@ -78,10 +71,8 @@ void UBPC_GadgetCustomize2State_C::Finished_SequenceStart_FadeOut(EUnionUIFadeDi
 
 void UBPC_GadgetCustomize2State_C::MatchingTimeOut(float InTimeOutTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "MatchingTimeOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_MatchingTimeOut Parms{};
 
@@ -96,10 +87,8 @@ void UBPC_GadgetCustomize2State_C::MatchingTimeOut(float InTimeOutTime)
 
 void UBPC_GadgetCustomize2State_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +101,8 @@ void UBPC_GadgetCustomize2State_C::OnInitState()
 
 void UBPC_GadgetCustomize2State_C::Sequence_OnBackEvent(bool bIsSelectedPlateDataChanged_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "Sequence_OnBackEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_Sequence_OnBackEvent Parms{};
 
@@ -132,10 +119,8 @@ void UBPC_GadgetCustomize2State_C::Sequence_OnBackEvent(bool bIsSelectedPlateDat
 
 void UBPC_GadgetCustomize2State_C::SetMessageBarVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "SetMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_SetMessageBarVisible Parms{};
 
@@ -152,10 +137,8 @@ void UBPC_GadgetCustomize2State_C::SetMessageBarVisible(bool bInIsVisible)
 
 void UBPC_GadgetCustomize2State_C::SetPlayerNum(int32 InPlayerNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "SetPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_SetPlayerNum Parms{};
 
@@ -172,10 +155,8 @@ void UBPC_GadgetCustomize2State_C::SetPlayerNum(int32 InPlayerNum)
 
 void UBPC_GadgetCustomize2State_C::SetSelectMode(EGadgetCustomizeSelectMode InSelectMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "SetSelectMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_SetSelectMode Parms{};
 
@@ -190,10 +171,8 @@ void UBPC_GadgetCustomize2State_C::SetSelectMode(EGadgetCustomizeSelectMode InSe
 
 void UBPC_GadgetCustomize2State_C::TimerEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "TimerEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -206,10 +185,8 @@ void UBPC_GadgetCustomize2State_C::TimerEvent()
 
 bool UBPC_GadgetCustomize2State_C::IsSelectedPlateDataChanged() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GadgetCustomize2State_C", "IsSelectedPlateDataChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GadgetCustomize2State_C", FnName));
 
 	Params::BPC_GadgetCustomize2State_C_IsSelectedPlateDataChanged Parms{};
 
@@ -218,5 +195,5 @@ bool UBPC_GadgetCustomize2State_C::IsSelectedPlateDataChanged() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

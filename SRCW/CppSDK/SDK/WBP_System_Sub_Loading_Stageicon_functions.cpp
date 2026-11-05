@@ -14,8 +14,7 @@
 #include "WBP_System_Sub_Loading_Stageicon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_System_Sub_Loading_Stageicon.WBP_System_Sub_Loading_StageIcon_C.SetTexture
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_System_Sub_Loading_StageIcon_C::SetTexture(class UTexture2D* InTexture)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_System_Sub_Loading_StageIcon_C", "SetTexture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_System_Sub_Loading_StageIcon_C", FnName));
 
 	Params::WBP_System_Sub_Loading_StageIcon_C_SetTexture Parms{};
 
@@ -36,5 +33,5 @@ void UWBP_System_Sub_Loading_StageIcon_C::SetTexture(class UTexture2D* InTexture
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

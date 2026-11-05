@@ -14,8 +14,7 @@
 #include "mariaUploadPlugin_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function mariaUploadPlugin.MariaEpicIdentitySequence.LoginEOS
 // (Final, Native, Static, Private, BlueprintCallable)
@@ -3646,5 +3645,5 @@ bool UMariaUpload::WaitRewardApi()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

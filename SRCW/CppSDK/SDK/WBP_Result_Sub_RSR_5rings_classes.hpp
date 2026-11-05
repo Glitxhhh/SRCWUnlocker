@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "UnionRun_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Result_Sub_RSR_5rings.WBP_Result_Sub_RSR_5rings_C
 // 0x00E0 (0x03D8 - 0x02F8)
@@ -86,5 +85,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Result_Sub_RSR_5rings_C;
 
-}
-
+SDK_NAMESPACE_END

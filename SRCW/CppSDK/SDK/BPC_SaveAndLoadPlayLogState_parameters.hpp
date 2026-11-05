@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BPC_SaveAndLoadPlayLogState.BPC_SaveAndLoadPlayLogState_C.ExecuteUbergraph_BPC_SaveAndLoadPlayLogState
 // 0x0018 (0x0018 - 0x0000)
@@ -35,5 +35,5 @@ public:
 };
 DUMPER7_ASSERTS_BPC_SaveAndLoadPlayLogState_C_OnUpdateState;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -16,8 +16,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_WorldMatchInfo.WBP_WorldMatchInfo_C
 // 0x0090 (0x0370 - 0x02E0)
@@ -65,5 +64,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_WorldMatchInfo_C;
 
-}
-
+SDK_NAMESPACE_END

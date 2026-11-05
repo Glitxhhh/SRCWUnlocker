@@ -14,8 +14,7 @@
 #include "BP_ItemDarkChaoPerformance_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ItemDarkChaoPerformance.BP_ItemDarkChaoPerformance_C.ExecuteUbergraph_BP_ItemDarkChaoPerformance
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_ItemDarkChaoPerformance_C::ExecuteUbergraph_BP_ItemDarkChaoPerformance(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemDarkChaoPerformance_C", "ExecuteUbergraph_BP_ItemDarkChaoPerformance");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_ItemDarkChaoPerformance_C", "ExecuteUbergraph_BP_ItemDarkChaoPerformance", FuncInfo);
 
 	Params::BP_ItemDarkChaoPerformance_C_ExecuteUbergraph_BP_ItemDarkChaoPerformance Parms{};
 
@@ -42,10 +39,8 @@ void ABP_ItemDarkChaoPerformance_C::ExecuteUbergraph_BP_ItemDarkChaoPerformance(
 
 void ABP_ItemDarkChaoPerformance_C::PlayItemEffect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemDarkChaoPerformance_C", "PlayItemEffect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void ABP_ItemDarkChaoPerformance_C::PlayItemEffect()
 
 void ABP_ItemDarkChaoPerformance_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemDarkChaoPerformance_C", "ReceiveActorBeginOverlap");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemDarkChaoPerformance_C", FnName));
 
 	Params::BP_ItemDarkChaoPerformance_C_ReceiveActorBeginOverlap Parms{};
 
@@ -76,10 +69,8 @@ void ABP_ItemDarkChaoPerformance_C::ReceiveActorBeginOverlap(class AActor* Other
 
 void ABP_ItemDarkChaoPerformance_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemDarkChaoPerformance_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemDarkChaoPerformance_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void ABP_ItemDarkChaoPerformance_C::ReceiveBeginPlay()
 
 void ABP_ItemDarkChaoPerformance_C::SetPerfomanceType(EItemDarkChaoPerfomanceType ChaoType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ItemDarkChaoPerformance_C", "SetPerfomanceType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_ItemDarkChaoPerformance_C", FnName));
 
 	Params::BP_ItemDarkChaoPerformance_C_SetPerfomanceType Parms{};
 
@@ -104,5 +93,5 @@ void ABP_ItemDarkChaoPerformance_C::SetPerfomanceType(EItemDarkChaoPerfomanceTyp
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

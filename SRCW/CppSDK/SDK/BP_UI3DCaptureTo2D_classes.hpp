@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "E3DCaptureMenuType_structs.hpp"
 #include "UnionUI_classes.hpp"
+#include "E3DCaptureMenuType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_UI3DCaptureTo2D.BP_UI3DCaptureTo2D_C
 // 0x0120 (0x03D0 - 0x02B0)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_UI3DCaptureTo2D_C;
 
-}
-
+SDK_NAMESPACE_END

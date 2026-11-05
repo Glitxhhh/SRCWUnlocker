@@ -13,13 +13,15 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_VehicleObjectRef.BPI_VehicleObjectRef_C
-// 0x0000 (0x0000 - 0x0000)
-class IBPI_VehicleObjectRef_C final
+// 0x0008 (0x0008 - 0x0000)
+class IBPI_VehicleObjectRef_C
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	void GetRaceLapObjRef(class UObject** OutRaceLapObject);
 	void GetRaceUIObjRef(class UObject** RaceUI);
@@ -51,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_VehicleObjectRef_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,15 +11,14 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
+#include "UnionRun_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EMachineSelectMode_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UNION_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UnionRun_structs.hpp"
-#include "EMachineSelectMode_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_GadgetCustom_Sub_TypeBox.WBP_GadgetCustom_Sub_TypeBox_C
 // 0x00F8 (0x0700 - 0x0608)
@@ -78,7 +77,6 @@ public:
 	void RightScrollAnimFinished();
 	void RightScrollAnimStarted();
 	void SetFocusIndex(int32 InCategoryIndex);
-	void SetLightVer(bool IsLight);
 	void SetMode(EMachineSelectMode::EMachineSelectMode InMode);
 	void SetPlayerControllerIndex(const int32 InPlayerControllerIndex);
 	void Setup(class UGadgetCustomWindow* InGadgetCustomWindow);
@@ -100,5 +98,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_GadgetCustom_Sub_TypeBox_C;
 
-}
-
+SDK_NAMESPACE_END

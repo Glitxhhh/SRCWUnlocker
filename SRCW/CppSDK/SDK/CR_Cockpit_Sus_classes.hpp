@@ -14,8 +14,7 @@
 #include "ControlRig_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ControlRigBlueprintGeneratedClass CR_Cockpit_Sus.CR_Cockpit_Sus_C
 // 0x0018 (0x0AC0 - 0x0AA8)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_UCR_Cockpit_Sus_C;
 
-}
-
+SDK_NAMESPACE_END

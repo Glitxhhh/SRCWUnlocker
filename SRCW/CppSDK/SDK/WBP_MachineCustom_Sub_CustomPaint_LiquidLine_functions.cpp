@@ -14,8 +14,7 @@
 #include "WBP_MachineCustom_Sub_CustomPaint_LiquidLine_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint_LiquidLine.WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C.ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_LiquidLine
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_LiquidLine(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_LiquidLine");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_LiquidLine", FuncInfo);
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C_ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_LiquidLine Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::ExecuteUbergraph_WBP_Machi
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnAcceptKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnBackKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnDownKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnDownKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,10 +79,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnDownKeyPressed()
 
 struct FEventReply UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C_OnFocusReceived Parms{};
 
@@ -109,10 +98,8 @@ struct FEventReply UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnFocusRecei
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnFocusReceivedImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnFocusReceivedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -123,10 +110,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnFocusReceivedImpl()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,10 +122,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnLeftKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -151,10 +134,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnRightKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnUpKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "OnUpKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -167,10 +148,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::OnUpKeyPressed()
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::SetCursorVisible(bool bInIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C_SetCursorVisible Parms{};
 
@@ -188,10 +167,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::SetCursorVisible(bool bInI
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::Setup(class APlayerController* InPlayerController, const struct FMachineColorAreaUIData& InItemData)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C_Setup Parms{};
 
@@ -209,10 +186,8 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::Setup(class APlayerControl
 
 void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::GetItemData(struct FMachineColorAreaUIData* UIData) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", "GetItemData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C", FnName));
 
 	Params::WBP_MachineCustom_Sub_CustomPaint_LiquidLine_C_GetItemData Parms{};
 
@@ -222,5 +197,5 @@ void UWBP_MachineCustom_Sub_CustomPaint_LiquidLine_C::GetItemData(struct FMachin
 		*UIData = std::move(Parms.UIData);
 }
 
-}
 
+SDK_NAMESPACE_END

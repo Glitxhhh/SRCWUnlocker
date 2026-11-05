@@ -14,8 +14,7 @@
 #include "BP_MenuPlayerController_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MenuPlayerController.BP_MenuPlayerController_C.ExecuteUbergraph_BP_MenuPlayerController
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_MenuPlayerController_C::ExecuteUbergraph_BP_MenuPlayerController(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "ExecuteUbergraph_BP_MenuPlayerController");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_MenuPlayerController_C", "ExecuteUbergraph_BP_MenuPlayerController", FuncInfo);
 
 	Params::BP_MenuPlayerController_C_ExecuteUbergraph_BP_MenuPlayerController Parms{};
 
@@ -45,10 +42,8 @@ void ABP_MenuPlayerController_C::ExecuteUbergraph_BP_MenuPlayerController(int32 
 
 void ABP_MenuPlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_4(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_F9_K2Node_InputDebugKeyEvent_4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_F9_K2Node_InputDebugKeyEvent_4 Parms{};
 
@@ -67,10 +62,8 @@ void ABP_MenuPlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_4(const 
 
 void ABP_MenuPlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_5(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_F9_K2Node_InputDebugKeyEvent_5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_F9_K2Node_InputDebugKeyEvent_5 Parms{};
 
@@ -89,10 +82,8 @@ void ABP_MenuPlayerController_C::InpActEvt_F9_K2Node_InputDebugKeyEvent_5(const 
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_10(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_10");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_10 Parms{};
 
@@ -111,10 +102,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDe
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_11(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_11");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDebugKeyEvent_11 Parms{};
 
@@ -133,10 +122,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_LeftThumbstick_K2Node_InputDe
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_8(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_8 Parms{};
 
@@ -155,10 +142,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputD
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_9(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_RightThumbstick_K2Node_InputDebugKeyEvent_9 Parms{};
 
@@ -177,10 +162,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightThumbstick_K2Node_InputD
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_6(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_6 Parms{};
 
@@ -199,10 +182,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebu
 
 void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_7(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_Gamepad_RightTrigger_K2Node_InputDebugKeyEvent_7 Parms{};
 
@@ -221,10 +202,8 @@ void ABP_MenuPlayerController_C::InpActEvt_Gamepad_RightTrigger_K2Node_InputDebu
 
 void ABP_MenuPlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_0 Parms{};
 
@@ -243,10 +222,8 @@ void ABP_MenuPlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent
 
 void ABP_MenuPlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_1(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_LeftControl_K2Node_InputDebugKeyEvent_1 Parms{};
 
@@ -265,10 +242,8 @@ void ABP_MenuPlayerController_C::InpActEvt_LeftControl_K2Node_InputDebugKeyEvent
 
 void ABP_MenuPlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_2(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_2 Parms{};
 
@@ -287,10 +262,8 @@ void ABP_MenuPlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_2
 
 void ABP_MenuPlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_3(const struct FKey& Key, const struct FInputActionValue& ActionValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_3 Parms{};
 
@@ -308,10 +281,8 @@ void ABP_MenuPlayerController_C::InpActEvt_LeftShift_K2Node_InputDebugKeyEvent_3
 
 void ABP_MenuPlayerController_C::KE_DebugInput(EMenuInputKey KeyType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "KE_DebugInput");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_KE_DebugInput Parms{};
 
@@ -326,10 +297,8 @@ void ABP_MenuPlayerController_C::KE_DebugInput(EMenuInputKey KeyType)
 
 void ABP_MenuPlayerController_C::KE_RemoveAllWidgets()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "KE_RemoveAllWidgets");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -343,10 +312,8 @@ void ABP_MenuPlayerController_C::KE_RemoveAllWidgets()
 
 void ABP_MenuPlayerController_C::OnChangeControllerInputType(EAppControllerInputType BeforeType, EAppControllerInputType AfterType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "OnChangeControllerInputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_OnChangeControllerInputType Parms{};
 
@@ -358,16 +325,14 @@ void ABP_MenuPlayerController_C::OnChangeControllerInputType(EAppControllerInput
 
 
 // Function BP_MenuPlayerController.BP_MenuPlayerController_C.OnMousePointerEventBP
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FPointerEvent&             InPointerEvent                                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FPointerEvent&             InPointerEvent                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void ABP_MenuPlayerController_C::OnMousePointerEventBP(const struct FPointerEvent& InPointerEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "OnMousePointerEventBP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_OnMousePointerEventBP Parms{};
 
@@ -382,10 +347,8 @@ void ABP_MenuPlayerController_C::OnMousePointerEventBP(const struct FPointerEven
 
 void ABP_MenuPlayerController_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -398,10 +361,8 @@ void ABP_MenuPlayerController_C::ReceiveBeginPlay()
 
 void ABP_MenuPlayerController_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_ReceiveTick Parms{};
 
@@ -418,10 +379,8 @@ void ABP_MenuPlayerController_C::ReceiveTick(float DeltaSeconds)
 
 bool ABP_MenuPlayerController_C::IsFadeClear() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "IsFadeClear");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_IsFadeClear Parms{};
 
@@ -438,10 +397,8 @@ bool ABP_MenuPlayerController_C::IsFadeClear() const
 
 bool ABP_MenuPlayerController_C::OnIsMenuInputEnabled() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "OnIsMenuInputEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_OnIsMenuInputEnabled Parms{};
 
@@ -458,10 +415,8 @@ bool ABP_MenuPlayerController_C::OnIsMenuInputEnabled() const
 
 bool ABP_MenuPlayerController_C::OnIsSubMenuInputEnabled() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MenuPlayerController_C", "OnIsSubMenuInputEnabled");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_MenuPlayerController_C", FnName));
 
 	Params::BP_MenuPlayerController_C_OnIsSubMenuInputEnabled Parms{};
 
@@ -470,5 +425,5 @@ bool ABP_MenuPlayerController_C::OnIsSubMenuInputEnabled() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

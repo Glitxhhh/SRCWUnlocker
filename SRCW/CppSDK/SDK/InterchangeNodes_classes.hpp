@@ -15,8 +15,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class InterchangeNodes.InterchangeAnimationTrackSetNode
 // 0x0030 (0x0090 - 0x0060)
@@ -1065,5 +1064,4 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeTextureBlurNode;
 
-}
-
+SDK_NAMESPACE_END

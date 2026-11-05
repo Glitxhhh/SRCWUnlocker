@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_System_Sub_AutoSave.WBP_System_Sub_AutoSave_C
 // 0x0028 (0x0308 - 0x02E0)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_System_Sub_AutoSave_C;
 
-}
-
+SDK_NAMESPACE_END

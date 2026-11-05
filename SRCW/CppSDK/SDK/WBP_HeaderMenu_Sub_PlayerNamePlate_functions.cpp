@@ -14,18 +14,15 @@
 #include "WBP_HeaderMenu_Sub_PlayerNamePlate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,14 +35,68 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::Construct()
 
 void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_PlayerNamePlate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_PlayerNamePlate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_HeaderMenu_Sub_PlayerNamePlate_C", "ExecuteUbergraph_WBP_HeaderMenu_Sub_PlayerNamePlate", FuncInfo);
 
 	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_ExecuteUbergraph_WBP_HeaderMenu_Sub_PlayerNamePlate Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetArabicVerticalOffset
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetArabicVerticalOffset(const class FText& InText)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetArabicVerticalOffset Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetupDuelCompeUserData
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InRoundPoint                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetupDuelCompeUserData(int32 InRoundPoint)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetupDuelCompeUserData Parms{};
+
+	Parms.InRoundPoint = InRoundPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetupLegendCompeUserData
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ELegendCompeRateGrade                   InLegendGrade                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InLegendRate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetupLegendCompeUserData(ELegendCompeRateGrade InLegendGrade, int32 InLegendRate)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetupLegendCompeUserData Parms{};
+
+	Parms.InLegendGrade = InLegendGrade;
+	Parms.InLegendRate = InLegendRate;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -66,10 +117,8 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::ExecuteUbergraph_WBP_HeaderMenu_Sub_
 
 void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetUpUserData(const class FText& InUserName, int32 InHonorId, ECrossplayPlatform InPlatform, int32 InWinCounts, uint8 InRateRank, float InRankPercent, bool IsShowingLegendCompeIcon, ELegendCompeRateGrade LegendGrade, int32 InLegendRate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "SetUpUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetUpUserData Parms{};
 
@@ -87,6 +136,24 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetUpUserData(const class FText& InU
 }
 
 
+// Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.SetWinStreakVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetWinStreakVisibility(bool IsVisible_0)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_SetWinStreakVisibility Parms{};
+
+	Parms.IsVisible_0 = IsVisible_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_HeaderMenu_Sub_PlayerNamePlate.WBP_HeaderMenu_Sub_PlayerNamePlate_C.UpdateUserData
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -95,10 +162,8 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::SetUpUserData(const class FText& InU
 
 void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::UpdateUserData(const class FText& InUserName, int32 InHonorId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_PlayerNamePlate_C", "UpdateUserData");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_PlayerNamePlate_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_PlayerNamePlate_C_UpdateUserData Parms{};
 
@@ -108,5 +173,5 @@ void UWBP_HeaderMenu_Sub_PlayerNamePlate_C::UpdateUserData(const class FText& In
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

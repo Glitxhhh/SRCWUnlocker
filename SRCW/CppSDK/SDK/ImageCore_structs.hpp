@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ImageCore.SharedImageConstRefBlueprint
 // 0x0008 (0x0008 - 0x0000)
@@ -23,5 +22,4 @@ public:
 };
 DUMPER7_ASSERTS_FSharedImageConstRefBlueprint;
 
-}
-
+SDK_NAMESPACE_END

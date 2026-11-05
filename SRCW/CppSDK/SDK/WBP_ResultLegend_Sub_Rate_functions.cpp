@@ -14,8 +14,7 @@
 #include "WBP_ResultLegend_Sub_Rate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_ResultLegend_Sub_Rate.WBP_ResultLegend_Sub_Rate_C.AddTextImageToTextArray
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UWBP_ResultLegend_Sub_Rate_C::AddTextImageToTextArray(const TArray<class UImage*>& TargetArray, class UPanelWidget* TextParent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "AddTextImageToTextArray");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_AddTextImageToTextArray Parms{};
 
@@ -46,10 +43,8 @@ void UWBP_ResultLegend_Sub_Rate_C::AddTextImageToTextArray(const TArray<class UI
 
 void UWBP_ResultLegend_Sub_Rate_C::ExecuteUbergraph_WBP_ResultLegend_Sub_Rate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "ExecuteUbergraph_WBP_ResultLegend_Sub_Rate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_ResultLegend_Sub_Rate_C", "ExecuteUbergraph_WBP_ResultLegend_Sub_Rate", FuncInfo);
 
 	Params::WBP_ResultLegend_Sub_Rate_C_ExecuteUbergraph_WBP_ResultLegend_Sub_Rate Parms{};
 
@@ -64,10 +59,8 @@ void UWBP_ResultLegend_Sub_Rate_C::ExecuteUbergraph_WBP_ResultLegend_Sub_Rate(in
 
 void UWBP_ResultLegend_Sub_Rate_C::Finished_0D989C8F445F1F628E2120A88D494244()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "Finished_0D989C8F445F1F628E2120A88D494244");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_ResultLegend_Sub_Rate_C::Finished_0D989C8F445F1F628E2120A88D494244()
 
 void UWBP_ResultLegend_Sub_Rate_C::Finished_7D0AEC914AF50B9180DA47BB577AA564()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "Finished_7D0AEC914AF50B9180DA47BB577AA564");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +83,8 @@ void UWBP_ResultLegend_Sub_Rate_C::Finished_7D0AEC914AF50B9180DA47BB577AA564()
 
 void UWBP_ResultLegend_Sub_Rate_C::Finished_FA3822794A885E4D1B40AE97B7C37967()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "Finished_FA3822794A885E4D1B40AE97B7C37967");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UWBP_ResultLegend_Sub_Rate_C::Finished_FA3822794A885E4D1B40AE97B7C37967()
 
 void UWBP_ResultLegend_Sub_Rate_C::PlayCountDownAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PlayCountDownAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +107,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PlayCountDownAnimation()
 
 void UWBP_ResultLegend_Sub_Rate_C::PlayCountUpAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PlayCountUpAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +119,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PlayCountUpAnimation()
 
 void UWBP_ResultLegend_Sub_Rate_C::PlayCountUpNUMAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PlayCountUpNUMAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +131,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PlayCountUpNUMAnimation()
 
 void UWBP_ResultLegend_Sub_Rate_C::PlayInAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PlayInAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -162,10 +143,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PlayInAnimation()
 
 void UWBP_ResultLegend_Sub_Rate_C::PlayOutAnimation()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PlayOutAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,10 +157,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PlayOutAnimation()
 
 void UWBP_ResultLegend_Sub_Rate_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_PreConstruct Parms{};
 
@@ -196,10 +173,8 @@ void UWBP_ResultLegend_Sub_Rate_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_ResultLegend_Sub_Rate_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_Rate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_Rate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -210,10 +185,8 @@ void UWBP_ResultLegend_Sub_Rate_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub
 
 void UWBP_ResultLegend_Sub_Rate_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_Rate_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub_Rate_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -227,10 +200,8 @@ void UWBP_ResultLegend_Sub_Rate_C::SequenceEvent__ENTRYPOINTWBP_ResultLegend_Sub
 
 void UWBP_ResultLegend_Sub_Rate_C::SetChanceUpIconEnable(bool IsEnable, int32 RatioValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "SetChanceUpIconEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_SetChanceUpIconEnable Parms{};
 
@@ -251,10 +222,8 @@ void UWBP_ResultLegend_Sub_Rate_C::SetChanceUpIconEnable(bool IsEnable, int32 Ra
 
 void UWBP_ResultLegend_Sub_Rate_C::SetGaugeCurrentAndNextGradeIcon(ELegendCompeRateGrade PrevGradeIcon, ELegendCompeRateGrade CurrentGradeIcon, ELegendCompeRateGrade NextGradeIcon, bool LowestLimitGrade)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "SetGaugeCurrentAndNextGradeIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_SetGaugeCurrentAndNextGradeIcon Parms{};
 
@@ -275,10 +244,8 @@ void UWBP_ResultLegend_Sub_Rate_C::SetGaugeCurrentAndNextGradeIcon(ELegendCompeR
 
 void UWBP_ResultLegend_Sub_Rate_C::SetUpChanceUpInfo(bool InEnable, int32 InRatioValue)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "SetUpChanceUpInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_SetUpChanceUpInfo Parms{};
 
@@ -294,10 +261,8 @@ void UWBP_ResultLegend_Sub_Rate_C::SetUpChanceUpInfo(bool InEnable, int32 InRati
 
 void UWBP_ResultLegend_Sub_Rate_C::StartCountDownEventNotifier()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "StartCountDownEventNotifier");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -308,10 +273,8 @@ void UWBP_ResultLegend_Sub_Rate_C::StartCountDownEventNotifier()
 
 void UWBP_ResultLegend_Sub_Rate_C::StartCountUpEventNotifier()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "StartCountUpEventNotifier");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,10 +288,8 @@ void UWBP_ResultLegend_Sub_Rate_C::StartCountUpEventNotifier()
 
 void UWBP_ResultLegend_Sub_Rate_C::UpdateCurrentVisibilityByGrade(ELegendCompeRateGrade CurrentGrade, bool IsLowestLimit)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "UpdateCurrentVisibilityByGrade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	Params::WBP_ResultLegend_Sub_Rate_C_UpdateCurrentVisibilityByGrade Parms{};
 
@@ -344,13 +305,11 @@ void UWBP_ResultLegend_Sub_Rate_C::UpdateCurrentVisibilityByGrade(ELegendCompeRa
 
 void UWBP_ResultLegend_Sub_Rate_C::UpdateVisibilityWhenFinishUpdateRate()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ResultLegend_Sub_Rate_C", "UpdateVisibilityWhenFinishUpdateRate");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_ResultLegend_Sub_Rate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

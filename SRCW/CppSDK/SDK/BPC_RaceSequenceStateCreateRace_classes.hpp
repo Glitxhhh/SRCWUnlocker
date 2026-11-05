@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateCreateRace.BPC_RaceSequenceStateCreateRace_C
 // 0x0020 (0x0130 - 0x0110)
@@ -36,6 +35,8 @@ public:
 	void OnInitState();
 	void OnFinishedFade(EUnionUIFadeDirection FadeDirection);
 	void OnUpdateState(float InDeltaTime);
+	void OnFinishVSOutAnimation();
+	void VSInAnimationFinishEvent();
 	void ExecuteUbergraph_BPC_RaceSequenceStateCreateRace(int32 EntryPoint);
 
 public:
@@ -54,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStateCreateRace_C;
 
-}
-
+SDK_NAMESPACE_END

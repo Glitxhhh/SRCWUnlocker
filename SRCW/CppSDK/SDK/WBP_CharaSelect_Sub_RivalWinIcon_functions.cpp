@@ -14,18 +14,15 @@
 #include "WBP_CharaSelect_Sub_RivalWinIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CharaSelect_Sub_RivalWinIcon.WBP_CharaSelect_Sub_RivalWinIcon_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CharaSelect_Sub_RivalWinIcon_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharaSelect_Sub_RivalWinIcon_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CharaSelect_Sub_RivalWinIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CharaSelect_Sub_RivalWinIcon_C::Construct()
 
 void UWBP_CharaSelect_Sub_RivalWinIcon_C::ExecuteUbergraph_WBP_CharaSelect_Sub_RivalWinIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharaSelect_Sub_RivalWinIcon_C", "ExecuteUbergraph_WBP_CharaSelect_Sub_RivalWinIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CharaSelect_Sub_RivalWinIcon_C", "ExecuteUbergraph_WBP_CharaSelect_Sub_RivalWinIcon", FuncInfo);
 
 	Params::WBP_CharaSelect_Sub_RivalWinIcon_C_ExecuteUbergraph_WBP_CharaSelect_Sub_RivalWinIcon Parms{};
 
@@ -50,5 +45,5 @@ void UWBP_CharaSelect_Sub_RivalWinIcon_C::ExecuteUbergraph_WBP_CharaSelect_Sub_R
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

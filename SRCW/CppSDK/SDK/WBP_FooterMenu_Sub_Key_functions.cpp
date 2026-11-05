@@ -14,18 +14,15 @@
 #include "WBP_FooterMenu_Sub_Key_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterMenu_Sub_Key.WBP_FooterMenu_Sub_Key_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_FooterMenu_Sub_Key_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_Key_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_Sub_Key_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_FooterMenu_Sub_Key_C::Construct()
 
 void UWBP_FooterMenu_Sub_Key_C::ExecuteUbergraph_WBP_FooterMenu_Sub_Key(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_Sub_Key_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_Key");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterMenu_Sub_Key_C", "ExecuteUbergraph_WBP_FooterMenu_Sub_Key", FuncInfo);
 
 	Params::WBP_FooterMenu_Sub_Key_C_ExecuteUbergraph_WBP_FooterMenu_Sub_Key Parms{};
 
@@ -50,5 +45,5 @@ void UWBP_FooterMenu_Sub_Key_C::ExecuteUbergraph_WBP_FooterMenu_Sub_Key(int32 En
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

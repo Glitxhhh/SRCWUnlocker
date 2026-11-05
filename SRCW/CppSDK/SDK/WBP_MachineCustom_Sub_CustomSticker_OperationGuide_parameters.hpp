@@ -14,8 +14,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomSticker_OperationGuide.WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C.ExecuteUbergraph_WBP_MachineCustom_Sub_CustomSticker_OperationGuide
 // 0x0020 (0x0020 - 0x0000)
@@ -156,5 +156,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_CustomSticker_OperationGuide_C_SetupGuidelineButton;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

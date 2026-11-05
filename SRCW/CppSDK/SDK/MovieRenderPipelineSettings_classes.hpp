@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "MovieRenderPipelineSettings_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_classes.hpp"
+#include "MovieRenderPipelineSettings_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MovieRenderPipelineSettings.MoviePipelineBurnInWidget
 // 0x0000 (0x02E0 - 0x02E0)
@@ -130,5 +129,4 @@ public:
 };
 DUMPER7_ASSERTS_UMoviePipelineWidgetRenderer;
 
-}
-
+SDK_NAMESPACE_END

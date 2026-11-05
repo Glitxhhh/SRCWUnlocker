@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EStickerPresetSelectPageItemType_structs.hpp"
 #include "UNION_structs.hpp"
+#include "EStickerPresetSelectPageItemType_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_StickerPresetPageItemData.ST_StickerPresetPageItemData
 // 0x0090 (0x0090 - 0x0000)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_StickerPresetPageItemData;
 
-}
-
+SDK_NAMESPACE_END

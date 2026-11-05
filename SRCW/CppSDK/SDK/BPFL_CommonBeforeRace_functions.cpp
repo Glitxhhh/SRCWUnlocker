@@ -14,8 +14,7 @@
 #include "BPFL_CommonBeforeRace_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_CommonBeforeRace.BPFL_CommonBeforeRace_C.AddFooterIfNotInViewport
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UBPFL_CommonBeforeRace_C::AddFooterIfNotInViewport(class ARaceSequence* In_RaceSequence, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonBeforeRace_C", "AddFooterIfNotInViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonBeforeRace_C", "AddFooterIfNotInViewport", FuncInfo);
 
 	Params::BPFL_CommonBeforeRace_C_AddFooterIfNotInViewport Parms{};
 
@@ -49,10 +46,8 @@ void UBPFL_CommonBeforeRace_C::AddFooterIfNotInViewport(class ARaceSequence* In_
 
 void UBPFL_CommonBeforeRace_C::ApplyAuraToRacers(TArray<class AVehicleInRacePawn*>& In_Vehicles, TArray<int32>& In_Indices, class UObject* __WorldContext, TArray<class UNiagaraComponent*>* Out_Effects)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonBeforeRace_C", "ApplyAuraToRacers");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonBeforeRace_C", "ApplyAuraToRacers", FuncInfo);
 
 	Params::BPFL_CommonBeforeRace_C_ApplyAuraToRacers Parms{};
 
@@ -79,10 +74,8 @@ void UBPFL_CommonBeforeRace_C::ApplyAuraToRacers(TArray<class AVehicleInRacePawn
 
 void UBPFL_CommonBeforeRace_C::OffsetRacerTransform(const struct FTransform& InTransform, class UObject* __WorldContext, struct FTransform* OutTransform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonBeforeRace_C", "OffsetRacerTransform");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonBeforeRace_C", "OffsetRacerTransform", FuncInfo);
 
 	Params::BPFL_CommonBeforeRace_C_OffsetRacerTransform Parms{};
 
@@ -104,10 +97,8 @@ void UBPFL_CommonBeforeRace_C::OffsetRacerTransform(const struct FTransform& InT
 
 void UBPFL_CommonBeforeRace_C::RemoveFooterIfInViewport(class ARaceSequence* In_RaceSequence, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonBeforeRace_C", "RemoveFooterIfInViewport");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonBeforeRace_C", "RemoveFooterIfInViewport", FuncInfo);
 
 	Params::BPFL_CommonBeforeRace_C_RemoveFooterIfInViewport Parms{};
 
@@ -129,10 +120,8 @@ void UBPFL_CommonBeforeRace_C::RemoveFooterIfInViewport(class ARaceSequence* In_
 
 void UBPFL_CommonBeforeRace_C::SwitchFooterVisible(class URaceBeforeSharedData* In_Param, class ARaceSequence* In_Sequence, ERaceSequenceState In_State, class UObject* __WorldContext, bool* bCanSkip)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_CommonBeforeRace_C", "SwitchFooterVisible");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_CommonBeforeRace_C", "SwitchFooterVisible", FuncInfo);
 
 	Params::BPFL_CommonBeforeRace_C_SwitchFooterVisible Parms{};
 
@@ -147,5 +136,5 @@ void UBPFL_CommonBeforeRace_C::SwitchFooterVisible(class URaceBeforeSharedData* 
 		*bCanSkip = Parms.bCanSkip;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,15 @@
 #include "WBP_Ready_Sub_Gadget_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Ready_Sub_Gadget.WBP_Ready_Sub_Gadget_C.CaptionEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_Ready_Sub_Gadget_C::CaptionEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "CaptionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_Ready_Sub_Gadget_C::CaptionEvent()
 
 void UWBP_Ready_Sub_Gadget_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_Ready_Sub_Gadget_C::Construct()
 
 void UWBP_Ready_Sub_Gadget_C::ExecuteUbergraph_WBP_Ready_Sub_Gadget(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "ExecuteUbergraph_WBP_Ready_Sub_Gadget");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Ready_Sub_Gadget_C", "ExecuteUbergraph_WBP_Ready_Sub_Gadget", FuncInfo);
 
 	Params::WBP_Ready_Sub_Gadget_C_ExecuteUbergraph_WBP_Ready_Sub_Gadget Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_Ready_Sub_Gadget_C::ExecuteUbergraph_WBP_Ready_Sub_Gadget(int32 EntryP
 
 void UWBP_Ready_Sub_Gadget_C::HiddenCaptionEvent(bool bIsHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "HiddenCaptionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	Params::WBP_Ready_Sub_Gadget_C_HiddenCaptionEvent Parms{};
 
@@ -94,10 +85,8 @@ void UWBP_Ready_Sub_Gadget_C::HiddenCaptionEvent(bool bIsHidden)
 
 void UWBP_Ready_Sub_Gadget_C::SetGadgetCaptionEvent(int32 PlayerIndex_0, int32 SlotState, int32 SlotIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "SetGadgetCaptionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	Params::WBP_Ready_Sub_Gadget_C_SetGadgetCaptionEvent Parms{};
 
@@ -112,18 +101,16 @@ void UWBP_Ready_Sub_Gadget_C::SetGadgetCaptionEvent(int32 PlayerIndex_0, int32 S
 // Function WBP_Ready_Sub_Gadget.WBP_Ready_Sub_Gadget_C.UpdateGadgetDetail
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   InGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InSlotIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InGadgetId)
+void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InSlotIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "UpdateGadgetDetail");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	Params::WBP_Ready_Sub_Gadget_C_UpdateGadgetDetail Parms{};
 
-	Parms.InGadgetId = InGadgetId;
+	Parms.InSlotIndex = InSlotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -134,13 +121,11 @@ void UWBP_Ready_Sub_Gadget_C::UpdateGadgetDetail(int32 InGadgetId)
 
 void UWBP_Ready_Sub_Gadget_C::UpdatePlayerIndex()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Ready_Sub_Gadget_C", "UpdatePlayerIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Ready_Sub_Gadget_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

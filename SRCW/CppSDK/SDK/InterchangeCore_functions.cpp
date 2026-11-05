@@ -14,8 +14,7 @@
 #include "InterchangeCore_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InterchangeCore.InterchangeFactoryBase.GetFactoryClass
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -130,10 +129,8 @@ struct FInterchangePipelinePropertyStates UInterchangePipelineBase::FindOrAddPro
 
 void UInterchangePipelineBase::ScriptedExecuteExportPipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedExecuteExportPipeline");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedExecuteExportPipeline Parms{};
 
@@ -157,10 +154,8 @@ void UInterchangePipelineBase::ScriptedExecuteExportPipeline(class UInterchangeB
 
 void UInterchangePipelineBase::ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas, const class FString& ContentBasePath)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedExecutePipeline");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedExecutePipeline Parms{};
 
@@ -187,10 +182,8 @@ void UInterchangePipelineBase::ScriptedExecutePipeline(class UInterchangeBaseNod
 
 void UInterchangePipelineBase::ScriptedExecutePostFactoryPipeline(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const class FString& FactoryNodeKey, class UObject* CreatedAsset, bool bIsAReimport)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedExecutePostFactoryPipeline");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedExecutePostFactoryPipeline Parms{};
 
@@ -218,10 +211,8 @@ void UInterchangePipelineBase::ScriptedExecutePostFactoryPipeline(const class UI
 
 void UInterchangePipelineBase::ScriptedExecutePostImportPipeline(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const class FString& FactoryNodeKey, class UObject* CreatedAsset, bool bIsAReimport)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedExecutePostImportPipeline");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedExecutePostImportPipeline Parms{};
 
@@ -247,10 +238,8 @@ void UInterchangePipelineBase::ScriptedExecutePostImportPipeline(const class UIn
 
 void UInterchangePipelineBase::ScriptedSetReimportSourceIndex(class UClass* ReimportObjectClass, const int32 SourceFileIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedSetReimportSourceIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedSetReimportSourceIndex Parms{};
 
@@ -301,10 +290,8 @@ bool UInterchangePipelineBase::DoesPropertyStatesExist(const class FName Propert
 
 class FString UInterchangePipelineBase::ScriptedGetPipelineDisplayName() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedGetPipelineDisplayName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"InterchangePipelineBase", FnName));
 
 	Params::InterchangePipelineBase_ScriptedGetPipelineDisplayName Parms{};
 
@@ -2994,5 +2981,5 @@ bool UInterchangeUserDefinedAttributesAPI::RemoveUserDefinedAttribute(class UInt
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

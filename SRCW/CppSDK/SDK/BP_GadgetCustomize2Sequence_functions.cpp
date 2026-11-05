@@ -14,8 +14,7 @@
 #include "BP_GadgetCustomize2Sequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_GadgetCustomize2Sequence.BP_GadgetCustomize2Sequence_C.ExecuteUbergraph_BP_GadgetCustomize2Sequence
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_GadgetCustomize2Sequence_C::ExecuteUbergraph_BP_GadgetCustomize2Sequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "ExecuteUbergraph_BP_GadgetCustomize2Sequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_GadgetCustomize2Sequence_C", "ExecuteUbergraph_BP_GadgetCustomize2Sequence", FuncInfo);
 
 	Params::BP_GadgetCustomize2Sequence_C_ExecuteUbergraph_BP_GadgetCustomize2Sequence Parms{};
 
@@ -42,10 +39,8 @@ void ABP_GadgetCustomize2Sequence_C::ExecuteUbergraph_BP_GadgetCustomize2Sequenc
 
 void ABP_GadgetCustomize2Sequence_C::Exit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "Exit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void ABP_GadgetCustomize2Sequence_C::Exit()
 
 void ABP_GadgetCustomize2Sequence_C::GetPlayerNum(int32* OutPlayerNum)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "GetPlayerNum");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_GetPlayerNum Parms{};
 
@@ -79,10 +72,8 @@ void ABP_GadgetCustomize2Sequence_C::GetPlayerNum(int32* OutPlayerNum)
 
 void ABP_GadgetCustomize2Sequence_C::GetSelectMode(EGadgetCustomizeSelectMode* OutSelectMode)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "GetSelectMode");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_GetSelectMode Parms{};
 
@@ -100,10 +91,8 @@ void ABP_GadgetCustomize2Sequence_C::GetSelectMode(EGadgetCustomizeSelectMode* O
 
 void ABP_GadgetCustomize2Sequence_C::IsDirty(bool* bOutIsDirty)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "IsDirty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_IsDirty Parms{};
 
@@ -121,10 +110,8 @@ void ABP_GadgetCustomize2Sequence_C::IsDirty(bool* bOutIsDirty)
 
 void ABP_GadgetCustomize2Sequence_C::IsMessageBarVisible(bool* bOutIsVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "IsMessageBarVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_IsMessageBarVisible Parms{};
 
@@ -140,10 +127,8 @@ void ABP_GadgetCustomize2Sequence_C::IsMessageBarVisible(bool* bOutIsVisible)
 
 void ABP_GadgetCustomize2Sequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +139,8 @@ void ABP_GadgetCustomize2Sequence_C::OnFinalize()
 
 void ABP_GadgetCustomize2Sequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -170,10 +153,8 @@ void ABP_GadgetCustomize2Sequence_C::OnInitialize()
 
 void ABP_GadgetCustomize2Sequence_C::SetDirty(bool bInIsDirty)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "SetDirty");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_SetDirty Parms{};
 
@@ -192,10 +173,8 @@ void ABP_GadgetCustomize2Sequence_C::SetDirty(bool bInIsDirty)
 
 void ABP_GadgetCustomize2Sequence_C::Setup(int32 InPlayerNum, EGadgetCustomizeSelectMode InSelectMode, bool bIsMessageBarVisible_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GadgetCustomize2Sequence_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_GadgetCustomize2Sequence_C", FnName));
 
 	Params::BP_GadgetCustomize2Sequence_C_Setup Parms{};
 
@@ -206,5 +185,5 @@ void ABP_GadgetCustomize2Sequence_C::Setup(int32 InPlayerNum, EGadgetCustomizeSe
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "ABPT_SimpleCockpitBase_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_SPD_SmallSimpleCockpit.ABP_SPD_SmallSimpleCockpit_C
 // 0x0000 (0x2A30 - 0x2A30)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_SPD_SmallSimpleCockpit_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum DeviceConnectionDetector.EKeyboardLayout
 // NumValues: 0x0005
@@ -35,5 +34,4 @@ enum class EKeytopPattern : uint8
 	EKeytopPattern_MAX                       = 3,
 };
 
-}
-
+SDK_NAMESPACE_END

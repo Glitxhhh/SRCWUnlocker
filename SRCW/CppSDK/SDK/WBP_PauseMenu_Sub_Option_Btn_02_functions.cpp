@@ -14,18 +14,15 @@
 #include "WBP_PauseMenu_Sub_Option_Btn_02_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_PauseMenu_Sub_Option_Btn_02.WBP_PauseMenu_Sub_Option_Btn_02_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_PauseMenu_Sub_Option_Btn_02_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_02_C::Construct()
 
 void UWBP_PauseMenu_Sub_Option_Btn_02_C::ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_02(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_02");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_PauseMenu_Sub_Option_Btn_02_C", "ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_02", FuncInfo);
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_02_C_ExecuteUbergraph_WBP_PauseMenu_Sub_Option_Btn_02 Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_02_C::ExecuteUbergraph_WBP_PauseMenu_Sub_Opti
 
 class UObject* UWBP_PauseMenu_Sub_Option_Btn_02_C::GetFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "GetFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_02_C_GetFooter Parms{};
 
@@ -78,10 +71,8 @@ class UObject* UWBP_PauseMenu_Sub_Option_Btn_02_C::GetFooter()
 
 class UObject* UWBP_PauseMenu_Sub_Option_Btn_02_C::GetOwnerMenuSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "GetOwnerMenuSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_02_C_GetOwnerMenuSequence Parms{};
 
@@ -96,10 +87,8 @@ class UObject* UWBP_PauseMenu_Sub_Option_Btn_02_C::GetOwnerMenuSequence()
 
 void UWBP_PauseMenu_Sub_Option_Btn_02_C::PlayAnimationActiveToNonActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "PlayAnimationActiveToNonActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -110,10 +99,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_02_C::PlayAnimationActiveToNonActive()
 
 void UWBP_PauseMenu_Sub_Option_Btn_02_C::PlayAnimationNonActiveToActive()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "PlayAnimationNonActiveToActive");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,10 +113,8 @@ void UWBP_PauseMenu_Sub_Option_Btn_02_C::PlayAnimationNonActiveToActive()
 
 void UWBP_PauseMenu_Sub_Option_Btn_02_C::SetToggle(bool on)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PauseMenu_Sub_Option_Btn_02_C", "SetToggle");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_PauseMenu_Sub_Option_Btn_02_C", FnName));
 
 	Params::WBP_PauseMenu_Sub_Option_Btn_02_C_SetToggle Parms{};
 
@@ -138,5 +123,5 @@ void UWBP_PauseMenu_Sub_Option_Btn_02_C::SetToggle(bool on)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_UnionCrossPlayResolveWindowManager.BP_UnionCrossPlayResolveWindowManager_C.ExecuteUbergraph_BP_UnionCrossPlayResolveWindowManager
 // 0x0008 (0x0008 - 0x0000)
@@ -33,5 +33,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_UnionCrossPlayResolveWindowManager_C_ReceiveTick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

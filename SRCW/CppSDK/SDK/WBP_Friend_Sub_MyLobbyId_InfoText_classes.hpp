@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_Sub_MyLobbyId_InfoText.WBP_Friend_Sub_MyLobbyId_InfoText_C
 // 0x0018 (0x02F8 - 0x02E0)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_Sub_MyLobbyId_InfoText_C;
 
-}
-
+SDK_NAMESPACE_END

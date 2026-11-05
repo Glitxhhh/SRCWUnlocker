@@ -11,15 +11,14 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UnionUI_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Friend_NumberInput_Window.WBP_Friend_NumberInput_Window_C
 // 0x00C0 (0x04D8 - 0x0418)
@@ -105,5 +104,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Friend_NumberInput_Window_C;
 
-}
-
+SDK_NAMESPACE_END

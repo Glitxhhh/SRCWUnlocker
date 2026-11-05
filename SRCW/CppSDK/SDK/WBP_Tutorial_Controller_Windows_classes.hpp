@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Tutorial_Controller_Windows.WBP_Tutorial_Controller_Windows_C
 // 0x0008 (0x0460 - 0x0458)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Tutorial_Controller_Windows_C;
 
-}
-
+SDK_NAMESPACE_END

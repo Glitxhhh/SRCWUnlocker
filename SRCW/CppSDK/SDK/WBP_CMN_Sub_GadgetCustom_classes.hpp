@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "UnionSystem_structs.hpp"
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_Sub_GadgetCustom.WBP_CMN_Sub_GadgetCustom_C
 // 0x0038 (0x06A8 - 0x0670)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_Sub_GadgetCustom_C;
 
-}
-
+SDK_NAMESPACE_END

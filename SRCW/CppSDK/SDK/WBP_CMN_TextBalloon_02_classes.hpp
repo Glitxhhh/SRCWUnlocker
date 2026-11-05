@@ -13,11 +13,10 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_CMN_TextBalloon_02.WBP_CMN_TextBalloon_02_C
-// 0x0000 (0x02F8 - 0x02F8)
+// 0x0000 (0x0300 - 0x0300)
 class UWBP_CMN_TextBalloon_02_C final : public UCommonTextBalloon
 {
 public:
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_CMN_TextBalloon_02_C;
 
-}
-
+SDK_NAMESPACE_END

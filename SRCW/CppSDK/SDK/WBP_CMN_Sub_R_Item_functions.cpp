@@ -14,8 +14,7 @@
 #include "WBP_CMN_Sub_R_Item_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_R_Item.WBP_CMN_Sub_R_Item_C.ExecuteUbergraph_WBP_CMN_Sub_R_Item
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CMN_Sub_R_Item_C::ExecuteUbergraph_WBP_CMN_Sub_R_Item(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_R_Item_C", "ExecuteUbergraph_WBP_CMN_Sub_R_Item");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_R_Item_C", "ExecuteUbergraph_WBP_CMN_Sub_R_Item", FuncInfo);
 
 	Params::WBP_CMN_Sub_R_Item_C_ExecuteUbergraph_WBP_CMN_Sub_R_Item Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_CMN_Sub_R_Item_C::ExecuteUbergraph_WBP_CMN_Sub_R_Item(int32 EntryPoint
 
 void UWBP_CMN_Sub_R_Item_C::PlayDefaultOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_R_Item_C", "PlayDefaultOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_R_Item_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,13 +51,11 @@ void UWBP_CMN_Sub_R_Item_C::PlayDefaultOut()
 
 void UWBP_CMN_Sub_R_Item_C::PlayRealityOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_R_Item_C", "PlayRealityOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_R_Item_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

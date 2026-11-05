@@ -14,8 +14,7 @@
 #include "ABP_HoldWhiteBoost_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_HoldWhiteBoost.ABP_HoldWhiteBoost_C.BlueprintUpdateAnimation
 // (Event, Public, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_HoldWhiteBoost_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldWhiteBoost_C", "BlueprintUpdateAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldWhiteBoost_C", FnName));
 
 	Params::ABP_HoldWhiteBoost_C_BlueprintUpdateAnimation Parms{};
 
@@ -44,10 +41,8 @@ void UABP_HoldWhiteBoost_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void UABP_HoldWhiteBoost_C::ExecuteUbergraph_ABP_HoldWhiteBoost(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldWhiteBoost_C", "ExecuteUbergraph_ABP_HoldWhiteBoost");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_HoldWhiteBoost_C", "ExecuteUbergraph_ABP_HoldWhiteBoost", FuncInfo);
 
 	Params::ABP_HoldWhiteBoost_C_ExecuteUbergraph_ABP_HoldWhiteBoost Parms{};
 
@@ -64,10 +59,8 @@ void UABP_HoldWhiteBoost_C::ExecuteUbergraph_ABP_HoldWhiteBoost(int32 EntryPoint
 
 void UABP_HoldWhiteBoost_C::IsValidOutState(bool* Out_Valid) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_HoldWhiteBoost_C", "IsValidOutState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_HoldWhiteBoost_C", FnName));
 
 	Params::ABP_HoldWhiteBoost_C_IsValidOutState Parms{};
 
@@ -77,5 +70,5 @@ void UABP_HoldWhiteBoost_C::IsValidOutState(bool* Out_Valid) const
 		*Out_Valid = Parms.Out_Valid;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,34 +14,31 @@
 #include "BPF_AppUtilityLibrary_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPF_AppUtilityLibrary.BPF_AppUtilityLibrary_C.OpenRewardDialog
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FText&                      Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// TArray<struct FRewardGetWindowParam>&   rewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FRewardGetWindowParam>&   RewardList                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UWBP_ItemGet_Window_C**           RewardDialogWidget                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // int32*                                  ZOrder                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPF_AppUtilityLibrary_C::OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& rewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder)
+void UBPF_AppUtilityLibrary_C::OpenRewardDialog(const class FText& Title, TArray<struct FRewardGetWindowParam>& RewardList, class UObject* __WorldContext, class UWBP_ItemGet_Window_C** RewardDialogWidget, int32* ZOrder)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPF_AppUtilityLibrary_C", "OpenRewardDialog");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPF_AppUtilityLibrary_C", "OpenRewardDialog", FuncInfo);
 
 	Params::BPF_AppUtilityLibrary_C_OpenRewardDialog Parms{};
 
 	Parms.Title = std::move(Title);
-	Parms.rewardList = std::move(rewardList);
+	Parms.RewardList = std::move(RewardList);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	rewardList = std::move(Parms.rewardList);
+	RewardList = std::move(Parms.RewardList);
 
 	if (RewardDialogWidget != nullptr)
 		*RewardDialogWidget = Parms.RewardDialogWidget;
@@ -60,10 +57,8 @@ void UBPF_AppUtilityLibrary_C::OpenRewardDialog(const class FText& Title, TArray
 
 void UBPF_AppUtilityLibrary_C::Set_Input_Blocked(class APlayerController* Controller, bool bBlocked, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPF_AppUtilityLibrary_C", "Set Input Blocked");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPF_AppUtilityLibrary_C", "Set Input Blocked", FuncInfo);
 
 	Params::BPF_AppUtilityLibrary_C_Set_Input_Blocked Parms{};
 
@@ -74,5 +69,5 @@ void UBPF_AppUtilityLibrary_C::Set_Input_Blocked(class APlayerController* Contro
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

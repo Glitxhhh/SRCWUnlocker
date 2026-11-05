@@ -14,18 +14,15 @@
 #include "BP_RaceResultSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RaceResultSequence.BP_RaceResultSequence_C.BPStart
 // (BlueprintCallable, BlueprintEvent)
 
 void ABP_RaceResultSequence_C::BPStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "BPStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void ABP_RaceResultSequence_C::BPStart()
 
 void ABP_RaceResultSequence_C::ExecuteUbergraph_BP_RaceResultSequence(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "ExecuteUbergraph_BP_RaceResultSequence");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RaceResultSequence_C", "ExecuteUbergraph_BP_RaceResultSequence", FuncInfo);
 
 	Params::BP_RaceResultSequence_C_ExecuteUbergraph_BP_RaceResultSequence Parms{};
 
@@ -58,10 +53,8 @@ void ABP_RaceResultSequence_C::ExecuteUbergraph_BP_RaceResultSequence(int32 Entr
 
 void ABP_RaceResultSequence_C::GetGroupRaceResultWidget(class UWBP_GroupResult_C** Widget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "GetGroupRaceResultWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	Params::BP_RaceResultSequence_C_GetGroupRaceResultWidget Parms{};
 
@@ -77,10 +70,8 @@ void ABP_RaceResultSequence_C::GetGroupRaceResultWidget(class UWBP_GroupResult_C
 
 void ABP_RaceResultSequence_C::OnFinalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "OnFinalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -91,10 +82,8 @@ void ABP_RaceResultSequence_C::OnFinalize()
 
 void ABP_RaceResultSequence_C::OnInitialize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "OnInitialize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -105,10 +94,8 @@ void ABP_RaceResultSequence_C::OnInitialize()
 
 void ABP_RaceResultSequence_C::OnInitStateExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "OnInitStateExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,10 +108,8 @@ void ABP_RaceResultSequence_C::OnInitStateExit()
 
 void ABP_RaceResultSequence_C::ReceiveTick(float DeltaSeconds)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RaceResultSequence_C", "ReceiveTick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RaceResultSequence_C", FnName));
 
 	Params::BP_RaceResultSequence_C_ReceiveTick Parms{};
 
@@ -133,5 +118,5 @@ void ABP_RaceResultSequence_C::ReceiveTick(float DeltaSeconds)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

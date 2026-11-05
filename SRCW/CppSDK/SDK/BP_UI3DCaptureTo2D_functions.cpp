@@ -14,8 +14,7 @@
 #include "BP_UI3DCaptureTo2D_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_UI3DCaptureTo2D.BP_UI3DCaptureTo2D_C.CustomEvent_0
 // (BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void ABP_UI3DCaptureTo2D_C::CustomEvent_0(bool bSuccess)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI3DCaptureTo2D_C", "CustomEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UI3DCaptureTo2D_C", FnName));
 
 	Params::BP_UI3DCaptureTo2D_C_CustomEvent_0 Parms{};
 
@@ -44,10 +41,8 @@ void ABP_UI3DCaptureTo2D_C::CustomEvent_0(bool bSuccess)
 
 void ABP_UI3DCaptureTo2D_C::ExecuteUbergraph_BP_UI3DCaptureTo2D(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI3DCaptureTo2D_C", "ExecuteUbergraph_BP_UI3DCaptureTo2D");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_UI3DCaptureTo2D_C", "ExecuteUbergraph_BP_UI3DCaptureTo2D", FuncInfo);
 
 	Params::BP_UI3DCaptureTo2D_C_ExecuteUbergraph_BP_UI3DCaptureTo2D Parms{};
 
@@ -62,10 +57,8 @@ void ABP_UI3DCaptureTo2D_C::ExecuteUbergraph_BP_UI3DCaptureTo2D(int32 EntryPoint
 
 void ABP_UI3DCaptureTo2D_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI3DCaptureTo2D_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UI3DCaptureTo2D_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void ABP_UI3DCaptureTo2D_C::ReceiveBeginPlay()
 
 void ABP_UI3DCaptureTo2D_C::SetTransformByMenuType(E3DCaptureMenuType MenuType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI3DCaptureTo2D_C", "SetTransformByMenuType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UI3DCaptureTo2D_C", FnName));
 
 	Params::BP_UI3DCaptureTo2D_C_SetTransformByMenuType Parms{};
 
@@ -98,10 +89,8 @@ void ABP_UI3DCaptureTo2D_C::SetTransformByMenuType(E3DCaptureMenuType MenuType)
 
 void ABP_UI3DCaptureTo2D_C::TakePicture(const class FString& FileName_Footer)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UI3DCaptureTo2D_C", "TakePicture");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_UI3DCaptureTo2D_C", FnName));
 
 	Params::BP_UI3DCaptureTo2D_C_TakePicture Parms{};
 
@@ -110,5 +99,5 @@ void ABP_UI3DCaptureTo2D_C::TakePicture(const class FString& FileName_Footer)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

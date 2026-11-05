@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ItemYellowDrillActor.BP_ItemYellowDrillActor_C
 // 0x0018 (0x0348 - 0x0330)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ItemYellowDrillActor_C;
 
-}
-
+SDK_NAMESPACE_END

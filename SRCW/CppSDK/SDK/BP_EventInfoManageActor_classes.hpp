@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_EventInfoManageActor.BP_EventInfoManageActor_C
 // 0x0020 (0x02D8 - 0x02B8)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_EventInfoManageActor_C;
 
-}
-
+SDK_NAMESPACE_END

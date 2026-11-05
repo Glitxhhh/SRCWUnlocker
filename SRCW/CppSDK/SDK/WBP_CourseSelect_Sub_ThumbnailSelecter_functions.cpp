@@ -14,18 +14,15 @@
 #include "WBP_CourseSelect_Sub_ThumbnailSelecter_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_ThumbnailSelecter.WBP_CourseSelect_Sub_ThumbnailSelecter_C.BindEventCourseSelect
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::BindEventCourseSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "BindEventCourseSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -39,10 +36,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::BindEventCourseSelect()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::CanScroll(bool bDown, bool* bScrollable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "CanScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_CanScroll Parms{};
 
@@ -60,10 +55,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::CanScroll(bool bDown, bool* bScr
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Construct()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::ExecuteUbergraph_WBP_CourseSelect_Sub_ThumbnailSelecter(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_ThumbnailSelecter");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_ThumbnailSelecter_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_ThumbnailSelecter", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_ExecuteUbergraph_WBP_CourseSelect_Sub_ThumbnailSelecter Parms{};
 
@@ -94,10 +85,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::ExecuteUbergraph_WBP_CourseSelec
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Finalize()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Finalize");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -112,10 +101,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Finalize()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Get3pieceStageIds(EStageId* StageCourseId, EStageId* StageCourseId1, EStageId* StageCourseId2)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Get3pieceStageIds");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_Get3pieceStageIds Parms{};
 
@@ -140,10 +127,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Get3pieceStageIds(EStageId* Stag
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Is_3Piece_Enable_Course(int32 Index_0, bool* bEnableCourse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Is 3Piece Enable Course");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_Is_3Piece_Enable_Course Parms{};
 
@@ -165,10 +150,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Is_3Piece_Enable_Course(int32 In
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::IsCrossWorldEnableCourse(int32 InPanelIndex, int32 InButtonIndex, bool* bEnableCourse)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "IsCrossWorldEnableCourse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_IsCrossWorldEnableCourse Parms{};
 
@@ -189,10 +172,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::IsCrossWorldEnableCourse(int32 I
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::On_Store_Shortcut_Pressed(EStageId StageId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "On Store Shortcut Pressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_On_Store_Shortcut_Pressed Parms{};
 
@@ -211,10 +192,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::On_Store_Shortcut_Pressed(EStage
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnCancel(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "OnCancel");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnCancel Parms{};
 
@@ -235,10 +214,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnCancel(class UUnionUIButtonBas
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnDecision(class UUnionUIButtonBase* Button, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "OnDecision");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnDecision Parms{};
 
@@ -259,10 +236,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnDecision(class UUnionUIButtonB
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnFocusCrossWorldThumbnail(EStageId StageId, int32 PanelIndex, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "OnFocusCrossWorldThumbnail");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnFocusCrossWorldThumbnail Parms{};
 
@@ -282,14 +257,34 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnFocusCrossWorldThumbnail(EStag
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnFocusThumbnail(EStageId StageCourseId, int32 ButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "OnFocusThumbnail");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnFocusThumbnail Parms{};
 
 	Parms.StageCourseId = StageCourseId;
+	Parms.ButtonIndex = ButtonIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CourseSelect_Sub_ThumbnailSelecter.WBP_CourseSelect_Sub_ThumbnailSelecter_C.OnMainStageStoreEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EStageId                                StageId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PanelIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ButtonIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnMainStageStoreEvent(EStageId StageId, int32 PanelIndex, int32 ButtonIndex)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
+
+	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_OnMainStageStoreEvent Parms{};
+
+	Parms.StageId = StageId;
+	Parms.PanelIndex = PanelIndex;
 	Parms.ButtonIndex = ButtonIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -307,10 +302,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::OnFocusThumbnail(EStageId StageC
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set_Time_Trial_3Pieace_Course(TArray<EStageId>& InCourseId, double OpenThreshold, bool bForceHidden, bool bForceInvalid, TArray<ETimeTrialClearRankId>& InTimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Set Time Trial 3Pieace Course");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_Set_Time_Trial_3Pieace_Course Parms{};
 
@@ -338,10 +331,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set_Time_Trial_3Pieace_Course(TA
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set3PieceCourseId(int32 InIndex, EStageId InCourseId, double OpenThreshold, bool bForceHidden, bool bForceInvalid)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Set3PieceCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_Set3PieceCourseId Parms{};
 
@@ -362,10 +353,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set3PieceCourseId(int32 InIndex,
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set3PieceLastFocusIndex(int32 InButtonIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "Set3PieceLastFocusIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_Set3PieceLastFocusIndex Parms{};
 
@@ -385,10 +374,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::Set3PieceLastFocusIndex(int32 In
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetAnotherCourseId(int32 Index_0, EStageId StageId, double OpenThreshold, bool ForceHidden)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetAnotherCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetAnotherCourseId Parms{};
 
@@ -408,10 +395,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetAnotherCourseId(int32 Index_0
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetCourseThumbnailInteractableState(bool Interactable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetCourseThumbnailInteractableState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetCourseThumbnailInteractableState Parms{};
 
@@ -428,10 +413,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetCourseThumbnailInteractableSt
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGameModeId(EGameModeId InGameModeId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetGameModeId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetGameModeId Parms{};
 
@@ -448,10 +431,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGameModeId(EGameModeId InGame
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGrandprixId(EGrandPrixId InGrandprixId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetGrandprixId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetGrandprixId Parms{};
 
@@ -468,10 +449,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGrandprixId(EGrandPrixId InGr
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGrandprixName(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetGrandprixName");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetGrandprixName Parms{};
 
@@ -486,10 +465,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetGrandprixName(const class FTe
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetTimeTrialAnotherCourse()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetTimeTrialAnotherCourse");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -502,10 +479,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetTimeTrialAnotherCourse()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetupTmb(const TMap<EStageId, TSoftObjectPtr<class UTexture2D>>& StageId_Tmb)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "SetupTmb");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_SetupTmb Parms{};
 
@@ -520,10 +495,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::SetupTmb(const TMap<EStageId, TS
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::StartFocus()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "StartFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -536,10 +509,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::StartFocus()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::StartScroll(bool bDown)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "StartScroll");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_StartScroll Parms{};
 
@@ -554,10 +525,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::StartScroll(bool bDown)
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::UnbindEventCourseSelect()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "UnbindEventCourseSelect");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -570,10 +539,8 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::UnbindEventCourseSelect()
 
 void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::UpdateAnotherCourseId(double OpenThreshold)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_ThumbnailSelecter_C", "UpdateAnotherCourseId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_ThumbnailSelecter_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_ThumbnailSelecter_C_UpdateAnotherCourseId Parms{};
 
@@ -582,5 +549,5 @@ void UWBP_CourseSelect_Sub_ThumbnailSelecter_C::UpdateAnotherCourseId(double Ope
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

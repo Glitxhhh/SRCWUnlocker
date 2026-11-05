@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UNION_classes.hpp"
 #include "UnionUI_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_RaceSequenceStateIntroduceCourse.BPC_RaceSequenceStateIntroduceCourse_C
 // 0x0078 (0x0198 - 0x0120)
@@ -87,5 +86,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_RaceSequenceStateIntroduceCourse_C;
 
-}
-
+SDK_NAMESPACE_END

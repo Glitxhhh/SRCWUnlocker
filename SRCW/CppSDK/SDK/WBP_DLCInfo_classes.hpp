@@ -13,11 +13,10 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_DLCInfo.WBP_DLCInfo_C
-// 0x0048 (0x0328 - 0x02E0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWBP_DLCInfo_C final : public UUserWidget
 {
 public:
@@ -30,8 +29,10 @@ public:
 	class UImage*                                 UVScroll_03;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 UVScroll_04;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 WhiteBase;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       CachedMIDArray;                                    // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void ReleaseResource();
 	void SetSchedule(const class FText& Schedule);
 	void SetTextureBG(class UTexture2D* Texture);
 	void SetTitle(const class FText& Title);
@@ -52,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_DLCInfo_C;
 
-}
-
+SDK_NAMESPACE_END

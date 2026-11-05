@@ -14,8 +14,7 @@
 #include "WBP_GadgetCutom_M4_Div_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GadgetCutom_M4_Div.WBP_GadgetCutom_M4_Div_C.ExecuteUbergraph_WBP_GadgetCutom_M4_Div
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_GadgetCutom_M4_Div_C::ExecuteUbergraph_WBP_GadgetCutom_M4_Div(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "ExecuteUbergraph_WBP_GadgetCutom_M4_Div");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GadgetCutom_M4_Div_C", "ExecuteUbergraph_WBP_GadgetCutom_M4_Div", FuncInfo);
 
 	Params::WBP_GadgetCutom_M4_Div_C_ExecuteUbergraph_WBP_GadgetCutom_M4_Div Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_GadgetCutom_M4_Div_C::ExecuteUbergraph_WBP_GadgetCutom_M4_Div(int32 En
 
 void UWBP_GadgetCutom_M4_Div_C::PreConstruct(bool IsDesignTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "PreConstruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_PreConstruct Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_GadgetCutom_M4_Div_C::PreConstruct(bool IsDesignTime)
 
 void UWBP_GadgetCutom_M4_Div_C::SequenceEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "SequenceEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UWBP_GadgetCutom_M4_Div_C::SequenceEvent()
 
 void UWBP_GadgetCutom_M4_Div_C::SequenceEvent__ENTRYPOINTWBP_GadgetCutom_M4_Div()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "SequenceEvent__ENTRYPOINTWBP_GadgetCutom_M4_Div");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,10 +84,8 @@ void UWBP_GadgetCutom_M4_Div_C::SequenceEvent__ENTRYPOINTWBP_GadgetCutom_M4_Div(
 
 void UWBP_GadgetCutom_M4_Div_C::SetPlateWindowZorderHigherThanSelectWindow(int32 InPlayerControllerIndex, bool bPlateWindowHigher)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "SetPlateWindowZorderHigherThanSelectWindow");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_SetPlateWindowZorderHigherThanSelectWindow Parms{};
 
@@ -115,10 +104,8 @@ void UWBP_GadgetCutom_M4_Div_C::SetPlateWindowZorderHigherThanSelectWindow(int32
 
 void UWBP_GadgetCutom_M4_Div_C::Setup(const struct FGadgetCustomizeWindowData& InWindowData, const bool bInFestaSpecialRule)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_Setup Parms{};
 
@@ -136,10 +123,8 @@ void UWBP_GadgetCutom_M4_Div_C::Setup(const struct FGadgetCustomizeWindowData& I
 
 void UWBP_GadgetCutom_M4_Div_C::GetCharaNameBoxes(TArray<class UUnionRichTextBlock*>* OutCharaNameBoxes) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetCharaNameBoxes");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetCharaNameBoxes Parms{};
 
@@ -157,10 +142,8 @@ void UWBP_GadgetCutom_M4_Div_C::GetCharaNameBoxes(TArray<class UUnionRichTextBlo
 
 void UWBP_GadgetCutom_M4_Div_C::GetDetailWindows(TArray<class UGadgetDetailWindow*>* OutDetailWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetDetailWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetDetailWindows Parms{};
 
@@ -178,10 +161,8 @@ void UWBP_GadgetCutom_M4_Div_C::GetDetailWindows(TArray<class UGadgetDetailWindo
 
 void UWBP_GadgetCutom_M4_Div_C::GetGadgetCustomWindows(TArray<class UGadgetCustomWindow*>* OutGadgetCustomWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetGadgetCustomWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetGadgetCustomWindows Parms{};
 
@@ -199,10 +180,8 @@ void UWBP_GadgetCutom_M4_Div_C::GetGadgetCustomWindows(TArray<class UGadgetCusto
 
 void UWBP_GadgetCutom_M4_Div_C::GetmachineParameterWindows(TArray<class UCharaMachineParamWindow*>* OutMachineParameterWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetmachineParameterWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetmachineParameterWindows Parms{};
 
@@ -220,10 +199,8 @@ void UWBP_GadgetCutom_M4_Div_C::GetmachineParameterWindows(TArray<class UCharaMa
 
 void UWBP_GadgetCutom_M4_Div_C::GetPlateWindows(TArray<class UGadgetPlateWindow*>* OutPlateWindows) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetPlateWindows");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetPlateWindows Parms{};
 
@@ -241,10 +218,8 @@ void UWBP_GadgetCutom_M4_Div_C::GetPlateWindows(TArray<class UGadgetPlateWindow*
 
 class UCommonCountNumberWidget* UWBP_GadgetCutom_M4_Div_C::GetTicketBox() const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GadgetCutom_M4_Div_C", "GetTicketBox");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GadgetCutom_M4_Div_C", FnName));
 
 	Params::WBP_GadgetCutom_M4_Div_C_GetTicketBox Parms{};
 
@@ -253,5 +228,5 @@ class UCommonCountNumberWidget* UWBP_GadgetCutom_M4_Div_C::GetTicketBox() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

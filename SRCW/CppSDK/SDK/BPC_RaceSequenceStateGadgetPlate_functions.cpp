@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateGadgetPlate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateGadgetPlate.BPC_RaceSequenceStateGadgetPlate_C.ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateGadgetPlate_C::ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateGadgetPlate_C", "ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate", FuncInfo);
 
 	Params::BPC_RaceSequenceStateGadgetPlate_C_ExecuteUbergraph_BPC_RaceSequenceStateGadgetPlate Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_RaceSequenceStateGadgetPlate_C::ExecuteUbergraph_BPC_RaceSequenceState
 
 void UBPC_RaceSequenceStateGadgetPlate_C::OnExitFade(EUnionUIFadeDirection FadeDirection)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "OnExitFade");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	Params::BPC_RaceSequenceStateGadgetPlate_C_OnExitFade Parms{};
 
@@ -62,10 +57,8 @@ void UBPC_RaceSequenceStateGadgetPlate_C::OnExitFade(EUnionUIFadeDirection FadeD
 
 void UBPC_RaceSequenceStateGadgetPlate_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,10 +69,8 @@ void UBPC_RaceSequenceStateGadgetPlate_C::OnExitState()
 
 void UBPC_RaceSequenceStateGadgetPlate_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UBPC_RaceSequenceStateGadgetPlate_C::OnInitState()
 
 void UBPC_RaceSequenceStateGadgetPlate_C::ReceiveBeginPlay()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "ReceiveBeginPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +95,8 @@ void UBPC_RaceSequenceStateGadgetPlate_C::ReceiveBeginPlay()
 
 void UBPC_RaceSequenceStateGadgetPlate_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "ReceiveEndPlay");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	Params::BPC_RaceSequenceStateGadgetPlate_C_ReceiveEndPlay Parms{};
 
@@ -124,13 +111,11 @@ void UBPC_RaceSequenceStateGadgetPlate_C::ReceiveEndPlay(EEndPlayReason EndPlayR
 
 void UBPC_RaceSequenceStateGadgetPlate_C::カスタムイベント()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateGadgetPlate_C", "カスタムイベント");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateGadgetPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_SquadContext.BP_SquadContext_C.ExecuteUbergraph_BP_SquadContext
 // 0x0140 (0x0140 - 0x0000)
@@ -81,5 +81,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_SquadContext_C_OnSendInvitationCompletedInternal;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

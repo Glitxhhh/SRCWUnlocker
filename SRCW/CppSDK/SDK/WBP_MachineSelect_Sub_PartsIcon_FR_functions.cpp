@@ -14,8 +14,7 @@
 #include "WBP_MachineSelect_Sub_PartsIcon_FR_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_MachineSelect_Sub_PartsIcon_FR.WBP_MachineSelect_Sub_PartsIcon_FR_C.ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_FR
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_FR(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_FR");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_MachineSelect_Sub_PartsIcon_FR_C", "ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_FR", FuncInfo);
 
 	Params::WBP_MachineSelect_Sub_PartsIcon_FR_C_ExecuteUbergraph_WBP_MachineSelect_Sub_PartsIcon_FR Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::ExecuteUbergraph_WBP_MachineSelect_S
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,10 +53,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnAcceptKeyPressed()
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "OnAnimationFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	Params::WBP_MachineSelect_Sub_PartsIcon_FR_C_OnAnimationFinished Parms{};
 
@@ -76,10 +69,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnAnimationFinished(const class UWid
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,10 +81,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::OnBackKeyPressed()
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::PlayAnimDefault()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "PlayAnimDefault");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -104,10 +93,8 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::PlayAnimDefault()
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::PlayAnimLock()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "PlayAnimLock");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -118,13 +105,11 @@ void UWBP_MachineSelect_Sub_PartsIcon_FR_C::PlayAnimLock()
 
 void UWBP_MachineSelect_Sub_PartsIcon_FR_C::PlayAnimUnLock()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MachineSelect_Sub_PartsIcon_FR_C", "PlayAnimUnLock");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_MachineSelect_Sub_PartsIcon_FR_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

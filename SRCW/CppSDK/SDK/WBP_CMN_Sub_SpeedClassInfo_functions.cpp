@@ -14,18 +14,15 @@
 #include "WBP_CMN_Sub_SpeedClassInfo_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_Sub_SpeedClassInfo.WBP_CMN_Sub_SpeedClassInfo_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CMN_Sub_SpeedClassInfo_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_SpeedClassInfo_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_SpeedClassInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_CMN_Sub_SpeedClassInfo_C::Construct()
 
 void UWBP_CMN_Sub_SpeedClassInfo_C::ExecuteUbergraph_WBP_CMN_Sub_SpeedClassInfo(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_SpeedClassInfo_C", "ExecuteUbergraph_WBP_CMN_Sub_SpeedClassInfo");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_Sub_SpeedClassInfo_C", "ExecuteUbergraph_WBP_CMN_Sub_SpeedClassInfo", FuncInfo);
 
 	Params::WBP_CMN_Sub_SpeedClassInfo_C_ExecuteUbergraph_WBP_CMN_Sub_SpeedClassInfo Parms{};
 
@@ -58,10 +53,8 @@ void UWBP_CMN_Sub_SpeedClassInfo_C::ExecuteUbergraph_WBP_CMN_Sub_SpeedClassInfo(
 
 void UWBP_CMN_Sub_SpeedClassInfo_C::SetMenuSpeedClassId(EMenuSpeedClassId SpeedClassId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_SpeedClassInfo_C", "SetMenuSpeedClassId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_SpeedClassInfo_C", FnName));
 
 	Params::WBP_CMN_Sub_SpeedClassInfo_C_SetMenuSpeedClassId Parms{};
 
@@ -76,13 +69,11 @@ void UWBP_CMN_Sub_SpeedClassInfo_C::SetMenuSpeedClassId(EMenuSpeedClassId SpeedC
 
 void UWBP_CMN_Sub_SpeedClassInfo_C::SetPartyRaceGroupSpeedClass()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_Sub_SpeedClassInfo_C", "SetPartyRaceGroupSpeedClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_Sub_SpeedClassInfo_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

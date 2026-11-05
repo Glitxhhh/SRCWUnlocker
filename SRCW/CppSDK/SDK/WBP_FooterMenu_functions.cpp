@@ -14,18 +14,15 @@
 #include "WBP_FooterMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_FooterMenu.WBP_FooterMenu_C.BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
 // (BlueprintEvent)
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_Co
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_Co
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,10 +57,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Cancel_K2Node_Co
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +69,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_Compon
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,10 +81,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_Compon
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -106,10 +93,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_OK_K2Node_Compon
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -120,10 +105,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -134,10 +117,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +129,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_0_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -162,10 +141,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_5_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_5_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -176,10 +153,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -190,10 +165,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_1_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_10_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_10_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -204,10 +177,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_11_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -218,10 +189,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_6_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_ComponentBoundEvent_6_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -232,10 +201,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_2_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_12_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_12_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -246,10 +213,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_13_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -260,10 +225,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -274,10 +237,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_3_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_14_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_14_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -288,10 +249,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_15_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_15_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -302,10 +261,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_8_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_ComponentBoundEvent_8_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -316,10 +273,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_4_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_16_OnButtonPressedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_16_OnButtonPressedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -330,10 +285,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_17_OnButtonHoverEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_17_OnButtonHoverEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -344,10 +297,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_Com
 
 void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_18_OnButtonReleasedEvent__DelegateSignature()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_ComponentBoundEvent_18_OnButtonReleasedEvent__DelegateSignature");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -358,10 +309,8 @@ void UWBP_FooterMenu_C::BndEvt__WBP_FooterMenu_MouseInteraction_Sub_5_K2Node_Com
 
 void UWBP_FooterMenu_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -374,10 +323,8 @@ void UWBP_FooterMenu_C::Construct()
 
 void UWBP_FooterMenu_C::ExecuteUbergraph_WBP_FooterMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "ExecuteUbergraph_WBP_FooterMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_FooterMenu_C", "ExecuteUbergraph_WBP_FooterMenu", FuncInfo);
 
 	Params::WBP_FooterMenu_C_ExecuteUbergraph_WBP_FooterMenu Parms{};
 
@@ -392,10 +339,8 @@ void UWBP_FooterMenu_C::ExecuteUbergraph_WBP_FooterMenu(int32 EntryPoint)
 
 void UWBP_FooterMenu_C::Hide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "Hide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -408,10 +353,8 @@ void UWBP_FooterMenu_C::Hide()
 
 void UWBP_FooterMenu_C::OnHovered(class UButton* HoveredObject)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "OnHovered");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	Params::WBP_FooterMenu_C_OnHovered Parms{};
 
@@ -426,10 +369,8 @@ void UWBP_FooterMenu_C::OnHovered(class UButton* HoveredObject)
 
 void UWBP_FooterMenu_C::PlayAnimIn()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "PlayAnimIn");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -440,12 +381,28 @@ void UWBP_FooterMenu_C::PlayAnimIn()
 
 void UWBP_FooterMenu_C::PlayAnimOut()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "PlayAnimOut");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FooterMenu.WBP_FooterMenu_C.RegisterPressedFooter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UCommonMenuFooterButton*          FooterButton                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FooterMenu_C::RegisterPressedFooter(class UCommonMenuFooterButton* FooterButton)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
+
+	Params::WBP_FooterMenu_C_RegisterPressedFooter Parms{};
+
+	Parms.FooterButton = FooterButton;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -454,10 +411,8 @@ void UWBP_FooterMenu_C::PlayAnimOut()
 
 void UWBP_FooterMenu_C::Show()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "Show");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -468,13 +423,11 @@ void UWBP_FooterMenu_C::Show()
 
 void UWBP_FooterMenu_C::WidgetAnimationEvt_FooterMenu_In_K2Node_WidgetAnimationEvent_0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FooterMenu_C", "WidgetAnimationEvt_FooterMenu_In_K2Node_WidgetAnimationEvent_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_FooterMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -19,8 +19,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class HoudiniEngineRuntime.HoudiniAsset
 // 0x0028 (0x0050 - 0x0028)
@@ -74,13 +73,44 @@ public:
 };
 DUMPER7_ASSERTS_AHoudiniAssetActor;
 
+// Class HoudiniEngineRuntime.HoudiniAssetStateEvents
+// 0x0008 (0x0008 - 0x0000)
+class IHoudiniAssetStateEvents
+{
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("HoudiniAssetStateEvents")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniAssetStateEvents")
+	}
+	static class IHoudiniAssetStateEvents* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IHoudiniAssetStateEvents>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IHoudiniAssetStateEvents;
+
 // Class HoudiniEngineRuntime.HoudiniAssetComponent
 // 0x0560 (0x0A80 - 0x0520)
 #pragma pack(push, 0x1)
-class alignas(0x10) UHoudiniAssetComponent : public UPrimitiveComponent
+class SDK_ALIGN(0x10) UHoudiniAssetComponent : public UPrimitiveComponent, public IHoudiniAssetStateEvents
 {
 public:
-	uint8                                         Pad_518[0x8];                                      // 0x0518(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UHoudiniAsset*                          HoudiniAsset;                                      // 0x0520(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCookOnParameterChange;                            // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUploadTransformsToHoudiniEngine;                  // 0x0529(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -208,9 +238,12 @@ public:
 DUMPER7_ASSERTS_UHoudiniAssetBlueprintComponent;
 
 // Class HoudiniEngineRuntime.HoudiniEngineCopyPropertiesInterface
-// 0x0000 (0x0000 - 0x0000)
-class IHoudiniEngineCopyPropertiesInterface final
+// 0x0008 (0x0008 - 0x0000)
+class IHoudiniEngineCopyPropertiesInterface
 {
+public:
+	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -537,7 +570,7 @@ DUMPER7_ASSERTS_UHoudiniInputGeometryCollection;
 // Class HoudiniEngineRuntime.HoudiniInputSceneComponent
 // 0x0070 (0x0290 - 0x0220)
 #pragma pack(push, 0x1)
-class alignas(0x10) UHoudiniInputSceneComponent : public UHoudiniInputObject
+class SDK_ALIGN(0x10) UHoudiniInputSceneComponent : public UHoudiniInputObject
 {
 public:
 	struct FTransform                             ActorTransform;                                    // 0x0220(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2161,10 +2194,9 @@ DUMPER7_ASSERTS_UHoudiniRuntimeSettings;
 
 // Class HoudiniEngineRuntime.HoudiniSplineComponent
 // 0x0350 (0x0580 - 0x0230)
-class UHoudiniSplineComponent final : public USceneComponent
+class UHoudiniSplineComponent final : public USceneComponent, public IHoudiniEngineCopyPropertiesInterface
 {
 public:
-	uint8                                         Pad_230[0x8];                                      // 0x0230(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTransform>                     CurvePoints;                                       // 0x0238(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FVector3d>                      DisplayPoints;                                     // 0x0248(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 DisplayPointIndexDivider;                          // 0x0258(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -2390,34 +2422,4 @@ public:
 };
 DUMPER7_ASSERTS_UHoudiniToolsPackageAsset;
 
-// Class HoudiniEngineRuntime.HoudiniAssetStateEvents
-// 0x0000 (0x0000 - 0x0000)
-class IHoudiniAssetStateEvents final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("HoudiniAssetStateEvents")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"HoudiniAssetStateEvents")
-	}
-	static class IHoudiniAssetStateEvents* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IHoudiniAssetStateEvents>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IHoudiniAssetStateEvents;
-
-}
-
+SDK_NAMESPACE_END

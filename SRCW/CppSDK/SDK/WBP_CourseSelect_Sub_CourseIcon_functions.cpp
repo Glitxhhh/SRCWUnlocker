@@ -14,8 +14,7 @@
 #include "WBP_CourseSelect_Sub_CourseIcon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CourseSelect_Sub_CourseIcon.WBP_CourseSelect_Sub_CourseIcon_C.ExecuteUbergraph_WBP_CourseSelect_Sub_CourseIcon
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::ExecuteUbergraph_WBP_CourseSelect_Sub_CourseIcon(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_CourseIcon");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CourseSelect_Sub_CourseIcon_C", "ExecuteUbergraph_WBP_CourseSelect_Sub_CourseIcon", FuncInfo);
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_ExecuteUbergraph_WBP_CourseSelect_Sub_CourseIcon Parms{};
 
@@ -42,10 +39,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::ExecuteUbergraph_WBP_CourseSelect_Sub_C
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,10 +51,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::OnBackKeyPressed()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::OnLeftKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "OnLeftKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,10 +63,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::OnLeftKeyPressed()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::OnLeftShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "OnLeftShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -84,10 +75,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::OnLeftShoulderPressed()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::OnRightKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "OnRightKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,10 +87,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::OnRightKeyPressed()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::OnRightShoulderPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "OnRightShoulderPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -114,10 +101,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::OnRightShoulderPressed()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SelectMedalView(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SelectMedalView");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SelectMedalView Parms{};
 
@@ -132,10 +117,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SelectMedalView(int32 InIndex)
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SelectMedalViewEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SelectMedalViewEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -148,10 +131,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SelectMedalViewEnd()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetGrandprixIconId(EGrandPrixId IconId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetGrandprixIconId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetGrandprixIconId Parms{};
 
@@ -168,10 +149,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetGrandprixIconId(EGrandPrixId IconId)
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetGrandprixId(uint8 GrandPrixId_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetGrandprixId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetGrandprixId Parms{};
 
@@ -189,10 +168,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetGrandprixId(uint8 GrandPrixId_0)
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetLock(bool bLock, bool DecidableIfLocked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetLock");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetLock Parms{};
 
@@ -211,10 +188,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetLock(bool bLock, bool DecidableIfLoc
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetLockStatus(bool bLock, bool DecidableIfLocked)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetLockStatus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetLockStatus Parms{};
 
@@ -232,10 +207,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetLockStatus(bool bLock, bool Decidabl
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetMouseInteractionButtonVisible(ESlateVisibility InVisibility)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetMouseInteractionButtonVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetMouseInteractionButtonVisible Parms{};
 
@@ -252,10 +225,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetMouseInteractionButtonVisible(ESlate
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetTimeTrialMedal(const TArray<ETimeTrialClearRankId>& InTimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetTimeTrialMedal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	Params::WBP_CourseSelect_Sub_CourseIcon_C_SetTimeTrialMedal Parms{};
 
@@ -270,10 +241,8 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetTimeTrialMedal(const TArray<ETimeTri
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::SetWaitAnimationDecide()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "SetWaitAnimationDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -284,13 +253,11 @@ void UWBP_CourseSelect_Sub_CourseIcon_C::SetWaitAnimationDecide()
 
 void UWBP_CourseSelect_Sub_CourseIcon_C::StartSelectAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CourseSelect_Sub_CourseIcon_C", "StartSelectAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CourseSelect_Sub_CourseIcon_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

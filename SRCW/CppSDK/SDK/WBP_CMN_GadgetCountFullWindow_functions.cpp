@@ -14,18 +14,15 @@
 #include "WBP_CMN_GadgetCountFullWindow_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_CMN_GadgetCountFullWindow.WBP_CMN_GadgetCountFullWindow_C.BindItemCountWidgetAnimationEvent
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CMN_GadgetCountFullWindow_C::BindItemCountWidgetAnimationEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "BindItemCountWidgetAnimationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::BindItemCountWidgetAnimationEvent()
 
 void UWBP_CMN_GadgetCountFullWindow_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,10 +45,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::Construct()
 
 void UWBP_CMN_GadgetCountFullWindow_C::EndCountItemCountWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "EndCountItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -66,10 +59,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::EndCountItemCountWidget()
 
 void UWBP_CMN_GadgetCountFullWindow_C::ExecuteUbergraph_WBP_CMN_GadgetCountFullWindow(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "ExecuteUbergraph_WBP_CMN_GadgetCountFullWindow");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_CMN_GadgetCountFullWindow_C", "ExecuteUbergraph_WBP_CMN_GadgetCountFullWindow", FuncInfo);
 
 	Params::WBP_CMN_GadgetCountFullWindow_C_ExecuteUbergraph_WBP_CMN_GadgetCountFullWindow Parms{};
 
@@ -86,10 +77,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::ExecuteUbergraph_WBP_CMN_GadgetCountFullW
 
 void UWBP_CMN_GadgetCountFullWindow_C::GetGadgetCountWidget(class UWBP_CMN_GadgetCount_C** OutGadgetCountWidget)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "GetGadgetCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	Params::WBP_CMN_GadgetCountFullWindow_C_GetGadgetCountWidget Parms{};
 
@@ -105,10 +94,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::GetGadgetCountWidget(class UWBP_CMN_Gadge
 
 void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetCountEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "OnCountWidgetCountEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -119,10 +106,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetCountEnd()
 
 void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetInAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "OnCountWidgetInAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -133,10 +118,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetInAnimFinished()
 
 void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetOutAnimFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "OnCountWidgetOutAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -147,10 +130,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::OnCountWidgetOutAnimFinished()
 
 void UWBP_CMN_GadgetCountFullWindow_C::PlayAnimationInItemCountWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "PlayAnimationInItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -161,10 +142,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::PlayAnimationInItemCountWidget()
 
 void UWBP_CMN_GadgetCountFullWindow_C::PlayAnimationOutItemCountWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "PlayAnimationOutItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,10 +161,8 @@ void UWBP_CMN_GadgetCountFullWindow_C::PlayAnimationOutItemCountWidget()
 
 void UWBP_CMN_GadgetCountFullWindow_C::SetupItemCountWidget(int32 InStartNumber, int32 InEndNumber, ERewardType InIconType, class UTexture2D* InIconTexture, bool bInCountEndOut, double InMaxEndTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CMN_GadgetCountFullWindow_C", "SetupItemCountWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_CMN_GadgetCountFullWindow_C", FnName));
 
 	Params::WBP_CMN_GadgetCountFullWindow_C_SetupItemCountWidget Parms{};
 
@@ -199,5 +176,5 @@ void UWBP_CMN_GadgetCountFullWindow_C::SetupItemCountWidget(int32 InStartNumber,
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

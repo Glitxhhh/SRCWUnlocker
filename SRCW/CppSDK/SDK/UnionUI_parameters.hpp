@@ -12,15 +12,16 @@
 
 #include "Engine_structs.hpp"
 #include "UnionSystem_structs.hpp"
+#include "UnionSystem_parameters.hpp"
+#include "UnionUI_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UnionUI_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ImageWriteQueue_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UnionUI.BPFL_ChallengeManagerUtil.GetChallengeClearList
 // 0x0018 (0x0018 - 0x0000)
@@ -248,6 +249,148 @@ public:
 };
 DUMPER7_ASSERTS_FontFunctionObject_CalcFontPoint;
 
+// Function UnionUI.WidgetManComponent.AddWidgetToTopAsGroup
+// 0x0018 (0x0018 - 0x0000)
+struct WidgetManComponent_AddWidgetToTopAsGroup final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSucceeded;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WidgetManComponent_AddWidgetToTopAsGroup;
+
+// Function UnionUI.WidgetManComponent.AttachDebugStringObject
+// 0x0008 (0x0008 - 0x0000)
+struct WidgetManComponent_AttachDebugStringObject final
+{
+public:
+	class UWidgetManDebugString*                  DebugStringObjectRef;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_AttachDebugStringObject;
+
+// Function UnionUI.WidgetManComponent.DetachDebugStringObject
+// 0x0008 (0x0008 - 0x0000)
+struct WidgetManComponent_DetachDebugStringObject final
+{
+public:
+	class UWidgetManDebugString*                  DebugStringObjectRef;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_DetachDebugStringObject;
+
+// Function UnionUI.WidgetManComponent.FindWidget
+// 0x0018 (0x0018 - 0x0000)
+struct WidgetManComponent_FindWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFound;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         IndexFromTop;                                      // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IndexInGroup;                                      // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WidgetManComponent_FindWidget;
+
+// Function UnionUI.WidgetManComponent.GetTopWidget
+// 0x0020 (0x0020 - 0x0000)
+struct WidgetManComponent_GetTopWidget final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSucceeded;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSubWidget;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Logic;                                             // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_GetTopWidget;
+
+// Function UnionUI.WidgetManComponent.GetTopWidgetCount
+// 0x0004 (0x0004 - 0x0000)
+struct WidgetManComponent_GetTopWidgetCount final
+{
+public:
+	int32                                         WidgetCount;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_GetTopWidgetCount;
+
+// Function UnionUI.WidgetManComponent.NotifyPoped
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManComponent_NotifyPoped final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_NotifyPoped;
+
+// Function UnionUI.WidgetManComponent.NotifyPushed
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManComponent_NotifyPushed final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_NotifyPushed;
+
+// Function UnionUI.WidgetManComponent.PopWidget
+// 0x0001 (0x0001 - 0x0000)
+struct WidgetManComponent_PopWidget final
+{
+public:
+	bool                                          IsSucceeded;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_PopWidget;
+
+// Function UnionUI.WidgetManComponent.PushSubWidget
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManComponent_PushSubWidget final
+{
+public:
+	class UUserWidget*                            SubWidget;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_PushSubWidget;
+
+// Function UnionUI.WidgetManComponent.PushWidget
+// 0x0018 (0x0018 - 0x0000)
+struct WidgetManComponent_PushWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWidgetManZLayer                              ZLayer;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManComponent_PushWidget;
+
+// Function UnionUI.WidgetManComponent.SwapTopWidget
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManComponent_SwapTopWidget final
+{
+public:
+	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSucceeded;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WidgetManComponent_SwapTopWidget;
+
+// Function UnionUI.WidgetManComponent.SwapTopWidgetByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct WidgetManComponent_SwapTopWidgetByIndex final
+{
+public:
+	int32                                         IndexFromTop;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSucceeded;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_WidgetManComponent_SwapTopWidgetByIndex;
+
 // Function UnionUI.MenuCameraManager.CameraCharaSlide
 // 0x0010 (0x0010 - 0x0000)
 struct MenuCameraManager_CameraCharaSlide final
@@ -282,11 +425,13 @@ public:
 DUMPER7_ASSERTS_MenuCameraManager_CameraZoomIn;
 
 // Function UnionUI.MenuCameraManager.CameraZoomOut
-// 0x0004 (0x0004 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct MenuCameraManager_CameraZoomOut final
 {
 public:
 	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsForce;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_MenuCameraManager_CameraZoomOut;
 
@@ -329,80 +474,590 @@ public:
 };
 DUMPER7_ASSERTS_MenuCameraManager_SetUpCameraFOV;
 
-// Function UnionUI.WidgetManDebugString.AppendDebugString
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManDebugString_AppendDebugString final
-{
-public:
-	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManDebugString_AppendDebugString;
-
-// Function UnionUI.WidgetManDebugString.Draw_Internal
-// 0x0030 (0x0030 - 0x0000)
-struct WidgetManDebugString_Draw_Internal final
-{
-public:
-	struct FPaintContext                          PaintContext;                                      // 0x0000(0x0030)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManDebugString_Draw_Internal;
-
-// Function UnionUI.WidgetManDebugString.GetDebugString
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManDebugString_GetDebugString final
-{
-public:
-	class FString                                 String;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManDebugString_GetDebugString;
-
-// Function UnionUI.WidgetManDebugString.SetColor
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManDebugString_SetColor final
-{
-public:
-	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManDebugString_SetColor;
-
-// Function UnionUI.WidgetManDebugString.SetFontSize
+// Function UnionUI.UnionUIWidgetBase.CallCustomActionbyID
 // 0x0004 (0x0004 - 0x0000)
-struct WidgetManDebugString_SetFontSize final
+struct UnionUIWidgetBase_CallCustomActionbyID final
 {
 public:
-	int32                                         NewFontSize;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ActionIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WidgetManDebugString_SetFontSize;
+DUMPER7_ASSERTS_UnionUIWidgetBase_CallCustomActionbyID;
 
-// Function UnionUI.WidgetManDebugString.SetPosition
-// 0x0008 (0x0008 - 0x0000)
-struct WidgetManDebugString_SetPosition final
+// Function UnionUI.UnionUIWidgetBase.GetAllAnimations
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUIWidgetBase_GetAllAnimations final
 {
 public:
-	float                                         NewX;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewY;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UWidgetAnimation*>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WidgetManDebugString_SetPosition;
+DUMPER7_ASSERTS_UnionUIWidgetBase_GetAllAnimations;
 
-// Function UnionUI.WidgetManDebugString.SetShadowColorAndOffset
-// 0x0018 (0x0018 - 0x0000)
-struct WidgetManDebugString_SetShadowColorAndOffset final
+// Function UnionUI.UnionUIWidgetBase.WidgetPlayAnim
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUIWidgetBase_WidgetPlayAnim final
 {
 public:
-	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewOffsetX;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NewOffsetY;                                        // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AnimIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WidgetManDebugString_SetShadowColorAndOffset;
+DUMPER7_ASSERTS_UnionUIWidgetBase_WidgetPlayAnim;
 
-// Function UnionUI.WidgetManDebugString.SetShowHide
+// Function UnionUI.UnionUIInputWidget.RegisterMainMenu
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUIInputWidget_RegisterMainMenu final
+{
+public:
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_RegisterMainMenu;
+
+// Function UnionUI.UnionUIInputWidget.SetAutoRegisterMainMenuEnabled
 // 0x0001 (0x0001 - 0x0000)
-struct WidgetManDebugString_SetShowHide final
+struct UnionUIInputWidget_SetAutoRegisterMainMenuEnabled final
 {
 public:
-	bool                                          Show;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WidgetManDebugString_SetShowHide;
+DUMPER7_ASSERTS_UnionUIInputWidget_SetAutoRegisterMainMenuEnabled;
+
+// Function UnionUI.UnionUIInputWidget.UnregisterMainMenu
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUIInputWidget_UnregisterMainMenu final
+{
+public:
+	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_UnregisterMainMenu;
+
+// Function UnionUI.UnionUIInputWidget.VisibilityChange
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIInputWidget_VisibilityChange final
+{
+public:
+	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_VisibilityChange;
+
+// Function UnionUI.UnionUIInputWidget.GetFocusPlayerController
+// 0x0008 (0x0008 - 0x0000)
+struct UnionUIInputWidget_GetFocusPlayerController final
+{
+public:
+	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_GetFocusPlayerController;
+
+// Function UnionUI.UnionUIInputWidget.GetFocusPlayerIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUIInputWidget_GetFocusPlayerIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_GetFocusPlayerIndex;
+
+// Function UnionUI.UnionUIInputWidget.GetRegistPriority
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIInputWidget_GetRegistPriority final
+{
+public:
+	EMainMenuRegistPriority                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIInputWidget_GetRegistPriority;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnAcceptKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnAcceptKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnAcceptKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnAcceptKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnAcceptKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnAcceptKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnAcceptKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnAcceptKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnAcceptKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnAcceptKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnBackKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnBackKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnBackKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnBackKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnBackKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnBackKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnBackKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnBackKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnBackKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnBackKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnDownKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnDownKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnDownKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnDownKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnDownKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnDownKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnDownKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnDownKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnDownKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnDownKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnFaceButtonLeftPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonLeftPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonLeftPressedWithPlayerId
+struct MenuInputRecieveInterface_OnFaceButtonLeftPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnFaceButtonLeftPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnFaceButtonLeftReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonLeftReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonLeftReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnFaceButtonLeftReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnFaceButtonLeftReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnFaceButtonTopPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonTopPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonTopPressedWithPlayerId
+struct MenuInputRecieveInterface_OnFaceButtonTopPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnFaceButtonTopPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnFaceButtonTopReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonTopReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnFaceButtonTopReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnFaceButtonTopReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnFaceButtonTopReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftShoulderPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftShoulderPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftShoulderPressedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftShoulderPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftShoulderPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftShoulderReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftShoulderReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftShoulderReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftShoulderReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftShoulderReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftStickAxis
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickAxis
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickAxis
+struct MenuInputRecieveInterface_OnLeftStickAxis final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftStickAxis;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftStickAxisWithPlayerId
+// 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickAxisWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickAxisWithPlayerId
+struct MenuInputRecieveInterface_OnLeftStickAxisWithPlayerId final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerControllerIndex;                             // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftStickAxisWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftStickButtonPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickButtonPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickButtonPressedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftStickButtonPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftStickButtonPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnLeftStickButtonReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickButtonReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnLeftStickButtonReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnLeftStickButtonReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnLeftStickButtonReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnRightKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnRightKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightShoulderPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightShoulderPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightShoulderPressedWithPlayerId
+struct MenuInputRecieveInterface_OnRightShoulderPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightShoulderPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightShoulderReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightShoulderReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightShoulderReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnRightShoulderReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightShoulderReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightStickAxis
+// 0x0010 (0x0010 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickAxis
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickAxis
+struct MenuInputRecieveInterface_OnRightStickAxis final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightStickAxis;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightStickAxisWithPlayerId
+// 0x0018 (0x0018 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickAxisWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickAxisWithPlayerId
+struct MenuInputRecieveInterface_OnRightStickAxisWithPlayerId final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlayerControllerIndex;                             // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightStickAxisWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightStickButtonPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickButtonPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickButtonPressedWithPlayerId
+struct MenuInputRecieveInterface_OnRightStickButtonPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightStickButtonPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnRightStickButtonReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickButtonReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnRightStickButtonReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnRightStickButtonReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnRightStickButtonReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnSpecialPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnSpecialPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnSpecialPressedWithPlayerId
+struct MenuInputRecieveInterface_OnSpecialPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnSpecialPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnSpecialReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnSpecialReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnSpecialReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnSpecialReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnSpecialReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnUpKeyPressedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnUpKeyPressedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnUpKeyPressedWithPlayerId
+struct MenuInputRecieveInterface_OnUpKeyPressedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnUpKeyPressedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.OnUpKeyReleasedWithPlayerId
+// 0x0004 (0x0004 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnUpKeyReleasedWithPlayerId
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_OnUpKeyReleasedWithPlayerId
+struct MenuInputRecieveInterface_OnUpKeyReleasedWithPlayerId final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_OnUpKeyReleasedWithPlayerId;
+
+// Function UnionSystem.MenuInputRecieveInterface.SilentFocusReady
+// 0x0001 (0x0001 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_SilentFocusReady
+#define DUMPER7_PARAM_DEFINED_MenuInputRecieveInterface_SilentFocusReady
+struct MenuInputRecieveInterface_SilentFocusReady final
+{
+public:
+	bool                                          bOnce;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_MenuInputRecieveInterface_SilentFocusReady;
+
+// Function UnionUI.UnionUIButtonBaseCore.GetNavigationExplicitWidget
+// 0x0018 (0x0018 - 0x0000)
+struct UnionUIButtonBaseCore_GetNavigationExplicitWidget final
+{
+public:
+	EUINavigation                                 Direction;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                FocusToWidget;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetNavigationExplicitWidget;
+
+// Function UnionUI.UnionUIButtonBaseCore.PlayButtonAnimation
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUIButtonBaseCore_PlayButtonAnimation final
+{
+public:
+	class UWidgetAnimation*                       Animation;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       LoopAnimation;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_PlayButtonAnimation;
+
+// Function UnionUI.UnionUIButtonBaseCore.PlayButtonAnimationWithFinished
+// 0x0020 (0x0020 - 0x0000)
+struct UnionUIButtonBaseCore_PlayButtonAnimationWithFinished final
+{
+public:
+	class UWidgetAnimation*                       Animation;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetAnimation*                       LoopAnimation;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(bool Aborted)>                 OnFninished;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_PlayButtonAnimationWithFinished;
+
+// Function UnionUI.UnionUIButtonBaseCore.SetChangeableButtonState
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIButtonBaseCore_SetChangeableButtonState final
+{
+public:
+	bool                                          InChangeableButtonState;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetChangeableButtonState;
+
+// Function UnionUI.UnionUIButtonBaseCore.SetInteractableState
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIButtonBaseCore_SetInteractableState final
+{
+public:
+	bool                                          Interactable;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetInteractableState;
+
+// Function UnionUI.UnionUIButtonBaseCore.SetMouseInteractionButton
+// 0x0008 (0x0008 - 0x0000)
+struct UnionUIButtonBaseCore_SetMouseInteractionButton final
+{
+public:
+	class UButton*                                InMouseInteractionButton;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetMouseInteractionButton;
+
+// Function UnionUI.UnionUIButtonBaseCore.SetNavigationExplicitWidget
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUIButtonBaseCore_SetNavigationExplicitWidget final
+{
+public:
+	EUINavigation                                 Direction;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                FocusToWidget;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetNavigationExplicitWidget;
+
+// Function UnionUI.UnionUIButtonBaseCore.StartDelayEnable
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUIButtonBaseCore_StartDelayEnable final
+{
+public:
+	float                                         Duration;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_StartDelayEnable;
+
+// Function UnionUI.UnionUIButtonBaseCore.GetChangeableButtonState
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIButtonBaseCore_GetChangeableButtonState final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetChangeableButtonState;
+
+// Function UnionUI.UnionUIButtonBaseCore.GetMouseInteractionButton
+// 0x0008 (0x0008 - 0x0000)
+struct UnionUIButtonBaseCore_GetMouseInteractionButton final
+{
+public:
+	class UButton*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetMouseInteractionButton;
+
+// Function UnionUI.UnionScreenCaptureActor.SaveTextureToFile
+// 0x0028 (0x0028 - 0x0000)
+struct UnionScreenCaptureActor_SaveTextureToFile final
+{
+public:
+	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FColor>                         Bitmap;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 InFilePath;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionScreenCaptureActor_SaveTextureToFile;
+
+// Function UnionUI.UnionScreenCaptureActor.GetTextureRenderTarget2D
+// 0x0008 (0x0008 - 0x0000)
+struct UnionScreenCaptureActor_GetTextureRenderTarget2D final
+{
+public:
+	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionScreenCaptureActor_GetTextureRenderTarget2D;
 
 // Function UnionUI.RichTextBlockRubyDecorator.UpdateOriginalTextIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -439,6 +1094,24 @@ public:
 	TArray<class FString>                         Initialize;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionComboBoxString_InitializeOptions;
+
+// Function UnionUI.UnionFontScroll.SetArabicTextVerticalOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UnionFontScroll_SetArabicTextVerticalOffset final
+{
+public:
+	float                                         TextOffset;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionFontScroll_SetArabicTextVerticalOffset;
+
+// Function UnionUI.UnionFontScroll.SetIsCultureChanged
+// 0x0001 (0x0001 - 0x0000)
+struct UnionFontScroll_SetIsCultureChanged final
+{
+public:
+	bool                                          CultureChange;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionFontScroll_SetIsCultureChanged;
 
 // Function UnionUI.UnionFontScroll.SetIsRefreshingText
 // 0x0001 (0x0001 - 0x0000)
@@ -579,215 +1252,6 @@ public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionRichTextBlockImageDecorator_SetPlayerIndex;
-
-// Function UnionUI.UnionScreenCaptureActor.SaveTextureToFile
-// 0x0028 (0x0028 - 0x0000)
-struct UnionScreenCaptureActor_SaveTextureToFile final
-{
-public:
-	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FColor>                         Bitmap;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 InFilePath;                                        // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionScreenCaptureActor_SaveTextureToFile;
-
-// Function UnionUI.UnionScreenCaptureActor.GetTextureRenderTarget2D
-// 0x0008 (0x0008 - 0x0000)
-struct UnionScreenCaptureActor_GetTextureRenderTarget2D final
-{
-public:
-	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionScreenCaptureActor_GetTextureRenderTarget2D;
-
-// Function UnionUI.UnionUIWidgetBase.CallCustomActionbyID
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIWidgetBase_CallCustomActionbyID final
-{
-public:
-	int32                                         ActionIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIWidgetBase_CallCustomActionbyID;
-
-// Function UnionUI.UnionUIWidgetBase.GetAllAnimations
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUIWidgetBase_GetAllAnimations final
-{
-public:
-	TArray<class UWidgetAnimation*>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIWidgetBase_GetAllAnimations;
-
-// Function UnionUI.UnionUIWidgetBase.WidgetPlayAnim
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIWidgetBase_WidgetPlayAnim final
-{
-public:
-	int32                                         AnimIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIWidgetBase_WidgetPlayAnim;
-
-// Function UnionUI.UnionUIInputWidget.RegisterMainMenu
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIInputWidget_RegisterMainMenu final
-{
-public:
-	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_RegisterMainMenu;
-
-// Function UnionUI.UnionUIInputWidget.SetAutoRegisterMainMenuEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIInputWidget_SetAutoRegisterMainMenuEnabled final
-{
-public:
-	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_SetAutoRegisterMainMenuEnabled;
-
-// Function UnionUI.UnionUIInputWidget.UnregisterMainMenu
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIInputWidget_UnregisterMainMenu final
-{
-public:
-	int32                                         InPlayerIndex;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_UnregisterMainMenu;
-
-// Function UnionUI.UnionUIInputWidget.VisibilityChange
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIInputWidget_VisibilityChange final
-{
-public:
-	ESlateVisibility                              InVisibility;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_VisibilityChange;
-
-// Function UnionUI.UnionUIInputWidget.GetFocusPlayerController
-// 0x0008 (0x0008 - 0x0000)
-struct UnionUIInputWidget_GetFocusPlayerController final
-{
-public:
-	class APlayerController*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_GetFocusPlayerController;
-
-// Function UnionUI.UnionUIInputWidget.GetFocusPlayerIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIInputWidget_GetFocusPlayerIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_GetFocusPlayerIndex;
-
-// Function UnionUI.UnionUIInputWidget.GetRegistPriority
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIInputWidget_GetRegistPriority final
-{
-public:
-	EMainMenuRegistPriority                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIInputWidget_GetRegistPriority;
-
-// Function UnionUI.UnionUIButtonBaseCore.GetNavigationExplicitWidget
-// 0x0018 (0x0018 - 0x0000)
-struct UnionUIButtonBaseCore_GetNavigationExplicitWidget final
-{
-public:
-	EUINavigation                                 Direction;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                FocusToWidget;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetNavigationExplicitWidget;
-
-// Function UnionUI.UnionUIButtonBaseCore.PlayButtonAnimation
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUIButtonBaseCore_PlayButtonAnimation final
-{
-public:
-	class UWidgetAnimation*                       Animation;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetAnimation*                       LoopAnimation;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_PlayButtonAnimation;
-
-// Function UnionUI.UnionUIButtonBaseCore.PlayButtonAnimationWithFinished
-// 0x0020 (0x0020 - 0x0000)
-struct UnionUIButtonBaseCore_PlayButtonAnimationWithFinished final
-{
-public:
-	class UWidgetAnimation*                       Animation;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetAnimation*                       LoopAnimation;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(bool Aborted)>                 OnFninished;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_PlayButtonAnimationWithFinished;
-
-// Function UnionUI.UnionUIButtonBaseCore.SetChangeableButtonState
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIButtonBaseCore_SetChangeableButtonState final
-{
-public:
-	bool                                          InChangeableButtonState;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetChangeableButtonState;
-
-// Function UnionUI.UnionUIButtonBaseCore.SetInteractableState
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIButtonBaseCore_SetInteractableState final
-{
-public:
-	bool                                          Interactable;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetInteractableState;
-
-// Function UnionUI.UnionUIButtonBaseCore.SetMouseInteractionButton
-// 0x0008 (0x0008 - 0x0000)
-struct UnionUIButtonBaseCore_SetMouseInteractionButton final
-{
-public:
-	class UButton*                                InMouseInteractionButton;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetMouseInteractionButton;
-
-// Function UnionUI.UnionUIButtonBaseCore.SetNavigationExplicitWidget
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUIButtonBaseCore_SetNavigationExplicitWidget final
-{
-public:
-	EUINavigation                                 Direction;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                FocusToWidget;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_SetNavigationExplicitWidget;
-
-// Function UnionUI.UnionUIButtonBaseCore.StartDelayEnable
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUIButtonBaseCore_StartDelayEnable final
-{
-public:
-	float                                         Duration;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_StartDelayEnable;
-
-// Function UnionUI.UnionUIButtonBaseCore.GetChangeableButtonState
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIButtonBaseCore_GetChangeableButtonState final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetChangeableButtonState;
-
-// Function UnionUI.UnionUIButtonBaseCore.GetMouseInteractionButton
-// 0x0008 (0x0008 - 0x0000)
-struct UnionUIButtonBaseCore_GetMouseInteractionButton final
-{
-public:
-	class UButton*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIButtonBaseCore_GetMouseInteractionButton;
 
 // Function UnionUI.UnionUIButtonBase.CallOnDecision
 // 0x0008 (0x0008 - 0x0000)
@@ -1277,15 +1741,6 @@ public:
 };
 DUMPER7_ASSERTS_UnionUIFrameGrabber_SetMaterialInstanceDynamic;
 
-// Function UnionUI.UnionUISequenceInterface.Close
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUISequenceInterface_Close final
-{
-public:
-	bool                                          bSelfRemove;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISequenceInterface_Close;
-
 // Function UnionUI.UnionUIFade.FinishedFade
 // 0x0001 (0x0001 - 0x0000)
 struct UnionUIFade_FinishedFade final
@@ -1313,221 +1768,6 @@ public:
 	EUnionUIFadeColor                             FadeColor;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionUIFade_StartLoopFade;
-
-// Function UnionUI.UnionUISceneBase.AddButtonsPanel
-// 0x0008 (0x0008 - 0x0000)
-struct UnionUISceneBase_AddButtonsPanel final
-{
-public:
-	class UUnionUIButtonsPanel*                   InAddButtonsPanel;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_AddButtonsPanel;
-
-// Function UnionUI.UnionUISceneBase.CreateButtonsPanel
-// 0x0008 (0x0008 - 0x0000)
-struct UnionUISceneBase_CreateButtonsPanel final
-{
-public:
-	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_CreateButtonsPanel;
-
-// Function UnionUI.UnionUISceneBase.GetLastFocusedButton
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_GetLastFocusedButton final
-{
-public:
-	int32                                         OutLastFocusedButtonIndex;                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButton;
-
-// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonByPlayerIndex
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_GetLastFocusedButtonByPlayerIndex final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutLastFocusedButtonIndex;                         // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonByPlayerIndex;
-
-// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonsPanel
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_GetLastFocusedButtonsPanel final
-{
-public:
-	int32                                         OutLastFocusedButtonsPanelIndex;                   // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonsPanel;
-
-// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonsPanelByPlayerIndex
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_GetLastFocusedButtonsPanelByPlayerIndex final
-{
-public:
-	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutLastFocusedButtonsPanelIndex;                   // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonsPanelByPlayerIndex;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneCancelDownEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneCancelDownEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneCancelDownEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneCancelEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneCancelEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneCancelEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneDecisionDownEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneDecisionDownEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDecisionDownEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneDecisionEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneDecisionEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDecisionEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneDirectionEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneDirectionEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUnionUIControlDir                            Dir;                                               // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDirectionEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneFaceTopEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneFaceTopEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneFaceTopEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneFocusEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneFocusEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneFocusEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneLeftShoulderEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneLeftShoulderEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneLeftShoulderEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneRightShoulderEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneRightShoulderEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneRightShoulderEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.OnUISceneUnFocusEvent_Impl
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_OnUISceneUnFocusEvent_Impl final
-{
-public:
-	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneUnFocusEvent_Impl;
-
-// Function UnionUI.UnionUISceneBase.SetFocusSoundEnableAll
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUISceneBase_SetFocusSoundEnableAll final
-{
-public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_SetFocusSoundEnableAll;
-
-// Function UnionUI.UnionUISceneBase.SetOwnerPlayerController
-// 0x0010 (0x0010 - 0x0000)
-struct UnionUISceneBase_SetOwnerPlayerController final
-{
-public:
-	int32                                         InPanelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      InPlayerController;                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_SetOwnerPlayerController;
-
-// Function UnionUI.UnionUISceneBase.SetUnFocusState
-// 0x0004 (0x0004 - 0x0000)
-struct UnionUISceneBase_SetUnFocusState final
-{
-public:
-	int32                                         InPanelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_SetUnFocusState;
-
-// Function UnionUI.UnionUISceneBase.SetupButtonsPanel
-// 0x0020 (0x0020 - 0x0000)
-struct UnionUISceneBase_SetupButtonsPanel final
-{
-public:
-	TArray<class UUnionUIButtonBase*>             Buttons;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         InPanelIndex;                                      // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InExclusiveFocus;                                  // 0x0014(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUISceneBase_SetupButtonsPanel;
 
 // Function UnionUI.UnionUIGridLayoutControl.AddButton
 // 0x0038 (0x0038 - 0x0000)
@@ -1779,15 +2019,6 @@ public:
 };
 DUMPER7_ASSERTS_UnionUIListView_SetVerticalEntrySpacing;
 
-// Function UnionUI.UnionUIRivalTransition.SetTransitionType
-// 0x0001 (0x0001 - 0x0000)
-struct UnionUIRivalTransition_SetTransitionType final
-{
-public:
-	ERivalTransitionType                          Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UnionUIRivalTransition_SetTransitionType;
-
 // Function UnionUI.UnionUILoadingDisplay.GetLoadingDisplayType
 // 0x0001 (0x0001 - 0x0000)
 struct UnionUILoadingDisplay_GetLoadingDisplayType final
@@ -1909,6 +2140,221 @@ public:
 };
 DUMPER7_ASSERTS_UnionUIMovieTransition_IsPlayingMovie;
 
+// Function UnionUI.UnionUISceneBase.AddButtonsPanel
+// 0x0008 (0x0008 - 0x0000)
+struct UnionUISceneBase_AddButtonsPanel final
+{
+public:
+	class UUnionUIButtonsPanel*                   InAddButtonsPanel;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_AddButtonsPanel;
+
+// Function UnionUI.UnionUISceneBase.CreateButtonsPanel
+// 0x0008 (0x0008 - 0x0000)
+struct UnionUISceneBase_CreateButtonsPanel final
+{
+public:
+	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_CreateButtonsPanel;
+
+// Function UnionUI.UnionUISceneBase.GetLastFocusedButton
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_GetLastFocusedButton final
+{
+public:
+	int32                                         OutLastFocusedButtonIndex;                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButton;
+
+// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonByPlayerIndex
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_GetLastFocusedButtonByPlayerIndex final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutLastFocusedButtonIndex;                         // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonByPlayerIndex;
+
+// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonsPanel
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_GetLastFocusedButtonsPanel final
+{
+public:
+	int32                                         OutLastFocusedButtonsPanelIndex;                   // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonsPanel;
+
+// Function UnionUI.UnionUISceneBase.GetLastFocusedButtonsPanelByPlayerIndex
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_GetLastFocusedButtonsPanelByPlayerIndex final
+{
+public:
+	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutLastFocusedButtonsPanelIndex;                   // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_GetLastFocusedButtonsPanelByPlayerIndex;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneCancelDownEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneCancelDownEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneCancelDownEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneCancelEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneCancelEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneCancelEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneDecisionDownEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneDecisionDownEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDecisionDownEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneDecisionEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneDecisionEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDecisionEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneDirectionEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneDirectionEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUnionUIControlDir                            Dir;                                               // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneDirectionEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneFaceTopEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneFaceTopEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneFaceTopEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneFocusEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneFocusEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneFocusEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneLeftShoulderEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneLeftShoulderEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneLeftShoulderEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneRightShoulderEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneRightShoulderEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneRightShoulderEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.OnUISceneUnFocusEvent_Impl
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_OnUISceneUnFocusEvent_Impl final
+{
+public:
+	class UUnionUIButtonBase*                     UnionButton;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UnionUISceneBase_OnUISceneUnFocusEvent_Impl;
+
+// Function UnionUI.UnionUISceneBase.SetFocusSoundEnableAll
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUISceneBase_SetFocusSoundEnableAll final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_SetFocusSoundEnableAll;
+
+// Function UnionUI.UnionUISceneBase.SetOwnerPlayerController
+// 0x0010 (0x0010 - 0x0000)
+struct UnionUISceneBase_SetOwnerPlayerController final
+{
+public:
+	int32                                         InPanelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      InPlayerController;                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_SetOwnerPlayerController;
+
+// Function UnionUI.UnionUISceneBase.SetUnFocusState
+// 0x0004 (0x0004 - 0x0000)
+struct UnionUISceneBase_SetUnFocusState final
+{
+public:
+	int32                                         InPanelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_SetUnFocusState;
+
+// Function UnionUI.UnionUISceneBase.SetupButtonsPanel
+// 0x0020 (0x0020 - 0x0000)
+struct UnionUISceneBase_SetupButtonsPanel final
+{
+public:
+	TArray<class UUnionUIButtonBase*>             Buttons;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         InPanelIndex;                                      // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InExclusiveFocus;                                  // 0x0014(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUnionUIButtonsPanel*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUISceneBase_SetupButtonsPanel;
+
 // Function UnionUI.UnionUIPopupWindowManager.CreatePopupWindow
 // 0x0010 (0x0010 - 0x0000)
 struct UnionUIPopupWindowManager_CreatePopupWindow final
@@ -1977,6 +2423,15 @@ public:
 };
 DUMPER7_ASSERTS_UnionRichTextBlock_RemoveXml;
 
+// Function UnionUI.UnionRichTextBlock.SetArabicVerticalOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UnionRichTextBlock_SetArabicVerticalOffset final
+{
+public:
+	float                                         Offset;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionRichTextBlock_SetArabicVerticalOffset;
+
 // Function UnionUI.UnionRichTextBlock.SetDefaultFontSize
 // 0x0004 (0x0004 - 0x0000)
 struct UnionRichTextBlock_SetDefaultFontSize final
@@ -2041,6 +2496,15 @@ public:
 };
 DUMPER7_ASSERTS_UnionRichTextBlock_GetScrollEnable;
 
+// Function UnionUI.UnionUIRivalTransition.SetTransitionType
+// 0x0001 (0x0001 - 0x0000)
+struct UnionUIRivalTransition_SetTransitionType final
+{
+public:
+	ERivalTransitionType                          Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UnionUIRivalTransition_SetTransitionType;
+
 // Function UnionUI.UnionUISceneCaptureManager.GetCaptureCameraActor
 // 0x0010 (0x0010 - 0x0000)
 struct UnionUISceneCaptureManager_GetCaptureCameraActor final
@@ -2100,6 +2564,18 @@ public:
 	int32                                         PlayerControllerIndex;                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UnionUISceneCaptureManager_UnRegisterCaptureCameraActor;
+
+// Function UnionUI.UnionUISequenceInterface.Close
+// 0x0001 (0x0001 - 0x0000)
+#ifndef DUMPER7_PARAM_DEFINED_UnionUISequenceInterface_Close
+#define DUMPER7_PARAM_DEFINED_UnionUISequenceInterface_Close
+struct UnionUISequenceInterface_Close final
+{
+public:
+	bool                                          bSelfRemove;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+#endif
+DUMPER7_ASSERTS_UnionUISequenceInterface_Close;
 
 // Function UnionUI.UnionUITransitionManager.CreateCrossFadeWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -2553,148 +3029,6 @@ public:
 };
 DUMPER7_ASSERTS_WidgetManBaseWidget_RemoveChild;
 
-// Function UnionUI.WidgetManComponent.AddWidgetToTopAsGroup
-// 0x0018 (0x0018 - 0x0000)
-struct WidgetManComponent_AddWidgetToTopAsGroup final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSucceeded;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WidgetManComponent_AddWidgetToTopAsGroup;
-
-// Function UnionUI.WidgetManComponent.AttachDebugStringObject
-// 0x0008 (0x0008 - 0x0000)
-struct WidgetManComponent_AttachDebugStringObject final
-{
-public:
-	class UWidgetManDebugString*                  DebugStringObjectRef;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_AttachDebugStringObject;
-
-// Function UnionUI.WidgetManComponent.DetachDebugStringObject
-// 0x0008 (0x0008 - 0x0000)
-struct WidgetManComponent_DetachDebugStringObject final
-{
-public:
-	class UWidgetManDebugString*                  DebugStringObjectRef;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_DetachDebugStringObject;
-
-// Function UnionUI.WidgetManComponent.FindWidget
-// 0x0018 (0x0018 - 0x0000)
-struct WidgetManComponent_FindWidget final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFound;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         IndexFromTop;                                      // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         IndexInGroup;                                      // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WidgetManComponent_FindWidget;
-
-// Function UnionUI.WidgetManComponent.GetTopWidget
-// 0x0020 (0x0020 - 0x0000)
-struct WidgetManComponent_GetTopWidget final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSucceeded;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSubWidget;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Logic;                                             // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_GetTopWidget;
-
-// Function UnionUI.WidgetManComponent.GetTopWidgetCount
-// 0x0004 (0x0004 - 0x0000)
-struct WidgetManComponent_GetTopWidgetCount final
-{
-public:
-	int32                                         WidgetCount;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_GetTopWidgetCount;
-
-// Function UnionUI.WidgetManComponent.NotifyPoped
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManComponent_NotifyPoped final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_NotifyPoped;
-
-// Function UnionUI.WidgetManComponent.NotifyPushed
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManComponent_NotifyPushed final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_NotifyPushed;
-
-// Function UnionUI.WidgetManComponent.PopWidget
-// 0x0001 (0x0001 - 0x0000)
-struct WidgetManComponent_PopWidget final
-{
-public:
-	bool                                          IsSucceeded;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_PopWidget;
-
-// Function UnionUI.WidgetManComponent.PushSubWidget
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManComponent_PushSubWidget final
-{
-public:
-	class UUserWidget*                            SubWidget;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_PushSubWidget;
-
-// Function UnionUI.WidgetManComponent.PushWidget
-// 0x0018 (0x0018 - 0x0000)
-struct WidgetManComponent_PushWidget final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Logic;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWidgetManZLayer                              ZLayer;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WidgetManComponent_PushWidget;
-
-// Function UnionUI.WidgetManComponent.SwapTopWidget
-// 0x0010 (0x0010 - 0x0000)
-struct WidgetManComponent_SwapTopWidget final
-{
-public:
-	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSucceeded;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WidgetManComponent_SwapTopWidget;
-
-// Function UnionUI.WidgetManComponent.SwapTopWidgetByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct WidgetManComponent_SwapTopWidgetByIndex final
-{
-public:
-	int32                                         IndexFromTop;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSucceeded;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_WidgetManComponent_SwapTopWidgetByIndex;
-
 // Function UnionUI.WidgetManContainer.AddWidget
 // 0x0020 (0x0020 - 0x0000)
 struct WidgetManContainer_AddWidget final
@@ -2784,6 +3118,81 @@ public:
 };
 DUMPER7_ASSERTS_WidgetManContainer_SetZOrder;
 
+// Function UnionUI.WidgetManDebugString.AppendDebugString
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManDebugString_AppendDebugString final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_AppendDebugString;
+
+// Function UnionUI.WidgetManDebugString.Draw_Internal
+// 0x0030 (0x0030 - 0x0000)
+struct WidgetManDebugString_Draw_Internal final
+{
+public:
+	struct FPaintContext                          PaintContext;                                      // 0x0000(0x0030)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_Draw_Internal;
+
+// Function UnionUI.WidgetManDebugString.GetDebugString
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManDebugString_GetDebugString final
+{
+public:
+	class FString                                 String;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_GetDebugString;
+
+// Function UnionUI.WidgetManDebugString.SetColor
+// 0x0010 (0x0010 - 0x0000)
+struct WidgetManDebugString_SetColor final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_SetColor;
+
+// Function UnionUI.WidgetManDebugString.SetFontSize
+// 0x0004 (0x0004 - 0x0000)
+struct WidgetManDebugString_SetFontSize final
+{
+public:
+	int32                                         NewFontSize;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_SetFontSize;
+
+// Function UnionUI.WidgetManDebugString.SetPosition
+// 0x0008 (0x0008 - 0x0000)
+struct WidgetManDebugString_SetPosition final
+{
+public:
+	float                                         NewX;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewY;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_SetPosition;
+
+// Function UnionUI.WidgetManDebugString.SetShadowColorAndOffset
+// 0x0018 (0x0018 - 0x0000)
+struct WidgetManDebugString_SetShadowColorAndOffset final
+{
+public:
+	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewOffsetX;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewOffsetY;                                        // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_SetShadowColorAndOffset;
+
+// Function UnionUI.WidgetManDebugString.SetShowHide
+// 0x0001 (0x0001 - 0x0000)
+struct WidgetManDebugString_SetShowHide final
+{
+public:
+	bool                                          Show;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WidgetManDebugString_SetShowHide;
+
 // Function UnionUI.WidgetManLogicInterface.OnLostPriority
 // 0x0008 (0x0008 - 0x0000)
 struct WidgetManLogicInterface_OnLostPriority final
@@ -2820,5 +3229,5 @@ public:
 };
 DUMPER7_ASSERTS_WidgetManLogicInterface_OnRegainPriority;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

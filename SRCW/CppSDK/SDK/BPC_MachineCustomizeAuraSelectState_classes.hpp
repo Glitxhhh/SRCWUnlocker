@@ -13,8 +13,7 @@
 #include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MachineCustomizeAuraSelectState.BPC_MachineCustomizeAuraSelectState_C
 // 0x0000 (0x0148 - 0x0148)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MachineCustomizeAuraSelectState_C;
 
-}
-
+SDK_NAMESPACE_END

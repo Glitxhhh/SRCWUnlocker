@@ -14,8 +14,7 @@
 #include "BPI_SLCharaMachineSelect_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_SLCharaMachineSelect.BPI_SLCharaMachineSelect_C.GetCameraActor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void IBPI_SLCharaMachineSelect_C::GetCameraActor(class AActor** CameraActor)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_SLCharaMachineSelect_C", "GetCameraActor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_SLCharaMachineSelect_C", FnName));
 
 	Params::BPI_SLCharaMachineSelect_C_GetCameraActor Parms{};
 
@@ -49,10 +46,8 @@ void IBPI_SLCharaMachineSelect_C::GetCameraActor(class AActor** CameraActor)
 
 void IBPI_SLCharaMachineSelect_C::GetRacerTransform(int32 PlayerIndex, int32 PlayerCount, bool bCharaSelect, bool bOption, struct FTransform* Transform)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_SLCharaMachineSelect_C", "GetRacerTransform");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_SLCharaMachineSelect_C", FnName));
 
 	Params::BPI_SLCharaMachineSelect_C_GetRacerTransform Parms{};
 
@@ -73,10 +68,8 @@ void IBPI_SLCharaMachineSelect_C::GetRacerTransform(int32 PlayerIndex, int32 Pla
 
 void IBPI_SLCharaMachineSelect_C::Setup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_SLCharaMachineSelect_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_SLCharaMachineSelect_C", FnName));
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
@@ -90,10 +83,8 @@ void IBPI_SLCharaMachineSelect_C::Setup()
 
 void IBPI_SLCharaMachineSelect_C::StartMoveCameraTransformAndParam(bool bCharaSelect, bool bNoLerp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_SLCharaMachineSelect_C", "StartMoveCameraTransformAndParam");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_SLCharaMachineSelect_C", FnName));
 
 	Params::BPI_SLCharaMachineSelect_C_StartMoveCameraTransformAndParam Parms{};
 
@@ -103,5 +94,5 @@ void IBPI_SLCharaMachineSelect_C::StartMoveCameraTransformAndParam(bool bCharaSe
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

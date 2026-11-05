@@ -14,8 +14,7 @@
 #include "WBP_Popup_Window_Tutorial_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Popup_Window_Tutorial.WBP_Popup_Window_Tutorial_C.CheckOkClosing
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_Popup_Window_Tutorial_C::CheckOkClosing(bool* newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "CheckOkClosing");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_CheckOkClosing Parms{};
 
@@ -43,10 +40,8 @@ void UWBP_Popup_Window_Tutorial_C::CheckOkClosing(bool* newParam)
 
 void UWBP_Popup_Window_Tutorial_C::ClosePopup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "ClosePopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UWBP_Popup_Window_Tutorial_C::ClosePopup()
 
 void UWBP_Popup_Window_Tutorial_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UWBP_Popup_Window_Tutorial_C::Construct()
 
 void UWBP_Popup_Window_Tutorial_C::CreateMoviePlayer()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "CreateMoviePlayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UWBP_Popup_Window_Tutorial_C::CreateMoviePlayer()
 
 void UWBP_Popup_Window_Tutorial_C::Destruct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "Destruct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -101,10 +90,8 @@ void UWBP_Popup_Window_Tutorial_C::Destruct()
 
 void UWBP_Popup_Window_Tutorial_C::DispText(bool IsOnDisp)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "DispText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_DispText Parms{};
 
@@ -119,10 +106,8 @@ void UWBP_Popup_Window_Tutorial_C::DispText(bool IsOnDisp)
 
 void UWBP_Popup_Window_Tutorial_C::EndMovie()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "EndMovie");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -133,10 +118,8 @@ void UWBP_Popup_Window_Tutorial_C::EndMovie()
 
 void UWBP_Popup_Window_Tutorial_C::EndMovieClosed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "EndMovieClosed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -149,10 +132,8 @@ void UWBP_Popup_Window_Tutorial_C::EndMovieClosed()
 
 void UWBP_Popup_Window_Tutorial_C::ExecuteUbergraph_WBP_Popup_Window_Tutorial(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "ExecuteUbergraph_WBP_Popup_Window_Tutorial");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Popup_Window_Tutorial_C", "ExecuteUbergraph_WBP_Popup_Window_Tutorial", FuncInfo);
 
 	Params::WBP_Popup_Window_Tutorial_C_ExecuteUbergraph_WBP_Popup_Window_Tutorial Parms{};
 
@@ -167,10 +148,8 @@ void UWBP_Popup_Window_Tutorial_C::ExecuteUbergraph_WBP_Popup_Window_Tutorial(in
 
 void UWBP_Popup_Window_Tutorial_C::Finished_B427BEC14DE6B237A2D786AD5B646806()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "Finished_B427BEC14DE6B237A2D786AD5B646806");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +160,8 @@ void UWBP_Popup_Window_Tutorial_C::Finished_B427BEC14DE6B237A2D786AD5B646806()
 
 void UWBP_Popup_Window_Tutorial_C::FuncNantoka()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "FuncNantoka");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -197,10 +174,8 @@ void UWBP_Popup_Window_Tutorial_C::FuncNantoka()
 
 void UWBP_Popup_Window_Tutorial_C::isEnableMovingNextCursor(bool* newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "isEnableMovingNextCursor");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_isEnableMovingNextCursor Parms{};
 
@@ -216,10 +191,8 @@ void UWBP_Popup_Window_Tutorial_C::isEnableMovingNextCursor(bool* newParam)
 
 void UWBP_Popup_Window_Tutorial_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,10 +203,8 @@ void UWBP_Popup_Window_Tutorial_C::OnAcceptKeyPressed()
 
 void UWBP_Popup_Window_Tutorial_C::OnAcceptKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "OnAcceptKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -244,10 +215,8 @@ void UWBP_Popup_Window_Tutorial_C::OnAcceptKeyReleased()
 
 void UWBP_Popup_Window_Tutorial_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -258,10 +227,8 @@ void UWBP_Popup_Window_Tutorial_C::OnBackKeyPressed()
 
 void UWBP_Popup_Window_Tutorial_C::OnBackKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "OnBackKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -272,10 +239,8 @@ void UWBP_Popup_Window_Tutorial_C::OnBackKeyReleased()
 
 void UWBP_Popup_Window_Tutorial_C::OpenPopup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "OpenPopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -289,10 +254,8 @@ void UWBP_Popup_Window_Tutorial_C::OpenPopup()
 
 void UWBP_Popup_Window_Tutorial_C::PauseMovie(bool IsPause, bool IsRealClose)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "PauseMovie");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_PauseMovie Parms{};
 
@@ -308,10 +271,8 @@ void UWBP_Popup_Window_Tutorial_C::PauseMovie(bool IsPause, bool IsRealClose)
 
 void UWBP_Popup_Window_Tutorial_C::PlayMovie()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "PlayMovie");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,10 +286,8 @@ void UWBP_Popup_Window_Tutorial_C::PlayMovie()
 
 void UWBP_Popup_Window_Tutorial_C::PlayMovie_Test(int32 Index_0, bool IsRepeat)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "PlayMovie_Test");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_PlayMovie_Test Parms{};
 
@@ -346,10 +305,8 @@ void UWBP_Popup_Window_Tutorial_C::PlayMovie_Test(int32 Index_0, bool IsRepeat)
 
 void UWBP_Popup_Window_Tutorial_C::PlayNext(bool* IsEnd_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "PlayNext");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_PlayNext Parms{};
 
@@ -365,10 +322,8 @@ void UWBP_Popup_Window_Tutorial_C::PlayNext(bool* IsEnd_0)
 
 void UWBP_Popup_Window_Tutorial_C::ReleasePopup()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "ReleasePopup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -381,10 +336,8 @@ void UWBP_Popup_Window_Tutorial_C::ReleasePopup()
 
 void UWBP_Popup_Window_Tutorial_C::SetCancelIconGauge(float InGaugeParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "SetCancelIconGauge");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_SetCancelIconGauge Parms{};
 
@@ -399,10 +352,8 @@ void UWBP_Popup_Window_Tutorial_C::SetCancelIconGauge(float InGaugeParam)
 
 void UWBP_Popup_Window_Tutorial_C::SetFooterMenu()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "SetFooterMenu");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -413,10 +364,8 @@ void UWBP_Popup_Window_Tutorial_C::SetFooterMenu()
 
 void UWBP_Popup_Window_Tutorial_C::SetTextDispTime()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "SetTextDispTime");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -429,10 +378,8 @@ void UWBP_Popup_Window_Tutorial_C::SetTextDispTime()
 
 void UWBP_Popup_Window_Tutorial_C::Setup(bool IsPopup)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "Setup");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_Setup Parms{};
 
@@ -450,10 +397,8 @@ void UWBP_Popup_Window_Tutorial_C::Setup(bool IsPopup)
 
 void UWBP_Popup_Window_Tutorial_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_Tick Parms{};
 
@@ -469,10 +414,8 @@ void UWBP_Popup_Window_Tutorial_C::Tick(const struct FGeometry& MyGeometry, floa
 
 void UWBP_Popup_Window_Tutorial_C::UpdateContoroller()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "UpdateContoroller");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -485,10 +428,8 @@ void UWBP_Popup_Window_Tutorial_C::UpdateContoroller()
 
 void UWBP_Popup_Window_Tutorial_C::UpdateInfoTxt(const class FText& InTxt)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Popup_Window_Tutorial_C", "UpdateInfoTxt");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Popup_Window_Tutorial_C", FnName));
 
 	Params::WBP_Popup_Window_Tutorial_C_UpdateInfoTxt Parms{};
 
@@ -497,5 +438,5 @@ void UWBP_Popup_Window_Tutorial_C::UpdateInfoTxt(const class FText& InTxt)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

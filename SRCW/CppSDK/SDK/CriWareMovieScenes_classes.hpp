@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CriWareRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "MovieSceneTracks_structs.hpp"
+#include "CriWareRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class CriWareMovieScenes.MovieSceneAtomSection
 // 0x03A8 (0x0498 - 0x00F0)
@@ -67,10 +66,9 @@ DUMPER7_ASSERTS_UMovieSceneAtomSection;
 
 // Class CriWareMovieScenes.MovieSceneAtomTrack
 // 0x0018 (0x00B0 - 0x0098)
-class UMovieSceneAtomTrack final : public UMovieSceneNameableTrack
+class UMovieSceneAtomTrack final : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer
 {
 public:
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             AtomSections;                                      // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
@@ -122,10 +120,9 @@ DUMPER7_ASSERTS_UMovieSceneManaSection;
 
 // Class CriWareMovieScenes.MovieSceneManaTrack
 // 0x0040 (0x00D8 - 0x0098)
-class UMovieSceneManaTrack final : public UMovieSceneNameableTrack
+class UMovieSceneManaTrack final : public UMovieSceneNameableTrack, public IMovieSceneTrackTemplateProducer
 {
 public:
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             ManaSections;                                      // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TSoftObjectPtr<class UMovieSceneAtomTrack>    SyncedAtomTrack;                                   // 0x00B0(0x0028)(ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -145,5 +142,4 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneManaTrack;
 
-}
-
+SDK_NAMESPACE_END

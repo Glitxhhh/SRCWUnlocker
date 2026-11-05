@@ -14,8 +14,7 @@
 #include "BP_RewardDialogAndSave_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RewardDialogAndSave.BP_RewardDialogAndSave_C.ExecuteUbergraph_BP_RewardDialogAndSave
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBP_RewardDialogAndSave_C::ExecuteUbergraph_BP_RewardDialogAndSave(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RewardDialogAndSave_C", "ExecuteUbergraph_BP_RewardDialogAndSave");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BP_RewardDialogAndSave_C", "ExecuteUbergraph_BP_RewardDialogAndSave", FuncInfo);
 
 	Params::BP_RewardDialogAndSave_C_ExecuteUbergraph_BP_RewardDialogAndSave Parms{};
 
@@ -42,10 +39,8 @@ void UBP_RewardDialogAndSave_C::ExecuteUbergraph_BP_RewardDialogAndSave(int32 En
 
 void UBP_RewardDialogAndSave_C::OnRewardDialogFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RewardDialogAndSave_C", "OnRewardDialogFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RewardDialogAndSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -56,13 +51,11 @@ void UBP_RewardDialogAndSave_C::OnRewardDialogFinished()
 
 void UBP_RewardDialogAndSave_C::StartRewardDialog()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_RewardDialogAndSave_C", "StartRewardDialog");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BP_RewardDialogAndSave_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

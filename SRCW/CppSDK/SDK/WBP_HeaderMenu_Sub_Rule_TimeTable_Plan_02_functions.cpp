@@ -14,8 +14,25 @@
 #include "WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_parameters.hpp"
 
 
-namespace SDK
+SDK_NAMESPACE_START
+
+// Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C.SetupEXGadget
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGadgetId                               exGadgetId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C::SetupEXGadget(EGadgetId exGadgetId)
 {
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C", FnName));
+
+	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C_SetupEXGadget Parms{};
+
+	Parms.exGadgetId = exGadgetId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 
 // Function WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02.WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C.StartAnimation
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -26,10 +43,8 @@ namespace SDK
 
 void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C::StartAnimation(bool Normal, bool Special, bool End)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C", "StartAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C", FnName));
 
 	Params::WBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C_StartAnimation Parms{};
 
@@ -40,5 +55,5 @@ void UWBP_HeaderMenu_Sub_Rule_TimeTable_Plan_02_C::StartAnimation(bool Normal, b
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UnionRun_classes.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass ABP_KingBoomBoo.ABP_KingBoomBoo_C
 // 0x0490 (0x0800 - 0x0370)
@@ -71,5 +70,4 @@ public:
 };
 DUMPER7_ASSERTS_UABP_KingBoomBoo_C;
 
-}
-
+SDK_NAMESPACE_END

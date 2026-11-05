@@ -14,8 +14,7 @@
 #include "BPFL_HoldItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_HoldItem.BPFL_HoldItem_C.PlayGadgetLuckyHoldItemEffect
 // (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 void UBPFL_HoldItem_C::PlayGadgetLuckyHoldItemEffect(class AHoldItem* InItem, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_HoldItem_C", "PlayGadgetLuckyHoldItemEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_HoldItem_C", "PlayGadgetLuckyHoldItemEffect", FuncInfo);
 
 	Params::BPFL_HoldItem_C_PlayGadgetLuckyHoldItemEffect Parms{};
 
@@ -48,10 +45,8 @@ void UBPFL_HoldItem_C::PlayGadgetLuckyHoldItemEffect(class AHoldItem* InItem, cl
 
 void UBPFL_HoldItem_C::PlayHoldItemGetEffect(class AHoldItem* InItem, const struct FHoldItemCreateParam& InParam, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_HoldItem_C", "PlayHoldItemGetEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_HoldItem_C", "PlayHoldItemGetEffect", FuncInfo);
 
 	Params::BPFL_HoldItem_C_PlayHoldItemGetEffect Parms{};
 
@@ -71,10 +66,8 @@ void UBPFL_HoldItem_C::PlayHoldItemGetEffect(class AHoldItem* InItem, const stru
 
 void UBPFL_HoldItem_C::PlayHoldItemUseEffect(class AHoldItem* InItem, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_HoldItem_C", "PlayHoldItemUseEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_HoldItem_C", "PlayHoldItemUseEffect", FuncInfo);
 
 	Params::BPFL_HoldItem_C_PlayHoldItemUseEffect Parms{};
 
@@ -93,10 +86,8 @@ void UBPFL_HoldItem_C::PlayHoldItemUseEffect(class AHoldItem* InItem, class UObj
 
 void UBPFL_HoldItem_C::PlayRareHoldItemEffect(class AHoldItem* InItem, class UObject* __WorldContext)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_HoldItem_C", "PlayRareHoldItemEffect");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(StaticClass(), "BPFL_HoldItem_C", "PlayRareHoldItemEffect", FuncInfo);
 
 	Params::BPFL_HoldItem_C_PlayRareHoldItemEffect Parms{};
 
@@ -106,5 +97,5 @@ void UBPFL_HoldItem_C::PlayRareHoldItemEffect(class AHoldItem* InItem, class UOb
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,14 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "UNION_structs.hpp"
-#include "UNION_classes.hpp"
 #include "UnionSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_EndMenu_GudgetLv_Window.WBP_EndMenu_GudgetLv_Window_C
 // 0x0118 (0x0458 - 0x0340)
@@ -97,5 +95,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_EndMenu_GudgetLv_Window_C;
 
-}
-
+SDK_NAMESPACE_END

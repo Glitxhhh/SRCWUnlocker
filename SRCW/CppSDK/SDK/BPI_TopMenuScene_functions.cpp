@@ -14,8 +14,7 @@
 #include "BPI_TopMenuScene_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_TopMenuScene.BPI_TopMenuScene_C.GetDodonpaEventSceneCamera
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void IBPI_TopMenuScene_C::GetDodonpaEventSceneCamera(class ACameraActor** newParam)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_TopMenuScene_C", "GetDodonpaEventSceneCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_TopMenuScene_C", FnName));
 
 	Params::BPI_TopMenuScene_C_GetDodonpaEventSceneCamera Parms{};
 
@@ -45,10 +42,8 @@ void IBPI_TopMenuScene_C::GetDodonpaEventSceneCamera(class ACameraActor** newPar
 
 void IBPI_TopMenuScene_C::GetPartyRaceSceneCamera(class ACameraActor** OutCamera)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_TopMenuScene_C", "GetPartyRaceSceneCamera");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(AsUObject(), GetStaticName(L"BPI_TopMenuScene_C", FnName));
 
 	Params::BPI_TopMenuScene_C_GetPartyRaceSceneCamera Parms{};
 
@@ -58,5 +53,5 @@ void IBPI_TopMenuScene_C::GetPartyRaceSceneCamera(class ACameraActor** OutCamera
 		*OutCamera = Parms.OutCamera;
 }
 
-}
 
+SDK_NAMESPACE_END

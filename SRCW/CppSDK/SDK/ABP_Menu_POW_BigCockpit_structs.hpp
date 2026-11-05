@@ -13,8 +13,7 @@
 #include "ABPT_Menu_CockpitBase_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ABP_Menu_POW_BigCockpit.ABP_Menu_POW_BigCockpit_C.AnimBlueprintGeneratedConstantData
 // 0x0000 (0x0208 - 0x0208)
@@ -23,5 +22,4 @@ struct ABP_Menu_POW_BigCockpit::FAnimBlueprintGeneratedConstantData final : publ
 };
 DUMPER7_ASSERTS_ABP_Menu_POW_BigCockpit__FAnimBlueprintGeneratedConstantData;
 
-}
-
+SDK_NAMESPACE_END

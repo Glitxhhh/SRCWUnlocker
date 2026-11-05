@@ -14,18 +14,15 @@
 #include "WBP_GroupResult_Sub_TeamTable_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_GroupResult_Sub_TeamTable.WBP_GroupResult_Sub_TeamTable_C.CloseFestaBonusIcon
 // (BlueprintCallable, BlueprintEvent)
 
 void UWBP_GroupResult_Sub_TeamTable_C::CloseFestaBonusIcon()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "CloseFestaBonusIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -36,10 +33,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::CloseFestaBonusIcon()
 
 void UWBP_GroupResult_Sub_TeamTable_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -52,10 +47,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::Construct()
 
 void UWBP_GroupResult_Sub_TeamTable_C::ExecuteUbergraph_WBP_GroupResult_Sub_TeamTable(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "ExecuteUbergraph_WBP_GroupResult_Sub_TeamTable");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_GroupResult_Sub_TeamTable_C", "ExecuteUbergraph_WBP_GroupResult_Sub_TeamTable", FuncInfo);
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_ExecuteUbergraph_WBP_GroupResult_Sub_TeamTable Parms{};
 
@@ -72,10 +65,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::ExecuteUbergraph_WBP_GroupResult_Sub_Team
 
 void UWBP_GroupResult_Sub_TeamTable_C::OpenFestaBonusIconTeamTotal(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "OpenFestaBonusIconTeamTotal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_OpenFestaBonusIconTeamTotal Parms{};
 
@@ -92,10 +83,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::OpenFestaBonusIconTeamTotal(int32 Point)
 
 void UWBP_GroupResult_Sub_TeamTable_C::PlayAddPoint(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "PlayAddPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_PlayAddPoint Parms{};
 
@@ -110,10 +99,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::PlayAddPoint(int32 Point)
 
 void UWBP_GroupResult_Sub_TeamTable_C::PlayCongratulations()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "PlayCongratulations");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,10 +111,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::PlayCongratulations()
 
 void UWBP_GroupResult_Sub_TeamTable_C::PlayMatchPoint()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "PlayMatchPoint");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +123,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::PlayMatchPoint()
 
 void UWBP_GroupResult_Sub_TeamTable_C::PlayTeamMVP()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "PlayTeamMVP");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -154,10 +137,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::PlayTeamMVP()
 
 void UWBP_GroupResult_Sub_TeamTable_C::Set_Point_Impl(int32 Point)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "Set Point Impl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_Set_Point_Impl Parms{};
 
@@ -174,10 +155,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::Set_Point_Impl(int32 Point)
 
 void UWBP_GroupResult_Sub_TeamTable_C::SetFestaTeamIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "SetFestaTeamIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_SetFestaTeamIndex Parms{};
 
@@ -194,10 +173,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::SetFestaTeamIndex(int32 Index_0)
 
 void UWBP_GroupResult_Sub_TeamTable_C::SetPartyColorIndex(int32 ColorIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "SetPartyColorIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_SetPartyColorIndex Parms{};
 
@@ -215,10 +192,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::SetPartyColorIndex(int32 ColorIndex)
 
 void UWBP_GroupResult_Sub_TeamTable_C::SetPointAnimationImpl(int32 NextPoint, int32 NewPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "SetPointAnimationImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_SetPointAnimationImpl Parms{};
 
@@ -237,10 +212,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::SetPointAnimationImpl(int32 NextPoint, in
 
 void UWBP_GroupResult_Sub_TeamTable_C::SetTimeAnimationImpl(double NextTime, double NowTime_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "SetTimeAnimationImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_SetTimeAnimationImpl Parms{};
 
@@ -258,10 +231,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::SetTimeAnimationImpl(double NextTime, dou
 
 void UWBP_GroupResult_Sub_TeamTable_C::SetTimeImpl(double Time)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "SetTimeImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_SetTimeImpl Parms{};
 
@@ -279,10 +250,8 @@ void UWBP_GroupResult_Sub_TeamTable_C::SetTimeImpl(double Time)
 
 void UWBP_GroupResult_Sub_TeamTable_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GroupResult_Sub_TeamTable_C", "Tick");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_GroupResult_Sub_TeamTable_C", FnName));
 
 	Params::WBP_GroupResult_Sub_TeamTable_C_Tick Parms{};
 
@@ -292,5 +261,5 @@ void UWBP_GroupResult_Sub_TeamTable_C::Tick(const struct FGeometry& MyGeometry, 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

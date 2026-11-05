@@ -14,8 +14,7 @@
 #include "WBP_TopInfo_Sub_HeldPop_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TopInfo_Sub_HeldPop.WBP_TopInfo_Sub_HeldPop_C.SetPopSwitcherIndex
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TopInfo_Sub_HeldPop_C::SetPopSwitcherIndex(int32 Index_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TopInfo_Sub_HeldPop_C", "SetPopSwitcherIndex");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TopInfo_Sub_HeldPop_C", FnName));
 
 	Params::WBP_TopInfo_Sub_HeldPop_C_SetPopSwitcherIndex Parms{};
 
@@ -36,5 +33,5 @@ void UWBP_TopInfo_Sub_HeldPop_C::SetPopSwitcherIndex(int32 Index_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

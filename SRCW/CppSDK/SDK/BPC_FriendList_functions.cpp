@@ -14,8 +14,7 @@
 #include "BPC_FriendList_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_FriendList.BPC_FriendList_C.CREATEDELEGATE_PROXYFUNCTION_0
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_FriendList_C::CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyId& TargetLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "CREATEDELEGATE_PROXYFUNCTION_0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_CREATEDELEGATE_PROXYFUNCTION_0 Parms{};
 
@@ -44,10 +41,8 @@ void UBPC_FriendList_C::CREATEDELEGATE_PROXYFUNCTION_0(const struct FLobbyId& Ta
 
 void UBPC_FriendList_C::ExecuteUbergraph_BPC_FriendList(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "ExecuteUbergraph_BPC_FriendList");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_FriendList_C", "ExecuteUbergraph_BPC_FriendList", FuncInfo);
 
 	Params::BPC_FriendList_C_ExecuteUbergraph_BPC_FriendList Parms{};
 
@@ -65,10 +60,8 @@ void UBPC_FriendList_C::ExecuteUbergraph_BPC_FriendList(int32 EntryPoint)
 
 void UBPC_FriendList_C::OnAppNetSendInvitationComplete(bool bInSuccess, const struct FLobbyOperationResult& InResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnAppNetSendInvitationComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnAppNetSendInvitationComplete Parms{};
 
@@ -86,10 +79,8 @@ void UBPC_FriendList_C::OnAppNetSendInvitationComplete(bool bInSuccess, const st
 
 void UBPC_FriendList_C::OnCreateShortLobbyId(const class FString& ShortLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnCreateShortLobbyId");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnCreateShortLobbyId Parms{};
 
@@ -106,10 +97,8 @@ void UBPC_FriendList_C::OnCreateShortLobbyId(const class FString& ShortLobbyId)
 
 void UBPC_FriendList_C::OnCreateSquadComplete(bool Successful)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnCreateSquadComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnCreateSquadComplete Parms{};
 
@@ -124,10 +113,8 @@ void UBPC_FriendList_C::OnCreateSquadComplete(bool Successful)
 
 void UBPC_FriendList_C::OnDestroyFriendListWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnDestroyFriendListWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -138,10 +125,8 @@ void UBPC_FriendList_C::OnDestroyFriendListWidget()
 
 void UBPC_FriendList_C::OnExitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnExitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -152,10 +137,8 @@ void UBPC_FriendList_C::OnExitState()
 
 void UBPC_FriendList_C::OnFriendListLobbyIdGet()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnFriendListLobbyIdGet");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -168,10 +151,8 @@ void UBPC_FriendList_C::OnFriendListLobbyIdGet()
 
 void UBPC_FriendList_C::OnFriendListLobbyIdSearchDecide(const class FString& TargetShortLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnFriendListLobbyIdSearchDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnFriendListLobbyIdSearchDecide Parms{};
 
@@ -188,10 +169,8 @@ void UBPC_FriendList_C::OnFriendListLobbyIdSearchDecide(const class FString& Tar
 
 void UBPC_FriendList_C::OnFriendListLobbyInvitationAccept(class ULobbyJoinInfo* InLobbyJoinInfo)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnFriendListLobbyInvitationAccept");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnFriendListLobbyInvitationAccept Parms{};
 
@@ -208,10 +187,8 @@ void UBPC_FriendList_C::OnFriendListLobbyInvitationAccept(class ULobbyJoinInfo* 
 
 void UBPC_FriendList_C::OnFriendListLobbyInvitationDecide(const class FString& TargetUserId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnFriendListLobbyInvitationDecide");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnFriendListLobbyInvitationDecide Parms{};
 
@@ -226,10 +203,8 @@ void UBPC_FriendList_C::OnFriendListLobbyInvitationDecide(const class FString& T
 
 void UBPC_FriendList_C::OnFriendListWidgetDisplayEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnFriendListWidgetDisplayEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -240,10 +215,8 @@ void UBPC_FriendList_C::OnFriendListWidgetDisplayEnd()
 
 void UBPC_FriendList_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -256,10 +229,8 @@ void UBPC_FriendList_C::OnInitState()
 
 void UBPC_FriendList_C::OnJoinLobbyByLobbyIdSearch(const struct FLobbyId& InLobbyId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnJoinLobbyByLobbyIdSearch");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnJoinLobbyByLobbyIdSearch Parms{};
 
@@ -277,10 +248,8 @@ void UBPC_FriendList_C::OnJoinLobbyByLobbyIdSearch(const struct FLobbyId& InLobb
 
 void UBPC_FriendList_C::OnSearchSquadComplete(bool Successful, const struct FSearchLobbyResult& SearchResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "OnSearchSquadComplete");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_OnSearchSquadComplete Parms{};
 
@@ -300,10 +269,8 @@ void UBPC_FriendList_C::OnSearchSquadComplete(bool Successful, const struct FSea
 
 void UBPC_FriendList_C::SetFriendListLobbyIdSearchResult(class UCommonLobbyContext* InLobbyContext, bool bInSuccessful, const struct FSearchLobbyResult& InSearchLobbyResult)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "SetFriendListLobbyIdSearchResult");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_SetFriendListLobbyIdSearchResult Parms{};
 
@@ -320,10 +287,8 @@ void UBPC_FriendList_C::SetFriendListLobbyIdSearchResult(class UCommonLobbyConte
 
 void UBPC_FriendList_C::SetMenuSequence()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "SetMenuSequence");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -336,10 +301,8 @@ void UBPC_FriendList_C::SetMenuSequence()
 
 void UBPC_FriendList_C::SetNextMenuSequenceSubState(EMenuSequenceSubState InState)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "SetNextMenuSequenceSubState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_SetNextMenuSequenceSubState Parms{};
 
@@ -354,10 +317,8 @@ void UBPC_FriendList_C::SetNextMenuSequenceSubState(EMenuSequenceSubState InStat
 
 void UBPC_FriendList_C::SetupFooter()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "SetupFooter");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -370,10 +331,8 @@ void UBPC_FriendList_C::SetupFooter()
 
 void UBPC_FriendList_C::SetupFriendListWidget(int32 InZOrder)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FriendList_C", "SetupFriendListWidget");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_FriendList_C", FnName));
 
 	Params::BPC_FriendList_C_SetupFriendListWidget Parms{};
 
@@ -382,5 +341,5 @@ void UBPC_FriendList_C::SetupFriendListWidget(int32 InZOrder)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

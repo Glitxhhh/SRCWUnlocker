@@ -10,17 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "ST_ColorPresetSelectPageItemData_structs.hpp"
-#include "UNION_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UnionUI_structs.hpp"
-#include "UnionUI_classes.hpp"
+#include "ST_ColorPresetSelectPageItemData_structs.hpp"
 #include "ST_ColorPresetSelectPageData_structs.hpp"
 #include "UMG_structs.hpp"
+#include "UnionUI_structs.hpp"
+#include "UnionUI_classes.hpp"
+#include "UNION_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_MachineCustom_Sub_PresetPaint.WBP_MachineCustom_Sub_PresetPaint_C
 // 0x00C8 (0x04A0 - 0x03D8)
@@ -109,5 +108,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_MachineCustom_Sub_PresetPaint_C;
 
-}
-
+SDK_NAMESPACE_END

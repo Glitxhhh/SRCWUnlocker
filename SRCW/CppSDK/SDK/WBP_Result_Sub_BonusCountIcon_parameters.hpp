@@ -13,8 +13,8 @@
 #include "UnionSystem_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Result_Sub_BonusCountIcon.WBP_Result_Sub_BonusCountIcon_C.ExecuteUbergraph_WBP_Result_Sub_BonusCountIcon
 // 0x00B0 (0x00B0 - 0x0000)
@@ -43,5 +43,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Result_Sub_BonusCountIcon_C_SetNum;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

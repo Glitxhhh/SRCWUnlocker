@@ -14,24 +14,21 @@
 #include "BPC_GarageMenuTopState_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.UpdateRacer
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ExecuteUbergraph_BPC_GarageMenuTopState
+// (Final, UbergraphFunction)
 // Parameters:
-// EGarageChildSequenceId                  InChildSequenceId                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GarageMenuTopState_C::UpdateRacer(EGarageChildSequenceId InChildSequenceId)
+void UBPC_GarageMenuTopState_C::ExecuteUbergraph_BPC_GarageMenuTopState(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_GarageMenuTopState_C", "ExecuteUbergraph_BPC_GarageMenuTopState", FuncInfo);
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "UpdateRacer");
+	Params::BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState Parms{};
 
-	Params::BPC_GarageMenuTopState_C_UpdateRacer Parms{};
-
-	Parms.InChildSequenceId = InChildSequenceId;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -42,80 +39,8 @@ void UBPC_GarageMenuTopState_C::UpdateRacer(EGarageChildSequenceId InChildSequen
 
 void UBPC_GarageMenuTopState_C::FinalizeTopWidget()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "FinalizeTopWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.StartMachineCustomizeSequence
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::StartMachineCustomizeSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "StartMachineCustomizeSequence");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.StartGadgetCustomizeSequence
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::StartGadgetCustomizeSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "StartGadgetCustomizeSequence");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnInAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::TopWidget_OnInAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "TopWidget_OnInAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnCancel
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::TopWidget_OnCancel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "TopWidget_OnCancel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnExit
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnExit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "MachineCustomizeSequence_OnExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,30 +51,28 @@ void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnExit()
 
 void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnExit()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "GadgetCustomizeSequence_OnExit");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnTurntableControlStateChanged
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnMachinePartsFocused
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bInIsControllable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachinePartsType                       InMachinePartsType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnTurntableControlStateChanged(bool bInIsControllable)
+void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnMachinePartsFocused(EMachineId InMachineID, EMachinePartsType InMachinePartsType)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "GadgetCustomizeSequence_OnTurntableControlStateChanged");
+	Params::BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused Parms{};
 
-	Params::BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged Parms{};
-
-	Parms.bInIsControllable = bInIsControllable;
+	Parms.InMachineID = InMachineID;
+	Parms.InMachinePartsType = InMachinePartsType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -162,16 +85,184 @@ void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnTurntableControlStateC
 
 void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnParamWindowControlStateChanged(bool bInIsControllable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "GadgetCustomizeSequence_OnParamWindowControlStateChanged");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	Params::BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnParamWindowControlStateChanged Parms{};
 
 	Parms.bInIsControllable = bInIsControllable;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnShortcutCustomizeFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnShortcutCustomizeFinished()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnTurntableControlStateChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInIsControllable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnTurntableControlStateChanged(bool bInIsControllable)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	Params::BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnTurntableControlStateChanged Parms{};
+
+	Parms.bInIsControllable = bInIsControllable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnExit
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnExit()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnMachineFocused
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnMachineFocused(EMachineId InMachineID)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	Params::BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused Parms{};
+
+	Parms.InMachineID = InMachineID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnShortcutCustomizeStarted
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMachinePartsType                       InMachinePartsType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnShortcutCustomizeStarted(EMachineId InMachineID, EMachinePartsType InMachinePartsType)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	Params::BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted Parms{};
+
+	Parms.InMachineID = InMachineID;
+	Parms.InMachinePartsType = InMachinePartsType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.OnExitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::OnExitState()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.OnInitState
+// (Event, Public, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::OnInitState()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_GarageMenuTopState_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	Params::BPC_GarageMenuTopState_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.StartGadgetCustomizeSequence
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::StartGadgetCustomizeSequence()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.StartMachineCustomizeSequence
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::StartMachineCustomizeSequence()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnCancel
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::TopWidget_OnCancel()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnDecision
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_GarageMenuTopState_C::TopWidget_OnDecision()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -182,10 +273,8 @@ void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnParamWindowControlStat
 
 void UBPC_GarageMenuTopState_C::TopWidget_OnDecisionAnimFinished(EGarageChildSequenceId InChildSequenceId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "TopWidget_OnDecisionAnimFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	Params::BPC_GarageMenuTopState_C_TopWidget_OnDecisionAnimFinished Parms{};
 
@@ -202,10 +291,8 @@ void UBPC_GarageMenuTopState_C::TopWidget_OnDecisionAnimFinished(EGarageChildSeq
 
 void UBPC_GarageMenuTopState_C::TopWidget_OnFocus(EGarageChildSequenceId InChildSequenceId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "TopWidget_OnFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	Params::BPC_GarageMenuTopState_C_TopWidget_OnFocus Parms{};
 
@@ -215,164 +302,34 @@ void UBPC_GarageMenuTopState_C::TopWidget_OnFocus(EGarageChildSequenceId InChild
 }
 
 
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnMachineFocused
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnMachineFocused(EMachineId InMachineID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "MachineCustomizeSequence_OnMachineFocused");
-
-	Params::BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnMachineFocused Parms{};
-
-	Parms.InMachineID = InMachineID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnMachinePartsFocused
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachinePartsType                       InMachinePartsType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnMachinePartsFocused(EMachineId InMachineID, EMachinePartsType InMachinePartsType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "GadgetCustomizeSequence_OnMachinePartsFocused");
-
-	Params::BPC_GarageMenuTopState_C_GadgetCustomizeSequence_OnMachinePartsFocused Parms{};
-
-	Parms.InMachineID = InMachineID;
-	Parms.InMachinePartsType = InMachinePartsType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.MachineCustomizeSequence_OnShortcutCustomizeStarted
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EMachineId                              InMachineID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMachinePartsType                       InMachinePartsType                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GarageMenuTopState_C::MachineCustomizeSequence_OnShortcutCustomizeStarted(EMachineId InMachineID, EMachinePartsType InMachinePartsType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "MachineCustomizeSequence_OnShortcutCustomizeStarted");
-
-	Params::BPC_GarageMenuTopState_C_MachineCustomizeSequence_OnShortcutCustomizeStarted Parms{};
-
-	Parms.InMachineID = InMachineID;
-	Parms.InMachinePartsType = InMachinePartsType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.GadgetCustomizeSequence_OnShortcutCustomizeFinished
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnInAnimationFinished
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_GarageMenuTopState_C::GadgetCustomizeSequence_OnShortcutCustomizeFinished()
+void UBPC_GarageMenuTopState_C::TopWidget_OnInAnimationFinished()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "GadgetCustomizeSequence_OnShortcutCustomizeFinished");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.TopWidget_OnDecision
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::TopWidget_OnDecision()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "TopWidget_OnDecision");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.UpdateRacer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EGarageChildSequenceId                  InChildSequenceId                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GarageMenuTopState_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void UBPC_GarageMenuTopState_C::UpdateRacer(EGarageChildSequenceId InChildSequenceId)
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_GarageMenuTopState_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "ReceiveEndPlay");
+	Params::BPC_GarageMenuTopState_C_UpdateRacer Parms{};
 
-	Params::BPC_GarageMenuTopState_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.InChildSequenceId = InChildSequenceId;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.OnInitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::OnInitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "OnInitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.OnExitState
-// (Event, Public, BlueprintEvent)
-
-void UBPC_GarageMenuTopState_C::OnExitState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "OnExitState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_GarageMenuTopState.BPC_GarageMenuTopState_C.ExecuteUbergraph_BPC_GarageMenuTopState
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_GarageMenuTopState_C::ExecuteUbergraph_BPC_GarageMenuTopState(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GarageMenuTopState_C", "ExecuteUbergraph_BPC_GarageMenuTopState");
-
-	Params::BPC_GarageMenuTopState_C_ExecuteUbergraph_BPC_GarageMenuTopState Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-}
-
+SDK_NAMESPACE_END

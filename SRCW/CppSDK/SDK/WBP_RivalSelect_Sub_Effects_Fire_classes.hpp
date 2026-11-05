@@ -13,8 +13,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_RivalSelect_Sub_Effects_Fire.WBP_RivalSelect_Sub_Effects_Fire_C
 // 0x0050 (0x0330 - 0x02E0)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_RivalSelect_Sub_Effects_Fire_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WBP_Friend_Sub_PlayerPlate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Friend_Sub_PlayerPlate.WBP_Friend_Sub_PlayerPlate_C.LeftNavigationEvent
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -25,10 +24,8 @@ namespace SDK
 
 class UWidget* UWBP_Friend_Sub_PlayerPlate_C::LeftNavigationEvent(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "LeftNavigationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_LeftNavigationEvent Parms{};
 
@@ -48,10 +45,8 @@ class UWidget* UWBP_Friend_Sub_PlayerPlate_C::LeftNavigationEvent(EUINavigation 
 
 class UWidget* UWBP_Friend_Sub_PlayerPlate_C::RightNavigationEvent(EUINavigation Navigation_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "RightNavigationEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_RightNavigationEvent Parms{};
 
@@ -70,10 +65,8 @@ class UWidget* UWBP_Friend_Sub_PlayerPlate_C::RightNavigationEvent(EUINavigation
 
 void UWBP_Friend_Sub_PlayerPlate_C::Check_Release_Response_InputType(bool* bOutReleaseResponseInput)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "Check Release Response InputType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_Check_Release_Response_InputType Parms{};
 
@@ -93,10 +86,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::Check_Release_Response_InputType(bool* bOutR
 
 struct FEventReply UWBP_Friend_Sub_PlayerPlate_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnFocusReceived");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_OnFocusReceived Parms{};
 
@@ -118,10 +109,8 @@ struct FEventReply UWBP_Friend_Sub_PlayerPlate_C::OnFocusReceived(const struct F
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2D> InIconTexture, const struct FLinearColor& InBgColor, bool bInNowPlaying)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayerIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayerIcon Parms{};
 
@@ -140,10 +129,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIcon(TSoftObjectPtr<class UTexture2
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerNameText(const class FText& InText)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayerNameText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayerNameText Parms{};
 
@@ -160,10 +147,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerNameText(const class FText& InText)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIdText(const class FString& InPlayerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayerIdText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayerIdText Parms{};
 
@@ -180,10 +165,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIdText(const class FString& InPlaye
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlatformIcon(ECrossplayPlatform InPlatformType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlatformIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlatformIcon Parms{};
 
@@ -201,10 +184,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlatformIcon(ECrossplayPlatform InPlatfor
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerStatusIcon(bool bInAppBlock, bool bInPFBlock)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayerStatusIcon");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayerStatusIcon Parms{};
 
@@ -222,10 +203,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerStatusIcon(bool bInAppBlock, bool b
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyInvitationIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetLobbyInvitationIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetLobbyInvitationIconVisible Parms{};
 
@@ -242,10 +221,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyInvitationIconVisible(bool bInVisibl
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetFocusAnimation(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetFocusAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetFocusAnimation Parms{};
 
@@ -262,10 +239,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetFocusAnimation(bool bInEnable)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetCursorVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetCursorVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetCursorVisible Parms{};
 
@@ -283,10 +258,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetCursorVisible(bool bInVisible)
 
 void UWBP_Friend_Sub_PlayerPlate_C::ChangePlayAnimation(class UWidgetAnimation* InStopAnimation, class UWidgetAnimation* InPlayAnimation)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "ChangePlayAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_ChangePlayAnimation Parms{};
 
@@ -304,10 +277,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::ChangePlayAnimation(class UWidgetAnimation* 
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetMouseInteractionVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetMouseInteractionVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetMouseInteractionVisible Parms{};
 
@@ -324,10 +295,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetMouseInteractionVisible(bool bInVisible)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetDateText(const class FString& InDate)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetDateText");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetDateText Parms{};
 
@@ -345,10 +314,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetDateText(const class FString& InDate)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetByListPlayerInfo(const struct FFriendListPlayerInfo& InListPlayerInfo, bool InShowPlayerId)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetByListPlayerInfo");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetByListPlayerInfo Parms{};
 
@@ -366,10 +333,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetByListPlayerInfo(const struct FFriendList
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetFocusEnable(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetFocusEnable");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetFocusEnable Parms{};
 
@@ -386,10 +351,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetFocusEnable(bool bInEnable)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetButtonFocusType(EButtonFocusType InButtonFocusType)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetButtonFocusType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetButtonFocusType Parms{};
 
@@ -406,10 +369,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetButtonFocusType(EButtonFocusType InButton
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayDecisionSe(bool bInEnable)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayDecisionSe");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayDecisionSe Parms{};
 
@@ -426,10 +387,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayDecisionSe(bool bInEnable)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIconVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetPlayerIconVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetPlayerIconVisible Parms{};
 
@@ -446,10 +405,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetPlayerIconVisible(bool bInVisible)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyType(bool bInFriendMatch)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetLobbyType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetLobbyType Parms{};
 
@@ -466,10 +423,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyType(bool bInFriendMatch)
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyInfoVisible(bool bInVisible)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetLobbyInfoVisible");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetLobbyInfoVisible Parms{};
 
@@ -484,10 +439,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetLobbyInfoVisible(bool bInVisible)
 
 void UWBP_Friend_Sub_PlayerPlate_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -500,10 +453,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::Construct()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnFocusImpl(class UUnionUIButtonBase* Button)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnFocusImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_OnFocusImpl Parms{};
 
@@ -520,10 +471,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnFocusImpl(class UUnionUIButtonBase* Button
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnAddedToFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_OnAddedToFocusPath Parms{};
 
@@ -540,10 +489,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnAddedToFocusPath(const struct FFocusEvent&
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnRemovedFromFocusPath");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_OnRemovedFromFocusPath Parms{};
 
@@ -560,10 +507,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnRemovedFromFocusPath(const struct FFocusEv
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnFocusLost");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_OnFocusLost Parms{};
 
@@ -578,10 +523,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnFocusLost(const struct FFocusEvent& InFocu
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -592,10 +535,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnFocusAnimStart()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnUnFocusAnimStart()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnUnFocusAnimStart");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -606,10 +547,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnUnFocusAnimStart()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnAcceptKeyPressedImpl()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnAcceptKeyPressedImpl");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -620,10 +559,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnAcceptKeyPressedImpl()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnBackKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnBackKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -634,10 +571,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnBackKeyPressed()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnAcceptKeyPressed()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnAcceptKeyPressed");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -648,10 +583,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnAcceptKeyPressed()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -664,10 +597,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnInitialized()
 
 void UWBP_Friend_Sub_PlayerPlate_C::SetWidgetFocus(bool bInPlayFocusSound)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "SetWidgetFocus");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_SetWidgetFocus Parms{};
 
@@ -682,10 +613,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::SetWidgetFocus(bool bInPlayFocusSound)
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnLeftKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnLeftKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -696,10 +625,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnLeftKeyReleased()
 
 void UWBP_Friend_Sub_PlayerPlate_C::OnRightKeyReleased()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "OnRightKeyReleased");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -710,10 +637,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::OnRightKeyReleased()
 
 void UWBP_Friend_Sub_PlayerPlate_C::LeftDirectionEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "LeftDirectionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -724,10 +649,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::LeftDirectionEvent()
 
 void UWBP_Friend_Sub_PlayerPlate_C::RightDirectionEvent()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "RightDirectionEvent");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_Friend_Sub_PlayerPlate_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -740,10 +663,8 @@ void UWBP_Friend_Sub_PlayerPlate_C::RightDirectionEvent()
 
 void UWBP_Friend_Sub_PlayerPlate_C::ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friend_Sub_PlayerPlate_C", "ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_Friend_Sub_PlayerPlate_C", "ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate", FuncInfo);
 
 	Params::WBP_Friend_Sub_PlayerPlate_C_ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate Parms{};
 
@@ -752,5 +673,5 @@ void UWBP_Friend_Sub_PlayerPlate_C::ExecuteUbergraph_WBP_Friend_Sub_PlayerPlate(
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

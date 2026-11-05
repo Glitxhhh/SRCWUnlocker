@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UNION_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UNION_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPC_MenuStatePatyRace.BPC_MenuStatePatyRace_C
 // 0x0008 (0x0140 - 0x0138)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPC_MenuStatePatyRace_C;
 
-}
-
+SDK_NAMESPACE_END

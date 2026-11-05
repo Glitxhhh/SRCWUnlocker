@@ -14,8 +14,7 @@
 #include "BPC_RaceSequenceStateEndMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPC_RaceSequenceStateEndMenu.BPC_RaceSequenceStateEndMenu_C.ExecuteUbergraph_BPC_RaceSequenceStateEndMenu
 // (Final, UbergraphFunction)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UBPC_RaceSequenceStateEndMenu_C::ExecuteUbergraph_BPC_RaceSequenceStateEndMenu(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEndMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStateEndMenu");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "BPC_RaceSequenceStateEndMenu_C", "ExecuteUbergraph_BPC_RaceSequenceStateEndMenu", FuncInfo);
 
 	Params::BPC_RaceSequenceStateEndMenu_C_ExecuteUbergraph_BPC_RaceSequenceStateEndMenu Parms{};
 
@@ -42,13 +39,11 @@ void UBPC_RaceSequenceStateEndMenu_C::ExecuteUbergraph_BPC_RaceSequenceStateEndM
 
 void UBPC_RaceSequenceStateEndMenu_C::OnInitState()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_RaceSequenceStateEndMenu_C", "OnInitState");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"BPC_RaceSequenceStateEndMenu_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

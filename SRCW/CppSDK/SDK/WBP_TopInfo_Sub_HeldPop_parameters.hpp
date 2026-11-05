@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_TopInfo_Sub_HeldPop.WBP_TopInfo_Sub_HeldPop_C.SetPopSwitcherIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TopInfo_Sub_HeldPop_C_SetPopSwitcherIndex;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

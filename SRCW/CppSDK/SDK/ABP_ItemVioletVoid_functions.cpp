@@ -14,8 +14,7 @@
 #include "ABP_ItemVioletVoid_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_ItemVioletVoid.ABP_ItemVioletVoid_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABP_ItemVioletVoid_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	Params::ABP_ItemVioletVoid_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABP_ItemVioletVoid_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABP_ItemVioletVoid_C::AnimNotify_OnEnterEating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimNotify_OnEnterEating");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -57,10 +52,8 @@ void UABP_ItemVioletVoid_C::AnimNotify_OnEnterEating()
 
 void UABP_ItemVioletVoid_C::AnimNotify_OnEnterSleep()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimNotify_OnEnterSleep");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,10 +64,8 @@ void UABP_ItemVioletVoid_C::AnimNotify_OnEnterSleep()
 
 void UABP_ItemVioletVoid_C::AnimNotify_OnLeaveEating()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimNotify_OnLeaveEating");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,10 +76,8 @@ void UABP_ItemVioletVoid_C::AnimNotify_OnLeaveEating()
 
 void UABP_ItemVioletVoid_C::AnimNotify_OnLeaveSleep()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimNotify_OnLeaveSleep");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,10 +88,8 @@ void UABP_ItemVioletVoid_C::AnimNotify_OnLeaveSleep()
 
 void UABP_ItemVioletVoid_C::AnimNotify_PlaySEVioletVoidEat()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "AnimNotify_PlaySEVioletVoidEat");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABP_ItemVioletVoid_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -115,10 +102,8 @@ void UABP_ItemVioletVoid_C::AnimNotify_PlaySEVioletVoidEat()
 
 void UABP_ItemVioletVoid_C::ExecuteUbergraph_ABP_ItemVioletVoid(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_ItemVioletVoid_C", "ExecuteUbergraph_ABP_ItemVioletVoid");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABP_ItemVioletVoid_C", "ExecuteUbergraph_ABP_ItemVioletVoid", FuncInfo);
 
 	Params::ABP_ItemVioletVoid_C_ExecuteUbergraph_ABP_ItemVioletVoid Parms{};
 
@@ -127,5 +112,5 @@ void UABP_ItemVioletVoid_C::ExecuteUbergraph_ABP_ItemVioletVoid(int32 EntryPoint
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "ABPT_Driver_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABPT_Driver.ABPT_Driver_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UABPT_Driver_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "AnimGraph");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_AnimGraph Parms{};
 
@@ -43,10 +40,8 @@ void UABPT_Driver_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 void UABPT_Driver_C::BlueprintLinkedAnimationLayersInitialized()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "BlueprintLinkedAnimationLayersInitialized");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,10 +54,8 @@ void UABPT_Driver_C::BlueprintLinkedAnimationLayersInitialized()
 
 void UABPT_Driver_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "BlueprintUpdateAnimation");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_BlueprintUpdateAnimation Parms{};
 
@@ -80,10 +73,8 @@ void UABPT_Driver_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 void UABPT_Driver_C::Boarder_ItemOrWispHoldingLayer(const struct FPoseLink& InPose_0, struct FPoseLink* Boarder_ItemOrWispHoldingLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "Boarder_ItemOrWispHoldingLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_Boarder_ItemOrWispHoldingLayer Parms{};
 
@@ -103,10 +94,8 @@ void UABPT_Driver_C::Boarder_ItemOrWispHoldingLayer(const struct FPoseLink& InPo
 
 void UABPT_Driver_C::BoatingLayer(struct FPoseLink* BoatingLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "BoatingLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_BoatingLayer Parms{};
 
@@ -125,10 +114,8 @@ void UABPT_Driver_C::BoatingLayer(struct FPoseLink* BoatingLayer_0)
 
 void UABPT_Driver_C::Driver_ItemOrWispHoldingLayer(const struct FPoseLink& InPose_0, struct FPoseLink* Driver_ItemOrWispHoldingLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "Driver_ItemOrWispHoldingLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_Driver_ItemOrWispHoldingLayer Parms{};
 
@@ -141,6 +128,30 @@ void UABPT_Driver_C::Driver_ItemOrWispHoldingLayer(const struct FPoseLink& InPos
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.DrivingControlRigLayer
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPose_Driving                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// int32                                   machineType_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       DrivingControlRigLayer_0                               (Parm, OutParm, NoDestructor)
+
+void UABPT_Driver_C::DrivingControlRigLayer(const struct FPoseLink& InPose_Driving, int32 machineType_0, struct FPoseLink* DrivingControlRigLayer_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "DrivingControlRigLayer", FuncInfo);
+
+	Params::ABPT_Driver_C_DrivingControlRigLayer Parms{};
+
+	Parms.InPose_Driving = std::move(InPose_Driving);
+	Parms.machineType_0 = machineType_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DrivingControlRigLayer_0 != nullptr)
+		*DrivingControlRigLayer_0 = std::move(Parms.DrivingControlRigLayer_0);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.DrivingLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -148,10 +159,8 @@ void UABPT_Driver_C::Driver_ItemOrWispHoldingLayer(const struct FPoseLink& InPos
 
 void UABPT_Driver_C::DrivingLayer(struct FPoseLink* DrivingLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "DrivingLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_DrivingLayer Parms{};
 
@@ -167,10 +176,8 @@ void UABPT_Driver_C::DrivingLayer(struct FPoseLink* DrivingLayer_0)
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_264268AC4FAB522D8ECFCEA72C6DD4DA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_264268AC4FAB522D8ECFCEA72C6DD4DA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -181,10 +188,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_3AF7AC15436ACCF4749B18B087838E33()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_3AF7AC15436ACCF4749B18B087838E33");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -195,10 +200,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_8F33DC7B44713239DA45DA87F509746B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_8F33DC7B44713239DA45DA87F509746B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -209,10 +212,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_C249575042CAE461460DBB96DEADB8DA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_C249575042CAE461460DBB96DEADB8DA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -223,10 +224,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_C6DDC5B44E716873F545B487F17DCBF1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_C6DDC5B44E716873F545B487F17DCBF1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,10 +236,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_CE54FF4F4A183A6DD656D39C2A5FE1FD()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_CE54FF4F4A183A6DD656D39C2A5FE1FD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -251,10 +248,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_E046EB5B4496B13F3F093CA437903076()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_E046EB5B4496B13F3F093CA437903076");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -265,10 +260,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_E33B8B21494ED7EE5A15B9B18F9D1E77()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_E33B8B21494ED7EE5A15B9B18F9D1E77");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -279,10 +272,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FA843E2141290D57D4CB25B10511A1FF()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FA843E2141290D57D4CB25B10511A1FF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -293,10 +284,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FCA47FA04F1478A8BC3CC49003DCBBC0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FCA47FA04F1478A8BC3CC49003DCBBC0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -307,10 +296,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FE45F1BF448E9540BEC327935B039BD9()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByBool_FE45F1BF448E9540BEC327935B039BD9");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -321,10 +308,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByInt_189461544D447E7902FA478EB4DFED0F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendListByInt_189461544D447E7902FA478EB4DFED0F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -335,10 +320,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceEvaluator_D35AE326447CD588E75669885E88C949()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceEvaluator_D35AE326447CD588E75669885E88C949");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -349,10 +332,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_0F49501B4884FEC3B75EE38920B643D4()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_0F49501B4884FEC3B75EE38920B643D4");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -363,10 +344,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_3741915F4E6960E1B62CA08319F7431F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_3741915F4E6960E1B62CA08319F7431F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -377,10 +356,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_AEC5980B4741F26ADC3985847FFB548D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_AEC5980B4741F26ADC3985847FFB548D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -391,10 +368,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_E0D79A27430E713CE747549AFD16735A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_E0D79A27430E713CE747549AFD16735A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -405,10 +380,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_E69A46F540F6F3CB6A3B35894B0F1781()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpaceGraph_E69A46F540F6F3CB6A3B35894B0F1781");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -419,10 +392,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpacePlayer_18087385443A219C313A72B0B9B4BD7F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpacePlayer_18087385443A219C313A72B0B9B4BD7F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -433,10 +404,32 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpacePlayer_5F4762D04D44C54DC56D23AC7B17A123()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_BlendSpacePlayer_5F4762D04D44C54DC56D23AC7B17A123");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_ControlRig_A3935D44452343465CA07F910ECD9312
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_ControlRig_A3935D44452343465CA07F910ECD9312()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_LinkedAnimLayer_E301E6404DFFE6B8AEAACB859FE576B5
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_LinkedAnimLayer_E301E6404DFFE6B8AEAACB859FE576B5()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -447,10 +440,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_0518092342DE0753C49B5E8AEEE62CC0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_0518092342DE0753C49B5E8AEEE62CC0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -461,10 +452,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_094C62BB4149E5BDDB0206857D3B6AF2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_094C62BB4149E5BDDB0206857D3B6AF2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -475,10 +464,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1152A557428C280DBE836491E0205B16()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1152A557428C280DBE836491E0205B16");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -489,10 +476,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_14A08239486CD1FBAD731FA1314A02D1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_14A08239486CD1FBAD731FA1314A02D1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -503,10 +488,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1511E8A047F7CA632A2973AE7CCFF4CE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1511E8A047F7CA632A2973AE7CCFF4CE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -517,10 +500,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_17AFAA714EB0F4D834AD24BF16A3AF72()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_17AFAA714EB0F4D834AD24BF16A3AF72");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -531,10 +512,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1B436F4F4E6D82792C9FFF8F58B64E73()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1B436F4F4E6D82792C9FFF8F58B64E73");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -545,10 +524,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1B738E154A62DED30C6C8F8743CF21EE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_1B738E154A62DED30C6C8F8743CF21EE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -559,10 +536,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_245A04A04571B38D7CDA709E7636E2BD()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_245A04A04571B38D7CDA709E7636E2BD");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -573,10 +548,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_271A8619468AEAE2104AC4BB10F24E2D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_271A8619468AEAE2104AC4BB10F24E2D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -587,10 +560,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_2B4F5CF94A3572D0BE6C058DE9EE8CE0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_2B4F5CF94A3572D0BE6C058DE9EE8CE0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -601,10 +572,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_2E3A54A44BA9CCBB6A8A6DB197AA5C92()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_2E3A54A44BA9CCBB6A8A6DB197AA5C92");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3699CBC8420AD8140EC6738209557FBD
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3699CBC8420AD8140EC6738209557FBD()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -615,10 +596,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_37E38610410A70F4A5490D83C3293AEB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_37E38610410A70F4A5490D83C3293AEB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -629,10 +608,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3A344AAB45C97946FFDB3FA0E56E193E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3A344AAB45C97946FFDB3FA0E56E193E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -643,10 +620,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3C420CC947769F5212EABE93181D5F14()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_3C420CC947769F5212EABE93181D5F14");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -657,10 +632,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4128CE364A80EA1926E53AA817207694()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4128CE364A80EA1926E53AA817207694");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -671,10 +644,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4261418A44CE531B9B1C85BDBB055B4D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4261418A44CE531B9B1C85BDBB055B4D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -685,10 +656,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_45A61B0B4234E96ED01F6BA5953AC563()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_45A61B0B4234E96ED01F6BA5953AC563");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -699,10 +668,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_45C113CA4D23691430B19FA0511AAD2C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_45C113CA4D23691430B19FA0511AAD2C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -713,10 +680,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4734852444D9C7458206A79198A84ECE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4734852444D9C7458206A79198A84ECE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -727,10 +692,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4CE13D5E4D7CA9315779A4877891310F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_4CE13D5E4D7CA9315779A4877891310F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -741,10 +704,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_50DB61C44B3938BFAF7CF19352627F84()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_50DB61C44B3938BFAF7CF19352627F84");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -755,10 +716,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_56E44D064D19480DAB8A548A89CB2B17()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_56E44D064D19480DAB8A548A89CB2B17");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -769,10 +728,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_573EDA654186A121D3BA4386370A3E9B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_573EDA654186A121D3BA4386370A3E9B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -783,10 +740,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_58166DE54BD3B362D61027A78FE8DB00()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_58166DE54BD3B362D61027A78FE8DB00");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -797,10 +752,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_626EF9E34437407519BCE18263F0A29C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_626EF9E34437407519BCE18263F0A29C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -811,10 +764,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6DE8D28E43CBB1259598C28F2D429152()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6DE8D28E43CBB1259598C28F2D429152");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6EE1141246750879786EF4B176891564
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_6EE1141246750879786EF4B176891564()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -825,10 +788,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_78DA63E6477E7D930FDFCDA44FF51AE2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_78DA63E6477E7D930FDFCDA44FF51AE2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -839,10 +800,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_86CAF54B44EE4A8C0C841EB897CD5CB0()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_86CAF54B44EE4A8C0C841EB897CD5CB0");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -853,10 +812,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_89EB8E6542EDA58BFE2296B969F1EA2F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_89EB8E6542EDA58BFE2296B969F1EA2F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -867,10 +824,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_94424F0A460A75CC50CD50BB9CAB26A1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_94424F0A460A75CC50CD50BB9CAB26A1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -881,10 +836,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_9A292CAE4D7E72C3E6216F9029181460()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_9A292CAE4D7E72C3E6216F9029181460");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -895,10 +848,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_AECFF787493E70FD227A78B204737FD3()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_AECFF787493E70FD227A78B204737FD3");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -909,10 +860,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_CCFF037543114B6127B1F8BD340C5640()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_CCFF037543114B6127B1F8BD340C5640");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -923,10 +872,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_D4844CF7481F8F30F18864A77DB3A8C6()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_D4844CF7481F8F30F18864A77DB3A8C6");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -937,10 +884,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_D79FFD2A4005788D06E266A8C159C77D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_D79FFD2A4005788D06E266A8C159C77D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -951,10 +896,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_DDD0002A46FBD1865A310ABC20B276AE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_DDD0002A46FBD1865A310ABC20B276AE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -965,10 +908,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_E9F9BBE54009F6ED77D65996ABF91A9D()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_E9F9BBE54009F6ED77D65996ABF91A9D");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -979,10 +920,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EB2A75874EC6750486DD809F8D4830EE()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EB2A75874EC6750486DD809F8D4830EE");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -993,10 +932,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EB8A20CE4DD6CF41709F8C9C243E4BE2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EB8A20CE4DD6CF41709F8C9C243E4BE2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1007,10 +944,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_ED56CCBA4FF55813631DCB8EF5EC005F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_ED56CCBA4FF55813631DCB8EF5EC005F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1021,10 +956,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EE8F841F4D994DDC1F5EBDA3682F3015()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_EE8F841F4D994DDC1F5EBDA3682F3015");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1035,10 +968,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_F4DC3BE747007E2EF00D06B2890BD7E8()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_F4DC3BE747007E2EF00D06B2890BD7E8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1049,10 +980,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_FDC9FFAA47A8E020F1CED58827469032()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_FDC9FFAA47A8E020F1CED58827469032");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1063,10 +992,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_FF5F984A4DEECBF082E09F8EA004CE1D()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_SequencePlayer_FF5F984A4DEECBF082E09F8EA004CE1D");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_01A2570342EDCB1F07C03891C7E221E5
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_01A2570342EDCB1F07C03891C7E221E5()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1077,10 +1016,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_0637EAC54DDA4F9006335989C71C3A23()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_0637EAC54DDA4F9006335989C71C3A23");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1091,10 +1028,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_071713D7475863E1262A01817A3F738A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_071713D7475863E1262A01817A3F738A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1105,10 +1040,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_1B707A5D4C6D9591790747A5E6874D2A()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_1B707A5D4C6D9591790747A5E6874D2A");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1119,10 +1052,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2B51BBAF41FA5801F17658A54DE7DBEB()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2B51BBAF41FA5801F17658A54DE7DBEB");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1133,10 +1064,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2BAC47304132E1AF43EEAB8FE76C48C8()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2BAC47304132E1AF43EEAB8FE76C48C8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1147,10 +1076,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2E71EF8944A67E71A47CB38E9F5A7D68()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_2E71EF8944A67E71A47CB38E9F5A7D68");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_321FD70B4BE4BAA734C49F8B9AB460B4
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_321FD70B4BE4BAA734C49F8B9AB460B4()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1161,10 +1100,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_3305BDC44429773D89F0C0995FF21609()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_3305BDC44429773D89F0C0995FF21609");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1175,10 +1112,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_38D8E220457A1EACFE4C0A81D3FEA4AA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_38D8E220457A1EACFE4C0A81D3FEA4AA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1189,10 +1124,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_407790EC4E1DBB30E5ACC4B493165B23()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_407790EC4E1DBB30E5ACC4B493165B23");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1203,10 +1136,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_4B9A4A3543B5449480AEB9989E21566F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_4B9A4A3543B5449480AEB9989E21566F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1217,10 +1148,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_4C5133054A8577C1334412ACDE1E1AC7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_4C5133054A8577C1334412ACDE1E1AC7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1231,10 +1160,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_52C51EF84FAA7860965AA1A1249F660C()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_52C51EF84FAA7860965AA1A1249F660C");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_5824508C44FE9AA352B4CD9C1FE5D011
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_5824508C44FE9AA352B4CD9C1FE5D011()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1245,10 +1184,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6D6F9B734892A583689A3FB29E5B3A3B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6D6F9B734892A583689A3FB29E5B3A3B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1259,10 +1196,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6E5A5F7C484A055C4BBC61B2667BFB1C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6E5A5F7C484A055C4BBC61B2667BFB1C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1273,10 +1208,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6F98F86446F3FA869B22B3A633DCE2D2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_6F98F86446F3FA869B22B3A633DCE2D2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1287,10 +1220,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_7602809C430E9C104C8EE694BB2AC7A7()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_7602809C430E9C104C8EE694BB2AC7A7");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1301,10 +1232,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8570184643EBACEAEEAE508CC573E0A2()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8570184643EBACEAEEAE508CC573E0A2");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1315,10 +1244,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_885E7D72418DA1206A222DB2EF443EA8()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_885E7D72418DA1206A222DB2EF443EA8");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1329,10 +1256,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8E391A1540576FF55FA9139814CE4E21()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8E391A1540576FF55FA9139814CE4E21");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1343,10 +1268,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8F1DE8384E5EB46C932A94A9C3AC8873()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_8F1DE8384E5EB46C932A94A9C3AC8873");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1357,10 +1280,20 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_9D6941F948D8D50A854683B31707785D()
 {
-	static class UFunction* Func = nullptr;
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_9D6941F948D8D50A854683B31707785D");
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABPT_Driver.ABPT_Driver_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A42E1AD341AEF7DF0BC89EA6DDA115C1
+// (BlueprintEvent)
+
+void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A42E1AD341AEF7DF0BC89EA6DDA115C1()
+{
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1371,10 +1304,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A43F38BA4870A25F8C26EE956BD26ACA()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A43F38BA4870A25F8C26EE956BD26ACA");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1385,10 +1316,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A8E059DE471A22FBB2D21796F407BA08()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_A8E059DE471A22FBB2D21796F407BA08");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1399,10 +1328,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_AC6E959C46A5F745A9AA04A09ABAE70F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_AC6E959C46A5F745A9AA04A09ABAE70F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1413,10 +1340,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_ADAB23AB42DDC5EFB21D4E923E2FC366()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_ADAB23AB42DDC5EFB21D4E923E2FC366");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1427,10 +1352,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B11DB2A0480142A643F63B9E404E279F()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B11DB2A0480142A643F63B9E404E279F");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1441,10 +1364,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B778E01F40928C2AEFA486986DC259C1()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B778E01F40928C2AEFA486986DC259C1");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1455,10 +1376,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B97160E94AFDC04904E28BA4EBD6B641()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_B97160E94AFDC04904E28BA4EBD6B641");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1469,10 +1388,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_C5F0CD8F4051405849001ABE654FB810()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_C5F0CD8F4051405849001ABE654FB810");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1483,10 +1400,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_C71448334A287D1780A13FB27DD9260E()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_C71448334A287D1780A13FB27DD9260E");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1497,10 +1412,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_CE0FA8E9471261A30C353F9F0CF755CF()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_CE0FA8E9471261A30C353F9F0CF755CF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1511,10 +1424,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_D2C0FAA0457265D2F74055AF3E3A67CF()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_D2C0FAA0457265D2F74055AF3E3A67CF");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1525,10 +1436,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_DD1A665C4B0E3D31EED23FA963366E5C()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_DD1A665C4B0E3D31EED23FA963366E5C");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1539,10 +1448,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_DDC0AD35467994935497A7AC02384462()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_DDC0AD35467994935497A7AC02384462");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1553,10 +1460,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E59C212345F671D07A4FA68DF8C80F6B()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E59C212345F671D07A4FA68DF8C80F6B");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1567,10 +1472,8 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E6119A0D48FB4E18F0B4FF9AEF0B2028()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E6119A0D48FB4E18F0B4FF9AEF0B2028");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1581,26 +1484,22 @@ void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_Ani
 
 void UABPT_Driver_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E9599A494F05CF7E306A65A9702D9AC5()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Driver_AnimGraphNode_TransitionResult_E9599A494F05CF7E306A65A9702D9AC5");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function ABPT_Driver.ABPT_Driver_C.ExecuteUbergraph_ABPT_Driver
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UABPT_Driver_C::ExecuteUbergraph_ABPT_Driver(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "ExecuteUbergraph_ABPT_Driver");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "ExecuteUbergraph_ABPT_Driver", FuncInfo);
 
 	Params::ABPT_Driver_C_ExecuteUbergraph_ABPT_Driver Parms{};
 
@@ -1618,10 +1517,8 @@ void UABPT_Driver_C::ExecuteUbergraph_ABPT_Driver(int32 EntryPoint)
 
 void UABPT_Driver_C::FacialAnimationLayer(const struct FPoseLink& InPose_1, struct FPoseLink* FacialAnimationLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "FacialAnimationLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_FacialAnimationLayer Parms{};
 
@@ -1641,10 +1538,8 @@ void UABPT_Driver_C::FacialAnimationLayer(const struct FPoseLink& InPose_1, stru
 
 void UABPT_Driver_C::GetLinkedAnimClass(class UClass** Out_AnimInstance)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "GetLinkedAnimClass");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_GetLinkedAnimClass Parms{};
 
@@ -1663,10 +1558,8 @@ void UABPT_Driver_C::GetLinkedAnimClass(class UClass** Out_AnimInstance)
 
 void UABPT_Driver_C::HoverboardControlRogLayer(const struct FPoseLink& HoverboardPose, struct FPoseLink* HoverboardControlRogLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "HoverboardControlRogLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "HoverboardControlRogLayer", FuncInfo);
 
 	Params::ABPT_Driver_C_HoverboardControlRogLayer Parms{};
 
@@ -1688,10 +1581,8 @@ void UABPT_Driver_C::HoverboardControlRogLayer(const struct FPoseLink& Hoverboar
 
 void UABPT_Driver_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* HoverboardItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "HoverboardItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "HoverboardItemHoldBlendLeft", FuncInfo);
 
 	Params::ABPT_Driver_C_HoverboardItemHoldBlendLeft Parms{};
 
@@ -1714,10 +1605,8 @@ void UABPT_Driver_C::HoverboardItemHoldBlendLeft(const struct FPoseLink& BasePos
 
 void UABPT_Driver_C::HoverboardItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& RightHoldPose, struct FPoseLink* HoverboardItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "HoverboardItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "HoverboardItemHoldBlendRight", FuncInfo);
 
 	Params::ABPT_Driver_C_HoverboardItemHoldBlendRight Parms{};
 
@@ -1738,10 +1627,8 @@ void UABPT_Driver_C::HoverboardItemHoldBlendRight(const struct FPoseLink& BasePo
 
 void UABPT_Driver_C::Is_Hoverboarder_Form(bool* bHoverboarderForm)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "Is Hoverboarder Form");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_Is_Hoverboarder_Form Parms{};
 
@@ -1756,18 +1643,20 @@ void UABPT_Driver_C::Is_Hoverboarder_Form(bool* bHoverboarderForm)
 // (HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    bUseRace                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InNoTransPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FPoseLink*                       KawaiiPhysicsLayer_0                                   (Parm, OutParm, NoDestructor)
 
-void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct FPoseLink* KawaiiPhysicsLayer_0)
+void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, bool bUseRace, const struct FPoseLink& InNoTransPose, struct FPoseLink* KawaiiPhysicsLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "KawaiiPhysicsLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "KawaiiPhysicsLayer", FuncInfo);
 
 	Params::ABPT_Driver_C_KawaiiPhysicsLayer Parms{};
 
 	Parms.InPose = std::move(InPose);
+	Parms.bUseRace = bUseRace;
+	Parms.InNoTransPose = std::move(InNoTransPose);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -1784,10 +1673,8 @@ void UABPT_Driver_C::KawaiiPhysicsLayer(const struct FPoseLink& InPose, struct F
 
 void UABPT_Driver_C::LipSyncAnimationLayer(const struct FPoseLink& InPose_1, struct FPoseLink* LipSyncAnimationLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "LipSyncAnimationLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_LipSyncAnimationLayer Parms{};
 
@@ -1809,10 +1696,8 @@ void UABPT_Driver_C::LipSyncAnimationLayer(const struct FPoseLink& InPose_1, str
 
 void UABPT_Driver_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendLeft_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "MachineItemHoldBlendLeft");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "MachineItemHoldBlendLeft", FuncInfo);
 
 	Params::ABPT_Driver_C_MachineItemHoldBlendLeft Parms{};
 
@@ -1835,10 +1720,8 @@ void UABPT_Driver_C::MachineItemHoldBlendLeft(const struct FPoseLink& BasePose, 
 
 void UABPT_Driver_C::MachineItemHoldBlendRight(const struct FPoseLink& BasePose, const struct FPoseLink& LeftHoldPose, struct FPoseLink* MachineItemHoldBlendRight_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "MachineItemHoldBlendRight");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "MachineItemHoldBlendRight", FuncInfo);
 
 	Params::ABPT_Driver_C_MachineItemHoldBlendRight Parms{};
 
@@ -1863,10 +1746,8 @@ void UABPT_Driver_C::MachineItemHoldBlendRight(const struct FPoseLink& BasePose,
 
 void UABPT_Driver_C::MenuFacialOverride(const struct FPoseLink& MenuFinalPose, bool InPlayingMontage, const struct FPoseLink& MenuDefaltFace, const struct FPoseLink& MenuOverrideFace, struct FPoseLink* MenuFacialOverride_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "MenuFacialOverride");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "MenuFacialOverride", FuncInfo);
 
 	Params::ABPT_Driver_C_MenuFacialOverride Parms{};
 
@@ -1893,10 +1774,8 @@ void UABPT_Driver_C::MenuFacialOverride(const struct FPoseLink& MenuFinalPose, b
 
 void UABPT_Driver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool bPlayMontage, EBoneScaleFaceType InStateMachineFaceType, EBoneScaleFaceType InMontageFaceType, struct FPoseLink* ScaleFaceLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "ScaleFaceLayer");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "ScaleFaceLayer", FuncInfo);
 
 	Params::ABPT_Driver_C_ScaleFaceLayer Parms{};
 
@@ -1912,6 +1791,30 @@ void UABPT_Driver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool
 }
 
 
+// Function ABPT_Driver.ABPT_Driver_C.ScaleFacialOverrideVerTwo
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InBasePose                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FPoseLink&                 InDefaultPose                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       ScaleFacialOverrideVerTwo_0                            (Parm, OutParm, NoDestructor)
+
+void UABPT_Driver_C::ScaleFacialOverrideVerTwo(const struct FPoseLink& InBasePose, const struct FPoseLink& InDefaultPose, struct FPoseLink* ScaleFacialOverrideVerTwo_0)
+{
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "ABPT_Driver_C", "ScaleFacialOverrideVerTwo", FuncInfo);
+
+	Params::ABPT_Driver_C_ScaleFacialOverrideVerTwo Parms{};
+
+	Parms.InBasePose = std::move(InBasePose);
+	Parms.InDefaultPose = std::move(InDefaultPose);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScaleFacialOverrideVerTwo_0 != nullptr)
+		*ScaleFacialOverrideVerTwo_0 = std::move(Parms.ScaleFacialOverrideVerTwo_0);
+}
+
+
 // Function ABPT_Driver.ABPT_Driver_C.StartingWheelSpinLayer
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1920,10 +1823,8 @@ void UABPT_Driver_C::ScaleFaceLayer(const struct FPoseLink& InFaceOverride, bool
 
 void UABPT_Driver_C::StartingWheelSpinLayer(const struct FPoseLink& InPose, struct FPoseLink* StartingWheelSpinLayer_0)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "StartingWheelSpinLayer");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_StartingWheelSpinLayer Parms{};
 
@@ -1943,10 +1844,8 @@ void UABPT_Driver_C::StartingWheelSpinLayer(const struct FPoseLink& InPose, stru
 
 void UABPT_Driver_C::GetRidingType(int32* Out_RidingType) const
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABPT_Driver_C", "GetRidingType");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"ABPT_Driver_C", FnName));
 
 	Params::ABPT_Driver_C_GetRidingType Parms{};
 
@@ -1956,5 +1855,5 @@ void UABPT_Driver_C::GetRidingType(int32* Out_RidingType) const
 		*Out_RidingType = Parms.Out_RidingType;
 }
 
-}
 
+SDK_NAMESPACE_END

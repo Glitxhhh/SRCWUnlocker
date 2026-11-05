@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "UnionSystem_structs.hpp"
 #include "UNION_classes.hpp"
+#include "UnionSystem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Tutorial_Controller_Wrapper.WBP_Tutorial_Controller_Wrapper_C
 // 0x0008 (0x0308 - 0x0300)
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Tutorial_Controller_Wrapper_C;
 
-}
-
+SDK_NAMESPACE_END

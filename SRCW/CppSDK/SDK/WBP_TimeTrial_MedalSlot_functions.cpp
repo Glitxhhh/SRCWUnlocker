@@ -14,8 +14,7 @@
 #include "WBP_TimeTrial_MedalSlot_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_TimeTrial_MedalSlot.WBP_TimeTrial_MedalSlot_C.ExecuteUbergraph_WBP_TimeTrial_MedalSlot
 // (Final, UbergraphFunction, HasDefaults)
@@ -24,10 +23,8 @@ namespace SDK
 
 void UWBP_TimeTrial_MedalSlot_C::ExecuteUbergraph_WBP_TimeTrial_MedalSlot(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_MedalSlot_C", "ExecuteUbergraph_WBP_TimeTrial_MedalSlot");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_TimeTrial_MedalSlot_C", "ExecuteUbergraph_WBP_TimeTrial_MedalSlot", FuncInfo);
 
 	Params::WBP_TimeTrial_MedalSlot_C_ExecuteUbergraph_WBP_TimeTrial_MedalSlot Parms{};
 
@@ -44,10 +41,8 @@ void UWBP_TimeTrial_MedalSlot_C::ExecuteUbergraph_WBP_TimeTrial_MedalSlot(int32 
 
 void UWBP_TimeTrial_MedalSlot_C::SelectMedal(int32 InIndex)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_MedalSlot_C", "SelectMedal");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_MedalSlot_C", FnName));
 
 	Params::WBP_TimeTrial_MedalSlot_C_SelectMedal Parms{};
 
@@ -62,10 +57,8 @@ void UWBP_TimeTrial_MedalSlot_C::SelectMedal(int32 InIndex)
 
 void UWBP_TimeTrial_MedalSlot_C::SelectMedalEnd()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_MedalSlot_C", "SelectMedalEnd");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_MedalSlot_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,10 +71,8 @@ void UWBP_TimeTrial_MedalSlot_C::SelectMedalEnd()
 
 void UWBP_TimeTrial_MedalSlot_C::SetupMedalSlot(const TArray<ETimeTrialClearRankId>& InTimeTrialClearRanks)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TimeTrial_MedalSlot_C", "SetupMedalSlot");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_TimeTrial_MedalSlot_C", FnName));
 
 	Params::WBP_TimeTrial_MedalSlot_C_SetupMedalSlot Parms{};
 
@@ -90,5 +81,5 @@ void UWBP_TimeTrial_MedalSlot_C::SetupMedalSlot(const TArray<ETimeTrialClearRank
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

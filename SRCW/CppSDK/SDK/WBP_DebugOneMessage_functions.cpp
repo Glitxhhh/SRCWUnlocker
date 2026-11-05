@@ -14,18 +14,15 @@
 #include "WBP_DebugOneMessage_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_DebugOneMessage.WBP_DebugOneMessage_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_DebugOneMessage_C::Construct()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DebugOneMessage_C", "Construct");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DebugOneMessage_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -38,10 +35,8 @@ void UWBP_DebugOneMessage_C::Construct()
 
 void UWBP_DebugOneMessage_C::ExecuteUbergraph_WBP_DebugOneMessage(int32 EntryPoint)
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DebugOneMessage_C", "ExecuteUbergraph_WBP_DebugOneMessage");
+	static ReloadableFuncInfo FuncInfo;
+	class UFunction* Func = GetStaticFunction(Class, "WBP_DebugOneMessage_C", "ExecuteUbergraph_WBP_DebugOneMessage", FuncInfo);
 
 	Params::WBP_DebugOneMessage_C_ExecuteUbergraph_WBP_DebugOneMessage Parms{};
 
@@ -56,10 +51,8 @@ void UWBP_DebugOneMessage_C::ExecuteUbergraph_WBP_DebugOneMessage(int32 EntryPoi
 
 void UWBP_DebugOneMessage_C::FireAnim()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DebugOneMessage_C", "FireAnim");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DebugOneMessage_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,13 +63,11 @@ void UWBP_DebugOneMessage_C::FireAnim()
 
 void UWBP_DebugOneMessage_C::OnEndMessage()
 {
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DebugOneMessage_C", "OnEndMessage");
+	static class FName FnName;
+	class UFunction* Func = InSDKUtils::FindFunctionChecked(this, GetStaticName(L"WBP_DebugOneMessage_C", FnName));
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

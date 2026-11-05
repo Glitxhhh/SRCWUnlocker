@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "UNION_structs.hpp"
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_MachineCustom_Sub_CustomPaint_Glow.WBP_MachineCustom_Sub_CustomPaint_Glow_C.ExecuteUbergraph_WBP_MachineCustom_Sub_CustomPaint_Glow
 // 0x0004 (0x0004 - 0x0000)
@@ -78,5 +78,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_MachineCustom_Sub_CustomPaint_Glow_C_GetItemData;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END
